@@ -2910,7 +2910,6 @@
   <block id="61560599f4747b091e1abc457824f639" category="section-title">Aggiornamento solo da BlueXP</block>
   <block id="c6925d752394e325c0b435137fbe997c" category="paragraph">Gli aggiornamenti di Cloud Volumes ONTAP devono essere completati da BlueXP. Non aggiornare Cloud Volumes ONTAP utilizzando Gestione di sistema o l'interfaccia CLI. In questo modo si può influire sulla stabilità del sistema.</block>
   <block id="b78b1188c7979365981f7c88049f9366" category="section-title">Come eseguire l'upgrade</block>
-  <block id="1f0652f3e88178c774443201328e4d2a" category="paragraph">BlueXP offre tre modi per aggiornare Cloud Volumes ONTAP:</block>
   <block id="4e8ece9c9800d81b5414293e7c524859" category="list-text">Seguendo le notifiche di aggiornamento visualizzate nell'ambiente di lavoro</block>
   <block id="9291a80d43d5b5496ef3da30291aed0c" category="list-text">Posizionando l'immagine di aggiornamento in una posizione HTTPS e fornendo a BlueXP l'URL</block>
   <block id="eccc8325175b53fdef9a1846222d4161" category="section-title">Percorsi di upgrade supportati</block>
@@ -4913,4 +4912,5 @@
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="57a6d3c65b0af592c913eb5564c15458" category="admonition">Nell'URL, *nome-file-immagine* deve seguire il formato "cot.image.9.13.1P2.tgz".</block>
+  <block id="bed8a3185a4b2ddb1020be5c9da45358" category="paragraph">BlueXP offre due modi per aggiornare Cloud Volumes ONTAP:</block>
 </blocks>

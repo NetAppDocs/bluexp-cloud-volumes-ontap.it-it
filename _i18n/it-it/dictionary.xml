@@ -4912,4 +4912,5 @@
   <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
+  <block id="57a6d3c65b0af592c913eb5564c15458" category="admonition">Nell'URL, *nome-file-immagine* deve seguire il formato "cot.image.9.13.1P2.tgz".</block>
 </blocks>

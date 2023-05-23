@@ -308,6 +308,10 @@ Se l'immagine software è stata copiata nel connettore nel percorso indicato sop
 +
 Http://<Connector-private-IP-address>/ontap/images/<image-file-name>
 
++
+
+NOTE: Nell'URL, *nome-file-immagine* deve seguire il formato "cot.image.9.13.1P2.tgz".
+
 
 
 .Risultato

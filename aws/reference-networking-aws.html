@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Requisiti di rete per Cloud Volumes ONTAP in AWS | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Requisiti di rete per Cloud Volumes ONTAP in AWS | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+	<meta property="og:description" content="BlueXP gestisce la configurazione dei componenti di rete per Cloud Volumes ONTAP, come indirizzi IP, netmask e route. È necessario assicurarsi che sia dispon..." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="BlueXP gestisce la configurazione dei componenti di rete per Cloud Volumes ONTAP, come indirizzi IP, netmask e route. È necessario assicurarsi che sia dispon...">
+  <meta name="keywords" content=" networking, network, requirements, connection, connections, vpc, security group, security groups, subnets, vpn, internet, nat, s3, dns, ad, active directory, az, availability zone, floating IP, floating, SVM, management LIF, route, route tables, proxy, HTTP, private, tier, s3 endpoint, tiering, storage tier, storage tiering, proxy server, nat device, vpn, snapmanager, snapcenter, iscsi, nfs, cifs, nas, san, outbound, inbound, connections, autosupport, ha, ha pair, high availability"><!-- Icons -->
+  <link rel="icon" href="/it-it/cloud-manager-cloud-volumes-ontap/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/it-it/cloud-manager-cloud-volumes-ontap/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/cloud-manager-cloud-volumes-ontap/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/cloud-manager-cloud-volumes-ontap/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/cloud-manager-cloud-volumes-ontap/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" />
+  <link rel='stylesheet' href='/it-it/cloud-manager-cloud-volumes-ontap/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/cloud-manager-cloud-volumes-ontap/js/na-search.js'></script><script src='/it-it/cloud-manager-cloud-volumes-ontap/js/na-pagenav.js'></script><script src='/it-it/cloud-manager-cloud-volumes-ontap/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/cloud-manager-cloud-volumes-ontap/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/cloud-manager-cloud-volumes-ontap/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/na-utility.js'></script> -->
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/clouddocs.js'></script>
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/toc.js'></script> -->
+  <!-- <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/cloud-manager-cloud-volumes-ontap"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/custom-dropdown.js'></script>
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/FileSaver.min.js'></script>
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/jszip-utils.min.js'></script>
+  <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="aws">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar">
+<div id="flavor-dropdown" class="custom-dropdown" data-url="/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html">
+  
+  
+  <div class="custom-dropdown-select selected" title="AWS">
+    <label>Cloud provider</label>
+    <div>AWS</div>  
+    <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/filter.svg" class="custom-icon selected" alt="" />
+    <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/dismiss.svg" class="custom-icon selected" id="remove-flavor" alt="" />
+  </div>
+  
+
+  <ul class="custom-dropdown-menu">
+    
+    
+    <li data-value="aws" data-url="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-networking-aws.html">
+      <img alt="" src="/it-it/cloud-manager-cloud-volumes-ontap/images/aws-ico.svg" onerror="this.src='/it-it/cloud-manager-cloud-volumes-ontap/images/blank-ico.png'" class="custom-icon" />Amazon Web Services
+    </li>
+    
+    
+    
+    <li data-value="gcp" data-url="/it-it/cloud-manager-cloud-volumes-ontap/gcp">
+      <img alt="" src="/it-it/cloud-manager-cloud-volumes-ontap/images/gcp-ico.svg" onerror="this.src='/it-it/cloud-manager-cloud-volumes-ontap/images/blank-ico.png'" class="custom-icon" />Google Cloud
+    </li>
+    
+    
+    
+    <li data-value="azure" data-url="/it-it/cloud-manager-cloud-volumes-ontap/azure">
+      <img alt="" src="/it-it/cloud-manager-cloud-volumes-ontap/images/azure-ico.svg" onerror="this.src='/it-it/cloud-manager-cloud-volumes-ontap/images/blank-ico.png'" class="custom-icon" />Microsoft Azure
+    </li>
+    
+    
+  </ul>
+</div>
+<div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-cloud-volumes-ontap.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html&page-title=Requisiti di rete per Cloud Volumes ONTAP in AWS" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/blob/main/reference-networking-aws.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/cloud-manager-cloud-volumes-ontap/aws/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor="aws"></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/cloud-manager-cloud-volumes-ontap/reference-networking-aws.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/fullsite-sidebar/Documentazione_Cloud_Volumes_ONTAP.pdf" >
+          <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Note_di_rilascio.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Note di rilascio
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Inizia_con_Amazon_Web_Services.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia con Amazon Web Services
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Configurare_la_rete.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Configurare la rete
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Inizia_a_utilizzare_Microsoft_Azure.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia a utilizzare Microsoft Azure
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Inizia_a_utilizzare_Google_Cloud.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia a utilizzare Google Cloud
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Verifica_dell_immagine_della_piattaforma_Google_Cloud.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Verifica dell'immagine della piattaforma Google Cloud
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Verifica_della_firma_dell_immagine.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Verifica della firma dell'immagine
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/USA_Cloud_Volumes_ONTAP.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            USA Cloud Volumes ONTAP
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Gestione_delle_licenze.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Gestione delle licenze
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_di_volumi_e_LUN.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione di volumi e LUN
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_degli_aggregati.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione degli aggregati
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_delle_macchine_virtuali_dello_storage.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione delle macchine virtuali dello storage
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Sicurezza_e_crittografia_dei_dati.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Sicurezza e crittografia dei dati
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_del_sistema.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione del sistema
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Aggiungere__rimuovere_o_eliminare_sistemi.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Aggiungere, rimuovere o eliminare sistemi
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_di_AWS.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione di AWS
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_di_Azure.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione di Azure
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Amministrazione_di_Google_Cloud.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Amministrazione di Google Cloud
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Stato_ed_eventi_del_sistema.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Stato ed eventi del sistema
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Concetti.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Concetti
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Storage.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Storage
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Coppie_ad_alta_disponibilità.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Coppie ad alta disponibilità
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-cloud-volumes-ontap/pdfs/aws/sidebar/Conoscenza_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf.png" alt="" width="16" height="16"/>
+            Conoscenza e supporto
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/cloud-manager-cloud-volumes-ontap/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/it-it/cloud-manager-family/"><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/left_arrow.png" alt=""><pre>Tutta la documentazione BlueXP</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documenti Cloud Volumes ONTAP"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/index.html">
+        Documenti Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Note di rilascio</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/whats-new.html">
+        Novità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Limitazioni note"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-limitations.html">
+        Limitazioni note
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio di Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/whats-new-ontap.html">
+        Note di rilascio di Cloud Volumes ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Inizia subito</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scopri di più su Cloud Volumes ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-overview-cvo.html">
+        Scopri di più su Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Versioni supportate per le nuove implementazioni"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-versions.html">
+        Versioni supportate per le nuove implementazioni
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia con Amazon Web Services"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Inizia con Amazon Web Services</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Avvio rapido"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-getting-started-aws.html">
+        Avvio rapido
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Pianificare la configurazione"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-planning-your-config.html">
+        Pianificare la configurazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare la rete"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Configurare la rete</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Requisiti di rete"
+      data-li-level="4#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-networking-aws.html">
+        Requisiti di rete
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare un gateway di transito AWS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-setting-up-transit-gateway.html">
+        Configurare un gateway di transito AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare una coppia ha in una subnet condivisa"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-deploy-aws-shared-vpc.html">
+        Implementare una coppia ha in una subnet condivisa
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Regole del gruppo di sicurezza per AWS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-security-groups.html">
+        Regole del gruppo di sicurezza per AWS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare AWS KMS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-setting-up-kms.html">
+        Configurare AWS KMS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare i ruoli IAM"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-set-up-iam-roles.html">
+        Impostare i ruoli IAM
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare la licenza"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-set-up-licensing-aws.html">
+        Impostare la licenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Avviare Cloud Volumes ONTAP in AWS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-deploying-otc-aws.html">
+        Avviare Cloud Volumes ONTAP in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia ad utilizzare AWS C2S"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-getting-started-aws-c2s.html">
+        Inizia ad utilizzare AWS C2S
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="USA Cloud Volumes ONTAP"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> USA Cloud Volumes ONTAP</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione delle licenze"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestione delle licenze</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione delle licenze basate sulla capacità"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-capacity-licenses.html">
+        Gestione delle licenze basate sulla capacità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestisci gli abbonamenti Keystone"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-keystone.html">
+        Gestisci gli abbonamenti Keystone
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire le licenze basate su nodo"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-node-licenses.html">
+        Gestire le licenze basate su nodo
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione di volumi e LUN"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amministrazione di volumi e LUN</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare volumi"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-create-volumes.html">
+        Creare volumi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i volumi esistenti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-volumes.html">
+        Gestire i volumi esistenti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Mettere a livello i dati inattivi sullo storage a oggetti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-tiering.html">
+        Mettere a livello i dati inattivi sullo storage a oggetti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collegare un LUN a un host"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-connect-lun.html">
+        Collegare un LUN a un host
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accelera l'accesso ai dati con FlexCache"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-accelerate-data-access.html">
+        Accelera l'accesso ai dati con FlexCache
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione degli aggregati"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amministrazione degli aggregati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare aggregati"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-create-aggregates.html">
+        Creare aggregati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire gli aggregati esistenti"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-aggregates.html">
+        Gestire gli aggregati esistenti
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire le impostazioni di capacità"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-manage-capacity-settings.html">
+        Gestire le impostazioni di capacità
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione delle macchine virtuali dello storage"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amministrazione delle macchine virtuali dello storage</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Lavorare con le VM di storage in BlueXP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-managing-svms.html">
+        Lavorare con le VM di storage in BlueXP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Creare VM di storage in AWS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-managing-svms-aws.html">
+        Creare VM di storage in AWS
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza e crittografia dei dati"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Sicurezza e crittografia dei dati</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Crittografare i volumi con la crittografia NetApp"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-encrypting-volumes.html">
+        Crittografare i volumi con la crittografia NetApp
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Migliorare la protezione ransomware"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-protecting-ransomware.html">
+        Migliorare la protezione ransomware
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione del sistema"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amministrazione del sistema</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare Cloud Volumes ONTAP"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-updating-ontap-cloud.html">
+        Aggiornare Cloud Volumes ONTAP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registra i sistemi pay-as-you-go"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-registering.html">
+        Registra i sistemi pay-as-you-go
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Arrestare e avviare un sistema"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-managing-state.html">
+        Arrestare e avviare un sistema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sincronizzare l'ora del sistema"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-sync-time.html">
+        Sincronizzare l'ora del sistema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la velocità di scrittura del sistema"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-modify-write-speed.html">
+        Modificare la velocità di scrittura del sistema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la password di sistema"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-change-password.html">
+        Modificare la password di sistema
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere, rimuovere o eliminare sistemi"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Aggiungere, rimuovere o eliminare sistemi</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiungere un sistema esistente"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-adding-systems.html">
+        Aggiungere un sistema esistente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere un ambiente di lavoro"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-removing.html">
+        Rimuovere un ambiente di lavoro
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Eliminare un sistema"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-deleting-working-env.html">
+        Eliminare un sistema
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione di AWS"
+      data-li-level="3" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Amministrazione di AWS</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare il tipo di istanza EC2"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-change-ec2-instance.html">
+        Modificare il tipo di istanza EC2
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare le tabelle di routing per le coppie ha"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-change-route-tables.html">
+        Modificare le tabelle di routing per le coppie ha
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare i costi AWS"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-monitoring-costs.html">
+        Monitorare i costi AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare la creazione del gruppo di posizionamento"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-configure-placement-group-failure-aws.html">
+        Configurare la creazione del gruppo di posizionamento
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione da System Manager"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-administer-advanced-view.html">
+        Amministrazione da System Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Amministrazione dalla CLI"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-connecting-to-otc.html">
+        Amministrazione dalla CLI
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Stato ed eventi del sistema"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Stato ed eventi del sistema</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare l'installazione di AutoSupport"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-verify-autosupport.html">
+        Verificare l'installazione di AutoSupport
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare EMS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-configure-ems.html">
+        Configurare EMS
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Concetti"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Concetti</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Licensing"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-licensing.html">
+        Licensing
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Storage</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Protocolli client"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-client-protocols.html">
+        Protocolli client
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Dischi e aggregati"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-storage.html">
+        Dischi e aggregati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Volumi elastici in AWS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-aws-elastic-volumes.html">
+        Volumi elastici in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tiering dei dati"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-data-tiering.html">
+        Tiering dei dati
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione dello storage"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-storage-management.html">
+        Gestione dello storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Velocità di scrittura"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-write-speed.html">
+        Velocità di scrittura
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Flash cache"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-flash-cache.html">
+        Flash cache
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage WORM"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-worm.html">
+        Storage WORM
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Coppie ad alta disponibilità"
+      data-li-level="2" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Coppie ad alta disponibilità</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Coppie HA in AWS"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-ha.html">
+        Coppie HA in AWS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Azioni durante l'acquisizione dello storage"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-degraded-ha-pair.html">
+        Azioni durante l'acquisizione dello storage
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sicurezza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-security.html">
+        Sicurezza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Performance"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-performance.html">
+        Performance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestione del BYOL basato su nodo"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-license-management.html">
+        Gestione del BYOL basato su nodo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Consulente digitale AutoSupport e Active IQ"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/concept-active-iq.html">
+        Consulente digitale AutoSupport e Active IQ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazioni predefinite"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/reference-default-configs.html">
+        Configurazioni predefinite
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conoscenza e supporto"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Conoscenza e supporto</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrati per ricevere assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-support-registration.html">
+        Registrati per ricevere assistenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedi assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-get-help.html">
+        Richiedi assistenza
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/cloud-manager-cloud-volumes-ontap/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/us-en/cloud/">Documentazione Cloud</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/it-it/cloud-manager-family/">BlueXP</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/cloud-manager-cloud-volumes-ontap/">Cloud&nbsp;Volumes&nbsp;ONTAP</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Requisiti di rete per Cloud Volumes ONTAP in AWS</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 19:48:32 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>BlueXP gestisce la configurazione dei componenti di rete per Cloud Volumes ONTAP, come indirizzi IP, netmask e route. È necessario assicurarsi che sia disponibile l&#8217;accesso a Internet in uscita, che siano disponibili indirizzi IP privati sufficienti, che siano disponibili le connessioni corrette e altro ancora.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requisiti-generali">Requisiti generali</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I seguenti requisiti devono essere soddisfatti in AWS.</p>
+</div>
+<div class="sect2">
+<h3 id="accesso-a-internet-in-uscita-per-nodi-cloud-volumes-ontap">Accesso a Internet in uscita per nodi Cloud Volumes ONTAP</h3>
+<div class="paragraph">
+<p>I nodi Cloud Volumes ONTAP richiedono l&#8217;accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.</p>
+</div>
+<div class="paragraph">
+<p>I criteri di routing e firewall devono consentire il traffico HTTP/HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://support.netapp.com/aods/asupmessage" class="bare">https://support.netapp.com/aods/asupmessage</a></p>
+</li>
+<li>
+<p><a href="https://support.netapp.com/asupprod/post/1.0/postAsup" class="bare">https://support.netapp.com/asupprod/post/1.0/postAsup</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Se si dispone di un&#8217;istanza NAT, è necessario definire una regola del gruppo di sicurezza in entrata che consenta il traffico HTTPS dalla subnet privata a Internet.</p>
+</div>
+<div class="paragraph">
+<p>Se non è disponibile una connessione Internet in uscita per l&#8217;invio di messaggi AutoSupport, BlueXP configura automaticamente i sistemi Cloud Volumes ONTAP in modo che utilizzino il connettore come server proxy. L&#8217;unico requisito è garantire che il gruppo di sicurezza del connettore consenta connessioni <em>inbound</em> sulla porta 3128. Dopo aver implementato il connettore, aprire questa porta.</p>
+</div>
+<div class="paragraph">
+<p>Se sono state definite rigide regole in uscita per Cloud Volumes ONTAP, è necessario anche assicurarsi che il gruppo di sicurezza Cloud Volumes ONTAP consenta connessioni <em>in uscita</em> sulla porta 3128.</p>
+</div>
+<div class="paragraph">
+<p>Dopo aver verificato che l&#8217;accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento a. <a href="https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html" target="_blank" rel="noopener">"Documenti ONTAP: Configurazione di AutoSupport"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Se BlueXP notifica che non è possibile inviare messaggi AutoSupport, <a href="task-verify-autosupport.html#troubleshoot-your-autosupport-configuration">"Risolvere i problemi della configurazione AutoSupport"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="accesso-a-internet-in-uscita-per-il-mediatore-ha">Accesso a Internet in uscita per il mediatore ha</h3>
+<div class="paragraph">
+<p>L&#8217;istanza di ha mediator deve disporre di una connessione in uscita al servizio AWS EC2 in modo che possa fornire assistenza per il failover dello storage. Per fornire la connessione, è possibile aggiungere un indirizzo IP pubblico, specificare un server proxy o utilizzare un&#8217;opzione manuale.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;opzione manuale può essere un gateway NAT o un endpoint VPC di interfaccia dalla subnet di destinazione al servizio AWS EC2. Per ulteriori informazioni sugli endpoint VPC, fare riferimento a. <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-interface.html" target="_blank" rel="noopener">"Documentazione AWS: Endpoint VPC di interfaccia (AWS PrivateLink)"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="indirizzi-ip-privati">Indirizzi IP privati</h3>
+<div class="paragraph">
+<p>BlueXP assegna automaticamente il numero richiesto di indirizzi IP privati a Cloud Volumes ONTAP. È necessario assicurarsi che la rete disponga di un numero sufficiente di indirizzi IP privati.</p>
+</div>
+<div class="paragraph">
+<p>Il numero di LIF allocati da BlueXP per Cloud Volumes ONTAP dipende dalla distribuzione di un sistema a nodo singolo o di una coppia ha. LIF è un indirizzo IP associato a una porta fisica.</p>
+</div>
+<div class="sect3">
+<h4 id="indirizzi-ip-per-un-sistema-a-nodo-singolo">Indirizzi IP per un sistema a nodo singolo</h4>
+<div class="paragraph">
+<p>BlueXP assegna 6 indirizzi IP a un sistema a nodo singolo.</p>
+</div>
+<div class="paragraph">
+<p>La tabella seguente fornisce dettagli sui LIF associati a ciascun indirizzo IP privato.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">LIF</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione del cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione amministrativa dell&#8217;intero cluster (coppia ha).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione dei nodi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione amministrativa di un nodo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intercluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra cluster, backup e replica.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dati NAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesso client tramite protocolli NAS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dati iSCSI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesso del client tramite il protocollo iSCSI. Utilizzato anche dal sistema per altri importanti flussi di lavoro di rete. Questa LIF è obbligatoria e non deve essere eliminata.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione delle macchine virtuali dello storage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Una LIF di gestione delle macchine virtuali dello storage viene utilizzata con strumenti di gestione come SnapCenter.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="indirizzi-ip-per-coppie-ha">Indirizzi IP per coppie ha</h4>
+<div class="paragraph">
+<p>Le coppie HA richiedono più indirizzi IP rispetto a un sistema a nodo singolo. Questi indirizzi IP sono distribuiti su diverse interfacce ethernet, come mostrato nell&#8217;immagine seguente:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_cvo_aws_networking_ha.png" alt="Diagramma che mostra eth0, eth1, eth2 su una configurazione Cloud Volumes ONTAP ha in AWS."></span></p>
+</div>
+<div class="paragraph">
+<p>Il numero di indirizzi IP privati richiesti per una coppia ha dipende dal modello di implementazione scelto. Una coppia ha implementata in una <em>singola</em> AWS Availability zone (AZ) richiede 15 indirizzi IP privati, mentre una coppia ha implementata in <em>multiple</em> AZS richiede 13 indirizzi IP privati.</p>
+</div>
+<div class="paragraph">
+<p>Le tabelle seguenti forniscono informazioni dettagliate sui LIF associati a ciascun indirizzo IP privato.</p>
+</div>
+<div class="sect4">
+<h5 id="lif-per-coppie-ha-in-un-singolo-az">LIF per coppie ha in un singolo AZ</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">LIF</th>
+<th class="tableblock halign-left valign-top">Interfaccia</th>
+<th class="tableblock halign-left valign-top">Nodo</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione del cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione amministrativa dell&#8217;intero cluster (coppia ha).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione dei nodi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione amministrativa di un nodo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intercluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra cluster, backup e replica.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dati NAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesso client tramite protocolli NAS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dati iSCSI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesso del client tramite il protocollo iSCSI. Utilizzato anche dal sistema per altri importanti flussi di lavoro di rete. Questi LIF sono obbligatori e non devono essere cancellati.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettività del cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consente ai nodi di comunicare tra loro e di spostare i dati all&#8217;interno del cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettività HA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra i due nodi in caso di failover.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffico iSCSI RSM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffico iSCSI RAID SyncMirror, nonché comunicazione tra i due nodi Cloud Volumes ONTAP e il mediatore.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediatore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediatore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un canale di comunicazione tra i nodi e il mediatore per assistere nei processi di acquisizione e giveback dello storage.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="lif-per-coppie-ha-in-più-azs">LIF per coppie ha in più AZS</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">LIF</th>
+<th class="tableblock halign-left valign-top">Interfaccia</th>
+<th class="tableblock halign-left valign-top">Nodo</th>
+<th class="tableblock halign-left valign-top">Scopo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione dei nodi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gestione amministrativa di un nodo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intercluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra cluster, backup e replica.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dati iSCSI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accesso del client tramite il protocollo iSCSI. Queste LIF gestiscono anche la migrazione di indirizzi IP mobili tra nodi. Questi LIF sono obbligatori e non devono essere cancellati.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettività del cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consente ai nodi di comunicare tra loro e di spostare i dati all&#8217;interno del cluster.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connettività HA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comunicazione tra i due nodi in caso di failover.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffico iSCSI RSM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodo 1 e nodo 2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffico iSCSI RAID SyncMirror, nonché comunicazione tra i due nodi Cloud Volumes ONTAP e il mediatore.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediatore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eth0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mediatore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un canale di comunicazione tra i nodi e il mediatore per assistere nei processi di acquisizione e giveback dello storage.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/tip.svg" alt="Suggerimento">
+</td>
+<td class="content">
+Quando viene implementato in più zone di disponibilità, vengono associate diverse LIF <a href="reference-networking-aws.html#floatingips">"Indirizzi IP mobili"</a>, Che non contano rispetto al limite IP privato AWS.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gruppi-di-sicurezza">Gruppi di sicurezza</h3>
+<div class="paragraph">
+<p>Non è necessario creare gruppi di sicurezza perché BlueXP fa questo per te. Se è necessario utilizzare il proprio, fare riferimento a. <a href="reference-security-groups.html">"Regole del gruppo di sicurezza"</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/tip.svg" alt="Suggerimento">
+</td>
+<td class="content">
+Cerchi informazioni sul connettore? <a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html" target="_blank" rel="noopener">"Visualizzare le regole del gruppo di protezione per il connettore"</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="connessione-per-il-tiering-dei-dati">Connessione per il tiering dei dati</h3>
+<div class="paragraph">
+<p>Se si desidera utilizzare EBS come Tier di performance e AWS S3 come Tier di capacità, è necessario assicurarsi che Cloud Volumes ONTAP disponga di una connessione a S3. Il modo migliore per fornire tale connessione consiste nella creazione di un endpoint VPC per il servizio S3. Per istruzioni, vedere <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint" target="_blank" rel="noopener">"Documentazione AWS: Creazione di un endpoint gateway"</a>.</p>
+</div>
+<div class="paragraph">
+<p>Quando si crea l&#8217;endpoint VPC, assicurarsi di selezionare la regione, il VPC e la tabella di routing che corrispondono all&#8217;istanza di Cloud Volumes ONTAP. È inoltre necessario modificare il gruppo di protezione per aggiungere una regola HTTPS in uscita che abilita il traffico all&#8217;endpoint S3. In caso contrario, Cloud Volumes ONTAP non può connettersi al servizio S3.</p>
+</div>
+<div class="paragraph">
+<p>In caso di problemi, vedere <a href="https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/" target="_blank" rel="noopener">"AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="connessioni-ai-sistemi-ontap">Connessioni ai sistemi ONTAP</h3>
+<div class="paragraph">
+<p>Per replicare i dati tra un sistema Cloud Volumes ONTAP in AWS e i sistemi ONTAP in altre reti, è necessario disporre di una connessione VPN tra AWS VPC e l&#8217;altra rete, ad esempio la rete aziendale. Per istruzioni, vedere <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html" target="_blank" rel="noopener">"Documentazione AWS: Configurazione di una connessione VPN AWS"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="dns-e-active-directory-per-cifs">DNS e Active Directory per CIFS</h3>
+<div class="paragraph">
+<p>Se si desidera eseguire il provisioning dello storage CIFS, è necessario configurare DNS e Active Directory in AWS o estendere la configurazione on-premise ad AWS.</p>
+</div>
+<div class="paragraph">
+<p>Il server DNS deve fornire servizi di risoluzione dei nomi per l&#8217;ambiente Active Directory. È possibile configurare i set di opzioni DHCP in modo che utilizzino il server DNS EC2 predefinito, che non deve essere il server DNS utilizzato dall&#8217;ambiente Active Directory.</p>
+</div>
+<div class="paragraph">
+<p>Per istruzioni, fare riferimento a. <a href="https://aws-quickstart.github.io/quickstart-microsoft-activedirectory/" target="_blank" rel="noopener">"Documentazione AWS: Active Directory Domain Services su AWS Cloud: Implementazione di riferimento rapido"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="condivisione-vpc">Condivisione VPC</h3>
+<div class="paragraph">
+<p>A partire dalla versione 9.11.1, le coppie Cloud Volumes ONTAP ha sono supportate in AWS con condivisione VPC. La condivisione VPC consente alla tua organizzazione di condividere le subnet con altri account AWS. Per utilizzare questa configurazione, è necessario configurare l&#8217;ambiente AWS e implementare la coppia ha utilizzando l&#8217;API.</p>
+</div>
+<div class="paragraph">
+<p><a href="task-deploy-aws-shared-vpc.html">"Scopri come implementare una coppia ha in una subnet condivisa"</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requisiti-per-coppie-ha-in-più-azs">Requisiti per coppie ha in più AZS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ulteriori requisiti di rete AWS si applicano alle configurazioni Cloud Volumes ONTAP ha che utilizzano zone di disponibilità multiple (AZS). Prima di avviare una coppia ha, è necessario esaminare questi requisiti perché è necessario inserire i dettagli di rete in BlueXP quando si crea l&#8217;ambiente di lavoro.</p>
+</div>
+<div class="paragraph">
+<p>Per informazioni sul funzionamento delle coppie ha, vedere <a href="concept-ha.html">"Coppie ad alta disponibilità"</a>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Zone di disponibilità</dt>
+<dd>
+<p>Questo modello di implementazione ha utilizza più AZS per garantire un&#8217;elevata disponibilità dei dati. È necessario utilizzare un AZ dedicato per ogni istanza di Cloud Volumes ONTAP e per l&#8217;istanza del mediatore, che fornisce un canale di comunicazione tra la coppia ha.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In ciascuna zona di disponibilità dovrebbe essere disponibile una subnet.</p>
+</div>
+<div id="floatingips" class="dlist">
+<dl>
+<dt class="hdlist1">Indirizzi IP mobili per dati NAS e gestione cluster/SVM</dt>
+<dd>
+<p>Le configurazioni HA in più AZS utilizzano indirizzi IP mobili che migrano tra nodi in caso di guasti. Non sono accessibili in modo nativo dall&#8217;esterno del VPC, a meno che non si <a href="task-setting-up-transit-gateway.html">"Configurare un gateway di transito AWS"</a>.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Un indirizzo IP mobile è per la gestione del cluster, uno per i dati NFS/CIFS sul nodo 1 e uno per i dati NFS/CIFS sul nodo 2. Un quarto indirizzo IP mobile per la gestione SVM è opzionale.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Se si utilizza SnapDrive per Windows o SnapCenter con la coppia ha, è necessario un indirizzo IP mobile per la LIF di gestione SVM.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Quando si crea un ambiente di lavoro Cloud Volumes ONTAP ha, è necessario inserire gli indirizzi IP mobili in BlueXP. BlueXP assegna gli indirizzi IP alla coppia ha quando avvia il sistema.</p>
+</div>
+<div class="paragraph">
+<p>Gli indirizzi IP mobili devono essere al di fuori dei blocchi CIDR per tutti i VPC nella regione AWS in cui si implementa la configurazione ha. Gli indirizzi IP mobili sono una subnet logica esterna ai VPC della propria regione.</p>
+</div>
+<div class="paragraph">
+<p>Nell&#8217;esempio seguente viene illustrata la relazione tra gli indirizzi IP mobili e i VPC in una regione AWS. Mentre gli indirizzi IP mobili si trovano al di fuori dei blocchi CIDR per tutti i VPC, sono instradabili alle subnet attraverso le tabelle di routing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_ha_floating_ips.png" alt="Un&#8217;immagine concettuale che mostra i blocchi CIDR per cinque VPC in una regione AWS e tre indirizzi IP mobili che si trovano all&#8217;esterno dei blocchi CIDR dei VPC."></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+BlueXP crea automaticamente indirizzi IP statici per l&#8217;accesso iSCSI e NAS da client esterni al VPC. Non è necessario soddisfare alcun requisito per questi tipi di indirizzi IP.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Gateway di transito per abilitare l&#8217;accesso IP mobile dall&#8217;esterno del VPC</dt>
+<dd>
+<p>Se necessario, <a href="task-setting-up-transit-gateway.html">"Configurare un gateway di transito AWS"</a> Per consentire l&#8217;accesso agli indirizzi IP mobili di una coppia ha dall&#8217;esterno del VPC in cui risiede la coppia ha.</p>
+</dd>
+<dt class="hdlist1">Tabelle di percorso</dt>
+<dd>
+<p>Dopo aver specificato gli indirizzi IP mobili in BlueXP, viene richiesto di selezionare le tabelle di routing che devono includere i percorsi verso gli indirizzi IP mobili. In questo modo si abilita l&#8217;accesso del client alla coppia ha.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Se si dispone di una sola tabella di routing per le subnet nel VPC (la tabella di routing principale), BlueXP aggiunge automaticamente gli indirizzi IP mobili alla tabella di routing. Se si dispone di più tabelle di routing, è molto importante selezionare le tabelle di routing corrette quando si avvia la coppia ha. In caso contrario, alcuni client potrebbero non avere accesso a Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>Ad esempio, potrebbero essere presenti due subnet associate a diverse tabelle di routing. Se si seleziona la tabella di route A, ma non la tabella di route B, i client nella subnet associata alla tabella di route A possono accedere alla coppia ha, ma i client nella subnet associata alla tabella di route B.</p>
+</div>
+<div class="paragraph">
+<p>Per ulteriori informazioni sulle tabelle di percorso, fare riferimento a. <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html" target="_blank" rel="noopener">"Documentazione AWS: Tabelle di percorso"</a>.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Connessione ai tool di gestione NetApp</dt>
+<dd>
+<p>Per utilizzare gli strumenti di gestione NetApp con configurazioni ha che si trovano in più AZS, sono disponibili due opzioni di connessione:</p>
+<div class="openblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Implementare gli strumenti di gestione NetApp in un VPC diverso e. <a href="task-setting-up-transit-gateway.html">"Configurare un gateway di transito AWS"</a>. Il gateway consente l&#8217;accesso all&#8217;indirizzo IP mobile per l&#8217;interfaccia di gestione del cluster dall&#8217;esterno del VPC.</p>
+</li>
+<li>
+<p>Implementare gli strumenti di gestione NetApp nello stesso VPC con una configurazione di routing simile a quella dei client NAS.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="esempio-di-configurazione-ha">Esempio di configurazione ha</h3>
+<div class="paragraph">
+<p>La seguente immagine illustra i componenti di rete specifici di una coppia ha in più AZS: Tre zone di disponibilità, tre subnet, indirizzi IP mobili e una tabella di routing.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/diagram_ha_networking.png" alt="Immagine concettuale che mostra i componenti in un&#8217;architettura Cloud Volumes ONTAP ha: Due nodi Cloud Volumes ONTAP e un&#8217;istanza di mediatore, ciascuno in zone di disponibilità separate."></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requisiti-per-il-connettore">Requisiti per il connettore</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se non hai ancora creato un connettore, dovresti rivedere anche i requisiti di rete per il connettore.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html" target="_blank" rel="noopener">"Visualizzare i requisiti di rete per il connettore"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html" target="_blank" rel="noopener">"Regole del gruppo di sicurezza in AWS"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-cloud-volumes-ontap/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/cloud-manager-cloud-volumes-ontap/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/cloud-manager-cloud-volumes-ontap/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/cloud-manager-cloud-volumes-ontap/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/tabbed-blocks.js'></script>
+    <script src='/it-it/cloud-manager-cloud-volumes-ontap/js/sidebar.js'></script>
+  </body></html>

@@ -798,6 +798,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -1475,6 +1477,13 @@
         Crittografare i volumi con la crittografia NetApp
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Gestione delle chiavi con AWS Key Management Service"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-cloud-volumes-ontap/aws/task-aws-key-management.html">
+        Gestione delle chiavi con AWS Key Management Service
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Migliorare la protezione ransomware"
       data-li-level="3#" 
       class=" "
@@ -1875,7 +1884,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 19:48:32 +0000">05/23/2023</time>
+    <time datetime="2023-05-26 20:54:21 +0000">05/26/2023</time>
     
   
 
@@ -1890,71 +1899,6 @@
 </div>
 <div class="paragraph">
 <p>NVE e NAE sono supportati con un gestore di chiavi esterno.</p>
-</div>
-<div class="paragraph">
-<p>I nuovi aggregati avranno NAE attivato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. I nuovi volumi che non fanno parte di un aggregato NAE avranno NVE abilitato per impostazione predefinita (ad esempio, se si dispone di aggregati già creati prima della configurazione di un gestore di chiavi esterno).</p>
-</div>
-<div class="paragraph">
-<p>Cloud Volumes ONTAP non supporta la gestione delle chiavi integrata.</p>
-</div>
-<div class="paragraph">
-<div class="title">Di cosa hai bisogno</div>
-<p>Il sistema Cloud Volumes ONTAP deve essere registrato presso il supporto NetApp. Una licenza NetApp per la crittografia dei volumi viene installata automaticamente su ogni sistema Cloud Volumes ONTAP registrato presso il supporto NetApp.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html" target="_blank" rel="noopener">"Aggiunta di account NetApp Support Site a BlueXP"</a></p>
-</li>
-<li>
-<p><a href="task-registering.html">"Registrazione di sistemi pay-as-you-go"</a></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/note.svg" alt="Nota">
-</td>
-<td class="content">
-BlueXP non installa la licenza NVE sui sistemi che risiedono nell&#8217;area geografica Cina.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<div class="title">Fasi</div>
-<ol class="arabic">
-<li>
-<p>Esaminare l&#8217;elenco dei Key Manager supportati in <a href="http://mysupport.netapp.com/matrix" target="_blank" rel="noopener">"Tool di matrice di interoperabilità NetApp"</a>.</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-cloud-volumes-ontap/images/tip.svg" alt="Suggerimento">
-</td>
-<td class="content">
-Cercare la soluzione <strong>Key Manager</strong>.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p><a href="task-connecting-to-otc.html" target="_blank" rel="noopener">"Connettersi all&#8217;interfaccia utente di Cloud Volumes ONTAP"</a>.</p>
-</li>
-<li>
-<p>Configurare la gestione esterna delle chiavi.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>AWS: <a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-external-key-management-overview-concept.html" target="_blank" rel="noopener">"Per istruzioni, consultare la documentazione di ONTAP"</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
 </div>
 
     </article>

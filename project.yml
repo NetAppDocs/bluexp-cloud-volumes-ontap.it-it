@@ -163,6 +163,9 @@ sidebar:
       entries:
       - title: Crittografare i volumi con la crittografia NetApp
         url: "/task-encrypting-volumes.html"
+      - title: Gestione delle chiavi con AWS Key Management Service
+        flavor: aws
+        url: "/task-aws-key-management.html"
       - title: Gestisci le chiavi con Azure Key Vault
         flavor: azure
         url: "/task-azure-key-vault.html"

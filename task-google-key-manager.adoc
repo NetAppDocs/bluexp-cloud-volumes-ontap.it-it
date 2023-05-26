@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-google-key-manager.html 
 keywords: google cloud, encryption, NVE, NetApp volume encryption, KMIP, GCP, GCP KMS, key manager service, encryption 
-summary: Utilizza Azure Key Vault per il tuo servizio di gestione delle chiavi di terze parti. 
+summary: Utilizza il servizio di gestione delle chiavi di Google per il servizio di gestione delle chiavi di terze parti. 
 ---
 = Gestisci le chiavi con il Cloud Key Management Service di Google
 :hardbreaks:
@@ -15,9 +15,9 @@ summary: Utilizza Azure Key Vault per il tuo servizio di gestione delle chiavi d
 
 La gestione delle chiavi con Cloud KMS può essere abilitata con la CLI o l'API REST di ONTAP.
 
-Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita viene utilizzata una LIF SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione del provider cloud (oauth2.googleapis.com). Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.
+Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita viene utilizzata la LIF di un SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione del provider cloud (oauth2.googleapis.com). Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.
 
-.Prerequisiti
+.Prima di iniziare
 * Cloud Volumes ONTAP deve eseguire la versione 9.10.1 o successiva
 * Licenza VE (Volume Encryption) installata
 * Licenza di gestione delle chiavi di crittografia multi-tenant (MTEKM) installata, a partire da Cloud Volumes ONTAP 9.12.1 GA.

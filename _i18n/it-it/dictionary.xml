@@ -687,8 +687,6 @@
   <block id="0dbdff8ed1ef0e78c4dc84ace48205d6" category="inline-link-macro">Servizio di gestione delle chiavi di Google Cloud Platform (Cloud KMS)</block>
   <block id="2f7905ac71167519792d73f964942175" category="paragraph">È possibile utilizzare <block ref="4ef7b266bd9680469191a283388836d8" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata dalla piattaforma cloud Google.</block>
   <block id="5e31f4e44c9ec2b42878b12dff64c9fb" category="paragraph">La gestione delle chiavi con Cloud KMS può essere abilitata con la CLI o l'API REST di ONTAP.</block>
-  <block id="effd05555235b0681857f0aff356bf2f" category="paragraph">Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita viene utilizzata una LIF SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione del provider cloud (oauth2.googleapis.com). Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.</block>
-  <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="list-title">Prerequisiti</block>
   <block id="0dbc3b305b67f45cc077782f1bde33be" category="list-text">Cloud Volumes ONTAP deve eseguire la versione 9.10.1 o successiva</block>
   <block id="3db7729c3f93b51e237e9f64f77736ce" category="list-text">Licenza VE (Volume Encryption) installata</block>
   <block id="436ea77bab9d72d8fe71dbccf1dd6613" category="list-text">Licenza di gestione delle chiavi di crittografia multi-tenant (MTEKM) installata, a partire da Cloud Volumes ONTAP 9.12.1 GA.</block>
@@ -1661,25 +1659,8 @@
   <block id="9472acffdb6a585b24d4317169bbc868" category="inline-link-macro">Scopri di più su queste soluzioni di crittografia</block>
   <block id="401a8aaa330fe64d45395192c047e1ed" category="paragraph">Cloud Volumes ONTAP supporta la crittografia dei volumi NetApp (NVE) e la crittografia aggregata NetApp (NAE). NVE e NAE sono soluzioni software che consentono la crittografia dei volumi a riposo dei dati conforme a FIPS 140-2. <block ref="d36456219fc3d98cd4133816e30fd33f" category="inline-link-macro-rx"></block>.</block>
   <block id="154811f59111df605f6aebc9999a1135" category="paragraph">NVE e NAE sono supportati con un gestore di chiavi esterno.</block>
-  <block id="1be198b136be79973c11820713c00b26" category="paragraph">I nuovi aggregati avranno NAE attivato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. I nuovi volumi che non fanno parte di un aggregato NAE avranno NVE abilitato per impostazione predefinita (ad esempio, se si dispone di aggregati già creati prima della configurazione di un gestore di chiavi esterno).</block>
-  <block id="d43f2f210545a0ed495aab9f6633e453" category="paragraph">Cloud Volumes ONTAP non supporta la gestione delle chiavi integrata.</block>
-  <block id="0df0b10ec6b2374f12bc928912e0e165" category="paragraph">Il sistema Cloud Volumes ONTAP deve essere registrato presso il supporto NetApp. Una licenza NetApp per la crittografia dei volumi viene installata automaticamente su ogni sistema Cloud Volumes ONTAP registrato presso il supporto NetApp.</block>
-  <block id="ffa45f5dd5756168cb752f08f5b3cefd" category="inline-link">Aggiunta di account NetApp Support Site a BlueXP</block>
-  <block id="4f490cf7f68d51fff0157cb5d3ac6f7c" category="list-text"><block ref="4f490cf7f68d51fff0157cb5d3ac6f7c" category="inline-link-rx"></block></block>
-  <block id="adac812f3fe59c6affec734b3525f076" category="list-text"><block ref="adac812f3fe59c6affec734b3525f076" category="inline-link-macro-rx"></block></block>
-  <block id="ccd8316afafdf5821150f19704baa787" category="admonition">BlueXP non installa la licenza NVE sui sistemi che risiedono nell'area geografica Cina.</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">Tool di matrice di interoperabilità NetApp</block>
-  <block id="86c9e6db61d865382ea083244fc00daf" category="list-text">Esaminare l'elenco dei Key Manager supportati in<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block>.</block>
-  <block id="c13505bd809d243a40ac179bc7ce4107" category="admonition">Cercare la soluzione *Key Manager*.</block>
-  <block id="1de6a60059bfa3554a0fdce87d051073" category="inline-link-macro">Connettersi all'interfaccia utente di Cloud Volumes ONTAP</block>
-  <block id="29d9a993720ee20b5810ae4a968304ca" category="list-text"><block ref="088a226dfa45520beac98dc7ae15a28a" category="inline-link-macro-rx"></block>.</block>
-  <block id="48a052340f9e5c18b43a0cbab831db99" category="list-text">Configurare la gestione esterna delle chiavi.</block>
-  <block id="fd821d5714ebcc986157929dd866f41c" category="inline-link">Per istruzioni, consultare la documentazione di ONTAP</block>
-  <block id="780234ea39261cf819a32f7b1f62cacd" category="list-text">AWS:<block ref="f103b81da9a8e5be0e2af29f647d4fa3" category="inline-link-rx"></block></block>
   <block id="35b16ddf568bd70f42e0bcb19f2a533c" category="inline-link-macro">Azure Key Vault (AKV)</block>
-  <block id="80b607f58d83b6d6aea68e10d7e615ad" category="list-text">Azure: <block ref="a8e451d7a52ebee36c6527d684d09cd7" category="inline-link-macro-rx"></block></block>
-  <block id="f0daa22edb6ee8b88bae0e5a21b552ec" category="inline-link-macro">Servizio di gestione delle chiavi Google Cloud</block>
-  <block id="c06321d34601f3b5366ec101222f76b5" category="list-text">Google Cloud: <block ref="7cf27d24396a294ecbe07a4a35a715e6" category="inline-link-macro-rx"></block></block>
   <block id="a22063e6d541a4b1d385c3d940e03996" category="doc">Creare macchine virtuali storage per il data-service per Cloud Volumes ONTAP in Google Cloud</block>
   <block id="129ebe82fb349647f39c555285fb6251" category="paragraph">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Potresti sapere che si tratta di un _SVM_ o di un _vserver_. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage.</block>
   <block id="77701b3d3cb3179bddf053dbed6e2e43" category="paragraph">A partire dalla versione 9.11.1, sono supportate più macchine virtuali storage con configurazioni Cloud Volumes ONTAP specifiche in Google Cloud. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> Per verificare il numero di VM storage supportate per la versione di Cloud Volumes ONTAP in uso.</block>
@@ -4913,4 +4894,30 @@
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="57a6d3c65b0af592c913eb5564c15458" category="admonition">Nell'URL, *nome-file-immagine* deve seguire il formato "cot.image.9.13.1P2.tgz".</block>
   <block id="bed8a3185a4b2ddb1020be5c9da45358" category="paragraph">BlueXP offre due modi per aggiornare Cloud Volumes ONTAP:</block>
+  <block id="3522be3c31d2b76f91f779f655a0d48e" category="summary">Utilizza il servizio di gestione delle chiavi di Google per il servizio di gestione delle chiavi di terze parti.</block>
+  <block id="c8533211539a9c2738a7bfd20bd2c682" category="paragraph">Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita viene utilizzata la LIF di un SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione del provider cloud (oauth2.googleapis.com). Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.</block>
+  <block id="fb4c65b52def4e8355252bcb74eab6be" category="summary">Utilizza il servizio di gestione delle chiavi di AWS per il tuo servizio di gestione delle chiavi di terze parti.</block>
+  <block id="da8f544047a48addb30292b7f355c64e" category="doc">Gestione delle chiavi con AWS Key Management Service</block>
+  <block id="44d61056f175f112376610c7782283a1" category="inline-link-macro">KMS (Key Management Service) di AWS</block>
+  <block id="6ad0c0113b3b55b452407927aa4aa75b" category="paragraph">È possibile utilizzare <block ref="27c0f93edc246c81e0de0dea4ee78543" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata dalla piattaforma cloud Google.</block>
+  <block id="c7fa7b72f6d04762c019500275a89386" category="paragraph">La gestione delle chiavi con AWS KMS può essere abilitata con l'interfaccia CLI o l'API REST ONTAP.</block>
+  <block id="ce62b1827da5aee89a8c9443b4ca4301" category="paragraph">Quando si utilizza il KMS, tenere presente che per impostazione predefinita viene utilizzata la LIF di un SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione di AWS. Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.</block>
+  <block id="1a96e698f264a0a04e8665750d57e611" category="list-text">Cloud Volumes ONTAP deve eseguire la versione 9.12.0 o successiva</block>
+  <block id="7c299d2093e269562665f07029a4cec7" category="list-text">È necessario aver installato la licenza Volume Encryption (VE) e.</block>
+  <block id="4901f0c84455edcc92ec6a24224e83af" category="list-text">È necessario aver installato la licenza MTEKM (Multi-tenant Encryption Key Management).</block>
+  <block id="3cb889381dd4ea2a9ffdd9e9da7b480c" category="list-text">È necessario disporre di un abbonamento AWS attivo</block>
+  <block id="289b930b66911925b2bb021d1b7fff58" category="admonition">È possibile configurare le chiavi solo per una SVM dati.</block>
+  <block id="64fad28965d003cde964ea3016e257a3" category="inline-link-macro">concedi</block>
+  <block id="7a59df81f5f29cec1e5fc407aec175f3" category="list-text">È necessario creare un <block ref="f4b68cc11f5d4403654feba4f4232241" category="inline-link-macro-rx"></block> Per la chiave AWS KMS che verrà utilizzata dal ruolo IAM che gestisce la crittografia. Il ruolo IAM deve includere una policy che consenta le seguenti operazioni:</block>
+  <block id="6f3a9219e54bd545f63f7c278a3dd364" category="list-text"><block ref="f88ab0a10dae682ad047d37ae6bc5d41" prefix="" category="inline-code"></block></block>
+  <block id="9c3569206610778cb2870868354ce5a2" category="list-text"><block ref="611d29c748a7931c825a247fcf3f290e" prefix="" category="inline-code"></block></block>
+  <block id="df710f89ebb9e663bd3d66607a0bf413" category="inline-link-macro">Documentazione AWS</block>
+  <block id="4978ada7b9b2f691b8a90b1da40d7081" category="list-text"><block ref="762e3a77ecdd773da2b859e6807529a2" prefix="" category="inline-code"></block>
+Per creare una sovvenzione, fare riferimento a. <block ref="2e58dbc76dde8987ce87452533881aab" category="inline-link-macro-rx"></block>.</block>
+  <block id="af332839ba7d883cbe3b8961d03bbc3e" category="inline-link-macro">Aggiungere un criterio al ruolo IAM appropriato.</block>
+  <block id="f294c61436af25f5a28ac9b8924bb7fb" category="list-text"><block ref="7ae258a567efc672e80f18f77e4ad287" category="inline-link-macro-rx"></block> La policy dovrebbe supportare<block ref="f88ab0a10dae682ad047d37ae6bc5d41" prefix=" " category="inline-code"></block>,<block ref="611d29c748a7931c825a247fcf3f290e" prefix=" " category="inline-code"></block>, e.<block ref="762e3a77ecdd773da2b859e6807529a2" prefix=" " category="inline-code"></block> operazioni.</block>
+  <block id="467e9c77886899cd96b4c77a6e88da03" category="list-text">Passa all'ambiente Cloud Volumes ONTAP.</block>
+  <block id="9b975f17f93fdf8bcdf7549a7ba1f42f" category="list-text">Abilitare il gestore delle chiavi AWS:<block ref="4e70bf9ec679e2ced63b5b4e84c35b24" prefix=" " category="inline-code"></block></block>
+  <block id="2427f2edcaf3dd71c86f28d6d104a05d" category="list-text">Quando richiesto, inserire la chiave segreta.</block>
+  <block id="75d1c443711b08a199c506b32994abb0" category="list-text">Verificare che AWS KMS sia stato configurato correttamente:<block ref="f749e141a9bc2497fcae9da71d1642a2" prefix=" " category="inline-code"></block></block>
 </blocks>

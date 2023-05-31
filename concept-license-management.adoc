@@ -21,7 +21,7 @@ TIP: Una licenza basata su nodo è la precedente generazione di BYOL per Cloud V
 
 link:concept-licensing.html["Scopri di più sulle opzioni di licenza Cloud Volumes ONTAP"].
 
-link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Scopri di più su come gestire le licenze basate su nodo"^].
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Scopri di più su come gestire le licenze basate su nodo"^].
 
 
 
@@ -41,7 +41,7 @@ Tenere presente che i limiti dei dischi possono impedire di raggiungere il limit
 
 Quando si crea un sistema BYOL basato su nodo, BlueXP richiede il numero di serie della licenza e l'account NetApp Support Site. BlueXP utilizza l'account per scaricare il file di licenza da NetApp e installarlo sul sistema Cloud Volumes ONTAP.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["Scopri come aggiungere account NetApp Support Site a BlueXP"^].
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Scopri come aggiungere account NetApp Support Site a BlueXP"^].
 
 Se BlueXP non riesce ad accedere al file di licenza tramite la connessione Internet sicura, è possibile link:task-manage-node-licenses.html["Procurarsi il file e caricarlo manualmente su BlueXP"].
 

@@ -24,7 +24,7 @@ TIP: Un sistema che non è registrato per il supporto riceverà comunque le noti
 .Fasi
 . Se non hai ancora aggiunto il tuo account NetApp Support Site a BlueXP, vai a *Impostazioni account* e aggiungilo ora.
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-nss-accounts.html["Scopri come aggiungere account NetApp Support Site"^].
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Scopri come aggiungere account NetApp Support Site"^].
 
 . Nella pagina Canvas, fare doppio clic sul nome del sistema che si desidera registrare.
 . Nella scheda Panoramica, fare clic sul pannello funzioni, quindi fare clic sull'icona a forma di matita accanto a *registrazione supporto*.

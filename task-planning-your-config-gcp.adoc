@@ -109,7 +109,7 @@ Il motore di calcolo per il cloud di Google applica quote sull'utilizzo delle ri
 
 
 
-TIP: Il connettore richiede anche un disco di sistema. https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-connector-default-config.html["Visualizza i dettagli sulla configurazione predefinita del connettore"^].
+TIP: Il connettore richiede anche un disco di sistema. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html["Visualizza i dettagli sulla configurazione predefinita del connettore"^].
 
 
 

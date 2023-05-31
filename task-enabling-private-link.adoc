@@ -47,7 +47,7 @@ image:screenshot_settings_icon.png["Una schermata che mostra l'icona Settings (I
 .Al termine
 Se Azure Private Links è stato disattivato e il connettore utilizza un server proxy, è necessario attivare il traffico API diretto.
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-configuring-proxy.html#enable-a-proxy-on-a-connector["Scopri come attivare il traffico API diretto sul connettore"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html#enable-a-proxy-on-a-connector["Scopri come attivare il traffico API diretto sul connettore"^]
 
 
 

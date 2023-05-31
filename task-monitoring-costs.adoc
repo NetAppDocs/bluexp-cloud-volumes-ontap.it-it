@@ -24,7 +24,7 @@ BlueXP aggiorna i costi quando si aggiorna la pagina. Fare riferimento ad AWS pe
 +
 .. Assicurarsi che il criterio IAM che fornisce a BlueXP le autorizzazioni includa le autorizzazioni richieste.
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html["Visualizzare le autorizzazioni richieste"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["Visualizzare le autorizzazioni richieste"^]
 
 .. https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html["Attivare il tag *WorkingEnvironmentId*"^].
 +

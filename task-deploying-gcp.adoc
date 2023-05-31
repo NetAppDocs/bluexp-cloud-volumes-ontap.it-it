@@ -25,9 +25,9 @@ Per creare un ambiente di lavoro, è necessario quanto segue.
 [[licensing]]
 * Un connettore funzionante.
 +
-** Si dovrebbe avere un https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Connettore associato all'area di lavoro"^].
-** https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Si dovrebbe essere pronti a lasciare il connettore sempre in funzione"^].
-** L'account del servizio associato al connettore https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-gcp.html["deve disporre delle autorizzazioni necessarie"^]
+** Si dovrebbe avere un https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Connettore associato all'area di lavoro"^].
+** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Si dovrebbe essere pronti a lasciare il connettore sempre in funzione"^].
+** L'account del servizio associato al connettore https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["deve disporre delle autorizzazioni necessarie"^]
 
 
 * Comprensione della configurazione che si desidera utilizzare.
@@ -59,7 +59,7 @@ Creare un ambiente di lavoro in BlueXP per avviare Cloud Volumes ONTAP in Google
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
 . [[subscribe]]nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e seguire le istruzioni.
 . *Scegli una località*: Seleziona *Google Cloud* e *Cloud Volumes ONTAP*.
-. Se richiesto, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Creare un connettore"^].
+. Se richiesto, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creare un connettore"^].
 . *Dettagli e credenziali*: Selezionare un progetto, specificare un nome di cluster, selezionare un account di servizio, aggiungere etichette e specificare le credenziali.
 +
 La seguente tabella descrive i campi per i quali potrebbero essere necessarie indicazioni:
@@ -73,7 +73,7 @@ La seguente tabella descrive i campi per i quali potrebbero essere necessarie in
 | Nome ambiente di lavoro | BlueXP utilizza il nome dell'ambiente di lavoro per assegnare un nome sia al sistema Cloud Volumes ONTAP che all'istanza di Google Cloud VM. Se si seleziona questa opzione, il nome viene utilizzato anche come prefisso per il gruppo di protezione predefinito. 
 
 
-| Nome account servizio | Se si intende utilizzare link:concept-data-tiering.html["tiering dei dati"] oppure https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["backup e recovery"^] Con Cloud Volumes ONTAP, è necessario attivare *account di servizio* e selezionare un account di servizio con il ruolo di amministratore dello storage predefinito. link:task-creating-gcp-service-account.html["Scopri come creare un account di servizio"]. 
+| Nome account servizio | Se si intende utilizzare link:concept-data-tiering.html["tiering dei dati"] oppure https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e ripristino BlueXP"^] Con Cloud Volumes ONTAP, è necessario attivare *account di servizio* e selezionare un account di servizio con il ruolo di amministratore dello storage predefinito. link:task-creating-gcp-service-account.html["Scopri come creare un account di servizio"]. 
 
 
 | Aggiungi etichette | Le etichette sono metadati per le risorse Google Cloud. BlueXP aggiunge le etichette al sistema Cloud Volumes ONTAP e alle risorse di Google Cloud associate al sistema. È possibile aggiungere fino a quattro etichette dall'interfaccia utente durante la creazione di un ambiente di lavoro e aggiungerne altre dopo la creazione. Si noti che l'API non limita l'utente a quattro etichette quando crea un ambiente di lavoro. Per informazioni sulle etichette, fare riferimento a. https://cloud.google.com/compute/docs/labeling-resources["Documentazione Google Cloud: Risorse per l'etichettatura"^]. 
@@ -88,7 +88,7 @@ Selezionare il progetto in cui si desidera che Cloud Volumes ONTAP risieda. Il p
 Se nell'elenco a discesa non sono presenti progetti aggiuntivi, l'account del servizio BlueXP non è ancora stato associato ad altri progetti. Accedere alla console di Google Cloud, aprire il servizio IAM e selezionare il progetto. Aggiungere l'account del servizio con il ruolo BlueXP a quel progetto. Dovrai ripetere questo passaggio per ogni progetto.
 
 
-NOTE: Account di servizio impostato per BlueXP, link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["come descritto in questa pagina"^].
+NOTE: Account di servizio impostato per BlueXP, link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["come descritto in questa pagina"^].
 
 Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenziali selezionate a un abbonamento.
 
@@ -96,7 +96,7 @@ Per creare un sistema Cloud Volumes ONTAP pay-as-you-go, devi selezionare un pro
 
 |===
 +
-Il video seguente mostra come associare un abbonamento a pagamento a Marketplace al progetto Google Cloud. In alternativa, seguire la procedura per effettuare l'iscrizione nella https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-gcp-accounts.html["Associazione di un abbonamento a Marketplace con le credenziali Google Cloud"^] sezione.
+Il video seguente mostra come associare un abbonamento a pagamento a Marketplace al progetto Google Cloud. In alternativa, seguire la procedura per effettuare l'iscrizione nella https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Associazione di un abbonamento a Marketplace con le credenziali Google Cloud"^] sezione.
 
 +
 video::video_subscribing_gcp.mp4[width=848,height=480]
@@ -176,7 +176,7 @@ Tenere presente quanto segue:
 
 +
 ** BlueXP imposta l'account del servizio sull'istanza di Cloud Volumes ONTAP. Questo account di servizio fornisce le autorizzazioni per il tiering dei dati a un bucket di storage Google Cloud. Assicurarsi di aggiungere l'account del servizio Connector come utente dell'account del servizio di tiering, altrimenti non è possibile selezionarlo da BlueXP
-** Per informazioni sull'aggiunta di un account Google Cloud, vedere https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-gcp-accounts.html["Configurazione e aggiunta di account Google Cloud per il tiering dei dati con 9.6"^].
+** Per informazioni sull'aggiunta di un account Google Cloud, vedere https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Configurazione e aggiunta di account Google Cloud per il tiering dei dati con 9.6"^].
 ** Quando si crea o si modifica un volume, è possibile scegliere un criterio di tiering del volume specifico.
 ** Se si disattiva il tiering dei dati, è possibile attivarlo su aggregati successivi, ma è necessario spegnere il sistema e aggiungere un account di servizio dalla console di Google Cloud.
 +
@@ -245,7 +245,9 @@ image:screenshot_cot_vol.gif["Schermata: Mostra la pagina Volume compilata per u
 | Dominio DNS | Il dominio DNS per la SVM (Storage Virtual Machine) di Cloud Volumes ONTAP. Nella maggior parte dei casi, il dominio è lo stesso del dominio ad. 
 
 
-| Server NTP | Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/cloud-manager-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni. Nota: È possibile configurare un server NTP solo quando si crea un server CIFS. Non è configurabile dopo aver creato il server CIFS. 
+| Server NTP | Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/bluexp-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni.
+
+Nota: È possibile configurare un server NTP solo quando si crea un server CIFS. Non è configurabile dopo aver creato il server CIFS. 
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +
@@ -299,7 +301,7 @@ La seguente tabella descrive i campi per i quali potrebbero essere necessarie in
 | Nome ambiente di lavoro | BlueXP utilizza il nome dell'ambiente di lavoro per assegnare un nome sia al sistema Cloud Volumes ONTAP che all'istanza di Google Cloud VM. Se si seleziona questa opzione, il nome viene utilizzato anche come prefisso per il gruppo di protezione predefinito. 
 
 
-| Nome account servizio | Se si intende utilizzare link:concept-data-tiering.html["tiering dei dati"] oppure https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["backup e recovery"^] Services (servizi), è necessario attivare lo switch *Service account* (account servizio) e selezionare l'account di servizio che ha il ruolo di amministratore dello storage predefinito. 
+| Nome account servizio | Se si intende utilizzare link:concept-data-tiering.html["Tiering BlueXP"] oppure https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Backup e ripristino BlueXP"^] Services (servizi), è necessario attivare lo switch *Service account* (account servizio) e selezionare l'account di servizio che ha il ruolo di amministratore dello storage predefinito. 
 
 
 | Aggiungi etichette | Le etichette sono metadati per le risorse Google Cloud. BlueXP aggiunge le etichette al sistema Cloud Volumes ONTAP e alle risorse di Google Cloud associate al sistema. È possibile aggiungere fino a quattro etichette dall'interfaccia utente durante la creazione di un ambiente di lavoro e aggiungerne altre dopo la creazione. Si noti che l'API non limita l'utente a quattro etichette quando crea un ambiente di lavoro. Per informazioni sulle etichette, fare riferimento a. https://cloud.google.com/compute/docs/labeling-resources["Documentazione Google Cloud: Risorse per l'etichettatura"^]. 
@@ -314,7 +316,7 @@ Selezionare il progetto in cui si desidera che Cloud Volumes ONTAP risieda. Il p
 Se nell'elenco a discesa non sono presenti progetti aggiuntivi, l'account del servizio BlueXP non è ancora stato associato ad altri progetti. Accedere alla console di Google Cloud, aprire il servizio IAM e selezionare il progetto. Aggiungere l'account del servizio con il ruolo BlueXP a quel progetto. Dovrai ripetere questo passaggio per ogni progetto.
 
 
-NOTE: Account di servizio impostato per BlueXP, link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["come descritto in questa pagina"^].
+NOTE: Account di servizio impostato per BlueXP, link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["come descritto in questa pagina"^].
 
 Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenziali selezionate a un abbonamento.
 
@@ -322,7 +324,7 @@ Per creare un sistema Cloud Volumes ONTAP pay-as-you-go, devi selezionare un pro
 
 |===
 +
-Il video seguente mostra come associare un abbonamento a pagamento a Marketplace al progetto Google Cloud. In alternativa, seguire la procedura per effettuare l'iscrizione nella https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-gcp-accounts.html["Associazione di un abbonamento a Marketplace con le credenziali Google Cloud"^] sezione.
+Il video seguente mostra come associare un abbonamento a pagamento a Marketplace al progetto Google Cloud.  In alternativa, seguire la procedura per effettuare l'iscrizione nella https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Associazione di un abbonamento a Marketplace con le credenziali Google Cloud"^] sezione.
 
 +
 video::video_subscribing_gcp.mp4[width=848,height=480]
@@ -392,7 +394,7 @@ link:concept-write-speed.html["Scopri di più sulla velocità di scrittura"].
 
 +
 
-NOTE: _Flash cache_, elevata velocità di scrittura e un'unità di trasmissione massima (MTU) superiore di 8,896 byte sono disponibili tramite l'opzione *High* write speed con i tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64. Inoltre, la MTU superiore di 8,896 richiede la selezione di VPC-1, VPC-2 e VPC-3 per l'implementazione. _Flash cache_, alta velocità di scrittura e MTU di 8,896 sono dipendenti dalle funzionalità e non possono essere disabilitati singolarmente all'interno di un'istanza configurata. Per ulteriori informazioni su VPC-1, VPC-2 e VPC-3, vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regole per VPC-1, VPC-2 e VPC-3"].
+NOTE: _Flash cache_, elevata velocità di scrittura e un'unità di trasmissione massima (MTU) superiore di 8,896 byte sono disponibili tramite l'opzione *High* write speed con i tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64. Inoltre, la MTU superiore di 8,896 richiede la selezione di VPC-1, VPC-2 e VPC-3 per l'implementazione. _Flash cache_, alta velocità di scrittura e MTU di 8,896 sono dipendenti dalle funzionalità e non possono essere disabilitati singolarmente all'interno di un'istanza configurata. Per ulteriori informazioni su VPC-1, VPC-2 e VPC-3, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regole per VPC-1, VPC-2 e VPC-3"].
 
 .. Attivare lo storage WORM (Write Once, Read Many), se lo si desidera.
 +
@@ -478,7 +480,9 @@ image:screenshot_cot_vol.gif["Schermata: Mostra la pagina Volume compilata per u
 | Dominio DNS | Il dominio DNS per la SVM (Storage Virtual Machine) di Cloud Volumes ONTAP. Nella maggior parte dei casi, il dominio è lo stesso del dominio ad. 
 
 
-| Server NTP | Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/cloud-manager-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni. Nota: È possibile configurare un server NTP solo quando si crea un server CIFS. Non è configurabile dopo aver creato il server CIFS. 
+| Server NTP | Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/bluexp-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni.
+
+Nota: È possibile configurare un server NTP solo quando si crea un server CIFS. Non è configurabile dopo aver creato il server CIFS. 
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +

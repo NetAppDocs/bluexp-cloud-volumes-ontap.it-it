@@ -106,7 +106,7 @@ Oltre allo storage per i dati degli utenti, BlueXP acquista anche lo storage clo
 link:reference-default-configs.html#azure-single-node["Visualizzare i dischi predefiniti per i dati di sistema Cloud Volumes ONTAP in Azure"].
 
 
-TIP: Il connettore richiede anche un disco di sistema. https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-connector-default-config.html["Visualizza i dettagli sulla configurazione predefinita del connettore"^].
+TIP: Il connettore richiede anche un disco di sistema. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html["Visualizza i dettagli sulla configurazione predefinita del connettore"^].
 
 
 

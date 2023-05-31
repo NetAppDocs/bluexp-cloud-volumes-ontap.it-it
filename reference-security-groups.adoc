@@ -361,4 +361,4 @@ Il gruppo di protezione predefinito include le seguenti regole in uscita.
 
 == Regole per il connettore
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Visualizzare le regole del gruppo di protezione per il connettore"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Visualizzare le regole del gruppo di protezione per il connettore"^]

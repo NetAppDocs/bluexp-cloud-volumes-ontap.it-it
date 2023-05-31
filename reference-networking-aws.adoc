@@ -176,7 +176,7 @@ TIP: Quando viene implementato in più zone di disponibilità, vengono associate
 Non è necessario creare gruppi di sicurezza perché BlueXP fa questo per te. Se è necessario utilizzare il proprio, fare riferimento a. link:reference-security-groups.html["Regole del gruppo di sicurezza"].
 
 
-TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Visualizzare le regole del gruppo di protezione per il connettore"^]
+TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Visualizzare le regole del gruppo di protezione per il connettore"^]
 
 
 
@@ -281,6 +281,6 @@ image:diagram_ha_networking.png["Immagine concettuale che mostra i componenti in
 
 Se non hai ancora creato un connettore, dovresti rivedere anche i requisiti di rete per il connettore.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html["Visualizzare i requisiti di rete per il connettore"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Visualizzare i requisiti di rete per il connettore"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Regole del gruppo di sicurezza in AWS"^]
 

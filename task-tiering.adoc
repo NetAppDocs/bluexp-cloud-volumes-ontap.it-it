@@ -162,7 +162,7 @@ Non è necessario impostare una connessione tra il Tier di performance e il Tier
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-Per impostazione predefinita, le autorizzazioni sono incluse nel ruolo personalizzato. https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["Visualizzare l'autorizzazione Azure per il connettore"^]
+Per impostazione predefinita, le autorizzazioni sono incluse nel ruolo personalizzato. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'autorizzazione Azure per il connettore"^]
 
 endif::azure[]
 
@@ -297,7 +297,7 @@ Cloud Volumes ONTAP può eseguire il tiering dei dati da un volume di protezione
 image:screenshot_replication_tiering.gif["Schermata che mostra l'opzione di tiering S3 durante la replica di un volume."]
 
 +
-Per assistenza nella replica dei dati, vedere https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["Replica dei dati da e verso il cloud"^].
+Per assistenza nella replica dei dati, vedere https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replica dei dati da e verso il cloud"^].
 
 
 

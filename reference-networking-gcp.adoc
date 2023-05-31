@@ -184,7 +184,7 @@ Per una coppia ha, sono necessari quattro VPC. Ciascuno di questi VPC può esser
 
 Un VPC condiviso consente di configurare e gestire centralmente le reti virtuali in più progetti. È possibile configurare reti VPC condivise nel _progetto host_ e implementare le istanze di connettori e macchine virtuali Cloud Volumes ONTAP in un _progetto di servizio_. https://cloud.google.com/vpc/docs/shared-vpc["Documentazione di Google Cloud: Panoramica VPC condivisa"^].
 
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Esaminare le autorizzazioni VPC condivise richieste e descritte nella sezione implementazione di Connector"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Esaminare le autorizzazioni VPC condivise richieste e descritte nella sezione implementazione di Connector"^]
 
 
 
@@ -254,7 +254,7 @@ Tenere presente che per una configurazione ha sono necessari due set di regole f
 
 
 
-TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html["Visualizzare le regole del firewall per il connettore"^]
+TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Visualizzare le regole del firewall per il connettore"^]
 
 
 
@@ -509,6 +509,6 @@ NOTE: Per consentire un'elevata velocità di scrittura per le nuove implementazi
 
 Se non hai ancora creato un connettore, dovresti rivedere anche i requisiti di rete per il connettore.
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html["Visualizzare i requisiti di rete per il connettore"^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Visualizzare i requisiti di rete per il connettore"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Regole del firewall in Google Cloud"^]
 

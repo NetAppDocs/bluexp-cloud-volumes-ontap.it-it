@@ -337,11 +337,11 @@ homepage:
   - title: API
     links:
     - title: Panoramica dell'API Cloud Volumes ONTAP
-      url: https://docs.netapp.com/us-en/cloud-manager-automation/cm/overview.html
+      url: https://docs.netapp.com/us-en/bluexp-automation/cm/overview.html
     - title: Prepararsi a utilizzare l'API
-      url: https://docs.netapp.com/us-en/cloud-manager-automation/cm/prepare.html
+      url: https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html
     - title: Riferimento API
-      url: https://docs.netapp.com/us-en/cloud-manager-automation/cm/api_ref_resources.html
+      url: https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html
   - title: Risoluzione dei problemi
     links:
     - title: Knowledge base di NetApp
@@ -364,5 +364,5 @@ homepage:
       url: https://cloud.netapp.com/events
 product-family:
   name: BlueXP
-  repo: cloud-manager-family
+  repo: bluexp-family
   sidebar_label: Tutta la documentazione BlueXP

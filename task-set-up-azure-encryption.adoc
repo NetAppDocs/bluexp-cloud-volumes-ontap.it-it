@@ -126,7 +126,7 @@ Se si desidera utilizzare una chiave gestita dal cliente con un sistema Cloud Vo
 "Microsoft.KeyVault/vaults/accessPolicies/write"
 "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"
 ----
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html["Visualizzare l'elenco più recente delle autorizzazioni"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'elenco più recente delle autorizzazioni"^]
 
 
 NOTE: Le autorizzazioni non sono richieste per le coppie ha in una singola zona.
@@ -143,7 +143,7 @@ Per nodo singolo: `GET /azure/vsa/metadata/vaults`
 Prendere nota del *nome* e del *resourceGroup*. Sarà necessario specificare questi valori nel passaggio successivo.
 
 +
-https://docs.netapp.com/us-en/cloud-manager-automation/cm/api_ref_resources.html#azure-hametadata["Scopri di più su questa chiamata API"^].
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-hametadata["Scopri di più su questa chiamata API"^].
 
 . Ottenere l'elenco delle chiavi all'interno del vault utilizzando la seguente chiamata API BlueXP.
 +
@@ -156,7 +156,7 @@ Per nodo singolo: `GET /azure/vsa/metadata/keys-vault`
 Prendere nota del *nome chiave*. Nel passaggio successivo, specificare tale valore (insieme al nome del vault).
 
 +
-https://docs.netapp.com/us-en/cloud-manager-automation/cm/api_ref_resources.html#azure-hametadata["Scopri di più su questa chiamata API"^].
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-hametadata["Scopri di più su questa chiamata API"^].
 
 . Creare un sistema Cloud Volumes ONTAP utilizzando la seguente chiamata API BlueXP.
 +
@@ -177,7 +177,7 @@ Il corpo della richiesta deve includere i seguenti campi:
 }
 ----
 +
-https://docs.netapp.com/us-en/cloud-manager-automation/cm/api_ref_resources.html#azure-haworking-environments["Scopri di più su questa chiamata API"^].
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-haworking-environments["Scopri di più su questa chiamata API"^].
 
 .. Per un sistema a nodo singolo:
 +
@@ -196,7 +196,7 @@ Il corpo della richiesta deve includere i seguenti campi:
 }
 ----
 +
-https://docs.netapp.com/us-en/cloud-manager-automation/cm/api_ref_resources.html#azure-vsaworking-environments["Scopri di più su questa chiamata API"^].
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-vsaworking-environments["Scopri di più su questa chiamata API"^].
 
 
 

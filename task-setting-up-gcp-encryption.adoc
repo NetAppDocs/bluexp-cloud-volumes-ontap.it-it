@@ -19,7 +19,7 @@ Mentre Google Cloud Storage crittografa sempre i tuoi dati prima che vengano scr
 .Fasi
 . Assicurarsi che l'account di servizio di BlueXP Connector disponga delle autorizzazioni corrette a livello di progetto, nel progetto in cui è memorizzata la chiave.
 +
-Le autorizzazioni sono fornite in https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-gcp.html["Per impostazione predefinita, le autorizzazioni dell'account di servizio del connettore"^], Ma potrebbe non essere applicato se si utilizza un progetto alternativo per il Cloud Key Management Service.
+Le autorizzazioni sono fornite in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Per impostazione predefinita, le autorizzazioni dell'account di servizio del connettore"^], Ma potrebbe non essere applicato se si utilizza un progetto alternativo per il Cloud Key Management Service.
 
 +
 Le autorizzazioni sono le seguenti:
@@ -62,4 +62,4 @@ Per ulteriori informazioni, fare riferimento a. https://cloud.google.com/storage
 ----
 
 
-Fare riferimento a. https://docs.netapp.com/us-en/cloud-manager-automation/index.html["Documenti sull'automazione BlueXP"^] Per ulteriori informazioni sull'utilizzo del parametro "GcpEncryption".
+Fare riferimento a. https://docs.netapp.com/us-en/bluexp-automation/index.html["Documenti sull'automazione BlueXP"^] Per ulteriori informazioni sull'utilizzo del parametro "GcpEncryption".

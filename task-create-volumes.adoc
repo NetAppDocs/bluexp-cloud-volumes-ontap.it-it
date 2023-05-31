@@ -87,7 +87,7 @@ Alcuni dei campi di questa pagina sono esplicativi. Il seguente elenco descrive 
 | Volume Size (dimensione volume) | Le dimensioni massime che è possibile inserire dipendono in gran parte dall'attivazione o meno del thin provisioning, che consente di creare un volume più grande dello storage fisico attualmente disponibile per l'IT. 
 
 
-| Tag | I tag aggiunti a un volume vengono associati a https://docs.netapp.com/us-en/cloud-manager-app-template/task-using-tags.html["Servizio modelli di applicazione"^], che consente di organizzare e semplificare la gestione delle risorse. 
+| Tag | I tag aggiunti a un volume vengono associati a https://docs.netapp.com/us-en/bluexp-remediation/task-using-tags.html["Servizio modelli di applicazione"^], che consente di organizzare e semplificare la gestione delle risorse. 
 
 
 | Storage VM (SVM) | Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage. È possibile specificare la Storage VM per il nuovo volume. 
@@ -158,7 +158,7 @@ ifdef::gcp[]
 endif::gcp[]
 
 Dominio DNS:: Il dominio DNS per la SVM (Storage Virtual Machine) di Cloud Volumes ONTAP. Nella maggior parte dei casi, il dominio è lo stesso del dominio ad.
-Server NTP:: Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/cloud-manager-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni.
+Server NTP:: Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere https://docs.netapp.com/us-en/bluexp-automation/index.html["Documenti sull'automazione BlueXP"^] per ulteriori informazioni.
 +
 --
 Nota: È possibile configurare un server NTP solo quando si crea un server CIFS. Non è configurabile dopo aver creato il server CIFS.

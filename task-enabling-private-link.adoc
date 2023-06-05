@@ -93,7 +93,7 @@ Il nome DNS deve corrispondere ai requisiti di denominazione DNS di Azure https:
 "user-private-dns-zone-settings" : {
    "resource-group" : "<resource group name of the DNS zone>",
    "subscription" : "<subscription ID>",
-   "use-existing" : true
+   "use-existing" : true,
    "create-private-dns-zone-link" : true
 }
 ....

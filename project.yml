@@ -203,8 +203,6 @@ sidebar:
           url: "/task-change-ec2-instance.html"
         - title: Modificare le tabelle di routing per le coppie ha
           url: "/task-change-route-tables.html"
-        - title: Monitorare i costi AWS
-          url: "/task-monitoring-costs.html"
         - title: Configurare la creazione del gruppo di posizionamento
           url: task-configure-placement-group-failure-aws.html
       - title: Amministrazione di Azure

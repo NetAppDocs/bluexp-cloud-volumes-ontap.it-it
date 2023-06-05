@@ -195,22 +195,10 @@ endif::gcp[]
 
 === Abilitazione del tiering dei dati dopo l'implementazione dei requisiti
 
-BlueXP crea un archivio di oggetti per i dati cold quando viene creato il sistema, a condizione che non vi siano problemi di connettività o permessi. Se i requisiti elencati sopra non sono stati implementati fino a quando non è stato creato il sistema, sarà necessario attivare manualmente il tiering, che crea l'archivio di oggetti.
+BlueXP crea un archivio di oggetti per i dati cold quando viene creato il sistema, a condizione che non vi siano problemi di connettività o permessi. Se i requisiti elencati sopra non sono stati implementati fino a quando non è stato creato il sistema, sarà necessario attivare manualmente il tiering tramite l'API o System Manager, che crea l'archivio di oggetti.
 
-.Fasi
-. <<Requisiti,Assicurati di aver soddisfatto tutti i requisiti>>.
-. Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
-. Nella pagina Canvas, selezionare il nome dell'istanza di Cloud Volumes ONTAP.
-. Fare clic sull'icona del menu e selezionare *Enable Capacity Tiering*.
-+
 
-NOTE: Questa opzione viene visualizzata solo se non è stato possibile attivare il tiering dei dati quando BlueXP ha creato il sistema.
-
-+
-In Google Cloud, è necessario allegare un account di servizio a Cloud Volumes ONTAP prima che questa opzione venga visualizzata. <<Requisiti,Assicurati di aver soddisfatto tutti i requisiti>>.
-
-. Fare clic su *Enable* (attiva) per consentire a BlueXP di creare l'archivio di oggetti che il sistema Cloud Volumes ONTAP utilizzerà per i dati a più livelli.
-
+NOTE: La possibilità di abilitare il tiering tramite l'interfaccia utente di BlueXP sarà disponibile in una release futura di Cloud Volumes ONTAP.
 
 
 

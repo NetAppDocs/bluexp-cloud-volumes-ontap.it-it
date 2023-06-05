@@ -20,6 +20,20 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 4 giugno 2023
+
+La seguente modifica è stata introdotta con la versione 3.9.30 del connettore.
+
+
+
+=== Aggiornamento del selettore della versione di aggiornamento di Cloud Volumes ONTAP
+
+Dalla pagina Upgrade Cloud Volumes ONTAP (aggiornamento versione), è possibile scegliere di eseguire l'aggiornamento alla versione più recente disponibile di Cloud Volumes ONTAP o a una versione precedente.
+
+Per ulteriori informazioni sull'aggiornamento di Cloud Volumes ONTAP tramite BlueXP, vedere https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrade-cloud-volumes-ontap["Aggiornare Cloud Volumes ONTAP"^].
+
+
+
 == 7 maggio 2023
 
 Le seguenti modifiche sono state introdotte con la versione 3.9.29 del connettore.

@@ -250,15 +250,24 @@ Se è disponibile una nuova versione, nella scheda Panoramica viene visualizzata
 image:screenshot_overview_upgrade.png["Una schermata che mostra l'opzione \"Upgrade now!\" (Aggiorna ora!) Sotto la scheda Panoramica."]
 
 . Se è disponibile una nuova versione, fare clic su *Aggiorna ora!*
++
+
+NOTE: Prima di poter aggiornare Cloud Volumes ONTAP tramite la notifica BlueXP, è necessario disporre di un account per il sito di supporto NetApp.
+
 . Nella pagina Upgrade Cloud Volumes ONTAP (Contratto di licenza con l'utente finale), leggere l'EULA, quindi selezionare *i Read and Approve the EULA* (Leggi e approva l'EULA).
 . Fare clic su *Upgrade* (Aggiorna).
++
+
+NOTE: Per impostazione predefinita, la pagina Upgrade Cloud Volumes ONTAP (aggiornamento versione Cloud Volumes ONTAP) seleziona l'ultima versione disponibile per l'aggiornamento. Se disponibili, è possibile selezionare le versioni precedenti di Cloud Volumes ONTAP per l'aggiornamento facendo clic su *Seleziona versioni precedenti*.
+Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Elenco dei percorsi di upgrade supportati"^] Per il percorso di aggiornamento appropriato in base alla versione corrente di Cloud Volumes ONTAP.
+
++
+image:screenshot_upgrade_select_versions.png["Schermata della pagina della versione di Upgrade Cloud Volumes ONTAP."]
+
 
 
 .Risultato
 BlueXP avvia l'aggiornamento del software. Una volta completato l'aggiornamento del software, è possibile eseguire azioni sull'ambiente di lavoro.
-
-
-NOTE: Attualmente, è possibile eseguire l'aggiornamento alla versione più recente di ONTAP disponibile solo tramite l'interfaccia utente di BlueXP. La possibilità di eseguire l'aggiornamento a una versione specifica di ONTAP tramite l'interfaccia utente di BlueXP sarà disponibile in una release futura.
 
 .Al termine
 Se sono state sospese le trasferte SnapMirror, utilizzare System Manager per riprendere le trasferte.

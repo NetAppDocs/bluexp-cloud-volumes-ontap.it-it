@@ -370,7 +370,7 @@ La ricarica si basa sulle dimensioni della capacità impegnata per una o più co
 
 La capacità fornita per ciascun volume viene aggregata e confrontata periodicamente con la capacità impegnata del tuo abbonamento Keystone e gli eventuali superamenti vengono addebitati come burst sul tuo abbonamento Keystone.
 
-https://www.netapp.com/services/keystone/["Scopri di più sugli abbonamenti NetApp Keystone"^].
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["Scopri di più su NetApp Keystone"^].
 
 
 

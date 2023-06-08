@@ -35,6 +35,9 @@ TIP: BlueXP modifica correttamente un nodo alla volta avviando il Takeover e att
 
 
 
+.Riferimento
+Per un elenco dei tipi di istanza supportati in AWS, vedere link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Istanze EC2 supportate"^].
+
 .Fasi
 . Nella pagina Canvas, selezionare l'ambiente di lavoro.
 . Nella scheda Panoramica, fare clic sul pannello funzionalità, quindi fare clic sull'icona a forma di matita accanto a *tipo di istanza*.

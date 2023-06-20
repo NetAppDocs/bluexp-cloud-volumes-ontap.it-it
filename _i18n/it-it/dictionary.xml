@@ -1845,7 +1845,6 @@
   <block id="cf7451c571bdcd94b5852c9167fbb885" category="paragraph">Dopo aver creato l'archivio delle chiavi e aver generato una chiave di crittografia, è possibile creare un nuovo sistema Cloud Volumes ONTAP configurato per l'utilizzo della chiave. Questi passaggi sono supportati dall'API BlueXP.</block>
   <block id="2a709f4373163ddbd1d13389c553a2eb" category="paragraph">Se si desidera utilizzare una chiave gestita dal cliente con un sistema Cloud Volumes ONTAP a nodo singolo, assicurarsi che BlueXP Connector disponga delle seguenti autorizzazioni:</block>
   <block id="791fab48bebea2a79a35d70b5cc07227" category="inline-link">Visualizzare l'elenco più recente delle autorizzazioni</block>
-  <block id="6337ff9e523cd4d0c21d00ce582cb8ca" category="admonition">Le autorizzazioni non sono richieste per le coppie ha in una singola zona.</block>
   <block id="8be0344d53e72ba6b33ee561546d42ef" category="list-text">Ottenere l'elenco dei vault chiave nell'abbonamento Azure utilizzando la seguente chiamata API BlueXP.</block>
   <block id="b5bc96f48f2241c984568df161fa1a37" category="paragraph">Per una coppia ha:<block ref="77c22cb91fef3c1e85c041013cec246d" prefix=" " category="inline-code"></block></block>
   <block id="ac20be2c156e351d08e2cd3c7c63b584" category="paragraph">Per nodo singolo:<block ref="842256d0af833acbb8f3ef6a213881aa" prefix=" " category="inline-code"></block></block>
@@ -4942,4 +4941,32 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="9eecbfaf12c4b441b4b80b15e69b1763" category="paragraph"><block ref="861512b606f6337e516b8d3562c115c3" category="inline-link-macro-rx"></block>.</block>
   <block id="ce8df63e83de2ff4c9315aacad840c85" category="inline-link-macro">Istanze EC2 supportate</block>
   <block id="eb8249aa4fe7f904487ee8ca24dce280" category="paragraph">Per un elenco dei tipi di istanza supportati in AWS, vedere <block ref="ab5d2be79e0f4831293646ade5590437" category="inline-link-macro-rx"></block>.</block>
+  <block id="21d684c5497d7c44f38249fb9317e2ff" category="section-title">Creare un'identità gestita assegnata dall'utente</block>
+  <block id="c1d9d82ae4f42fc1db168e7b745f9697" category="paragraph">È possibile creare una risorsa denominata identità gestita assegnata dall'utente. In questo modo è possibile crittografare gli account storage quando si crea un ambiente di lavoro Cloud Volumes ONTAP. Si consiglia di creare questa risorsa prima di creare un vault delle chiavi e di generare una chiave.</block>
+  <block id="2da2bdad0a1c89d70cb7a7586bf14758" category="paragraph">La risorsa ha il seguente ID:<block ref="0169e4e7c078e2230c21c551eaf35e56" prefix=" " category="inline-code"></block>.</block>
+  <block id="2f37b99340ba454bd7f13c34ebaf9799" category="list-text">In Azure, accedere a servizi Azure e selezionare *identità gestite*.</block>
+  <block id="f2a42a68e067e481d094b018459ef895" category="list-text">Fare clic su *Create* (Crea).</block>
+  <block id="0de11488ec479f7728a12eaa20900087" category="list-text">Fornire i seguenti dettagli:</block>
+  <block id="eb6b5e1059f0c14240e0b29450c64244" category="list-text">*Subscription*: Scegli un abbonamento. Si consiglia di scegliere lo stesso abbonamento di Connector.</block>
+  <block id="10a805425ce15433762da2005f065657" category="list-text">*Gruppo di risorse*: Utilizzare un gruppo di risorse esistente o crearne uno nuovo.</block>
+  <block id="da2433e2c4da1ae4d4ccf813bec559d8" category="list-text">*Regione*: Se si desidera, selezionare la stessa regione del connettore.</block>
+  <block id="5b75c82ea3a972e4af28cf4cebb17b30" category="list-text">*Nome*: Immettere un nome per la risorsa.</block>
+  <block id="a5224fbb5f2e884564b316411dcf1c8b" category="list-text">Facoltativamente, aggiungere tag.</block>
+  <block id="8a719e3e1b73b371d427de036115d5ca" category="inline-xref">creazione di un'identità gestita assegnata dall'utente</block>
+  <block id="6290500d5abf30b274cc1c7ddf30e546" category="paragraph">Se <block ref="33573eb5764d0fad6438d3a347eee31f" category="inline-xref-macro-rx"></block>, durante la creazione del vault delle chiavi, è necessario creare anche una policy di accesso per il vault delle chiavi.</block>
+  <block id="4fe37dc4f545dffb56459397b5344d4c" category="list-text">Se è stata creata un'identità gestita assegnata dall'utente, deve essere attivata la seguente opzione:</block>
+  <block id="7761893631ec0e57ca5b1847392a89d1" category="list-text">*Policy di accesso al vault*</block>
+  <block id="6b549cac54fb4417d571d2ff5fe2226a" category="list-text">Se è stata selezionata la policy di accesso al vault, fare clic su Create (Crea) per creare una policy di accesso per il vault delle chiavi. In caso contrario, passare alla fase 3.</block>
+  <block id="05d7a493e761863b43bc21c5b24707a8" category="list-text">Selezionare le seguenti autorizzazioni:</block>
+  <block id="b5eda0a74558a342cf659187f06f746f" category="list-text">ottieni</block>
+  <block id="10ae9fc7d453b0dd525d0edf2ede7961" category="list-text">elenco</block>
+  <block id="9a2d8ce3ffdcdf2123bddd94d79ef200" category="list-text">decrittare</block>
+  <block id="53c82eba31f6d416f331de9162ebe997" category="list-text">crittografare</block>
+  <block id="64d6d5cd6bec2e7026a301304363a0f2" category="list-text">tasto di savvolgimento</block>
+  <block id="2733a028e38aa84f7ea84735ac7988a6" category="list-text">tasto di avvolgimento</block>
+  <block id="e8418d1d706cd73548f9f16f1d55ad6e" category="list-text">verificare</block>
+  <block id="04b29480233f4def5c875875b6bdc3b1" category="list-text">segnale</block>
+  <block id="dfbbb3ca890c5e816afc33a0f5d49ec2" category="list-text">Selezionare l'identità gestita (risorsa) assegnata dall'utente come principale.</block>
+  <block id="0882685275009e45f6167bce4081e668" category="list-text">Esaminare e creare la policy di accesso.</block>
+  <block id="1f8370f663ec71e8fac7dc386794543c" category="admonition">Includere il<block ref="d740baa07e4af19d0de1f45650cf4bc0" prefix=" " category="inline-code"></block> se questa risorsa è stata creata per essere utilizzata per la crittografia dell'account di storage.</block>
 </blocks>

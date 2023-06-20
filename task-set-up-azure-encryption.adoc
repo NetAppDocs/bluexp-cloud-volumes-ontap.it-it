@@ -76,9 +76,34 @@ Nodo singolo::
 
 
 
+== Creare un'identità gestita assegnata dall'utente
+
+È possibile creare una risorsa denominata identità gestita assegnata dall'utente. In questo modo è possibile crittografare gli account storage quando si crea un ambiente di lavoro Cloud Volumes ONTAP. Si consiglia di creare questa risorsa prima di creare un vault delle chiavi e di generare una chiave.
+
+La risorsa ha il seguente ID: `userassignedidentity`.
+
+.Fasi
+. In Azure, accedere a servizi Azure e selezionare *identità gestite*.
+. Fare clic su *Create* (Crea).
+. Fornire i seguenti dettagli:
++
+** *Subscription*: Scegli un abbonamento. Si consiglia di scegliere lo stesso abbonamento di Connector.
+** *Gruppo di risorse*: Utilizzare un gruppo di risorse esistente o crearne uno nuovo.
+** *Regione*: Se si desidera, selezionare la stessa regione del connettore.
+** *Nome*: Immettere un nome per la risorsa.
+
+
+. Facoltativamente, aggiungere tag.
+. Fare clic su *Create* (Crea).
+
+
+
+
 == Creare un vault delle chiavi e generare una chiave
 
 Il vault delle chiavi deve risiedere nella stessa sottoscrizione Azure e nella stessa regione in cui si intende creare il sistema Cloud Volumes ONTAP.
+
+Se <<Creare un'identità gestita assegnata dall'utente,creazione di un'identità gestita assegnata dall'utente>>, durante la creazione del vault delle chiavi, è necessario creare anche una policy di accesso per il vault delle chiavi.
 
 .Fasi
 . https://docs.microsoft.com/en-us/azure/key-vault/general/quick-create-portal["Creare un vault delle chiavi nell'abbonamento Azure"^].
@@ -94,6 +119,29 @@ Tenere presente i seguenti requisiti per il vault delle chiavi:
 *** *Azure Disk Encryption per la crittografia dei volumi* (per sistemi a nodo singolo o coppie ha in più zone)
 
 
+** Se è stata creata un'identità gestita assegnata dall'utente, deve essere attivata la seguente opzione:
++
+*** *Policy di accesso al vault*
+
+
+
+
+. Se è stata selezionata la policy di accesso al vault, fare clic su Create (Crea) per creare una policy di accesso per il vault delle chiavi. In caso contrario, passare alla fase 3.
++
+.. Selezionare le seguenti autorizzazioni:
++
+*** ottieni
+*** elenco
+*** decrittare
+*** crittografare
+*** tasto di savvolgimento
+*** tasto di avvolgimento
+*** verificare
+*** segnale
+
+
+.. Selezionare l'identità gestita (risorsa) assegnata dall'utente come principale.
+.. Esaminare e creare la policy di accesso.
 
 
 . https://docs.microsoft.com/en-us/azure/key-vault/keys/quick-create-portal#add-a-key-to-key-vault["Generare una chiave nell'archivio chiavi"^].
@@ -118,18 +166,15 @@ Se si desidera utilizzare una chiave gestita dal cliente con un sistema Cloud Vo
 
 [source, json]
 ----
-"Microsoft.Compute/diskEncryptionSets/read"
+"Microsoft.Compute/diskEncryptionSets/read",
 "Microsoft.Compute/diskEncryptionSets/write",
 "Microsoft.Compute/diskEncryptionSets/delete"
 "Microsoft.KeyVault/vaults/deploy/action",
 "Microsoft.KeyVault/vaults/read",
-"Microsoft.KeyVault/vaults/accessPolicies/write"
+"Microsoft.KeyVault/vaults/accessPolicies/write",
 "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"
 ----
 https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'elenco più recente delle autorizzazioni"^]
-
-
-NOTE: Le autorizzazioni non sono richieste per le coppie ha in una singola zona.
 
 .Fasi
 . Ottenere l'elenco dei vault chiave nell'abbonamento Azure utilizzando la seguente chiamata API BlueXP.
@@ -172,10 +217,13 @@ Il corpo della richiesta deve includere i seguenti campi:
 ----
 "azureEncryptionParameters": {
               "key": "keyName",
-              "vaultName": "vaultName",
-              "userAssignedIdentity": " userAssignedIdentityId", [Optional]***
+              "vaultName": "vaultName"
 }
 ----
++
+
+NOTE: Includere il `"userAssignedIdentity": " userAssignedIdentityId"` se questa risorsa è stata creata per essere utilizzata per la crittografia dell'account di storage.
+
 +
 https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-haworking-environments["Scopri di più su questa chiamata API"^].
 
@@ -191,10 +239,13 @@ Il corpo della richiesta deve includere i seguenti campi:
 ----
 "azureEncryptionParameters": {
               "key": "keyName",
-              "vaultName": "vaultName",
-              "userAssignedIdentity": " userAssignedIdentityId", [Optional]***
+              "vaultName": "vaultName"
 }
 ----
++
+
+NOTE: Includere il `"userAssignedIdentity": " userAssignedIdentityId"` se questa risorsa è stata creata per essere utilizzata per la crittografia dell'account di storage.
+
 +
 https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-vsaworking-environments["Scopri di più su questa chiamata API"^].
 

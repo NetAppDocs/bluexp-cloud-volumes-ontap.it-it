@@ -1838,7 +1838,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-31 14:16:33 +0000">05/31/2023</time>
+    <time datetime="2023-06-20 17:24:47 +0000">06/20/2023</time>
     
   
 
@@ -1964,10 +1964,60 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="creare-unidentità-gestita-assegnata-dallutente">Creare un&#8217;identità gestita assegnata dall&#8217;utente</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>È possibile creare una risorsa denominata identità gestita assegnata dall&#8217;utente. In questo modo è possibile crittografare gli account storage quando si crea un ambiente di lavoro Cloud Volumes ONTAP. Si consiglia di creare questa risorsa prima di creare un vault delle chiavi e di generare una chiave.</p>
+</div>
+<div class="paragraph">
+<p>La risorsa ha il seguente ID: <code>userassignedidentity</code>.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>In Azure, accedere a servizi Azure e selezionare <strong>identità gestite</strong>.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Create</strong> (Crea).</p>
+</li>
+<li>
+<p>Fornire i seguenti dettagli:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Subscription</strong>: Scegli un abbonamento. Si consiglia di scegliere lo stesso abbonamento di Connector.</p>
+</li>
+<li>
+<p><strong>Gruppo di risorse</strong>: Utilizzare un gruppo di risorse esistente o crearne uno nuovo.</p>
+</li>
+<li>
+<p><strong>Regione</strong>: Se si desidera, selezionare la stessa regione del connettore.</p>
+</li>
+<li>
+<p><strong>Nome</strong>: Immettere un nome per la risorsa.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Facoltativamente, aggiungere tag.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Create</strong> (Crea).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="creare-un-vault-delle-chiavi-e-generare-una-chiave">Creare un vault delle chiavi e generare una chiave</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Il vault delle chiavi deve risiedere nella stessa sottoscrizione Azure e nella stessa regione in cui si intende creare il sistema Cloud Volumes ONTAP.</p>
+</div>
+<div class="paragraph">
+<p>Se <a href="#creare-unidentità-gestita-assegnata-dallutente">creazione di un&#8217;identità gestita assegnata dall&#8217;utente</a>, durante la creazione del vault delle chiavi, è necessario creare anche una policy di accesso per il vault delle chiavi.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
@@ -1998,7 +2048,61 @@
 </ul>
 </div>
 </li>
+<li>
+<p>Se è stata creata un&#8217;identità gestita assegnata dall&#8217;utente, deve essere attivata la seguente opzione:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Policy di accesso al vault</strong></p>
+</li>
 </ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Se è stata selezionata la policy di accesso al vault, fare clic su Create (Crea) per creare una policy di accesso per il vault delle chiavi. In caso contrario, passare alla fase 3.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Selezionare le seguenti autorizzazioni:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ottieni</p>
+</li>
+<li>
+<p>elenco</p>
+</li>
+<li>
+<p>decrittare</p>
+</li>
+<li>
+<p>crittografare</p>
+</li>
+<li>
+<p>tasto di savvolgimento</p>
+</li>
+<li>
+<p>tasto di avvolgimento</p>
+</li>
+<li>
+<p>verificare</p>
+</li>
+<li>
+<p>segnale</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Selezionare l&#8217;identità gestita (risorsa) assegnata dall&#8217;utente come principale.</p>
+</li>
+<li>
+<p>Esaminare e creare la policy di accesso.</p>
+</li>
+</ol>
 </div>
 </li>
 <li>
@@ -2033,29 +2137,17 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Compute/diskEncryptionSets/read"
+<pre class="highlight"><code class="language-json" data-lang="json">"Microsoft.Compute/diskEncryptionSets/read",
 "Microsoft.Compute/diskEncryptionSets/write",
 "Microsoft.Compute/diskEncryptionSets/delete"
 "Microsoft.KeyVault/vaults/deploy/action",
 "Microsoft.KeyVault/vaults/read",
-"Microsoft.KeyVault/vaults/accessPolicies/write"
+"Microsoft.KeyVault/vaults/accessPolicies/write",
 "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p><a href="https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html" target="_blank" rel="noopener">"Visualizzare l&#8217;elenco più recente delle autorizzazioni"</a></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/bluexp-cloud-volumes-ontap/images/note.svg" alt="Nota">
-</td>
-<td class="content">
-Le autorizzazioni non sono richieste per le coppie ha in una singola zona.
-</td>
-</tr>
-</table>
 </div>
 <div class="olist arabic">
 <div class="title">Fasi</div>
@@ -2106,10 +2198,21 @@ Le autorizzazioni non sono richieste per le coppie ha in una singola zona.
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"azureEncryptionParameters": {
               "key": "keyName",
-              "vaultName": "vaultName",
-              "userAssignedIdentity": " userAssignedIdentityId", [Optional]***
+              "vaultName": "vaultName"
 }</code></pre>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-cloud-volumes-ontap/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Includere il <code>"userAssignedIdentity": " userAssignedIdentityId"</code> se questa risorsa è stata creata per essere utilizzata per la crittografia dell&#8217;account di storage.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p><a href="https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-haworking-environments" target="_blank" rel="noopener">"Scopri di più su questa chiamata API"</a>.</p>
@@ -2123,21 +2226,31 @@ Le autorizzazioni non sono richieste per le coppie ha in una singola zona.
 <div class="paragraph">
 <p>Il corpo della richiesta deve includere i seguenti campi:</p>
 </div>
-</li>
-</ol>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"azureEncryptionParameters": {
               "key": "keyName",
-              "vaultName": "vaultName",
-              "userAssignedIdentity": " userAssignedIdentityId", [Optional]***
+              "vaultName": "vaultName"
 }</code></pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/bluexp-cloud-volumes-ontap/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Includere il <code>"userAssignedIdentity": " userAssignedIdentityId"</code> se questa risorsa è stata creata per essere utilizzata per la crittografia dell&#8217;account di storage.
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>+<br>
-<a href="https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-vsaworking-environments" target="_blank" rel="noopener">"Scopri di più su questa chiamata API"</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-vsaworking-environments" target="_blank" rel="noopener">"Scopri di più su questa chiamata API"</a>.</p>
 </div>
 </li>
 </ol>

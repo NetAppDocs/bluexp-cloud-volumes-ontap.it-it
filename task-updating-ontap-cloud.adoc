@@ -49,7 +49,13 @@ La versione di Cloud Volumes ONTAP a cui è possibile eseguire l'aggiornamento d
 | Versione corrente | Versioni a cui è possibile eseguire direttamente l'aggiornamento 
 
 
-| 9.12.1 | 9.13.0 
+| 9.13.0 | 9.13.1 
+
+
+.2+| 9.12.1 | 9.13.1 
+
+
+| 9.13.0 
 
 
 | 9.12.0 | 9.12.1 
@@ -119,6 +125,15 @@ Tenere presente quanto segue:
 * In alcuni casi, potrebbe essere necessario eseguire l'aggiornamento alcune volte per raggiungere la release di destinazione.
 +
 Ad esempio, se si utilizza la versione 9.8 e si desidera eseguire l'aggiornamento alla versione 9.10.1, è necessario prima eseguire l'aggiornamento alla versione 9.9.1 e poi alla versione 9.10.1.
+
+* Per le release di patch (P), è possibile eseguire l'aggiornamento da una release di versione a qualsiasi P-release della versione successiva.
++
+Ecco alcuni esempi:
+
++
+** 9.13.0 > 9.13.1P15
+** 9.12.1 > 9.13.1P2
+
 
 
 
@@ -321,6 +336,7 @@ Http://<Connector-private-IP-address>/ontap/images/<image-file-name>
 
 NOTE: Nell'URL, *nome-file-immagine* deve seguire il formato "cot.image.9.13.1P2.tgz".
 
+. Fare clic su *Procedi* per confermare.
 
 
 .Risultato

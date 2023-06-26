@@ -3569,7 +3569,6 @@
   <block id="be5e56e337ebbc7d99062048ba94693e" category="admonition">La possibilità di creare volumi FlexGroup in BlueXP è prevista per una release futura.</block>
   <block id="56fe439ee061f5bc2e940368c1d73fa3" category="section-title">BlueXP non supporta S3 con Cloud Volumes ONTAP</block>
   <block id="53a519b7a61b6af057f2717112606b16" category="inline-link">Guida all'alimentazione per la configurazione S3</block>
-  <block id="a719d497acfd7c92ff4bf9224e1de3d0" category="paragraph">Sebbene Cloud Volumes ONTAP supporti S3 come opzione per lo storage scale-out in alcuni provider cloud, BlueXP non fornisce alcuna funzionalità di gestione per questa funzionalità. L'utilizzo della CLI è la procedura consigliata per configurare l'accesso al client S3 da Cloud Volumes ONTAP. Per ulteriori informazioni, fare riferimento a.<block ref="49e8fee748cd4c8d6f01bdb03113fc2a" category="inline-link-rx"></block>.</block>
   <block id="aa73f4eb582c3e0e9bca433f741e8a12" category="inline-link-macro">Scopri di più sul supporto Cloud Volumes ONTAP per S3 e altri protocolli client</block>
   <block id="b19dcb5d79169da5722547be25d81a05" category="paragraph"><block ref="2b5ab7e81cd6465f0e4fd342fda67520" category="inline-link-macro-rx"></block>.</block>
   <block id="9832e39264a34e4e40dca8449efd019e" category="section-title">BlueXP non supporta il disaster recovery per le VM di storage</block>
@@ -4969,4 +4968,15 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="dfbbb3ca890c5e816afc33a0f5d49ec2" category="list-text">Selezionare l'identità gestita (risorsa) assegnata dall'utente come principale.</block>
   <block id="0882685275009e45f6167bce4081e668" category="list-text">Esaminare e creare la policy di accesso.</block>
   <block id="1f8370f663ec71e8fac7dc386794543c" category="admonition">Includere il<block ref="d740baa07e4af19d0de1f45650cf4bc0" prefix=" " category="inline-code"></block> se questa risorsa è stata creata per essere utilizzata per la crittografia dell'account di storage.</block>
+  <block id="57a3061930625af99195891e9e561fb2" category="cell">9.13.1</block>
+  <block id="24eacd330f66ba30cc845660c1efa967" category="list-text">Per le release di patch (P), è possibile eseguire l'aggiornamento da una release di versione a qualsiasi P-release della versione successiva.</block>
+  <block id="99430eacf0d5244d50939eea94bd5962" category="paragraph">Ecco alcuni esempi:</block>
+  <block id="1893a0478b381d08866888a1c7f8607a" category="list-text">9.13.0 &gt; 9.13.1P15</block>
+  <block id="4ae2d614cc725ba442c80c740c08f75f" category="list-text">9.12.1 &gt; 9.13.1P2</block>
+  <block id="a6f0c7a0901d4da8e8ff8a6db3216b38" category="list-text">Fare clic su *Procedi* per confermare.</block>
+  <block id="e6bab5933e86bee96753d8079fcceaed" category="section-title">26 giugno 2023</block>
+  <block id="ba106db82d3577b52130dde5ddd372b4" category="section-title">Cloud Volumes ONTAP 9.13.1 RC1</block>
+  <block id="9bc26bf4259fc1662eaaa13a7534abb1" category="paragraph">BlueXP è ora in grado di implementare e gestire Cloud Volumes ONTAP 9.13.1 in AWS, Azure e Google Cloud.</block>
+  <block id="52801e0e59533cb4c6f4428ad9e239be" category="list-text">9.13.1 RC1</block>
+  <block id="3dc988ad93a3ac0c3a1487fc3b6754cf" category="paragraph">Sebbene Cloud Volumes ONTAP supporti S3 come opzione per lo storage scale-out, BlueXP non fornisce alcuna funzionalità di gestione per questa funzionalità. L'utilizzo della CLI è la procedura consigliata per configurare l'accesso al client S3 da Cloud Volumes ONTAP. Per ulteriori informazioni, fare riferimento a.<block ref="49e8fee748cd4c8d6f01bdb03113fc2a" category="inline-link-rx"></block>.</block>
 </blocks>

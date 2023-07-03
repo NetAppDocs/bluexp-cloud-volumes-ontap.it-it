@@ -285,7 +285,7 @@ I seguenti dettagli consentono di comprendere il funzionamento della ricarica co
 
 Se non hai ancora effettuato il provisioning di volumi, il costo minimo non viene applicato.
 
-Il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati.
+Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized, Professional e Edge cache), la carica di capacità minima di 4 TIB si applica indipendentemente dal tipo di volume.
 
 
 

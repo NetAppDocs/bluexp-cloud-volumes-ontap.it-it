@@ -20,6 +20,28 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 2 luglio 2023
+
+Le seguenti modifiche sono state introdotte con la versione 3.9.31 del connettore.
+
+
+
+=== Supporto per implementazioni di zone a disponibilità multipla in ha in Azure
+
+La centrale giapponese orientale e coreana di Azure ora supporta implementazioni di zone ad alta disponibilità per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni che supportano più zone di disponibilità, vedere https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali sotto Azure"^].
+
+
+
+=== Supporto autonomo per la protezione ransomware
+
+La protezione ransomware autonoma (ARP) è ora supportata su Cloud Volumes ONTAP. Il supporto ARP è disponibile su Cloud Volumes ONTAP versione 9.12.1 e successive.
+
+Per ulteriori informazioni su ARP con Cloud Volumes ONTAP, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#autonomous-ransomware-protection["Protezione ransomware autonoma"].
+
+
+
 == 26 giugno 2023
 
 La seguente modifica è stata introdotta con la versione 3.9.30 del connettore.

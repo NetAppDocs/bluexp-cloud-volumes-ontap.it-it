@@ -56,6 +56,11 @@ Con entrambe le opzioni, dovresti <<In carica,comprendere il funzionamento della
 
 Il costo per lo storage WORM è orario, in base alla capacità di provisioning totale dei volumi WORM.
 
+Disponibile solo per PAYGO o termini di impegno annuali, la licenza per WORM è acquistabile attraverso il mercato del Cloud Provider. WORM supporta modelli di licenza basati su nodo e su capacità.
+
+
+NOTE: La licenza BYOL non è disponibile per lo storage WORM su Cloud Volumes ONTAP.
+
 È necessario comprendere il seguente comportamento di ricarica con Cloud Volumes ONTAP 9.10.1 e versioni successive:
 
 * A partire da ONTAP 9.10.1, i volumi WORM e i volumi non WORM possono esistere sullo stesso aggregato.

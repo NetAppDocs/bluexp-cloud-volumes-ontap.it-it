@@ -2137,7 +2137,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-07-07 19:22:12 +0000">07/07/2023</time>
+    <time datetime="2023-07-11 14:47:48 +0000">07/11/2023</time>
     
   
 
@@ -2162,42 +2162,6 @@
 </div>
 <div class="paragraph">
 <p>Una volta trascorso il periodo di conservazione, l&#8217;utente è responsabile dell&#8217;eliminazione dei file non più necessari.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="attivazione-dello-storage-worm">Attivazione dello storage WORM</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>La modalità di attivazione dello storage WORM dipende dalla versione di Cloud Volumes ONTAP in uso.</p>
-</div>
-<div class="sect2">
-<h3 id="versione-9-10-1-e-successive">Versione 9.10.1 e successive</h3>
-<div class="paragraph">
-<p>A partire da Cloud Volumes ONTAP 9.10.1, è possibile attivare o disattivare WORM a livello di volume.</p>
-</div>
-<div class="paragraph">
-<p>Quando si crea un nuovo ambiente di lavoro Cloud Volumes ONTAP, viene richiesto di attivare o disattivare lo storage WORM:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Se si attiva lo storage WORM durante la creazione di un ambiente di lavoro, ogni volume creato da BlueXP ha abilitato WORM. Tuttavia, è possibile utilizzare System Manager o CLI per creare volumi con WORM disattivato.</p>
-</li>
-<li>
-<p>Se si disattiva lo storage WORM durante la creazione di un ambiente di lavoro, ogni volume creato da BlueXP, System Manager o CLI ha disattivato WORM. Se si desidera attivare WORM su un ambiente di lavoro Cloud Volumes ONTAP non abilitato durante la creazione, è necessario creare un ticket di supporto con il supporto NetApp per ricevere assistenza.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Con entrambe le opzioni, dovresti <a href="#in-carica">comprendere il funzionamento della ricarica</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="versione-9-10-0-e-precedenti">Versione 9.10.0 e precedenti</h3>
-<div class="paragraph">
-<p>È possibile attivare lo storage WORM su un sistema Cloud Volumes ONTAP quando si crea un nuovo ambiente di lavoro. Ogni volume creato da BlueXP ha abilitato WORM. Non è possibile disattivare lo storage WORM su singoli volumi.</p>
-</div>
 </div>
 </div>
 </div>
@@ -2244,6 +2208,42 @@ La licenza BYOL non è disponibile per lo storage WORM su Cloud Volumes ONTAP.
 </div>
 </div>
 <div class="sect1">
+<h2 id="attivazione-dello-storage-worm">Attivazione dello storage WORM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>La modalità di attivazione dello storage WORM dipende dalla versione di Cloud Volumes ONTAP in uso.</p>
+</div>
+<div class="sect2">
+<h3 id="versione-9-10-1-e-successive">Versione 9.10.1 e successive</h3>
+<div class="paragraph">
+<p>A partire da Cloud Volumes ONTAP 9.10.1, è possibile attivare o disattivare WORM a livello di volume.</p>
+</div>
+<div class="paragraph">
+<p>Quando si crea un nuovo ambiente di lavoro Cloud Volumes ONTAP, viene richiesto di attivare o disattivare lo storage WORM:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Se si attiva lo storage WORM durante la creazione di un ambiente di lavoro, ogni volume creato da BlueXP ha abilitato WORM. Tuttavia, è possibile utilizzare System Manager o CLI per creare volumi con WORM disattivato.</p>
+</li>
+<li>
+<p>Se si disattiva lo storage WORM durante la creazione di un ambiente di lavoro, ogni volume creato da BlueXP, System Manager o CLI ha disattivato WORM. Se si desidera attivare WORM su un ambiente di lavoro Cloud Volumes ONTAP non abilitato durante la creazione, è necessario creare un ticket di supporto con il supporto NetApp per ricevere assistenza.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Con entrambe le opzioni, dovresti <a href="#in-carica">comprendere il funzionamento della ricarica</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="versione-9-10-0-e-precedenti">Versione 9.10.0 e precedenti</h3>
+<div class="paragraph">
+<p>È possibile attivare lo storage WORM su un sistema Cloud Volumes ONTAP quando si crea un nuovo ambiente di lavoro. Ogni volume creato da BlueXP ha abilitato WORM. Non è possibile disattivare lo storage WORM su singoli volumi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="commit-dei-file-in-worm">Commit dei file in WORM</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -2251,6 +2251,17 @@ La licenza BYOL non è disponibile per lo storage WORM su Cloud Volumes ONTAP.
 </div>
 <div class="paragraph">
 <p>Dopo aver attivato lo storage WORM su un sistema Cloud Volumes ONTAP, è necessario utilizzare l&#8217;interfaccia utente di ONTAP per la gestione dello storage WORM. Per istruzioni, fare riferimento a. <a href="http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html" target="_blank" rel="noopener">"Documentazione ONTAP"</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eliminazione-dei-file-worm">Eliminazione dei file WORM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>È possibile eliminare i file WORM durante il periodo di conservazione utilizzando la funzione di eliminazione con privilegi.</p>
+</div>
+<div class="paragraph">
+<p>Per istruzioni, fare riferimento a. <a href="https://docs.netapp.com/us-en/ontap/snaplock/delete-worm-files-concept.html" target="_blank" rel="noopener">"Documentazione ONTAP"</a></p>
 </div>
 </div>
 </div>

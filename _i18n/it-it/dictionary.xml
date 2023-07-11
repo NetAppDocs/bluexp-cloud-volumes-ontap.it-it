@@ -4995,4 +4995,7 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="f4f1116cfaa769b8eb002623deca5f2e" category="paragraph">Con l'acquisto di una licenza e l'aggiunta al portafoglio digitale, puoi abilitare ARP per volume con Cloud Volumes ONTAP. La configurazione di ARP per i volumi viene eseguita tramite Gestore di sistema di ONTAP e CLI di ONTAP. Per ulteriori informazioni su come attivare ARP con Gestione di sistema e CLI di ONTAP, vedere<block ref="4379b61ba712146f3962583303024b3d" category="inline-link-rx"></block>.</block>
   <block id="46d7a6dd7db3af97caa5603b84f76cc1" category="paragraph">Disponibile solo per PAYGO o termini di impegno annuali, la licenza per WORM è acquistabile attraverso il mercato del Cloud Provider. WORM supporta modelli di licenza basati su nodo e su capacità.</block>
   <block id="66ab7e49c11a830935ab2c9b0bf49e5e" category="admonition">La licenza BYOL non è disponibile per lo storage WORM su Cloud Volumes ONTAP.</block>
+  <block id="9216a2741f7e54826d99a0fcfc0c7c58" category="section-title">Eliminazione dei file WORM</block>
+  <block id="728c208823318f76bc30851f92119221" category="paragraph">È possibile eliminare i file WORM durante il periodo di conservazione utilizzando la funzione di eliminazione con privilegi.</block>
+  <block id="44c48c2759b23de55aafe43a43856a08" category="paragraph">Per istruzioni, fare riferimento a.<block ref="03bc56e40fb58df28e53112c02ca2ae1" category="inline-link-rx"></block></block>
 </blocks>

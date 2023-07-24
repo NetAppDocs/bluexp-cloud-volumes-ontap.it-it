@@ -176,7 +176,9 @@ Prima di eseguire un aggiornamento, è necessario verificare che i sistemi siano
 
 Quando si aggiorna un sistema a nodo singolo, il processo di aggiornamento porta il sistema offline per un massimo di 25 minuti, durante i quali l'i/o viene interrotto.
 
-L'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.
+In molti casi, l'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.
+
+I protocolli orientati alla sessione potrebbero causare effetti negativi su client e applicazioni in determinate aree durante gli aggiornamenti. Per ulteriori informazioni, https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html["Fare riferimento alla documentazione di ONTAP"^]
 
 
 

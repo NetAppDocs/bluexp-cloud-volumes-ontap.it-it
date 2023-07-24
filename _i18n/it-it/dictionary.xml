@@ -2836,7 +2836,6 @@
   <block id="68c43e2b96fbdbfa40796f17526ce49b" category="list-text"><block ref="6cb773c19d321df01c24599ee993e239" category="inline-xref-macro-rx"></block></block>
   <block id="f509056e5113d375c99bca630ad36b66" category="section-title">Pianificare il downtime</block>
   <block id="13ab03e6ad3ee2215bec95a4c0f024e2" category="paragraph">Quando si aggiorna un sistema a nodo singolo, il processo di aggiornamento porta il sistema offline per un massimo di 25 minuti, durante i quali l'i/o viene interrotto.</block>
-  <block id="00795e3f043d0bab791590ffc0257204" category="paragraph">L'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.</block>
   <block id="534c7f5fb857a948ecc7186949e8487b" category="section-title">Verificare che il giveback automatico sia ancora attivato</block>
   <block id="9119de3f1b6e3cbe55216fa59da529bf" category="section-title">Sospendere i trasferimenti SnapMirror</block>
   <block id="a502184baec20af3276eaf812b0bc5e9" category="paragraph">Se un sistema Cloud Volumes ONTAP dispone di relazioni SnapMirror attive, si consiglia di sospendere i trasferimenti prima di aggiornare il software Cloud Volumes ONTAP. La sospensione dei trasferimenti impedisce gli errori di SnapMirror. È necessario sospendere i trasferimenti dal sistema di destinazione.</block>
@@ -5000,4 +4999,7 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="fa0127eadcc515624ef23babde9aead2" category="paragraph">Acquistando una licenza add-on e aggiungendola al portafoglio digitale, puoi abilitare ARP per volume con Cloud Volumes ONTAP. La configurazione di ARP per i volumi viene eseguita tramite Gestore di sistema di ONTAP e CLI di ONTAP. Per ulteriori informazioni su come attivare ARP con Gestione di sistema e CLI di ONTAP, vedere<block ref="4379b61ba712146f3962583303024b3d" category="inline-link-rx"></block>.</block>
   <block id="a35eb7b32c61adf984cdcc0cc1594b1c" category="inline-image-macro">La schermata mostra la licenza add-on per Autonomous ransomware Protection.</block>
   <block id="97a79a643f303c97f7df9ccd26c34e5e" category="paragraph"><block ref="97a79a643f303c97f7df9ccd26c34e5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="59e727e0c151e53fa5beabd59871cb88" category="paragraph">In molti casi, l'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.</block>
+  <block id="67e0d115b5c2df9254836fd8f762d3dc" category="inline-link">Fare riferimento alla documentazione di ONTAP</block>
+  <block id="ff0dae83f1884b2852a33110d07283d1" category="paragraph">I protocolli orientati alla sessione potrebbero causare effetti negativi su client e applicazioni in determinate aree durante gli aggiornamenti. Per ulteriori informazioni,<block ref="69d6ddda693aaf09f72544089a10fab3" category="inline-link-rx"></block></block>
 </blocks>

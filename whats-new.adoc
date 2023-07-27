@@ -20,6 +20,20 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 26 luglio 2023
+
+Le seguenti modifiche sono state introdotte con la versione 3.9.31 del connettore.
+
+
+
+=== Cloud Volumes ONTAP 9.13.1 GA
+
+BlueXP è ora in grado di implementare e gestire la release di disponibilità generale di Cloud Volumes ONTAP 9.13.1 in AWS, Azure e Google Cloud.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+
+
+
 == 2 luglio 2023
 
 Le seguenti modifiche sono state introdotte con la versione 3.9.31 del connettore.
@@ -88,9 +102,9 @@ La regione centrale svedese è ora supportata in Azure per Cloud Volumes ONTAP e
 
 
 
-=== Supporto per implementazioni di zone ad alta disponibilità in Azure Australia Est
+=== Supporto per implementazioni di zone ad alta disponibilità multiple in Azure Australia East
 
-La regione orientale australiana di Azure ora supporta le implementazioni di zone ad alta disponibilità per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+La regione orientale australiana di Azure ora supporta implementazioni di zone ad alta disponibilità per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
 
 
 

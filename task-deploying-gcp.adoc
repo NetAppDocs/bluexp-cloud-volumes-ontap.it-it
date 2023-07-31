@@ -154,11 +154,20 @@ Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qu
 +
 Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#sizing-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"].
 
-. *Velocità di scrittura e WORM*:
+. *Flash cache, velocità di scrittura e WORM*:
 +
+.. Attivare *Flash cache*, se lo si desidera.
++
+
+NOTE: A partire da Cloud Volumes ONTAP 9.13.1, _Flash cache_ è supportato sui tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64. Non è possibile disattivare Flash cache dopo l'implementazione.
+
 .. Scegliere *normale* o *alta* velocità di scrittura, se lo si desidera.
 +
 link:concept-write-speed.html["Scopri di più sulla velocità di scrittura"].
+
++
+
+NOTE: L'opzione *High* write speed (velocità di scrittura elevata) offre un'elevata velocità di scrittura e un'unità MTU (Maximum Transmission Unit) di 8,896 byte. Inoltre, la MTU superiore di 8,896 richiede la selezione di VPC-1, VPC-2 e VPC-3 per l'implementazione. Per ulteriori informazioni su VPC-1, VPC-2 e VPC-3, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regole per VPC-1, VPC-2 e VPC-3"].
 
 .. Attivare lo storage WORM (Write Once, Read Many), se lo si desidera.
 +
@@ -386,15 +395,20 @@ Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qu
 +
 Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#sizing-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"].
 
-. *Velocità di scrittura e WORM*:
+. *Flash cache, velocità di scrittura e WORM*:
 +
+.. Attivare *Flash cache*, se lo si desidera.
++
+
+NOTE: A partire da Cloud Volumes ONTAP 9.13.1, _Flash cache_ è supportato sui tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64. Non è possibile disattivare Flash cache dopo l'implementazione.
+
 .. Scegliere *normale* o *alta* velocità di scrittura, se lo si desidera.
 +
 link:concept-write-speed.html["Scopri di più sulla velocità di scrittura"].
 
 +
 
-NOTE: _Flash cache_, elevata velocità di scrittura e un'unità di trasmissione massima (MTU) superiore di 8,896 byte sono disponibili tramite l'opzione *High* write speed con i tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64. Inoltre, la MTU superiore di 8,896 richiede la selezione di VPC-1, VPC-2 e VPC-3 per l'implementazione. _Flash cache_, alta velocità di scrittura e MTU di 8,896 sono dipendenti dalle funzionalità e non possono essere disabilitati singolarmente all'interno di un'istanza configurata. Per ulteriori informazioni su VPC-1, VPC-2 e VPC-3, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regole per VPC-1, VPC-2 e VPC-3"].
+NOTE: L'opzione *High* write speed con i tipi di istanze n2-standard-16, n2-standard-32, n2-standard-48 e n2-standard-64 offre un'elevata velocità di scrittura e un'unità MTU (Maximum Transmission Unit) di 8,896 byte. Inoltre, la MTU superiore di 8,896 richiede la selezione di VPC-1, VPC-2 e VPC-3 per l'implementazione. L'elevata velocità di scrittura e una MTU di 8,896 dipendono dalle funzionalità e non possono essere disabilitate singolarmente all'interno di un'istanza configurata. Per ulteriori informazioni su VPC-1, VPC-2 e VPC-3, vedere https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#requirements-for-the-connector["Regole per VPC-1, VPC-2 e VPC-3"].
 
 .. Attivare lo storage WORM (Write Once, Read Many), se lo si desidera.
 +

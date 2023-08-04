@@ -1326,15 +1326,11 @@
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">Avviso per BlueXP</block>
@@ -1916,24 +1912,6 @@
   <block id="c29624d8ee4ab92b4fe9010d8067a290" category="section-title">Hot spare</block>
   <block id="7546f1896fe746593fe39c57ea23bd23" category="paragraph">RAID0 non supporta l'utilizzo di hot spare per la ridondanza.</block>
   <block id="ee9bdabf55f98e793b6a92484c2f5bb5" category="paragraph">La creazione di dischi inutilizzati (hot spare) collegati a un'istanza di Cloud Volumes ONTAP è una spesa non necessaria e può impedire il provisioning di spazio aggiuntivo in base alle necessità. Pertanto, non è consigliato.</block>
-  <block id="421ebcf45d96fab9a6689c09c19a1270" category="summary">BlueXP consente di visualizzare i costi associati all'esecuzione di Cloud Volumes ONTAP in AWS. Puoi anche vedere quanto denaro hai risparmiato utilizzando le funzionalità di NetApp che possono ridurre i costi di storage.</block>
-  <block id="0131f05be010a429416bcb6f853b54f6" category="doc">Monitoraggio dei costi delle risorse AWS</block>
-  <block id="5ff00bdddc3139a1154c3432ef4a3e73" category="paragraph">BlueXP consente di visualizzare i costi delle risorse associati all'esecuzione di Cloud Volumes ONTAP in AWS. Puoi anche vedere quanto denaro hai risparmiato utilizzando le funzionalità di NetApp che possono ridurre i costi di storage.</block>
-  <block id="947d50be7096c3e69f02ed24b2251b02" category="paragraph">BlueXP aggiorna i costi quando si aggiorna la pagina. Fare riferimento ad AWS per i dettagli sui costi finali.</block>
-  <block id="cd5e8c25d1aad520d5f38aad580ccac4" category="list-text">Verificare che BlueXP possa ottenere informazioni sui costi da AWS:</block>
-  <block id="fa1a1d63af1876462d8a89bb1c81da2a" category="list-text">Assicurarsi che il criterio IAM che fornisce a BlueXP le autorizzazioni includa le autorizzazioni richieste.</block>
-  <block id="d0cc9b5d406e02bdbb6a1a9848e6af5f" category="inline-link">Visualizzare le autorizzazioni richieste</block>
-  <block id="de4e4bb6bc85c14c6a8601fd20afdca3" category="inline-link">Attivare il tag *WorkingEnvironmentId*</block>
-  <block id="ee0050b628db7de40e04e661d528d91f" category="list-text"><block ref="541edff71c56eae6d36d5f7a463cfcca" category="inline-link-rx"></block>.</block>
-  <block id="5137e20086fbd2e10511433ace3ac154" category="paragraph">Per tenere traccia dei costi AWS, BlueXP assegna un tag di allocazione dei costi alle istanze di Cloud Volumes ONTAP. Dopo aver creato il primo ambiente di lavoro, attivare il tag *WorkingEnvironmentId*. I tag definiti dall'utente non vengono visualizzati nei report di fatturazione AWS finché non vengono attivati nella console di fatturazione e gestione dei costi.</block>
-  <block id="fc2c97abb2fb8e3c019de4850d91d264" category="list-text">Nella pagina Canvas, selezionare un ambiente di lavoro Cloud Volumes ONTAP,</block>
-  <block id="6ba9fc3c166e3d53b824216485ae89ee" category="list-text">Fare clic sull'icona del menu, quindi fare clic su *View Cost Report* (Visualizza report costi).</block>
-  <block id="e657448bf5ab3960e8e1fc068d83deee" category="inline-image-macro">Schermata: Mostra l'opzione di menu View Cost Report (Visualizza report costi).</block>
-  <block id="4881300462ed76e4f5ebaf3070d5e7d9" category="paragraph"><block ref="4881300462ed76e4f5ebaf3070d5e7d9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9dfa1bfa6d369f6aee8b4ba09ac15642" category="paragraph">La pagina dei costi visualizza i costi per i mesi correnti e precedenti e mostra i risparmi annuali di NetApp, se hai abilitato le funzionalità di risparmio sui volumi di NetApp.</block>
-  <block id="c58c67877e90861ec92c90c10b7ad7f4" category="paragraph">La seguente immagine mostra una pagina di costo di esempio:</block>
-  <block id="37423695a33e814084966c17d451584a" category="inline-image-macro">Schermata: Mostra i costi mensili per un'istanza di Cloud Volumes ONTAP.</block>
-  <block id="c3d678c4df92877db53bd1f6e44ec524" category="paragraph"><block ref="c3d678c4df92877db53bd1f6e44ec524" category="inline-image-macro-rx" type="image"></block></block>
   <block id="49597f561fcd84db348e2aab5dd8367a" category="summary">Gli attacchi ransomware possono costare tempo di business, risorse e reputazione. BlueXP consente di implementare la soluzione NetApp per ransomware, che fornisce strumenti efficaci per la visibilità, il rilevamento e la risoluzione dei problemi.</block>
   <block id="0c0c93dcca58dc6ba5a46ef2bf56980b" category="doc">Miglioramento della protezione contro ransomware</block>
   <block id="6200e275553fcb2d81141061804129aa" category="list-text">Nella pagina Canvas, fare doppio clic sul nome del sistema configurato per la protezione ransomware.</block>
@@ -4772,7 +4750,6 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
   <block id="a83ee83b3849362150d7c85a1be1dc34" category="paragraph"><block ref="4cff09ac69609cc9da2148aed42c5230" category="inline-link-rx"></block>.</block>
   <block id="2ffa17dd74caa90edaf33636b3e374b1" category="paragraph"><block ref="792ba555e1629fb9b0b5e00711256a74" category="inline-link-rx"></block>.</block>
   <block id="7881621c3d4c91216ebe58ee1cdc87e0" category="paragraph"><block ref="52c47b6a301b0fb242044f1b14c5f663" category="inline-link-rx"></block>.</block>
-  <block id="feb88be5e52ce4e986f7ef4bfbaf1288" category="paragraph"><block ref="feb88be5e52ce4e986f7ef4bfbaf1288" category="inline-link-rx"></block></block>
   <block id="3965802fcf5e10ce9592a0a18652be93" category="paragraph">È necessario creare un connettore prima di poter modificare le impostazioni di BlueXP.<block ref="844cb231ba4a790d05c855a31c806f9e" category="inline-link-rx"></block>.</block>
   <block id="0da43a7e3c6cfdde29516fa9349ef93a" category="paragraph">Se non si dispone di un<block ref="2ed11e6bceb8b4ceeff62b64fdec4694" category="inline-link-rx"></block> Tuttavia, un amministratore dell'account deve crearne uno.<block ref="f726618e636b13d16a9541b596528791" category="inline-link-rx"></block></block>
   <block id="170e894372aa99f8bb588bbbfc2f83a2" category="paragraph">Cloud Volumes ONTAP richiede un account di servizio cloud Google per due scopi. Il primo è quando si attiva <block ref="0afefdfec765b284960d752caf97004c" category="inline-link-macro-rx"></block> Per tierare i dati cold allo storage a oggetti a basso costo in Google Cloud. Il secondo è quando si attiva<block ref="9a17952183455df523c977039b4fb285" category="inline-link-rx"></block> per eseguire il backup dei volumi in uno storage a oggetti a basso costo.</block>
@@ -5030,4 +5007,12 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="5e167ef814cd8fe02fd01be002ffa235" category="list-text"><block ref="5e167ef814cd8fe02fd01be002ffa235" category="inline-link-macro-rx"></block></block>
   <block id="4a9ebfe4f0e3302083955176f47a9519" category="list-text">ID e nome dell'ambiente di lavoro (visualizzato come UUID)</block>
   <block id="427af860f9733f0c5427a1408195bb2b" category="list-text">Tipo di carico di lavoro</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>

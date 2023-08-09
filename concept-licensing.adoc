@@ -31,6 +31,9 @@ Il precedente modello di licenza per nodo rimane disponibile per i clienti che h
 Le sezioni seguenti forniscono ulteriori dettagli su ciascuna di queste opzioni.
 
 
+NOTE: Il supporto non è disponibile per l'uso di funzioni con licenza senza licenza.
+
+
 
 == Licenze basate sulla capacità
 

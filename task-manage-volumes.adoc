@@ -257,7 +257,7 @@ Ad esempio, le informazioni avanzate dovrebbero dire qualcosa di simile a quanto
 È necessario scegliere volumi sufficientemente grandi da liberare spazio nell'aggregato in modo da evitare ulteriori problemi di capacità in futuro.
 
 +
-image:screenshot_aggr_volume_overview.png["Schermata: Mostra l'elenco dei volumi in un aggregato nella finestra di dialogo informazioni aggregate."]
+image::screenshot_aggr_volume_overview.png[screenshot panoramica del volume aggr]
 
 
 
@@ -335,7 +335,7 @@ Lo spostamento di due o più volumi è necessario per evitare problemi di capaci
 .. Selezionare la sezione aggregata desiderata, quindi fare clic sul pulsante *... (Icona ellisse) > Visualizza dettagli aggregati*.
 .. Nella sezione aggregato, visualizzare la capacità disponibile (dimensione fornita meno capacità aggregata utilizzata).
 +
-image:screenshot_aggr_capacity.png["Screen shot: Mostra la capacità aggregata totale e la capacità aggregata utilizzata disponibili nella finestra di dialogo informazioni aggregate."]
+image::screenshot_aggr_capacity.png[screenshot aggr capacità]
 
 
 
@@ -380,7 +380,7 @@ Viene utilizzato uno schema di denominazione precedente se il tiering dei dati �
 
 È possibile visualizzare i volumi FlexGroup creati tramite CLI o Gestore di sistema direttamente attraverso la scheda Volumes (volumi) di BlueXP. Identico alle informazioni fornite per i volumi FlexVol, BlueXP fornisce informazioni dettagliate per i volumi FleGroup creati attraverso una sezione dedicata ai volumi. Nella sezione Volumes (volumi), è possibile identificare ciascun gruppo di volumi FlexGroup tramite il testo dell'icona. Inoltre, è possibile identificare e ordinare i volumi FlexGroup nella vista elenco volumi attraverso la colonna stile volume.
 
-image:screenshot_show_flexgroup_vol.png["Una schermata che mostra l'icona del volume FlexGroup con il mouse sotto il riquadro Volumes (volumi)."]
+image::screenshot_show_flexgroup_vol.png[la schermata mostra FlexGroup vol]
 
 
 NOTE: Attualmente, in BlueXP è possibile visualizzare solo i volumi FlexGroup esistenti. La possibilità di creare volumi FlexGroup in BlueXP non è disponibile, ma è prevista per una release futura.

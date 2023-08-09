@@ -143,7 +143,7 @@ TIP: Se si sposta un volume tra nodi in una coppia ha, è necessario rimontarlo 
 
 È possibile identificare facilmente l'indirizzo IP corretto tramite l'opzione _Mount Command_ nel pannello Manage Volumes (Gestisci volumi) di BlueXP.
 
-image:screenshot_mount_option.png["Schermata: Mostra il comando Mount disponibile quando si seleziona un volume."]
+image::screenshot_mount_option.png[400]
 
 
 

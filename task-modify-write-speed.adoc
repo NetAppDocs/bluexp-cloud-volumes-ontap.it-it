@@ -29,7 +29,7 @@ Prima di modificare la velocità di scrittura, è necessario link:concept-write-
 . Nella pagina Canvas, fare doppio clic sul nome del sistema configurato per la velocità di scrittura.
 . Nella scheda Panoramica, fare clic sul pannello funzioni, quindi fare clic sull'icona a forma di matita accanto a *velocità di scrittura*.
 +
-image:screenshot_features_write_speed.png["Una schermata che mostra l'impostazione della velocità di scrittura nel pannello funzioni disponibile nella parte superiore destra della pagina Panoramica durante la visualizzazione di un ambiente di lavoro."]
+image::screenshot_features_write_speed.png[400]
 
 . Selezionare *normale* o *alta*.
 +

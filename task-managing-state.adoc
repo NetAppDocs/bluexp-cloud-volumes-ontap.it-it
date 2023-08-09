@@ -38,7 +38,7 @@ Le snapshot vengono create automaticamente solo quando si esegue un arresto manu
 . Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro desiderato.
 . Nella scheda Panoramica, fare clic sul pannello funzioni, quindi fare clic sull'icona a forma di matita accanto a *downtime pianificato*.
 +
-image:screenshot_schedule_downtime.png["Schermata: Mostra l'icona che carica la pagina di spegnimento automatico."]
+image::screenshot_schedule_downtime.png[400]
 
 . Specificare il programma di arresto:
 +

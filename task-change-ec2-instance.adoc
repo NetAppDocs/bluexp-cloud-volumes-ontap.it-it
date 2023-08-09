@@ -42,7 +42,7 @@ Per un elenco dei tipi di istanza supportati in AWS, vedere link:https://docs.ne
 . Nella pagina Canvas, selezionare l'ambiente di lavoro.
 . Nella scheda Panoramica, fare clic sul pannello funzionalità, quindi fare clic sull'icona a forma di matita accanto a *tipo di istanza*.
 +
-image:screenshot_features_instance_type.png["Una schermata che mostra l'impostazione del tipo di istanza nel pannello funzionalità disponibile nella parte superiore destra della pagina Panoramica durante la visualizzazione di un ambiente di lavoro."]
+image::screenshot_features_instance_type.png[400]
 
 +
 .. Se si utilizza una licenza PAYGO basata su nodo, è possibile scegliere un tipo di licenza e istanza diverso facendo clic sull'icona a forma di matita accanto a *tipo di licenza*.

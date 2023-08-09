@@ -24,7 +24,7 @@ Per modificare le impostazioni del connettore sono necessari i privilegi di ammi
 .Fasi
 . Nella parte superiore destra della console BlueXP, fare clic sull'icona Impostazioni e selezionare *Impostazioni connettore*.
 +
-image:screenshot_settings_connector_button.png["Schermata dell'opzione Impostazioni connettore sotto l'icona Impostazioni."]
+image::screenshot_settings_connector_button.png[schermata impostazioni pulsante connettore]
 
 . In *capacità*, modificare una delle seguenti impostazioni:
 +

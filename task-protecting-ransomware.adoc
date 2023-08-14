@@ -20,14 +20,13 @@ Gli attacchi ransomware possono costare tempo di business, risorse e reputazione
 
 == Protezione dalle comuni estensioni di file ransomware
 
-[role="lead"]
 Disponibile tramite BlueXP, l'impostazione di protezione ransomware consente di utilizzare la funzionalità FPolicy di ONTAP per proteggersi dai comuni tipi di estensione di file ransomware.
 
 .Fasi
 . Nella pagina Canvas, fare doppio clic sul nome del sistema configurato per la protezione ransomware.
 . Nella scheda Overview (Panoramica), fare clic sul pannello Features (funzionalità), quindi sull'icona a forma di matita accanto a *ransomware Protection*.
 +
-image::screenshot_features_ransomware.png[400]
+image::screenshot_features_ransomware.png[Una schermata che mostra l'impostazione di protezione ransomware nel pannello delle funzionalità disponibile nella parte superiore destra della pagina Panoramica durante la visualizzazione di un ambiente di lavoro.]
 
 . Implementare la soluzione NetApp per ransomware:
 +
@@ -60,7 +59,6 @@ image:screenshot_ransomware_protection.gif["Una schermata che mostra la pagina d
 
 == Protezione ransomware autonoma
 
-[role="lead"]
 Cloud Volumes ONTAP supporta la funzionalità di protezione ransomware autonoma (ARP), che esegue analisi sui carichi di lavoro per rilevare e avvisare in modo proattivo in caso di attività anomale che potrebbero indicare un attacco ransomware.
 
 Separare dalle protezioni di estensione file fornite attraverso https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#protection-from-common-ransomware-file-extensions["impostazione di protezione dal ransomware"], La funzione ARP utilizza l'analisi del carico di lavoro per avvisare l'utente in caso di potenziali attacchi in base a "attività anomala" rilevata. Sia l'impostazione di protezione dal ransomware che la funzione ARP possono essere utilizzate insieme per una protezione completa dal ransomware.
@@ -74,4 +72,4 @@ Per ulteriori informazioni su come attivare ARP con Gestione di sistema e CLI di
 
 NOTE: Il supporto non è disponibile per l'uso di funzioni con licenza senza licenza.
 
-image::screenshot_arp.png[arp. screenshot]
+image::screenshot_arp.png[La schermata mostra la licenza add-on per Autonomous ransomware Protection.]

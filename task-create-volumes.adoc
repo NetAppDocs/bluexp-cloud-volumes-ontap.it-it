@@ -18,10 +18,10 @@ Se hai bisogno di più storage dopo il lancio del sistema Cloud Volumes ONTAP in
 
 BlueXP offre diversi modi per creare un nuovo volume:
 
-* Specifica i dettagli di un nuovo volume e lascia che BlueXP gestisca gli aggregati di dati sottostanti per te. <<Creare un volume,Scopri di più>>.
-* Crea un volume su un aggregato di dati a tua scelta. <<Creare un volume,Scopri di più>>.
-* Creare un volume da un modello per ottimizzare il volume in base ai requisiti del carico di lavoro per determinate applicazioni, come database o servizi di streaming. <<Creare un volume da un modello,Scopri di più>>.
-* Creare un volume sul secondo nodo in una configurazione ha. <<Creare un volume sul secondo nodo in una configurazione ha,Scopri di più>>.
+* Specifica i dettagli di un nuovo volume e lascia che BlueXP gestisca gli aggregati di dati sottostanti per te. <<create-a-volume,Scopri di più>>
+* Crea un volume su un aggregato di dati a tua scelta. <<create-a-volume,Scopri di più>>
+* Creare un volume da un modello per ottimizzare il volume in base ai requisiti del carico di lavoro per determinate applicazioni, come database o servizi di streaming. <<create-a-volume-from-a-template,Scopri di più>>
+* Creare un volume sul secondo nodo in una configurazione ha. <<create-volume-second-node,Scopri di più>>
 
 
 
@@ -30,7 +30,7 @@ BlueXP offre diversi modi per creare un nuovo volume:
 
 Alcune note sul provisioning dei volumi:
 
-* Quando si crea un volume iSCSI, BlueXP crea automaticamente un LUN. Abbiamo semplificato la creazione di un solo LUN per volume, per cui non è necessario alcun intervento di gestione. Dopo aver creato il volume, <<Collegare un LUN a un host,Utilizzare IQN per connettersi al LUN dagli host>>.
+* Quando si crea un volume iSCSI, BlueXP crea automaticamente un LUN. Abbiamo semplificato la creazione di un solo LUN per volume, per cui non è necessario alcun intervento di gestione. Dopo aver creato il volume, link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-connect-lun.html["Utilizzare IQN per connettersi al LUN dagli host"^].
 * È possibile creare ulteriori LUN da System Manager o dall'interfaccia CLI.
 
 
@@ -181,7 +181,7 @@ Iniziatore host (IQN):: Le destinazioni iSCSI si collegano alla rete tramite sch
 ifdef::aws[]
 
 +
-*** link:task-planning-your-config.html#sizing-your-system-in-aws["Dimensionamento del sistema in AWS"]
+*** link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config.html#size-your-system-in-aws["Dimensionamento del sistema in AWS"^]
 
 
 
@@ -192,14 +192,14 @@ endif::aws[]
 
 ifdef::azure[]
 
-* link:task-planning-your-config-azure.html#sizing-your-system-in-azure["Dimensionamento del sistema in Azure"]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionamento del sistema in Azure"^]
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* link:task-planning-your-config-gcp.html#sizing-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"]
+* link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"^]
 
 
 endif::gcp[]
@@ -250,7 +250,7 @@ image:screenshot_define_cvo_vol_from_template.png["Una schermata che mostra un m
 
 . Sopra il pannello _Action_, inserire un nome per il modello.
 . In _contesto_, l'ambiente di lavoro viene compilato con il nome dell'ambiente di lavoro con cui hai iniziato. Selezionare la *Storage VM* in cui verrà creato il volume.
-. Aggiungere valori per tutti i parametri non codificati dal modello. Vedere <<create a volume,Creare un volume>> Per informazioni dettagliate su tutti i parametri necessari per completare la distribuzione di un volume Cloud Volumes ONTAP.
+. Aggiungere valori per tutti i parametri non codificati dal modello. Vedere <<create-a-volume,Creare un volume>> Per informazioni dettagliate su tutti i parametri necessari per completare la distribuzione di un volume Cloud Volumes ONTAP.
 . Fare clic su *Apply* (Applica) per salvare i parametri configurati nell'azione selezionata.
 . Se non sono presenti altre azioni da definire (ad esempio, configurazione del backup e ripristino di BlueXP), fare clic su *Save Template* (Salva modello).
 +

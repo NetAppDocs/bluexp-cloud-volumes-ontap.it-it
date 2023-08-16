@@ -220,8 +220,8 @@ Regole del firewall:: Non è necessario creare regole firewall perché BlueXP fa
 --
 Tenere presente che per una configurazione ha sono necessari due set di regole firewall:
 
-* Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP. <<Firewall rules for Cloud Volumes ONTAP,Scopri di più>>.
-* Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <<Firewall rules for Cloud Volumes ONTAP,Scopri di più>>.
+* Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP. <<Regole del firewall,Scopri di più>>.
+* Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <<Regole del firewall,Scopri di più>>.
 
 
 --
@@ -250,7 +250,7 @@ Le regole del firewall per Cloud Volumes ONTAP richiedono regole sia in entrata 
 Tenere presente che per una configurazione ha sono necessari due set di regole firewall:
 
 * Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP.
-* Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <<Rules for VPC-1,VPC-2 e VPC-3,ulteriori informazioni>>.
+* Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <<rules-for-vpc,Scopri di più>>.
 
 
 

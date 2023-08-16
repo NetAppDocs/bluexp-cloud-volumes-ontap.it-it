@@ -125,7 +125,7 @@ Se si lascia che BlueXP generi il gruppo di protezione, è necessario scegliere 
 
 
 
-| USA esistente | Se si sceglie un gruppo di protezione esistente, questo deve soddisfare i requisiti Cloud Volumes ONTAP. link:reference-networking-azure.html#security-group-rules-for-cloud-volumes-ontap["Visualizzare il gruppo di protezione predefinito"]. 
+| USA esistente | Se si sceglie un gruppo di protezione esistente, questo deve soddisfare i requisiti Cloud Volumes ONTAP. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules["Visualizzare il gruppo di protezione predefinito"^]. 
 |===
 . *Charging Methods and NSS account* (metodi di addebito e account NSS): Specificare l'opzione di addebito che si desidera utilizzare con questo sistema, quindi specificare un account NetApp Support Site.
 +
@@ -151,7 +151,7 @@ Tenere presente quanto segue:
 ** Il tipo di disco è per il volume iniziale. È possibile scegliere un tipo di disco diverso per i volumi successivi.
 ** Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qualsiasi aggregato aggiuntivo creato da BlueXP quando si utilizza l'opzione di provisioning semplice. È possibile creare aggregati che utilizzano una dimensione del disco diversa utilizzando l'opzione di allocazione avanzata.
 +
-Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-azure.html#sizing-your-system-in-azure["Dimensionamento del sistema in Azure"].
+Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionamento del sistema in Azure"^].
 
 ** Quando si crea o si modifica un volume, è possibile scegliere un criterio di tiering del volume specifico.
 ** Se si disattiva il tiering dei dati, è possibile attivarlo sugli aggregati successivi.
@@ -246,7 +246,7 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +
-Per ulteriori informazioni, vedere link:task-planning-your-config-azure.html#choosing-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#choose-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"^] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"^].
 
 . *Review & Approve* (Rivedi e approva): Consente di rivedere e confermare le selezioni.
 +
@@ -360,7 +360,7 @@ Se si lascia che BlueXP generi il gruppo di protezione, è necessario scegliere 
 
 
 
-| USA esistente | Se si sceglie un gruppo di protezione esistente, questo deve soddisfare i requisiti Cloud Volumes ONTAP. link:reference-networking-azure.html#security-group-rules-for-cloud-volumes-ontap["Visualizzare il gruppo di protezione predefinito"]. 
+| USA esistente | Se si sceglie un gruppo di protezione esistente, questo deve soddisfare i requisiti Cloud Volumes ONTAP. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules["Visualizzare il gruppo di protezione predefinito"^]. 
 |===
 . *Charging Methods and NSS account* (metodi di addebito e account NSS): Specificare l'opzione di addebito che si desidera utilizzare con questo sistema, quindi specificare un account NetApp Support Site.
 +
@@ -385,7 +385,7 @@ Tenere presente quanto segue:
 +
 ** Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qualsiasi aggregato aggiuntivo creato da BlueXP quando si utilizza l'opzione di provisioning semplice. È possibile creare aggregati che utilizzano una dimensione del disco diversa utilizzando l'opzione di allocazione avanzata.
 +
-Per informazioni sulla scelta delle dimensioni del disco, vedere link:task-planning-your-config-azure.html#sizing-your-system-in-azure["Dimensionamento del sistema in Azure"].
+Per informazioni sulla scelta delle dimensioni del disco, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionamento del sistema in Azure"^].
 
 ** Quando si crea o si modifica un volume, è possibile scegliere un criterio di tiering del volume specifico.
 ** Se si disattiva il tiering dei dati, è possibile attivarlo sugli aggregati successivi.
@@ -493,7 +493,7 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +
-Per ulteriori informazioni, vedere link:task-planning-your-config-azure.html#choosing-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#choose-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"^] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"^].
 
 . *Review & Approve* (Rivedi e approva): Consente di rivedere e confermare le selezioni.
 +

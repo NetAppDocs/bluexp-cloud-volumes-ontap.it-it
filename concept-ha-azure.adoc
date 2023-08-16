@@ -32,7 +32,7 @@ Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per t
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
 Set di disponibilità:: Il set di disponibilità Azure è un raggruppamento logico dei nodi Cloud Volumes ONTAP. Il set di disponibilità garantisce che i nodi si trovino in diversi domini di errore e di aggiornamento per fornire ridondanza e disponibilità. https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview["Scopri di più sui set di disponibilità nei documenti di Azure"^].
-Dischi:: I dati dei clienti si trovano nelle pagine di Premium Storage. Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:reference-default-configs.html#boot-and-root-data-for-cloud-volumes-ontap["dati di boot, root e core"].
+Dischi:: I dati dei clienti si trovano nelle pagine di Premium Storage. Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["dati di boot, root e core"^].
 Account storage::
 +
 --
@@ -61,7 +61,7 @@ Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per t
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
 Set di disponibilità:: Il set di disponibilità Azure è un raggruppamento logico dei nodi Cloud Volumes ONTAP. Il set di disponibilità garantisce che i nodi si trovino in diversi domini di errore e di aggiornamento per fornire ridondanza e disponibilità. https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview["Scopri di più sui set di disponibilità nei documenti di Azure"^].
-Dischi:: I dati del cliente risiedono su dischi gestiti con storage ridondante locale (LRS). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:reference-default-configs.html#boot-and-root-data-for-cloud-volumes-ontap["Dati di boot, root, partner root, core e NVRAM"].
+Dischi:: I dati del cliente risiedono su dischi gestiti con storage ridondante locale (LRS). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Dati di boot, root, partner root, core e NVRAM"^].
 Account storage:: Gli account storage vengono utilizzati per le implementazioni gestite basate su disco per gestire i log diagnostici e il tiering per lo storage blob.
 
 
@@ -77,7 +77,7 @@ Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per t
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
 Zone di disponibilità:: Due nodi Cloud Volumes ONTAP vengono implementati in diverse zone di disponibilità. Le zone di disponibilità garantiscono che i nodi si trovino in diversi domini di errore. https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Scopri di più sullo storage ridondante in zone di Azure per dischi gestiti nei documenti di Azure"^].
-Dischi:: I dati del cliente risiedono su dischi gestiti con ZRS (zone-Redundant Storage). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:reference-default-configs.html#boot-and-root-data-for-cloud-volumes-ontap["dati di boot, root, root partner e core"].
+Dischi:: I dati del cliente risiedono su dischi gestiti con ZRS (zone-Redundant Storage). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["dati di boot, root, root partner e core"^].
 Account storage:: Gli account storage vengono utilizzati per le implementazioni gestite basate su disco per gestire i log diagnostici e il tiering per lo storage blob.
 
 

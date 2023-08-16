@@ -20,7 +20,7 @@ Dopo aver deciso quale opzione di licenza utilizzare con Cloud Volumes ONTAP, è
 
 == Freemium
 
-Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con un massimo di 500 GB di capacità fornita. link:concept-licensing.html#freemium-offering["Scopri di più sull'offerta Freemium"].
+Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con un massimo di 500 GB di capacità fornita. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Scopri di più sull'offerta Freemium"^].
 
 .Fasi
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
@@ -28,7 +28,7 @@ Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con u
 +
 .. Nella pagina *Dettagli e credenziali*, fare clic su *Modifica credenziali > Aggiungi abbonamento*, quindi seguire le istruzioni per iscriversi all'offerta pay-as-you-go in Azure Marketplace.
 +
-L'abbonamento al marketplace non ti addebiterà alcun costo a meno che non superi i 500 GiB di capacità fornita, dopodiché il sistema viene automaticamente convertito in link:concept-licensing.html#capacity-based-licensing-packages["Pacchetto Essentials"].
+L'abbonamento al marketplace non ti addebiterà alcun costo a meno che non superi i 500 GiB di capacità fornita, dopodiché il sistema viene automaticamente convertito in link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#capacity-based-licensing["Pacchetto Essentials"^].
 
 +
 image:screenshot-azure-paygo-subscription.png["Schermata dell'opzione di abbonamento PAYGO durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP."]

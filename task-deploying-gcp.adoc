@@ -127,7 +127,7 @@ Se si consente a BlueXP di generare il criterio firewall, è necessario sceglier
 
 
 
-| Utilizza policy firewall esistenti | Se si utilizza un criterio firewall esistente, assicurarsi che includa le regole richieste. link:reference-networking-gcp.html#firewall-rules-for-cloud-volumes-ontap["Scopri le regole del firewall per Cloud Volumes ONTAP"]. 
+| Utilizza policy firewall esistenti | Se si utilizza un criterio firewall esistente, assicurarsi che includa le regole richieste. Link: https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#firewall-rules[Learn About firewall rules for Cloud Volumes ONTAP^]. 
 |===
 . *Charging Methods and NSS account* (metodi di addebito e account NSS): Specificare l'opzione di addebito che si desidera utilizzare con questo sistema, quindi specificare un account NetApp Support Site.
 +
@@ -152,7 +152,7 @@ Il tipo di disco è per il volume iniziale. È possibile scegliere un tipo di di
 Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qualsiasi aggregato aggiuntivo creato da BlueXP quando si utilizza l'opzione di provisioning semplice. È possibile creare aggregati che utilizzano una dimensione del disco diversa utilizzando l'opzione di allocazione avanzata.
 
 +
-Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#sizing-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"].
+Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionare il sistema in Google Cloud"].
 
 . *Flash cache, velocità di scrittura e WORM*:
 +
@@ -260,7 +260,7 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +
-Per ulteriori informazioni, vedere link:task-planning-your-config-gcp.html#choosing-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per ulteriori informazioni, vedere link:task-planning-your-config-gcp.html#choose-a-volume-usage-profile["Scegliere un profilo di utilizzo del volume"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
 
 . *Review & Approve* (Rivedi e approva): Consente di rivedere e confermare le selezioni.
 +
@@ -368,7 +368,7 @@ Se si consente a BlueXP di generare il criterio firewall, è necessario sceglier
 
 
 
-| USA esistente | Se si utilizza un criterio firewall esistente, assicurarsi che includa le regole richieste. link:reference-networking-gcp.html#firewall-rules-for-cloud-volumes-ontap["Scopri le regole del firewall per Cloud Volumes ONTAP"]. 
+| USA esistente | Se si utilizza un criterio firewall esistente, assicurarsi che includa le regole richieste. link:reference-networking-gcp.html#firewall-rules["Scopri le regole del firewall per Cloud Volumes ONTAP"]. 
 |===
 . *Charging Methods and NSS account* (metodi di addebito e account NSS): Specificare l'opzione di addebito che si desidera utilizzare con questo sistema, quindi specificare un account NetApp Support Site.
 +
@@ -393,7 +393,7 @@ Il tipo di disco è per il volume iniziale. È possibile scegliere un tipo di di
 Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qualsiasi aggregato aggiuntivo creato da BlueXP quando si utilizza l'opzione di provisioning semplice. È possibile creare aggregati che utilizzano una dimensione del disco diversa utilizzando l'opzione di allocazione avanzata.
 
 +
-Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#sizing-your-system-in-gcp["Dimensionamento del sistema in Google Cloud"].
+Per informazioni sulla scelta del tipo e delle dimensioni di un disco, vedere link:task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionare il sistema in Google Cloud"].
 
 . *Flash cache, velocità di scrittura e WORM*:
 +
@@ -500,7 +500,7 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
 |===
 . *Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.
 +
-Per ulteriori informazioni, vedere link:task-planning-your-config-gcp.html#choosing-a-volume-usage-profile["Comprensione dei profili di utilizzo dei volumi"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per ulteriori informazioni, vedere link:task-planning-your-config-gcp.html#choose-a-volume-usage-profile["Scegliere un profilo di utilizzo del volume"] e. link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
 
 . *Review & Approve* (Rivedi e approva): Consente di rivedere e confermare le selezioni.
 +

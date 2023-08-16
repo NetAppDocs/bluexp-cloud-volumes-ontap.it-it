@@ -88,7 +88,7 @@ Se non è possibile configurare un gateway di transito, gli indirizzi IP privati
 
 Prima di implementare una configurazione ha in più zone di disponibilità, è necessario esaminare i requisiti per gli indirizzi IP mobili e le tabelle di routing. È necessario specificare gli indirizzi IP mobili quando si implementa la configurazione. Gli indirizzi IP privati vengono creati automaticamente da BlueXP.
 
-Per ulteriori informazioni, vedere link:reference-networking-aws.html#aws-networking-requirements-for-cloud-volumes-ontap-ha-in-multiple-azs["Requisiti di rete AWS per Cloud Volumes ONTAP ha in più AZS"].
+Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisiti di rete AWS per Cloud Volumes ONTAP ha in più AZS"^].
 
 
 

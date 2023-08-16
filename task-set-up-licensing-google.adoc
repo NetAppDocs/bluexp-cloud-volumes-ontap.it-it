@@ -20,7 +20,7 @@ Dopo aver deciso quale opzione di licenza utilizzare con Cloud Volumes ONTAP, è
 
 == Freemium
 
-Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con un massimo di 500 GB di capacità fornita. link:concept-licensing.html#freemium-offering["Scopri di più sull'offerta Freemium"].
+Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con un massimo di 500 GB di capacità fornita. link:concept-licensing.html#packages["Scopri di più sull'offerta Freemium"].
 
 .Fasi
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
@@ -28,7 +28,7 @@ Scegli l'offerta Freemium per utilizzare Cloud Volumes ONTAP gratuitamente con u
 +
 .. Nella pagina *Dettagli e credenziali*, fare clic su *Modifica credenziali > Aggiungi abbonamento*, quindi seguire le istruzioni per iscriversi all'offerta pay-as-you-go in Google Cloud Marketplace.
 +
-L'abbonamento al marketplace non ti addebiterà alcun costo a meno che non superi i 500 GiB di capacità fornita, dopodiché il sistema viene automaticamente convertito in link:concept-licensing.html#capacity-based-licensing-packages["Pacchetto Essentials"].
+L'abbonamento al marketplace non ti addebiterà alcun costo a meno che non superi i 500 GiB di capacità fornita, dopodiché il sistema viene automaticamente convertito in link:concept-licensing.html#packages["Pacchetto Essentials"].
 
 .. Una volta visualizzato BlueXP, selezionare *Freemium* quando si accede alla pagina dei metodi di ricarica.
 +
@@ -53,7 +53,7 @@ I pacchetti Essentials e Professional sono disponibili con i seguenti modelli di
 * Un contratto annuale
 
 
-link:concept-licensing.html#freemium-offering["Scopri di più sulle licenze basate sulla capacità"].
+link:concept-licensing.html#capacity-based-licensing["Scopri di più sulle licenze basate sulla capacità"].
 
 Le sezioni seguenti descrivono come iniziare a utilizzare ciascuno di questi modelli di consumo.
 

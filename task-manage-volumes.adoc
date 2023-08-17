@@ -347,7 +347,7 @@ image::screenshot_aggr_capacity.png[screenshot aggr capacità]
 
 . Se nessun aggregato dispone di capacità, creare un nuovo aggregato.
 +
-Per ulteriori informazioni, vedere link:task-create-aggregates.html["Creazione di aggregati"].
+Per ulteriori informazioni, vedere link:task-create-aggregates.html["Creazione di aggregati"^].
 
 . Utilizzare System Manager o CLI per spostare i volumi nell'aggregato.
 . Nella maggior parte dei casi, è possibile utilizzare System Manager per spostare i volumi.

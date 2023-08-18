@@ -159,6 +159,8 @@ sidebar:
       - title: Creazione di macchine virtuali storage in Google Cloud
         flavor: gcp
         url: "/task-managing-svms-gcp.html"
+      - title: Configurare il disaster recovery delle SVM
+        url: "/task-manage-svm-dr.html"
     - title: Sicurezza e crittografia dei dati
       entries:
       - title: Crittografare i volumi con la crittografia NetApp

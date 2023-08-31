@@ -281,6 +281,7 @@ Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/tas
 +
 image:screenshot_upgrade_select_versions.png["Schermata della pagina della versione di Upgrade Cloud Volumes ONTAP."]
 
+. Per verificare lo stato dell'aggiornamento, fare clic sull'icona Impostazioni e selezionare *Timeline*.
 
 
 .Risultato

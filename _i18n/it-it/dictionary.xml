@@ -5025,4 +5025,12 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="28495b8712e93ec4d83d5af5db51d535" category="paragraph">BlueXP offre gestione dei volumi FlexCache con a. <block ref="06867f1eea47d22d6d5c52a51ce61294" category="inline-link-macro-rx"></block> servizio.</block>
   <block id="06156010b52bde259c58b15866491a02" category="paragraph">Puoi anche utilizzare l'interfaccia a riga di comando di ONTAP o ONTAP System Manager per creare e gestire i volumi FlexCache:</block>
   <block id="6712712f329188ca2226c3cf1d0f925e" category="paragraph">BlueXP genera una licenza FlexCache per tutti i nuovi sistemi Cloud Volumes ONTAP. La licenza include un limite di utilizzo di 500 GiB.</block>
+  <block id="200c9dcd65b566ab41bf3c1946647dce" category="section-title">10 settembre 2023</block>
+  <block id="3e34162a2379c48e3eaf3f3857b029c0" category="paragraph">Le seguenti modifiche sono state introdotte con la versione 3.9.33 del connettore.</block>
+  <block id="e749c9d187d1531bb81af1a3c9eb73be" category="section-title">Supporto di macchine virtuali serie Lsv3 in Azure</block>
+  <block id="cc2bfd53f6bcbc23893aaa8fab8b1eb2" category="paragraph">I tipi di istanze L48s_v3 e L64s_v3 sono ora supportati con Cloud Volumes ONTAP in Azure per implementazioni a nodo singolo e coppia ad alta disponibilità con dischi gestiti condivisi in zone di disponibilità singole e multiple, a partire dalla release 9.13.1. Questi tipi di istanze supportano Flash cache.</block>
+  <block id="c2af1dd6b400531e930c62dad5095f7d" category="inline-link-macro">Visualizza le configurazioni supportate per Cloud Volumes ONTAP in Azure</block>
+  <block id="bc3a07be852924fbf8ece67dbd310169" category="inline-link-macro">Visualizza i limiti di storage per Cloud Volumes ONTAP in Azure</block>
+  <block id="7dd77d10e6ae3bee2c34fcea19d9c1ab" category="paragraph"><block ref="2e2ea5a0499f86c06503605a768ce8a2" category="inline-link-macro-rx"></block>
+<block ref="c1f4bd6aa6a7def50b28a0bec13e0184" category="inline-link-macro-rx"></block></block>
 </blocks>

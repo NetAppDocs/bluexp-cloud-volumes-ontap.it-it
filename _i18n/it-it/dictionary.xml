@@ -4600,7 +4600,6 @@
   <block id="fb4c65b52def4e8355252bcb74eab6be" category="summary">Utilizza il servizio di gestione delle chiavi di AWS per il tuo servizio di gestione delle chiavi di terze parti.</block>
   <block id="da8f544047a48addb30292b7f355c64e" category="doc">Gestione delle chiavi con AWS Key Management Service</block>
   <block id="44d61056f175f112376610c7782283a1" category="inline-link-macro">KMS (Key Management Service) di AWS</block>
-  <block id="6ad0c0113b3b55b452407927aa4aa75b" category="paragraph">È possibile utilizzare <block ref="27c0f93edc246c81e0de0dea4ee78543" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata dalla piattaforma cloud Google.</block>
   <block id="c7fa7b72f6d04762c019500275a89386" category="paragraph">La gestione delle chiavi con AWS KMS può essere abilitata con l'interfaccia CLI o l'API REST ONTAP.</block>
   <block id="ce62b1827da5aee89a8c9443b4ca4301" category="paragraph">Quando si utilizza il KMS, tenere presente che per impostazione predefinita viene utilizzata la LIF di un SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione di AWS. Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.</block>
   <block id="1a96e698f264a0a04e8665750d57e611" category="list-text">Cloud Volumes ONTAP deve eseguire la versione 9.12.0 o successiva</block>
@@ -5033,4 +5032,5 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="bc3a07be852924fbf8ece67dbd310169" category="inline-link-macro">Visualizza i limiti di storage per Cloud Volumes ONTAP in Azure</block>
   <block id="7dd77d10e6ae3bee2c34fcea19d9c1ab" category="paragraph"><block ref="2e2ea5a0499f86c06503605a768ce8a2" category="inline-link-macro-rx"></block>
 <block ref="c1f4bd6aa6a7def50b28a0bec13e0184" category="inline-link-macro-rx"></block></block>
+  <block id="9d0048a7e2f292f2c49dc43d2698028b" category="paragraph">È possibile utilizzare <block ref="27c0f93edc246c81e0de0dea4ee78543" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata da AWS.</block>
 </blocks>

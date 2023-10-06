@@ -5099,4 +5099,8 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Ottieni supporto per un file service del cloud provider</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">Per supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione BlueXP relativa a quel prodotto.</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Per ricevere supporto tecnico specifico di BlueXP e delle relative soluzioni e servizi storage, utilizza le opzioni di supporto descritte di seguito.</block>
+  <block id="69483d973a063c873a5a66f6edcc241c" category="section-title">6 ottobre 2023</block>
+  <block id="5612c729ea34f27969af31fd815184e0" category="paragraph">Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.</block>
+  <block id="44d133359b344c4542acdebe6209e101" category="section-title">Cloud Volumes ONTAP 9.14.0</block>
+  <block id="c5fa627d231c9a8813c9a2421d86136f" category="paragraph">BlueXP può ora implementare e gestire la release di disponibilità generale di Cloud Volumes ONTAP 9.14.0 in AWS, Azure e Google Cloud.</block>
 </blocks>

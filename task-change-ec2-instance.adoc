@@ -38,6 +38,8 @@ TIP: BlueXP modifica correttamente un nodo alla volta avviando il Takeover e att
 .Riferimento
 Per un elenco dei tipi di istanza supportati in AWS, vedere link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Istanze EC2 supportate"^].
 
+Se non è possibile modificare il tipo di istanza da istanze C4, M4 o R4, vedere l'articolo della Knowledge base link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Unable_to_change_the_instance_type_from_r4_to_r5_with_disk_count_error["Impossibile modificare il tipo di istanza da R4 a R5 con errore di conteggio dischi"^].
+
 .Fasi
 . Nella pagina Canvas, selezionare l'ambiente di lavoro.
 . Nella scheda Panoramica, fare clic sul pannello funzionalità, quindi fare clic sull'icona a forma di matita accanto a *tipo di istanza*.

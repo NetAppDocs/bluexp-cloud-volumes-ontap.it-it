@@ -163,6 +163,31 @@ BlueXP aggiorna inoltre l'istanza del mediatore secondo necessità durante il pr
 
 
 
+=== Upgrade in AWS con tipi di istanze C4, M4 e R4 EC2
+
+Cloud Volumes ONTAP non supporta più i tipi di istanze C4, M4 e R4 EC2. Con questi tipi di istanza è possibile aggiornare le distribuzioni esistenti a Cloud Volumes ONTAP versioni 9,8-9.12.1. Prima di eseguire l'aggiornamento, si consiglia di farlo <<Modificare il tipo di istanza,modificare il tipo di istanza>>. Se non è possibile modificare il tipo di istanza, è necessario <<Abilita il networking avanzato,abilita il networking avanzato>> prima di eseguire l'aggiornamento. Per ulteriori informazioni sulla modifica del tipo di istanza e sull'attivazione di una rete avanzata, consultare le sezioni seguenti.
+
+In Cloud Volumes ONTAP con versioni 9.13.0 e successive, non è possibile eseguire l'aggiornamento con i tipi di istanza C4, M4 e R4 EC2. In questo caso, è necessario ridurre il numero di dischi e. <<Modificare il tipo di istanza,modificare il tipo di istanza>> In alternativa, puoi implementare una nuova configurazione ha-Pair con i tipi di istanza C5, M5 e R5 EC2 e migrare i dati.
+
+
+
+==== Modificare il tipo di istanza
+
+I tipi di istanze C4, M4 e R4 EC2 consentono un maggior numero di dischi per nodo rispetto ai tipi di istanze C5, M5 e R5 EC2. Se il numero di dischi per nodo per l'istanza C4, M4 o R4 EC2 che si sta eseguendo è inferiore al limite massimo di dischi per nodo per le istanze C5, M5 e R5, è possibile modificare il tipo di istanza EC2 in C5, M5 o R5.
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html#disk-and-tiering-limits-by-ec2-instance["Verifica dei limiti di dischi e tiering in base all'istanza EC2"^]
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Modificare il tipo di istanza EC2 per Cloud Volumes ONTAP"^]
+
+Se non è possibile modificare il tipo di istanza, attenersi alla procedura descritta in <<Abilita il networking avanzato>>.
+
+
+
+==== Abilita il networking avanzato
+
+Per eseguire l'aggiornamento alle versioni 9,8 e successive di Cloud Volumes ONTAP, è necessario attivare _Enhanced Networking_ nel cluster che esegue il tipo di istanza C4, M4 o R4. Per abilitare ENA, fare riferimento all'articolo della Knowledge base link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/How_to_enable_Enhanced_networking_like_SR-IOV_or_ENA_on_AWS_CVO_instances["Come abilitare funzionalità di rete avanzate come SR-IOV o ENA sulle istanze di AWS Cloud Volumes ONTAP"^].
+
+
+
 == Preparatevi all'aggiornamento
 
 Prima di eseguire un aggiornamento, è necessario verificare che i sistemi siano pronti e apportare le modifiche necessarie alla configurazione.

@@ -22,6 +22,9 @@ Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce s
 Per creare ulteriori VM di storage che servono i dati, è necessario allocare gli indirizzi IP in Azure ed eseguire i comandi ONTAP per creare le VM di storage e le LIF dei dati.
 
 
+NOTE: Per eseguire ulteriori attività relative alle schede NIC, è possibile assegnare un ruolo di contributore della rete o un ruolo personalizzato con le autorizzazioni appropriate in Azure. Per ulteriori informazioni su queste autorizzazioni relative alla scheda NIC, consultare la https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=azure-portal#permissions["Documentazione di Microsoft Azure"^].
+
+
 
 == Numero di VM storage supportate
 

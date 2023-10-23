@@ -2852,7 +2852,6 @@
   <block id="0d007d44f30aa9582772f6ca7709803f" category="paragraph">Paga in base alla capacità per qualsiasi tipo di configurazione Cloud Volumes ONTAP con backup illimitati.</block>
   <block id="fdb568933703a9268c5ba46f3208f414" category="list-text">Fornisce licenze per qualsiasi configurazione Cloud Volumes ONTAP</block>
   <block id="2b7a2bda81dcf84ff8d6b600415c5e52" category="paragraph">Nodo singolo o ha con carica della capacità per volumi primari e secondari alla stessa velocità</block>
-  <block id="448cadabb687a7ab81490776866364cf" category="list-text">Include un numero illimitato di backup dei volumi utilizzando il backup e ripristino BlueXP, ma solo per i sistemi Cloud Volumes ONTAP che utilizzano il pacchetto Professional</block>
   <block id="98b2954d7b26ad04d4f74c70881d3ece" category="section-title">Cache edge</block>
   <block id="0e6fc7a8a0a2e83eed1877313299a807" category="paragraph">Fornisce licenze per Cloud Volumes Edge cache.</block>
   <block id="cbea577daebf267793d8d7234ee50729" category="list-text">Le stesse funzionalità del pacchetto Professional con business continuity e protezione dei dati per un'azienda distribuita</block>
@@ -5121,4 +5120,7 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="58cbae1f4fc410ea043517dc0196bed4" category="paragraph">Se non è possibile modificare il tipo di istanza da istanze C4, M4 o R4, vedere l'articolo della Knowledge base <block ref="ddbe8a0e687a77b95fcbe5dc93c2e464" category="inline-link-macro-rx"></block>.</block>
   <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Documentazione di Microsoft Azure</block>
   <block id="75640f19259f0f28da8136565db5cc22" category="admonition">Per eseguire ulteriori attività relative alle schede NIC, è possibile assegnare un ruolo di contributore della rete o un ruolo personalizzato con le autorizzazioni appropriate in Azure. Per ulteriori informazioni su queste autorizzazioni relative alla scheda NIC, consultare la<block ref="66f156d6b7e425dd982efc44f4fabac6" category="inline-link-rx"></block>.</block>
+  <block id="2cf711540cadf3cbb4cac96dba2d9464" category="list-text">Include backup di volumi illimitati utilizzando il backup e il ripristino BlueXP, ma solo per i sistemi Cloud Volumes ONTAP che utilizzano il pacchetto Professional.</block>
+  <block id="f4b04af639ebf32754e26b928989f33f" category="inline-link">Impostare le licenze per il backup e ripristino BlueXP</block>
+  <block id="e8b3ed24563d59f059354b6c1674f982" category="admonition">Per il backup e recovery di BlueXP è richiesto un abbonamento a PAYGO, tuttavia non sono previsti costi per l'utilizzo di questo servizio. Per ulteriori informazioni sull'impostazione delle licenze per il backup e recovery di BlueXP, consulta<block ref="c958f229a6c4d788e19159c7ba08a48b" category="inline-link-rx"></block>.</block>
 </blocks>

@@ -4900,7 +4900,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-standard-64</block>
   <block id="0891ba6a1f7a37c01cb3698c692751bc" category="paragraph">È possibile utilizzare queste funzionalità separatamente o insieme nelle implementazioni a singolo nodo e a coppia ad alta disponibilità.</block>
-  <block id="1e69916eaa563a1da0ccff3715e2342d" category="paragraph"><block ref="1e69916eaa563a1da0ccff3715e2342d" category="inline-link-macro-rx"></block></block>
   <block id="ee4272223579f1299444d14f2d185eb5" category="section-title">Miglioramenti dei report sull'utilizzo</block>
   <block id="ec123c8f161f9dfe4383b8db1d8883c4" category="paragraph">Sono ora disponibili diversi miglioramenti alle informazioni visualizzate nei report di utilizzo. Di seguito sono riportati i miglioramenti apportati ai report sull'utilizzo:</block>
   <block id="4c63050f1e33aa32db50cc80b682e805" category="list-text">L'unità TIB è ora inclusa nel nome delle colonne.</block>
@@ -5026,8 +5025,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="cc2bfd53f6bcbc23893aaa8fab8b1eb2" category="paragraph">I tipi di istanze L48s_v3 e L64s_v3 sono ora supportati con Cloud Volumes ONTAP in Azure per implementazioni a nodo singolo e coppia ad alta disponibilità con dischi gestiti condivisi in zone di disponibilità singole e multiple, a partire dalla release 9.13.1. Questi tipi di istanze supportano Flash cache.</block>
   <block id="c2af1dd6b400531e930c62dad5095f7d" category="inline-link-macro">Visualizza le configurazioni supportate per Cloud Volumes ONTAP in Azure</block>
   <block id="bc3a07be852924fbf8ece67dbd310169" category="inline-link-macro">Visualizza i limiti di storage per Cloud Volumes ONTAP in Azure</block>
-  <block id="7dd77d10e6ae3bee2c34fcea19d9c1ab" category="paragraph"><block ref="2e2ea5a0499f86c06503605a768ce8a2" category="inline-link-macro-rx"></block>
-<block ref="c1f4bd6aa6a7def50b28a0bec13e0184" category="inline-link-macro-rx"></block></block>
   <block id="9d0048a7e2f292f2c49dc43d2698028b" category="paragraph">È possibile utilizzare <block ref="27c0f93edc246c81e0de0dea4ee78543" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata da AWS.</block>
   <block id="ece19bab46695021f109a5e50f08bebe" category="paragraph">È necessaria la registrazione del supporto per ricevere supporto tecnico specifico per BlueXP e le relative soluzioni e servizi storage. È inoltre necessaria la registrazione del supporto per abilitare i flussi di lavoro chiave per i sistemi Cloud Volumes ONTAP.</block>
   <block id="8a3d807608e632d188a288fc5f4aa7eb" category="paragraph">La registrazione per il supporto non attiva il supporto NetApp per un file service provider cloud. Per supporto tecnico relativo a un file service di un cloud provider, alla sua infrastruttura o a una soluzione che utilizza il servizio, fare riferimento a "Guida in linea" nella documentazione BlueXP relativa a quel prodotto.</block>
@@ -5123,4 +5120,18 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="2cf711540cadf3cbb4cac96dba2d9464" category="list-text">Include backup di volumi illimitati utilizzando il backup e il ripristino BlueXP, ma solo per i sistemi Cloud Volumes ONTAP che utilizzano il pacchetto Professional.</block>
   <block id="f4b04af639ebf32754e26b928989f33f" category="inline-link">Impostare le licenze per il backup e ripristino BlueXP</block>
   <block id="e8b3ed24563d59f059354b6c1674f982" category="admonition">Per il backup e recovery di BlueXP è richiesto un abbonamento a PAYGO, tuttavia non sono previsti costi per l'utilizzo di questo servizio. Per ulteriori informazioni sull'impostazione delle licenze per il backup e recovery di BlueXP, consulta<block ref="c958f229a6c4d788e19159c7ba08a48b" category="inline-link-rx"></block>.</block>
+  <block id="fb2530f9293a4ba59cfd3ca6492bb972" category="section-title">23 ottobre 2023</block>
+  <block id="2bc953fcced4addf338156cc4681b683" category="section-title">Nuove regioni supportate per le implementazioni ha a zone di disponibilità multiple in Azure</block>
+  <block id="13ff77e69df5acabc2f0da9e5ebc94b8" category="paragraph">Le seguenti regioni in Azure ora supportano implementazioni a più zone di disponibilità altamente disponibili per Cloud Volumes ONTAP 9.14.0 e versioni successive:</block>
+  <block id="cee3f0213dd8b7eb15d7b31824e01754" category="list-text">Australia Est</block>
+  <block id="f74e1c0c8ee8410fa5bfe03676347257" category="list-text">Asia orientale</block>
+  <block id="bea1bd3d23555c539dab5f3f5426184c" category="list-text">Francia centrale</block>
+  <block id="d0fe0e3b6520479f718b98f0d471b7d0" category="list-text">Nord Europa</block>
+  <block id="055ffb1451e38deb0c8ac651e32d77ec" category="list-text">Qatar Central</block>
+  <block id="7def8b46a24f875959130a855cd80918" category="list-text">Svezia centrale</block>
+  <block id="8fb2033d01e3efa2825282a13f86c14e" category="list-text">Europa occidentale</block>
+  <block id="c349d3a26cf4231660785a0c5b4cb007" category="list-text">Stati Uniti occidentali 2</block>
+  <block id="500a97f33bcbe3073f32ba66331ac662" category="paragraph"><block ref="dc552a90a374cbb55f942fc8465d623a" category="inline-link-macro-rx"></block>
+<block ref="c6a2e575c9cd7913e0bdc96abdd66269" category="inline-link-macro-rx"></block></block>
+  <block id="75cbcf1dd82ddd4349696999b639377f" category="paragraph"><block ref="75cbcf1dd82ddd4349696999b639377f" category="inline-link-macro-rx"></block></block>
 </blocks>

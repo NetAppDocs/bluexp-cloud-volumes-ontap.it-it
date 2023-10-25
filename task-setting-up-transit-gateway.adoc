@@ -73,6 +73,17 @@ L'immagine di esempio seguente mostra la tabella di percorso per VPC 1. Include 
 +
 image:screenshot_transit_gateway3.png["Una schermata della console AWS che mostra la tabella di routing per VPC 1. Include un routing agli indirizzi IP mobili e a VPC 2, che è dove risiede un client."]
 
+. Aggiornare le impostazioni dei gruppi di protezione a tutto il traffico per il VPC.
++
+.. In Virtual Private Cloud, fare clic su *subnet*.
+.. Fare clic sulla scheda *Tabella di instradamento*, selezionare l'ambiente desiderato per uno degli indirizzi IP mobili per una coppia ha.
+.. Fare clic su *gruppi di sicurezza*.
+.. Selezionare *Modifica regole in entrata*.
+.. Fare clic su *Aggiungi regola*.
+.. In tipo, selezionare *tutto il traffico*, quindi selezionare l'indirizzo IP VPC.
+.. Fare clic su *Salva regole* per applicare le modifiche.
+
+
 . Montare i volumi sui client utilizzando l'indirizzo IP mobile.
 +
 È possibile trovare l'indirizzo IP corretto in BlueXP tramite l'opzione *Mount Command* nel pannello Manage Volumes (Gestisci volumi) di BlueXP.

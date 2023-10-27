@@ -32,7 +32,7 @@ Fare riferimento alle seguenti considerazioni:
 
 * Puoi aggiungere una sola NIC a un singolo nodo o a un'implementazione ha-Pair (istanza VM) Cloud Volumes ONTAP per la segregazione del traffico SnapMirror.
 * Per aggiungere una nuova scheda di rete, il tipo di istanza della macchina virtuale che si implementa deve disporre di una scheda di rete non utilizzata.
-* I cluster di origine e di destinazione devono trovarsi nella stessa rete virtuale (VNET) ma non nella stessa subnet.
+* I cluster di origine e di destinazione devono avere accesso alla stessa rete virtuale (VNET). Il cluster di destinazione è un sistema Cloud Volumes ONTAP in Azure. Il cluster di origine può essere un sistema Cloud Volumes ONTAP in Azure o un sistema ONTAP.
 
 
 
@@ -238,6 +238,8 @@ Visualizzazione dello stato peer *`peered`* e le applicazioni di peering *`snapm
 == Fase 5: Creare una relazione di replica SnapMirror tra il sistema di origine e quello di destinazione
 
 Questa sezione fornisce istruzioni su come creare una relazione di replica SnapMirror tra il sistema di origine e quello di destinazione.
+
+Per spostare una relazione di replica SnapMirror esistente, è necessario prima interrompere la relazione di replica SnapMirror esistente prima di creare una nuova relazione di replica SnapMirror.
 
 Utilizzare l'interfaccia CLI di ONTAP per i seguenti passaggi.
 

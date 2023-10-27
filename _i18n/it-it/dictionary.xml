@@ -5041,7 +5041,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="2d713c56af0861a0b0bed91ef8da2e18" category="paragraph">Fare riferimento alle seguenti considerazioni:</block>
   <block id="97d737a59c7e796eb8610dce5b0f817a" category="list-text">Puoi aggiungere una sola NIC a un singolo nodo o a un'implementazione ha-Pair (istanza VM) Cloud Volumes ONTAP per la segregazione del traffico SnapMirror.</block>
   <block id="933fe3c7f865ac41ceae93a6e0cb11be" category="list-text">Per aggiungere una nuova scheda di rete, il tipo di istanza della macchina virtuale che si implementa deve disporre di una scheda di rete non utilizzata.</block>
-  <block id="e6f791d5fe8a01a86623cb53cef66120" category="list-text">I cluster di origine e di destinazione devono trovarsi nella stessa rete virtuale (VNET) ma non nella stessa subnet.</block>
   <block id="c61486c21b19c2bf3cf6e82a2a1a645b" category="section-title">Fase 1: Creare una scheda NIC aggiuntiva e collegarla alla macchina virtuale di destinazione</block>
   <block id="d1348b7908ab7ffc3e987964d5d681f0" category="paragraph">Questa sezione fornisce istruzioni su come creare una scheda NIC aggiuntiva e collegarla alla macchina virtuale di destinazione. La macchina virtuale di destinazione è il nodo singolo o un sistema ha-Pair in Cloud Volumes ONTAP in Azure, in cui si desidera configurare la scheda di interfaccia di rete aggiuntiva.</block>
   <block id="faa6897ed3f655c419813b3c65575b23" category="list-text">Nell'interfaccia CLI di ONTAP, arrestare il nodo.</block>
@@ -5142,4 +5141,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="0444b867f0aca3029a2b9ea7cd093316" category="list-text">Fare clic su *Aggiungi regola*.</block>
   <block id="39eb101f969fe671b016bf47de2d6d12" category="list-text">In tipo, selezionare *tutto il traffico*, quindi selezionare l'indirizzo IP VPC.</block>
   <block id="20d3f54acd662a128694ddf527ea22fb" category="list-text">Fare clic su *Salva regole* per applicare le modifiche.</block>
+  <block id="2fd1ee72a12db129de96b6606fbce188" category="list-text">I cluster di origine e di destinazione devono avere accesso alla stessa rete virtuale (VNET). Il cluster di destinazione è un sistema Cloud Volumes ONTAP in Azure. Il cluster di origine può essere un sistema Cloud Volumes ONTAP in Azure o un sistema ONTAP.</block>
+  <block id="53dbdce3b901c59c8d3bbdae0e91364c" category="paragraph">Per spostare una relazione di replica SnapMirror esistente, è necessario prima interrompere la relazione di replica SnapMirror esistente prima di creare una nuova relazione di replica SnapMirror.</block>
 </blocks>

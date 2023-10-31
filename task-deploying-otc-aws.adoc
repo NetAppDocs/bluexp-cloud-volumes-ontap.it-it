@@ -86,7 +86,8 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["
 Il video seguente mostra come associare un abbonamento al Marketplace pay-as-you-go alle tue credenziali AWS:
 
 +
-video::video_subscribing_aws.mp4[width=848,height=480]
+.Iscriviti a BlueXP dal marketplace AWS
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 +
 
 TIP: Se più utenti IAM lavorano nello stesso account AWS, ciascun utente deve iscriversi. Dopo l'iscrizione, AWS Marketplace informa gli utenti successivi che sono già abbonati, come mostrato nell'immagine seguente. Mentre è in vigore un abbonamento per l' _account_ AWS, ciascun utente IAM deve associarsi a tale abbonamento. Se viene visualizzato il messaggio riportato di seguito, fare clic sul collegamento *fare clic qui* per accedere al sito Web di BlueXP e completare la procedura.image:screenshot_aws_marketplace.gif["Una schermata che mostra la pagina di abbonamento per BlueXP per Cloud Volumes ONTAP quando l'account AWS dispone già di un abbonamento, ma un utente IAM specifico potrebbe non farlo."]
@@ -334,7 +335,8 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["
 Il video seguente mostra come associare un abbonamento al Marketplace pay-as-you-go alle tue credenziali AWS:
 
 +
-video::video_subscribing_aws.mp4[width=848,height=480]
+.Iscriviti a BlueXP dal marketplace AWS
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 +
 
 TIP: Se più utenti IAM lavorano nello stesso account AWS, ciascun utente deve iscriversi. Dopo l'iscrizione, AWS Marketplace informa gli utenti successivi che sono già abbonati, come mostrato nell'immagine seguente. Mentre è in vigore un abbonamento per l' _account_ AWS, ciascun utente IAM deve associarsi a tale abbonamento. Se viene visualizzato il messaggio riportato di seguito, fare clic sul collegamento *fare clic qui* per accedere al sito Web di BlueXP e completare la procedura.image:screenshot_aws_marketplace.gif["Una schermata che mostra la pagina di abbonamento per BlueXP per Cloud Volumes ONTAP quando l'account AWS dispone già di un abbonamento, ma un utente IAM specifico potrebbe non farlo."]

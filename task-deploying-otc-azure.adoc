@@ -83,7 +83,8 @@ La seguente tabella descrive i campi per i quali potrebbero essere necessarie in
 Il video seguente mostra come associare un abbonamento Marketplace a un abbonamento Azure:
 
 +
-video::video_subscribing_azure.mp4[width=848,height=480]
+.Iscriviti a BlueXP da Azure Marketplace
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 . *Servizi*: Mantieni abilitati i servizi o disabilita i singoli servizi che non vuoi utilizzare con Cloud Volumes ONTAP.
 +
 ** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^]
@@ -308,7 +309,8 @@ La seguente tabella descrive i campi per i quali potrebbero essere necessarie in
 Il video seguente mostra come associare un abbonamento Marketplace a un abbonamento Azure:
 
 +
-video::video_subscribing_azure.mp4[width=848,height=480]
+.Iscriviti a BlueXP da Azure Marketplace
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 . *Servizi*: Mantieni abilitati i servizi o disabilita i singoli servizi che non vuoi utilizzare con Cloud Volumes ONTAP.
 +
 ** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^]

@@ -20,6 +20,20 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 1 novembre 2023
+
+Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.
+
+
+
+=== Regione dell'Arabia Saudita ora supportata in Google Cloud
+
+La regione dell'Arabia Saudita è ora supportata in Google Cloud per Cloud Volumes ONTAP e nel connettore per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali in Google Cloud"^].
+
+
+
 == 23 ottobre 2023
 
 Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.
@@ -28,7 +42,7 @@ Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettor
 
 === Nuove regioni supportate per le implementazioni ha a zone di disponibilità multiple in Azure
 
-Le seguenti regioni in Azure ora supportano implementazioni a più zone di disponibilità altamente disponibili per Cloud Volumes ONTAP 9.14.0 e versioni successive:
+Le seguenti regioni in Azure ora supportano implementazioni a più zone di disponibilità altamente disponibili per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:
 
 * Australia Est
 * Asia orientale

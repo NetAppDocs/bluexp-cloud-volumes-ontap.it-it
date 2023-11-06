@@ -204,7 +204,7 @@ NOTE: Le snapshot vengono create automaticamente al riavvio.
 * Per impostazione predefinita, ogni disco in Azure viene crittografato a riposo.
 
 
-.Coppie HA in più zone di disponibilità
+.Coppie HA con dischi gestiti condivisi in più zone di disponibilità
 * Due dischi SSD Premium da 10 GiB per il volume di boot (uno per nodo)
 * Due blob di pagina 512 GiB Premium Storage per il volume root (uno per nodo)
 * Due dischi HDD standard da 1024 GiB per il risparmio di core (uno per nodo)

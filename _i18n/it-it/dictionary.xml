@@ -1008,7 +1008,6 @@
   <block id="1cd59337e38e3aab321c22202aac01fe" category="list-text">Due blob di pagina 140 GiB Premium Storage per il volume root (uno per nodo)</block>
   <block id="0e9d3cb41b5140e6aac7a5854fec835e" category="list-text">Due dischi HDD standard da 1024 GiB per il risparmio di core (uno per nodo)</block>
   <block id="fca06ab414751fc670c511688ccf675a" category="list-text">Due dischi SSD Premium da 512 GiB per NVRAM (uno per nodo)</block>
-  <block id="c30ce062be1c5d4265f67a2654690b8f" category="list-title">Coppie HA in più zone di disponibilità</block>
   <block id="ab3aec14eab62514bc5eb01d67673c8b" category="list-text">Due blob di pagina 512 GiB Premium Storage per il volume root (uno per nodo)</block>
   <block id="d532c0a468f8f7b09230567fa35b8b5a" category="section-title">Google Cloud (nodo singolo)</block>
   <block id="8cbf25515dd16addda3c2248838e3f91" category="list-text">Un disco persistente SSD da 10 GiB per i dati di avvio</block>
@@ -5156,4 +5155,5 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="e8b16e899245eb584f98d48e087aa975" category="paragraph">Le seguenti regioni in Azure ora supportano implementazioni a più zone di disponibilità altamente disponibili per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:</block>
   <block id="0679d11689909adae41f54cfc8c6ef53" category="list-text">La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o).</block>
   <block id="992a45bae33fb9769eb5bc8c6317149c" category="paragraph">Non verranno addebitati costi per i/o relativi alla replica dei dati (SnapMirror), ai backup (SnapVault) o ad NDMP.</block>
+  <block id="0b8c1e660d75aa2bec12f002f097dcab" category="list-title">Coppie HA con dischi gestiti condivisi in più zone di disponibilità</block>
 </blocks>

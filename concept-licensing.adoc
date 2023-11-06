@@ -75,9 +75,9 @@ Tutti gli altri sistemi con meno di 500 GiB di capacità fornita rimangono su Fr
 Pagare separatamente la capacità e le operazioni di i/o fornite.
 
 * Nodo singolo Cloud Volumes ONTAP o ha
-* La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o)
+* La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o).
 +
-Non verranno addebitati costi di i/o relativi alla replica dei dati (SnapMirror) o NDMP.
+Non verranno addebitati costi per i/o relativi alla replica dei dati (SnapMirror), ai backup (SnapVault) o ad NDMP.
 
 
 

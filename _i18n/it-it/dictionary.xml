@@ -2835,8 +2835,6 @@
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="section-title">Ottimizzato</block>
   <block id="a131e5df30c445534883b2b08d3f9e4e" category="paragraph">Pagare separatamente la capacità e le operazioni di i/o fornite.</block>
   <block id="258f58bf86a685fa4951f45a75224c86" category="list-text">Nodo singolo Cloud Volumes ONTAP o ha</block>
-  <block id="ac8875b922d75fca71aa495c421855a6" category="list-text">La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o)</block>
-  <block id="a2e5678d48654234a84ed14a48c17119" category="paragraph">Non verranno addebitati costi di i/o relativi alla replica dei dati (SnapMirror) o NDMP.</block>
   <block id="d4a6e54c4d6405336cdeb07c50490008" category="list-text">Disponibile in Azure Marketplace come offerta pay-as-you-go o come contratto annuale</block>
   <block id="18daf9881514241d393343911b3c6b0d" category="list-text">Disponibile in Google Cloud Marketplace come offerta pay-as-you-go o come contratto annuale</block>
   <block id="0fbc0a0fa746d19ef30c136beb33ee6e" category="list-text">Supportato con tipi di macchine virtuali selezionati:</block>
@@ -5156,4 +5154,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="2bc724993144e8002899059117620062" category="inline-link">Mappa delle regioni globali in Google Cloud</block>
   <block id="6a050b5b1c64124ef335bf9dbf64e03f" category="paragraph">Per un elenco di tutte le regioni, vedere la<block ref="5328f934c7a30e2b8b67732fc162a525" category="inline-link-rx"></block>.</block>
   <block id="e8b16e899245eb584f98d48e087aa975" category="paragraph">Le seguenti regioni in Azure ora supportano implementazioni a più zone di disponibilità altamente disponibili per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:</block>
+  <block id="0679d11689909adae41f54cfc8c6ef53" category="list-text">La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o).</block>
+  <block id="992a45bae33fb9769eb5bc8c6317149c" category="paragraph">Non verranno addebitati costi per i/o relativi alla replica dei dati (SnapMirror), ai backup (SnapVault) o ad NDMP.</block>
 </blocks>

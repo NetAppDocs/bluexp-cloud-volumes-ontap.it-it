@@ -196,6 +196,7 @@ Prima di eseguire un aggiornamento, è necessario verificare che i sistemi siano
 * <<Verificare che il giveback automatico sia ancora attivato>>
 * <<Sospendere i trasferimenti SnapMirror>>
 * <<Verificare che gli aggregati siano online>>
+* <<Verifica che tutte le LIF siano sulle porte home>>
 
 
 
@@ -263,6 +264,12 @@ image:screenshots_aggregate_details_state.png["Schermata: Mostra il campo Stato 
 
 
 
+
+
+
+=== Verifica che tutte le LIF siano sulle porte home
+
+Prima di eseguire l'upgrade, tutte le LIF devono trovarsi sulle porte home. Fare riferimento alla documentazione di ONTAP a. link:https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html["Verifica che tutte le LIF siano sulle porte home"].
 
 
 

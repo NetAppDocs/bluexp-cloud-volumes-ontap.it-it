@@ -20,9 +20,23 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 8 novembre 2023
+
+La seguente modifica è stata introdotta con la versione 3.9.35 del connettore.
+
+
+
+=== La regione di Tel Aviv è ora supportata in AWS
+
+La regione di Tel Aviv è ora supportata in AWS per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali sotto AWS"^].
+
+
+
 == 1 novembre 2023
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.
+La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.
 
 
 
@@ -36,7 +50,7 @@ Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-vol
 
 == 23 ottobre 2023
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.
+La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.
 
 
 
@@ -60,7 +74,7 @@ Per un elenco di tutte le regioni che supportano più zone di disponibilità, ve
 
 == 6 ottobre 2023
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.34 del connettore.
+La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.
 
 
 
@@ -74,7 +88,7 @@ link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Scopri le nuov
 
 == 10 settembre 2023
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.33 del connettore.
+La seguente modifica è stata introdotta con la versione 3.9.33 del connettore.
 
 
 

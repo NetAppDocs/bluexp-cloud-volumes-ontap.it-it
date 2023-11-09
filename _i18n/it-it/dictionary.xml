@@ -1903,8 +1903,6 @@
   <block id="c1b0fccfdff9ac3307a1dde73fefce36" category="paragraph">Riduci i costi di storage abilitando il tiering automatizzato dei dati inattivi su storage a oggetti a basso costo. I dati attivi rimangono in SSD o HDD ad alte prestazioni, mentre i dati inattivi vengono suddivisi in livelli per lo storage a oggetti a basso costo. In questo modo è possibile recuperare spazio sullo storage primario e ridurre lo storage secondario.</block>
   <block id="4a399275f88e7ce2505e96b9b7f521b9" category="inline-image-macro">Si tratta di un'immagine concettuale che mostra i dati hot che vanno allo storage EBS e i dati inattivi che vanno allo storage S3.</block>
   <block id="3d3b4afad1ee8976c0e2861a36e95c05" category="paragraph"><block ref="3d3b4afad1ee8976c0e2861a36e95c05" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="89f3aa2399b6fb2684acf4e64a1b95ad" category="paragraph">Il tiering dei dati è basato sulla tecnologia FabricPool.</block>
-  <block id="79a1ac94d3a1278dbc40ff2a430fa52a" category="admonition">Non è necessario installare una licenza per le funzionalità per abilitare il tiering dei dati (FabricPool).</block>
   <block id="e452e8c25e7bc8d94f88ce5a25cbbf4a" category="section-title">Tiering dei dati in AWS</block>
   <block id="d6a11de1ddf26c52daac1219f9ab237d" category="paragraph">Quando si abilita il tiering dei dati in AWS, Cloud Volumes ONTAP utilizza EBS come Tier di performance per i dati hot e AWS S3 come Tier di capacità per i dati inattivi.</block>
   <block id="9a817efc11f456e69cd659f0afd9447b" category="list-text">Tier di performance</block>
@@ -5166,4 +5164,5 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="96c6a6277896e4ed7c2cef558b5542c1" category="paragraph">Per un elenco di tutte le regioni, vedere la<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block>.</block>
   <block id="8904b1f88c62ce8a8381c8474f2ccb42" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.</block>
   <block id="f4e12e22adfef297cd0c891e4cd2e1a9" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.33 del connettore.</block>
+  <block id="bbb12e7857993612931dbc5c19c5f9dc" category="paragraph">Il tiering dei dati è basato sulla tecnologia FabricPool. Cloud Volumes ONTAP offre tiering dei dati per tutti i cluster Cloud Volumes ONTAP. Quando abiliti il tiering dei dati, sono previsti costi per il tiering dei dati nello storage a oggetti. Fare riferimento alla documentazione del cloud provider per i dettagli sui costi dello storage a oggetti.</block>
 </blocks>

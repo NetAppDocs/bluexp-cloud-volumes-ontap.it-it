@@ -18,10 +18,7 @@ Riduci i costi di storage abilitando il tiering automatizzato dei dati inattivi 
 
 image:diagram_data_tiering.png["Si tratta di un'immagine concettuale che mostra i dati hot che vanno allo storage EBS e i dati inattivi che vanno allo storage S3."]
 
-Il tiering dei dati è basato sulla tecnologia FabricPool.
-
-
-NOTE: Non è necessario installare una licenza per le funzionalità per abilitare il tiering dei dati (FabricPool).
+Il tiering dei dati è basato sulla tecnologia FabricPool. Cloud Volumes ONTAP offre tiering dei dati per tutti i cluster Cloud Volumes ONTAP. Quando abiliti il tiering dei dati, sono previsti costi per il tiering dei dati nello storage a oggetti. Fare riferimento alla documentazione del cloud provider per i dettagli sui costi dello storage a oggetti.
 
 ifdef::aws[]
 

@@ -20,6 +20,20 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 10 novembre 2023
+
+La seguente modifica è stata introdotta con la versione 3.9.35 del connettore.
+
+
+
+=== Regione tedesca ora supportata in Google Cloud
+
+La regione tedesca è ora supportata in Google Cloud per Cloud Volumes ONTAP e nel connettore per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali in Google Cloud"^].
+
+
+
 == 8 novembre 2023
 
 La seguente modifica è stata introdotta con la versione 3.9.35 del connettore.

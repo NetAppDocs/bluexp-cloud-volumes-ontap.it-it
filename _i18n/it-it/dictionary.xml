@@ -5165,4 +5165,7 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="8904b1f88c62ce8a8381c8474f2ccb42" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.</block>
   <block id="f4e12e22adfef297cd0c891e4cd2e1a9" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.33 del connettore.</block>
   <block id="bbb12e7857993612931dbc5c19c5f9dc" category="paragraph">Il tiering dei dati è basato sulla tecnologia FabricPool. Cloud Volumes ONTAP offre tiering dei dati per tutti i cluster Cloud Volumes ONTAP. Quando abiliti il tiering dei dati, sono previsti costi per il tiering dei dati nello storage a oggetti. Fare riferimento alla documentazione del cloud provider per i dettagli sui costi dello storage a oggetti.</block>
+  <block id="e95c0c487a8aec79b7d3484dc5452526" category="section-title">10 novembre 2023</block>
+  <block id="1e8bf13d2a6124785fff6ed75b8efe5d" category="section-title">Regione tedesca ora supportata in Google Cloud</block>
+  <block id="1eb6caf052a1ca736597d3e01c5333f9" category="paragraph">La regione tedesca è ora supportata in Google Cloud per Cloud Volumes ONTAP e nel connettore per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
 </blocks>

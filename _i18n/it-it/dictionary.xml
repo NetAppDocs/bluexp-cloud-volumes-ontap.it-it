@@ -5168,4 +5168,20 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="e95c0c487a8aec79b7d3484dc5452526" category="section-title">10 novembre 2023</block>
   <block id="1c13ec96dac1171608b6dbd65bb2245c" category="section-title">La regione di Berlino ora è supportata in Google Cloud</block>
   <block id="56e0da46254ac9c6f784da40f466bda0" category="paragraph">La regione di Berlino è ora supportata in Google Cloud per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
+  <block id="e8a0c291b754a75e0e91ecf69d567912" category="section-title">5 dicembre 2023</block>
+  <block id="1fdbf90814a4e25f5b9e765470846181" category="paragraph">Sono state introdotte le seguenti modifiche.</block>
+  <block id="de3678aecacdbfc2cde1f365589103a8" category="section-title">Nuovo supporto di regione in Azure</block>
+  <block id="2d87524b148f67773bbd84eaceabd1a8" category="section-title">Supporto per regione a zona di disponibilità singola</block>
+  <block id="b778fb7051f3e08881d95bd99b033b37" category="paragraph">Le seguenti regioni supportano ora implementazioni a zona di disponibilità singola altamente disponibili in Azure per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:</block>
+  <block id="b5eed9442adc540b3e59ae08aa129632" category="list-text">Tel Aviv</block>
+  <block id="437d461430ecc08e2d51abbcf5ce9b3c" category="list-text">Milano</block>
+  <block id="657afe0033330876ccc58b79bded6c83" category="section-title">Supporto di aree di disponibilità multiple</block>
+  <block id="20576a03f90633178b591a3e73ee5d59" category="paragraph">Le seguenti regioni ora supportano implementazioni a più zone di disponibilità altamente disponibili in Azure per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:</block>
+  <block id="910918c80516a55b4ba940f0b485cea1" category="list-text">India Centrale</block>
+  <block id="e57064b31b815fd4c1124aa7f2cc1fd4" category="list-text">Norvegia Est</block>
+  <block id="524a897e665c757be360f9ceaca6b0a5" category="list-text">Svizzera Nord</block>
+  <block id="d5daca31a462e138266141f6d01ca814" category="list-text">Sud Africa, Nord</block>
+  <block id="92e19d728517dc371c0f37ee23fa9d03" category="list-text">Emirati Arabi Uniti Nord</block>
+  <block id="343c78956fe2e30b58a341de94a8673a" category="list-text">Cina Nord 3</block>
+  <block id="ee39417afe0e7b7726a65f6235448846" category="paragraph">Per un elenco di tutte le regioni, vedere la<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block>.</block>
 </blocks>

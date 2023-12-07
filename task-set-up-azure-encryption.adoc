@@ -38,41 +38,69 @@ Se si crea una nuova versione della chiave, Cloud Volumes ONTAP utilizza automat
 
 === Modalità di crittografia dei dati
 
+BlueXP utilizza un set di crittografia del disco, che consente la gestione delle chiavi di crittografia con dischi gestiti e non con blob di pagine. Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.
+
 Dopo aver creato un ambiente di lavoro Cloud Volumes ONTAP configurato per l'utilizzo di una chiave gestita dal cliente, i dati Cloud Volumes ONTAP vengono crittografati come segue.
 
-Area di disponibilità multipla Azure ha::
-+
---
-* Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente.^1^
-* Per i dischi root, boot, NVRAM, core e dati, BlueXP utilizza un set di crittografia dei dischi che consente la gestione delle chiavi di crittografia con i dischi gestiti.
-* Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco.
+[cols="2a,2a,2a"]
+|===
+| Configurazione di Cloud Volumes ONTAP | Dischi di sistema utilizzati per la crittografia delle chiavi | Dischi dati utilizzati per la crittografia delle chiavi 
 
 
---
-Area di disponibilità singola Azure ha::
-+
---
-* Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente.^1^
-* Anche i nuovi account storage (ad esempio, quando si aggiungono dischi o aggregati) utilizzano la stessa chiave.^1^
-* A partire da ONTAP 9.10.1P3, per NVRAM e il disco principale, BlueXP utilizza un https://docs.microsoft.com/en-us/azure/virtual-machines/disk-encryption["crittografia del disco impostata"^], che consente la gestione delle chiavi di crittografia con dischi gestiti. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.
+ a| 
+Nodo singolo
+ a| 
+* Avvio
+* Core
+* NVRAM
+
+ a| 
+* Radice
+* Dati
 
 
---
-Nodo singolo::
-+
---
-* Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente. ^1^
-* Per i dischi root, boot e dati, BlueXP utilizza un https://docs.microsoft.com/en-us/azure/virtual-machines/disk-encryption["crittografia del disco impostata"^], che consente la gestione delle chiavi di crittografia con dischi gestiti.
-* Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco.
-* A partire da ONTAP 9.9.1P7, per la NVRAM e il disco principale, BlueXP utilizza un set di crittografia del disco, che consente la gestione delle chiavi di crittografia con i dischi gestiti. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.
 
 
---
+ a| 
+Singola zona di disponibilità di Azure ha con BLOB di pagina
+ a| 
+* Avvio
+* Core
+* NVRAM
+
+ a| 
+Nessuno
 
 
-.Nota a piè di pagina
-. Se si desidera crittografare gli account di storage durante la creazione, è necessario creare e fornire l'ID della risorsa nella richiesta di creazione CVO. Questo vale per tutti i tipi di implementazioni. Se non viene fornito, gli account di storage verranno comunque crittografati, ma BlueXP creerà prima gli account di storage con crittografia a chiave gestita da Microsoft e quindi aggiornerà gli account di storage per utilizzare la chiave gestita dal cliente.
 
+ a| 
+Singola zona di disponibilità di Azure ha con dischi gestiti condivisi
+ a| 
+* Avvio
+* Core
+* NVRAM
+
+ a| 
+* Radice
+* Dati
+
+
+
+
+ a| 
+Ha di Azure diverse zone di disponibilità con dischi gestiti condivisi
+ a| 
+* Avvio
+* Core
+* NVRAM
+
+ a| 
+* Radice
+* Dati
+
+
+|===
+Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente. Se si desidera crittografare gli account di storage durante la creazione, è necessario creare e fornire l'ID della risorsa nella richiesta di creazione CVO. Questo vale per tutti i tipi di implementazioni. Se non viene fornito, gli account di storage verranno comunque crittografati, ma BlueXP creerà prima gli account di storage con crittografia a chiave gestita da Microsoft e quindi aggiornerà gli account di storage per utilizzare la chiave gestita dal cliente.
 
 
 

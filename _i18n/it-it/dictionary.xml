@@ -1769,20 +1769,7 @@
   <block id="552690dff240721c335dffa2d29b8ef8" category="paragraph">Se si crea una nuova versione della chiave, Cloud Volumes ONTAP utilizza automaticamente la versione più recente.</block>
   <block id="0ea67820edee1410e568b14bb70835d0" category="section-title">Modalità di crittografia dei dati</block>
   <block id="145da5369fc47bfb6b1cd09c08d698b0" category="paragraph">Dopo aver creato un ambiente di lavoro Cloud Volumes ONTAP configurato per l'utilizzo di una chiave gestita dal cliente, i dati Cloud Volumes ONTAP vengono crittografati come segue.</block>
-  <block id="b9eeb00cda3e979e1efe9bef61f951fc" category="list-text">Area di disponibilità multipla Azure ha</block>
-  <block id="dcd61ff34229ba534213e8501446885a" category="list-text">Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente.^1^</block>
-  <block id="fdfad4872e8eceed069f74f82808d36e" category="list-text">Per i dischi root, boot, NVRAM, core e dati, BlueXP utilizza un set di crittografia dei dischi che consente la gestione delle chiavi di crittografia con i dischi gestiti.</block>
-  <block id="5dab396463f2f277886102bf78fe661b" category="list-text">Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco.</block>
-  <block id="1223a21ec0a7e82e77ac43bd74628f1e" category="list-text">Area di disponibilità singola Azure ha</block>
-  <block id="08408518b6366a9a8bb69802d83d5e3c" category="list-text">Anche i nuovi account storage (ad esempio, quando si aggiungono dischi o aggregati) utilizzano la stessa chiave.^1^</block>
-  <block id="2301d2b9fcb3fe6f26482aff37ea2c54" category="inline-link">crittografia del disco impostata</block>
-  <block id="0f8e1302b6dedb536c0490b7602b0b32" category="list-text">A partire da ONTAP 9.10.1P3, per NVRAM e il disco principale, BlueXP utilizza un<block ref="c7a6854bb19ab523fbe585f89a860944" category="inline-link-rx"></block>, che consente la gestione delle chiavi di crittografia con dischi gestiti. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.</block>
   <block id="5aabc9069557be7e4aeff466605cbc75" category="list-text">Nodo singolo</block>
-  <block id="9dca67fbd1fac23e7aff5774ec0afa2a" category="list-text">Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente. ^1^</block>
-  <block id="648dd7242e5228e0d91d90eaf1e79ebd" category="list-text">Per i dischi root, boot e dati, BlueXP utilizza un<block ref="c7a6854bb19ab523fbe585f89a860944" category="inline-link-rx"></block>, che consente la gestione delle chiavi di crittografia con dischi gestiti.</block>
-  <block id="fdee261787c8d28a1d5af5c07b8580d6" category="list-text">A partire da ONTAP 9.9.1P7, per la NVRAM e il disco principale, BlueXP utilizza un set di crittografia del disco, che consente la gestione delle chiavi di crittografia con i dischi gestiti. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.</block>
-  <block id="8b213ded385c637758f8c3705eb6386a" category="list-title">Nota a piè di pagina</block>
-  <block id="41668006fb357f569acf8441fc16a00c" category="list-text">Se si desidera crittografare gli account di storage durante la creazione, è necessario creare e fornire l'ID della risorsa nella richiesta di creazione CVO. Questo vale per tutti i tipi di implementazioni. Se non viene fornito, gli account di storage verranno comunque crittografati, ma BlueXP creerà prima gli account di storage con crittografia a chiave gestita da Microsoft e quindi aggiornerà gli account di storage per utilizzare la chiave gestita dal cliente.</block>
   <block id="8764c9ec9f17252b7df37e1710ec9e5a" category="section-title">Creare un vault delle chiavi e generare una chiave</block>
   <block id="d01b7a4314685f64d972ad7a1fad92aa" category="paragraph">Il vault delle chiavi deve risiedere nella stessa sottoscrizione Azure e nella stessa regione in cui si intende creare il sistema Cloud Volumes ONTAP.</block>
   <block id="0355ddb77a5b72eb0604153dc1393f12" category="inline-link">Creare un vault delle chiavi nell'abbonamento Azure</block>
@@ -5164,7 +5151,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="96c6a6277896e4ed7c2cef558b5542c1" category="paragraph">Per un elenco di tutte le regioni, vedere la<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block>.</block>
   <block id="8904b1f88c62ce8a8381c8474f2ccb42" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.</block>
   <block id="f4e12e22adfef297cd0c891e4cd2e1a9" category="paragraph">La seguente modifica è stata introdotta con la versione 3.9.33 del connettore.</block>
-  <block id="bbb12e7857993612931dbc5c19c5f9dc" category="paragraph">Il tiering dei dati è basato sulla tecnologia FabricPool. Cloud Volumes ONTAP offre tiering dei dati per tutti i cluster Cloud Volumes ONTAP. Quando abiliti il tiering dei dati, sono previsti costi per il tiering dei dati nello storage a oggetti. Fare riferimento alla documentazione del cloud provider per i dettagli sui costi dello storage a oggetti.</block>
   <block id="e95c0c487a8aec79b7d3484dc5452526" category="section-title">10 novembre 2023</block>
   <block id="1c13ec96dac1171608b6dbd65bb2245c" category="section-title">La regione di Berlino ora è supportata in Google Cloud</block>
   <block id="56e0da46254ac9c6f784da40f466bda0" category="paragraph">La regione di Berlino è ora supportata in Google Cloud per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
@@ -5189,4 +5175,17 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="4a76045b19fb3233070f77ae414d5810" category="section-title">Cloud Volumes ONTAP 9.14.1 RC1</block>
   <block id="efb4d9478ba663f514e18b3310c2de65" category="paragraph">BlueXP ora può implementare e gestire Cloud Volumes ONTAP 9.14.1 in AWS, Azure e Google Cloud.</block>
   <block id="d544ab02530940d46c43ea00a73d59d3" category="cell">9.14.1</block>
+  <block id="ed6589af51fe478933944c16eab4377f" category="paragraph">Il tiering dei dati è basato sulla tecnologia FabricPool. Cloud Volumes ONTAP offre tiering dei dati per tutti i cluster Cloud Volumes ONTAP senza una licenza aggiuntiva. Quando abiliti il tiering dei dati, sono previsti costi per il tiering dei dati nello storage a oggetti. Fare riferimento alla documentazione del cloud provider per i dettagli sui costi dello storage a oggetti.</block>
+  <block id="52325e36bf5c9eb022c54f20d2f9d58d" category="paragraph">BlueXP utilizza un set di crittografia del disco, che consente la gestione delle chiavi di crittografia con dischi gestiti e non con blob di pagine. Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.</block>
+  <block id="8168565911ffa4b4f24fddac74a372bd" category="cell">Dischi di sistema utilizzati per la crittografia delle chiavi</block>
+  <block id="d7819c407fe0bef64dea0f538ea5059d" category="cell">Dischi dati utilizzati per la crittografia delle chiavi</block>
+  <block id="d070b5d05592da755547896113c3e9ef" category="list-text">Avvio</block>
+  <block id="83168e6cb289d732cc78427b51f93153" category="list-text">Core</block>
+  <block id="e3f3f58b597fba6fefb596c5ce76d468" category="list-text">NVRAM</block>
+  <block id="fa03eb688ad8aa1db593d33dabd89bad" category="list-text">Radice</block>
+  <block id="f6068daa29dbb05a7ead1e3b5a48bbee" category="list-text">Dati</block>
+  <block id="9f9a7e011920aed7b91c7f5809cef3df" category="paragraph">Singola zona di disponibilità di Azure ha con BLOB di pagina</block>
+  <block id="7df51deb241262b7a30e9f895e6b3b75" category="paragraph">Singola zona di disponibilità di Azure ha con dischi gestiti condivisi</block>
+  <block id="75b5d41c945fb77a44a02275e5167f03" category="paragraph">Ha di Azure diverse zone di disponibilità con dischi gestiti condivisi</block>
+  <block id="735d36020b1ee0734f4e9ddbbea4948e" category="paragraph">Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente. Se si desidera crittografare gli account di storage durante la creazione, è necessario creare e fornire l'ID della risorsa nella richiesta di creazione CVO. Questo vale per tutti i tipi di implementazioni. Se non viene fornito, gli account di storage verranno comunque crittografati, ma BlueXP creerà prima gli account di storage con crittografia a chiave gestita da Microsoft e quindi aggiornerà gli account di storage per utilizzare la chiave gestita dal cliente.</block>
 </blocks>

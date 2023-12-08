@@ -277,6 +277,8 @@ image:screenshots_aggregate_details_state.png["Schermata: Mostra il campo Stato 
 
 Prima di eseguire l'upgrade, tutte le LIF devono trovarsi sulle porte home. Fare riferimento alla documentazione di ONTAP a. link:https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html["Verifica che tutte le LIF siano sulle porte home"].
 
+Se si verifica un errore di aggiornamento, fare riferimento alla link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/CVO_upgrade_fails["Articolo della Knowledge base "aggiornamento Cloud Volumes ONTAP non riuscito""].
+
 
 
 == Aggiornare Cloud Volumes ONTAP

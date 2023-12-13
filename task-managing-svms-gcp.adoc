@@ -5,15 +5,12 @@ keywords: storage virtual machine, vserver, svm, storage vm, supported number, n
 summary: Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage. 
 ---
 = Creare macchine virtuali storage per il data-service per Cloud Volumes ONTAP in Google Cloud
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

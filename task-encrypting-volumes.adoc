@@ -5,15 +5,12 @@ keywords: encrypt, encryption, data, volumes, netapp volume encryption, volume e
 summary: 'Cloud Volumes ONTAP supporta la crittografia dei volumi NetApp (NVE) e la crittografia aggregata NetApp (NAE) con un gestore di chiavi esterno. NVE e NAE sono attivati per impostazione predefinita se si imposta un gestore di chiavi esterno.' 
 ---
 = Crittografia dei volumi con le soluzioni di crittografia NetApp
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

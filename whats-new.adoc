@@ -20,6 +20,24 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 8 gennaio 2024
+
+
+
+=== Nuove macchine virtuali per più zone di disponibilità di Azure
+
+A partire da Cloud Volumes ONTAP 9.13.1, i seguenti tipi di macchine virtuali supportano le zone di disponibilità multiple Azure per le implementazioni di coppia ad alta disponibilità nuove ed esistenti:
+
+* L16s_v3
+* L32s_v3
+* L48s_v3
+* L64s_v3
+
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurazioni supportate in Azure"^]
+
+
+
 == 6 dicembre 2023
 
 

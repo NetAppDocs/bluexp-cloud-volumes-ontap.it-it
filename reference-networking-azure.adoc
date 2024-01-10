@@ -158,7 +158,7 @@ BlueXP presenta problemi di connessione se si tenta di implementare una seconda 
 
 === Regole del gruppo di sicurezza
 
-BlueXP crea gruppi di sicurezza Azure che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. È possibile fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.
+BlueXP crea gruppi di sicurezza Azure che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. Si consiglia di fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.
 
 Il gruppo di sicurezza per Cloud Volumes ONTAP richiede regole sia in entrata che in uscita.
 

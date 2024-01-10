@@ -3576,7 +3576,6 @@
   <block id="53c6f0799470bd2e67e7902192e11c7c" category="paragraph">Per replicare i dati tra un sistema Cloud Volumes ONTAP in Google Cloud e i sistemi ONTAP in altre reti, è necessario disporre di una connessione VPN tra il VPC e l'altra rete, ad esempio la rete aziendale.</block>
   <block id="2fbb401eef4220b4a89cce3e59325dcb" category="inline-link">Documentazione di Google Cloud: Panoramica di Cloud VPN</block>
   <block id="6d1472a8434e4945740fa177e609f886" category="paragraph">Per istruzioni, fare riferimento a.<block ref="1bc8aad79f56acf8c242cfb981c11ee1" category="inline-link-rx"></block>.</block>
-  <block id="8bb6cd6de4a896f626b89e711d40aa4c" category="paragraph">BlueXP crea regole di Google Cloud Firewall che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. È possibile fare riferimento alle porte a scopo di test o se si preferisce utilizzare le proprie regole firewall.</block>
   <block id="30f3abb35963e0cd7d66dc08581087c9" category="paragraph">Le regole del firewall per Cloud Volumes ONTAP richiedono regole sia in entrata che in uscita. Se si sta implementando una configurazione ha, queste sono le regole firewall per Cloud Volumes ONTAP in VPC-0.</block>
   <block id="cb97a2b297b246ea14d6c17e8e5ee28a" category="list-text">Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP.</block>
   <block id="a6c935eff93c3c2a81864fdabc1d1951" category="inline-link">Visualizzare le regole del firewall per il connettore</block>
@@ -3705,7 +3704,6 @@
   <block id="65501384f1f7cf6e689e492914a698c1" category="paragraph"><block ref="65501384f1f7cf6e689e492914a698c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6ccb38ae114176203c2592f430a889d7" category="list-text">Se si utilizza una licenza PAYGO basata su nodo, è possibile scegliere una licenza e un tipo di macchina diversi facendo clic sull'icona a forma di matita accanto a *tipo di licenza*.</block>
   <block id="f5e2fedd06abf8315436e3971f9755de" category="list-text">Scegliere un tipo di macchina, selezionare la casella di controllo per confermare di aver compreso le implicazioni della modifica, quindi fare clic su *Cambia*.</block>
-  <block id="2626748206273dbf0d13d2fffdb79c5b" category="summary">BlueXP crea gruppi di sicurezza AWS che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. È possibile fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.</block>
   <block id="ff12fe6f5d97035a37481ab9694afb95" category="doc">Regole del gruppo di sicurezza per AWS</block>
   <block id="01cc3f2faf08762df2ba5632863fa9b9" category="section-title">Regole per Cloud Volumes ONTAP</block>
   <block id="4f4194111f63429efd99a405e5d8ec85" category="paragraph">Il gruppo di sicurezza per Cloud Volumes ONTAP richiede regole sia in entrata che in uscita.</block>
@@ -4084,7 +4082,6 @@
   <block id="4afb742ece04e5b30060957dac367cba" category="section-title">Solo una coppia ha in un gruppo di risorse Azure</block>
   <block id="80292c326dbd4c631ce6da31d922620c" category="paragraph">È necessario utilizzare un gruppo di risorse _dedicato_ per ogni coppia di Cloud Volumes ONTAP ha implementata in Azure. In un gruppo di risorse è supportata una sola coppia ha.</block>
   <block id="2a37f0bf23209f41128e5c28160ecd0b" category="paragraph">BlueXP presenta problemi di connessione se si tenta di implementare una seconda coppia Cloud Volumes ONTAP ha in un gruppo di risorse Azure.</block>
-  <block id="196affcedcabdcd9243dfaab58327dae" category="paragraph">BlueXP crea gruppi di sicurezza Azure che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. È possibile fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.</block>
   <block id="4d6ace52affbdd48b9198aac825d4a2c" category="section-title">Regole in entrata per sistemi a nodo singolo</block>
   <block id="c3c41ceeecb96e561c7ec71ffc1c62fe" category="list-text">*Selezionato solo VNET*: L'origine del traffico in entrata è l'intervallo di sottorete di VNET per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete di VNET in cui si trova il connettore. Questa è l'opzione consigliata.</block>
   <block id="35b1e30bbf7722e3019259ffb8c9f0b7" category="list-text">*Tutti i VNets*: L'origine del traffico in entrata è l'intervallo IP 0.0.0.0/0.</block>
@@ -5198,4 +5195,7 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="b9f4aa39433f5232d4ce50f2a9a3c403" category="list-text">L64s_v3</block>
   <block id="e4b60b51b40a0907e38b3293d36780e6" category="inline-link-macro">Configurazioni supportate in Azure</block>
   <block id="22342037237200e034fd29c9cfd5bfd4" category="paragraph"><block ref="22342037237200e034fd29c9cfd5bfd4" category="inline-link-macro-rx"></block></block>
+  <block id="eb4c08b87f805a62e5af64a0b7c6fb5a" category="paragraph">BlueXP crea gruppi di sicurezza Azure che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. Si consiglia di fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.</block>
+  <block id="9864c286612d20c437e06d1612a86f2d" category="summary">BlueXP crea gruppi di sicurezza AWS che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. Si consiglia di fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.</block>
+  <block id="87ade7583253b06f01182c970d65aacd" category="paragraph">BlueXP crea regole di Google Cloud Firewall che includono le regole in entrata e in uscita di cui Cloud Volumes ONTAP ha bisogno per funzionare correttamente. Si consiglia di fare riferimento alle porte per scopi di test o se si preferisce utilizzare le proprie regole firewall.</block>
 </blocks>

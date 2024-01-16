@@ -72,7 +72,7 @@ NOTE: L'utilizzo della funzione ARP con le licenze Cloud Volumes ONTAP basate su
 
 Acquistando una licenza add-on e aggiungendola al portafoglio digitale, puoi abilitare ARP per volume con Cloud Volumes ONTAP. La ricarica per ARP viene misurata a un livello di volume, in base alla capacità totale dei volumi con la funzione ARP abilitata. La capacità minima di licenza è di 1TB TB. Tuttavia, non è prevista una ricarica della capacità minima per la funzione ARP.
 
-I volumi abilitati per ARP hanno lo stato designato "modalità di apprendimento" o "attivo". Qualsiasi volume con stato ARP "Disabilitato" è escluso dalla ricarica. Ad esempio, un ambiente Cloud Volumes ONTAP con 30 TiB di capacità sottoposta a provisioning può scegliere di avere solo un sottoinsieme di volumi 15TiB con ARP attivato.
+I volumi abilitati per ARP hanno lo stato designato "modalità di apprendimento" o "attivo". Qualsiasi volume con stato ARP "Disabilitato" è escluso dalla ricarica. Ad esempio, un ambiente Cloud Volumes ONTAP con 30 TiB di capacità sottoposta a provisioning può scegliere di avere solo un sottoinsieme di volumi TIB 15 con ARP attivato.
 
 La configurazione di ARP per i volumi viene eseguita tramite Gestore di sistema di ONTAP e CLI di ONTAP.
 

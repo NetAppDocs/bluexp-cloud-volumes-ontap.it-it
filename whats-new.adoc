@@ -20,6 +20,18 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 16 gennaio 2024
+
+
+
+=== Release di patch in BlueXP
+
+Le release delle patch sono disponibili in BlueXP solo per le tre versioni più recenti di Cloud Volumes ONTAP.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#patch-releases["Aggiornare Cloud Volumes ONTAP"^]
+
+
+
 == 8 gennaio 2024
 
 

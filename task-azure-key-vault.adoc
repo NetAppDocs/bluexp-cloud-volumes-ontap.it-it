@@ -30,6 +30,7 @@ Quando si utilizza AKV, tenere presente che per impostazione predefinita viene u
 
 .Limitazioni
 * AKV può essere configurato solo su una SVM dati
+* NAE non può essere usato con AKV. NAE richiede un server KMIP supportato dall'esterno.
 
 
 
@@ -152,7 +153,12 @@ image:screenshot-azure-service-endpoints-services.png["Schermata degli endpoint 
 
 
 . Abilitare Azure Key Vault utilizzando l'ID client e l'ID tenant salvati dopo la registrazione dell'applicazione:
-`security key-manager external azure enable -vserver _SVM_name_ -client-id _Azure_client_ID_ -tenant-id _Azure_tenant_ID_ -name _Azure_key_vault_name_ -key-id _Azure_key_ID_`
+`security key-manager external azure enable -vserver _SVM_name_ -client-id _Azure_client_ID_ -tenant-id _Azure_tenant_ID_ -name _key_vault_URI_ -key-id _full_key_URI_`
++
+
+NOTE: Il `_full_key_URI` il valore deve utilizzare `<https:// <key vault host name>/keys/<key label>` formato.
+
+. Dopo aver attivato con successo il vault delle chiavi di Azure, immettere il `client secret value` quando richiesto.
 . Controllare lo stato del gestore delle chiavi:
 `security key-manager external azure check`L'output sarà simile a:
 +

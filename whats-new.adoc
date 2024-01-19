@@ -60,6 +60,17 @@ BlueXP ora può implementare e gestire Cloud Volumes ONTAP 9.14.1 in AWS, Azure 
 
 
 
+=== Limite massimo volume FlexVol 300 TiB
+
+Ora puoi creare un volume FlexVol fino alle dimensioni massime di 300 TiB con System Manager e l'interfaccia a riga di comando di ONTAP a partire da Cloud Volumes ONTAP 9.12.1 P2 e 9.13.0 P2 e in BlueXP a partire da Cloud Volumes ONTAP 9.13.1.
+
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html#file-and-volume-limits["Limiti di storage in AWS"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html#file-and-volume-limits["Limiti di storage in Azure"]
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html#logical-storage-limits["Limiti di storage in Google Cloud"]
+
+
+
+
 == 5 dicembre 2023
 
 Sono state introdotte le seguenti modifiche.

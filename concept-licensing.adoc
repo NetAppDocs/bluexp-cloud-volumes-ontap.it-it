@@ -307,9 +307,10 @@ Se superi la capacità BYOL o se la licenza scade, ti verrà addebitato il costo
 
 ==== Pacchetto Essentials
 
-Con il pacchetto Essentials, l'addebito viene effettuato in base al tipo di implementazione (ha o nodo singolo) e al tipo di volume (primario o secondario). Ad esempio, _Essentials ha_ ha prezzi diversi rispetto a _Essentials Secondary ha_.
+Con il pacchetto Essentials, l'addebito viene effettuato in base al tipo di implementazione (ha o nodo singolo) e al tipo di volume (primario o secondario). I prezzi da alto a basso sono nel seguente ordine: _Essentials Primary ha_, _Essentials Primary Single Node_, _Essentials Secondary ha_ e _Essentials Secondary Single Node_. In alternativa, quando acquisti un contratto di marketplace o accetti un'offerta privata, le spese in termini di capacità saranno identiche per qualsiasi tipo di implementazione o volume.
 
-Se hai acquistato una licenza Essentials da NetApp (BYOL) e hai superato la capacità concessa in licenza per quel tipo di implementazione e volume, il portafoglio digitale BlueXP addebita un costo in eccesso rispetto a una licenza Essentials dal prezzo più elevato (se ne hai una). Questo accade perché utilizziamo prima la capacità disponibile che hai già acquistato come capacità prepagata prima di addebitare sul mercato. L'addebito sul mercato aggiungerebbe costi alla bolletta mensile.
+.BYOL
+Se hai acquistato una licenza Essentials da NetApp (BYOL) e superi la capacità concessa in licenza per quel tipo di implementazione e volume, il Digital Wallet di BlueXP addebiterà le spese eccessive rispetto a una licenza Essentials a prezzo più elevato (se disponibile). Questo accade perché utilizziamo prima la capacità disponibile che hai già acquistato come capacità prepagata prima di addebitare sul mercato. In assenza di capacità disponibile con la licenza BYOL, tale capacità superata verrà addebitata alle tariffe orarie on-demand del marketplace (PAYGO) e aggiungerà i costi alla fattura mensile.
 
 Ecco un esempio. Supponiamo di disporre delle seguenti licenze per il pacchetto Essentials:
 
@@ -317,9 +318,24 @@ Ecco un esempio. Supponiamo di disporre delle seguenti licenze per il pacchetto 
 * Una licenza 500 TIB _Essentials Single Node_ che ha solo 100 TIB di capacità impegnata
 
 
-Un altro 50 TIB viene fornito su una coppia ha con volumi secondari. Invece di addebitare 50 TIB a PAYGO, il portafoglio digitale BlueXP addebita il 50 TIB in eccesso rispetto alla licenza _Essentials Single Node_. Il prezzo della licenza è superiore a _Essentials Secondary ha_, ma è più conveniente rispetto ALLA tariffa PAYGO.
+Un altro 50 TIB viene fornito su una coppia ha con volumi secondari. Invece di addebitare 50 TIB a PAYGO, il portafoglio digitale BlueXP addebita il 50 TIB in eccesso rispetto alla licenza _Essentials Single Node_. Tale licenza ha un prezzo superiore a _Essentials Secondary ha_, ma utilizza una licenza già acquistata e non aggiunge costi alla fattura mensile.
 
 Nel portafoglio digitale BlueXP, il 50 TIB verrà indicato come addebitato rispetto alla licenza _Essentials Single Node_.
+
+Ecco un altro esempio. Supponiamo di disporre delle seguenti licenze per il pacchetto Essentials:
+
+* Una licenza 500 TIB _Essentials Secondary ha_ con 500 TIB di capacità impegnata
+* Una licenza 500 TIB _Essentials Single Node_ che ha solo 100 TIB di capacità impegnata
+
+
+Un altro TIB 100 viene sottoposto a provisioning su una coppia ha con volumi primari. La licenza acquistata non dispone di _Essentials Primary ha_ commit Capacity. Il prezzo della licenza _Essentials Primary ha_ è superiore a quello delle licenze _Essentials Primary Single Node_ e _Essentials Secondary ha_.
+
+In questo esempio, il Digital Wallet di BlueXP addebita le spese eccessive alla tariffa di marketplace per i 100 TiB aggiuntivi. Le spese di eccedenza compariranno sulla vostra fattura mensile.
+
+.Contratti di mercato o offerte private
+Se hai acquistato una licenza Essentials come parte di un contratto di marketplace o di un'offerta privata, la logica BYOL non si applica e devi disporre dell'esatto tipo di licenza per l'utilizzo. Il tipo di licenza include il tipo di volume (primario o secondario) e il tipo di implementazione (ha o nodo singolo).
+
+Ad esempio, supponiamo di distribuire un'istanza di Cloud Volumes ONTAP con la licenza Essentials. Esegui quindi il provisioning dei volumi in lettura-scrittura (nodo singolo primario) e di sola lettura (nodo singolo secondario). Il contratto del marketplace o l'offerta privata deve includere la capacità di _Essentials Single Node_ e _Essentials Secondary Single Node_ per coprire la capacità fornita. Tutte le capacità fornite che non fanno parte del contratto del marketplace o dell'offerta privata verranno addebitate alle tariffe orarie on-demand (PAYGO) e aggiungeranno i costi alla fattura mensile.
 
 
 

@@ -20,6 +20,26 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 2 febbraio 2024
+
+
+
+=== Supporto di macchine virtuali serie Edv5 in Azure
+
+Cloud Volumes ONTAP ora supporta le seguenti VM della serie Edv5 con dischi gestiti condivisi in zone di disponibilità singole e multiple, a partire dalla release 9.14.1.
+
+* E4ds_v5
+* E8ds_v5
+* E20s_v5
+* E32ds_v5
+* E48ds_v5
+* E64ds_v5
+
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurazioni supportate in Azure"^]
+
+
+
 == 16 gennaio 2024
 
 

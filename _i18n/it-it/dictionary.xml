@@ -5225,4 +5225,13 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="b5131f07b7cc2d9ac372dcfc0789c727" category="paragraph">Ad esempio, supponiamo di distribuire un'istanza di Cloud Volumes ONTAP con la licenza Essentials. Esegui quindi il provisioning dei volumi in lettura-scrittura (nodo singolo primario) e di sola lettura (nodo singolo secondario). Il contratto del marketplace o l'offerta privata deve includere la capacità di _Essentials Single Node_ e _Essentials Secondary Single Node_ per coprire la capacità fornita. Tutte le capacità fornite che non fanno parte del contratto del marketplace o dell'offerta privata verranno addebitate alle tariffe orarie on-demand (PAYGO) e aggiungeranno i costi alla fattura mensile.</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e la licenza.</block>
   <block id="976b4993be588a7b52da07c4e96553c3" category="paragraph"><block ref="581f54bac504640f66f842676676be03" category="inline-link-rx"></block> Deve essere disattivato nella subnet Google Cloud in cui si implementa Cloud Volumes ONTAP. Cloud Volumes ONTAP non può funzionare correttamente se il mirroring dei pacchetti è attivato.</block>
+  <block id="d4eb5b4412a01c5991086dff8c51a89f" category="section-title">2 febbraio 2024</block>
+  <block id="4b2d018110adbf4819b09a7a28283445" category="section-title">Supporto di macchine virtuali serie Edv5 in Azure</block>
+  <block id="1ecd861cfd41cf61121b433fcb6f7fed" category="paragraph">Cloud Volumes ONTAP ora supporta le seguenti VM della serie Edv5 con dischi gestiti condivisi in zone di disponibilità singole e multiple, a partire dalla release 9.14.1.</block>
+  <block id="0ce1565dc58071deb098bde3e5a6a4b6" category="list-text">E4ds_v5</block>
+  <block id="625fbc51242c48d9e17a8b8b2fe6e5c7" category="list-text">E8ds_v5</block>
+  <block id="d6f19e3dc85d5a64809ab696a35a54ab" category="list-text">E20s_v5</block>
+  <block id="708880d509c52585ca0500cd17ef2166" category="list-text">E32ds_v5</block>
+  <block id="843cc0b63b36e79d0bdf4097a1b84b6a" category="list-text">E48ds_v5</block>
+  <block id="6ec5cb856eb24c85cf7368cdfd11627f" category="list-text">E64ds_v5</block>
 </blocks>

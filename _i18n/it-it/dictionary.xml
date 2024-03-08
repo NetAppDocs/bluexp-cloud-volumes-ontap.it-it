@@ -5234,4 +5234,13 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="7ea0c0fa41faeaaeec6f14b1d795d6fc" category="paragraph">Per un elenco dei tipi di VM supportati con i seguenti pacchetti basati sulla capacità, fare riferimento a:</block>
   <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="inline-link-macro">Configurazioni supportate in Google Cloud</block>
   <block id="d8643ec11a6eaa26d934c76df70f05f3" category="list-text"><block ref="d8643ec11a6eaa26d934c76df70f05f3" category="inline-link-macro-rx"></block></block>
+  <block id="4a1a05ee22994e328d9ec0402052b926" category="section-title">8 marzo 2024</block>
+  <block id="1582ce9c3a0b0079717e0b0c6edf2347" category="section-title">Supporto di Amazon Instant Metadata Service v2</block>
+  <block id="4ac5b49185bd4b8f8b0ef6b8869d149f" category="paragraph">In AWS, Cloud Volumes ONTAP, il mediatore e il connettore supportano ora Amazon Instant Metadata Service v2 (IMDSv2) per tutte le funzioni. IMDSv2 fornisce una maggiore protezione contro le vulnerabilità. In precedenza era supportato solo IMDSv1.</block>
+  <block id="7fcd14ee7d62b2a6f712b7ed775cdbc3" category="inline-link-macro">Documentazione di configurazione e amministrazione di BlueXP per la gestione dei connettori esistenti</block>
+  <block id="6aec236f70c9d11e5073fa187bf36fd1" category="paragraph">Se richiesto dai criteri di protezione, è possibile configurare le istanze EC2 in modo che utilizzino IMDSv2. Per istruzioni, fare riferimento a. <block ref="437fb94a00c6c9b10a9ad9095b6680bc" category="inline-link-macro-rx"></block>.</block>
+  <block id="592997dde366d5775e7e052816854f74" category="section-title">5 marzo 2024</block>
+  <block id="cf8f238c2116738b5ed3bacdbd527d14" category="section-title">Cloud Volumes ONTAP 9.14.1 GA</block>
+  <block id="fc0f9e3eef3a6eff3efe2fe7cf358466" category="paragraph">BlueXP può ora implementare e gestire la release General Availability di Cloud Volumes ONTAP 9.14.1 in AWS, Azure e Google Cloud.</block>
+  <block id="f8a262ce588acd29f7f91c585af357ea" category="list-text">9.14.1 GA</block>
 </blocks>

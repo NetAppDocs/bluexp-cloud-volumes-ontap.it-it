@@ -894,7 +894,6 @@
   <block id="ab83b37918dd75da5385d47425e5a41b" category="paragraph">Se richiesto dall'azienda, è possibile modificare un'impostazione in BlueXP in modo che configuri Cloud Volumes ONTAP per l'utilizzo degli endpoint del servizio invece di un collegamento privato Azure. La modifica di questa impostazione si applica ai nuovi sistemi Cloud Volumes ONTAP creati. Gli endpoint del servizio sono supportati solo in <block ref="143d2b52aa05d0c2b5e02a98661c9a57" category="inline-link-macro-rx"></block> Tra il connettore e i VNet Cloud Volumes ONTAP.</block>
   <block id="573514d5de621ecfe56c91e7c665d73d" category="inline-link">Coppia di regioni Azure</block>
   <block id="23c74e586b63f34de771242b40d88dcf" category="paragraph">Il connettore deve essere implementato nella stessa area Azure dei sistemi Cloud Volumes ONTAP gestiti o in<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block> Per i sistemi Cloud Volumes ONTAP.</block>
-  <block id="190d3f654701a58653384f20c47c8ecf" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona Impostazioni e selezionare *Impostazioni connettore*.</block>
   <block id="be9d7b7687f0c55f7e65f14cd2b0f530" category="inline-image-macro">Una schermata che mostra l'icona Settings (Impostazioni) in alto a destra della console BlueXP.</block>
   <block id="8bcb080f300b6dfd8ee09d89bb85d060" category="paragraph"><block ref="8bcb080f300b6dfd8ee09d89bb85d060" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c00fef2e24946332c58419df6198320" category="list-text">In *Azure*, fare clic su *Use Azure Private link*.</block>
@@ -1256,7 +1255,6 @@
   <block id="b62aaf3fb48f9f8f103dc68c41211be5" category="paragraph">Ogni connettore dispone di impostazioni che determinano il modo in cui gestisce la capacità aggregata per Cloud Volumes ONTAP.</block>
   <block id="4edc935aeaaf3923beb2e4249e6c56f3" category="paragraph">Queste impostazioni influiscono su tutti i sistemi Cloud Volumes ONTAP gestiti da un connettore. Se si dispone di un altro connettore, è possibile configurarlo in modo diverso.</block>
   <block id="5ad10cfb674234136c181d096cb59522" category="paragraph-title">Autorizzazioni richieste</block>
-  <block id="4f85ddd6337c9d7a3f7f9955945eece1" category="paragraph">Per modificare le impostazioni del connettore sono necessari i privilegi di amministratore dell'account.</block>
   <block id="03c93da41831d72dcea5fc724b2b4658" category="list-text">In *capacità*, modificare una delle seguenti impostazioni:</block>
   <block id="35e1526d677f2c5c412538ff39eaacd5" category="list-text">Modalità di gestione della capacità</block>
   <block id="270bb1237f850224c48374b974319501" category="list-text">Scegli se BlueXP ti notifica le decisioni relative alla capacità dello storage o se BlueXP gestisce automaticamente i requisiti di capacità per te.</block>
@@ -3824,7 +3822,6 @@
   <block id="15772334d40a5e0ec433c7a427e96777" category="paragraph">Ad esempio, è possibile scegliere meno del 10% di spazio libero per assicurarsi di utilizzare la capacità acquistata. BlueXP può quindi acquistare dischi aggiuntivi quando è richiesta capacità aggiuntiva (fino a raggiungere il limite di dischi per l'aggregato).</block>
   <block id="e62da289d1df9b17e78658d0c7639034" category="admonition">Se lo spazio non è sufficiente, Cloud Volumes ONTAP non riesce a spostare i dati e potrebbe verificarsi un peggioramento delle performance. Qualsiasi modifica deve essere eseguita con cautela. In caso di dubbi, contatta il supporto NetApp per ricevere assistenza.</block>
   <block id="2aa3b7e505c0c56df0a2f60f7d4f87cc" category="paragraph">Il rapporto è importante per gli scenari di disaster recovery perché, man mano che i dati vengono letti dall'archivio a oggetti, Cloud Volumes ONTAP sposta i dati su SSD/HDD per offrire performance migliori. Se lo spazio non è sufficiente, Cloud Volumes ONTAP non può spostare i dati. Prenditi in considerazione questo aspetto quando modifichi il rapporto in modo da poter soddisfare i tuoi requisiti di business.</block>
-  <block id="2b891711a30d74a376864ff361ead016" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona *Impostazioni* e selezionare *Impostazioni connettore*.</block>
   <block id="804f26a0bc44f8e04d1fb697d33eb4d8" category="list-text">In *Capacity*, fare clic su *aggregate Capacity Thresholds - Free Space Ratio for Data Tiering*.</block>
   <block id="c389556b61d8e54624252a2563fdfc17" category="list-text">Modificare il rapporto dello spazio libero in base alle proprie esigenze e fare clic su *Save* (Salva).</block>
   <block id="24c979ae168264040ca2c88e59f2902a" category="section-title">Modifica del periodo di raffreddamento per la policy di tiering automatico</block>
@@ -4881,7 +4878,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="e40eb63a3506950ad93ba909dcf25c90" category="image-alt">screenshot aggr capacità</block>
   <block id="ca7b4e21c879a84e19f4057cd971879d" category="image-alt">la schermata mostra FlexGroup vol</block>
   <block id="18d8042386b79e2c279fd162df0205c8" category="image-alt">400</block>
-  <block id="b26d26fe2543d5473bc9e47f43ccf1a0" category="image-alt">schermata impostazioni pulsante connettore</block>
   <block id="84ad21dcd6ff9e0e4d117b5b3950020e" category="admonition">Il supporto non è disponibile per l'uso di funzioni con licenza senza licenza.</block>
   <block id="3799dfe1ae4f409b181ad79e377574c6" category="paragraph">Gli attacchi ransomware possono costare tempo di business, risorse e reputazione. BlueXP ti permette di implementare due soluzioni NetApp per il ransomware: Protezione dalle comuni estensioni di file ransomware e protezione autonoma dal ransomware (ARP). Queste soluzioni forniscono strumenti efficaci per visibilità, rilevamento e correzione.</block>
   <block id="78cc5cdbd5abab66548d6b3a595b1c6c" category="section-title">Protezione dalle comuni estensioni di file ransomware</block>
@@ -5243,4 +5239,8 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="cf8f238c2116738b5ed3bacdbd527d14" category="section-title">Cloud Volumes ONTAP 9.14.1 GA</block>
   <block id="fc0f9e3eef3a6eff3efe2fe7cf358466" category="paragraph">BlueXP può ora implementare e gestire la release General Availability di Cloud Volumes ONTAP 9.14.1 in AWS, Azure e Google Cloud.</block>
   <block id="f8a262ce588acd29f7f91c585af357ea" category="list-text">9.14.1 GA</block>
+  <block id="4954156ba208adf3ff1ee232d2f1d15f" category="list-text">Nella parte superiore destra della console BlueXP, fai clic sull'icona Impostazioni e seleziona *Impostazioni Cloud Volumes ONTAP*.</block>
+  <block id="6f0bb9f0803011314813e6aad3d926bf" category="list-text">Nella parte superiore destra della console BlueXP, fai clic sull'icona *Impostazioni* e seleziona *Impostazioni Cloud Volumes ONTAP*.</block>
+  <block id="d4b0cdcc1cd5c09a803de195e4f82296" category="paragraph">Per modificare le impostazioni di Cloud Volumes ONTAP sono necessari i privilegi di amministratore dell'account.</block>
+  <block id="13cdcbf94ff7381b25ca5784f874a9b6" category="image-alt">Schermata dell'opzione Impostazioni Cloud Volumes ONTAP sotto l'icona Impostazioni.</block>
 </blocks>

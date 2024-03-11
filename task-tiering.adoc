@@ -318,7 +318,7 @@ CAUTION: Se lo spazio non è sufficiente, Cloud Volumes ONTAP non riesce a spost
 Il rapporto è importante per gli scenari di disaster recovery perché, man mano che i dati vengono letti dall'archivio a oggetti, Cloud Volumes ONTAP sposta i dati su SSD/HDD per offrire performance migliori. Se lo spazio non è sufficiente, Cloud Volumes ONTAP non può spostare i dati. Prenditi in considerazione questo aspetto quando modifichi il rapporto in modo da poter soddisfare i tuoi requisiti di business.
 
 .Fasi
-. Nella parte superiore destra della console BlueXP, fare clic sull'icona *Impostazioni* e selezionare *Impostazioni connettore*.
+. Nella parte superiore destra della console BlueXP, fai clic sull'icona *Impostazioni* e seleziona *Impostazioni Cloud Volumes ONTAP*.
 +
 image:screenshot_settings_icon.png["Una schermata che mostra l'icona Settings (Impostazioni) in alto a destra della console BlueXP."]
 

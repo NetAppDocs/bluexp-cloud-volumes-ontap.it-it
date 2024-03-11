@@ -19,12 +19,12 @@ Ogni connettore dispone di impostazioni che determinano il modo in cui gestisce 
 Queste impostazioni influiscono su tutti i sistemi Cloud Volumes ONTAP gestiti da un connettore. Se si dispone di un altro connettore, è possibile configurarlo in modo diverso.
 
 .Autorizzazioni richieste
-Per modificare le impostazioni del connettore sono necessari i privilegi di amministratore dell'account.
+Per modificare le impostazioni di Cloud Volumes ONTAP sono necessari i privilegi di amministratore dell'account.
 
 .Fasi
-. Nella parte superiore destra della console BlueXP, fare clic sull'icona Impostazioni e selezionare *Impostazioni connettore*.
+. Nella parte superiore destra della console BlueXP, fai clic sull'icona Impostazioni e seleziona *Impostazioni Cloud Volumes ONTAP*.
 +
-image::screenshot_settings_connector_button.png[schermata impostazioni pulsante connettore]
+image::screenshot-settings-cloud-volumes-ontap.png[Schermata dell'opzione Impostazioni Cloud Volumes ONTAP sotto l'icona Impostazioni.]
 
 . In *capacità*, modificare una delle seguenti impostazioni:
 +

@@ -251,8 +251,8 @@ Se si prevede di utilizzare il backup e il ripristino BlueXP con i sistemi Cloud
 				"ec2:DescribeRouteTables",
 				"ec2:DescribeVpcs",
 				"ec2:ReplaceRoute",
-				"ec2:UnassignPrivateIpAddresses"
-                "sts:AssumeRole"
+				"ec2:UnassignPrivateIpAddresses",
+                "sts:AssumeRole",
                 "ec2:DescribeSubnets"
 			],
 			"Resource": "*"

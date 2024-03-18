@@ -597,10 +597,7 @@
   <block id="f591dbc4232b149ea0792178559405f9" category="list-text">Caricare il file di licenza.</block>
   <block id="034f6db5181ab87d962e69b9b7b5a995" category="list-text">Fare clic su *carica licenza*.</block>
   <block id="662442d32a5fd91298fcf8b6391fdf17" category="section-title">Modificare i metodi di ricarica</block>
-  <block id="a117b4a94f6f90aef089573b1f002d26" category="paragraph">È possibile modificare il metodo di addebito per un sistema Cloud Volumes ONTAP che utilizza licenze basate sulla capacità. Ad esempio, se hai implementato un sistema Cloud Volumes ONTAP con il pacchetto Essentials, puoi cambiarlo nel pacchetto Professional se le tue esigenze di business sono cambiate.</block>
   <block id="f3d9abb903127694db460aa9c7f4d7be" category="paragraph-title">Limitazione</block>
-  <block id="990da7f1ae0e8fb8294bff04c936ecaa" category="paragraph">Non è supportato il passaggio da o verso la licenza di Edge cache.</block>
-  <block id="86f463a1f0f0879749d1274dc94305d9" category="paragraph-title">Nota importante</block>
   <block id="cfdb32f80009b1e5c5c0468dda9f013d" category="paragraph">Se disponi di un'offerta o di un contratto privato sul mercato del tuo cloud provider, il passaggio a un metodo di addebito non incluso nel contratto comporterà l'addebito di BYOL (se hai acquistato una licenza da NetApp) o PAYGO.</block>
   <block id="3397777d22d2d5f746157ca31f0d8460" category="list-text">Nella scheda *Cloud Volumes ONTAP*, fare clic su *Modifica metodo di ricarica*.</block>
   <block id="325ef46eb3d6b63c4d60ef08cdd6176f" category="inline-image-macro">Una schermata della pagina Cloud Volumes ONTAP del portafoglio digitale BlueXP in cui il pulsante Modifica metodo di addebito si trova appena sopra la tabella.</block>
@@ -5243,4 +5240,9 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="6f0bb9f0803011314813e6aad3d926bf" category="list-text">Nella parte superiore destra della console BlueXP, fai clic sull'icona *Impostazioni* e seleziona *Impostazioni Cloud Volumes ONTAP*.</block>
   <block id="d4b0cdcc1cd5c09a803de195e4f82296" category="paragraph">Per modificare le impostazioni di Cloud Volumes ONTAP sono necessari i privilegi di amministratore dell'account.</block>
   <block id="13cdcbf94ff7381b25ca5784f874a9b6" category="image-alt">Schermata dell'opzione Impostazioni Cloud Volumes ONTAP sotto l'icona Impostazioni.</block>
+  <block id="970af11c442d109ac4d016f7c57f63fb" category="paragraph">Le licenze basate sulla capacità sono disponibili sotto forma di _pacchetto_. Quando si crea un ambiente di lavoro Cloud Volumes ONTAP, è possibile scegliere tra diversi pacchetti di licenze in base alle proprie esigenze aziendali. Se le proprie esigenze cambiano dopo aver creato l'ambiente di lavoro, è possibile modificare il pacchetto in qualsiasi momento. Ad esempio, è possibile passare dal pacchetto Essentials al pacchetto Professional.</block>
+  <block id="58dcfad3183b701a8f1b8781a5644d09" category="inline-link">Scopri di più sui pacchetti di licenza basati sulla capacità</block>
+  <block id="8e8751cb9b796773a6b79b4d5c3dc7b2" category="paragraph"><block ref="0205926668933cbb2cb5f56900594078" category="inline-link-rx"></block>.</block>
+  <block id="3e4729f0b91cf008c10b8ab719ea9e99" category="list-text">La modifica del metodo di addebito non influisce sul costo di una licenza acquistata da NetApp (BYOL) o sul mercato del cloud provider (pagamento a consumo).</block>
+  <block id="07456d1e170e8be27eaff1e39e1ccdf6" category="paragraph">BlueXP tenta sempre di addebitare prima i costi di una licenza. Se una licenza non è disponibile, viene applicata una tariffa per un abbonamento al mercato. Non è richiesta alcuna "conversione" per l'abbonamento BYOL al marketplace o viceversa.</block>
 </blocks>

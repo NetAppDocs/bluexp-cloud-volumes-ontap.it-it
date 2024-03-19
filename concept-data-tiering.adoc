@@ -134,9 +134,12 @@ Quando BlueXP crea il bucket, utilizza le seguenti impostazioni predefinite:
 
 
 --
-Classi di storage:: La classe di storage predefinita per i dati a più livelli è la classe _Standard Storage_. Se l'accesso ai dati non è frequente, puoi ridurre i costi di storage passando a _Nearline Storage_ o _Coldline Storage_. Quando si modifica la classe di storage, i dati inattivi vengono spostati direttamente nella classe selezionata.
+Classi di storage:: La classe di storage predefinita per i dati a più livelli è la classe _Standard Storage_. Se l'accesso ai dati non è frequente, puoi ridurre i costi di storage passando a _Nearline Storage_ o _Coldline Storage_. Quando si modifica la classe di archiviazione, i dati inattivi successivi vengono spostati direttamente nella classe selezionata.
 +
 --
+
+NOTE: Tutti i dati inattivi esistenti manterranno la classe di archiviazione predefinita quando si modifica la classe di archiviazione. Per modificare la classe di archiviazione per i dati inattivi esistenti, è necessario eseguire la designazione manualmente.
+
 I costi di accesso sono più elevati se si accede ai dati, quindi tenere in considerazione questo aspetto prima di modificare la classe di storage. https://cloud.google.com/storage/docs/storage-classes["Scopri di più sulle classi di storage per Google Cloud Storage"^].
 
 È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per ulteriori informazioni sulla modifica della classe di storage, vedere link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].

@@ -443,7 +443,7 @@ I volumi FlexGroup creati direttamente tramite CLI o Gestore di sistema sono ora
 
 NOTE: Attualmente, in BlueXP è possibile visualizzare solo i volumi FlexGroup esistenti. La possibilità di creare volumi FlexGroup in BlueXP non è disponibile, ma è prevista per una release futura.
 
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-show-flexgroup-volume.png["Una schermata che mostra l'icona del volume FlexGroup con il mouse sotto il riquadro Volumes (volumi)."]
+image:screenshot-show-flexgroup-volume.png["Una schermata che mostra l'icona del volume FlexGroup con il mouse sotto il riquadro Volumes (volumi)."]
 
 link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-volumes.html["Scopri di più sulla visualizzazione dei volumi FlexGroup creati."^]
 

@@ -676,7 +676,6 @@
   <block id="c616900ae748d4dd41ba80df7406dd9b" category="list-text"><block ref="a7ad30418481a3cae35553d202bb9ab7" prefix="" category="inline-code"></block></block>
   <block id="e8d7251c93bb0bbd59e5b2aca177a1a6" category="summary">Se è necessario eseguire una gestione avanzata di Cloud Volumes ONTAP, è possibile farlo utilizzando Gestione di sistema di ONTAP, un'interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l'interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.</block>
   <block id="eb548256fe08b2a0e5f541bc56282edf" category="doc">Amministrare Cloud Volumes ONTAP utilizzando la visualizzazione avanzata</block>
-  <block id="74593b49f99b6e21d38ca3d969b213f3" category="paragraph">Questa visualizzazione avanzata è disponibile come anteprima. Intendiamo perfezionare questa esperienza e aggiungere miglioramenti alle prossime release. Inviaci un feedback utilizzando la chat in-product.</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Caratteristiche</block>
   <block id="38ff1351e45b1e4303e79145f4bc10b4" category="paragraph">La visualizzazione avanzata di BlueXP consente di accedere a funzionalità di gestione aggiuntive:</block>
   <block id="f3c3ee89c80d32726f5f937c07631d1c" category="list-text">Gestione avanzata dello storage</block>
@@ -1360,7 +1359,6 @@
   <block id="7dfb6c2c87a3491ee04b30bc313e53c5" category="summary">BlueXP consente di gestire volumi e server CIFS. Inoltre, richiede di spostare i volumi per evitare problemi di capacità.</block>
   <block id="9038e7cfcfe9bb9df9afd31371070be8" category="doc">Gestire i volumi esistenti</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="section-title">Gestire i volumi</block>
-  <block id="78b58016122bb23db763832d3df72599" category="paragraph">Puoi gestire i volumi in base alle tue esigenze di storage. È possibile visualizzare, modificare, clonare, ripristinare ed eliminare i volumi.</block>
   <block id="ad125360a406d7d2d9b4c68551674284" category="list-text">Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro Cloud Volumes ONTAP su cui si desidera gestire i volumi.</block>
   <block id="c4bd89564dafc82c9b2027b549fa45f2" category="list-text">Nell'ambiente di lavoro, fare clic sulla scheda *Volumes* (volumi).</block>
   <block id="4356eb78a767f5eff5a7176feb088ce4" category="inline-image-macro">Schermata del pulsante Manage Volume (Gestisci volume) nella scheda Volumes (volumi).</block>
@@ -1408,9 +1406,6 @@
   <block id="150cd3111dfd7ae68aaeb429e7e50847" category="list-text">Selezionare un volume, quindi fare clic su *Delete* (Elimina).</block>
   <block id="29d65535c1a7fceff3430e7f581ccab6" category="list-text">Digitare il nome del volume nella finestra di dialogo.</block>
   <block id="f003f3d16df55f060f81ad4dddd2fbf9" category="section-title">Ridimensionare un volume</block>
-  <block id="983731c4568a7ed436142da8a63f9442" category="paragraph">Per impostazione predefinita, un volume aumenta automaticamente fino a raggiungere le dimensioni massime quando lo spazio è esaurito. Il valore predefinito è 1,000, il che significa che il volume può aumentare fino a 11 volte le sue dimensioni. Questo valore è configurabile nelle impostazioni di un connettore.</block>
-  <block id="6ad5e0a20f49ad6a370454bb3afc9a9e" category="inline-link-macro">Gestore di sistema di ONTAP</block>
-  <block id="80f73203717d2460e95dcb08c0b8c6a2" category="paragraph">Se è necessario ridimensionare il volume, è possibile farlo attraverso <block ref="03bbffa71060830678a71c986c6c0e67" category="inline-link-macro-rx"></block>. Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> per ulteriori dettagli.</block>
   <block id="6b851ed63a549d28a80d2c974afcec80" category="section-title">Modificare il server CIFS</block>
   <block id="fd549a6bcd2d53b8accb49a7225fcfa0" category="paragraph">Se si modificano i server DNS o il dominio Active Directory, è necessario modificare il server CIFS in Cloud Volumes ONTAP in modo che possa continuare a fornire storage ai client.</block>
   <block id="df558d420bf0d201f04fde33701f2df7" category="list-text">Dalla scheda Panoramica dell'ambiente di lavoro, fare clic sulla scheda funzionalità nel pannello a destra.</block>
@@ -5248,4 +5243,18 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="ce46ac36501bd1de8616d715ef7ee1c2" category="paragraph"><block ref="ce46ac36501bd1de8616d715ef7ee1c2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e509b6c896c67a8b8ec2afa8f3aa8eb" category="admonition">Per ulteriori informazioni su come ottenere un file di licenza, vedere<block ref="c65aa3342130b0295e06cd938a12ad5e" category="inline-link-rx"></block>.</block>
   <block id="6b5c2460f150173d3723de8a857a4d33" category="paragraph"><block ref="179c8a3ed717f2c4de3149f0e9edf685" category="inline-link-rx"></block>.</block>
+  <block id="61f0796ced324a7d0b1f387e74f545a7" category="paragraph">Puoi gestire i volumi in BlueXP Standard View o Advanced View. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. La vista avanzata offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e tracciamento delle attività e spostamento dei volumi tra Tier. Vedere <block ref="76b22e8ed647224335daed95530df604" category="inline-link-macro-rx"></block>.</block>
+  <block id="632ac3f99447a16bd75e4d1a0b8b691e" category="paragraph">Utilizzando la vista standard di BlueXP, puoi gestire i volumi in base alle tue esigenze di storage. È possibile visualizzare, modificare, clonare, ripristinare ed eliminare i volumi.</block>
+  <block id="5f9f6fee108a1a2e24bfa11e0350dbed" category="paragraph">Per impostazione predefinita, un volume aumenta automaticamente fino a raggiungere le dimensioni massime quando lo spazio è esaurito. Il valore predefinito è 1.000, il che significa che il volume può aumentare di 11 volte le sue dimensioni. Questo valore è configurabile nelle impostazioni del connettore.</block>
+  <block id="d83032202b952a29eb304290049be8f3" category="paragraph">Se devi ridimensionare il volume, puoi farlo dalla vista avanzata di BlueXP.</block>
+  <block id="b5101115b0cf1c430920e0b83ef354c6" category="list-text">Aprire la visualizzazione avanzata per ridimensionare un volume tramite System Manager. Vedere <block ref="1bf7174b0a06a67edc83de5c18b2bf58" category="inline-link-macro-rx"></block>.</block>
+  <block id="a6bfbc7160bd5efb8fda7e791efd9e47" category="list-text">Dal menu di navigazione a sinistra, selezionare *Storage &gt; Volumes* (archiviazione &gt; volumi*).</block>
+  <block id="d875eee3d594951433259f6da1cc1729" category="list-text">Dall'elenco dei volumi, identificare quello da ridimensionare.</block>
+  <block id="52c148109936ec0cc34f1b38fb262428" category="inline-image-macro">icona kabob</block>
+  <block id="10261f98990e70ba53ecbcb1e0119090" category="list-text">Fare clic sull'icona delle opzioni <block ref="ac91b27a7720c4844510cacb9be7afe5" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="782635f18c9a4c6e77f10be3b478b27a" category="list-text">Selezionare *Ridimensiona*.</block>
+  <block id="4812655c0b87865bcb417f79c8eccc6c" category="list-text">Nella schermata *Ridimensiona volume*, modificare la capacità e la percentuale di riserva istantanea come richiesto. È possibile confrontare lo spazio disponibile esistente con la capacità modificata.</block>
+  <block id="239d4539cd51c06a2b10a7f62d000f71" category="inline-image-macro">Lo schermo visualizza la capacità modificata dopo il ridimensionamento del volume</block>
+  <block id="b819ad9e0e6bb0675a6052fe63ec61dc" category="paragraph"><block ref="b819ad9e0e6bb0675a6052fe63ec61dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bcbb72cb4f456c876a454b11cbf5cdaf" category="paragraph">Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> per ulteriori dettagli.</block>
 </blocks>

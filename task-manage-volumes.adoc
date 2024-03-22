@@ -16,11 +16,13 @@ summary: BlueXP consente di gestire volumi e server CIFS. Inoltre, richiede di s
 [role="lead"]
 BlueXP consente di gestire volumi e server CIFS. Inoltre, richiede di spostare i volumi per evitare problemi di capacità.
 
+Puoi gestire i volumi in BlueXP Standard View o Advanced View. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. La vista avanzata offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e tracciamento delle attività e spostamento dei volumi tra Tier. Vedere link:task-administer-advanced-view.html["Amministrare Cloud Volumes ONTAP utilizzando la visualizzazione avanzata"].
+
 
 
 == Gestire i volumi
 
-Puoi gestire i volumi in base alle tue esigenze di storage. È possibile visualizzare, modificare, clonare, ripristinare ed eliminare i volumi.
+Utilizzando la vista standard di BlueXP, puoi gestire i volumi in base alle tue esigenze di storage. È possibile visualizzare, modificare, clonare, ripristinare ed eliminare i volumi.
 
 .Fasi
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
@@ -131,9 +133,23 @@ NOTE: BlueXP sposta il volume in un aggregato esistente che utilizza il tipo di 
 
 == Ridimensionare un volume
 
-Per impostazione predefinita, un volume aumenta automaticamente fino a raggiungere le dimensioni massime quando lo spazio è esaurito. Il valore predefinito è 1,000, il che significa che il volume può aumentare fino a 11 volte le sue dimensioni. Questo valore è configurabile nelle impostazioni di un connettore.
+Per impostazione predefinita, un volume aumenta automaticamente fino a raggiungere le dimensioni massime quando lo spazio è esaurito. Il valore predefinito è 1.000, il che significa che il volume può aumentare di 11 volte le sue dimensioni. Questo valore è configurabile nelle impostazioni del connettore.
 
-Se è necessario ridimensionare il volume, è possibile farlo attraverso link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-C04C2C72-FF1F-4240-A22D-BE20BB74A116.html["Gestore di sistema di ONTAP"^]. Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. Accedere alla https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Note di rilascio di Cloud Volumes ONTAP"^] per ulteriori dettagli.
+Se devi ridimensionare il volume, puoi farlo dalla vista avanzata di BlueXP.
+
+.Fasi
+. Aprire la visualizzazione avanzata per ridimensionare un volume tramite System Manager. Vedere link:task-administer-advanced-view.html#how-to-get-started["Come iniziare"].
+. Dal menu di navigazione a sinistra, selezionare *Storage > Volumes* (archiviazione > volumi*).
+. Dall'elenco dei volumi, identificare quello da ridimensionare.
+. Fare clic sull'icona delle opzioni image:screenshot_gallery_options.gif["icona kabob"].
+. Selezionare *Ridimensiona*.
+. Nella schermata *Ridimensiona volume*, modificare la capacità e la percentuale di riserva istantanea come richiesto. È possibile confrontare lo spazio disponibile esistente con la capacità modificata.
+. Fare clic su *Save* (Salva).
+
+
+image:screenshot-resize-volume.png["Lo schermo visualizza la capacità modificata dopo il ridimensionamento del volume"]
+
+Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. Accedere alla https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Note di rilascio di Cloud Volumes ONTAP"^] per ulteriori dettagli.
 
 
 

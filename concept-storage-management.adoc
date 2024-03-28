@@ -99,28 +99,28 @@ Questo comportamento è determinato dalla _modalità di gestione della capacità
 
 === Gestione automatica della capacità
 
-Per impostazione predefinita, Capacity Management Mode (modalità di gestione della capacità) è impostata su Automatic (automatica). In questa modalità, BlueXP acquista automaticamente nuovi dischi per le istanze di Cloud Volumes ONTAP quando è necessaria una maggiore capacità, elimina raccolte di dischi inutilizzate (aggregati), sposta i volumi tra aggregati quando necessario e tenta di eliminare i dischi guasti.
+Per impostazione predefinita, Capacity Management Mode (modalità di gestione della capacità) è impostata su Automatic (automatica). In questa modalità, BlueXP controlla il rapporto di spazio libero ogni 15 minuti per determinare se il rapporto di spazio libero scende al di sotto della soglia specificata. Se occorre maggiore capacità, BlueXP avvia automaticamente l'acquisto di nuovi dischi, elimina le raccolte inutilizzate di dischi (aggregati), sposta i volumi tra gli aggregati in base alle necessità e tenta di prevenire i guasti ai dischi.
 
 I seguenti esempi illustrano il funzionamento di questa modalità:
 
 * Se un aggregato raggiunge la soglia di capacità e dispone di spazio per più dischi, BlueXP acquista automaticamente nuovi dischi per quell'aggregato in modo che i volumi possano continuare a crescere.
 +
-BlueXP verifica il rapporto di spazio libero ogni 15 minuti per determinare se è necessario acquistare dischi aggiuntivi.
-
-
-
 ifdef::aws[]
 
-Inoltre, nel caso di un aggregato in AWS che supporta volumi elastici, BlueXP aumenta anche le dimensioni dei dischi in un gruppo RAID. link:concept-aws-elastic-volumes.html["Scopri di più sul supporto per volumi elastici"].
+
+
+Nel caso di un aggregato in AWS che supporta volumi elastici, BlueXP aumenta anche la dimensione dei dischi di un gruppo RAID. link:concept-aws-elastic-volumes.html["Scopri di più sul supporto per volumi elastici"].
 
 endif::aws[]
 
-* Se un aggregato raggiunge la soglia di capacità e non supporta dischi aggiuntivi, BlueXP sposta automaticamente un volume da tale aggregato a un aggregato con capacità disponibile o a un nuovo aggregato.
++
+* Se un aggregato raggiunge la soglia di capacità e non supporta dischi aggiuntivi, BlueXP sposta automaticamente un volume da quell'aggregato a un aggregato con capacità disponibile o a un nuovo aggregato.
+
 +
 Se BlueXP crea un nuovo aggregato per il volume, sceglie una dimensione del disco che si adatta alle dimensioni del volume.
 
 +
-Si noti che lo spazio libero è ora disponibile sull'aggregato originale. I volumi esistenti o nuovi volumi possono utilizzare tale spazio. In questo scenario, non è possibile restituire lo spazio al cloud provder.
+Si noti che lo spazio libero è ora disponibile sull'aggregato originale. I volumi esistenti o nuovi volumi possono utilizzare tale spazio. Non è possibile restituire lo spazio al cloud provider in questo scenario.
 
 * Se un aggregato non contiene volumi per più di 12 ore, BlueXP lo elimina.
 

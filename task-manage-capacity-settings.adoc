@@ -34,12 +34,15 @@ Modalità di gestione della capacità:: Scegli se BlueXP ti notifica le decision
 link:concept-storage-management.html#capacity-management["Scopri come funziona la modalità di gestione della capacità"].
 
 --
-Soglia capacità aggregata - rapporto spazio libero:: Attiva una notifica quando il rapporto di spazio libero su un aggregato scende al di sotto della soglia specificata.
+Soglia capacità aggregata - rapporto spazio libero:: Questo rapporto è un parametro chiave nelle decisioni di gestione della capacità e la comprensione del suo impatto è essenziale indipendentemente dal fatto che ci si trovi in una modalità di gestione della capacità automatica o manuale. Si consiglia di impostare questa soglia tenendo in considerazione le proprie esigenze di storage specifiche e la crescita prevista per mantenere un equilibrio tra utilizzo delle risorse e costi.
 +
 --
-Il rapporto di spazio libero viene calcolato come segue:
+In modalità manuale, se il rapporto di spazio libero su un aggregato scende al di sotto della soglia specificata, viene attivata una notifica che avvisa l'utente che è necessario intraprendere azioni per risolvere il rapporto di spazio libero basso. È importante monitorare queste notifiche e gestire manualmente la capacità aggregata per evitare interruzioni del servizio e garantire performance ottimali.
 
+Il rapporto di spazio libero viene calcolato come segue:
 (capacità aggregata - capacità totale utilizzata sull'aggregato) / capacità aggregata
+
+Vedere link:concept-storage-management.html#automatic-capacity-management["Gestione automatica della capacità"] Per apprendere ora la capacità viene gestita automaticamente in Cloud Volumes ONTAP.
 
 --
 Soglie di capacità aggregate - rapporto spazio libero per il tiering dei dati:: Definisce la quantità di spazio libero richiesta sul Tier di performance (dischi) quando si tierano i dati su un Tier di capacità (storage a oggetti).

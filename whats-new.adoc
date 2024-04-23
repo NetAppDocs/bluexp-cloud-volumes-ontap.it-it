@@ -20,6 +20,34 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 23 aprile 2024
+
+
+
+=== Nuove regioni supportate per le implementazioni di zone di disponibilità multiple in Azure
+
+Le seguenti regioni ora supportano le implementazioni ha di zone di disponibilità multiple in Azure per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:
+
+* Germania Centro Ovest
+* Polonia centrale
+* US 3 ovest
+* Israele Centrale
+* Italia Nord
+* Canada centrale
+
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali sotto Azure"^].
+
+
+
+=== Regione di Johannesburg ora supportata in Google Cloud
+
+La regione di Johannesburg (`africa-south1` Regionale) è ora supportato in Google Cloud per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali in Google Cloud"^].
+
+
+
 == 8 marzo 2024
 
 

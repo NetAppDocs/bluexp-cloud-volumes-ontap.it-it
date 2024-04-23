@@ -48,6 +48,12 @@ Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-vol
 
 
 
+=== Tag e modelli di volume non più supportati
+
+Non è più possibile creare un volume da un modello o modificare i tag di un volume. Queste azioni sono state associate al servizio di correzione di BlueXP, che non è più disponibile.
+
+
+
 == 8 marzo 2024
 
 
@@ -1145,7 +1151,6 @@ image:screenshot-cvo-user-name.png["Schermata della pagina Dettagli e credenzial
 Abbiamo apportato alcuni miglioramenti alla creazione di volumi:
 
 * Abbiamo riprogettato la creazione guidata del volume per una maggiore facilità di utilizzo.
-* I tag aggiunti a un volume sono ora associati al servizio modelli applicazione, che consente di organizzare e semplificare la gestione delle risorse.
 * È ora possibile scegliere una policy di esportazione personalizzata per NFS.
 
 

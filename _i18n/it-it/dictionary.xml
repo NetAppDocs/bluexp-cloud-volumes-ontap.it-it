@@ -1374,10 +1374,6 @@
   <block id="4cc808195cbf18422cb9719f962fd525" category="paragraph">Questo processo crea un volume FlexClone. Un volume FlexClone è una copia point-in-time scrivibile efficiente in termini di spazio, in quanto utilizza una piccola quantità di spazio per i metadati e consuma solo spazio aggiuntivo quando i dati vengono modificati o aggiunti.</block>
   <block id="0fa0071d4364b9114c15a5d2758f2577" category="inline-link">Guida alla gestione dello storage logico di ONTAP 9</block>
   <block id="4717b449094c1b48fb9da6fe4ec03c44" category="paragraph">Per ulteriori informazioni sui volumi FlexClone, vedere<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>.</block>
-  <block id="c36ae8709c4f5551dcd33c1fa09b1144" category="cell">Modifica tag di volume (solo volumi di lettura/scrittura)</block>
-  <block id="0c76e6ded4e12f0dc0b2564def628aae" category="list-text">Nella sezione Volume Actions (azioni volume) del pannello Manage Volumes (Gestisci volumi), fare clic su *Edit volume tags* (Modifica tag volume) per modificare il tag del volume assegnato al volume selezionato.</block>
-  <block id="186ac335ead3bdabcd70b18a0e6f40ed" category="list-text">Inserire il valore e la chiave del tag del volume nei campi forniti.</block>
-  <block id="cf92c264f59ad57e63ae663106047d25" category="list-text">Per includere tag aggiuntivi, fare clic su *Aggiungi nuovo tag*.</block>
   <block id="fa66a5498542b41c797489000210e5cb" category="cell">Modifica di un volume (solo volumi di lettura/scrittura)</block>
   <block id="29f680a1731a2250d73a33aede73a2eb" category="list-text">In azioni volume nel pannello Manage Volumes (Gestisci volumi), fare clic su *Edit volume settings* (Modifica impostazioni volume)</block>
   <block id="ac11ccea860c1468f49807407e073557" category="list-text">Modificare la policy Snapshot del volume, la versione del protocollo NFS, l'elenco di controllo degli accessi NFS (policy di esportazione) o le autorizzazioni di condivisione, quindi fare clic su *Apply* (Applica).</block>
@@ -2271,13 +2267,10 @@
   <block id="d67d87305db3f29260c81473dd44e3f1" category="inline-image-macro">Schermata del pulsante Add Volume (Aggiungi volume) nella scheda Aggregates (aggregati).</block>
   <block id="13f1658d880a29010b36402880b7742d" category="paragraph">Nella scheda aggregati, passare alla sezione aggregata desiderata. Fare clic sull'icona del menu, quindi su *Add Volume* (Aggiungi volume).<block ref="90511a2a61b219fe659f6c6204d0e9f4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="108a74a6cbb575c986177039e07dc411" category="list-text">Seguire i passaggi della procedura guidata per creare il volume.</block>
-  <block id="5359c0cc8b61614ec08d953783fef7e9" category="list-text">*Volumes, Details, Protection, and Tags* (volumi, Dettagli, protezione e tag): Inserire i dettagli di base sul volume e selezionare una policy Snapshot.</block>
   <block id="3b0e375a08fe94a129cba31916c9d2dc" category="paragraph">Alcuni dei campi di questa pagina sono esplicativi. Il seguente elenco descrive i campi per i quali potrebbe essere necessario fornire assistenza:</block>
   <block id="5a33fdd3ad048388d676b3cfe62a76b4" category="cell">Volume Name (Nome volume)</block>
   <block id="da791c0c870c83e87ff0b50e41446b5f" category="cell">Il nome identificabile che è possibile inserire per il nuovo volume.</block>
   <block id="191fac23c2b2ea4e948178972521292f" category="cell">Volume Size (dimensione volume)</block>
-  <block id="189f63f277cd73395561651753563065" category="cell">Tag</block>
-  <block id="d7ab5fe4cd7b86ba1ce9a35dbe34ee4b" category="inline-link">Servizio modelli di applicazione</block>
   <block id="8bc5e99f50f67c6de120548d75821d83" category="cell">Storage VM (SVM)</block>
   <block id="360a6a454911fe3432462fbd11f3588c" category="cell">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage. È possibile specificare la Storage VM per il nuovo volume.</block>
   <block id="8df799ab4a27609ef1087c249676bbc5" category="list-text">*Protocol* (protocollo): Scegliere un protocollo per il volume (NFS, CIFS o iSCSI) e fornire le informazioni richieste.</block>
@@ -2308,33 +2301,6 @@
   <block id="1fd2dba2020c106a2c49da0e6ad7e868" category="paragraph">ONTAP include diverse funzionalità di efficienza dello storage che consentono di ridurre la quantità totale di storage necessaria. Le funzionalità di efficienza dello storage NetApp offrono i seguenti vantaggi:</block>
   <block id="eb5c6869b3fc04254530622723507f79" category="list-text">*Revisione*: Esaminare i dettagli relativi al volume, quindi fare clic su *Aggiungi*.</block>
   <block id="9d9d2570117ac3c4800440bedeb14f61" category="paragraph">BlueXP crea il volume sul sistema Cloud Volumes ONTAP.</block>
-  <block id="2fd8ed01b53ab930ba045f6316aa8fbf" category="section-title">Creare un volume da un modello</block>
-  <block id="027921a6306ed2c54f25607de975d377" category="paragraph">Se l'organizzazione ha creato modelli di volume Cloud Volumes ONTAP in modo da poter implementare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, seguire la procedura descritta in questa sezione.</block>
-  <block id="bc41c927b050313fabe4e7bfa9c82224" category="paragraph">Il modello dovrebbe semplificare il tuo lavoro perché alcuni parametri di volume saranno già definiti nel modello, come tipo di disco, dimensione, protocollo, policy di snapshot, provider di cloud, e molto altro ancora. Quando un parametro è già predefinito, è sufficiente passare al parametro di volume successivo.</block>
-  <block id="395f4870d887a81edabc6ad40f5a84f0" category="admonition">È possibile creare volumi NFS o CIFS solo quando si utilizzano modelli.</block>
-  <block id="3464a6536597fb17300e864f33f6b63d" category="list-text">Nella pagina Canvas, fare clic sul nome del sistema Cloud Volumes ONTAP su cui si desidera eseguire il provisioning di un volume.</block>
-  <block id="83153603fdc3097c323cd6a9c354a74c" category="list-text">Accedere alla scheda Volumes (volumi) e fare clic su *Add Volume* (Aggiungi volume) &gt; *New Volume from Template* (nuovo volume da modello).</block>
-  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">Una schermata che mostra come aggiungere un nuovo volume da un modello.</block>
-  <block id="d5b72c940ba2727afcbba5dd037893f5" category="paragraph"><block ref="d5b72c940ba2727afcbba5dd037893f5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5b33742921c3a09b3c0916cff2d87632" category="list-text">Nella pagina _Select Template_, selezionare il modello che si desidera utilizzare per creare il volume e fare clic su *Next* (Avanti).</block>
-  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">Una schermata dei modelli di applicazione disponibili.</block>
-  <block id="f2a6f7bb83d518b8832e241b44419c17" category="paragraph"><block ref="f2a6f7bb83d518b8832e241b44419c17" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ac2c13cd2f76af0753933c8630446e5f" category="paragraph">Viene visualizzata la pagina _Editor_.</block>
-  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">Una schermata che mostra un modello vuoto da compilare per creare un volume.</block>
-  <block id="f9fb39421cb5c84a9897e58b19c84510" category="paragraph"><block ref="f9fb39421cb5c84a9897e58b19c84510" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="18a9b2315ac5b98381d542571ba28299" category="list-text">Sopra il pannello _Action_, inserire un nome per il modello.</block>
-  <block id="74f7c9266baa87f8e4aceef158811143" category="list-text">In _contesto_, l'ambiente di lavoro viene compilato con il nome dell'ambiente di lavoro con cui hai iniziato. Selezionare la *Storage VM* in cui verrà creato il volume.</block>
-  <block id="746037c3b6a0eec6bb1e41959d51e07e" category="list-text">Fare clic su *Apply* (Applica) per salvare i parametri configurati nell'azione selezionata.</block>
-  <block id="84494b1e674f56df077cb2b7eca2b569" category="list-text">Se non sono presenti altre azioni da definire (ad esempio, configurazione del backup e ripristino di BlueXP), fare clic su *Save Template* (Salva modello).</block>
-  <block id="db382d688e4cb3e09b6e7a743ce00edb" category="paragraph">Se sono presenti altre azioni, fare clic sull'azione nel riquadro sinistro per visualizzare i parametri da completare.</block>
-  <block id="a31e4f2aa7f454321015e4c5b02bae97" category="inline-image-macro">Una schermata che mostra come selezionare altre azioni da completare.</block>
-  <block id="0fdf861b8e72c9acd6caea0924545667" category="paragraph"><block ref="0fdf861b8e72c9acd6caea0924545667" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="be2645489c0ae0149fc30f6dc8d80bbb" category="paragraph">Ad esempio, se l'azione Enable Cloud Backup on Volume (Abilita backup cloud su volume) richiede di selezionare un criterio di backup, è possibile farlo ora.</block>
-  <block id="f0131c80c45b00e70cb9a1d8c9e3448a" category="list-text">Una volta completata la configurazione per le azioni del modello, fare clic su *Save Template* (Salva modello).</block>
-  <block id="f97c61e27cbf22f850ec5f0412358f0b" category="paragraph">Cloud Volumes ONTAP esegue il provisioning del volume e visualizza una pagina in modo da visualizzare l'avanzamento.</block>
-  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">Una schermata che mostra lo stato di avanzamento della creazione del nuovo volume dal modello.</block>
-  <block id="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="paragraph"><block ref="d1ad4ec8d83a0a6b7ef8ac4c5acc2d2f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3cb732600caeb6ed3e89ade08544187b" category="paragraph">Inoltre, se nel modello viene implementata un'azione secondaria, ad esempio l'attivazione del backup e ripristino BlueXP sul volume, viene eseguita anche tale azione.</block>
   <block id="841221afb195f2b9f58a8b1dc6a57132" category="section-title">Creare un volume sul secondo nodo in una configurazione ha</block>
   <block id="06d1a78e29ba350cf4a2e2603b5838a3" category="paragraph">Per impostazione predefinita, BlueXP crea volumi sul primo nodo in una configurazione ha. Se è necessaria una configurazione Active-Active, in cui entrambi i nodi servono i dati ai client, è necessario creare aggregati e volumi sul secondo nodo.</block>
   <block id="60a2834a97bdfe49641e5ed1d42e4116" category="list-text">Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro Cloud Volumes ONTAP su cui si desidera gestire gli aggregati.</block>
@@ -3193,7 +3159,6 @@
   <block id="f13e5738aeb376300b20ef726f2fe2e3" category="section-title">Miglioramenti alla creazione di volumi</block>
   <block id="9f6be88742d739e1a17345387ce1fbb2" category="paragraph">Abbiamo apportato alcuni miglioramenti alla creazione di volumi:</block>
   <block id="c393c88c641a6c18da56fffa85b9c78c" category="list-text">Abbiamo riprogettato la creazione guidata del volume per una maggiore facilità di utilizzo.</block>
-  <block id="6b7e7cce69c13d91130e2e673b1da322" category="list-text">I tag aggiunti a un volume sono ora associati al servizio modelli applicazione, che consente di organizzare e semplificare la gestione delle risorse.</block>
   <block id="69582189d37c402edf59b0f133df7c09" category="list-text">È ora possibile scegliere una policy di esportazione personalizzata per NFS.</block>
   <block id="7ab20d098d6605f542bfe595351b4d64" category="inline-image-macro">Una schermata che mostra la pagina Protocol (protocollo) quando si crea un nuovo volume.</block>
   <block id="7aece74ebc88a7e88e14656ceaecf9cf" category="paragraph"><block ref="7aece74ebc88a7e88e14656ceaecf9cf" category="inline-image-macro-rx" type="image"></block></block>
@@ -4614,7 +4579,6 @@ Nota: È possibile configurare un server NTP solo quando si crea un server CIFS.
   <block id="f9f4082179938e25ee1e3141d4b4b61d" category="paragraph"><block ref="f9f4082179938e25ee1e3141d4b4b61d" category="inline-link-rx"></block></block>
   <block id="882d5f98206dd8157654127073c920f2" category="paragraph"><block ref="882d5f98206dd8157654127073c920f2" category="inline-link-rx"></block></block>
   <block id="f870932f389b07a18c35e61ebc668c91" category="paragraph"><block ref="161ab28684c427e4961f0c360c1dbce7" category="inline-link-rx"></block>.</block>
-  <block id="63c9832895bcd0b024988b034d19fa69" category="cell">I tag aggiunti a un volume vengono associati a<block ref="b6951a270b848f0d80ace1368ae797fd" category="inline-link-rx"></block>, che consente di organizzare e semplificare la gestione delle risorse.</block>
   <block id="ccd8fe0f54baad6a01a1827625b8a699" category="list-text">Selezionare *Use Active Directory Domain* (Usa dominio Active Directory) per configurare un server NTP utilizzando il DNS di Active Directory. Se è necessario configurare un server NTP utilizzando un indirizzo diverso, utilizzare l'API. Vedere<block ref="7665d9260dd9d6a287f2bbc0560d523f" category="inline-link-rx"></block> per ulteriori informazioni.</block>
   <block id="781a31b225d61ebbabe5dd84830d307a" category="list-text">Si dovrebbe avere un<block ref="531433bd83668140eff1dc8bd40e140e" category="inline-link-rx"></block>.</block>
   <block id="0a878535ad1a6e2ef955aba255e762cd" category="list-text">Se richiesto,<block ref="b03d5bfc016d24f5269c25486d5c5105" category="inline-link-rx"></block>.</block>
@@ -4887,13 +4851,11 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="c865f6da9bcfc07ba082737620200b41" category="paragraph">L'abbonamento al marketplace non ti addebiterà alcun costo a meno che non superi i 500 GiB di capacità fornita, dopodiché il sistema viene automaticamente convertito in <block ref="ec72849d6ddd1aa67c619efd7a434388" category="inline-link-macro-rx"></block>.</block>
   <block id="a8f0efbc9639c258065d01ea6552a320" category="list-text">Specifica i dettagli di un nuovo volume e lascia che BlueXP gestisca gli aggregati di dati sottostanti per te. <block ref="7d09ed3a2e8adfd1ea66dd5eff6c8d13" category="inline-xref-macro-rx"></block></block>
   <block id="f2354151259450918b28c0dd2ce20606" category="list-text">Crea un volume su un aggregato di dati a tua scelta. <block ref="7d09ed3a2e8adfd1ea66dd5eff6c8d13" category="inline-xref-macro-rx"></block></block>
-  <block id="b9269bf669334245761162ed1b5f67fc" category="list-text">Creare un volume da un modello per ottimizzare il volume in base ai requisiti del carico di lavoro per determinate applicazioni, come database o servizi di streaming. <block ref="2e0c3dc13b95af01c6b2fc43579657db" category="inline-xref-macro-rx"></block></block>
   <block id="6acfe5d47cf8e7d4ce1ddef9604984d8" category="list-text">Creare un volume sul secondo nodo in una configurazione ha. <block ref="8d20c8ec5d13d4f8ec83a1bb8e2e1e5d" category="inline-xref-macro-rx"></block></block>
   <block id="765aadd821cf82bcd286359e2eb25476" category="list-text">Quando si crea un volume iSCSI, BlueXP crea automaticamente un LUN. Abbiamo semplificato la creazione di un solo LUN per volume, per cui non è necessario alcun intervento di gestione. Dopo aver creato il volume, <block ref="9b65fd4fba31c27fb58a4653a54defad" category="inline-link-macro-rx"></block>.</block>
   <block id="34b51cb01d3605c2b908600c2b516152" category="list-text"><block ref="34b51cb01d3605c2b908600c2b516152" category="inline-link-macro-rx"></block></block>
   <block id="2a79e18dae8df0be0a0d70d12cf4bfec" category="list-text"><block ref="2a79e18dae8df0be0a0d70d12cf4bfec" category="inline-link-macro-rx"></block></block>
   <block id="14c10e4dfdbfa7bb1944c39086904d79" category="list-text"><block ref="14c10e4dfdbfa7bb1944c39086904d79" category="inline-link-macro-rx"></block></block>
-  <block id="ff89f21886369313040dff71f31e89db" category="list-text">Aggiungere valori per tutti i parametri non codificati dal modello. Vedere <block ref="8a193d900c598af224bec0dcf7cbba7e" category="inline-xref-macro-rx"></block> Per informazioni dettagliate su tutti i parametri necessari per completare la distribuzione di un volume Cloud Volumes ONTAP.</block>
   <block id="f784e2eca8423af6d4b6e02cd9dc17b6" category="list-text">Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP. <block ref="1a421f2e5e3047ae3801063040dbe3fb" category="inline-xref-macro-rx"></block>.</block>
   <block id="29642aeaa8aff442388842cc2c36f19d" category="list-text">Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <block ref="1a421f2e5e3047ae3801063040dbe3fb" category="inline-xref-macro-rx"></block>.</block>
   <block id="b0082432bdd8f260c6c2bf11437fb1b7" category="list-text">Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <block ref="07ead3ac53ea1b122b25bf61bd233110" category="inline-xref-macro-rx"></block>.</block>
@@ -5273,4 +5235,7 @@ Si noti che lo spazio libero è ora disponibile sull'aggregato originale. I volu
   <block id="1d0f99876d748759fce5e852f79fca96" category="list-text">Canada centrale</block>
   <block id="0b745a8416b0a8e3b89e7e01ba13af65" category="section-title">Regione di Johannesburg ora supportata in Google Cloud</block>
   <block id="ec826289e3407edb59d3c5ed0aca5c74" category="paragraph">La regione di Johannesburg <block ref="6d1d2d77b70fb38d060e5653977838a2" prefix="(" category="inline-code"></block> Regionale) è ora supportato in Google Cloud per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
+  <block id="ee94ea94211470599a81d49f8c4b586f" category="section-title">Tag e modelli di volume non più supportati</block>
+  <block id="96b0b2a19dd9deb6b94e53f2e29f4387" category="paragraph">Non è più possibile creare un volume da un modello o modificare i tag di un volume. Queste azioni sono state associate al servizio di correzione di BlueXP, che non è più disponibile.</block>
+  <block id="9691bf3a7c5f05b620ab3b20437b6123" category="list-text">*Dettagli, protezione e Tag*: Immettere i dettagli di base sul volume e selezionare un criterio Snapshot.</block>
 </blocks>

@@ -59,15 +59,6 @@ Per ulteriori informazioni sui volumi FlexClone, vedere http://docs.netapp.com/o
 
 
 
-| Modifica tag di volume (solo volumi di lettura/scrittura)  a| 
-.. Nella sezione Volume Actions (azioni volume) del pannello Manage Volumes (Gestisci volumi), fare clic su *Edit volume tags* (Modifica tag volume) per modificare il tag del volume assegnato al volume selezionato.
-.. Inserire il valore e la chiave del tag del volume nei campi forniti.
-.. Per includere tag aggiuntivi, fare clic su *Aggiungi nuovo tag*.
-.. Fare clic su *Save* (Salva).
-
-
-
-
 | Modifica di un volume (solo volumi di lettura/scrittura)  a| 
 .. In azioni volume nel pannello Manage Volumes (Gestisci volumi), fare clic su *Edit volume settings* (Modifica impostazioni volume)
 .. Modificare la policy Snapshot del volume, la versione del protocollo NFS, l'elenco di controllo degli accessi NFS (policy di esportazione) o le autorizzazioni di condivisione, quindi fare clic su *Apply* (Applica).

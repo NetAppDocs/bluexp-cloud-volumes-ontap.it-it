@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-getting-started-aws-c2s.html 
-keywords: commercial cloud services, c2s, secret region, aws secret region, cloud manager, BlueXP 
-summary: 'Analogamente a un"area AWS standard, è possibile utilizzare BlueXP nell"ambiente servizi cloud commerciali AWS (C2S) per implementare Cloud Volumes ONTAP, che offre funzionalità di livello Enterprise per il cloud storage. AWS C2S è una regione chiusa specifica per gli Stati Uniti Intelligence Community; le istruzioni riportate in questa pagina si applicano solo agli utenti della regione AWS C2S.' 
+keywords: commercial cloud services, c2s, secret cloud, top secret cloud, aws secret region, BlueXP 
+summary: Simile a una regione AWS standard, puoi utilizzare BlueXP negli ambienti cloud segreto e cloud top secret di AWS per implementare Cloud Volumes ONTAP, che offre funzionalità di livello Enterprise per il tuo cloud storage. Le regioni Cloud Secret e Cloud Top Secret sono regioni chiuse specifiche degli Stati Uniti Intelligence Community; le istruzioni in questa pagina si applicano solo agli utenti delle regioni Cloud segreto e Cloud segreto. 
 ---
-= Inizia a utilizzare Cloud Volumes ONTAP nell'ambiente AWS C2S
+= Implementa Cloud Volumes ONTAP nelle aree principali del cloud segreto e del cloud computing AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,83 +14,32 @@ summary: 'Analogamente a un"area AWS standard, è possibile utilizzare BlueXP ne
 
 
 [role="lead"]
-Analogamente a un'area AWS standard, è possibile utilizzare Cloud Manager in link:https://aws.amazon.com/federal/us-intelligence-community/["Servizi cloud commerciali AWS (C2S)"^] Ambiente per l'implementazione di Cloud Volumes ONTAP, che offre funzionalità di livello Enterprise per il tuo cloud storage. AWS C2S è una regione chiusa specifica per gli Stati Uniti Intelligence Community; le istruzioni riportate in questa pagina si applicano solo agli utenti della regione AWS C2S.
+Simile a una regione AWS standard, puoi utilizzare BlueXP in link:https://aws.amazon.com/federal/secret-cloud/["Cloud segreto AWS"^] e in link:https://aws.amazon.com/federal/top-secret-cloud/["Cloud AWS top secret"^] Per implementare Cloud Volumes ONTAP, che offre funzionalità Enterprise per il tuo cloud storage. AWS Secret Cloud e Top Secret Cloud sono regioni chiuse specifiche degli Stati Uniti Intelligence Community; le istruzioni in questa pagina si applicano solo agli utenti delle regioni Cloud segreto e Cloud segreto.
 
+.Prima di iniziare
+Prima di iniziare, esamina le versioni supportate in AWS Secret Cloud e Top Secret Cloud e scopri la modalità privata di BlueXP.
 
-
-== Versioni supportate in C2S
-
-* Cloud Volumes ONTAP 9.8 è supportato
-* È supportata la versione 3.9.4 del connettore
+* Consulta le seguenti versioni supportate in AWS Secret Cloud e Top Secret Cloud:
 +
-Il connettore è un software necessario per implementare e gestire Cloud Volumes ONTAP in AWS. Potrai accedere a Cloud Manager dal software installato sull'istanza di Connector. Il sito Web SaaS per Cloud Manager non è supportato nell'ambiente C2S.
-
-
-
-
-NOTE: Cloud Manager è stato recentemente rinominato BlueXP, ma continuiamo a chiamarlo Cloud Manager in C2S perché l'interfaccia utente inclusa con la versione 3.9.4 del connettore è ancora chiamata Cloud Manager.
-
-
-
-== Funzionalità supportate in C2S
-
-Cloud Manager offre le seguenti funzionalità nell'ambiente C2S:
-
-* Cloud Volumes ONTAP
-* Replica dei dati
-* Una tempistica per il controllo
-
-
-Per Cloud Volumes ONTAP, è possibile creare un sistema a nodo singolo o una coppia ha. Sono disponibili entrambe le opzioni di licenza: Pay-as-you-go e Bring Your Own License (BYOL).
-
-Il tiering dei dati in S3 è supportato anche con Cloud Volumes ONTAP in C2S.
-
-
-
-== Limitazioni
-
-* Nessuno dei servizi cloud di NetApp è disponibile da Cloud Manager.
-* Poiché l'ambiente C2S non dispone di accesso a Internet, non sono disponibili le seguenti funzionalità:
+** Cloud Volumes ONTAP 9.12.1 P2
+** Versione 3.9.32 del connettore
 +
-** Aggiornamenti software automatici da Cloud Manager
-** NetApp AutoSupport
-** Informazioni sui costi AWS per le risorse Cloud Volumes ONTAP
-
-
-* Le licenze Freemium non sono supportate nell'ambiente C2S.
+Il connettore è un software necessario per implementare e gestire Cloud Volumes ONTAP in AWS. Potrai accedere a BlueXP dal software installato sull'istanza del connettore. Il sito web SaaS per BlueXP non è supportato da AWS Secret Cloud e Top Secret Cloud.
 
 
 
-
-== Panoramica dell'implementazione
-
-La guida introduttiva a Cloud Volumes ONTAP in C2S include alcuni passaggi.
-
-. <<Preparazione dell'ambiente AWS>>
+* Informazioni sulla modalità privata
 +
-Ciò include la configurazione della rete, l'iscrizione a Cloud Volumes ONTAP, la configurazione delle autorizzazioni e, facoltativamente, la configurazione di AWS KMS.
-
-. <<Installazione del connettore e configurazione di Cloud Manager>>
-+
-Prima di iniziare a utilizzare Cloud Manager per implementare Cloud Volumes ONTAP, è necessario creare un _connettore_. Il connettore consente a Cloud Manager di gestire risorse e processi all'interno del tuo ambiente di cloud pubblico (incluso Cloud Volumes ONTAP).
+In AWS Secret Cloud e Top Secret Cloud, BlueXP opera in _modalità privata_. In modalità privata, non è disponibile alcuna connettività al livello SaaS di BlueXP. Gli utenti accedono a BlueXP localmente dalla console basata su web disponibile da Connector, non dal layer SaaS.
 
 +
-Potrai accedere a Cloud Manager dal software installato sull'istanza di Connector.
-
-. <<Avvio di Cloud Volumes ONTAP da Cloud Manager>>
-
-
-Ciascuno di questi passaggi è descritto di seguito.
+Per ulteriori informazioni sul funzionamento della modalità privata, fare riferimento a. link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode["Modalità di implementazione privata di BlueXP"^].
 
 
 
-== Preparazione dell'ambiente AWS
-
-L'ambiente AWS deve soddisfare alcuni requisiti.
 
 
-
-=== Configurare la rete
+== Fase 1: Configurare il collegamento in rete
 
 Configurare la rete AWS in modo che Cloud Volumes ONTAP possa funzionare correttamente.
 
@@ -105,37 +54,148 @@ Configurare la rete AWS in modo che Cloud Volumes ONTAP possa funzionare corrett
 
 
 
-=== Iscriviti a Cloud Volumes ONTAP
+== Passaggio 2: Impostare le autorizzazioni
 
-Per implementare Cloud Volumes ONTAP da Cloud Manager è necessario un abbonamento a Marketplace.
-
-.Fasi
-. Accedere al marketplace della community di AWS Intelligence e cercare Cloud Volumes ONTAP.
-. Seleziona l'offerta che intendi implementare.
-. Leggere i termini e fare clic su *Accept* (Accetta).
-. Ripetere questi passaggi per le altre offerte, se si prevede di implementarle.
-+
-È necessario utilizzare Cloud Manager per avviare le istanze di Cloud Volumes ONTAP. Non è necessario avviare le istanze di Cloud Volumes ONTAP dalla console EC2.
-
-
-
-
-
-=== Impostare le autorizzazioni
-
-Impostare i ruoli e le policy IAM che forniscono a Connector e Cloud Volumes ONTAP le autorizzazioni necessarie per eseguire le azioni nell'ambiente dei servizi cloud commerciali AWS.
+Impostare policy e ruoli IAM che forniscono a Connector e Cloud Volumes ONTAP le autorizzazioni necessarie per eseguire le azioni nel cloud segreto AWS o nel cloud segreto principale.
 
 È necessario disporre di una policy IAM e di un ruolo IAM per ciascuno dei seguenti elementi:
 
 * L'istanza del connettore
 * Istanze di Cloud Volumes ONTAP
-* Istanza di Cloud Volumes ONTAP ha Mediator (se si desidera implementare coppie ha)
+* Per coppie ha, l'istanza Cloud Volumes ONTAP ha mediator (se si desidera implementare coppie ha)
 
 
 .Fasi
 . Accedere alla console AWS IAM e fare clic su *Policies* (Criteri).
 . Creare un criterio per l'istanza del connettore.
 +
+
+NOTE: Crei queste policy per supportare i bucket S3 nel tuo ambiente AWS. Durante la creazione dei bucket in un secondo momento, assicurarsi che i nomi dei bucket siano preceduti da `fabric-pool-`. Questo requisito si applica a entrambe le regioni: Cloud segreto e cloud top secret.
+
++
+[role="tabbed-block"]
+====
+.Regioni segrete
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceStatus",
+                "ec2:RunInstances",
+                "ec2:ModifyInstanceAttribute",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeImages",
+                "ec2:CreateTags",
+                "ec2:CreateVolume",
+                "ec2:DescribeVolumes",
+                "ec2:ModifyVolumeAttribute",
+                "ec2:DeleteVolume",
+                "ec2:CreateSecurityGroup",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DescribeSecurityGroups",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DeleteNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeDhcpOptions",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots",
+                "ec2:GetConsoleOutput",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeRegions",
+                "ec2:DeleteTags",
+                "ec2:DescribeTags",
+                "cloudformation:CreateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:ValidateTemplate",
+                "iam:PassRole",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:PutRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:CreateInstanceProfile",
+                "iam:DeleteRolePolicy",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:GetBucketTagging",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets",
+                "kms:List*",
+                "kms:Describe*",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:DescribeIamInstanceProfileAssociations",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:CreatePlacementGroup",
+                "ec2:DeletePlacementGroup"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "fabricPoolPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteBucket",
+                "s3:GetLifecycleConfiguration",
+                "s3:PutLifecycleConfiguration",
+                "s3:PutBucketTagging",
+                "s3:ListBucketVersions"
+            ],
+            "Resource": [
+                "arn:aws-iso-b:s3:::fabric-pool*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/WorkingEnvironment": "*"
+                }
+            },
+            "Resource": [
+                "arn:aws-iso-b:ec2:*:*:instance/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Resource": [
+                "arn:aws-iso-b:ec2:*:*:volume/*"
+            ]
+        }
+    ]
+}
+----
+--
+.Regioni più segrete
+--
 [source, json]
 ----
 {
@@ -252,8 +312,43 @@ Impostare i ruoli e le policy IAM che forniscono a Connector e Cloud Volumes ONT
     ]
 }
 ----
+--
+====
 . Creare un criterio per Cloud Volumes ONTAP.
 +
+[role="tabbed-block"]
+====
+.Regioni segrete
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": "s3:ListAllMyBuckets",
+        "Resource": "arn:aws-iso-b:s3:::*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:ListBucket",
+            "s3:GetBucketLocation"
+        ],
+        "Resource": "arn:aws-iso-b:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:DeleteObject"
+        ],
+        "Resource": "arn:aws-iso-b:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }]
+}
+----
+--
+.Regioni più segrete
+--
 [source, json]
 ----
 {
@@ -280,7 +375,11 @@ Impostare i ruoli e le policy IAM che forniscono a Connector e Cloud Volumes ONT
     }]
 }
 ----
-. Se si prevede di implementare una coppia Cloud Volumes ONTAP ha, creare una policy per il mediatore ha.
+--
+====
++
+Per le coppie ha, se intendi implementare una coppia ha Cloud Volumes ONTAP, crea una policy per il mediatore ha.
+
 +
 [source, json]
 ----
@@ -305,21 +404,22 @@ Impostare i ruoli e le policy IAM che forniscono a Connector e Cloud Volumes ONT
 ----
 . Creare ruoli IAM con il tipo di ruolo Amazon EC2 e allegare i criteri creati nei passaggi precedenti.
 +
-Analogamente ai criteri, è necessario disporre di un ruolo IAM per il connettore, uno per i nodi Cloud Volumes ONTAP e uno per il mediatore ha (se si desidera implementare le coppie ha).
+.Creare il ruolo:
+Analogamente ai criteri, è necessario avere un ruolo IAM per il connettore e uno per i nodi Cloud Volumes ONTAP.
+Per coppie ha: Simili alle policy, occorre un ruolo IAM per il connettore, uno per i nodi Cloud Volumes ONTAP e uno per il mediatore ha (se si desidera implementare coppie ha).
 
 +
-Quando si avvia l'istanza di Connector, è necessario selezionare il ruolo di Connector IAM.
-
-+
-È possibile selezionare i ruoli IAM per Cloud Volumes ONTAP e il mediatore ha quando si crea un ambiente di lavoro Cloud Volumes ONTAP da Cloud Manager.
-
+.Selezionare il ruolo:
+Quando si avvia l'istanza di Connector, è necessario selezionare il ruolo di Connector IAM. Puoi selezionare i ruoli IAM per Cloud Volumes ONTAP quando crei un ambiente di lavoro Cloud Volumes ONTAP da BlueXP.
+Per le coppie ha, puoi selezionare i ruoli IAM per Cloud Volumes ONTAP e ha mediator quando crei un ambiente di lavoro Cloud Volumes ONTAP da BlueXP.
 
 
 
 
-=== Configurare AWS KMS
 
-Se desideri utilizzare la crittografia Amazon con Cloud Volumes ONTAP, assicurati che siano soddisfatti i requisiti per il servizio di gestione delle chiavi AWS.
+== Fase 3: Configurare il KMS AWS
+
+Se desideri utilizzare la crittografia Amazon con Cloud Volumes ONTAP, assicurati che i requisiti del servizio di gestione delle chiavi (KMS) di AWS siano soddisfatti.
 
 .Fasi
 . Assicurarsi che nel proprio account o in un altro account AWS sia presente una chiave Customer Master Key (CMK) attiva.
@@ -328,28 +428,32 @@ Il CMK può essere un CMK gestito da AWS o un CMK gestito dal cliente.
 
 . Se il CMK si trova in un account AWS separato dall'account in cui si intende implementare Cloud Volumes ONTAP, è necessario ottenere l'ARN di tale chiave.
 +
-Quando crei il sistema Cloud Volumes ONTAP, dovrai fornire l'ARN a Cloud Manager.
+Quando si crea il sistema Cloud Volumes ONTAP, è necessario fornire l'ARN a BlueXP.
 
 . Aggiungere il ruolo IAM per l'istanza del connettore all'elenco degli utenti chiave per una CMK.
 +
-In questo modo, Cloud Manager dispone delle autorizzazioni per l'utilizzo del CMK con Cloud Volumes ONTAP.
+In questo modo, vengono assegnate autorizzazioni BlueXP per utilizzare CMK con Cloud Volumes ONTAP.
 
 
 
 
 
-== Installazione del connettore e configurazione di Cloud Manager
+== Fase 4: Installare il connettore e configurare BlueXP
 
-Prima di avviare i sistemi Cloud Volumes ONTAP in AWS, è necessario avviare l'istanza di Connector da AWS Marketplace, quindi accedere e configurare Cloud Manager.
+Prima di iniziare a usare BlueXP per implementare Cloud Volumes ONTAP in AWS, devi installare e configurare BlueXP Connector. Il connettore consente a BlueXP di gestire risorse e processi all'interno dell'ambiente di cloud pubblico (incluso Cloud Volumes ONTAP).
 
 .Fasi
 . Ottenere un certificato root firmato da un'autorità di certificazione (CA) nel formato X.509 codificato con Privacy Enhanced Mail (PEM) base-64. Per ottenere il certificato, consultare le policy e le procedure della propria organizzazione.
 +
-Durante il processo di configurazione, è necessario caricare il certificato. Cloud Manager utilizza il certificato attendibile per l'invio di richieste ad AWS su HTTPS.
+
+NOTE: Per le aree di AWS Secret Cloud, è necessario caricare `NSS Root CA 2` E per il Cloud Top Secret, il `Amazon Root CA 4` certificate (certificato). Assicurarsi di caricare solo questi certificati e non l'intera catena. Il file per la catena di certificati è di grandi dimensioni e il caricamento potrebbe non riuscire. Se si dispone di certificati aggiuntivi, è possibile caricarli in un secondo momento, come descritto nel passaggio successivo.
+
++
+Durante il processo di configurazione, è necessario caricare il certificato. BlueXP utilizza il certificato attendibile per inviare richieste ad AWS su HTTPS.
 
 . Avviare l'istanza di Connector:
 +
-.. Vai alla pagina AWS Intelligence Community Marketplace per Cloud Manager.
+.. Consulta la pagina del marketplace della community dell'intelligenza AWS per BlueXP.
 .. Nella scheda Custom Launch (Avvio personalizzato), scegliere l'opzione per avviare l'istanza dalla console EC2.
 .. Seguire le istruzioni per configurare l'istanza.
 +
@@ -357,23 +461,26 @@ Durante la configurazione dell'istanza, tenere presente quanto segue:
 
 +
 *** Si consiglia di utilizzare t3.xlarge.
-*** È necessario scegliere il ruolo IAM creato durante la preparazione dell'ambiente AWS.
+*** È necessario scegliere il ruolo IAM creato quando si impostano le autorizzazioni.
 *** È necessario mantenere le opzioni di storage predefinite.
 *** I metodi di connessione richiesti per il connettore sono i seguenti: SSH, HTTP e HTTPS.
 
 
 
 
-. Configurare Cloud Manager da un host che dispone di una connessione all'istanza del connettore:
+. Configurare BlueXP da un host che ha una connessione all'istanza del connettore:
 +
 .. Aprire un browser Web e immettere https://_ipaddress_[] Dove _ipaddress_ è l'indirizzo IP dell'host Linux in cui è stato installato il connettore.
 .. Specificare un server proxy per la connettività ai servizi AWS.
 .. Caricare il certificato ottenuto al punto 1.
-.. Completare la procedura di installazione guidata per configurare Cloud Manager.
+.. Selezionare *Set Up New BlueXP* (Configura nuovo BlueXP*) e seguire le istruzioni per configurare il sistema.
 +
-*** *Dettagli sistema*: Immettere un nome per questa istanza di Cloud Manager e fornire il nome della società.
-*** *Create User* (Crea utente): Consente di creare l'utente Admin da utilizzare per amministrare Cloud Manager.
-*** *Revisione*: Esaminare i dettagli e approvare il contratto di licenza per l'utente finale.
+*** *Dettagli sistema*: Inserire un nome per il connettore e il nome della società.
+*** *Create Admin User* (Crea utente amministratore): Consente di creare l'utente amministratore per il sistema.
++
+Questo account utente viene eseguito localmente sul sistema. Non esiste alcuna connessione al servizio auth0 disponibile tramite BlueXP.
+
+*** *Revisione*: Esaminare i dettagli, accettare il contratto di licenza, quindi selezionare *Configurazione*.
 
 
 .. Per completare l'installazione del certificato firmato dalla CA, riavviare l'istanza del connettore dalla console EC2.
@@ -384,279 +491,217 @@ Durante la configurazione dell'istanza, tenere presente quanto segue:
 
 
 
-== Avvio di Cloud Volumes ONTAP da Cloud Manager
+== Passaggio 5: (Facoltativo) installare un certificato in modalità privata
 
-È possibile avviare le istanze di Cloud Volumes ONTAP nell'ambiente dei servizi cloud commerciali AWS creando nuovi ambienti di lavoro in Cloud Manager.
+Questo passaggio è opzionale per le regioni Cloud segreto AWS e Cloud segreto superiore ed è necessario solo se si dispone di certificati aggiuntivi oltre ai certificati di origine installati nel passaggio precedente.
 
-.Di cosa hai bisogno
-* Se è stata acquistata una licenza, è necessario disporre del file di licenza ricevuto da NetApp. Il file di licenza è un file .NLF in formato JSON.
-* È necessaria una coppia di chiavi per abilitare l'autenticazione SSH basata su chiave al mediatore ha.
+.Fasi
+. Elencare i certificati installati esistenti.
++
+.. Per raccogliere l'id occm Container docker (nome identificato "ds-occm-1"), eseguire il seguente comando:
++
+[source, CLI]
+----
+docker ps
+----
+.. Per entrare nel contenitore occm, eseguire il comando seguente:
++
+[source, CLI]
+----
+docker exec -it <docker-id> /bin/sh
+----
+.. Per raccogliere la password dalla variabile di ambiente "TRUST_STORE_PASSWORD", eseguire il seguente comando:
++
+[source, CLI]
+----
+env
+----
+.. Per elencare tutti i certificati installati in truststore, eseguire il comando seguente e utilizzare la password raccolta nel passaggio precedente:
++
+[source, CLI]
+----
+keytool -list -v -keystore occm.truststore
+----
 
+
+. Aggiunta di un certificato.
++
+.. Per raccogliere l'id occm Container docker (nome identificato "ds-occm-1"), eseguire il seguente comando:
++
+[source, CLI]
+----
+docker ps
+----
+.. Per entrare nel contenitore occm, eseguire il comando seguente:
++
+[source, CLI]
+----
+docker exec -it <docker-id> /bin/sh
+----
++
+Salvare il nuovo file di certificato.
+
+.. Per raccogliere la password dalla variabile di ambiente "TRUST_STORE_PASSWORD", eseguire il seguente comando:
++
+[source, CLI]
+----
+env
+----
+.. Per aggiungere il certificato al truststore, eseguire il comando seguente e utilizzare la password del passaggio precedente:
++
+[source, CLI]
+----
+keytool -import -alias <alias-name> -file <certificate-file-name> -keystore occm.truststore
+----
+.. Per verificare che il certificato sia installato, eseguire il comando seguente:
++
+[source, CLI]
+----
+keytool -list -v -keystore occm.truststore -alias <alias-name>
+----
+.. Per uscire dal contenitore occm, eseguire il comando seguente:
++
+[source, CLI]
+----
+exit
+----
+.. Per ripristinare occm container, eseguire il comando seguente:
++
+[source, CLI]
+----
+docker restart <docker-id>
+----
+
+
+
+
+--
+
+--
+
+
+== Fase 6: Aggiunta di una licenza al Digital Wallet di BlueXP
+
+Se hai acquistato una licenza da NetApp, devi aggiungerla al Digital Wallet di BlueXP in modo da poterla selezionare quando crei un nuovo sistema Cloud Volumes ONTAP. Il portafoglio digitale identifica le licenze come non assegnate.
+
+.Fasi
+. Dal menu di navigazione di BlueXP, selezionare *Governance > Digital wallet*.
+. Nella scheda *Cloud Volumes ONTAP*, selezionare *licenze basate su nodo* dall'elenco a discesa.
+. Fare clic su *non assegnato*.
+. Fare clic su *Aggiungi licenze non assegnate*.
+. Inserire il numero di serie della licenza o caricare il file di licenza.
+. Se non si dispone ancora del file di licenza, è necessario caricare manualmente il file di licenza da netapp.com.
++
+.. Accedere alla link:https://register.netapp.com/site/vsnr/register/getlicensefile["NetApp License file Generator"^] Ed effettua l'accesso utilizzando le credenziali del sito di supporto NetApp.
+.. Inserire la password, scegliere il prodotto, inserire il numero di serie, confermare di aver letto e accettato l'informativa sulla privacy, quindi fare clic su *Invia*.
+.. Scegliere se si desidera ricevere il file serialnumber.NLF JSON tramite e-mail o download diretto.
+
+
+. Fare clic su *Aggiungi licenza*.
+
+
+.Risultato
+BlueXP aggiunge la licenza al portafoglio digitale. La licenza viene identificata come non assegnata fino a quando non viene associata a un nuovo sistema Cloud Volumes ONTAP. Quindi, la licenza passa alla scheda BYOL del portafoglio digitale.
+
+
+
+== Fase 7: Avviare Cloud Volumes ONTAP da BlueXP
+
+È possibile avviare le istanze Cloud Volumes ONTAP nel cloud segreto e nel cloud segreto principale di AWS creando nuovi ambienti di lavoro in BlueXP.
+
+.Prima di iniziare
+Per le coppie ha, è necessaria una coppia di chiavi per abilitare l'autenticazione SSH basata su chiave al mediatore ha.
 
 .Fasi
 . Nella pagina ambienti di lavoro, fare clic su *Aggiungi ambiente di lavoro*.
-. In Crea, selezionare Cloud Volumes ONTAP o Cloud Volumes ONTAP ha.
+. In *Crea*, selezionare Cloud Volumes ONTAP.
++
+Per ha: In *Crea*, selezionare Cloud Volumes ONTAP o Cloud Volumes ONTAP ha.
+
 . Completare la procedura guidata per avviare il sistema Cloud Volumes ONTAP.
 +
+
+CAUTION: Durante le selezioni effettuate mediante la procedura guidata, non selezionare *Data Sense & Compliance* e *Backup su cloud* in *servizi*. In *pacchetti preconfigurati*, seleziona *Cambia solo configurazione* e assicurati di non aver selezionato altre opzioni. I pacchetti preconfigurati non sono supportati nelle regioni Cloud Secret e Cloud Top Secret e, se selezionati, l'implementazione non avrà esito positivo.
+
+
+
+.Note per l'implementazione di ha Cloud Volumes ONTAP in più zone di disponibilità
+Segui quanto segue al termine della procedura guidata per le coppie ha.
+
+* È necessario configurare un gateway di transito quando si implementa Cloud Volumes ONTAP ha in più zone di disponibilità (AZS). Vedere link:task-setting-up-transit-gateway.html["Configurare un gateway di transito AWS"].
+* Implementa la configurazione come segue, perché al momento della pubblicazione erano disponibili solo due zone di disponibilità nell'AWS Top Secret Cloud:
++
+** Nodo 1: Zona di disponibilità A.
+** Nodo 2: Zona di disponibilità B
+** Mediatore: Zona di disponibilità A o B.
+
+
+
+
+.Note per l'implementazione di Cloud Volumes ONTAP nei singoli nodi e nei nodi ha
 Al termine della procedura guidata, tenere presente quanto segue:
 
-+
-** Se si desidera implementare Cloud Volumes ONTAP ha in più zone di disponibilità, implementare la configurazione come segue, poiché solo due AZS erano disponibili nell'ambiente dei servizi cloud commerciali AWS al momento della pubblicazione:
-+
-*** Nodo 1: Zona di disponibilità A.
-*** Nodo 2: Zona di disponibilità B
-*** Mediatore: Zona di disponibilità A o B.
-
-
-** Lasciare l'opzione predefinita per utilizzare un gruppo di protezione generato.
+* Lasciare l'opzione predefinita per utilizzare un gruppo di protezione generato.
 +
 Il gruppo di protezione predefinito include le regole necessarie per il corretto funzionamento di Cloud Volumes ONTAP. Se hai un requisito per utilizzare il tuo, puoi fare riferimento alla sezione relativa al gruppo di sicurezza riportata di seguito.
 
-** È necessario scegliere il ruolo IAM creato durante la preparazione dell'ambiente AWS.
-** Il tipo di disco AWS sottostante è per il volume Cloud Volumes ONTAP iniziale.
+* È necessario scegliere il ruolo IAM creato durante la preparazione dell'ambiente AWS.
+* Il tipo di disco AWS sottostante è per il volume Cloud Volumes ONTAP iniziale.
 +
 È possibile scegliere un tipo di disco diverso per i volumi successivi.
 
-** Le prestazioni dei dischi AWS sono legate alle dimensioni dei dischi.
+* Le prestazioni dei dischi AWS sono legate alle dimensioni dei dischi.
 +
 È necessario scegliere le dimensioni del disco in grado di garantire le prestazioni costanti necessarie. Fare riferimento alla documentazione AWS per ulteriori dettagli sulle prestazioni EBS.
 
-** La dimensione del disco è la dimensione predefinita per tutti i dischi del sistema.
+* La dimensione del disco è la dimensione predefinita per tutti i dischi del sistema.
 +
 
 NOTE: Se in un secondo momento è necessaria una dimensione diversa, è possibile utilizzare l'opzione Advanced allocation (allocazione avanzata) per creare un aggregato che utilizza dischi di una dimensione specifica.
 
-** Le funzionalità di efficienza dello storage possono migliorare l'utilizzo dello storage e ridurre la quantità totale di storage necessaria.
-
-
 
 
 .Risultato
-Cloud Manager avvia l'istanza di Cloud Volumes ONTAP. Puoi tenere traccia dei progressi nella timeline.
+BlueXP avvia l'istanza di Cloud Volumes ONTAP. Puoi tenere traccia dei progressi nella timeline.
 
 
 
-== Regole del gruppo di sicurezza
+== Passaggio 8: Installazione dei certificati di protezione per il tiering dei dati
 
-Cloud Manager crea gruppi di sicurezza che includono le regole in entrata e in uscita di cui Cloud Manager e Cloud Volumes ONTAP hanno bisogno per operare con successo nel cloud. Si consiglia di fare riferimento alle porte a scopo di test o se si preferisce utilizzare i propri gruppi di protezione.
+Devi installare manualmente i certificati di sicurezza per abilitare il tiering dei dati nelle regioni di AWS Secret Cloud e Top Secret Cloud.
 
+.Prima di iniziare
+. Creare bucket S3.
++
 
+NOTE: Assicurarsi che i nomi dei bucket siano preceduti da `fabric-pool-.` Ad esempio `fabric-pool-testbucket`.
 
-=== Gruppo di sicurezza per il connettore
+. Conservare i certificati di origine installati in `step 4` comodo.
 
-Il gruppo di protezione per il connettore richiede regole sia in entrata che in uscita.
 
+.Fasi
+. Copiare il testo dai certificati di origine installati in `step 4`.
+. Connettersi in modo sicuro al sistema Cloud Volumes ONTAP utilizzando la CLI.
+. Installare i certificati di origine. Potrebbe essere necessario premere il `ENTER` tasti più volte:
++
+[listing]
+----
+security certificate install -type server-ca -cert-name <certificate-name>
+----
+. Quando richiesto, immettere l'intero testo copiato, inclusi e da `----- BEGIN CERTIFICATE -----` a. `----- END CERTIFICATE -----`.
+. Conservare una copia del certificato digitale firmato dalla CA per riferimenti futuri.
+. Conservare il nome della CA e il numero di serie del certificato.
+. Configurare l'archivio di oggetti per il cloud segreto AWS e le aree del cloud top secret: `set -privilege advanced -confirmations off`
+. Eseguire questo comando per configurare l'archivio oggetti.
++
 
+NOTE: Tutti i nomi delle risorse Amazon (Arns) devono essere contrassegnati con il suffisso `-iso-b`, ad esempio `arn:aws-iso-b`. Ad esempio, se una risorsa richiede un ARN con una regione, per Top Secret Cloud, utilizzare la convenzione di denominazione come `us-iso-b` per `-server` allarme. Per AWS Secret Cloud, utilizza `us-iso-b-1`.
 
-==== Regole in entrata
++
+[listing]
+----
+storage aggregate object-store config create -object-store-name <S3Bucket> -provider-type AWS_S3 -auth-type EC2-IAM -server <s3.us-iso-b-1.server_name> -container-name <fabric-pool-testbucket> -is-ssl-enabled true -port 443
+----
+. Verificare che l'archivio oggetti sia stato creato correttamente: `storage aggregate object-store show -instance`
+. Collegare l'archivio di oggetti all'aggregato. Questo deve essere ripetuto per ogni nuovo aggregato: `storage aggregate object-store attach -aggregate <aggr1> -object-store-name <S3Bucket>`
 
-[cols="10,10,80"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| SSH | 22 | Fornisce l'accesso SSH all'host del connettore 
-
-
-| HTTP | 80 | Fornisce l'accesso HTTP dai browser Web client all'interfaccia utente locale 
-
-
-| HTTPS | 443 | Fornisce l'accesso HTTPS dai browser Web client all'interfaccia utente locale 
-|===
-
-
-==== Regole in uscita
-
-Il gruppo di protezione predefinito per il connettore include le seguenti regole in uscita.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutti i TCP | Tutto | Tutto il traffico in uscita 
-
-
-| Tutti gli UDP | Tutto | Tutto il traffico in uscita 
-|===
-
-
-=== Gruppo di sicurezza per Cloud Volumes ONTAP
-
-Il gruppo di sicurezza per i nodi Cloud Volumes ONTAP richiede regole sia in entrata che in uscita.
-
-
-
-==== Regole in entrata
-
-Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predefinito, è possibile scegliere di consentire il traffico all'interno di una delle seguenti opzioni:
-
-* *Selezionato solo VPC*: L'origine del traffico in entrata è l'intervallo di sottorete del VPC per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete del VPC in cui si trova il connettore. Questa è l'opzione consigliata.
-* *Tutti i VPC*: L'origine del traffico in entrata è l'intervallo IP 0.0.0.0/0.
-
-
-[cols="10,10,80"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutti gli ICMP | Tutto | Eseguire il ping dell'istanza 
-
-
-| HTTP | 80 | Accesso HTTP alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
-
-
-| HTTPS | 443 | Accesso HTTPS alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
-
-
-| SSH | 22 | Accesso SSH all'indirizzo IP della LIF di gestione del cluster o di una LIF di gestione dei nodi 
-
-
-| TCP | 111 | Chiamata a procedura remota per NFS 
-
-
-| TCP | 139 | Sessione del servizio NetBIOS per CIFS 
-
-
-| TCP | 161-162 | Protocollo di gestione di rete semplice 
-
-
-| TCP | 445 | Microsoft SMB/CIFS su TCP con frame NetBIOS 
-
-
-| TCP | 635 | Montaggio NFS 
-
-
-| TCP | 749 | Kerberos 
-
-
-| TCP | 2049 | Daemon del server NFS 
-
-
-| TCP | 3260 | Accesso iSCSI tramite LIF dei dati iSCSI 
-
-
-| TCP | 4045 | Daemon di blocco NFS 
-
-
-| TCP | 4046 | Network status monitor per NFS 
-
-
-| TCP | 10000 | Backup con NDMP 
-
-
-| TCP | 11104 | Gestione delle sessioni di comunicazione tra cluster per SnapMirror 
-
-
-| TCP | 11105 | Trasferimento dei dati SnapMirror con LIF intercluster 
-
-
-| UDP | 111 | Chiamata a procedura remota per NFS 
-
-
-| UDP | 161-162 | Protocollo di gestione di rete semplice 
-
-
-| UDP | 635 | Montaggio NFS 
-
-
-| UDP | 2049 | Daemon del server NFS 
-
-
-| UDP | 4045 | Daemon di blocco NFS 
-
-
-| UDP | 4046 | Network status monitor per NFS 
-
-
-| UDP | 4049 | Protocollo NFS rquotad 
-|===
-
-
-==== Regole in uscita
-
-Il gruppo di protezione predefinito per Cloud Volumes ONTAP include le seguenti regole in uscita.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutti gli ICMP | Tutto | Tutto il traffico in uscita 
-
-
-| Tutti i TCP | Tutto | Tutto il traffico in uscita 
-
-
-| Tutti gli UDP | Tutto | Tutto il traffico in uscita 
-|===
-
-
-=== Gruppo di sicurezza esterno per il mediatore ha
-
-Il gruppo di sicurezza esterno predefinito per il mediatore Cloud Volumes ONTAP ha include le seguenti regole in entrata e in uscita.
-
-
-
-==== Regole in entrata
-
-L'origine delle regole in entrata è il traffico proveniente dal VPC in cui si trova il connettore.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| SSH | 22 | Connessioni SSH al mediatore ha 
-
-
-| TCP | 3000 | Accesso API RESTful dal connettore 
-|===
-
-
-==== Regole in uscita
-
-Il gruppo di protezione predefinito per il mediatore ha include le seguenti regole in uscita.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutti i TCP | Tutto | Tutto il traffico in uscita 
-
-
-| Tutti gli UDP | Tutto | Tutto il traffico in uscita 
-|===
-
-
-=== Gruppo di sicurezza interno per il mediatore ha
-
-Il gruppo di sicurezza interno predefinito per il mediatore ha Cloud Volumes ONTAP include le seguenti regole. Cloud Manager crea sempre questo gruppo di sicurezza. Non hai la possibilità di utilizzare il tuo.
-
-
-
-==== Regole in entrata
-
-Il gruppo di sicurezza predefinito include le seguenti regole in entrata.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutto il traffico | Tutto | Comunicazione tra il mediatore ha e i nodi ha 
-|===
-
-
-==== Regole in uscita
-
-Il gruppo di protezione predefinito include le seguenti regole in uscita.
-
-[cols="20,20,60"]
-|===
-| Protocollo | Porta | Scopo 
-
-
-| Tutto il traffico | Tutto | Comunicazione tra il mediatore ha e i nodi ha 
-|===

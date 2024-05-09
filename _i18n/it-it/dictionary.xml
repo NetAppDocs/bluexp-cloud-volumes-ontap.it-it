@@ -1895,13 +1895,6 @@
   <block id="b251b1d8bf96f666a018d6d8517138ae" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Avviare Cloud Volumes ONTAP utilizzando BlueXP</block>
   <block id="b3b157e5786bf5334a6407290f42337e" category="paragraph">Fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro), selezionare il tipo di sistema che si desidera implementare e completare la procedura guidata. <block ref="e7b659d6e9cf4401150cabbf78e23874" category="inline-link-macro-rx"></block>.</block>
   <block id="824be8b95270c8a8618f49cb7fb21ae8" category="inline-link">Cosa fa BlueXP con le autorizzazioni Google Cloud</block>
-  <block id="8e9d6d95264b6231f0a1d0ca22c087f7" category="summary">Le seguenti guide ti aiuteranno a iniziare a utilizzare Cloud Volumes ONTAP in Google Cloud per soddisfare il tuo caso di utilizzo specifico.</block>
-  <block id="f22e86b63856df3737d333499d0d8642" category="inline-link-macro">Introduzione a Cloud Volumes ONTAP in Google Cloud: Procedura dettagliata per l'installazione</block>
-  <block id="a480525c508abef033c6011b6b8ae5db" category="list-text"><block ref="a480525c508abef033c6011b6b8ae5db" category="inline-link-macro-rx"></block></block>
-  <block id="85536ede959e4a62b6eeb8fa7da21b71" category="inline-link-macro">Replica dei dati ONTAP on-premise su NetApp Cloud Volumes ONTAP per il disaster recovery</block>
-  <block id="8b26f0918bd84f8f658268af9e2d60ac" category="list-text"><block ref="8b26f0918bd84f8f658268af9e2d60ac" category="inline-link-macro-rx"></block></block>
-  <block id="ebd1806e62b51cb0c1b6db8082e0666d" category="inline-link-macro">Come implementare NetApp FlexCache con Cloud Volumes ONTAP su Google Cloud</block>
-  <block id="dd8a20d5a7875f2be225fbdc1a4c18bf" category="list-text"><block ref="dd8a20d5a7875f2be225fbdc1a4c18bf" category="inline-link-macro-rx"></block></block>
   <block id="08648df35499562b62cbf1ab3e9bf7ec" category="doc">Gestire gli aggregati</block>
   <block id="05c1f921312a3701ff4fe737635bbfb0" category="paragraph">Se si desidera eliminare un aggregato, è necessario prima eliminare i volumi nell'aggregato.</block>
   <block id="14f6e5cbecec465db4af750335c3369b" category="paragraph">Se un aggregato sta esaurendo lo spazio, è possibile spostare i volumi in un altro aggregato utilizzando System Manager.</block>
@@ -5248,4 +5241,5 @@ Per le coppie ha, puoi selezionare i ruoli IAM per Cloud Volumes ONTAP e ha medi
   <block id="059ef6b8ce45a93c6445c0f41c224068" category="list-text"><block ref="059ef6b8ce45a93c6445c0f41c224068" category="inline-link-rx"></block></block>
   <block id="8d248e3b0efc80b62fc62ba57027d13f" category="admonition">Nel cloud segreto di AWS è necessario fornire il tuo ruolo IAM. <block ref="af622e808f4363be4413c4e256d0f137" category="inline-link-macro-rx"></block>.</block>
   <block id="275e611a605380e34988066f6fa53eae" category="sidebar">Implementa Cloud Volumes ONTAP in aree segrete di AWS</block>
+  <block id="3f0b36cd14ec7bfa0b4b01e076c44477" category="sidebar">Avvio rapido per le aree principali di AWS Secret/Cloud</block>
 </blocks>

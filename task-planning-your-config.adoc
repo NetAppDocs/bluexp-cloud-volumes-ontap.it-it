@@ -36,6 +36,20 @@ Prima di poter creare e gestire le risorse in tali regioni, è necessario abilit
 
 
 
+=== Scegliere una zona locale supportata
+
+Cloud Volumes ONTAP è supportato in alcune zone locali di AWS, inclusa Singapore. La selezione di una zona locale è facoltativa.
+
+link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations/?nc=sn&loc=3["Visualizza l'elenco completo delle zone locali"^].
+Le zone locali devono essere attivate prima di poter creare e gestire le risorse in tali zone.
+
+link:https://aws.amazon.com/tutorials/deploying-low-latency-applications-with-aws-local-zones/["Informazioni su come attivare una zona locale"^].
+
+
+NOTE: Phoenix non è una zona locale supportata.
+
+
+
 == Scegliere un'istanza supportata
 
 Cloud Volumes ONTAP supporta diversi tipi di istanze, a seconda del tipo di licenza scelto.

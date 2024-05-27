@@ -20,6 +20,18 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 17 maggio 2024
+
+
+
+=== Supporto per le zone locali di Amazon Web Services
+
+Il supporto per le zone locali di AWS è ora disponibile per le implementazioni ha di Cloud Volumes ONTAP. Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore.
+
+Per ulteriori informazioni sulle zone locali di AWS con implementazioni ha, fare riferimento a. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zone locali di AWS"^].
+
+
+
 == 23 aprile 2024
 
 

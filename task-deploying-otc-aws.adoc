@@ -304,6 +304,15 @@ Subito dopo aver creato l'ambiente di lavoro, BlueXP avvia un'istanza di test ne
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
 . Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e seguire le istruzioni.
 . *Scegli una località*: Seleziona *Amazon Web Services* e *Cloud Volumes ONTAP ha*.
++
+Sono disponibili alcune zone AWS Local.
+
++
+Prima di poter utilizzare AWS Local Zones, è necessario abilitare Local Zones (zone locali) e creare una subnet nella Local zone (zona locale) del proprio account AWS. Segui i passaggi *Opt in to an AWS Local zone* e *Extend your Amazon VPC to the Local zone* nella link:https://aws.amazon.com/tutorials/deploying-low-latency-applications-with-aws-local-zones/["Tutorial AWS: Inizia a implementare le applicazioni a bassa latenza con le zone locali AWS"^].
+
++
+Se utilizzi una versione di connettore 3.9.36 o precedente, devi aggiungere il seguente permesso al ruolo di connettore AWS nella console AWS EC2: DescribeAvailabilityZones.
+
 . *Dettagli e credenziali*: Se si desidera, modificare le credenziali e l'abbonamento AWS, inserire un nome di ambiente di lavoro, aggiungere tag, se necessario, quindi inserire una password.
 +
 Alcuni dei campi di questa pagina sono esplicativi. La seguente tabella descrive i campi per i quali potrebbero essere necessarie indicazioni:

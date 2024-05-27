@@ -4255,13 +4255,9 @@
   <block id="ec078029075995846064f8135ac001c7" category="list-text">t2-micro</block>
   <block id="2928ec952c28834c42708b6033983463" category="list-text">Un disco magnetico EBS di circa 8 GiB.</block>
   <block id="5d345d14f8662bfe45d8562fba90c487" category="list-text">Quando si crea una coppia Cloud Volumes ONTAP ha da BlueXP, viene richiesto di fornire una coppia di chiavi per l'istanza del mediatore. È possibile utilizzare tale coppia di chiavi per l'accesso SSH utilizzando<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> utente.</block>
-  <block id="a2efc5fc54fd68c09324deea01c6bc06" category="paragraph">È possibile garantire l'elevata disponibilità dei dati implementando una configurazione ha in più zone di disponibilità (AZS) o in un singolo AZ. Per scegliere la configurazione più adatta alle proprie esigenze, è necessario esaminare ulteriori dettagli su ciascuna configurazione.</block>
-  <block id="bc2a46f921494df9fc5f911909c03874" category="section-title">Zone di disponibilità multiple</block>
-  <block id="28cbbb231a21034634b99c799eadc9ce" category="paragraph">L'implementazione di una configurazione ha in zone di disponibilità multiple (AZS) garantisce un'elevata disponibilità dei dati in caso di guasto con un'istanza AZ o che esegue un nodo Cloud Volumes ONTAP. È necessario comprendere in che modo gli indirizzi IP NAS influiscono sull'accesso ai dati e sul failover dello storage.</block>
   <block id="7657d465c1c0f4f6bfa9bdc17df2b08c" category="section-title">Accesso ai dati NFS e CIFS</block>
   <block id="34df161a9c0315272455a0dcc8b35711" category="paragraph">Quando una configurazione ha viene distribuita in più zone di disponibilità, _indirizzi IP mobili_ abilitano l'accesso al client NAS. Gli indirizzi IP mobili, che devono essere al di fuori dei blocchi CIDR per tutti i VPC della regione, possono migrare tra i nodi in caso di guasti. Non sono accessibili in modo nativo ai client che si trovano al di fuori del VPC, a meno che non si <block ref="f196b90949d1249f4f3797eb7257a21d" category="inline-link-macro-rx"></block>.</block>
   <block id="a3414a2e636e6d83d5c99532da30e296" category="paragraph">Se non è possibile configurare un gateway di transito, gli indirizzi IP privati sono disponibili per i client NAS esterni al VPC. Tuttavia, questi indirizzi IP sono statici e non possono eseguire il failover tra i nodi.</block>
-  <block id="b4af2eb1a5c665c00f00d9b68f64d5be" category="paragraph">Prima di implementare una configurazione ha in più zone di disponibilità, è necessario esaminare i requisiti per gli indirizzi IP mobili e le tabelle di routing. È necessario specificare gli indirizzi IP mobili quando si implementa la configurazione. Gli indirizzi IP privati vengono creati automaticamente da BlueXP.</block>
   <block id="f526d0fa31a1cecc71259047c426e2f2" category="section-title">Accesso ai dati iSCSI</block>
   <block id="eab11280467eeea00306f2c7d4c6a2d5" category="paragraph">La comunicazione dati tra più VPC non è un problema, poiché iSCSI non utilizza indirizzi IP mobili.</block>
   <block id="7d3a2be26496432732f28dda72727430" category="section-title">Takeover e giveback per iSCSI</block>
@@ -4272,8 +4268,6 @@
   <block id="24c0cd8b26bb96fcfde0ec7aa356e67c" category="paragraph">Gli IP dei dati NAS utilizzati per l'accesso VPC esterno non possono migrare tra i nodi in caso di guasti. Se un nodo non è in linea, è necessario rimontarlo manualmente sui client esterni al VPC utilizzando l'indirizzo IP sull'altro nodo.</block>
   <block id="59cd6fed99392db807d679317017b518" category="paragraph">Una volta che il nodo guasto torna in linea, rimontare i client sui volumi utilizzando l'indirizzo IP originale. Questo passaggio è necessario per evitare il trasferimento di dati non necessari tra due nodi ha, che può causare un impatto significativo sulle performance e sulla stabilità.</block>
   <block id="bf20805083b34c4479e326ea7f16966f" category="paragraph">È possibile identificare facilmente l'indirizzo IP corretto da BlueXP selezionando il volume e facendo clic su *Mount Command*.</block>
-  <block id="213cb4fa8613615178e793d9dcd42165" category="section-title">Singola zona di disponibilità</block>
-  <block id="b593d41d188d87529aac0e57d6b4594a" category="paragraph">L'implementazione di una configurazione ha in una singola zona di disponibilità (AZ) può garantire un'elevata disponibilità dei dati in caso di guasto di un'istanza che esegue un nodo Cloud Volumes ONTAP. Tutti i dati sono accessibili in modo nativo dall'esterno del VPC.</block>
   <block id="31ac8d1ac9d098205b95d495a0a3f93a" category="inline-link">Gruppo di posizionamento AWS Spread</block>
   <block id="bf75afe84fa4d8e8637d67f46da78447" category="admonition">BlueXP crea un<block ref="69dad99e4ae4952ff167137be3a42452" category="inline-link-rx"></block> E lancia i due nodi ha in quel gruppo di posizionamento. Il gruppo di posizionamento riduce il rischio di guasti simultanei distribuendo le istanze su hardware sottostante distinto. Questa funzionalità migliora la ridondanza dal punto di vista del calcolo e non dal punto di vista del guasto del disco.</block>
   <block id="7f87e6839b7919bf607ad546427cfbe1" category="section-title">Accesso ai dati</block>
@@ -5244,4 +5238,48 @@ Per le coppie ha, puoi selezionare i ruoli IAM per Cloud Volumes ONTAP e ha medi
   <block id="21374a20e08d3e0c8ca328133d8fe5f4" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona dei puntini di sospensione e selezionare *Rimuovi dall'area di lavoro*.</block>
   <block id="b724364be6320cfd44126523f60ef584" category="inline-link">Distribuzione programmatica dei prodotti Marketplace</block>
   <block id="1466cb0ca0af8994440faa54da634c8d" category="list-text">*Iscriviti da Azure Marketplace*: Se BlueXP non è in grado di abilitare le implementazioni programmatiche di Cloud Volumes ONTAP, visualizzerai questa pagina. Seguire i passaggi elencati sullo schermo. Vedere<block ref="bc817edffaba6b19533f23cdb879088c" category="inline-link-rx"></block> per ulteriori informazioni.</block>
+  <block id="64d1ac557c8992bc5d65b98a95e0b497" category="section-title">Scegliere una zona locale supportata</block>
+  <block id="951d6dba79708fba245b5798bb84dde6" category="paragraph">Cloud Volumes ONTAP è supportato in alcune zone locali di AWS, inclusa Singapore. La selezione di una zona locale è facoltativa.</block>
+  <block id="b1968c5681446da9bdcedadbf7a34131" category="inline-link-macro">Visualizza l'elenco completo delle zone locali</block>
+  <block id="a455e3549f40e60e4a9c2e8c6580a6a2" category="paragraph"><block ref="27bdb425ba8206d688a379332282fbb4" category="inline-link-macro-rx"></block>.
+Le zone locali devono essere attivate prima di poter creare e gestire le risorse in tali zone.</block>
+  <block id="7d273ac4682ff6458339567063ef099c" category="inline-link-macro">Informazioni su come attivare una zona locale</block>
+  <block id="9d27b872e974d3d08bf3a26f3677a159" category="paragraph"><block ref="4d81cb3a41369feab014b9955336458e" category="inline-link-macro-rx"></block>.</block>
+  <block id="f5d7776a3ddb7ca1ecdd36a3e71b0903" category="admonition">Phoenix non è una zona locale supportata.</block>
+  <block id="14f93e26a64410a779a8f05ff019c578" category="paragraph">Puoi garantire l'elevata disponibilità dei tuoi dati implementando una configurazione ha in più zone di disponibilità (AZ) o in una singola zona di disponibilità (AZ). Per scegliere la configurazione più adatta alle proprie esigenze, è necessario esaminare ulteriori dettagli su ciascuna configurazione.</block>
+  <block id="086e808bdf46a8027609222c8bc2ae0b" category="section-title">Più zone di disponibilità</block>
+  <block id="1f0c75dd86d99f8dd501e6ad73083cb9" category="paragraph">L'implementazione di una configurazione ha in più zone di disponibilità (AZ) garantisce un'elevata disponibilità dei dati in caso di errore con una AZ o un'istanza che esegue un nodo Cloud Volumes ONTAP. È necessario comprendere in che modo gli indirizzi IP NAS influiscono sull'accesso ai dati e sul failover dello storage.</block>
+  <block id="9e1e9460b8dc471c1ab072416162e7fd" category="paragraph">Prima di distribuire una configurazione ha in più zone di disponibilità, è necessario esaminare i requisiti per gli indirizzi IP mobili e le tabelle di routing. È necessario specificare gli indirizzi IP mobili quando si implementa la configurazione. Gli indirizzi IP privati vengono creati automaticamente da BlueXP.</block>
+  <block id="9915334dccd6082757486cc7db7c4599" category="section-title">Singola zona di disponibilità</block>
+  <block id="4214b1507155cb0c63890d5526690625" category="paragraph">L'implementazione di una configurazione ha in una singola zona di disponibilità (AZ) può garantire l'elevata disponibilità dei dati in caso di guasto di un'istanza che esegue un nodo Cloud Volumes ONTAP. Tutti i dati sono accessibili in modo nativo dall'esterno del VPC.</block>
+  <block id="e0b08acf0828bf4594a0b9bd6411df1b" category="section-title">Zone locali di AWS</block>
+  <block id="bc54c20d96244cbf865df76934081bb9" category="paragraph">Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore. Con le zone locali di AWS è possibile avvicinare i servizi AWS per migliorare la latenza dei carichi di lavoro e gestire i database localmente.</block>
+  <block id="ac654b16577855244ce7dae48d89fba9" category="paragraph">Puoi implementare una configurazione con AZ singolo o AZ multiplo in zone locali di AWS.</block>
+  <block id="2a6302a8529ac1ec37d01886ead088d0" category="section-title">Esempio di configurazioni della zona locale di AWS</block>
+  <block id="19af59a268c506bb19268e318e2e9e5f" category="paragraph">Di seguito sono riportate le configurazioni di esempio:</block>
+  <block id="cc9d5d3b16643a54feae6e4778e4d7b9" category="list-text">Singola zona di disponibilità: Entrambi i nodi del cluster e il mediatore si trovano nella stessa zona locale.</block>
+  <block id="9f1aad520102b4f5b24cb8c2d5dce3eb" category="list-text">Più zone di disponibilità
+In più configurazioni di zone di disponibilità, esistono tre istanze, due nodi e un mediatore. Un'istanza delle tre istanze deve trovarsi in una zona separata. È possibile scegliere la modalità di configurazione.</block>
+  <block id="693e51513559ce9e3ac257ad0f07f744" category="paragraph">Di seguito sono riportati tre esempi di configurazioni:</block>
+  <block id="23cfd96026421dbbdfa6a706c9b57047" category="list-text">Ogni nodo del cluster si trova in una zona locale diversa e il mediatore in una zona di disponibilità pubblica.</block>
+  <block id="e7b2b5f10ffa3982dbe023fcc44d9809" category="list-text">Un nodo cluster in una zona locale, il mediatore in una zona locale e il secondo nodo cluster si trovano in una zona di disponibilità.</block>
+  <block id="7f1ca580f0235d8ecd120f9905161358" category="list-text">Ciascun nodo del cluster e il mediatore si trovano in zone locali separate.</block>
+  <block id="53e8d12efd0a1f3029b5796a1b3b6d97" category="section-title">Dischi e tipi di istanza supportati</block>
+  <block id="b725b06baf48d4e1dcf97d094f7fa465" category="paragraph">L'unico tipo di disco supportato è GP2.</block>
+  <block id="3d3c8175d796b0c12230914779b33fbb" category="paragraph">Sono attualmente supportate le seguenti famiglie di tipi di istanza EC2 con dimensioni da xlarge a 4XLarge:</block>
+  <block id="3f44a84e6e34fdb5a2f89c68d8c36175" category="list-text">M5</block>
+  <block id="fea813d4ddba3c46cf8b8e664b92cdaa" category="list-text">C5</block>
+  <block id="82bce2d16d12d889961dbfbfac9b0015" category="list-text">C5d</block>
+  <block id="e1b8054c9cdd622c9eeecfe71f26054a" category="list-text">R5</block>
+  <block id="513e8fcb60809102e57ea96961daab7c" category="list-text">R5d</block>
+  <block id="5eaba9c26c7009842affe7562eb137d3" category="inline-link-macro">Fai riferimento ad AWS per i dettagli più recenti e completi sui tipi di istanze EC2 supportati nelle zone locali</block>
+  <block id="5a38beb8a35f70ab33e7cb660b004cf6" category="paragraph"><block ref="3d9029b658475a88eed4e09e15fa8cce" category="inline-link-macro-rx"></block>.</block>
+  <block id="6d79fc3df77a055abb0043c41477add1" category="paragraph">Sono disponibili alcune zone AWS Local.</block>
+  <block id="b40c89ea76edb69b0a84d7a6a1be7455" category="inline-link-macro">Tutorial AWS: Inizia a implementare le applicazioni a bassa latenza con le zone locali AWS</block>
+  <block id="f8945f9c0b29d6212c5c9654ff1b7ed3" category="paragraph">Prima di poter utilizzare AWS Local Zones, è necessario abilitare Local Zones (zone locali) e creare una subnet nella Local zone (zona locale) del proprio account AWS. Segui i passaggi *Opt in to an AWS Local zone* e *Extend your Amazon VPC to the Local zone* nella <block ref="08374900627773b5f0e169d9824fde8a" category="inline-link-macro-rx"></block>.</block>
+  <block id="c0d8b980523f619bb9dff8ef93a968c9" category="paragraph">Se utilizzi una versione di connettore 3.9.36 o precedente, devi aggiungere il seguente permesso al ruolo di connettore AWS nella console AWS EC2: DescribeAvailabilityZones.</block>
+  <block id="188fd7f75e50a8a882a75c15dcb630a1" category="section-title">17 maggio 2024</block>
+  <block id="b3e67e9d7f5be7902fd87917d0acb3e0" category="section-title">Supporto per le zone locali di Amazon Web Services</block>
+  <block id="6f9fa4d02a6081aa6d33b131d8532328" category="paragraph">Il supporto per le zone locali di AWS è ora disponibile per le implementazioni ha di Cloud Volumes ONTAP. Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore.</block>
+  <block id="b75accaa363606f733ab4203f45f8193" category="paragraph">Per ulteriori informazioni sulle zone locali di AWS con implementazioni ha, fare riferimento a. <block ref="6830ae69d7be576a68a954338edafef9" category="inline-link-macro-rx"></block>.</block>
 </blocks>

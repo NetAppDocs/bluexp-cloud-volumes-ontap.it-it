@@ -873,7 +873,6 @@
   <block id="95d79008b0be56c31d097e76b7584763" category="doc">Modificare la password per Cloud Volumes ONTAP</block>
   <block id="7c73e4ed4b91266d07c912a53798c240" category="admonition">Non modificare la password per l'account admin tramite System Manager o CLI. La password non verrà riflessa in BlueXP. Di conseguenza, BlueXP non è in grado di monitorare correttamente l'istanza.</block>
   <block id="38124763ec69515302fcd6a655b0cb92" category="list-text">Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro Cloud Volumes ONTAP.</block>
-  <block id="67f0f7bdc0b6b3c961c645e5a644b531" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona ellisse e selezionare *Set password* (Imposta password).</block>
   <block id="a18ec44ef07922a650e590de9dd0a36e" category="inline-image-macro">Una schermata che mostra il menu disponibile dall'ambiente di lavoro che contiene l'azione Set password (Imposta password).</block>
   <block id="6daca7a21673390f9b4946d99b575dbc" category="paragraph"><block ref="6daca7a21673390f9b4946d99b575dbc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="809993be97183c1aad51ef5ea989cd2a" category="paragraph">La nuova password deve essere diversa da una delle ultime sei password utilizzate.</block>
@@ -1351,7 +1350,6 @@
   <block id="34b14acb1a2ab9863c3c5dad4fd43a16" category="paragraph">Ad esempio, le informazioni avanzate dovrebbero dire qualcosa di simile a quanto segue: L'aggregato aggr1 ha raggiunto il suo limite di capacità.</block>
   <block id="d741de259d45adde48602bde8af2fa1e" category="list-text">Identificare uno o più volumi da spostare fuori dall'aggregato:</block>
   <block id="4145a13d965a05b20f37aec1922ef7dd" category="list-text">Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.</block>
-  <block id="7d3d9db5a4178e569561d635871c26ed" category="list-text">Selezionare la sezione aggregata desiderata, quindi fare clic sul pulsante *... (Icona ellisse) &gt; Visualizza dettagli aggregati*.</block>
   <block id="920937d0401827a767850d6598f69cf9" category="list-text">Nella scheda Overview (Panoramica) della schermata aggregate Details (Dettagli aggregato), esaminare le dimensioni di ciascun volume e scegliere uno o più volumi da spostare fuori dall'aggregato.</block>
   <block id="1ac63b40afca7dec0b6be58237e990c5" category="paragraph">È necessario scegliere volumi sufficientemente grandi da liberare spazio nell'aggregato in modo da evitare ulteriori problemi di capacità in futuro.</block>
   <block id="a64d88ebebbadd18db492923a6de8f40" category="list-text">Se il sistema non ha raggiunto il limite di dischi, spostare i volumi in un aggregato esistente o in un nuovo aggregato sullo stesso sistema.</block>
@@ -1379,7 +1377,6 @@
   <block id="b9caee734c459ea1d440e0f169eb1723" category="list-text">Verificare se un aggregato esistente dispone di capacità disponibile per i volumi da spostare:</block>
   <block id="c6d494ac63d05f0797b17cc4e9b671a5" category="list-text">Nella sezione aggregato, visualizzare la capacità disponibile (dimensione fornita meno capacità aggregata utilizzata).</block>
   <block id="b8bd018e0e8deb966bda4a09610591ac" category="list-text">Se necessario, aggiungere dischi a un aggregato esistente:</block>
-  <block id="8fcffd0e2a621979482d32af8df3fa54" category="list-text">Selezionare l'aggregato, quindi fare clic sul pulsante *... (Icona ellisse) &gt; Add Disks* (Aggiungi dischi).</block>
   <block id="3425dbe0168b60aed62d54b2290baad1" category="list-text">Selezionare il numero di dischi da aggiungere, quindi fare clic su *Aggiungi*.</block>
   <block id="e272fdd11a7aa99158a093a41c65fdd9" category="list-text">Se nessun aggregato dispone di capacità, creare un nuovo aggregato.</block>
   <block id="0e725e4f9ac82ce0408528d6e38105f1" category="inline-link-macro">Creazione di aggregati</block>
@@ -1900,24 +1897,18 @@
   <block id="14f6e5cbecec465db4af750335c3369b" category="paragraph">Se un aggregato sta esaurendo lo spazio, è possibile spostare i volumi in un altro aggregato utilizzando System Manager.</block>
   <block id="47a29d3d79731f5f3ac2e35595cdd5a9" category="list-text">Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro Cloud Volumes ONTAP su cui si desidera gestire gli aggregati.</block>
   <block id="021ed7718b4d1f8ff42ac2d9a653d143" category="list-text">Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.</block>
-  <block id="a83fde1416b692585ab72d55276e43ee" category="list-text">Nella scheda aggregati, selezionare il titolo desiderato e fare clic sul pulsante *... (icona ellisse)*.</block>
   <block id="4940ff7a33940e4ec33b7d78f146648a" category="inline-image-macro">Una schermata delle opzioni del menu aggregati.</block>
   <block id="65c989c474db774160c441e94f03ddfc" category="paragraph"><block ref="65c989c474db774160c441e94f03ddfc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4ee08bb978546541b2d29cc9458a50b6" category="list-text">Gestisci i tuoi aggregati:</block>
   <block id="6fb0fc660dff117671a3212aa98c1e9a" category="cell">Visualizzare informazioni su un aggregato</block>
-  <block id="116812c107d40280e65a3a0f4f5c3440" category="cell">Sotto il ... (Icona ellisse), fare clic su *View aggregate details* (Visualizza dettagli aggregati).</block>
   <block id="b50c158eaf466db16b58f00ceffdc6e1" category="cell">Creare un volume su un aggregato specifico</block>
-  <block id="2e59a4ccfe2d0087aa6ece23a0922ea4" category="cell">Sotto il ... (Icona ellisse), fare clic su *Add volume* (Aggiungi volume).</block>
   <block id="ee1ffb740641bd768beada794d582fc1" category="cell">Aggiungere dischi a un aggregato</block>
-  <block id="64209bde9f2d422a086f99622664bb4b" category="list-text">Sotto il ... (Icona ellisse), fare clic su *Aggiungi dischi*.</block>
   <block id="b98fc1f56f56b03e2525b90a45df7e45" category="list-text">Selezionare il numero di dischi che si desidera aggiungere e fare clic su *Aggiungi*.</block>
   <block id="149dd55e6760c710e611c0480e5069ac" category="cell">Aumenta la capacità di un aggregato che supporta i volumi elastici di Amazon EBS</block>
-  <block id="54afa16678d9fa49dd4f37f5d8d62d51" category="list-text">Sotto il ... (Icona ellisse), fare clic su *aumenta capacità*.</block>
   <block id="cacd62863a1aec474ea14c7ba39b9f28" category="list-text">Immettere la capacità aggiuntiva che si desidera aggiungere, quindi fare clic su *aumento*.</block>
   <block id="ddc70e48be52170226876f32fd0d0955" category="paragraph">Si noti che è necessario aumentare la capacità dell'aggregato di un minimo di 256 GiB o del 10% delle dimensioni dell'aggregato.</block>
   <block id="457b4b096cd2396d1dc52e52b77f7f16" category="paragraph">Ad esempio, se si dispone di un aggregato 1.77 TIB, il 10% corrisponde a 181 GiB. Si tratta di un valore inferiore a 256 GiB, pertanto le dimensioni dell'aggregato devono aumentare di almeno 256 GiB.</block>
   <block id="8ce62ed0fdfe7abb736c3597956922c2" category="cell">Eliminare un aggregato</block>
-  <block id="f20c2435bfa2bf017b0a33455e4d252c" category="list-text">Selezionare una sezione aggregata che non contiene volumi. Fare clic sul pulsante *... (Icona ellisse) &gt; Elimina*.</block>
   <block id="8bb4bde51e0ea674bc0393c5923c7145" category="summary">È possibile creare aggregati o lasciare che BlueXP lo faccia per te quando crea volumi. Il vantaggio della creazione di aggregati consiste nella possibilità di scegliere la dimensione del disco sottostante, che consente di dimensionare l'aggregato in base alla capacità o alle performance necessarie.</block>
   <block id="c165494898bc0fbf27151d6359a27936" category="doc">Creare aggregati</block>
   <block id="67ea3f429e13cb33e66f1359eb85cc04" category="list-text">Nella pagina Canvas, fare doppio clic sul nome dell'istanza di Cloud Volumes ONTAP su cui si desidera gestire gli aggregati.</block>
@@ -2597,7 +2588,6 @@
   <block id="502ba236a1cae83a29d3574451caea8b" category="list-text">Selezionare la relazione e fare clic su *operazioni &gt; Quiesce*.</block>
   <block id="58f03f4aa156a72c372951a943f6b4d3" category="section-title">Verificare che gli aggregati siano online</block>
   <block id="8934d548c1104122f0b1a27daeb92ffa" category="paragraph">Gli aggregati per Cloud Volumes ONTAP devono essere online prima di aggiornare il software. Gli aggregati devono essere online nella maggior parte delle configurazioni, ma in caso contrario, è necessario portarli online.</block>
-  <block id="61c67604de243e1d1f09464a53018e48" category="list-text">Sotto il titolo dell'aggregato, fare clic sul pulsante ellisse, quindi selezionare *Visualizza dettagli dell'aggregato*.</block>
   <block id="8a58bd2f86c7acb1b532ae3d8d8ffea5" category="inline-image-macro">Schermata: Mostra il campo Stato quando si visualizzano le informazioni per un aggregato.</block>
   <block id="46804cb5ec7cb836d1b3ea87af016b42" category="paragraph"><block ref="46804cb5ec7cb836d1b3ea87af016b42" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3c9582501e322eb574b7a8f727a9838c" category="list-text">Se l'aggregato non è in linea, utilizzare System Manager per portare l'aggregato online:</block>
@@ -2637,7 +2627,6 @@
   <block id="752a2c1ba3bb227b061216ee70132a08" category="paragraph">Sono disponibili due percorsi. Il percorso corretto dipende dalla versione del connettore.</block>
   <block id="1b19ae48e0693419e1e905991459c290" category="list-text"><block ref="b31c7138696aef9cf55dc226ffd11bfa" prefix="" category="inline-code"></block></block>
   <block id="93f9a2aa0331918bf3f1a44fb42f791e" category="list-text"><block ref="d42052aef7da6deaffc65522893f95f6" prefix="" category="inline-code"></block></block>
-  <block id="c916a82ca6e79a33689505d2642c711c" category="list-text">Dall'ambiente di lavoro in BlueXP, fare clic sul pulsante *... (Icona ellisse)*, quindi fare clic su *Aggiorna Cloud Volumes ONTAP*.</block>
   <block id="31a578b8e294d03f4be50639f79e8160" category="list-text">Nella pagina Aggiorna versione Cloud Volumes ONTAP, immettere l'URL, quindi fare clic su *Cambia immagine*.</block>
   <block id="36b9b0b795315e6103637ec1e81df1ae" category="paragraph">Se l'immagine software è stata copiata nel connettore nel percorso indicato sopra, immettere il seguente URL:</block>
   <block id="3dbcdaf55d05d32136f76c127fdacce1" category="paragraph">Http://&lt;Connector-private-IP-address&gt;/ontap/images/&lt;image-file-name&gt;</block>
@@ -3237,7 +3226,6 @@
   <block id="a69f417641ff2d2784782a6898f8f2de" category="inline-link">Scopri di più sull'istanza di classificazione BlueXP</block>
   <block id="57cbefe39109ab51b31e818f9ce6d9c4" category="list-text">Eliminare l'ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="deacec910b77251dad4f11490aa93221" category="list-text">Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro Cloud Volumes ONTAP che si desidera eliminare.</block>
-  <block id="0f6046d8813989f95f3ce9353dba26a5" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona dell'ellisse e selezionare *Delete* (Elimina).</block>
   <block id="4a9ee4aa88ebf38223ea447fe291d222" category="inline-image-macro">Una schermata che mostra il menu disponibile dall'ambiente di lavoro che contiene l'azione Delete (Elimina).</block>
   <block id="ec8e04c7758ae04f1375383b387929a1" category="paragraph"><block ref="ec8e04c7758ae04f1375383b387929a1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e46b959133eadbb0d00ac0a308843f30" category="list-text">Nella finestra Delete Working Environment (Elimina ambiente di lavoro), digitare il nome dell'ambiente di lavoro, quindi fare clic su *Delete* (Elimina).</block>
@@ -3311,7 +3299,6 @@
   <block id="017482efc6f3c5791be39e26da43f9c3" category="list-text">Riscoprirla da un altro sistema BlueXP</block>
   <block id="c0745336f44247c724e2de0e640b4daa" category="list-text">Riscoprirla se si sono verificati problemi durante il rilevamento iniziale</block>
   <block id="3f5b7e3773583b9ca6b634b5264139c7" category="list-text">Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro che si desidera rimuovere.</block>
-  <block id="a9d8201fa61b52d04aa8d5efa98407ef" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona dell'ellisse e selezionare *Rimuovi dall'area di lavoro*.</block>
   <block id="41aeb32afbd7adcd7344a525b524aa2e" category="inline-image-macro">Una schermata che mostra l'opzione "Remove from Workspace" (Rimuovi dall'area di lavoro) nella parte superiore destra della console BlueXP.</block>
   <block id="68dff8388aadd10577c0c664fc4fa756" category="paragraph"><block ref="68dff8388aadd10577c0c664fc4fa756" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ccc69ca3b9f50bd572baa407834f41ed" category="list-text">Nella finestra Review from Workspace (esamina da area di lavoro), fare clic su *Remove* (Rimuovi).</block>
@@ -5242,4 +5229,19 @@ Per le coppie ha, puoi selezionare i ruoli IAM per Cloud Volumes ONTAP e ha medi
   <block id="3f0b36cd14ec7bfa0b4b01e076c44477" category="sidebar">Avvio rapido per le aree principali di AWS Secret/Cloud</block>
   <block id="daa9928416a167d9b7399ff9cc7d8ca0" category="inline-link-macro">Conversione di un'istanza CVO Xen di AWS in Nitro (KVM)</block>
   <block id="77c35fc79180e21cd19319ed21d08508" category="paragraph">Se non è possibile modificare il tipo di istanza da istanze C4, M4 o R4, vedere l'articolo della Knowledge base <block ref="609c7ea2ea8625480f6266b3b7e7b947" category="inline-link-macro-rx"></block>.</block>
+  <block id="4d3482cab23eb402cf41eedc8626a3b7" category="list-text">Sotto il titolo aggregato, fare clic sul pulsante puntini di sospensione, quindi selezionare *Visualizza dettagli aggregati*.</block>
+  <block id="12cf9bddd8c4164812494d4fa3077665" category="list-text">Dall'ambiente di lavoro di BlueXP, fare clic sul pulsante *... (Icona ellissi)*, quindi fare clic su *Aggiorna Cloud Volumes ONTAP*.</block>
+  <block id="f2f8cb191116ce13c9353aba365ae95e" category="list-text">Passare alla sezione di aggregazione desiderata, quindi fare clic sul pulsante *... (Icona ellissi) &gt; Visualizza dettagli aggregati*.</block>
+  <block id="138ffbf4a93266d3e7b39c528c04d8c7" category="list-text">Selezionare l'aggregato, quindi fare clic sul pulsante *... (Icona ellissi) &gt; Aggiungi dischi*.</block>
+  <block id="4c71965d58af1f26dd6e9a862f318b07" category="list-text">Nella scheda aggregati, selezionare il titolo desiderato e fare clic sul pulsante *... (icona ellissi)*.</block>
+  <block id="79af7751c40a5bdf0f691ca3f8994daa" category="cell">Nel menu ... (icona ellissi), fare clic su *Visualizza dettagli aggregati*.</block>
+  <block id="aa2920a3834825d262230b29a81f049d" category="cell">Nel menu ... (icona ellissi), fare clic su *Aggiungi volume*.</block>
+  <block id="e85c530b7823cc4004b235aef0a57796" category="list-text">Nel menu ... (icona ellissi), fare clic su *Aggiungi dischi*.</block>
+  <block id="ffce78aa73104a63f2c157847b6ffc7c" category="list-text">Nel menu ... (icona ellissi), fare clic su *aumenta capacità*.</block>
+  <block id="2edc419b0e18ec1ac829938d9101535e" category="list-text">Selezionare un riquadro aggregato che non contiene volumi fare clic sul pulsante *... (Icona ellissi) &gt; Elimina*.</block>
+  <block id="8c4fbb7e9bd5b396b627cc7e7862fbba" category="list-text">Nella parte superiore destra della console BlueXP, fai clic sull'icona con i puntini di sospensione e seleziona *Elimina*.</block>
+  <block id="a0655fd5613af03dfa2a11af68b42b2e" category="list-text">Nella parte superiore destra della console BlueXP, fai clic sull'icona con i puntini di sospensione e seleziona *Imposta password*.</block>
+  <block id="21374a20e08d3e0c8ca328133d8fe5f4" category="list-text">Nella parte superiore destra della console BlueXP, fare clic sull'icona dei puntini di sospensione e selezionare *Rimuovi dall'area di lavoro*.</block>
+  <block id="b724364be6320cfd44126523f60ef584" category="inline-link">Distribuzione programmatica dei prodotti Marketplace</block>
+  <block id="1466cb0ca0af8994440faa54da634c8d" category="list-text">*Iscriviti da Azure Marketplace*: Se BlueXP non è in grado di abilitare le implementazioni programmatiche di Cloud Volumes ONTAP, visualizzerai questa pagina. Seguire i passaggi elencati sullo schermo. Vedere<block ref="bc817edffaba6b19533f23cdb879088c" category="inline-link-rx"></block> per ulteriori informazioni.</block>
 </blocks>

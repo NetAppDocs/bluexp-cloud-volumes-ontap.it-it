@@ -258,7 +258,7 @@ Ad esempio, le informazioni avanzate dovrebbero dire qualcosa di simile a quanto
 . Identificare uno o più volumi da spostare fuori dall'aggregato:
 +
 .. Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.
-.. Selezionare la sezione aggregata desiderata, quindi fare clic sul pulsante *... (Icona ellisse) > Visualizza dettagli aggregati*.
+.. Passare alla sezione di aggregazione desiderata, quindi fare clic sul pulsante *... (Icona ellissi) > Visualizza dettagli aggregati*.
 .. Nella scheda Overview (Panoramica) della schermata aggregate Details (Dettagli aggregato), esaminare le dimensioni di ciascun volume e scegliere uno o più volumi da spostare fuori dall'aggregato.
 +
 È necessario scegliere volumi sufficientemente grandi da liberare spazio nell'aggregato in modo da evitare ulteriori problemi di capacità in futuro.
@@ -339,7 +339,7 @@ Lo spostamento di due o più volumi è necessario per evitare problemi di capaci
 . Verificare se un aggregato esistente dispone di capacità disponibile per i volumi da spostare:
 +
 .. Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.
-.. Selezionare la sezione aggregata desiderata, quindi fare clic sul pulsante *... (Icona ellisse) > Visualizza dettagli aggregati*.
+.. Passare alla sezione di aggregazione desiderata, quindi fare clic sul pulsante *... (Icona ellissi) > Visualizza dettagli aggregati*.
 .. Nella sezione aggregato, visualizzare la capacità disponibile (dimensione fornita meno capacità aggregata utilizzata).
 +
 image::screenshot_aggr_capacity.png[screenshot aggr capacità]
@@ -348,7 +348,7 @@ image::screenshot_aggr_capacity.png[screenshot aggr capacità]
 
 . Se necessario, aggiungere dischi a un aggregato esistente:
 +
-.. Selezionare l'aggregato, quindi fare clic sul pulsante *... (Icona ellisse) > Add Disks* (Aggiungi dischi).
+.. Selezionare l'aggregato, quindi fare clic sul pulsante *... (Icona ellissi) > Aggiungi dischi*.
 .. Selezionare il numero di dischi da aggiungere, quindi fare clic su *Aggiungi*.
 
 

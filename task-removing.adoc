@@ -28,7 +28,7 @@ La rimozione di un ambiente di lavoro da BlueXP consente di effettuare le seguen
 
 .Fasi
 . Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro che si desidera rimuovere.
-. Nella parte superiore destra della console BlueXP, fare clic sull'icona dell'ellisse e selezionare *Rimuovi dall'area di lavoro*.
+. Nella parte superiore destra della console BlueXP, fare clic sull'icona dei puntini di sospensione e selezionare *Rimuovi dall'area di lavoro*.
 +
 image:screenshot_settings_remove.png["Una schermata che mostra l'opzione \"Remove from Workspace\" (Rimuovi dall'area di lavoro) nella parte superiore destra della console BlueXP."]
 

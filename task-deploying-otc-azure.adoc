@@ -143,7 +143,7 @@ Se si sceglie uno dei pacchetti, è sufficiente specificare un volume e quindi r
 
 NOTE: Se è disponibile una release Release Candidate, General Availability o patch più recente per la versione selezionata, BlueXP aggiorna il sistema a quella versione durante la creazione dell'ambiente di lavoro. Ad esempio, l'aggiornamento si verifica se si seleziona Cloud Volumes ONTAP 9.10.1 e 9.10.1 P4 è disponibile. L'aggiornamento non si verifica da una release all'altra, ad esempio da 9.6 a 9.7.
 
-. *Iscriviti al marketplace Azure*: Segui la procedura se BlueXP non è riuscito ad abilitare le implementazioni programmatiche di Cloud Volumes ONTAP.
+. *Iscriviti da Azure Marketplace*: Se BlueXP non è in grado di abilitare le implementazioni programmatiche di Cloud Volumes ONTAP, visualizzerai questa pagina. Seguire i passaggi elencati sullo schermo. Vedere https://learn.microsoft.com/en-us/marketplace/programmatic-deploy-of-marketplace-products["Distribuzione programmatica dei prodotti Marketplace"^] per ulteriori informazioni.
 . *Risorse di storage sottostanti*: Scegliere le impostazioni per l'aggregato iniziale: Un tipo di disco, una dimensione per ciascun disco e se attivare il tiering dei dati per lo storage Blob.
 +
 Tenere presente quanto segue:

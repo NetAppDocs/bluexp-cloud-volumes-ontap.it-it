@@ -977,12 +977,10 @@
   <block id="9f3e8e28b8288d2d66ebc481e1f389d6" category="paragraph">Oltre allo storage per i dati degli utenti, BlueXP acquista anche lo storage cloud per i dati di sistema.</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="section-title">AWS</block>
   <block id="6fa32f5b70701d0a688b6541beb74a09" category="list-text">Tre dischi per nodo per i dati di boot, root e core:</block>
-  <block id="0916ca1fe06d26f579d29ce41bba24aa" category="list-text">45 disco GiB io1 per i dati di boot</block>
   <block id="98e2070bab7b3b5d7d8df93c31a0d604" category="list-text">Disco gp3 da 140 GiB per i dati root</block>
   <block id="465787191a1ad58255cf080d2465757a" category="list-text">Disco gp2 da 540 GiB per i dati principali</block>
   <block id="8cf431bb515ae46f1fb5484e8bb27744" category="list-text">Un'istantanea EBS per ogni disco di boot e disco root</block>
   <block id="51f3f3385ba782f2b8752155e908cf60" category="admonition">Le snapshot vengono create automaticamente al riavvio.</block>
-  <block id="0d9e99df90b8b75f4e0d96d0d4445a8c" category="list-text">Per le coppie ha, un volume EBS per l'istanza Mediator, che è di circa 8 GiB</block>
   <block id="8d4073fa4a8e186f65d9241d17413d18" category="list-text">Quando si attiva la crittografia dei dati in AWS utilizzando il servizio di gestione delle chiavi (KMS), vengono crittografati anche i dischi di avvio e i dischi root per Cloud Volumes ONTAP. Questo include il disco di boot per l'istanza del mediatore in una coppia ha. I dischi vengono crittografati utilizzando la CMK selezionata quando si crea l'ambiente di lavoro.</block>
   <block id="5170b265fcdfa9d59388a2d953d0277b" category="admonition">In AWS, la NVRAM si trova sul disco di avvio.</block>
   <block id="5639612d2f12168c8a83a7d9f034340d" category="section-title">Azure (nodo singolo)</block>
@@ -4252,8 +4250,6 @@
   <block id="521c31e5e6d2868178e36a845afac351" category="summary">Una configurazione Cloud Volumes ONTAP ad alta disponibilità (ha) offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.</block>
   <block id="828fb65f829775430308146b1ce7cd2e" category="paragraph">In AWS, le configurazioni Cloud Volumes ONTAP ha includono i seguenti componenti:</block>
   <block id="fa8a1c8a7fb2a9d0529dc6ce8d75f99e" category="paragraph">Di seguito sono riportati alcuni dettagli chiave sull'istanza del mediatore in AWS:</block>
-  <block id="ec078029075995846064f8135ac001c7" category="list-text">t2-micro</block>
-  <block id="2928ec952c28834c42708b6033983463" category="list-text">Un disco magnetico EBS di circa 8 GiB.</block>
   <block id="5d345d14f8662bfe45d8562fba90c487" category="list-text">Quando si crea una coppia Cloud Volumes ONTAP ha da BlueXP, viene richiesto di fornire una coppia di chiavi per l'istanza del mediatore. È possibile utilizzare tale coppia di chiavi per l'accesso SSH utilizzando<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block> utente.</block>
   <block id="7657d465c1c0f4f6bfa9bdc17df2b08c" category="section-title">Accesso ai dati NFS e CIFS</block>
   <block id="34df161a9c0315272455a0dcc8b35711" category="paragraph">Quando una configurazione ha viene distribuita in più zone di disponibilità, _indirizzi IP mobili_ abilitano l'accesso al client NAS. Gli indirizzi IP mobili, che devono essere al di fuori dei blocchi CIDR per tutti i VPC della regione, possono migrare tra i nodi in caso di guasti. Non sono accessibili in modo nativo ai client che si trovano al di fuori del VPC, a meno che non si <block ref="f196b90949d1249f4f3797eb7257a21d" category="inline-link-macro-rx"></block>.</block>
@@ -5282,4 +5278,9 @@ In più configurazioni di zone di disponibilità, esistono tre istanze, due nodi
   <block id="b3e67e9d7f5be7902fd87917d0acb3e0" category="section-title">Supporto per le zone locali di Amazon Web Services</block>
   <block id="6f9fa4d02a6081aa6d33b131d8532328" category="paragraph">Il supporto per le zone locali di AWS è ora disponibile per le implementazioni ha di Cloud Volumes ONTAP. Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore.</block>
   <block id="b75accaa363606f733ab4203f45f8193" category="paragraph">Per ulteriori informazioni sulle zone locali di AWS con implementazioni ha, fare riferimento a. <block ref="6830ae69d7be576a68a954338edafef9" category="inline-link-macro-rx"></block>.</block>
+  <block id="d4d3c7dc9c12800024fafcb2bb41c04f" category="list-text">47 disco GiB io1 per i dati di avvio</block>
+  <block id="f4be35522ac705cbe795ea064998a28b" category="list-text">Per le coppie ha, due volumi ST1 EBS per l'istanza mediatore, che sono approssimativamente 8 GiB e 4 GiB, e un disco aggiuntivo 140 GiB GP3 in ciascun nodo in modo da contenere una copia dei dati root dell'altro nodo.</block>
+  <block id="10e3d4119b538d4a3b1943da285229fc" category="admonition">In alcune zone, il tipo di disco EBS disponibile può essere solo GP2.</block>
+  <block id="0c14d315376234aa666bf4213aa88aec" category="list-text">t3-micro</block>
+  <block id="5dde3a7c362c6b03a35cf3c0b3374d14" category="list-text">Due dischi ST1 da 8 GiB e 4 GiB</block>
 </blocks>

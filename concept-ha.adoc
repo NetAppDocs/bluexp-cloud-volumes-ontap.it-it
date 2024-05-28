@@ -32,8 +32,8 @@ In AWS, le configurazioni Cloud Volumes ONTAP ha includono i seguenti componenti
 
 Di seguito sono riportati alcuni dettagli chiave sull'istanza del mediatore in AWS:
 
-Tipo di istanza:: t2-micro
-Dischi:: Un disco magnetico EBS di circa 8 GiB.
+Tipo di istanza:: t3-micro
+Dischi:: Due dischi ST1 da 8 GiB e 4 GiB
 Sistema operativo:: Debian 11
 +
 --

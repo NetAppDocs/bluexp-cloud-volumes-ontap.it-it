@@ -147,17 +147,21 @@ ifdef::aws[]
 
 * Tre dischi per nodo per i dati di boot, root e core:
 +
-** 45 disco GiB io1 per i dati di boot
+** 47 disco GiB io1 per i dati di avvio
 ** Disco gp3 da 140 GiB per i dati root
 ** Disco gp2 da 540 GiB per i dati principali
 
+
+* Per le coppie ha, due volumi ST1 EBS per l'istanza mediatore, che sono approssimativamente 8 GiB e 4 GiB, e un disco aggiuntivo 140 GiB GP3 in ciascun nodo in modo da contenere una copia dei dati root dell'altro nodo.
++
+
+NOTE: In alcune zone, il tipo di disco EBS disponibile può essere solo GP2.
 
 * Un'istantanea EBS per ogni disco di boot e disco root
 +
 
 NOTE: Le snapshot vengono create automaticamente al riavvio.
 
-* Per le coppie ha, un volume EBS per l'istanza Mediator, che è di circa 8 GiB
 * Quando si attiva la crittografia dei dati in AWS utilizzando il servizio di gestione delle chiavi (KMS), vengono crittografati anche i dischi di avvio e i dischi root per Cloud Volumes ONTAP. Questo include il disco di boot per l'istanza del mediatore in una coppia ha. I dischi vengono crittografati utilizzando la CMK selezionata quando si crea l'ambiente di lavoro.
 
 

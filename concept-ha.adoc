@@ -158,6 +158,9 @@ Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage
 Puoi implementare una configurazione con AZ singolo o AZ multiplo in zone locali di AWS.
 
 
+NOTE: Le zone locali di AWS sono supportate quando si utilizza BlueXP in modalità standard. Al momento, i zone locali di AWS non sono supportati quando si utilizza BlueXP in modalità limitata o privata.
+
+
 
 ==== Esempio di configurazioni della zona locale di AWS
 

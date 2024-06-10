@@ -28,7 +28,7 @@ Di seguito viene riportata una panoramica del processo di verifica delle immagin
 ** Certificato contenente la chiave pubblica (.pem)
 ** Catena di certificati (.pem)
 +
-image:screenshot_cloud_volumes_ontap_tar.gz.png["Immagine che mostra la pagina NSS contenente i download del file digest tar.gz"]
+image::screenshot_cloud_volumes_ontap_tar.gz.png[schermata Cloud Volumes ONTAP tar.gz]
 
 
 
@@ -40,7 +40,7 @@ image:screenshot_cloud_volumes_ontap_tar.gz.png["Immagine che mostra la pagina N
 ** Creare un digest del file disk.raw scaricato
 ** Confrontare i due file digest per la convalida
 +
-image:graphic_azure_check_signature.png["Immagine che mostra il processo di verifica della firma dell'immagine"]
+image::graphic_azure_check_signature.png[firma del controllo visivo grafico]
 
 
 

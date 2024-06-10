@@ -20,6 +20,18 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 10 giugno 2024
+
+
+
+=== Cloud Volumes ONTAP 9.15.0
+
+BlueXP ora può implementare e gestire Cloud Volumes ONTAP 9.15.0 in AWS, Azure e Google Cloud.
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+
+
+
 == 17 maggio 2024
 
 
@@ -149,6 +161,8 @@ link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-config
 
 BlueXP ora può implementare e gestire Cloud Volumes ONTAP 9.14.1 in AWS, Azure e Google Cloud.
 
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9141-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+
 
 
 === Limite massimo volume FlexVol 300 TiB
@@ -274,7 +288,7 @@ La seguente modifica è stata introdotta con la versione 3.9.34 del connettore.
 
 BlueXP può ora implementare e gestire la release di disponibilità generale di Cloud Volumes ONTAP 9.14.0 in AWS, Azure e Google Cloud.
 
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9140-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
 
 
 
@@ -341,7 +355,7 @@ Le seguenti modifiche sono state introdotte con la versione 3.9.31 del connettor
 
 BlueXP è ora in grado di implementare e gestire la release di disponibilità generale di Cloud Volumes ONTAP 9.13.1 in AWS, Azure e Google Cloud.
 
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9131-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
 
 
 
@@ -377,7 +391,7 @@ La seguente modifica è stata introdotta con la versione 3.9.30 del connettore.
 
 BlueXP è ora in grado di implementare e gestire Cloud Volumes ONTAP 9.13.1 in AWS, Azure e Google Cloud.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+https://docs.netapp.com/us-en/cloud-volumes-ontap-9131-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
 
 
 
@@ -525,7 +539,7 @@ Le seguenti modifiche sono state introdotte con la versione 3.9.27 del connettor
 
 BlueXP è ora in grado di implementare e gestire Cloud Volumes ONTAP 9.13.0 in AWS, Azure e Google Cloud.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
+https://docs.netapp.com/us-en/cloud-volumes-ontap-9130-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
 
 
 
@@ -638,7 +652,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes["Scopri le nuove
 
 BlueXP è ora in grado di implementare e gestire Cloud Volumes ONTAP 9.12.1, che include il supporto per nuove funzionalità e aree di cloud provider aggiuntive.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^]
 
 
 

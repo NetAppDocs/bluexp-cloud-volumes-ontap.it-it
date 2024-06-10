@@ -22,7 +22,7 @@ NOTE: I comandi OpenSSL per la convalida dell'immagine sono compatibili con macc
 .Fasi
 . Verificare il certificato utilizzando OpenSSL.
 +
-.Fare clic per visualizzare lo script
+.Fare clic per visualizzare
 [%collapsible]
 ====
 [listing]
@@ -133,7 +133,7 @@ Certificate-GCP-CVO-20230119-0XXXXX.pem: OK
 . Estrarre la chiave pubblica dal certificato utilizzando OpenSSL.
 . Decrittare la firma utilizzando la chiave pubblica estratta e verificare il contenuto del file disk.raw scaricato.
 +
-.Fare clic per visualizzare lo script
+.Fare clic per visualizzare
 [%collapsible]
 ====
 [listing]

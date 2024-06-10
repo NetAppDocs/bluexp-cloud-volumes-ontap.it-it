@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-file-verification-linux.html 
+keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, Linux 
+summary: Verificare la firma di un file VHD esportato tramite lo strumento file di digitalizzazione immagine Cloud Volumes ONTAP su Linux 
+---
+= Verifica della firma dei file su Linux
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile verificare la firma di un file VHD esportato per Linux seguendo la procedura riportata di seguito.
+
+.Fasi
+. Scaricare il file Azure Image Digest dal https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estrarre il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).
++
+Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Scaricare il file di Azure Image Digest"^] per ulteriori informazioni.
+
+. Verificare la catena di trust.
++
+[listing]
+----
+% openssl verify -CAfile Certificate-Chain-9.15.0P1_azure.pem Certificate-9.15.0P1_azure.pem
+Certificate-9.15.0P1_azure.pem: OK
+----
+. Rimuovere i 1MB iniziali (1048576 byte) e i 512 byte finali del file VHD.
++
+Se si usa 'tail', l'opzione '-c +K' genera byte che iniziano con i kth byte del file specificato. Quindi, 1048577 viene passato alla coda -c'.
+
++
+[listing]
+----
+% tail -c +1048577 ./9150.01000024.05090105.vhd > ./sign.tmp.tail
+% head -c -512 ./sign.tmp.tail > sign.tmp
+% rm ./sign.tmp.tail
+----
+. Utilizzare openssl per estrarre la chiave pubblica dal certificato e verificare il file con striping (sign.tmp) con il file della firma e la chiave pubblica.
++
+Se il file di input supera la verifica, viene visualizzato il comando
+"Verifica OK". In caso contrario, viene visualizzato "errore di verifica".
+
++
+[listing]
+----
+% openssl x509 -pubkey -noout -in ./Certificate-9.15.0P1_azure.pem > ./Code-Sign-Cert-Public-key.pub
+
+% openssl dgst -verify Code-Sign-Cert-Public-key.pub -keyform PEM -sha256 -signature digest.sig -binary ./sign.tmp
+Verification OK
+
+% openssl dgst -verify Code-Sign-Cert-Public-key.pub -keyform PEM -sha256 -signature digest.sig -binary ./another_file_from_nowhere.tmp
+Verification Failure
+----
+. Pulire lo spazio di lavoro.
++
+[listing]
+----
+% rm ./9150.01000024.05090105.vhd ./sign.tmp
+% rm *.sig *.pub *.pem
+----
+

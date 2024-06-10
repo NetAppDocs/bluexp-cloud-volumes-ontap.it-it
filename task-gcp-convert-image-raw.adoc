@@ -43,7 +43,7 @@ Per eseguire questa operazione, l'utente/account deve disporre dei privilegi nec
 
 *Esportare l'immagine di Google Cloud utilizzando gcloud*
 
-.Fare clic per visualizzare lo script
+.Fare clic per visualizzare
 [%collapsible]
 ====
 [source]

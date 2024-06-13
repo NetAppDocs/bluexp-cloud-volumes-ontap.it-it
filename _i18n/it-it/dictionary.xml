@@ -1656,8 +1656,6 @@
   <block id="56d8602584b412c6fa4268dd3cbf0ccb" category="section-title">Panoramica sulla crittografia dei dati</block>
   <block id="a9048454eade4a62fb2113428b74129f" category="paragraph">I dati Cloud Volumes ONTAP vengono crittografati automaticamente in Azure utilizzando<block ref="7c6c7ca9180a9433e704ac02b33a8ed3" category="inline-link-rx"></block>. L'implementazione predefinita utilizza una chiave gestita da Microsoft. Non è richiesta alcuna configurazione.</block>
   <block id="15a37269c447b60002a307d0f82d2bd4" category="paragraph">Se si desidera utilizzare una chiave gestita dal cliente con Cloud Volumes ONTAP, attenersi alla seguente procedura:</block>
-  <block id="82d5594584c34cedea52f390f69b9b89" category="list-text">Da Azure, creare un vault delle chiavi e quindi generare una chiave in quel vault</block>
-  <block id="ec0c586d512637babfaca236d1a1cc87" category="list-text">Da BlueXP, utilizzare l'API per creare un ambiente di lavoro Cloud Volumes ONTAP che utilizza la chiave</block>
   <block id="7c198fa2e871a635fde91e3430fc340b" category="section-title">Rotazione delle chiavi</block>
   <block id="552690dff240721c335dffa2d29b8ef8" category="paragraph">Se si crea una nuova versione della chiave, Cloud Volumes ONTAP utilizza automaticamente la versione più recente.</block>
   <block id="0ea67820edee1410e568b14bb70835d0" category="section-title">Modalità di crittografia dei dati</block>
@@ -1672,7 +1670,6 @@
   <block id="1be48617ce5825c4bd54ef885eef8a65" category="list-text">Devono essere attivate le seguenti opzioni:</block>
   <block id="ba6db2df53167b0fe62e3b5c762cbbf1" category="list-text">*Soft-delete* (questa opzione è attivata per impostazione predefinita, ma deve _non_ essere disattivata)</block>
   <block id="fd08f80d1ec5aa4440248321eace716f" category="list-text">*Protezione da spurgo*</block>
-  <block id="d01b00b7df0dd6620e8ab49fb88f67b9" category="list-text">*Azure Disk Encryption per la crittografia dei volumi* (per sistemi a nodo singolo o coppie ha in più zone)</block>
   <block id="8079302cfd5fd5ac16a06e331392b172" category="inline-link">Generare una chiave nell'archivio chiavi</block>
   <block id="08226457c01755d5b1d666bac6bf1add" category="list-text"><block ref="f3e81382631201ff959343d3ba9dea1c" category="inline-link-rx"></block>.</block>
   <block id="4bad1b88b2d24ff3ad1376a54e1bddbd" category="paragraph">Tenere presente i seguenti requisiti per la chiave:</block>
@@ -5399,4 +5396,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="c803b37d9c2a34c73d0b86de8cae9ac8" category="paragraph"><block ref="c803b37d9c2a34c73d0b86de8cae9ac8" category="inline-link-rx"></block></block>
   <block id="bbe2b5062d2c900ca465f9eb12592a92" category="paragraph">Se richiesto dai criteri di protezione, è possibile configurare le istanze EC2 in modo che utilizzino IMDSv2. Per istruzioni, fare riferimento a.<block ref="a1765820625d1912b35ab79a3305fdea" category="inline-link-rx"></block>.</block>
   <block id="59232a2e0b92b4018a48415d0d13c3b4" category="list-text"><block ref="59232a2e0b92b4018a48415d0d13c3b4" category="inline-link-rx"></block></block>
+  <block id="312fcba055a7ab6b8314cb541c1f1b4f" category="list-text">*Azure Disk Encryption per la crittografia dei volumi* (per sistemi a nodo singolo, coppie ha in zone multiple e implementazioni ha Single AZ)</block>
+  <block id="4b63d3239df3134d1faedabb0e8eb859" category="admonition">L'utilizzo delle chiavi di crittografia Azure gestite dal cliente dipende dall'attivazione della crittografia del disco di Azure per il vault delle chiavi.</block>
 </blocks>

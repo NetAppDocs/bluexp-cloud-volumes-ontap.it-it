@@ -24,8 +24,8 @@ I dati Cloud Volumes ONTAP vengono crittografati automaticamente in Azure utiliz
 
 Se si desidera utilizzare una chiave gestita dal cliente con Cloud Volumes ONTAP, attenersi alla seguente procedura:
 
-. Da Azure, creare un vault delle chiavi e quindi generare una chiave in quel vault
-. Da BlueXP, utilizzare l'API per creare un ambiente di lavoro Cloud Volumes ONTAP che utilizza la chiave
+. Da Azure, creare un vault delle chiavi e quindi generare una chiave in quel vault.
+. Da BlueXP, utilizzare l'API per creare un ambiente di lavoro Cloud Volumes ONTAP che utilizza la chiave.
 
 
 
@@ -144,7 +144,11 @@ Tenere presente i seguenti requisiti per il vault delle chiavi:
 +
 *** *Soft-delete* (questa opzione è attivata per impostazione predefinita, ma deve _non_ essere disattivata)
 *** *Protezione da spurgo*
-*** *Azure Disk Encryption per la crittografia dei volumi* (per sistemi a nodo singolo o coppie ha in più zone)
+*** *Azure Disk Encryption per la crittografia dei volumi* (per sistemi a nodo singolo, coppie ha in zone multiple e implementazioni ha Single AZ)
++
+
+NOTE: L'utilizzo delle chiavi di crittografia Azure gestite dal cliente dipende dall'attivazione della crittografia del disco di Azure per il vault delle chiavi.
+
 
 
 ** Se è stata creata un'identità gestita assegnata dall'utente, deve essere attivata la seguente opzione:

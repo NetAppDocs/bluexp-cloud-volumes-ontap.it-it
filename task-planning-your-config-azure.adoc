@@ -54,7 +54,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azur
 
 Il dimensionamento del sistema Cloud Volumes ONTAP può aiutarti a soddisfare i requisiti di performance e capacità. Quando si sceglie un tipo di macchina virtuale, un tipo di disco e una dimensione del disco, è necessario tenere presenti alcuni punti chiave:
 
-Tipo di macchina virtuale:: Esaminare i tipi di macchine virtuali supportati in http://docs.netapp.com/cloud-volumes-ontap/us-en/index.html["Note di rilascio di Cloud Volumes ONTAP"^] Quindi, esaminare i dettagli relativi a ciascun tipo di macchina virtuale supportato. Tenere presente che ogni tipo di macchina virtuale supporta un numero specifico di dischi dati.
+Tipo di macchina virtuale:: Esaminare i tipi di macchine virtuali supportati in https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Note di rilascio di Cloud Volumes ONTAP"^] Quindi, esaminare i dettagli relativi a ciascun tipo di macchina virtuale supportato. Tenere presente che ogni tipo di macchina virtuale supporta un numero specifico di dischi dati.
 +
 --
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general#dsv2-series["Documentazione di Azure: Dimensioni generali delle macchine virtuali"^]

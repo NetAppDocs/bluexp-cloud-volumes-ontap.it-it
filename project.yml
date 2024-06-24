@@ -295,7 +295,7 @@ sidebar:
       url: "/concept-performance.html"
     - title: Gestione del BYOL basato su nodo
       url: "/concept-license-management.html"
-    - title: Consulente digitale AutoSupport e Active IQ
+    - title: AutoSupport e Digital Advisor
       url: "/concept-active-iq.html"
     - title: Configurazioni predefinite
       url: "/reference-default-configs.html"

@@ -194,6 +194,8 @@ sidebar:
         url: "/task-google-key-manager.html"
       - title: Migliorare la protezione ransomware
         url: "/task-protecting-ransomware.html"
+      - title: Crea copie Snapshot a prova di manomissione per lo storage WORM
+        url: "/reference-worm-snaplock.html"
     - title: Amministrazione del sistema
       entries:
       - title: Aggiornare Cloud Volumes ONTAP

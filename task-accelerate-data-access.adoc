@@ -29,3 +29,43 @@ Puoi anche utilizzare l'interfaccia a riga di comando di ONTAP o ONTAP System Ma
 BlueXP genera una licenza FlexCache per tutti i nuovi sistemi Cloud Volumes ONTAP. La licenza include un limite di utilizzo di 500 GiB.
 
 video::PBNPVRUeT1o[youtube,width=848,height=480]
+
+
+== Utilizzare FlexCache quando l'origine è crittografata
+
+Quando si configura FlexCache su un sistema Cloud Volumes ONTAP in cui il volume di origine è crittografato, sono necessari ulteriori passaggi per garantire che il volume FlexCache possa accedere correttamente e memorizzare nella cache i dati crittografati.
+
+.Di cosa hai bisogno
+. *Impostazione crittografia*: Verificare che il volume di origine sia completamente crittografato e operativo. Per i sistemi Cloud Volumes ONTAP, ciò implica l'integrazione con servizi di gestione delle chiavi specifici del cloud.
+
+
+ifdef::aws[]
+
+Per AWS, questo generalmente significa utilizzare AWS Key Management Service (KMS). Per informazioni, fare riferimento alla link:task-aws-key-management.html["Gestione delle chiavi con AWS Key Management Service"].
+
+endif::aws[]
+
+ifdef::azure[]
+
+Per Azure, è necessario configurare Azure Key Vault per NetApp Volume Encryption (NVE). Per informazioni, fare riferimento alla link:task-azure-key-vault.html["Gestisci le chiavi con Azure Key Vault"].
+
+endif::azure[]
+
+ifdef::gcp[]
+
+Per Google Cloud, si tratta di Google Cloud Key Management Service. Per informazioni, fare riferimento alla link:task-google-key-manager.html["Gestisci le chiavi con il servizio Cloud Key Management di Google"].
+
+endif::gcp[]
+
+. *Servizi di gestione delle chiavi*: Prima di creare un volume FlexCache, verificare che i servizi di gestione delle chiavi siano configurati correttamente sul sistema Cloud Volumes ONTAP. Questa configurazione è essenziale per il volume FlexCache per decrittografare i dati dal volume di origine.
+. *Licenze*: Verificare che sul sistema Cloud Volumes ONTAP sia disponibile e attivata una licenza FlexCache valida. BlueXP genera una licenza FlexCache per tutti i nuovi sistemi Cloud Volumes ONTAP con un limite di utilizzo di 500 GiB.
+. *Versione ONTAP*: Verificare che la versione ONTAP del sistema Cloud Volumes ONTAP supporti FlexCache con volumi crittografati. Per ulteriori informazioni, fare riferimento alla matrice di compatibilità o all'ultima https://docs.netapp.com/us-en/ontap/release-notes/index.html["Note di rilascio di ONTAP"^] versione.
+. *Configurazione di rete*: Assicurarsi che la configurazione di rete consenta una comunicazione senza interruzioni tra il volume di origine e il volume FlexCache. Ciò include routing e risoluzione DNS corretti in un ambiente cloud.
+
+
+.Fasi
+Creazione di un volume FlexCache sul sistema Cloud Volumes ONTAP con un volume di origine crittografato. Per i passaggi dettagliati e ulteriori considerazioni, fare riferimento alle seguenti sezioni:
+
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-fc-mgmt/home.html["Guida all'alimentazione di FlexCache Volumes per un accesso più rapido ai dati"^]
+* http://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-07F4C213-076D-4FE8-A8E3-410F49498D49.html["Creazione di volumi FlexCache in Gestore di sistema"^]
+

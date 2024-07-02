@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: reference-worm-snaplock.html 
+keywords: WORM, SnapLock, Snapshot copies, 
+summary: 'Puoi creare copie Snapshot a prova di manomissione dei file WORM (Write Once, Read Many) su un sistema Cloud Volumes ONTAP e conservare gli snapshot in forma non modificata per uno specifico periodo di conservazione.' 
+---
+= Crea copie Snapshot a prova di manomissione per lo storage WORM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puoi creare copie Snapshot a prova di manomissione dei file WORM (Write Once, Read Many) su un sistema Cloud Volumes ONTAP e conservare gli snapshot in forma non modificata per uno specifico periodo di conservazione. Questa funzionalità si basa sulla tecnologia SnapLock e fornisce un livello aggiuntivo di data Protection e conformità.
+
+.Prima di iniziare
+Verificare che il volume utilizzato per la creazione di copie Snapshot sia un volume SnapLock. Per informazioni sull'attivazione della protezione SnapLock sui volumi, fare riferimento a https://docs.netapp.com/us-en/ontap/snaplock/snaplock-config-overview-concept.html["Configurare SnapLock"^].
+
+.Fasi
+. Creare copie Snapshot dal volume SnapLock. Per informazioni sulla creazione di copie Snapshot utilizzando l'interfaccia CLI o System Manager, fare riferimento alla https://docs.netapp.com/us-en/ontap/data-protection/manage-local-snapshot-copies-concept.html["Panoramica sulla gestione delle copie Snapshot locali"^].
++
+Le copie Snapshot ereditano le proprietà WORM del volume, rendendole antimanomissione. La tecnologia SnapLock sottostante garantisce la protezione di uno snapshot dalla modifica e dall'eliminazione fino allo scadere del periodo di conservazione specificato.
+
+. È possibile modificare il periodo di conservazione se è necessario modificare questi snapshot. Per informazioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html#set-the-default-retention-period["Impostare il tempo di conservazione"^].
+
+
+
+NOTE: Anche se una copia Snapshot è protetta per un periodo di conservazione specifico, il volume di origine può essere eliminato da un amministratore del cluster, poiché lo storage WORM in Cloud Volumes ONTAP opera nell'ambito di un modello di "amministratore dello storage trusted". Inoltre, un amministratore del cloud fidato può eliminare i dati WORM operando sulle risorse di cloud storage.

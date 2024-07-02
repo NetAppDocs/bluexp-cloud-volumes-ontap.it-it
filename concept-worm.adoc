@@ -106,3 +106,7 @@ Quando si crea un nuovo sistema Cloud Volumes ONTAP 9.8 o versione successiva, Ã
 * Lo storage WORM in Cloud Volumes ONTAP opera sotto un modello "trusted storage Administrator". Mentre i file WORM sono protetti da modifiche o modifiche, i volumi possono essere cancellati da un amministratore del cluster anche se tali volumi contengono dati WORM non scaduti.
 * Oltre al modello di amministratore dello storage fidato, lo storage WORM in Cloud Volumes ONTAP opera implicitamente anche sotto un modello di "amministratore del cloud fidato". Un amministratore del cloud potrebbe eliminare i dati WORM prima della data di scadenza rimuovendo o modificando lo storage cloud direttamente dal cloud provider.
 
+
+.Informazioni correlate
+* link:reference-worm-snaplock.html["Crea copie Snapshot a prova di manomissione per lo storage WORM"]
+

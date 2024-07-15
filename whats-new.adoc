@@ -960,9 +960,7 @@ Quando BlueXP aggiorna il mediatore per una coppia ha, ora convalida la disponib
 
 === La scheda K8s è stata rimossa
 
-La scheda K8s era obsoleta in un precedente ed è stata rimossa. Se si desidera utilizzare Kubernetes con Cloud Volumes ONTAP, è possibile aggiungere cluster Kubernetes gestiti a Canvas come ambiente di lavoro per una gestione avanzata dei dati.
-
-https://docs.netapp.com/us-en/bluexp-kubernetes/concept-kubernetes.html["Scopri di più sulla gestione dei dati di Kubernetes in BlueXP"^]
+La scheda K8s era obsoleta in una versione precedente ed è stata rimossa.
 
 
 

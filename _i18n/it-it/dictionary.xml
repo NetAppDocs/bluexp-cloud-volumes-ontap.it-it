@@ -2952,8 +2952,6 @@
   <block id="a0834297e8b28b9a51d59500441c7351" category="section-title">Miglioramento degli aggiornamenti dei mediatori</block>
   <block id="17cc55e2cfcef39231025dad282b0760" category="paragraph">Quando BlueXP aggiorna il mediatore per una coppia ha, ora convalida la disponibilità di una nuova immagine del mediatore prima di eliminare il disco di avvio. Questa modifica garantisce che il mediatore possa continuare a funzionare correttamente in caso di esito negativo del processo di aggiornamento.</block>
   <block id="e6e5b99786bfefd88e32c940b7547ab3" category="section-title">La scheda K8s è stata rimossa</block>
-  <block id="6eb7d1343cce33ec7d31b57edd9f3aef" category="paragraph">La scheda K8s era obsoleta in un precedente ed è stata rimossa. Se si desidera utilizzare Kubernetes con Cloud Volumes ONTAP, è possibile aggiungere cluster Kubernetes gestiti a Canvas come ambiente di lavoro per una gestione avanzata dei dati.</block>
-  <block id="998eb27e3e05260958103da3d27eb4ac" category="inline-link">Scopri di più sulla gestione dei dati di Kubernetes in BlueXP</block>
   <block id="7475abfb4039c00bb03fd05d6d792b3d" category="section-title">Contratto annuale in Azure</block>
   <block id="52b398f13b1acf3e73584a9cb106e989" category="paragraph">I pacchetti Essentials e Professional sono ora disponibili in Azure attraverso un contratto annuale. Puoi contattare il tuo commerciale NetApp per acquistare un contratto annuale. Il contratto è disponibile come offerta privata in Azure Marketplace.</block>
   <block id="ba089edca33f314482ad946ae680f1eb" category="inline-link">Scopri di più sulle licenze</block>
@@ -4477,7 +4475,6 @@ Se si acquista una licenza direttamente da NetApp (BYOL), non è necessario un a
   <block id="8ade4dc1ca161da57728a6bf29be1db9" category="paragraph">Assicurarsi di fornire queste autorizzazioni a ciascun set di credenziali AWS aggiunto a BlueXP.<block ref="64ae4f789cd26cb4c9b5096ed42d2482" category="inline-link-rx"></block>.</block>
   <block id="ac1bc6f2b2358438076867200e537370" category="paragraph"><block ref="7abbb63a2cd3cab475ace2a577aa3de3" category="inline-link-rx"></block>.</block>
   <block id="07e4a4acdb333fe3d7b8dac1958d6459" category="list-text"><block ref="07e4a4acdb333fe3d7b8dac1958d6459" category="inline-link-rx"></block></block>
-  <block id="755c513b451157c807794bf1213fd1f9" category="paragraph"><block ref="755c513b451157c807794bf1213fd1f9" category="inline-link-rx"></block></block>
   <block id="73f030bd359abb41dc1089c470531542" category="paragraph"><block ref="37698926d26a2683d3b5c90c9b2406a6" category="inline-link-rx"></block>.</block>
   <block id="2e56aeba3c1fc24d42b0f15df12a08f9" category="paragraph"><block ref="5d4901194aa2380bf45bcc72c63f2763" category="inline-link-rx"></block>.</block>
   <block id="7abee0635d8cb81d3ae89fd8d82a442a" category="paragraph"><block ref="7abee0635d8cb81d3ae89fd8d82a442a" category="inline-image-macro-rx" type="image"></block></block>
@@ -5424,4 +5421,5 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="543cc078f66d581004934cfaa8988453" category="list-text">*Versione ONTAP*: Verificare che la versione ONTAP del sistema Cloud Volumes ONTAP supporti FlexCache con volumi crittografati. Per ulteriori informazioni, fare riferimento alla matrice di compatibilità o all'ultima<block ref="9ec4657ceea5a1d054b2b0fa2482a129" category="inline-link-rx"></block> versione.</block>
   <block id="38d57b85102d8663bf30488289425e48" category="list-text">*Configurazione di rete*: Assicurarsi che la configurazione di rete consenta una comunicazione senza interruzioni tra il volume di origine e il volume FlexCache. Ciò include routing e risoluzione DNS corretti in un ambiente cloud.</block>
   <block id="51aa8ce93131e7a6746f62c49df04fe2" category="paragraph">Creazione di un volume FlexCache sul sistema Cloud Volumes ONTAP con un volume di origine crittografato. Per i passaggi dettagliati e ulteriori considerazioni, fare riferimento alle seguenti sezioni:</block>
+  <block id="9a06593a786548bb3b7320df7c76e7f1" category="paragraph">La scheda K8s era obsoleta in una versione precedente ed è stata rimossa.</block>
 </blocks>

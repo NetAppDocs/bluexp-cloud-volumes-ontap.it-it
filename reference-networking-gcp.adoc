@@ -215,22 +215,6 @@ TIP: Se si utilizza una coppia ha, il mediatore ha non richiede l'accesso a Inte
 
 Se BlueXP notifica che non è possibile inviare messaggi AutoSupport, link:task-verify-autosupport.html#troubleshoot-your-autosupport-configuration["Risolvere i problemi della configurazione AutoSupport"].
 
-Regole del firewall:: Non è necessario creare regole firewall perché BlueXP fa questo per te. Se è necessario utilizzare il proprio, fare riferimento alle regole del firewall elencate di seguito.
-+
---
-Tenere presente che per una configurazione ha sono necessari due set di regole firewall:
-
-* Un set di regole per i componenti ha in VPC-0. Queste regole consentono l'accesso ai dati a Cloud Volumes ONTAP. <<Regole del firewall,Scopri di più>>.
-* Un altro insieme di regole per i componenti ha in VPC-1, VPC-2 e VPC-3. Queste regole sono aperte per le comunicazioni in entrata e in uscita tra i componenti ha. <<Regole del firewall,Scopri di più>>.
-
-
---
-
-
-Se si desidera eseguire il tiering dei dati cold in un bucket di storage Google Cloud, la subnet in cui risiede Cloud Volumes ONTAP deve essere configurata per l'accesso privato Google (se si utilizza una coppia ha, questa è la subnet in VPC-0). Per istruzioni, fare riferimento a. https://cloud.google.com/vpc/docs/configure-private-google-access["Documentazione di Google Cloud: Configurazione di Private Google Access"^].
-
-Per ulteriori passaggi necessari per impostare il tiering dei dati in BlueXP, vedere link:task-tiering.html["Tiering dei dati cold su storage a oggetti a basso costo"].
-
 
 
 === Connessioni a sistemi ONTAP in altre reti

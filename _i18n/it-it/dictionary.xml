@@ -1190,7 +1190,6 @@
   <block id="675d38d552c49bbf67606b2c5f1d5bed" category="section-title">Cos'è Flash cache?</block>
   <block id="3a36e6b466e0265c25d241c486f64e02" category="paragraph">Flash cache accelera l'accesso ai dati attraverso il caching intelligente in tempo reale dei dati utente recentemente letti e dei metadati NetApp. È efficace per i carichi di lavoro a lettura intensiva, inclusi database, e-mail e file service.</block>
   <block id="b208585c8517e02e2edf44f36a9bbb44" category="paragraph">Flash cache è supportata con configurazioni Cloud Volumes ONTAP specifiche. Visualizzare le configurazioni supportate in<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block></block>
-  <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">La compressione deve essere disattivata su tutti i volumi per sfruttare i miglioramenti delle performance di Flash cache fino a Cloud Volumes ONTAP 9.12.0. Durante l'implementazione o l'aggiornamento a Cloud Volumes ONTAP 9.12.1, non è necessario disattivare la compressione.</block>
   <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">Disattivare la compressione dei dati utilizzando l'interfaccia CLI</block>
   <block id="1ac329973aaeb1ba760ac2795cccce4d" category="paragraph">Non scegliere l'efficienza dello storage quando si crea un volume da BlueXP, oppure creare un volume e poi<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>.</block>
   <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">Il ripristino della cache dopo un riavvio non è supportato con Cloud Volumes ONTAP.</block>
@@ -2659,17 +2658,9 @@
   <block id="0d007d44f30aa9582772f6ca7709803f" category="paragraph">Paga in base alla capacità per qualsiasi tipo di configurazione Cloud Volumes ONTAP con backup illimitati.</block>
   <block id="fdb568933703a9268c5ba46f3208f414" category="list-text">Fornisce licenze per qualsiasi configurazione Cloud Volumes ONTAP</block>
   <block id="2b7a2bda81dcf84ff8d6b600415c5e52" category="paragraph">Nodo singolo o ha con carica della capacità per volumi primari e secondari alla stessa velocità</block>
-  <block id="98b2954d7b26ad04d4f74c70881d3ece" category="section-title">Cache edge</block>
-  <block id="0e6fc7a8a0a2e83eed1877313299a807" category="paragraph">Fornisce licenze per Cloud Volumes Edge cache.</block>
-  <block id="cbea577daebf267793d8d7234ee50729" category="list-text">Le stesse funzionalità del pacchetto Professional con business continuity e protezione dei dati per un'azienda distribuita</block>
-  <block id="90083db3dbad73e69a817501be172673" category="list-text">Caching edge intelligente attraverso una macchina virtuale Windows a impatto ridotto in ogni posizione</block>
-  <block id="05f24457306e58dd0ea1e99766bc28dc" category="list-text">Un nodo edge ogni 3 Tibers di capacità acquistata</block>
-  <block id="7c4c7c30514b4cc21e76f21acfaacf2a" category="inline-link">Scopri di più su come Cloud Volumes Edge cache può aiutare il tuo business</block>
-  <block id="20044e95e1ba41fb44c428898ee01dc2" category="paragraph"><block ref="20044e95e1ba41fb44c428898ee01dc2" category="inline-link-rx"></block></block>
   <block id="26e0cffca193fe47b1c5c8f73ea3c3e1" category="section-title">Modelli di consumo</block>
   <block id="728fd439c2abdc887c4a5e678d7c8708" category="paragraph">I pacchetti di licenza basati sulla capacità sono disponibili con i seguenti modelli di consumo:</block>
   <block id="fcbd09a2622ccd7b58495c6277262566" category="list-text">*BYOL*: Una licenza acquistata da NetApp che può essere utilizzata per implementare Cloud Volumes ONTAP in qualsiasi cloud provider.</block>
-  <block id="54dcd2c31a61414eef44d6ac931b8f57" category="paragraph">+ notare che i pacchetti Optimized ed Edge cache non sono disponibili con BYOL.</block>
   <block id="1e101142b61a711e7fbc92238adf9d20" category="list-text">*PAYGO*: Un abbonamento orario dal mercato del tuo cloud provider.</block>
   <block id="146cb6145f5238f0a019636047844250" category="list-text">*Annuale*: Un contratto annuale dal mercato del tuo cloud provider.</block>
   <block id="743cd9f94465042cc1367604dce1ec22" category="list-text">Se acquisti una licenza da NetApp (BYOL), devi anche iscriverti all'offerta PAYGO dal mercato del tuo cloud provider.</block>
@@ -2685,12 +2676,6 @@
   <block id="e22ac25b066b201473de7aa700ef5d92" category="section-title">Prezzi</block>
   <block id="2cfe7b7de2a1df6b585bf1321d37fb8a" category="inline-link">Sito Web di NetApp BlueXP</block>
   <block id="490f0cb4ab517a2c88f9d425fc84b42d" category="paragraph">Per ulteriori informazioni sui prezzi, visitare il sito Web all'indirizzo<block ref="c412404f1934ae5bd4e59f00ec0e79b9" category="inline-link-rx"></block>.</block>
-  <block id="25b035aed2fdd6599b8102a76363fdec" category="section-title">Versioni di prova gratuite</block>
-  <block id="35ae8932a2c6f1191cf21157a991b4dd" category="paragraph">Una prova gratuita di 30 giorni è disponibile tramite l'abbonamento pay-as-you-go nel mercato del tuo cloud provider. La versione di prova gratuita include backup e ripristino di Cloud Volumes ONTAP e BlueXP. La prova inizia quando ti iscrivi all'offerta sul mercato.</block>
-  <block id="2986f3edb85e34a7556b412028be57fb" category="paragraph">Non esistono limitazioni di istanze o capacità. Puoi implementare tutti i sistemi Cloud Volumes ONTAP che desideri e allocare la capacità necessaria, gratuitamente per 30 giorni. La versione di prova gratuita viene convertita automaticamente in un abbonamento oraria a pagamento dopo 30 giorni.</block>
-  <block id="631556a144b10d5d5f19603b18176e32" category="paragraph">Non sono previsti costi di licenza software oraria per Cloud Volumes ONTAP, ma i costi di infrastruttura del tuo cloud provider sono ancora validi.</block>
-  <block id="d6887d442590b333a9ed7ab379a87bec" category="inline-image-macro">Una schermata di una notifica nell'interfaccia BlueXP che indica che sono rimasti solo 7 giorni per una prova gratuita.</block>
-  <block id="25e3832249c9db3c8e31fc1a1a13b691" category="admonition">Riceverai una notifica in BlueXP all'inizio della prova gratuita, quando mancano 7 giorni e quando rimane 1 giorno. Ad esempio:<block ref="5b65ab6646c17c41bf724ce3fdc19942" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4e4c431843fe55f93c074808800bf7d0" category="paragraph">I pacchetti di licenza basati sulla capacità sono disponibili con Cloud Volumes ONTAP 9.7 e versioni successive.</block>
   <block id="37040d43404231d8205705e4353af733" category="section-title">Limite di capacità</block>
   <block id="30603aec25d6436b9b4c18f5e88da521" category="paragraph">Con questo modello di licenza, ogni singolo sistema Cloud Volumes ONTAP supporta fino a 2 PIB di capacità attraverso dischi e tiering per lo storage a oggetti.</block>
@@ -2739,7 +2724,6 @@
   <block id="aad2b08c0103cffcbb5efae0a56ee747" category="paragraph">Ogni singolo sistema Cloud Volumes ONTAP supporta fino a 2 PIB di capacità attraverso dischi e tiering per lo storage a oggetti.</block>
   <block id="9a762a1c55d92068610f4f2bc3e42d91" category="paragraph">Scopri come iniziare con un abbonamento Keystone:</block>
   <block id="a2f6a3e98ea1849ed1ab07d821bf6a18" category="section-title">Licenze basate su nodo</block>
-  <block id="361abfc2eaabdb045de49dafd20dbdf1" category="paragraph">La licenza basata su nodo è il modello di licenza di generazione precedente che consente di concedere in licenza Cloud Volumes ONTAP per nodo. Questo modello di licenza non è disponibile per i nuovi clienti e non sono disponibili versioni di prova gratuite. La carica per nodo è stata sostituita con i metodi di carica per capacità descritti in precedenza.</block>
   <block id="749b4d71be76e8fee5fe7895ae5ff71d" category="paragraph">Le licenze basate su nodo sono ancora disponibili per i clienti esistenti:</block>
   <block id="04c40151a6d53f981d0364aef6215bd0" category="list-text">Se si dispone di una licenza attiva, BYOL è disponibile solo per il rinnovo della licenza.</block>
   <block id="358962d4cc759ccb4c98e87cc3396033" category="list-text">Se disponi di un abbonamento al marketplace attivo, il costo è ancora disponibile attraverso tale abbonamento.</block>
@@ -4578,7 +4562,6 @@ Fare riferimento a.<block ref="9394861c48a8d6b1dd64975c2c0558db" category="inlin
   <block id="ba106db82d3577b52130dde5ddd372b4" category="section-title">Cloud Volumes ONTAP 9.13.1 RC1</block>
   <block id="9bc26bf4259fc1662eaaa13a7534abb1" category="paragraph">BlueXP è ora in grado di implementare e gestire Cloud Volumes ONTAP 9.13.1 in AWS, Azure e Google Cloud.</block>
   <block id="3dc988ad93a3ac0c3a1487fc3b6754cf" category="paragraph">Sebbene Cloud Volumes ONTAP supporti S3 come opzione per lo storage scale-out, BlueXP non fornisce alcuna funzionalità di gestione per questa funzionalità. L'utilizzo della CLI è la procedura consigliata per configurare l'accesso al client S3 da Cloud Volumes ONTAP. Per ulteriori informazioni, fare riferimento a.<block ref="49e8fee748cd4c8d6f01bdb03113fc2a" category="inline-link-rx"></block>.</block>
-  <block id="2db3dc5428f2e0831511cd891db676b1" category="paragraph">Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized, Professional e Edge cache), la carica di capacità minima di 4 TIB si applica indipendentemente dal tipo di volume.</block>
   <block id="f73b546b2cf111d3a080443f2cd3b97f" category="section-title">2 luglio 2023</block>
   <block id="a6d6a466484f2718bba09926e0dfb2c7" category="paragraph">Le seguenti modifiche sono state introdotte con la versione 3.9.31 del connettore.</block>
   <block id="0888a7f5d81ff73f5ec9fa719b091bdc" category="section-title">Supporto per implementazioni di zone a disponibilità multipla in ha in Azure</block>
@@ -5416,4 +5399,18 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="526b16be728da42dd3eb25f5c378e218" category="list-text">NAE non può essere usato con AKV. NAE richiede un server KMIP supportato dall'esterno.</block>
   <block id="70004026f1ac6c7f08784ebf0a55c142" category="list-text">I nodi Cloud Volumes ONTAP eseguono il polling di AKV ogni 15 minuti per verificare l'accessibilità e la disponibilità delle chiavi. Questo periodo di polling non è configurabile e, dopo quattro errori consecutivi nel tentativo di polling (per un totale di 1 ora), i volumi vengono messi offline.</block>
   <block id="368b5e8e02b8134e8d1009fff74bf2bc" category="paragraph">Cloud Volumes ONTAP supporta<block ref="09aecd5417a289ba24f2f00949971fbc" category="inline-link-rx"></block>. NVE e NAE sono soluzioni basate su software che consentono la crittografia dei volumi (data-at-rest) conforme a FIPS 140-2. Sia NVE che NAE utilizzano la crittografia AES a 256 bit.</block>
+  <block id="c89c4d58a7009250769a012cf2451410" category="list-text">Quando si configura Flash cache per Cloud Volumes ONTAP 9.12.0 o versione precedente su AWS, la compressione deve essere disattivata su tutti i volumi per sfruttare i miglioramenti delle performance di Flash cache. Quando si implementa o si esegue l'aggiornamento a Cloud Volumes ONTAP 9.12.1 o versioni successive, non è necessario disattivare la compressione.</block>
+  <block id="f21def4319b19574f5ca7ab45389822b" category="paragraph">+ si noti che il pacchetto ottimizzato non è disponibile con BYOL.</block>
+  <block id="e2299e8e355a9b503858d1f8d800ccaa" category="paragraph">Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized e Professional), la capacità di ricarica minima di 4 TiB si applica indipendentemente dal tipo di volume.</block>
+  <block id="ea4ba4158f6b2b895b0418072f2ba06d" category="paragraph">La licenza basata su nodo è il modello di licenza di generazione precedente che consente di concedere in licenza Cloud Volumes ONTAP per nodo. Questo modello di licenza non è disponibile per i nuovi clienti. La carica per nodo è stata sostituita con i metodi di carica per capacità descritti in precedenza.</block>
+  <block id="9cc3df8e0a65f95d62b0d0dc557d0fa9" category="section-title">8 agosto 2024</block>
+  <block id="e84c1e70dc9a2186ec21e22a3e9cbda0" category="section-title">Pacchetti di licenze Edge cache obsoleti</block>
+  <block id="882b50ca44d46bfb8d9502390cfeaf96" category="paragraph">I pacchetti di licenza basati sulla capacità di Edge cache non saranno più disponibili per implementazioni future di Cloud Volumes ONTAP. Tuttavia, è possibile utilizzare l'API per utilizzare questa funzionalità.</block>
+  <block id="a5729938408dc232ea97fb5d7d00b71c" category="section-title">Versione minima supportata di ONTAP per Flash cache in Azure</block>
+  <block id="9eed4224485f0ec8f22ac2ca0b031514" category="paragraph">La versione minima di ONTAP richiesta per la configurazione di Flash cache su Azure è 9.13.1 GA. Per l'implementazione di Flash cache sui sistemi Cloud Volumes ONTAP per Azure è possibile utilizzare solo ONTAP 9.13.1 GA e versioni successive.</block>
+  <block id="2936dc7efe93e6248aca38d21b92cc62" category="paragraph">Per le configurazioni supportate, vedere<block ref="10c1bb30d666a83202b9e687d7b06d1b" category="inline-link-rx"></block>.</block>
+  <block id="bc5af032a5cd69ef4ac57b8c2cd1f1d6" category="section-title">Versioni di prova gratuite per gli abbonamenti al mercato obsolete</block>
+  <block id="860dc5e7395e0f2c15a42ffdef98eca4" category="paragraph">La prova automatica gratuita di 30 giorni per gli abbonamenti pay-as-you-go nel marketplace del cloud provider non sarà più disponibile in Cloud Volumes ONTAP. L'addebito per qualsiasi tipo di abbonamento al mercato (PAYGO o contratto annuale) sarà attivato dal primo utilizzo, senza alcun periodo di prova gratuito.</block>
+  <block id="2c8ad7deb621eae9ecb23ccf84d9c22c" category="section-title">Regione del Canada occidentale ora supportata in AWS</block>
+  <block id="184c928c73aa00c7569ba55c0b9e0064" category="paragraph">La regione del Canada occidentale è ora supportata in AWS per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
 </blocks>

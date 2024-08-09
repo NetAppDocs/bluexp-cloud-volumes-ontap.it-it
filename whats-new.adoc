@@ -20,6 +20,38 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 8 agosto 2024
+
+
+
+=== Pacchetti di licenze Edge cache obsoleti
+
+I pacchetti di licenza basati sulla capacità di Edge cache non saranno più disponibili per implementazioni future di Cloud Volumes ONTAP. Tuttavia, è possibile utilizzare l'API per utilizzare questa funzionalità.
+
+
+
+=== Versione minima supportata di ONTAP per Flash cache in Azure
+
+La versione minima di ONTAP richiesta per la configurazione di Flash cache su Azure è 9.13.1 GA. Per l'implementazione di Flash cache sui sistemi Cloud Volumes ONTAP per Azure è possibile utilizzare solo ONTAP 9.13.1 GA e versioni successive.
+
+Per le configurazioni supportate, vedere https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#single-node-systems["Configurazioni supportate in Azure"^].
+
+
+
+=== Versioni di prova gratuite per gli abbonamenti al mercato obsolete
+
+La prova automatica gratuita di 30 giorni per gli abbonamenti pay-as-you-go nel marketplace del cloud provider non sarà più disponibile in Cloud Volumes ONTAP. L'addebito per qualsiasi tipo di abbonamento al mercato (PAYGO o contratto annuale) sarà attivato dal primo utilizzo, senza alcun periodo di prova gratuito.
+
+
+
+=== Regione del Canada occidentale ora supportata in AWS
+
+La regione del Canada occidentale è ora supportata in AWS per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere la https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali sotto AWS"^].
+
+
+
 == 10 giugno 2024
 
 
@@ -100,6 +132,8 @@ Se richiesto dai criteri di protezione, è possibile configurare le istanze EC2 
 === Cloud Volumes ONTAP 9.14.1 GA
 
 BlueXP può ora implementare e gestire la release General Availability di Cloud Volumes ONTAP 9.14.1 in AWS, Azure e Google Cloud.
+
+link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9141-relnotes/["Scopri le nuove funzionalità incluse in questa release di Cloud Volumes ONTAP"^].
 
 
 

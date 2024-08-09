@@ -32,9 +32,15 @@ Flash cache è supportata con configurazioni Cloud Volumes ONTAP specifiche. Vis
 
 == Limitazioni
 
-* La compressione deve essere disattivata su tutti i volumi per sfruttare i miglioramenti delle performance di Flash cache fino a Cloud Volumes ONTAP 9.12.0. Durante l'implementazione o l'aggiornamento a Cloud Volumes ONTAP 9.12.1, non è necessario disattivare la compressione.
+ifdef::aws[]
+
+* Quando si configura Flash cache per Cloud Volumes ONTAP 9.12.0 o versione precedente su AWS, la compressione deve essere disattivata su tutti i volumi per sfruttare i miglioramenti delle performance di Flash cache. Quando si implementa o si esegue l'aggiornamento a Cloud Volumes ONTAP 9.12.1 o versioni successive, non è necessario disattivare la compressione.
 +
 Non scegliere l'efficienza dello storage quando si crea un volume da BlueXP, oppure creare un volume e poi http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Disattivare la compressione dei dati utilizzando l'interfaccia CLI"^].
+
+
+
+endif::aws[]
 
 * Il ripristino della cache dopo un riavvio non è supportato con Cloud Volumes ONTAP.
 

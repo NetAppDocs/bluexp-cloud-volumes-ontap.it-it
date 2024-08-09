@@ -152,33 +152,6 @@ NOTE: Per il backup e recovery di BlueXP è richiesto un abbonamento a PAYGO, tu
 
 
 
-==== Cache edge
-
-Fornisce licenze per Cloud Volumes Edge cache.
-
-* Le stesse funzionalità del pacchetto Professional con business continuity e protezione dei dati per un'azienda distribuita
-* Caching edge intelligente attraverso una macchina virtuale Windows a impatto ridotto in ogni posizione
-* Un nodo edge ogni 3 Tibers di capacità acquistata
-
-
-ifdef::azure[]
-
-* Disponibile in Azure Marketplace come offerta pay-as-you-go o come contratto annuale
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Disponibile in Google Cloud Marketplace come offerta pay-as-you-go o come contratto annuale
-
-
-endif::gcp[]
-
-https://cloud.netapp.com/cloud-volumes-edge-cache["Scopri di più su come Cloud Volumes Edge cache può aiutare il tuo business"^]
-
-
-
 === Modelli di consumo
 
 I pacchetti di licenza basati sulla capacità sono disponibili con i seguenti modelli di consumo:
@@ -188,7 +161,7 @@ I pacchetti di licenza basati sulla capacità sono disponibili con i seguenti mo
 
 ifdef::azure[]
 
-+ notare che i pacchetti Optimized ed Edge cache non sono disponibili con BYOL.
++ si noti che il pacchetto ottimizzato non è disponibile con BYOL.
 
 endif::azure[]
 
@@ -224,19 +197,6 @@ link:task-manage-capacity-licenses.html["Scopri come modificare i metodi di rica
 === Prezzi
 
 Per ulteriori informazioni sui prezzi, visitare il sito Web all'indirizzo https://cloud.netapp.com/pricing?hsCtaTracking=4f8b7b77-8f63-4b73-b5af-ee09eab4fbd6%7C5fefbc99-396c-4084-99e6-f1e22dc8ffe7["Sito Web di NetApp BlueXP"^].
-
-
-
-=== Versioni di prova gratuite
-
-Una prova gratuita di 30 giorni è disponibile tramite l'abbonamento pay-as-you-go nel mercato del tuo cloud provider. La versione di prova gratuita include backup e ripristino di Cloud Volumes ONTAP e BlueXP. La prova inizia quando ti iscrivi all'offerta sul mercato.
-
-Non esistono limitazioni di istanze o capacità. Puoi implementare tutti i sistemi Cloud Volumes ONTAP che desideri e allocare la capacità necessaria, gratuitamente per 30 giorni. La versione di prova gratuita viene convertita automaticamente in un abbonamento oraria a pagamento dopo 30 giorni.
-
-Non sono previsti costi di licenza software oraria per Cloud Volumes ONTAP, ma i costi di infrastruttura del tuo cloud provider sono ancora validi.
-
-
-TIP: Riceverai una notifica in BlueXP all'inizio della prova gratuita, quando mancano 7 giorni e quando rimane 1 giorno. Ad esempio:image:screenshot-free-trial-notification.png["Una schermata di una notifica nell'interfaccia BlueXP che indica che sono rimasti solo 7 giorni per una prova gratuita."]
 
 
 
@@ -294,7 +254,7 @@ I seguenti dettagli consentono di comprendere il funzionamento della ricarica co
 
 Se non hai ancora effettuato il provisioning di volumi, il costo minimo non viene applicato.
 
-Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized, Professional e Edge cache), la carica di capacità minima di 4 TIB si applica indipendentemente dal tipo di volume.
+Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized e Professional), la capacità di ricarica minima di 4 TiB si applica indipendentemente dal tipo di volume.
 
 
 
@@ -440,7 +400,7 @@ endif::gcp[]
 
 == Licenze basate su nodo
 
-La licenza basata su nodo è il modello di licenza di generazione precedente che consente di concedere in licenza Cloud Volumes ONTAP per nodo. Questo modello di licenza non è disponibile per i nuovi clienti e non sono disponibili versioni di prova gratuite. La carica per nodo è stata sostituita con i metodi di carica per capacità descritti in precedenza.
+La licenza basata su nodo è il modello di licenza di generazione precedente che consente di concedere in licenza Cloud Volumes ONTAP per nodo. Questo modello di licenza non è disponibile per i nuovi clienti. La carica per nodo è stata sostituita con i metodi di carica per capacità descritti in precedenza.
 
 Le licenze basate su nodo sono ancora disponibili per i clienti esistenti:
 

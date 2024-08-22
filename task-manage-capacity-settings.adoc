@@ -42,7 +42,7 @@ In modalità manuale, se il rapporto di spazio libero su un aggregato scende al 
 Il rapporto di spazio libero viene calcolato come segue:
 (capacità aggregata - capacità totale utilizzata sull'aggregato) / capacità aggregata
 
-Vedere link:concept-storage-management.html#automatic-capacity-management["Gestione automatica della capacità"] Per apprendere ora la capacità viene gestita automaticamente in Cloud Volumes ONTAP.
+Fare riferimento a link:concept-storage-management.html#automatic-capacity-management["Gestione automatica della capacità"] per ulteriori informazioni su come la capacità viene gestita automaticamente in Cloud Volumes ONTAP.
 
 --
 Soglie di capacità aggregate - rapporto spazio libero per il tiering dei dati:: Definisce la quantità di spazio libero richiesta sul Tier di performance (dischi) quando si tierano i dati su un Tier di capacità (storage a oggetti).

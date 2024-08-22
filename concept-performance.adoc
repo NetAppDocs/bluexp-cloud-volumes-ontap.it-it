@@ -56,4 +56,4 @@ endif::gcp[]
 
 I nodi Cloud Volumes ONTAP risultano altamente utilizzati (oltre il 90%) dagli strumenti di monitoraggio del tuo cloud provider. Questo perché ONTAP riserva tutte le vCPU presentate alla macchina virtuale in modo che siano disponibili quando necessario.
 
-Per ulteriori informazioni, consultare https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Monitoring_CPU_utilization_before_an_ONTAP_upgrade["Articolo della Knowledge base di NetApp su come monitorare l'utilizzo della CPU ONTAP utilizzando la CLI"^]
+Per ulteriori informazioni, fare riferimento a. https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Monitoring_CPU_utilization_before_an_ONTAP_upgrade["Articolo della Knowledge base di NetApp su come monitorare l'utilizzo della CPU ONTAP utilizzando la CLI"^]

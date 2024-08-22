@@ -71,7 +71,7 @@ Tipo di disco GCP:: Quando crei volumi per Cloud Volumes ONTAP, devi scegliere l
 * _Dischi persistenti bilanciati zonali_: Questi SSD bilanciano le performance e i costi fornendo IOPS per GB inferiori.
 * _Dischi persistenti standard zonali_ : i dischi persistenti standard sono economici e possono gestire operazioni di lettura/scrittura sequenziali.
 +
-Per ulteriori informazioni, vedere https://cloud.google.com/compute/docs/disks/#pdspecs["Documentazione di Google Cloud: Dischi persistenti zonali (Standard e SSD)"^].
+Per ulteriori informazioni, fare riferimento a https://cloud.google.com/compute/docs/disks/#pdspecs["Documentazione di Google Cloud: Dischi persistenti zonali (Standard e SSD)"^].
 
 
 

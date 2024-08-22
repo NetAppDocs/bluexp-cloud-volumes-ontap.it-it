@@ -55,9 +55,9 @@ Classi di storage:: La classe di storage predefinita per i dati Tiered in AWS è
 --
 Se non si prevede di accedere ai dati inattivi, è possibile ridurre i costi di storage cambiando la classe di storage in una delle seguenti opzioni: _Intelligent Tiering_, _One-zone infrequent Access_, _Standard-infrequent Access_ o _S3 Glacier Instant Retrieval_. Quando si modifica la classe di storage, i dati inattivi vengono avviati nella classe di storage Standard e vengono passati alla classe di storage selezionata, se non si accede ai dati dopo 30 giorni.
 
-I costi di accesso sono più elevati se si accede ai dati, quindi tenere in considerazione questo aspetto prima di modificare la classe di storage. https://aws.amazon.com/s3/storage-classes["Scopri di più sulle classi di storage Amazon S3"^].
+I costi di accesso sono più elevati se si accede ai dati, quindi è necessario tenerne conto prima di modificare la classe di storage. https://aws.amazon.com/s3/storage-classes["Documentazione su Amazon S3: Scopri di più sulle classi storage di Amazon S3"^].
 
-È possibile selezionare una classe di storage quando si crea l'ambiente di lavoro e modificarla in qualsiasi momento. Per ulteriori informazioni sulla modifica della classe di storage, vedere link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare una classe di storage quando si crea l'ambiente di lavoro e modificarla in qualsiasi momento. Per istruzioni sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 La classe di storage per il tiering dei dati è estesa a tutto il sistema, non per volume.
 
@@ -98,9 +98,9 @@ Tier di accesso allo storage:: Il Tier di accesso allo storage predefinito per i
 --
 Se non si prevede di accedere ai dati inattivi nel Tier di capacità, è possibile ridurre i costi di storage passando al Tier di storage _COOL_. Quando si imposta il Tier di storage su COOL, i dati del Tier di capacità inattivi vengono spostati direttamente nel Tier di storage cool.
 
-I costi di accesso sono più elevati se si accede ai dati, quindi è necessario prendere in considerazione questo aspetto prima di modificare il Tier di storage. https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Scopri di più sui Tier di accesso allo storage Azure Blob"^].
+I costi di accesso sono maggiori se si accede ai dati, quindi è necessario tenerne conto prima di modificare il livello di storage. https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentazione di Microsoft Azure: Scopri di più sui Tier di accesso allo storage BLOB di Azure"^].
 
-È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per ulteriori informazioni sulla modifica del Tier di storage, vedere link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per ulteriori informazioni sulla modifica del livello di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 Il Tier di accesso allo storage per il tiering dei dati è esteso a tutto il sistema, non per volume.
 
@@ -140,9 +140,9 @@ Classi di storage:: La classe di storage predefinita per i dati a più livelli �
 
 NOTE: Tutti i dati inattivi esistenti manterranno la classe di archiviazione predefinita quando si modifica la classe di archiviazione. Per modificare la classe di archiviazione per i dati inattivi esistenti, è necessario eseguire la designazione manualmente.
 
-I costi di accesso sono più elevati se si accede ai dati, quindi tenere in considerazione questo aspetto prima di modificare la classe di storage. https://cloud.google.com/storage/docs/storage-classes["Scopri di più sulle classi di storage per Google Cloud Storage"^].
+I costi di accesso sono più elevati se si accede ai dati, quindi tenere in considerazione questo aspetto prima di modificare la classe di storage. Per ulteriori informazioni, fare riferimento a https://cloud.google.com/storage/docs/storage-classes["Documentazione di Google Cloud: Classi di storage"^].
 
-È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per ulteriori informazioni sulla modifica della classe di storage, vedere link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per informazioni dettagliate sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 La classe di storage per il tiering dei dati è estesa a tutto il sistema, non per volume.
 
@@ -214,4 +214,4 @@ TIP: Quando Cloud Volumes ONTAP è disattivato, la temperatura di ciascun blocco
 
 == Impostazione del tiering dei dati
 
-Per istruzioni e un elenco delle configurazioni supportate, vedere link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+Per istruzioni e un elenco delle configurazioni supportate, fare riferimento a link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].

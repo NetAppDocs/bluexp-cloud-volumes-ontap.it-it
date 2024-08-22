@@ -52,14 +52,14 @@ In BlueXP, fare clic sul servizio *Digital Advisor*.
 +
 image:screenshot_aiq_digital_advisor.png["Uno screenshot dell'interfaccia utente di Digital Advisor in BlueXP."]
 
-* Se non hai registrato un account NSS in BlueXP, https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Registra subito un account NSS"^] Quindi viene visualizzata l'interfaccia utente di Digital Advisor.
+* Se non è stato registrato un account NSS in BlueXP , registrare un account NSS e quindi viene visualizzata l'interfaccia utente di Digital Advisor. Per https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Gestire le credenziali NSS associate a un account BlueXP"] le istruzioni, fare riferimento alla .
 
 
 
-NOTE: Al 3 dicembre 2021, NetApp ha adottato una nuova metodologia per la registrazione delle credenziali per gli account NSS. https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["Per ulteriori informazioni, consulta questa FAQ"]. Se l'account NSS utilizza il vecchio set di credenziali, sarà necessario aggiornare l'account con le nuove credenziali.
+NOTE: Al 3 dicembre 2021, NetApp ha adottato una nuova metodologia per la registrazione delle credenziali per gli account NSS. Per ulteriori informazioni, fare riferimento a https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/FAQs_for_NetApp_adoption_of_MS_Azure_AD_B2C_for_login["Questo FAQ"]. Se l'account NSS utilizza il vecchio set di credenziali, sarà necessario aggiornare l'account con le nuove credenziali.
 
 
 
 == Cosa succederà
 
-Vedere https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"] per ulteriori informazioni.
+Per ulteriori informazioni, fare riferimento alla https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"] .

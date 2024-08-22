@@ -50,7 +50,7 @@ Se BlueXP notifica che non è possibile inviare messaggi AutoSupport, link:task-
 
 L'istanza di ha mediator deve disporre di una connessione in uscita al servizio AWS EC2 in modo che possa fornire assistenza per il failover dello storage. Per fornire la connessione, è possibile aggiungere un indirizzo IP pubblico, specificare un server proxy o utilizzare un'opzione manuale.
 
-L'opzione manuale può essere un gateway NAT o un endpoint VPC di interfaccia dalla subnet di destinazione al servizio AWS EC2. Per ulteriori informazioni sugli endpoint VPC, fare riferimento a. http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-interface.html["Documentazione AWS: Endpoint VPC di interfaccia (AWS PrivateLink)"^].
+L'opzione manuale può essere un gateway NAT o un endpoint VPC di interfaccia dalla subnet di destinazione al servizio AWS EC2. Per ulteriori informazioni sugli endpoint VPC, fare riferimento alla http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-interface.html["Documentazione AWS: Endpoint VPC di interfaccia (AWS PrivateLink)"^] .
 
 
 
@@ -182,17 +182,17 @@ TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/bluexp-se
 
 === Connessione per il tiering dei dati
 
-Se si desidera utilizzare EBS come Tier di performance e AWS S3 come Tier di capacità, è necessario assicurarsi che Cloud Volumes ONTAP disponga di una connessione a S3. Il modo migliore per fornire tale connessione consiste nella creazione di un endpoint VPC per il servizio S3. Per istruzioni, vedere https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentazione AWS: Creazione di un endpoint gateway"^].
+Se si desidera utilizzare EBS come Tier di performance e AWS S3 come Tier di capacità, è necessario assicurarsi che Cloud Volumes ONTAP disponga di una connessione a S3. Il modo migliore per fornire tale connessione consiste nella creazione di un endpoint VPC per il servizio S3. Per istruzioni, fare riferimento alla https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentazione AWS: Creazione di un endpoint gateway"^] .
 
 Quando si crea l'endpoint VPC, assicurarsi di selezionare la regione, il VPC e la tabella di routing che corrispondono all'istanza di Cloud Volumes ONTAP. È inoltre necessario modificare il gruppo di protezione per aggiungere una regola HTTPS in uscita che abilita il traffico all'endpoint S3. In caso contrario, Cloud Volumes ONTAP non può connettersi al servizio S3.
 
-In caso di problemi, vedere https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"^]
+In caso di problemi, consultare la https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"^]
 
 
 
 === Connessioni ai sistemi ONTAP
 
-Per replicare i dati tra un sistema Cloud Volumes ONTAP in AWS e i sistemi ONTAP in altre reti, è necessario disporre di una connessione VPN tra AWS VPC e l'altra rete, ad esempio la rete aziendale. Per istruzioni, vedere https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html["Documentazione AWS: Configurazione di una connessione VPN AWS"^].
+Per replicare i dati tra un sistema Cloud Volumes ONTAP in AWS e i sistemi ONTAP in altre reti, è necessario disporre di una connessione VPN tra AWS VPC e l'altra rete, ad esempio la rete aziendale. Per istruzioni, fare riferimento alla https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/SetUpVPNConnections.html["Documentazione AWS: Configurazione di una connessione VPN AWS"^] .
 
 
 
@@ -202,7 +202,7 @@ Se si desidera eseguire il provisioning dello storage CIFS, è necessario config
 
 Il server DNS deve fornire servizi di risoluzione dei nomi per l'ambiente Active Directory. È possibile configurare i set di opzioni DHCP in modo che utilizzino il server DNS EC2 predefinito, che non deve essere il server DNS utilizzato dall'ambiente Active Directory.
 
-Per istruzioni, fare riferimento a. https://aws-quickstart.github.io/quickstart-microsoft-activedirectory/["Documentazione AWS: Active Directory Domain Services su AWS Cloud: Implementazione di riferimento rapido"^].
+Per istruzioni, fare riferimento alla https://aws-quickstart.github.io/quickstart-microsoft-activedirectory/["Documentazione AWS: Active Directory Domain Services su AWS Cloud: Implementazione di riferimento rapido"^] .
 
 
 
@@ -218,7 +218,7 @@ link:task-deploy-aws-shared-vpc.html["Scopri come implementare una coppia ha in 
 
 Ulteriori requisiti di rete AWS si applicano alle configurazioni Cloud Volumes ONTAP ha che utilizzano zone di disponibilità multiple (AZS). Prima di avviare una coppia ha, è necessario esaminare questi requisiti perché è necessario inserire i dettagli di rete in BlueXP quando si crea l'ambiente di lavoro.
 
-Per informazioni sul funzionamento delle coppie ha, vedere link:concept-ha.html["Coppie ad alta disponibilità"].
+Per informazioni sul funzionamento delle coppie ha, fare riferimento alla link:concept-ha.html["Coppie ad alta disponibilità"].
 
 Zone di disponibilità:: Questo modello di implementazione ha utilizza più AZS per garantire un'elevata disponibilità dei dati. È necessario utilizzare un AZ dedicato per ogni istanza di Cloud Volumes ONTAP e per l'istanza del mediatore, che fornisce un canale di comunicazione tra la coppia ha.
 
@@ -254,7 +254,7 @@ Se si dispone di una sola tabella di routing per le subnet nel VPC (la tabella d
 
 Ad esempio, potrebbero essere presenti due subnet associate a diverse tabelle di routing. Se si seleziona la tabella di route A, ma non la tabella di route B, i client nella subnet associata alla tabella di route A possono accedere alla coppia ha, ma i client nella subnet associata alla tabella di route B.
 
-Per ulteriori informazioni sulle tabelle di percorso, fare riferimento a. http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentazione AWS: Tabelle di percorso"^].
+Per ulteriori informazioni sulle tabelle dei percorsi, fare riferimento alla http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html["Documentazione AWS: Tabelle di percorso"^] .
 
 --
 Connessione ai tool di gestione NetApp:: Per utilizzare gli strumenti di gestione NetApp con configurazioni ha che si trovano in più AZS, sono disponibili due opzioni di connessione:

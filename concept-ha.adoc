@@ -88,7 +88,7 @@ Se non è possibile configurare un gateway di transito, gli indirizzi IP privati
 
 Prima di distribuire una configurazione ha in più zone di disponibilità, è necessario esaminare i requisiti per gli indirizzi IP mobili e le tabelle di routing. È necessario specificare gli indirizzi IP mobili quando si implementa la configurazione. Gli indirizzi IP privati vengono creati automaticamente da BlueXP.
 
-Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisiti di rete AWS per Cloud Volumes ONTAP ha in più AZS"^].
+Per ulteriori informazioni, fare riferimento a link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#requirements-for-ha-pairs-in-multiple-azs["Requisiti di rete AWS per Cloud Volumes ONTAP ha in più AZS"^].
 
 
 
@@ -103,7 +103,7 @@ La comunicazione dati tra più VPC non è un problema, poiché iSCSI non utilizz
 Per iSCSI, Cloud Volumes ONTAP utilizza MPIO (Multipath i/o) e ALUA (Asymmetric Logical Unit Access) per gestire il failover del percorso tra i percorsi ottimizzati per attività e non ottimizzati.
 
 
-NOTE: Per informazioni su quali configurazioni host specifiche supportano ALUA, consultare http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] E la guida all'installazione e all'installazione delle utility host per il sistema operativo host.
+NOTE: Per informazioni sulle specifiche configurazioni host che supportano ALUA, consultare la http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] e la https://docs.netapp.com/us-en/ontap-sanhost/["Guida agli host SAN e ai client cloud"] per il sistema operativo host in uso.
 
 
 
@@ -145,7 +145,7 @@ image:diagram_single_az.png["Immagine concettuale che mostra una configurazione 
 Per iSCSI, Cloud Volumes ONTAP utilizza MPIO (Multipath i/o) e ALUA (Asymmetric Logical Unit Access) per gestire il failover del percorso tra i percorsi ottimizzati per attività e non ottimizzati.
 
 
-NOTE: Per informazioni su quali configurazioni host specifiche supportano ALUA, consultare http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] E la guida all'installazione e all'installazione delle utility host per il sistema operativo host.
+NOTE: Per informazioni sulle specifiche configurazioni host che supportano ALUA, consultare la http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] e la https://docs.netapp.com/us-en/ontap-sanhost/["Guida agli host SAN e ai client cloud"] per il sistema operativo host in uso.
 
 Per le configurazioni NAS, gli indirizzi IP dei dati possono migrare tra i nodi ha in caso di guasti. In questo modo si garantisce l'accesso del client allo storage.
 
@@ -195,7 +195,7 @@ Sono attualmente supportate le seguenti famiglie di tipi di istanza EC2 con dime
 * R5d
 
 
-link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Fai riferimento ad AWS per i dettagli più recenti e completi sui tipi di istanze EC2 supportati nelle zone locali"^].
+Fare riferimento alla documentazione di AWS per i dettagli più recenti e completi relativi al supporto link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
 
 
 
@@ -228,7 +228,7 @@ Una configurazione Cloud Volumes ONTAP ha replica in modo sincrono i dati tra i 
 * Per le configurazioni ha che servono dati da entrambi i nodi, le performance di lettura sono superiori rispetto alle performance di lettura di una configurazione a nodo singolo e le performance di scrittura sono uguali o superiori.
 
 
-Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, vedere link:concept-performance.html["Performance"].
+Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, fare riferimento a link:concept-performance.html["Performance"].
 
 
 
@@ -237,7 +237,7 @@ Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, vedere link
 I client devono accedere ai volumi NFS e CIFS utilizzando l'indirizzo IP dei dati del nodo su cui risiede il volume. Se i client NAS accedono a un volume utilizzando l'indirizzo IP del nodo partner, il traffico passa tra entrambi i nodi, riducendo le performance.
 
 
-TIP: Se si sposta un volume tra nodi in una coppia ha, è necessario rimontarlo utilizzando l'indirizzo IP dell'altro nodo. In caso contrario, si possono ottenere prestazioni ridotte. Se i client supportano i riferimenti NFSv4 o il reindirizzamento delle cartelle per CIFS, è possibile attivare tali funzionalità sui sistemi Cloud Volumes ONTAP per evitare di rimontare il volume. Per ulteriori informazioni, consultare la documentazione di ONTAP.
+TIP: Se si sposta un volume tra nodi in una coppia ha, è necessario rimontarlo utilizzando l'indirizzo IP dell'altro nodo. In caso contrario, si possono ottenere prestazioni ridotte. Se i client supportano i riferimenti NFSv4 o il reindirizzamento delle cartelle per CIFS, è possibile attivare tali funzionalità sui sistemi Cloud Volumes ONTAP per evitare di rimontare il volume. Per ulteriori informazioni, fare riferimento alla documentazione di ONTAP.
 
 È possibile identificare facilmente l'indirizzo IP corretto tramite l'opzione _Mount Command_ nel pannello Manage Volumes (Gestisci volumi) di BlueXP.
 

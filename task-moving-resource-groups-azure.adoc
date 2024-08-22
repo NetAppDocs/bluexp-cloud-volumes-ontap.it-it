@@ -21,7 +21,7 @@ Cloud Volumes ONTAP supporta lo spostamento dei gruppi di risorse Azure, ma il f
 .Fasi
 . Rimuovere l'ambiente di lavoro da *Canvas*.
 +
-Per informazioni su come rimuovere un ambiente di lavoro, vedere link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-removing.html["Rimozione degli ambienti di lavoro Cloud Volumes ONTAP"].
+Per informazioni su come rimuovere un ambiente di lavoro, fare riferimento alla link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-removing.html["Rimozione degli ambienti di lavoro Cloud Volumes ONTAP"].
 
 . Eseguire lo spostamento del gruppo di risorse nella console di Azure.
 +

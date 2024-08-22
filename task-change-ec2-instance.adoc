@@ -31,14 +31,14 @@ Per le coppie ha, il cambiamento è senza interruzioni. Le coppie HA continuano 
 
 +
 
-TIP: BlueXP modifica correttamente un nodo alla volta avviando il Takeover e attendendo il give back. Il team di QA di NetApp ha testato sia la scrittura che la lettura dei file durante questo processo e non ha rilevato alcun problema sul lato client. Con la modifica delle connessioni, abbiamo visto tentativi a livello di i/o, ma il livello applicativo ha superato questi brevi "re-wire" delle connessioni NFS/CIFS.
+TIP: BlueXP  cambia un nodo alla volta avviando il takeover e in attesa del giveback. Il team di controllo qualità di NetApp ha testato sia la scrittura che la lettura dei file durante questo processo e non ha riscontrato alcun problema sul lato client. Con il variare delle connessioni, alcuni tentativi sono stati osservati a livello di i/o, ma il livello applicativo ha superato il cablaggio delle connessioni NFS/CIFS.
 
 
 
 .Riferimento
-Per un elenco dei tipi di istanza supportati in AWS, vedere link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Istanze EC2 supportate"^].
+Per un elenco dei tipi di istanza supportati in AWS, fare riferimento a link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Istanze EC2 supportate"^].
 
-Se non è possibile modificare il tipo di istanza da istanze C4, M4 o R4, vedere l'articolo della Knowledge base link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_(KVM)["Conversione di un'istanza CVO Xen di AWS in Nitro (KVM)"^].
+Se non è possibile modificare il tipo di istanza da istanze C4, M4 o R4, fare riferimento all'articolo della KB link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_(KVM)["Conversione di un'istanza CVO Xen di AWS in Nitro (KVM)"^].
 
 .Fasi
 . Nella pagina Canvas, selezionare l'ambiente di lavoro.

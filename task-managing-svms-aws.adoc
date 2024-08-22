@@ -64,7 +64,7 @@ image:screenshot_aws_e0a.gif["Schermata della console AWS che mostra la porta e0
 +
 Nella sezione precedente di questa pagina dovrebbe essere stato identificato il numero massimo di indirizzi IP supportati per interfaccia.
 
-.. Facoltativo: Accedere alla CLI per Cloud Volumes ONTAP ed eseguire *Network Interface show* per verificare che ciascuno di questi indirizzi IP sia in uso.
+.. Facoltativo: Accedere alla CLI di ONTAP per Cloud Volumes ONTAP ed eseguire *network interface show* per confermare che ciascuno di questi indirizzi IP è in uso.
 +
 Se un indirizzo IP non è in uso, è possibile utilizzarlo con la nuova VM di storage.
 

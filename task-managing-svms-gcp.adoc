@@ -28,7 +28,7 @@ Tutte le altre configurazioni Cloud Volumes ONTAP supportano una VM di storage p
 
 == Creare una VM di storage
 
-Se supportato dalla licenza, è possibile creare più VM di storage su un sistema a nodo singolo o su una coppia ha. Tenere presente che è necessario utilizzare l'API BlueXP per creare una VM di storage su una coppia ha, mentre è possibile utilizzare CLI o System Manager per creare una VM di storage su un sistema a nodo singolo.
+Se supportato dalla licenza, è possibile creare più VM di storage su un sistema a nodo singolo o su una coppia ha. È necessario utilizzare l'API BlueXP  per creare una macchina virtuale per lo storage su una coppia ha, mentre è possibile utilizzare ONTAP System Manager o l'interfaccia a riga di comando di ONTAP per creare una macchina virtuale per lo storage su un sistema a nodo singolo.
 
 
 
@@ -98,7 +98,7 @@ Questo passaggio è necessario perché la nuova VM di storage deve accedere ad a
 
 === Coppia HA
 
-È necessario utilizzare l'API BlueXP per creare una VM di storage su un sistema Cloud Volumes ONTAP in Google Cloud. L'utilizzo dell'API (e non di System Manager o CLI) è necessario perché BlueXP configura la VM di storage con i servizi LIF richiesti, oltre a un LIF iSCSI necessario per le comunicazioni SMB/CIFS in uscita.
+È necessario utilizzare l'API BlueXP per creare una VM di storage su un sistema Cloud Volumes ONTAP in Google Cloud. Poiché BlueXP  configura la macchina virtuale di storage con i servizi LIF richiesti, nonché una LIF iSCSI necessaria per le comunicazioni SMB/CIFS outbound ONTAP ONTAP.
 
 Si noti che BlueXP assegna gli indirizzi IP richiesti in Google Cloud e crea la VM di storage con una LIF dati per l'accesso SMB/NFS e una LIF iSCSI per le comunicazioni SMB in uscita.
 

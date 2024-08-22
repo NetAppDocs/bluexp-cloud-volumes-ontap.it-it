@@ -26,7 +26,7 @@ Prima di avviare il processo di aggiornamento di Cloud Volumes ONTAP, tenere pre
 
 === Aggiornamento solo da BlueXP
 
-Gli aggiornamenti di Cloud Volumes ONTAP devono essere completati da BlueXP. Non aggiornare Cloud Volumes ONTAP utilizzando Gestione di sistema o l'interfaccia CLI. In questo modo si può influire sulla stabilità del sistema.
+Gli aggiornamenti di Cloud Volumes ONTAP devono essere completati da BlueXP. Non eseguire l'aggiornamento di Cloud Volumes ONTAP utilizzando Gestione di sistema di ONTAP o l'interfaccia a riga di comando di ONTAP. In questo modo si può influire sulla stabilità del sistema.
 
 
 
@@ -241,7 +241,7 @@ Se un sistema Cloud Volumes ONTAP dispone di relazioni SnapMirror attive, si con
 NOTE: Anche se il backup e ripristino di BlueXP utilizza un'implementazione di SnapMirror per creare file di backup (chiamata SnapMirror Cloud), non è necessario sospendere i backup quando viene aggiornato un sistema.
 
 .A proposito di questa attività
-Questa procedura descrive come utilizzare System Manager per la versione 9.3 e successive.
+Questa procedura descrive come utilizzare Gestione di sistema di ONTAP per la versione 9,3 e successive.
 
 .Fasi
 . Accedere a System Manager dal sistema di destinazione.
@@ -263,7 +263,7 @@ NOTE: Il computer da cui si accede a BlueXP deve disporre di una connessione di 
 Gli aggregati per Cloud Volumes ONTAP devono essere online prima di aggiornare il software. Gli aggregati devono essere online nella maggior parte delle configurazioni, ma in caso contrario, è necessario portarli online.
 
 .A proposito di questa attività
-Questa procedura descrive come utilizzare System Manager per la versione 9.3 e successive.
+Questa procedura descrive come utilizzare Gestione di sistema di ONTAP per la versione 9,3 e successive.
 
 .Fasi
 . Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.

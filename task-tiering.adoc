@@ -14,7 +14,7 @@ summary: È possibile ridurre i costi di storage per Cloud Volumes ONTAP combina
 
 
 [role="lead"]
-È possibile ridurre i costi di storage per Cloud Volumes ONTAP combinando un Tier di performance SSD o HDD per i dati hot con un Tier di capacità dello storage a oggetti per i dati inattivi. Il tiering dei dati è basato sulla tecnologia FabricPool. Per una panoramica generale, vedere link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+È possibile ridurre i costi di storage per Cloud Volumes ONTAP combinando un Tier di performance SSD o HDD per i dati hot con un Tier di capacità dello storage a oggetti per i dati inattivi. Il tiering dei dati è basato sulla tecnologia FabricPool. Per una panoramica di alto livello, fare riferimento alla link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
 
 Per impostare il tiering dei dati, è necessario effettuare le seguenti operazioni:
 
@@ -141,11 +141,11 @@ ifdef::aws[]
 
 === Requisiti per il tiering dei dati cold in AWS S3
 
-Assicurarsi che Cloud Volumes ONTAP disponga di una connessione a S3. Il modo migliore per fornire tale connessione consiste nella creazione di un endpoint VPC per il servizio S3. Per istruzioni, vedere https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentazione AWS: Creazione di un endpoint gateway"^].
+Assicurarsi che Cloud Volumes ONTAP disponga di una connessione a S3. Il modo migliore per fornire tale connessione consiste nella creazione di un endpoint VPC per il servizio S3. Per istruzioni, fare riferimento alla https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentazione AWS: Creazione di un endpoint gateway"^] .
 
 Quando si crea l'endpoint VPC, assicurarsi di selezionare la regione, il VPC e la tabella di routing che corrispondono all'istanza di Cloud Volumes ONTAP. È inoltre necessario modificare il gruppo di protezione per aggiungere una regola HTTPS in uscita che abilita il traffico all'endpoint S3. In caso contrario, Cloud Volumes ONTAP non può connettersi al servizio S3.
 
-In caso di problemi, vedere https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"^].
+In caso di problemi, fare riferimento a https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["AWS Support Knowledge Center: Perché non è possibile connettersi a un bucket S3 utilizzando un endpoint VPC gateway?"^].
 
 endif::aws[]
 
@@ -195,7 +195,7 @@ endif::gcp[]
 
 === Abilitazione del tiering dei dati dopo l'implementazione dei requisiti
 
-BlueXP crea un archivio di oggetti per i dati cold quando viene creato il sistema, a condizione che non vi siano problemi di connettività o permessi. Se i requisiti elencati sopra non sono stati implementati fino a quando non è stato creato il sistema, sarà necessario attivare manualmente il tiering tramite l'API o System Manager, che crea l'archivio di oggetti.
+BlueXP crea un archivio di oggetti per i dati cold quando viene creato il sistema, a condizione che non vi siano problemi di connettività o permessi. Se i requisiti sopra elencati non sono stati implementati prima della creazione del sistema, sarà necessario abilitare manualmente il tiering tramite l'API o ONTAP System Manager, che crea l'archivio di oggetti.
 
 
 NOTE: La possibilità di abilitare il tiering tramite l'interfaccia utente di BlueXP sarà disponibile in una release futura di Cloud Volumes ONTAP.
@@ -212,7 +212,7 @@ Se abiliti il tiering dei dati su un nuovo volume, non dovrai preoccuparti di ab
 
 * *Volumi esistenti*
 +
-Se si desidera attivare il tiering dei dati su un volume esistente, è necessario assicurarsi che il tiering dei dati sia attivato sull'aggregato sottostante. Se il tiering dei dati non è abilitato sull'aggregato esistente, sarà necessario utilizzare System Manager per associare un aggregato esistente all'archivio di oggetti.
+Se si desidera attivare il tiering dei dati su un volume esistente, è necessario assicurarsi che il tiering dei dati sia attivato sull'aggregato sottostante. Se il tiering dei dati non è abilitato nell'aggregato esistente, sarà necessario utilizzare Gestione di sistema di ONTAP per collegare un aggregato esistente all'archivio di oggetti.
 
 
 
@@ -226,7 +226,7 @@ image:screenshot_aggregate_tiering_enabled.png["Una schermata che mostra informa
 
 
 .Passaggi per abilitare il tiering su un aggregato
-. In System Manager, fare clic su *Storage > Tier*.
+. In Gestione di sistema di ONTAP, fare clic su *archiviazione > livelli*.
 . Fare clic sul menu delle azioni dell'aggregato e selezionare *Attach Cloud Tier*.
 . Selezionare il livello cloud da allegare e fare clic su *Save* (Salva).
 
@@ -255,7 +255,7 @@ Cloud Volumes ONTAP è in grado di tierare i dati inattivi su volumi di lettura/
 |===
 . Selezionare una policy di tiering.
 +
-Per una descrizione di questi criteri, vedere link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per una descrizione di questi criteri, fare riferimento a link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
 
 +
 *Esempio*
@@ -285,7 +285,7 @@ Cloud Volumes ONTAP può eseguire il tiering dei dati da un volume di protezione
 image:screenshot_replication_tiering.gif["Schermata che mostra l'opzione di tiering S3 durante la replica di un volume."]
 
 +
-Per assistenza nella replica dei dati, vedere https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replica dei dati da e verso il cloud"^].
+Per informazioni sulla replica dei dati, fare riferimento a https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replica dei dati da e verso il cloud"^].
 
 
 
@@ -297,7 +297,7 @@ Dopo aver implementato Cloud Volumes ONTAP, è possibile ridurre i costi di stor
 
 La classe di storage per i dati a più livelli è estesa a tutto il sistema, non a ​it per volume.
 
-Per informazioni sulle classi di storage supportate, vedere link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
+Per informazioni sulle classi di archiviazione supportate, fare riferimento a link:concept-data-tiering.html["Panoramica sul tiering dei dati"].
 
 .Fasi
 . Dall'ambiente di lavoro, fare clic sull'icona del menu, quindi su *Storage CLASSES* o *Blob Storage Tiering*.
@@ -330,7 +330,7 @@ image:screenshot_settings_icon.png["Una schermata che mostra l'icona Settings (I
 
 == Modifica del periodo di raffreddamento per la policy di tiering automatico
 
-Se è stato attivato il tiering dei dati su un volume Cloud Volumes ONTAP utilizzando la policy di tiering _auto_, è possibile regolare il periodo di raffreddamento predefinito in base alle esigenze aziendali. Questa azione è supportata solo tramite API e CLI.
+Se è stato attivato il tiering dei dati su un volume Cloud Volumes ONTAP utilizzando la policy di tiering _auto_, è possibile regolare il periodo di raffreddamento predefinito in base alle esigenze aziendali. Questa azione è supportata solo utilizzando ONTAP CLI e API.
 
 Il periodo di raffreddamento è il numero di giorni in cui i dati utente di un volume devono rimanere inattivi prima che vengano considerati "freddi" e spostati nello storage a oggetti.
 

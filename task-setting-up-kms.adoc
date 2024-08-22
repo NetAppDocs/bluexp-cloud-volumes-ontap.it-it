@@ -96,7 +96,7 @@ Il seguente criterio fornisce le autorizzazioni necessarie a BlueXP per utilizza
 }
 ----
 +
-Per ulteriori informazioni su questo processo, vedere https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html["Documentazione AWS: Consente agli utenti di altri account di utilizzare una chiave KMS"^].
+Per ulteriori informazioni su questo processo, fare riferimento alla https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying-external-accounts.html["Documentazione AWS: Consente agli utenti di altri account di utilizzare una chiave KMS"^] .
 
 
 

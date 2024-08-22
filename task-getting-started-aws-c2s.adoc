@@ -628,7 +628,7 @@ CAUTION: Durante le selezioni effettuate mediante la procedura guidata, non sele
 .Note per l'implementazione di ha Cloud Volumes ONTAP in più zone di disponibilità
 Segui quanto segue al termine della procedura guidata per le coppie ha.
 
-* È necessario configurare un gateway di transito quando si implementa Cloud Volumes ONTAP ha in più zone di disponibilità (AZS). Vedere link:task-setting-up-transit-gateway.html["Configurare un gateway di transito AWS"].
+* È necessario configurare un gateway di transito quando si implementa Cloud Volumes ONTAP ha in più zone di disponibilità (AZS). Per istruzioni, fare riferimento alla link:task-setting-up-transit-gateway.html["Configurare un gateway di transito AWS"].
 * Implementa la configurazione come segue, perché al momento della pubblicazione erano disponibili solo due zone di disponibilità nell'AWS Top Secret Cloud:
 +
 ** Nodo 1: Zona di disponibilità A.

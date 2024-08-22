@@ -260,10 +260,10 @@ Se si utilizza una policy firewall personalizzata, assicurarsi di aggiungere tut
 | Tutti gli ICMP | Tutto | Eseguire il ping dell'istanza 
 
 
-| HTTP | 80 | Accesso HTTP alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
+| HTTP | 80 | Accesso HTTP alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione cluster 
 
 
-| HTTPS | 443 | Connettività con il connettore e accesso HTTPS alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
+| HTTPS | 443 | Connettività con il connettore e accesso HTTPS alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione del cluster 
 
 
 | SSH | 22 | Accesso SSH all'indirizzo IP della LIF di gestione del cluster o di una LIF di gestione dei nodi 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-ha-azure.html 
-keywords: high availability, HA, concepts, understanding, overview, takeover, giveback, rpo, rto, nondisruptive, ha pairs, node, nodes, recovery point objective, recovery time objective, nas, nfs, cifs, iscsi, mpio, alua, failover, failure, azure, shared storage, active, passive, load balancer, availability set, storage accounts, page blobs 
+keywords: high availability, HA, concepts, understanding, overview, takeover, giveback, rpo, rto, nondisruptive, ha pairs, node, nodes, recovery point objective, recovery time objective, nas, nfs, cifs, iscsi, mpio, alua, failover, failure, azure, shared storage, active, passive, load balancer, storage accounts, page blobs 
 summary: 'Una coppia Cloud Volumes ONTAP ad alta disponibilità (ha) offre affidabilità aziendale e operazioni continue in caso di guasti nel tuo ambiente cloud. In Azure, lo storage viene condiviso tra i due nodi.' 
 ---
 = Coppie ad alta disponibilità in Azure
@@ -26,12 +26,12 @@ Una coppia Cloud Volumes ONTAP ad alta disponibilità (ha) offre affidabilità a
 
 La configurazione di un blob di pagina Cloud Volumes ONTAP ha in Azure include i seguenti componenti:
 
-image:diagram_ha_azure.png["Un'immagine concettuale che mostra un bilanciamento del carico che gestisce il traffico in entrata da BlueXP e client, due nodi Cloud Volumes ONTAP in un set di disponibilità, dischi SSD per i dati di avvio e Page Blob per i dati del cliente."]
+image:diagram_ha_azure.png["Un'immagine concettuale che mostra un bilanciatore del carico che gestisce il traffico in entrata da BlueXP  e client, due nodi Cloud Volumes ONTAP in un flex VMSS, dischi SSD per i dati di avvio e BLOB di pagina per i dati dei clienti."]
 
 Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per te:
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
-Set di disponibilità:: Il set di disponibilità Azure è un raggruppamento logico dei nodi Cloud Volumes ONTAP. Il set di disponibilità garantisce che i nodi si trovino in diversi domini di errore e di aggiornamento per fornire ridondanza e disponibilità. https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview["Scopri di più sui set di disponibilità nei documenti di Azure"^].
+Macchine virtuali in singole zone di disponibilità:: A partire da Cloud Volumes ONTAP 9.15.1, puoi creare e gestire macchine virtuali eterogenee (VM) in una singola zona di disponibilità (AZ). È possibile implementare nodi ad alta disponibilità (ha) in domini di errore separati all'interno della stessa AZ, garantendo una disponibilità ottimale. Per ulteriori informazioni sulla modalità di orchestrazione flessibile che abilita questa funzionalità, consultare la sezione https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentazione di Microsoft Azure: Set di scalabilità delle macchine virtuali"^].
 Dischi:: I dati dei clienti si trovano nelle pagine di Premium Storage. Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["dati di boot, root e core"^].
 Account storage::
 +
@@ -39,7 +39,7 @@ Account storage::
 * Per i dischi gestiti è necessario un account di storage.
 * Per le pagine blob dello storage Premium sono necessari uno o più account di storage, in quanto viene raggiunto il limite di capacità del disco per account di storage.
 +
-https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-targets["Documentazione di Azure: Obiettivi di scalabilità e performance dello storage Azure per gli account storage"^].
+https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-targets["Documentazione Microsoft Azure: Obiettivi di performance e scalabilità dello storage Azure per gli account storage"^].
 
 * Per il tiering dei dati sullo storage Azure Blob è necessario un account storage.
 * A partire da Cloud Volumes ONTAP 9.7, gli account storage creati da BlueXP per le coppie ha sono account storage v2 generici.
@@ -55,13 +55,13 @@ https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-target
 
 La configurazione di una singola zona di disponibilità di Cloud Volumes ONTAP ha eseguita su un disco gestito condiviso include i seguenti componenti:
 
-image:diagram_ha_azure_saz_lrs.png["Immagine concettuale che mostra un bilanciamento del carico che gestisce il traffico in entrata da BlueXP e client, due nodi Cloud Volumes ONTAP in un set di disponibilità, dischi SSD per i dati di avvio e dischi gestiti da LRS per i dati del cliente."]
+image:diagram_ha_azure_saz_lrs.png["Un'immagine concettuale che mostra un bilanciatore di carico che gestisce il traffico in entrata da BlueXP  e client, due nodi Cloud Volumes ONTAP in VMSS Flex, dischi SSD per i dati di avvio e dischi gestiti LRS per i dati del cliente."]
 
 Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per te:
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
-Set di disponibilità:: Il set di disponibilità Azure è un raggruppamento logico dei nodi Cloud Volumes ONTAP. Il set di disponibilità garantisce che i nodi si trovino in diversi domini di errore e di aggiornamento per fornire ridondanza e disponibilità. https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview["Scopri di più sui set di disponibilità nei documenti di Azure"^].
-Dischi:: I dati del cliente risiedono su dischi gestiti con storage ridondante locale (LRS). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Dati di boot, root, partner root, core e NVRAM"^].
+Macchine virtuali in singole zone di disponibilità:: A partire da Cloud Volumes ONTAP 9.15.1, puoi creare e gestire macchine virtuali eterogenee (VM) in una singola zona di disponibilità (AZ). È possibile implementare nodi ad alta disponibilità (ha) in domini di errore separati all'interno della stessa AZ, garantendo una disponibilità ottimale. Per ulteriori informazioni sulla modalità di orchestrazione flessibile che abilita questa funzionalità, consultare la sezione https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentazione di Microsoft Azure: Set di scalabilità delle macchine virtuali"^].
+Dischi:: I dati del cliente risiedono su dischi gestiti LRS (Local Redundant Storage). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre necessario ulteriore spazio di archiviazione per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Dati di boot, root, partner root, core e NVRAM"^].
 Account storage:: Gli account storage vengono utilizzati per le implementazioni gestite basate su disco per gestire i log diagnostici e il tiering per lo storage blob.
 
 
@@ -76,7 +76,7 @@ image:diagram_ha_azure_maz.png["Immagine concettuale che mostra un bilanciamento
 Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per te:
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
-Zone di disponibilità:: Due nodi Cloud Volumes ONTAP vengono implementati in diverse zone di disponibilità. Le zone di disponibilità garantiscono che i nodi si trovino in diversi domini di errore. https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Scopri di più sullo storage ridondante in zone di Azure per dischi gestiti nei documenti di Azure"^].
+Zone di disponibilità:: LA configurazione HA a più zone di disponibilità utilizza un modello di implementazione in cui due nodi Cloud Volumes ONTAP vengono implementati in diverse zone di disponibilità, assicurandosi che i nodi si trovino in diversi domini di errore per fornire ridondanza e disponibilità. Per scoprire in che modo i set di scalabilità delle macchine virtuali in modalità di orchestrazione flessibile possono utilizzare le zone di disponibilità in Azure, consultare https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones?tabs=cli-1%2Cportal-2["Documentazione di Microsoft Azure: Creare un set di scalabilità della macchina virtuale che utilizzi le zone di disponibilità"^] .
 Dischi:: I dati del cliente risiedono su dischi gestiti con ZRS (zone-Redundant Storage). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre richiesto storage aggiuntivo per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["dati di boot, root, root partner e core"^].
 Account storage:: Gli account storage vengono utilizzati per le implementazioni gestite basate su disco per gestire i log diagnostici e il tiering per lo storage blob.
 
@@ -102,7 +102,7 @@ Per le configurazioni NAS, gli indirizzi IP dei dati migrano automaticamente tra
 Per iSCSI, Cloud Volumes ONTAP utilizza MPIO (Multipath i/o) e ALUA (Asymmetric Logical Unit Access) per gestire il failover del percorso tra i percorsi ottimizzati per attività e non ottimizzati.
 
 
-NOTE: Per informazioni su quali configurazioni host specifiche supportano ALUA, consultare http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] E la guida all'installazione e all'installazione delle utility host per il sistema operativo host.
+NOTE: Per informazioni sulle specifiche configurazioni host che supportano ALUA, consultare la http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] e la https://docs.netapp.com/us-en/ontap-sanhost/["Guida agli host SAN e ai client cloud"] per il sistema operativo host in uso.
 
 Per impostazione predefinita, le funzioni di Takeover, risync e giveback dello storage sono tutte automatiche. Non è richiesta alcuna azione da parte dell'utente.
 

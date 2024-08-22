@@ -97,7 +97,7 @@ NOTE: Il failover LIF è disattivato per impostazione predefinita per Cloud Volu
 +
 I backup sono accessibili da http://ipaddress/occm/offboxconfig/ dove _ipaddress_ è l'indirizzo IP dell'host del connettore.
 
-** BlueXP imposta alcuni attributi di volume in modo diverso rispetto ad altri strumenti di gestione (ad esempio, System Manager o CLI).
+** BlueXP  imposta alcuni attributi di volume in modo diverso rispetto ad altri strumenti di gestione (ad esempio, ONTAP System Manager o la CLI di ONTAP).
 +
 Nella tabella seguente sono elencati gli attributi del volume impostati da BlueXP in modo diverso dai valori predefiniti:
 
@@ -127,7 +127,7 @@ NOTE: L'amministratore dell'account può modificare questo valore dalla pagina I
 | Autorizzazioni UNIX (solo NFS) | 777 
 |===
 +
-Vedere link:https://docs.netapp.com/us-en/ontap-cli-9121/volume-create.html["ONTAP _volume create_ man page"] per informazioni su questi attributi.
+Per informazioni su questi attributi, fare riferimento a link:https://docs.netapp.com/us-en/ontap-cli-9121/volume-create.html["ONTAP _volume create_ man page"].
 
 
 
@@ -189,6 +189,9 @@ Se la macchina virtuale scelta per Cloud Volumes ONTAP supporta gli SSD Ultra, i
 * Un disco HDD standard da 1024 GiB per il risparmio dei core
 * Uno snapshot Azure per ogni disco di boot e disco root
 * Per impostazione predefinita, ogni disco in Azure viene crittografato a riposo.
++
+Se la macchina virtuale scelta per Cloud Volumes ONTAP supporta il disco SSD Premium v2 gestito come dischi dati, il sistema utilizza un disco gestito v2 GiB Premium SSD da 32 GB per NVRAM e un altro disco come disco principale.
+
 
 
 
@@ -210,7 +213,7 @@ NOTE: Le snapshot vengono create automaticamente al riavvio.
 
 .Coppie HA con dischi gestiti condivisi in più zone di disponibilità
 * Due dischi SSD Premium da 10 GiB per il volume di boot (uno per nodo)
-* Due blob di pagina 512 GiB Premium Storage per il volume root (uno per nodo)
+* Due dischi SSD GiB Premium da 512 GB per il volume root (uno per nodo)
 * Due dischi HDD standard da 1024 GiB per il risparmio di core (uno per nodo)
 * Due dischi SSD Premium da 512 GiB per NVRAM (uno per nodo)
 * Uno snapshot Azure per ogni disco di boot e disco root
@@ -219,6 +222,16 @@ NOTE: Le snapshot vengono create automaticamente al riavvio.
 NOTE: Le snapshot vengono create automaticamente al riavvio.
 
 * Per impostazione predefinita, ogni disco in Azure viene crittografato a riposo.
+
+
+.Coppie HA con dischi gestiti condivisi in singole zone di disponibilità
+* Due dischi SSD Premium da 10 GiB per il volume di boot (uno per nodo)
+* Due dischi SSD Shared Managed Premium da 512 GB per il volume root (uno per nodo)
+* Due dischi HDD standard da 1024 GiB per il risparmio di core (uno per nodo)
+* Due dischi gestiti SSD Premium da 512 GiB per NVRAM (uno per nodo)
++
+Se la macchina virtuale supporta dischi SSD Premium v2 gestiti come dischi dati, utilizza 32 dischi SSD Premium v2 GiB per NVRAM e 512 dischi gestiti condivisi SSD Premium v2 GiB per il volume root.
+
 
 
 endif::azure[]

@@ -31,7 +31,7 @@ Per le coppie ha, il cambiamento è senza interruzioni. Le coppie HA continuano 
 
 +
 
-TIP: BlueXP modifica correttamente un nodo alla volta avviando il Takeover e attendendo il give back. Il team di QA di NetApp ha testato sia la scrittura che la lettura dei file durante questo processo e non ha rilevato alcun problema sul lato client. Con la modifica delle connessioni, abbiamo visto tentativi a livello di i/o, ma il livello applicativo ha superato questi brevi "re-wire" delle connessioni NFS/CIFS.
+TIP: BlueXP  cambia un nodo alla volta avviando il takeover e in attesa del giveback. Il team di controllo qualità di NetApp ha testato sia la scrittura che la lettura dei file durante questo processo e non ha riscontrato alcun problema sul lato client. Con il variare delle connessioni, alcuni tentativi sono stati osservati a livello di i/o, ma il livello applicativo ha superato il cablaggio delle connessioni NFS/CIFS.
 
 
 

@@ -130,7 +130,7 @@ Una configurazione Cloud Volumes ONTAP ha replica in modo sincrono i dati tra i 
 * Per le configurazioni ha che servono dati da entrambi i nodi, le performance di lettura sono superiori rispetto alle performance di lettura di una configurazione a nodo singolo e le performance di scrittura sono uguali o superiori.
 
 
-Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, vedere link:concept-performance.html["Performance"].
+Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, fare riferimento a link:concept-performance.html["Performance"].
 
 
 
@@ -139,7 +139,7 @@ Per ulteriori informazioni sulle prestazioni di Cloud Volumes ONTAP, vedere link
 I client devono accedere ai volumi NFS e CIFS utilizzando l'indirizzo IP dei dati del nodo su cui risiede il volume. Se i client NAS accedono a un volume utilizzando l'indirizzo IP del nodo partner, il traffico passa tra entrambi i nodi, riducendo le performance.
 
 
-TIP: Se si sposta un volume tra nodi in una coppia ha, è necessario rimontarlo utilizzando l'indirizzo IP dell'altro nodo. In caso contrario, si possono ottenere prestazioni ridotte. Se i client supportano i riferimenti NFSv4 o il reindirizzamento delle cartelle per CIFS, è possibile attivare tali funzionalità sui sistemi Cloud Volumes ONTAP per evitare di rimontare il volume. Per ulteriori informazioni, consultare la documentazione di ONTAP.
+TIP: Se si sposta un volume tra nodi in una coppia ha, è necessario rimontarlo utilizzando l'indirizzo IP dell'altro nodo. In caso contrario, si possono ottenere prestazioni ridotte. Se i client supportano i riferimenti NFSv4 o il reindirizzamento delle cartelle per CIFS, è possibile attivare tali funzionalità sui sistemi Cloud Volumes ONTAP per evitare di rimontare il volume. Per ulteriori informazioni, fare riferimento alla documentazione di ONTAP.
 
 È possibile identificare facilmente l'indirizzo IP corretto tramite l'opzione _Mount Command_ nel pannello Manage Volumes (Gestisci volumi) di BlueXP.
 

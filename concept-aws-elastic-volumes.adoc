@@ -37,7 +37,7 @@ Si noti che i limiti di capacità totale del sistema rimangono invariati.
 
 
 
-https://aws.amazon.com/ebs/features/["Scopri di più sui volumi elastici di AWS"^]
+https://aws.amazon.com/ebs/features/["Documentazione AWS: Scopri di più sui volumi elastici AWS"^]
 
 
 

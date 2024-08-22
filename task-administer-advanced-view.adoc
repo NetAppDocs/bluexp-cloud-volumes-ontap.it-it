@@ -48,7 +48,7 @@ Configurare I gruppi iniziatori SAN e i client NFS.
 
 == Configurazioni supportate
 
-La gestione avanzata tramite Gestione di sistema è supportata con Cloud Volumes ONTAP 9.10.0 e versioni successive nelle aree cloud standard.
+La gestione avanzata tramite ONTAP System Manager è supportata con Cloud Volumes ONTAP 9.10.0 e versioni successive nelle regioni cloud standard.
 
 L'integrazione di System Manager non è supportata nelle regioni di GovCloud o nelle regioni che non dispongono di accesso a Internet in uscita.
 

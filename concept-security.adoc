@@ -83,7 +83,7 @@ Quando si avvia un sistema Cloud Volumes ONTAP in AWS, è possibile attivare la 
 
 TIP: Non è possibile modificare il metodo di crittografia dei dati AWS dopo aver creato un sistema Cloud Volumes ONTAP.
 
-Se si desidera utilizzare questa opzione di crittografia, assicurarsi che AWS KMS sia configurato correttamente. Per ulteriori informazioni, vedere link:task-setting-up-kms.html["Configurazione di AWS KMS"].
+Se si desidera utilizzare questa opzione di crittografia, assicurarsi che AWS KMS sia configurato correttamente. Per informazioni, fare riferimento alla link:task-setting-up-kms.html["Configurazione di AWS KMS"].
 
 endif::aws[]
 
@@ -119,9 +119,9 @@ endif::gcp[]
 
 La scansione antivirus di ONTAP, denominata _Vscan_, combina il software antivirus di terze parti più all'avanguardia con le funzionalità di ONTAP che offrono la flessibilità necessaria per controllare quali file vengono sottoposti a scansione e quando.
 
-Per informazioni su vendor, software e versioni supportate da Vscan, consultare http://mysupport.netapp.com/matrix["Matrice di interoperabilità NetApp"^].
+Per informazioni sui fornitori, il software e le versioni supportate da Vscan, fare riferimento alla http://mysupport.netapp.com/matrix["Matrice di interoperabilità NetApp"^] .
 
-Per informazioni su come configurare e gestire la funzionalità antivirus sui sistemi ONTAP, consultare http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["Guida alla configurazione antivirus di ONTAP 9"^].
+Per informazioni su come configurare e gestire la funzionalità antivirus sui sistemi ONTAP, fare riferimento alla http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["Guida alla configurazione antivirus di ONTAP 9"^] .
 
 
 

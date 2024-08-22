@@ -26,7 +26,7 @@ image::graphic_azure_check_signature.png[firma del controllo visivo grafico]
 
 * Scaricare il file Azure Image Digest dal https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estrarre il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).
 +
-Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Scaricare il file di Azure Image Digest"^] per ulteriori informazioni.
+Per ulteriori informazioni, fare riferimento link:task-azure-download-digest-file.html["Scaricare il file di Azure Image Digest"] a.
 
 * Verificare la catena di trust.
 * Estrarre la chiave pubblica(.pub) dal certificato a chiave pubblica(.pem).

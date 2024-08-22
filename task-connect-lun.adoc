@@ -19,7 +19,7 @@ Quando si crea un volume iSCSI, BlueXP crea automaticamente un LUN. Abbiamo semp
 Tenere presente quanto segue:
 
 * La gestione automatica della capacità di BlueXP non si applica alle LUN. Quando BlueXP crea un LUN, disattiva la funzione di crescita automatica.
-* È possibile creare ulteriori LUN da System Manager o dall'interfaccia CLI.
+* È possibile creare ulteriori LUN da ONTAP System Manager o dall'interfaccia a riga di comando di ONTAP.
 
 
 .Fasi

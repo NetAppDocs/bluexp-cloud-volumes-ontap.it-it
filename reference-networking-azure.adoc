@@ -183,7 +183,7 @@ Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predef
 | 1000 inbound_ssh | 22 TCP | Qualsiasi a qualsiasi | Accesso SSH all'indirizzo IP della LIF di gestione del cluster o di una LIF di gestione dei nodi 
 
 
-| 1001 inbound_http | 80 TCP | Qualsiasi a qualsiasi | Accesso HTTP alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
+| 1001 inbound_http | 80 TCP | Qualsiasi a qualsiasi | Accesso HTTP alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione cluster 
 
 
 | 1002 inbound_111_tcp | 111 TCP | Qualsiasi a qualsiasi | Chiamata a procedura remota per NFS 
@@ -201,7 +201,7 @@ Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predef
 | 1006 inbound_161-162 _udp | 161-162 UDP | Qualsiasi a qualsiasi | Protocollo di gestione di rete semplice 
 
 
-| 1007 inbound_443 | 443 TCP | Qualsiasi a qualsiasi | Connettività con il connettore e accesso HTTPS alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
+| 1007 inbound_443 | 443 TCP | Qualsiasi a qualsiasi | Connettività con il connettore e accesso HTTPS alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione del cluster 
 
 
 | 1008 inbound_445 | 445 TCP | Qualsiasi a qualsiasi | Microsoft SMB/CIFS su TCP con frame NetBIOS 
@@ -269,7 +269,7 @@ NOTE: I sistemi HA hanno meno regole in entrata rispetto ai sistemi a nodo singo
 | Priorità e nome | Porta e protocollo | Origine e destinazione | Descrizione 
 
 
-| 100 inbound_443 | 443 qualsiasi protocollo | Qualsiasi a qualsiasi | Connettività con il connettore e accesso HTTPS alla console Web di System Manager utilizzando l'indirizzo IP della LIF di gestione del cluster 
+| 100 inbound_443 | 443 qualsiasi protocollo | Qualsiasi a qualsiasi | Connettività con il connettore e accesso HTTPS alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione del cluster 
 
 
 | 101 inbound_111_tcp | 111 qualsiasi protocollo | Qualsiasi a qualsiasi | Chiamata a procedura remota per NFS 

@@ -16,7 +16,7 @@ summary: BlueXP consente di gestire volumi e server CIFS. Inoltre, richiede di s
 [role="lead"]
 BlueXP consente di gestire volumi e server CIFS. Inoltre, richiede di spostare i volumi per evitare problemi di capacità.
 
-Puoi gestire i volumi in BlueXP Standard View o Advanced View. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. La vista avanzata offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e tracciamento delle attività e spostamento dei volumi tra Tier. Vedere link:task-administer-advanced-view.html["Amministrare Cloud Volumes ONTAP utilizzando la visualizzazione avanzata"].
+Puoi gestire i volumi in BlueXP Standard View o Advanced View. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. La vista avanzata offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e tracciamento delle attività e spostamento dei volumi tra Tier. Per informazioni, fare riferimento alla link:task-administer-advanced-view.html["Amministrare Cloud Volumes ONTAP utilizzando la visualizzazione avanzata"].
 
 
 
@@ -55,7 +55,7 @@ image:screenshot_manage_vol_button.png["Schermata del pulsante Manage Volume (Ge
 
 Questo processo crea un volume FlexClone. Un volume FlexClone è una copia point-in-time scrivibile efficiente in termini di spazio, in quanto utilizza una piccola quantità di spazio per i metadati e consuma solo spazio aggiuntivo quando i dati vengono modificati o aggiunti.
 
-Per ulteriori informazioni sui volumi FlexClone, vedere http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^].
+Per ulteriori informazioni su FlexClone Volumes, fare riferimento alla http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guida alla gestione dello storage logico di ONTAP 9"^] .
 
 
 
@@ -65,7 +65,7 @@ Per ulteriori informazioni sui volumi FlexClone, vedere http://docs.netapp.com/o
 
 
 
-NOTE: Se sono necessarie policy Snapshot personalizzate, è possibile crearle utilizzando System Manager.
+NOTE: Se sono necessari criteri Snapshot personalizzati, è possibile crearli utilizzando Gestione sistema di ONTAP.
 
 
 
@@ -129,7 +129,7 @@ Per impostazione predefinita, un volume aumenta automaticamente fino a raggiunge
 Se devi ridimensionare il volume, puoi farlo dalla vista avanzata di BlueXP.
 
 .Fasi
-. Aprire la visualizzazione avanzata per ridimensionare un volume tramite System Manager. Vedere link:task-administer-advanced-view.html#how-to-get-started["Come iniziare"].
+. Aprire la visualizzazione avanzata per ridimensionare un volume tramite Gestione di sistema di ONTAP. Fare riferimento alla link:task-administer-advanced-view.html#how-to-get-started["Come iniziare"].
 . Dal menu di navigazione a sinistra, selezionare *Storage > Volumes* (archiviazione > volumi*).
 . Dall'elenco dei volumi, identificare quello da ridimensionare.
 . Fare clic sull'icona delle opzioni image:screenshot_gallery_options.gif["icona kabob"].
@@ -140,7 +140,7 @@ Se devi ridimensionare il volume, puoi farlo dalla vista avanzata di BlueXP.
 
 image:screenshot-resize-volume.png["Lo schermo visualizza la capacità modificata dopo il ridimensionamento del volume"]
 
-Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. Accedere alla https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Note di rilascio di Cloud Volumes ONTAP"^] per ulteriori dettagli.
+Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema.  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Note di rilascio di Cloud Volumes ONTAP"^]Per ulteriori informazioni, consultare la sezione.
 
 
 
@@ -213,15 +213,15 @@ Cloud Volumes ONTAP aggiorna il server CIFS con le modifiche.
 
 Spostare i volumi per l'utilizzo della capacità, migliorare le performance e soddisfare i service level agreement.
 
-È possibile spostare un volume in System Manager selezionando un volume e l'aggregato di destinazione, avviando l'operazione di spostamento del volume e monitorando facoltativamente il processo di spostamento del volume. Quando si utilizza System Manager, l'operazione di spostamento del volume termina automaticamente.
+Puoi spostare un volume in ONTAP System Manager selezionando un volume e l'aggregato di destinazione, avviando l'operazione di spostamento del volume e facoltativamente monitorando il processo di spostamento del volume. Quando si utilizza System Manager, l'operazione di spostamento del volume termina automaticamente.
 
 .Fasi
-. Utilizzare System Manager o CLI per spostare i volumi nell'aggregato.
+. Utilizza ONTAP System Manager o la CLI di ONTAP per spostare i volumi nell'aggregato.
 +
 Nella maggior parte dei casi, è possibile utilizzare System Manager per spostare i volumi.
 
 +
-Per istruzioni, consultare link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guida rapida per lo spostamento del volume di ONTAP 9"^].
+Per istruzioni, fare riferimento alla link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guida rapida per lo spostamento del volume di ONTAP 9"^].
 
 
 
@@ -270,18 +270,18 @@ image::screenshot_aggr_volume_overview.png[screenshot panoramica del volume aggr
 
 . Se il sistema non ha raggiunto il limite di dischi, spostare i volumi in un aggregato esistente o in un nuovo aggregato sullo stesso sistema.
 +
-Per ulteriori informazioni, vedere <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
+Per informazioni, fare riferimento alla <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
 
 . Se il sistema ha raggiunto il limite di dischi, eseguire una delle seguenti operazioni:
 +
 .. Eliminare eventuali volumi inutilizzati.
 .. Riorganizzare i volumi per liberare spazio su un aggregato.
 +
-Per ulteriori informazioni, vedere <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
+Per informazioni, fare riferimento alla <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
 
 .. Spostare due o più volumi in un altro sistema con spazio.
 +
-Per ulteriori informazioni, vedere <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
+Per informazioni, fare riferimento alla <<move-volumes-aggregate-capacity,Spostare i volumi in un altro aggregato per evitare problemi di capacità>>.
 
 
 
@@ -305,19 +305,19 @@ Lo spostamento di un volume è necessario per evitare problemi di capacità; tut
 . Identificare un sistema Cloud Volumes ONTAP con capacità disponibile o implementare un nuovo sistema.
 . Trascinare e rilasciare l'ambiente di lavoro di origine nell'ambiente di lavoro di destinazione per eseguire una replica dei dati del volume una tantum.
 +
-Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replica dei dati tra sistemi"^].
+Per informazioni, fare riferimento alla link:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replica dei dati tra sistemi"^].
 
 . Accedere alla pagina Replication Status (Stato replica), quindi interrompere la relazione SnapMirror per convertire il volume replicato da un volume di protezione dati a un volume di lettura/scrittura.
 +
-Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html#managing-data-replication-schedules-and-relationships["Gestione delle pianificazioni e delle relazioni di replica dei dati"^].
+Per informazioni, fare riferimento alla link:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html#managing-data-replication-schedules-and-relationships["Gestione delle pianificazioni e delle relazioni di replica dei dati"^].
 
 . Configurare il volume per l'accesso ai dati.
 +
-Per informazioni sulla configurazione di un volume di destinazione per l'accesso ai dati, consultare link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guida rapida per il disaster recovery dei volumi di ONTAP 9"^].
+Per informazioni sulla configurazione di un volume di destinazione per l'accesso ai dati, fare riferimento alla link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guida rapida per il disaster recovery dei volumi di ONTAP 9"^].
 
 . Eliminare il volume originale.
 +
-Per ulteriori informazioni, vedere link:task-manage-volumes.html#manage-volumes["Gestire i volumi"].
+Per informazioni, fare riferimento alla link:task-manage-volumes.html#manage-volumes["Gestire i volumi"].
 
 
 
@@ -354,12 +354,12 @@ image::screenshot_aggr_capacity.png[screenshot aggr capacità]
 
 . Se nessun aggregato dispone di capacità, creare un nuovo aggregato.
 +
-Per ulteriori informazioni, vedere link:task-create-aggregates.html["Creazione di aggregati"^].
+Per informazioni, fare riferimento alla link:task-create-aggregates.html["Creazione di aggregati"^].
 
-. Utilizzare System Manager o CLI per spostare i volumi nell'aggregato.
+. Utilizza ONTAP System Manager o la CLI di ONTAP per spostare i volumi nell'aggregato.
 . Nella maggior parte dei casi, è possibile utilizzare System Manager per spostare i volumi.
 +
-Per istruzioni, consultare link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guida rapida per lo spostamento del volume di ONTAP 9"^].
+Per istruzioni, fare riferimento alla link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guida rapida per lo spostamento del volume di ONTAP 9"^].
 
 
 
@@ -385,7 +385,7 @@ Viene utilizzato uno schema di denominazione precedente se il tiering dei dati �
 
 == Visualizza volumi FlexGroup
 
-È possibile visualizzare i volumi FlexGroup creati tramite CLI o Gestore di sistema direttamente attraverso la scheda Volumes (volumi) di BlueXP. Identico alle informazioni fornite per i volumi FlexVol, BlueXP fornisce informazioni dettagliate per i volumi FleGroup creati attraverso una sezione dedicata ai volumi. Nella sezione Volumes (volumi), è possibile identificare ciascun gruppo di volumi FlexGroup tramite il testo dell'icona. Inoltre, è possibile identificare e ordinare i volumi FlexGroup nella vista elenco volumi attraverso la colonna stile volume.
+Puoi vedere i volumi FlexGroup creati tramite ONTAP System Manager o la CLI ONTAP direttamente attraverso la scheda Volumes all'interno di BlueXP . Identico alle informazioni fornite per i volumi FlexVol, BlueXP fornisce informazioni dettagliate per i volumi FleGroup creati attraverso una sezione dedicata ai volumi. Nella sezione Volumes (volumi), è possibile identificare ciascun gruppo di volumi FlexGroup tramite il testo dell'icona. Inoltre, è possibile identificare e ordinare i volumi FlexGroup nella vista elenco volumi attraverso la colonna stile volume.
 
 image::screenshot_show_flexgroup_vol.png[la schermata mostra FlexGroup vol]
 

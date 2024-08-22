@@ -83,6 +83,8 @@ sidebar:
         url: "/task-set-up-licensing-azure.html"
       - title: Attivare la modalità ad alta disponibilità
         url: "/task-azure-high-availability-mode.html"
+      - title: Attivare VMOrchestratorZonalMultiFD per singole zone di disponibilità
+        url: "/task-saz-feature.html"
       - title: Avviare Cloud Volumes ONTAP in Azure
         url: "/task-deploying-otc-azure.html"
       - title: Verifica dell'immagine della piattaforma Azure

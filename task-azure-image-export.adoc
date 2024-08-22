@@ -22,7 +22,7 @@ Una volta che l'immagine VHD è pubblicata nel cloud Azure, l'immagine non è pi
 * È installata la CLI di Azure o è prontamente disponibile Azure Cloud Shell attraverso il portale di Azure.
 +
 
-NOTE: Per ulteriori informazioni su come installare l'interfaccia della riga di comando di Azure, vedere https://learn.microsoft.com/en-us/cli/azure/install-azure-cli["Documentazione di Azure: Come installare l'interfaccia della riga di comando di Azure"^].
+NOTE: Per ulteriori informazioni su come installare la CLI di Azure, fare riferimento a https://learn.microsoft.com/en-us/cli/azure/install-azure-cli["Documentazione di Azure: Come installare l'interfaccia della riga di comando di Azure"^].
 
 
 

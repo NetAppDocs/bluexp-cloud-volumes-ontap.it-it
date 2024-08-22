@@ -72,10 +72,11 @@ ifdef::azure[]
 
 In Azure, un aggregato può contenere fino a 12 dischi delle stesse dimensioni. Il tipo di disco e le dimensioni massime dipendono dall'utilizzo di un sistema a nodo singolo o di una coppia ha:
 
-Sistemi a nodo singolo:: I sistemi a nodo singolo possono utilizzare tre tipi di dischi gestiti Azure:
+Sistemi a nodo singolo:: I sistemi a nodo singolo possono utilizzare questi tipi di dischi gestiti di Azure:
 +
 --
 * _Dischi gestiti SSD Premium_ offrono performance elevate per carichi di lavoro i/o-intensive a un costo più elevato.
+* _Dischi gestiti Premium SSD da v2 GB_ offrono prestazioni più elevate con latenza inferiore a un costo inferiore sia per coppie ha che per nodo singolo, rispetto ai dischi gestiti Premium SSD.
 * I _dischi gestiti SSD standard_ offrono performance costanti per i carichi di lavoro che richiedono IOPS ridotti.
 * _Dischi gestiti HDD standard_ sono una buona scelta se non hai bisogno di IOPS elevati e vuoi ridurre i costi.
 +

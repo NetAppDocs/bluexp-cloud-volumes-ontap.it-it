@@ -23,7 +23,7 @@ CAUTION: Tutti i dischi e gli aggregati devono essere creati ed eliminati dirett
 Se si desidera eliminare un aggregato, è necessario prima eliminare i volumi nell'aggregato.
 
 .A proposito di questa attività
-Se un aggregato sta esaurendo lo spazio, è possibile spostare i volumi in un altro aggregato utilizzando System Manager.
+In caso di esaurimento dello spazio di un aggregato, puoi spostare i volumi in un altro aggregato utilizzando ONTAP System Manager.
 
 .Fasi
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.

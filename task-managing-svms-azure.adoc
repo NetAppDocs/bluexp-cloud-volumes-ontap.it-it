@@ -19,7 +19,7 @@ Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce s
 Per creare ulteriori VM di storage che servono i dati, è necessario allocare gli indirizzi IP in Azure ed eseguire i comandi ONTAP per creare le VM di storage e le LIF dei dati.
 
 
-NOTE: Per eseguire ulteriori attività relative alle schede NIC, è possibile assegnare un ruolo di contributore della rete o un ruolo personalizzato con le autorizzazioni appropriate in Azure. Per ulteriori informazioni su queste autorizzazioni relative alla scheda NIC, consultare la https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=azure-portal#permissions["Documentazione di Microsoft Azure"^].
+NOTE: Per eseguire ulteriori attività relative alle schede NIC, è possibile assegnare un ruolo di contributore della rete o un ruolo personalizzato con le autorizzazioni appropriate in Azure. Per ulteriori informazioni su queste autorizzazioni relative alla scheda NIC, fare riferimento alla https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=azure-portal#permissions["Documentazione di Microsoft Azure"^] .
 
 
 
@@ -198,7 +198,7 @@ Questa LIF di gestione fornisce una connessione a strumenti di gestione come Sna
 . Creare il numero richiesto di configurazioni IP front-end solo per i LIF di dati e SVM:
 +
 
-NOTE: Un IP front-end deve essere creato solo sotto NIC0 per ogni SVM corrispondente. Per ulteriori informazioni su come aggiungere l'indirizzo IP a SVM NIC0, vedere "Passo 7 [hyperlink]"
+NOTE: Un IP front-end deve essere creato solo sotto NIC0 per ogni SVM corrispondente. Per ulteriori informazioni su come aggiungere l'indirizzo IP alla SVM NIC0, fare riferimento alla "fase 7 [hyperlink]"
 
 +
 .. In *Settings* (Impostazioni), fare clic su *Frontend IP Configuration* (Configurazione IP front-end).

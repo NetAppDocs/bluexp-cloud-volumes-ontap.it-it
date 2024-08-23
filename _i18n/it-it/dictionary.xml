@@ -5441,4 +5441,8 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="0c3b75998af156d79139a5d58ce3e940" category="paragraph">Per ulteriori informazioni, fare riferimento a <block ref="40105eada44e788e7e7b2f6a3662e9b3" category="inline-link-macro-rx"></block>.</block>
   <block id="879d073710741f985860274175b1a953" category="paragraph">Per informazioni su come configurare e utilizzare NDMP, fare riferimento a<block ref="9c57f7cf04e123991a3c88e286feb189" category="inline-link-rx"></block>.</block>
   <block id="a0a58ed3f539424b6c64463b7e8c6a6d" category="paragraph">Per ulteriori informazioni su questa nuova funzionalità, fare riferimento a<block ref="d02c006bc52cfaf2532a010e03aa1ef3" category="inline-link-rx"></block>.</block>
+  <block id="caf47538a5b97cacf4aba3098b6f9924" category="section-title">23 agosto 2024</block>
+  <block id="2c8ad7deb621eae9ecb23ccf84d9c22c" category="section-title">Regione del Canada occidentale ora supportata in AWS</block>
+  <block id="184c928c73aa00c7569ba55c0b9e0064" category="paragraph">La regione del Canada occidentale è ora supportata in AWS per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
+  <block id="96c6a6277896e4ed7c2cef558b5542c1" category="paragraph">Per un elenco di tutte le regioni, vedere<block ref="24faa078890c2d8c97de1a6b5a5789e3" category="inline-link-rx"></block>.</block>
 </blocks>

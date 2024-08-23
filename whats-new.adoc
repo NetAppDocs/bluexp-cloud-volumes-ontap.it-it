@@ -20,6 +20,18 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 23 agosto 2024
+
+
+
+=== Regione del Canada occidentale ora supportata in AWS
+
+La regione del Canada occidentale è ora supportata in AWS per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.
+
+Per un elenco di tutte le regioni, vedere https://bluexp.netapp.com/cloud-volumes-global-regions["Mappa delle regioni globali sotto AWS"^].
+
+
+
 == 22 agosto 2024
 
 

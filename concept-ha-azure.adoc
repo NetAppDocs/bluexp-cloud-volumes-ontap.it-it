@@ -61,6 +61,16 @@ Tenere presente quanto segue sui componenti di Azure che BlueXP implementa per t
 
 Bilanciamento del carico standard Azure:: Il bilanciamento del carico gestisce il traffico in entrata verso la coppia Cloud Volumes ONTAP ha.
 Macchine virtuali in singole zone di disponibilità:: A partire da Cloud Volumes ONTAP 9.15.1, puoi creare e gestire macchine virtuali eterogenee (VM) in una singola zona di disponibilità (AZ). È possibile implementare nodi ad alta disponibilità (ha) in domini di errore separati all'interno della stessa AZ, garantendo una disponibilità ottimale. Per ulteriori informazioni sulla modalità di orchestrazione flessibile che abilita questa funzionalità, consultare la sezione https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentazione di Microsoft Azure: Set di scalabilità delle macchine virtuali"^].
++
+--
+L'implementazione zonale utilizza dischi gestiti SSD Premium da v2 GB quando vengono soddisfatte le seguenti condizioni:
+
+* La versione di Cloud Volumes ONTAP è la 9.15.1 o successiva.
+* La regione e la zona selezionate supportano dischi gestiti SSD Premium da v2 GB. Per informazioni sulle regioni supportate, fare riferimento a  https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Sito Web di Microsoft Azure: Prodotti disponibili per area geografica"^].
+* L'abbonamento è registrato per Microsoft link:task-saz-feature.html["Funzione Microsoft.Compute/VMOrchestratorZonalMultiFD"].
+
+
+--
 Dischi:: I dati del cliente risiedono su dischi gestiti LRS (Local Redundant Storage). Ogni nodo ha accesso allo storage dell'altro nodo. È inoltre necessario ulteriore spazio di archiviazione per link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Dati di boot, root, partner root, core e NVRAM"^].
 Account storage:: Gli account storage vengono utilizzati per le implementazioni gestite basate su disco per gestire i log diagnostici e il tiering per lo storage blob.
 

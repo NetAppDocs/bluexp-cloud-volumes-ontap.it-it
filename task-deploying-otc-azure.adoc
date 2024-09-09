@@ -308,9 +308,6 @@ Il video seguente mostra come associare un abbonamento Marketplace a un abboname
 video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 . *Servizi*: Consente di attivare o disattivare i singoli servizi a seconda che si desideri utilizzarli con Cloud Volumes ONTAP.
 +
-A partire da Cloud Volumes ONTAP 9.15.1, è possibile implementare istanze di macchine virtuali in singole zone di disponibilità LRS (Local-Redundant Storage). Questa operazione richiede anche l' `Microsoft.Compute/VMOrchestratorZonalMultiFD`attivazione della funzione per l'abbonamento. Questa funzionalità facilita l'implementazione di coppie ha (High Availability) nella stessa zona di disponibilità. Fare riferimento a link:task-saz-feature.html["Attivare VMOrchestratorZonalMultiFD per singole zone di disponibilità"] e link:task-azure-high-availability-mode.html["Abilitare la modalità ad alta disponibilità in Azure"].
-
-+
 ** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Scopri di più sulla classificazione BlueXP"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Scopri di più sul backup e ripristino BlueXP"^]
 +
@@ -323,9 +320,9 @@ TIP: Se si desidera utilizzare WORM e il tiering dei dati, è necessario disatti
 +
 .. Selezionare *Single Availability zone* o *Multiple Availability zone*.
 +
-*** Per le singole zone di disponibilità, selezionare un'area Azure, una zona di disponibilità, VNET e una subnet. A partire da Cloud Volumes ONTAP 9.15.1, è possibile installare istanze VM in una singola zona di disponibilità. È necessario selezionare una regione che supporti questa modalità. Se la regione selezionata dall'utente non supporta la distribuzione zonale, viene seguito il precedente modello di distribuzione non zonale per LRS.
+*** Per le singole zone di disponibilità, selezionare un'area Azure, una zona di disponibilità, VNET e una subnet.
 +
-Per ulteriori informazioni su questa modalità di distribuzione e sulle zone di Azure supportate, consultare https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentazione di Microsoft Azure: Documentazione sui set di scalabilità delle macchine virtuali"^] e https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Sito Web di Microsoft Azure: Prodotti disponibili per area geografica"^].
+A partire da Cloud Volumes ONTAP 9.15.1, è possibile implementare istanze di macchine virtuali in modalità ha in singole zone di disponibilità (AZS) in Azure. È necessario selezionare una zona e un'area che supportino questa distribuzione. Se la zona o la regione non supporta la distribuzione zonale, viene seguita la precedente modalità di distribuzione non zonale per LRS. Per informazioni sulle configurazioni supportate per i dischi gestiti condivisi, fare riferimento a link:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["Configurazione DI una singola zona di disponibilità HA con dischi gestiti condivisi"].
 
 *** Per più zone di disponibilità, selezionare una regione, VNET, subnet, zona per il nodo 1 e zona per il nodo 2.
 

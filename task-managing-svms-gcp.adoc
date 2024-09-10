@@ -102,6 +102,17 @@ Questo passaggio è necessario perché la nuova VM di storage deve accedere ad a
 
 Si noti che BlueXP assegna gli indirizzi IP richiesti in Google Cloud e crea la VM di storage con una LIF dati per l'accesso SMB/NFS e una LIF iSCSI per le comunicazioni SMB in uscita.
 
+BlueXP  modifica anche `default-data-files` le policy delle macchine virtuali per lo storage dei dati rimuovendo i seguenti servizi dalle LIF dati NAS e aggiungendoli alle LIF dati iSCSI:
+
+* `data-fpolicy-client`
+* `management-ad-client`
+* `management-dns-client`
+* `management-ldap-client`
+* `management-nis-client`
+
+
+La modifica dei servizi è necessaria perché garantisce che Cloud Volumes ONTAP possa utilizzare la LIF iSCSI per le connessioni di gestione in uscita.
+
 .Autorizzazioni richieste per Google Cloud
 Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per le coppie Cloud Volumes ONTAP ha. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Le policy fornite da NetApp"].
 

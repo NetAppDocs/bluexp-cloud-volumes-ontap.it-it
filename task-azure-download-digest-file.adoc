@@ -17,7 +17,7 @@ summary: È possibile scaricare il file di inserimento immagini Azure dal sito d
 Il file di inserimento immagini di Azure può essere scaricato da https://mysupport.netapp.com/site/["Sito di supporto NetApp"^]. Il download è in formato tar.gz e contiene file per la verifica della firma dell'immagine.
 
 .Fasi
-. Accedere alla https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Pagina del prodotto Cloud Volumes ONTAP sul sito del supporto NetApp"^] E scaricare la versione software desiderata nella sezione Downloads.
+. Andare a https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Pagina del prodotto Cloud Volumes ONTAP sul sito del supporto NetApp"^] e scaricare la versione software richiesta nella sezione Download.
 . Nella pagina di download di Cloud Volumes ONTAP, fare clic sul pulsante *download* per il file di inserimento immagini Azure per scaricare il file TAR. File GZ.
 +
 image::screenshot_cloud_volumes_ontap_tar.gz.png[schermata Cloud Volumes ONTAP tar.gz]

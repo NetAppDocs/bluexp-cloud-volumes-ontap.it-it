@@ -164,7 +164,7 @@ Il ripristino o il downgrade di Cloud Volumes ONTAP a una release precedente non
 
 === Registrazione del supporto
 
-Cloud Volumes ONTAP deve essere registrato presso il supporto NetApp per poter aggiornare il software utilizzando uno dei metodi descritti in questa pagina. Ciò vale sia PER PAYGO che per BYOL. È necessario link:task-registering.html["Registrare manualmente i sistemi PAYGO"], Mentre i sistemi BYOL sono registrati per impostazione predefinita.
+Cloud Volumes ONTAP deve essere registrato all'assistenza NetApp per aggiornare il software utilizzando uno dei metodi descritti in questa pagina. Ciò vale sia PER PAYGO che per BYOL. È necessario link:task-registering.html["Registrare manualmente i sistemi PAYGO"], mentre i sistemi BYOL sono registrati per impostazione predefinita.
 
 
 TIP: Un sistema che non è registrato per il supporto riceverà comunque le notifiche di aggiornamento software che vengono visualizzate in BlueXP quando è disponibile una nuova versione. Tuttavia, è necessario registrare il sistema prima di poter aggiornare il software.

@@ -196,6 +196,46 @@ https://cloud.google.com/vpc/docs/packet-mirroring["Mirroring dei pacchetti"^] D
 
 === Accesso a Internet in uscita
 
+I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per accedere a endpoint esterni per varie funzioni. Cloud Volumes ONTAP non può funzionare correttamente se questi endpoint sono bloccati in ambienti con severi requisiti di sicurezza.
+
+
+
+==== Endpoint Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP richiede l'accesso a Internet outbound per contattare vari endpoint per le operazioni quotidiane.
+
+I seguenti endpoint sono specifici di Cloud Volumes ONTAP. Inoltre, il connettore contatta diversi endpoint per le operazioni quotidiane e la console basata sul Web di BlueXP . Fare riferimento a https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-3-set-up-networking["Visualizzare gli endpoint contattati dal connettore"^] e https://docs.netapp.com/us-en/bluexp-setup-admin/reference-networking-saas-console.html["Preparazione del networking per l'utilizzo della console BlueXP"^].
+
+[cols="5*"]
+|===
+| Endpoint | Applicabile per | Scopo | Modalità di distribuzione BlueXP  | Impatto se l'endpoint non è disponibile 
+
+
+| \https://netapp-cloud-account.auth0.com | Autenticazione | Utilizzato per l'autenticazione BlueXP . | Modalità standard e limitata.  a| 
+L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non disponibili:
+
+* I servizi di Cloud Volumes ONTAP
+* Servizi ONTAP
+* E servizi proxy
+
+
+
+
+| \https://keyvault-production-aks.vault.azure.net | Vault delle chiavi | Utilizzato per recuperare la chiave segreta client da Azure Key Vault per comunicare con il bucket S3 per la gestione dei metadati. Il servizio Cloud Volumes ONTAP utilizza questo componente internamente. | Modalità standard, limitata e privata. | I servizi Cloud Volumes ONTAP non sono disponibili. 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy | Locazione | Utilizzato per recuperare le risorse Cloud Volumes ONTAP dalla tenancy BlueXP  per autorizzare risorse e utenti. | Modalità standard e limitata. | Le risorse Cloud Volumes ONTAP e gli utenti non sono autorizzati. 
+
+
+| \https://support.NetApp.com/aods/asuppmessage \https://support.NetApp.com/asupprod/post/1,0/postAsup | AutoSupport | Utilizzato per inviare dati telemetrici AutoSupport al supporto NetApp. | Modalità standard e limitata. | Le informazioni AutoSupport rimangono non trasmesse. 
+
+
+| \https://www.googleapis.com/compute/v1/projects/ \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects \https://compute.googleapis.com/compute/v1 | Google Cloud (uso commerciale). | Comunicazioni con i servizi Google Cloud. | Modalità standard, limitata e privata. | Cloud Volumes ONTAP non può comunicare con il servizio Google Cloud per eseguire specifiche operazioni BlueXP  in Google Cloud. 
+|===
+
+
+==== Accesso a Internet in uscita per NetApp AutoSupport
+
 Cloud Volumes ONTAP richiede l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico di NetApp.
 
 I criteri di routing e firewall devono consentire il traffico HTTP/HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:

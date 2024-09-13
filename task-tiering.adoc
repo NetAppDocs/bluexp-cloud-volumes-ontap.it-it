@@ -313,7 +313,7 @@ Il rapporto di spazio libero per il tiering dei dati definisce la quantità di s
 Ad esempio, è possibile scegliere meno del 10% di spazio libero per assicurarsi di utilizzare la capacità acquistata. BlueXP può quindi acquistare dischi aggiuntivi quando è richiesta capacità aggiuntiva (fino a raggiungere il limite di dischi per l'aggregato).
 
 
-CAUTION: Se lo spazio non è sufficiente, Cloud Volumes ONTAP non riesce a spostare i dati e potrebbe verificarsi un peggioramento delle performance. Qualsiasi modifica deve essere eseguita con cautela. In caso di dubbi, contatta il supporto NetApp per ricevere assistenza.
+CAUTION: Se lo spazio non è sufficiente, Cloud Volumes ONTAP non è in grado di spostare i dati e potrebbe riscontrare un peggioramento delle prestazioni. Qualsiasi modifica deve essere eseguita con cautela. In caso di dubbi, contatta il supporto NetApp per ricevere assistenza.
 
 Il rapporto è importante per gli scenari di disaster recovery perché, man mano che i dati vengono letti dall'archivio a oggetti, Cloud Volumes ONTAP sposta i dati su SSD/HDD per offrire performance migliori. Se lo spazio non è sufficiente, Cloud Volumes ONTAP non può spostare i dati. Prenditi in considerazione questo aspetto quando modifichi il rapporto in modo da poter soddisfare i tuoi requisiti di business.
 

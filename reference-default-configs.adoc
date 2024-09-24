@@ -155,10 +155,15 @@ ifdef::aws[]
 ** Disco gp2 da 540 GiB per i dati principali
 
 
-* Per le coppie ha, due volumi ST1 EBS per l'istanza mediatore, che sono approssimativamente 8 GiB e 4 GiB, e un disco aggiuntivo 140 GiB GP3 in ciascun nodo in modo da contenere una copia dei dati root dell'altro nodo.
+* Per coppie ha:
++
+** Due volumi EBS da ST1 gb per l'istanza del mediatore, uno di circa 8 GiB come disco root e uno di 4 GiB come disco dati
+** Un disco da 140 GiB GP3 in ciascun nodo per contenere una copia dei dati root dell'altro nodo
 +
 
 NOTE: In alcune zone, il tipo di disco EBS disponibile può essere solo GP2.
+
+
 
 * Un'istantanea EBS per ogni disco di boot e disco root
 +

@@ -202,7 +202,7 @@ Quando si implementa Cloud Volumes ONTAP in GCP, è necessario specificare i det
 
 == Scegliere una velocità di scrittura
 
-BlueXP consente di scegliere un'impostazione della velocità di scrittura per Cloud Volumes ONTAP, ad eccezione delle coppie ad alta disponibilità (ha) in Google Cloud. Prima di scegliere una velocità di scrittura, è necessario comprendere le differenze tra le impostazioni normali e alte e i rischi e le raccomandazioni quando si utilizza un'elevata velocità di scrittura. link:concept-write-speed.html["Scopri di più sulla velocità di scrittura"].
+BlueXP  ti consente di scegliere un'impostazione della velocità di scrittura per Cloud Volumes ONTAP, ad eccezione delle coppie ha in Google Cloud. Prima di scegliere una velocità di scrittura, è necessario comprendere le differenze tra le impostazioni normali e alte e i rischi e le raccomandazioni quando si utilizza un'elevata velocità di scrittura. link:concept-write-speed.html["Scopri di più sulla velocità di scrittura"].
 
 
 

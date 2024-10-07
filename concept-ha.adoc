@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-ha.html 
 keywords: high availability, HA, mediator, concepts, understanding, overview, availability zones, AZs, takeover, giveback, rpo, rto, floating ip, nondisruptive, ha pairs, node, nodes, synchronous, resync, recovery point objective, recovery time objective, nas, nfs, cifs, floating ip address, route tables, iscsi, mpio, alua, failover, mount, remount, failure, data access, access, ip address, performance 
-summary: 'Una configurazione Cloud Volumes ONTAP ad alta disponibilità (ha) offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.' 
+summary: 'Una configurazione ha (High Availability) di Cloud Volumes ONTAP offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.' 
 ---
 = Coppie ad alta disponibilità in AWS
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Una configurazione Cloud Volumes ONTAP ad alta disponibilità (ha) off
 
 
 [role="lead"]
-Una configurazione Cloud Volumes ONTAP ad alta disponibilità (ha) offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.
+Una configurazione ha (High Availability) di Cloud Volumes ONTAP offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.
 
 
 
@@ -60,7 +60,7 @@ Per impostazione predefinita, le funzioni di Takeover, risync e giveback dello s
 
 == RPO e RTO
 
-Una configurazione ad alta disponibilità dei dati viene mantenuta come segue:
+Una configurazione ha mantiene l'alta disponibilità dei dati come segue:
 
 * L'obiettivo del punto di ripristino (RPO) è di 0 secondi. I tuoi dati sono coerenti con le transazioni senza alcuna perdita di dati.
 * L'obiettivo del tempo di ripristino (RTO) è di 120 secondi. In caso di interruzione, i dati devono essere disponibili in 120 secondi o meno.

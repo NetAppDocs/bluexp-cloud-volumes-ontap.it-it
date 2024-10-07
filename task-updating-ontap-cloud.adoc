@@ -154,7 +154,7 @@ A partire da gennaio 2024, gli aggiornamenti delle patch sono disponibili in Blu
 
 Come regola generale per le release di patch (P), è possibile eseguire l'aggiornamento da una versione a qualsiasi versione P-release della versione corrente in esecuzione o della versione successiva.
 
-Ecco alcuni esempi:
+Ecco un paio di esempi:
 
 * 9.13.0 > 9.13.1P15
 * 9.12.1 > 9.13.1P2
@@ -307,7 +307,8 @@ Un altro metodo per eseguire aggiornamenti software utilizzando un'immagine su u
 
 BlueXP visualizza una notifica negli ambienti di lavoro Cloud Volumes ONTAP quando è disponibile una nuova versione di Cloud Volumes ONTAP:
 
-image:screenshot_overview_upgrade.png["Schermata: Mostra la notifica Nuova versione disponibile che viene visualizzata nella pagina Canvas dopo aver selezionato un ambiente di lavoro."]
+
+NOTE: Prima di poter aggiornare Cloud Volumes ONTAP tramite la notifica BlueXP, è necessario disporre di un account per il sito di supporto NetApp.
 
 È possibile avviare il processo di aggiornamento da questa notifica, che automatizza il processo ottenendo l'immagine software da un bucket S3, installando l'immagine e riavviando il sistema.
 
@@ -323,21 +324,22 @@ Se è disponibile una nuova versione, nella scheda Panoramica viene visualizzata
 +
 image:screenshot_overview_upgrade.png["Una schermata che mostra l'opzione \"Upgrade now!\" (Aggiorna ora!) Sotto la scheda Panoramica."]
 
-. Se è disponibile una nuova versione, fare clic su *Aggiorna ora!*
-+
-
-NOTE: Prima di poter aggiornare Cloud Volumes ONTAP tramite la notifica BlueXP, è necessario disporre di un account per il sito di supporto NetApp.
-
-. Nella pagina Upgrade Cloud Volumes ONTAP (Contratto di licenza con l'utente finale), leggere l'EULA, quindi selezionare *i Read and Approve the EULA* (Leggi e approva l'EULA).
-. Fare clic su *Upgrade* (Aggiorna).
-+
-
-NOTE: Per impostazione predefinita, la pagina Upgrade Cloud Volumes ONTAP (aggiornamento versione Cloud Volumes ONTAP) seleziona l'ultima versione disponibile per l'aggiornamento. Se disponibili, è possibile selezionare le versioni precedenti di Cloud Volumes ONTAP per l'aggiornamento facendo clic su *Seleziona versioni precedenti*.
-Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Elenco dei percorsi di upgrade supportati"^] Per il percorso di aggiornamento appropriato in base alla versione corrente di Cloud Volumes ONTAP.
-
+. Se si desidera aggiornare la versione installata di Cloud Volumes ONTAP, fare clic su *Aggiorna ora!* Per impostazione predefinita, viene visualizzata l'ultima versione compatibile per l'aggiornamento.
 +
 image:screenshot_upgrade_select_versions.png["Schermata della pagina della versione di Upgrade Cloud Volumes ONTAP."]
 
++
+Se si desidera eseguire l'aggiornamento a un'altra versione, fare clic su *Seleziona altre versioni*. Vengono elencate le versioni più recenti di Cloud Volumes ONTAP compatibili con la versione installata sul sistema. Ad esempio, la versione installata sul sistema è 9.12.1P3 e sono disponibili le seguenti versioni compatibili:
+
++
+** Da 9.12.1P4 a 9.12.1P14
+** 9.13.1 e 9.13.1P1 si vede 9.13.1P1 come versione predefinita per l'aggiornamento, e 9.12.1P13, 9.13.1P14, 9.13.1 e 9.13.1P1 come le altre versioni disponibili.
+
+
+. Facoltativamente, è possibile fare clic su *tutte le versioni* per immettere un'altra versione alla quale si desidera aggiornare (ad esempio, la patch successiva della versione installata). Per un percorso di aggiornamento compatibile della versione Cloud Volumes ONTAP corrente, fare riferimento a link:task-updating-ontap-cloud.html#supported-upgrade-paths["Percorsi di upgrade supportati"].
+. Fare clic su *Salva*, quindi su *Applica*. image:screenshot_upgrade_other_versions.png["Una schermata che mostra le versioni disponibili per l'aggiornamento."]
+. Nella pagina Upgrade Cloud Volumes ONTAP (Contratto di licenza con l'utente finale), leggere l'EULA, quindi selezionare *i Read and Approve the EULA* (Leggi e approva l'EULA).
+. Fare clic su *Upgrade* (Aggiorna).
 . Per verificare lo stato dell'aggiornamento, fare clic sull'icona Impostazioni e selezionare *Timeline*.
 
 

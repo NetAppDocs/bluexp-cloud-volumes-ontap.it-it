@@ -14,7 +14,7 @@ summary: Cloud Volumes ONTAP utilizza un collegamento privato Azure per le conne
 
 
 [role="lead"]
-Cloud Volumes ONTAP fallisce e rollback nuove implementazioni di configurazioni ad alta disponibilità (ha) AWS in una singola zona di disponibilità (AZ) ogni volta che la creazione del gruppo di posizionamento non riesce. Se necessario, è possibile forzare il completamento corretto delle implementazioni configurando i gruppi di posizionamento in modo da ignorare il processo di rollback ogni volta che la creazione non riesce.
+Cloud Volumes ONTAP esegue un errore e ripristina le nuove implementazioni di configurazioni ad alta disponibilità (ha) AWS in una singola zona di disponibilità (AZ) ogni volta che la creazione del gruppo di posizionamento non riesce. Se necessario, è possibile forzare il completamento corretto delle implementazioni configurando i gruppi di posizionamento in modo da ignorare il processo di rollback ogni volta che la creazione non riesce.
 
 
 

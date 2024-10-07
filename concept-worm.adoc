@@ -34,7 +34,7 @@ La modalità di attivazione dello storage WORM dipende dalla versione di Cloud V
 
 === Versione 9.10.1 e successive
 
-A partire da Cloud Volumes ONTAP 9.10.1, è possibile attivare o disattivare WORM a livello di volume.
+A partire da Cloud Volumes ONTAP 9.10.1, è possibile attivare o disattivare il WORM a livello di volume,
 
 Quando si crea un nuovo ambiente di lavoro Cloud Volumes ONTAP, viene richiesto di attivare o disattivare lo storage WORM:
 

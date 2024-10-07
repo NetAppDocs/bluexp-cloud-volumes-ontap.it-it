@@ -20,13 +20,25 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 7 ottobre 2024
+
+
+
+=== Esperienza utente migliorata nella selezione delle versioni per l'aggiornamento
+
+A partire da questa versione, quando si tenta di aggiornare Cloud Volumes ONTAP utilizzando la notifica BlueXP , si riceveranno indicazioni sulle versioni predefinite, più recenti e compatibili da utilizzare. Inoltre, ora è possibile selezionare l'ultima patch o la versione principale compatibile con l'istanza di Cloud Volumes ONTAP, oppure immettere manualmente una versione per l'aggiornamento.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrade-from-bluexp-notifications["Aggiornare il software Cloud Volumes ONTAP"^]
+
+
+
 == 9 settembre 2024
 
 
 
 === Le funzionalità WORM e ARP non sono più addebitabili
 
-Le funzionalità di sicurezza e data Protection integrate di WORM (Write Once Read Many) e ARP (protezione autonoma dal ransomware) saranno offerte con le licenze Cloud Volumes ONTAP senza costi aggiuntivi. Il nuovo modello di prezzi si applica alle iscrizioni BYOL e PAYGO/Marketplace nuove ed esistenti di AWS, Azure e Google Cloud. Le licenze basate sulla capacità e su nodi conterranno ARP e WORM per tutte le configurazioni, incluse le coppie ha (Single Node e High Availability), senza costi aggiuntivi.
+Le funzionalità di sicurezza e data Protection integrate di WORM (Write Once Read Many) e ARP (protezione autonoma dal ransomware) saranno offerte con le licenze Cloud Volumes ONTAP senza costi aggiuntivi. Il nuovo modello di prezzi si applica alle iscrizioni BYOL e PAYGO/Marketplace nuove ed esistenti di AWS, Azure e Google Cloud. Le licenze basate sulla capacità e su nodi conterranno ARP e WORM per tutte le configurazioni, incluse coppie ha (single node e high Availability), senza costi aggiuntivi.
 
 Il prezzo semplificato offre i seguenti vantaggi:
 
@@ -617,7 +629,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-9130-relnotes["Scopri le nuove
 
 === Supporto di 16 TIB e 32 Tib in Azure
 
-Cloud Volumes ONTAP ora supporta dischi di dimensioni 16 TIB e 32 TIB per implementazioni ad alta disponibilità eseguite su dischi gestiti in Azure.
+Cloud Volumes ONTAP ora supporta dimensioni dei dischi 16 TiB e 32 TiB per le implementazioni ad alta disponibilità in esecuzione su dischi gestiti in Azure.
 
 Scopri di più https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#supported-disk-sizes["Dimensioni dei dischi supportate in Azure"^].
 

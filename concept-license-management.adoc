@@ -55,7 +55,7 @@ image:screenshot_warning.gif["Schermata: Mostra un ambiente di lavoro Cloud Volu
 
 È possibile selezionare l'ambiente di lavoro per rivedere il messaggio.
 
-BlueXP include un avviso di scadenza della licenza nel report Cloud Volumes ONTAP inviato via email, se si è un amministratore dell'account e si è attivata l'opzione:
+BlueXP  include un avviso di scadenza della licenza nel report Cloud Volumes ONTAP inviato tramite e-mail, se sei un amministratore dell'organizzazione o dell'account BlueXP  e hai attivato l'opzione:
 
 image:screenshot_cvo_report.gif["Schermata del pannello del profilo utente che mostra la casella di controllo per l'attivazione del report Cloud Volumes ONTAP via email."]
 

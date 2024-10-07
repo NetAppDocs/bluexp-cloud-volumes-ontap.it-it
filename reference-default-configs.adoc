@@ -117,7 +117,7 @@ Nella tabella seguente sono elencati gli attributi del volume impostati da BlueX
 1,000%
 
 
-NOTE: L'amministratore dell'account può modificare questo valore dalla pagina Impostazioni.
+NOTE: L'organizzazione o l'amministratore dell'account BlueXP  può modificare questo valore dalla pagina Impostazioni.
 
 
 

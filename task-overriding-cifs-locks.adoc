@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-overriding-cifs-locks.html 
 keywords: CIFS locks, azure maintenance, maintenance events, cifs sessions, storage failover, storage giveback, giveback 
-summary: 'L"amministratore dell"account può attivare un"impostazione in BlueXP che impedisce problemi con il giveback dello storage Cloud Volumes ONTAP durante gli eventi di manutenzione di Azure. Quando si attiva questa impostazione, Cloud Volumes ONTAP esegue il veto di CIFS e ripristina le sessioni CIFS attive.' 
+summary: 'L"organizzazione o l"amministratore dell"account BlueXP  può abilitare un"impostazione in BlueXP  per evitare problemi con il giveback dello storage Cloud Volumes ONTAP durante gli eventi di manutenzione di Azure. Quando si attiva questa impostazione, Cloud Volumes ONTAP esegue il veto di CIFS e ripristina le sessioni CIFS attive.' 
 ---
 = Esclusione dei blocchi CIFS per le coppie ha Cloud Volumes ONTAP in Azure
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'L"amministratore dell"account può attivare un"impostazione in BlueXP 
 
 
 [role="lead"]
-L'amministratore dell'account può attivare un'impostazione in BlueXP che impedisce problemi con il giveback dello storage Cloud Volumes ONTAP durante gli eventi di manutenzione di Azure. Quando si attiva questa impostazione, Cloud Volumes ONTAP esegue il veto di CIFS e ripristina le sessioni CIFS attive.
+L'organizzazione o l'amministratore dell'account BlueXP  può abilitare un'impostazione in BlueXP  per evitare problemi con il giveback dello storage Cloud Volumes ONTAP durante gli eventi di manutenzione di Azure. Quando si attiva questa impostazione, Cloud Volumes ONTAP esegue il veto di CIFS e ripristina le sessioni CIFS attive.
 
 .A proposito di questa attività
 Microsoft Azure pianifica gli eventi di manutenzione periodica sulle macchine virtuali. Quando si verifica un evento di manutenzione su una coppia Cloud Volumes ONTAP ha, la coppia ha avvia il Takeover dello storage. Se durante questo evento di manutenzione sono presenti sessioni CIFS attive, i blocchi sui file CIFS possono impedire il giveback dello storage.

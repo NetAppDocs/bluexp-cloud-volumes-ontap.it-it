@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-removing.html 
 keywords: working environments, removing, remove, rediscover 
-summary: 'L"amministratore dell"account può rimuovere un ambiente di lavoro Cloud Volumes ONTAP per spostarlo in un altro sistema o per risolvere i problemi di rilevamento.' 
+summary: È possibile rimuovere un ambiente di lavoro Cloud Volumes ONTAP per spostarlo in un altro sistema o per risolvere i problemi di rilevamento. 
 ---
 = Rimozione degli ambienti di lavoro Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,17 +14,10 @@ summary: 'L"amministratore dell"account può rimuovere un ambiente di lavoro Clo
 
 
 [role="lead"]
-L'amministratore dell'account può rimuovere un ambiente di lavoro Cloud Volumes ONTAP per spostarlo in un altro sistema o per risolvere i problemi di rilevamento.
+È possibile rimuovere un ambiente di lavoro Cloud Volumes ONTAP per spostarlo in un altro sistema o per risolvere i problemi di rilevamento.
 
 .A proposito di questa attività
-La rimozione di un ambiente di lavoro Cloud Volumes ONTAP lo rimuove da BlueXP. Non elimina il sistema Cloud Volumes ONTAP. In seguito, sarà possibile riscoprire l'ambiente di lavoro.
-
-La rimozione di un ambiente di lavoro da BlueXP consente di effettuare le seguenti operazioni:
-
-* Riscoprirla in un altro spazio di lavoro
-* Riscoprirla da un altro sistema BlueXP
-* Riscoprirla se si sono verificati problemi durante il rilevamento iniziale
-
+La rimozione di un ambiente di lavoro Cloud Volumes ONTAP lo rimuove da BlueXP. Non elimina il sistema Cloud Volumes ONTAP. In seguito è possibile riscoprire l'ambiente di lavoro, ad esempio in caso di problemi durante la ricerca iniziale.
 
 .Fasi
 . Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro che si desidera rimuovere.

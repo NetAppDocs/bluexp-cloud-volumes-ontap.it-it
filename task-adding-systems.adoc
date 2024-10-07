@@ -38,4 +38,4 @@ endif::aws[]
 
 
 .Risultato
-BlueXP aggiunge le istanze di Cloud Volumes ONTAP allo spazio di lavoro.
+BlueXP  aggiunge le istanze Cloud Volumes ONTAP al progetto o all'area di lavoro.

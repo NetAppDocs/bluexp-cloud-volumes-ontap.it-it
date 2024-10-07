@@ -48,9 +48,6 @@ endif::aws[]
 
 BlueXP determina dove posizionare un nuovo volume prendendo in considerazione diversi fattori: La dimensione massima di un aggregato, l'attivazione del thin provisioning e le soglie di spazio libero per gli aggregati.
 
-
-TIP: L'amministratore dell'account può modificare le soglie di spazio libero dalla pagina *Impostazioni*.
-
 ifdef::aws[]
 
 
@@ -91,7 +88,7 @@ Invece di consentire a BlueXP di gestire gli aggregati, puoi farlo da solo. link
 
 == Gestione della capacità
 
-L'account Admin può scegliere se BlueXP notifica le decisioni relative alla capacità dello storage o se BlueXP gestisce automaticamente i requisiti di capacità.
+L'organizzazione o l'amministratore dell'account BlueXP  può scegliere se BlueXP  ti notifica delle decisioni relative alla capacità di storage o se BlueXP  gestisce automaticamente i requisiti di capacità per il tuo business.
 
 Questo comportamento è determinato dalla _modalità di gestione della capacità_ di un connettore. La modalità di gestione della capacità influisce su tutti i sistemi Cloud Volumes ONTAP gestiti da tale connettore. Se si dispone di un altro connettore, è possibile configurarlo in modo diverso.
 
@@ -135,7 +132,7 @@ La gestione automatica della capacità di BlueXP non si applica alle LUN. Quando
 
 === Gestione manuale della capacità
 
-Se l'account Admin imposta la modalità di gestione della capacità su manuale, BlueXP visualizza i messaggi Action Required (azione richiesta) quando è necessario prendere decisioni in merito alla capacità. Gli stessi esempi descritti nella modalità automatica si applicano alla modalità manuale, ma spetta all'utente accettare le azioni.
+Se l'organizzazione o l'amministratore dell'account BlueXP  impostano la modalità di gestione della capacità su manuale, BlueXP  visualizza i messaggi azione richiesta quando è necessario prendere decisioni sulla capacità. Gli stessi esempi descritti nella modalità automatica si applicano alla modalità manuale, ma spetta all'utente accettare le azioni.
 
 
 

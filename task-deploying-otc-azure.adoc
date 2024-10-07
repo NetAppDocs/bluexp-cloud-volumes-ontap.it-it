@@ -22,7 +22,7 @@ Per creare un ambiente di lavoro, è necessario quanto segue.
 [[licensing]]
 * Un connettore funzionante.
 +
-** Si dovrebbe avere un https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Connettore associato all'area di lavoro"^].
+** Si dovrebbe avere un https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Connettore associato al progetto o all'area di lavoro"^].
 ** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Si dovrebbe essere pronti a lasciare il connettore sempre in funzione"^].
 
 

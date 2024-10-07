@@ -3124,7 +3124,6 @@
   <block id="fc6ada65ff8f08c80e7d6167f68c89c2" category="list-text">Per l'abbonamento che si desidera collegare, fare clic su <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> E selezionare *link*.</block>
   <block id="a71102951bc0488f4ec3cb5e52602100" category="inline-image-macro">Una schermata che mostra l'opzione di collegamento per un abbonamento.</block>
   <block id="53dd6d03631eca7d8e89d0d7d8cdeb77" category="paragraph"><block ref="53dd6d03631eca7d8e89d0d7d8cdeb77" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c01bba3f5cf220440d62298c4287d655" category="paragraph">L'abbonamento è ora collegato al tuo account BlueXP e disponibile per la selezione durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="1b02ed65c5ea56c85fffa6b88378d762" category="section-title">Richiedere una capacità impegnata maggiore o minore</block>
   <block id="a2748c51966db7db689a8801f6ae4150" category="list-text">Per l'abbonamento che si desidera regolare la capacità, fare clic su <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> E selezionare *Visualizza dettagli e modifica*.</block>
   <block id="56ecf988dec174f4d23028e78eeed82c" category="list-text">Immettere la capacità impegnata richiesta per uno o più abbonamenti.</block>
@@ -3134,7 +3133,6 @@
   <block id="8f140d9c4d508c36e3d4c57102f117eb" category="paragraph">La richiesta crea un ticket nel sistema NetApp per l'elaborazione.</block>
   <block id="0c0401d1e9169d6dd38462b1e0d04126" category="section-title">Scollegare un abbonamento</block>
   <block id="a666a430e484ea214384aefaa30da852" category="list-text">Per l'abbonamento che si desidera scollegare, fare clic su <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> E selezionare *Unlink*.</block>
-  <block id="ae187bda8f85dfd75202915fcca6b90d" category="paragraph">L'abbonamento non è collegato all'account BlueXP e non è più disponibile per la selezione durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">Limitazioni note</block>
   <block id="c5889acf4592b2ce675b7e0be182268e" category="paragraph">Queste limitazioni sono specifiche per la gestione di Cloud Volumes ONTAP in BlueXP. Per visualizzare le limitazioni del software Cloud Volumes ONTAP,<block ref="70a3d165b5204ef94ef3f2d7b3d098d2" category="inline-link-rx"></block></block>
@@ -5530,4 +5528,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="c5686848892b4de33534dcc294c33fff" category="paragraph">Le funzionalità di sicurezza e data Protection integrate di WORM (Write Once Read Many) e ARP (protezione autonoma dal ransomware) saranno offerte con le licenze Cloud Volumes ONTAP senza costi aggiuntivi. Il nuovo modello di prezzi si applica alle iscrizioni BYOL e PAYGO/Marketplace nuove ed esistenti di AWS, Azure e Google Cloud. Le licenze basate sulla capacità e su nodi conterranno ARP e WORM per tutte le configurazioni, incluse coppie ha (single node e high Availability), senza costi aggiuntivi.</block>
   <block id="9da5d2f7e476f47c6a26d4ededfa4837" category="paragraph">Cloud Volumes ONTAP ora supporta dimensioni dei dischi 16 TiB e 32 TiB per le implementazioni ad alta disponibilità in esecuzione su dischi gestiti in Azure.</block>
   <block id="c4603a2a1f5be3fcdbe4e7ce09178104" category="sidebar">Attiva la modalità di alta disponibilità</block>
+  <block id="7c27c9e51d561399ee84fb8d2259328c" category="paragraph">L'abbonamento è ora collegato all'organizzazione o all'account BlueXP  e può essere selezionato quando si crea un ambiente di lavoro Cloud Volumes ONTAP.</block>
+  <block id="287c693dd0bc6ec48aa0fc3f4b950a9e" category="paragraph">L'abbonamento non è collegato all'organizzazione o all'account BlueXP  e non è più disponibile per la selezione durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP.</block>
 </blocks>

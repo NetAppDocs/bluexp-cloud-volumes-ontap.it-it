@@ -153,18 +153,18 @@ Per le configurazioni NAS, gli indirizzi IP dei dati possono migrare tra i nodi 
 
 === Zone locali di AWS
 
-Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore. Con le zone locali di AWS è possibile avvicinare i servizi AWS per migliorare la latenza dei carichi di lavoro e gestire i database localmente.
+Le zone locali di AWS sono un'implementazione dell'infrastruttura in cui storage, calcolo, database e altri servizi AWS selezionati sono situati vicino a grandi città e aree del settore. Con le zone locali di AWS è possibile avvicinare i servizi AWS per migliorare la latenza dei carichi di lavoro e gestire i database localmente. Su Cloud Volumes ONTAP,
 
 Puoi implementare una configurazione con AZ singolo o AZ multiplo in zone locali di AWS.
 
 
-NOTE: Le zone locali di AWS sono supportate quando si utilizza BlueXP in modalità standard. Al momento, i zone locali di AWS non sono supportati quando si utilizza BlueXP in modalità limitata o privata.
+NOTE: Le zone locali AWS sono supportate quando si utilizza BlueXP  in modalità standard e privata. Al momento, i fusi locali di AWS non sono supportati quando si utilizza BlueXP  in modalità limitata.
 
 
 
 ==== Esempio di configurazioni della zona locale di AWS
 
-Di seguito sono riportate le configurazioni di esempio:
+Cloud Volumes ONTAP supporta solo le implementazioni ha in zone locali AWS. Di seguito sono riportate le configurazioni di esempio:
 
 * Singola zona di disponibilità: Entrambi i nodi del cluster e il mediatore si trovano nella stessa zona locale.
 * Più zone di disponibilità
@@ -184,9 +184,7 @@ Di seguito sono riportati tre esempi di configurazioni:
 
 ==== Dischi e tipi di istanza supportati
 
-L'unico tipo di disco supportato è GP2.
-
-Sono attualmente supportate le seguenti famiglie di tipi di istanza EC2 con dimensioni da xlarge a 4XLarge:
+L'unico tipo di disco supportato è GP2. Sono attualmente supportate le seguenti famiglie di tipi di istanza EC2 con dimensioni da xlarge a 4XLarge:
 
 * M5
 * C5
@@ -195,7 +193,7 @@ Sono attualmente supportate le seguenti famiglie di tipi di istanza EC2 con dime
 * R5d
 
 
-Fare riferimento alla documentazione di AWS per i dettagli più recenti e completi relativi al supporto link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
+Cloud Volumes ONTAP supporta solo queste configurazioni. La selezione di qualsiasi altro tipo di disco o istanza EC2 nella configurazione della zona locale di AWS per Cloud Volumes ONTAP potrebbe causare un errore di implementazione. Fare riferimento alla documentazione AWS per i dettagli più recenti e completi di link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
 
 
 

@@ -51,7 +51,7 @@ Per ulteriori informazioni sulle zone locali di AWS con implementazioni ha, fare
 
 A partire da questa versione, quando si tenta di aggiornare Cloud Volumes ONTAP utilizzando la notifica BlueXP , si riceveranno indicazioni sulle versioni predefinite, più recenti e compatibili da utilizzare. Inoltre, ora è possibile selezionare l'ultima patch o la versione principale compatibile con l'istanza di Cloud Volumes ONTAP, oppure immettere manualmente una versione per l'aggiornamento.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrade-from-bluexp-notifications["Aggiornare il software Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap-cloud.html#upgrade-from-bluexp-notifications["Aggiornare il software Cloud Volumes ONTAP"]
 
 
 
@@ -72,8 +72,8 @@ Il prezzo semplificato offre i seguenti vantaggi:
 
 Ulteriori informazioni sulle seguenti funzioni:
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html["Miglioramento della protezione contro ransomware"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-worm.html["Storage WORM"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html["Miglioramento della protezione contro ransomware"]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-worm.html["Storage WORM"]
 
 
 
@@ -292,20 +292,14 @@ Sono state introdotte le seguenti modifiche.
 
 === Nuovo supporto di regione in Azure
 
-
-
-==== Supporto per regione a zona di disponibilità singola
-
+.Supporto per regione a zona di disponibilità singola
 Le seguenti regioni supportano ora implementazioni a zona di disponibilità singola altamente disponibili in Azure per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:
 
 * Tel Aviv
 * Milano
 
 
-
-
-==== Supporto di aree di disponibilità multiple
-
+.Supporto di aree di disponibilità multiple
 Le seguenti regioni ora supportano implementazioni a più zone di disponibilità altamente disponibili in Azure per Cloud Volumes ONTAP 9.12.1 GA e versioni successive:
 
 * India Centrale

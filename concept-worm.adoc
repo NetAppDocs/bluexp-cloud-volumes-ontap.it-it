@@ -16,6 +16,8 @@ summary: 'È possibile attivare lo storage WORM (Write Once, Read Many) su un si
 [role="lead"]
 È possibile attivare lo storage WORM (Write Once, Read Many) su un sistema Cloud Volumes ONTAP per conservare i file in forma non modificata per un periodo di conservazione specificato. Lo storage cloud WORM è basato sulla tecnologia SnapLock, il che significa che i file WORM sono protetti a livello di file.
 
+La funzionalità WORM è disponibile per l'utilizzo con iscrizioni BYOL (Bring Your Own License) e al marketplace per le tue licenze senza costi aggiuntivi. Contattare il rappresentante commerciale NetApp per aggiungere WORM alla licenza corrente.
+
 
 
 == Come funziona lo storage WORM
@@ -39,7 +41,7 @@ A partire da Cloud Volumes ONTAP 9.10.1, è possibile attivare o disattivare il 
 Quando si crea un nuovo ambiente di lavoro Cloud Volumes ONTAP, viene richiesto di attivare o disattivare lo storage WORM:
 
 * Se si attiva lo storage WORM durante la creazione di un ambiente di lavoro, ogni volume creato da BlueXP ha abilitato WORM. Tuttavia, puoi utilizzare System Manager di ONTAP o l'interfaccia a riga di comando di ONTAP per creare volumi che hanno IL WORM disattivato.
-* Se disattivi lo storage WORM al momento della creazione di un ambiente di lavoro, ogni volume creato da BlueXP , ONTAP System Manager o dalla CLI di ONTAP ha disattivato WORM. Se si desidera attivare WORM su un ambiente di lavoro Cloud Volumes ONTAP non abilitato durante la creazione, è necessario creare un ticket di supporto con il supporto NetApp per ricevere assistenza.
+* Se disattivi lo storage WORM al momento della creazione di un ambiente di lavoro, ogni volume creato da BlueXP , ONTAP System Manager o dalla CLI di ONTAP ha disattivato WORM.
 
 
 
@@ -58,11 +60,38 @@ Dopo aver attivato lo storage WORM su un sistema Cloud Volumes ONTAP, è necessa
 
 
 
+== Abilitazione DI WORM in un ambiente di lavoro Cloud Volumes ONTAP
+
+Puoi abilitare lo storage WORM durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP su BlueXP . È inoltre possibile abilitare IL WORM in un ambiente di lavoro se il WORM non è attivato durante la creazione. Una volta attivato, non è possibile disattivare IL WORM.
+
+.A proposito di questa attività
+* WORM è supportato in ONTAP 9.10,1 e versioni successive.
+* WORM con backup è supportato su ONTAP 9.11,1 e versioni successive.
+
+
+.Fasi
+. Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro in cui si desidera attivare il WORM.
+. Nella scheda Panoramica, fare clic sul pannello funzioni, quindi fare clic sull'icona a forma di matita accanto a *WORM*.
++
+Se il WORM è già attivato sul sistema, l'icona a forma di matita è disattivata.
+
+. Nella pagina *WORM*, impostare il periodo di conservazione per il clock di conformità del cluster.
++
+Per ulteriori informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html["Documentazione ONTAP: Inizializzare l'orologio di conformità"^].
+
+. Fare clic su *Set* (Imposta).
+
+
+.Al termine
+È possibile verificare lo stato di *WORM* nel pannello funzioni. Una volta abilitato il WORM, la licenza SnapLock viene installata automaticamente nel cluster. È possibile visualizzare la licenza SnapLock su Gestione sistema ONTAP.
+
+
+
 == Eliminazione dei file WORM
 
 È possibile eliminare i file WORM durante il periodo di conservazione utilizzando la funzione di eliminazione con privilegi.
 
-Per istruzioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/snaplock/delete-worm-files-concept.html["Documentazione ONTAP"^]
+Per istruzioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/snaplock/delete-worm-files-concept.html["Documentazione ONTAP"^].
 
 
 

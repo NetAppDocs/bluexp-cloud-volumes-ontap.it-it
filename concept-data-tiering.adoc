@@ -57,7 +57,7 @@ Se non si prevede di accedere ai dati inattivi, è possibile ridurre i costi di 
 
 I costi di accesso sono più elevati se si accede ai dati, quindi è necessario tenerne conto prima di modificare la classe di storage. https://aws.amazon.com/s3/storage-classes["Documentazione su Amazon S3: Scopri di più sulle classi storage di Amazon S3"^].
 
-È possibile selezionare una classe di storage quando si crea l'ambiente di lavoro e modificarla in qualsiasi momento. Per istruzioni sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare una classe di archiviazione quando si crea l'ambiente di lavoro e modificarla in qualsiasi momento. Per istruzioni sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 La classe di storage per il tiering dei dati è estesa a tutto il sistema, non per volume.
 
@@ -96,11 +96,9 @@ BlueXP crea l'account storage con le seguenti impostazioni:
 Tier di accesso allo storage:: Il Tier di accesso allo storage predefinito per i dati a più livelli in Azure è il _hot_ Tier. Il Tier hot è ideale per i dati con accesso frequente nel Tier di capacità.
 +
 --
-Se non si prevede di accedere ai dati inattivi nel Tier di capacità, è possibile ridurre i costi di storage passando al Tier di storage _COOL_. Quando si imposta il Tier di storage su COOL, i dati del Tier di capacità inattivi vengono spostati direttamente nel Tier di storage cool.
+Se non hai intenzione di accedere ai dati inattivi nel Tier di capacità, puoi scegliere il Tier di storage _cool_, in cui i dati inattivi vengono conservati per un minimo di 30 giorni. Puoi anche optare per il livello _cold_, in cui i dati inattivi vengono archiviati per un minimo di 90 giorni. In base ai tuoi requisiti di storage e alle tue considerazioni sui costi, puoi scegliere il Tier più adatto alle tue esigenze. Quando modifichi il Tier di storage in _cool_ o _cold_, i dati del Tier di capacità inattivo vengono spostati direttamente nel Tier di storage cold o cold. I Tier "cool" e "cold" offrono costi di storage inferiori rispetto al Tier "hot", ma prevedono costi di accesso più elevati. Prima di modificare il Tier storage, è necessario tenerne conto. Fare riferimento alla https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentazione di Microsoft Azure: Scopri di più sui Tier di accesso allo storage BLOB di Azure"^].
 
-I costi di accesso sono maggiori se si accede ai dati, quindi è necessario tenerne conto prima di modificare il livello di storage. https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentazione di Microsoft Azure: Scopri di più sui Tier di accesso allo storage BLOB di Azure"^].
-
-È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per ulteriori informazioni sulla modifica del livello di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in un secondo momento. Per ulteriori informazioni sulla modifica del livello di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 Il Tier di accesso allo storage per il tiering dei dati è esteso a tutto il sistema, non per volume.
 
@@ -142,7 +140,7 @@ NOTE: Tutti i dati inattivi esistenti manterranno la classe di archiviazione pre
 
 I costi di accesso sono più elevati se si accede ai dati, quindi tenere in considerazione questo aspetto prima di modificare la classe di storage. Per ulteriori informazioni, fare riferimento a https://cloud.google.com/storage/docs/storage-classes["Documentazione di Google Cloud: Classi di storage"^].
 
-È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in qualsiasi momento. Per informazioni dettagliate sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
+È possibile selezionare un Tier di storage quando si crea l'ambiente di lavoro e modificarlo in un secondo momento. Per informazioni dettagliate sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi su storage a oggetti a basso costo"].
 
 La classe di storage per il tiering dei dati è estesa a tutto il sistema, non per volume.
 

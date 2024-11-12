@@ -63,14 +63,7 @@ Cloud Volumes ONTAP supporta la funzionalità di protezione ransomware autonoma 
 
 Separare dalle protezioni di estensione file fornite attraverso https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html#protection-from-common-ransomware-file-extensions["impostazione di protezione dal ransomware"], La funzione ARP utilizza l'analisi del carico di lavoro per avvisare l'utente in caso di potenziali attacchi in base a "attività anomala" rilevata. Sia l'impostazione di protezione dal ransomware che la funzione ARP possono essere utilizzate insieme per una protezione completa dal ransomware.
 
-La funzionalità ARP è disponibile per l'utilizzo con le iscrizioni BYOL e di marketplace per le licenze basate sulla capacità e su nodi, senza costi aggiuntivi. Contattare il rappresentante commerciale NetApp per aggiungere ARP alla licenza corrente.
-
-La licenza ARP è considerata una licenza "mobile", il che significa che non è legata a una singola istanza Cloud Volumes ONTAP e può essere applicata a più ambienti Cloud Volumes ONTAP.
-
-
-NOTE: L'utilizzo della funzione ARP con le licenze Cloud Volumes ONTAP basate su nodi non è attualmente presente nel Digital Wallet. La possibilità di visualizzare l'utilizzo dell'ARP basato su nodi sarà disponibile in Digital Wallet in una versione futura.
-
-Acquistando una licenza add-on e aggiungendola al portafoglio digitale, puoi abilitare ARP per volume con Cloud Volumes ONTAP.
+La funzione ARP è disponibile per l'utilizzo con le sottoscrizioni Bring Your Own License (BYOL) e Marketplace per le licenze senza costi aggiuntivi.
 
 I volumi abilitati per ARP hanno lo stato designato "modalità di apprendimento" o "attivo".
 
@@ -79,6 +72,3 @@ La configurazione di ARP per i volumi viene eseguita tramite Gestore di sistema 
 Per ulteriori informazioni su come attivare ARP con Gestione di sistema di ONTAP e la CLI di ONTAP, consultare https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Attiva la protezione ransomware autonoma"^] .
 
 image::screenshot_arp.png[La schermata mostra la licenza add-on per Autonomous ransomware Protection.]
-
-
-NOTE: Il supporto non è disponibile per l'uso di funzioni con licenza senza licenza.

@@ -18,7 +18,7 @@ Gestire le licenze basate su nodo nel portafoglio digitale BlueXP per garantire 
 
 Le _licenze basate su nodo_ sono il modello di licenza della generazione precedente (e non sono disponibili per i nuovi clienti):
 
-* Licenze BYOL acquistate da NetApp
+* BYOL (Bring Your Own License) acquistato da NetApp
 * Sottoscrizioni a pagamento orarie (PAYGO) dal mercato del tuo cloud provider
 
 
@@ -231,3 +231,6 @@ https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Sco
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deleting-working-env.html["Scopri come eliminare un ambiente di lavoro Cloud Volumes ONTAP"].
 
 
+
+.Argomento correlato
+collegamento: link:concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"] link:task-convert-node-capacity.html["Converti le licenze basate su nodi in base alla capacità"]

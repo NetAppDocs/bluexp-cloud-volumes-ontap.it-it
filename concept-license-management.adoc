@@ -14,7 +14,7 @@ summary: Ogni sistema Cloud Volumes ONTAP dotato di un BYOL basato su nodo deve 
 
 
 [role="lead"]
-Ogni sistema Cloud Volumes ONTAP dotato di un BYOL basato su nodo deve disporre di una licenza di sistema con un abbonamento attivo. BlueXP semplifica il processo gestendo le licenze e visualizzando un avviso prima della scadenza.
+Ogni sistema Cloud Volumes ONTAP con una BYOL (Bring Your Own License) basato su nodo deve disporre di una licenza di sistema installata con un abbonamento attivo. BlueXP semplifica il processo gestendo le licenze e visualizzando un avviso prima della scadenza.
 
 
 TIP: Una licenza basata su nodo è la precedente generazione di BYOL per Cloud Volumes ONTAP. Una licenza basata su nodo è disponibile solo per i rinnovi della licenza.

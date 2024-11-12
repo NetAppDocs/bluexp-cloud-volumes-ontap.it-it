@@ -31,7 +31,7 @@ A partire dalla versione BlueXP 3.9.5, il reporting dello spazio logico viene at
 ** FlexClone
 ** ISCSI
 ** Gestione delle chiavi di crittografia multi-tenant (MTEKM), a partire da Cloud Volumes ONTAP 9.12.1 GA
-** NetApp Volume Encryption (solo per sistemi BYOL o PAYGO registrati)
+** Crittografia dei volumi di NetApp (solo per sistemi BYOL (Bring Your Own License) o pay-as-you-go (PAYGO) registrati)
 ** NFS
 
 

@@ -41,9 +41,9 @@ TIP: BlueXP  cambia un nodo alla volta avviando il takeover e in attesa del giv
 +
 image:screenshot_features_machine_type.png["Una schermata che mostra l'impostazione del tipo di macchina nel pannello funzioni disponibile nella parte superiore destra della pagina Panoramica durante la visualizzazione di un ambiente di lavoro."]
 
-+
-.. Se si utilizza una licenza PAYGO basata su nodo, è possibile scegliere una licenza e un tipo di macchina diversi facendo clic sull'icona a forma di matita accanto a *tipo di licenza*.
 
+
+Se si utilizza una licenza PAYGO (pay-as-you-go) basata su nodi, è possibile scegliere una licenza e un tipo di macchina diversi facendo clic sull'icona a forma di matita accanto a *tipo di licenza*.
 
 . Scegliere un tipo di macchina, selezionare la casella di controllo per confermare di aver compreso le implicazioni della modifica, quindi fare clic su *Cambia*.
 

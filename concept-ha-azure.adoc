@@ -120,4 +120,4 @@ Per impostazione predefinita, le funzioni di Takeover, risync e giveback dello s
 
 == Configurazioni dello storage
 
-È possibile utilizzare una coppia ha come configurazione Active-Active, in cui entrambi i nodi servono i dati ai client, o come configurazione Active-passive, in cui il nodo passivo risponde alle richieste di dati solo se ha assunto lo storage per il nodo attivo.
+È possibile utilizzare una coppia ha come configurazione Active-Active, in cui entrambi i nodi forniscono dati ai client, o come configurazione Active-passive, in cui il nodo passivo risponde alle richieste di dati solo se ha assunto il controllo dello storage per il nodo attivo.

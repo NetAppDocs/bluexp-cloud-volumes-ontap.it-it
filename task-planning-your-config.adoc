@@ -38,15 +38,15 @@ Prima di poter creare e gestire le risorse in tali regioni, è necessario abilit
 
 === Scegliere una zona locale supportata
 
-Cloud Volumes ONTAP è supportato in alcune zone locali di AWS, inclusa Singapore. La selezione di una zona locale è facoltativa.
+La selezione di una zona locale è facoltativa. Cloud Volumes ONTAP è supportato in alcune zone locali di AWS, inclusa Singapore. Cloud Volumes ONTAP in AWS supporta solo la modalità ha (High Availability) in una singola zona di disponibilità. Le implementazioni a nodo singolo non sono supportate.
+
+
+NOTE: Cloud Volumes ONTAP non dispone del supporto per il tiering dei dati e il tiering cloud nelle zone locali di AWS. Inoltre, le zone locali con istanze non qualificate per Cloud Volumes ONTAP non sono supportate. Un esempio è Miami, che non è disponibile come zona locale, perché ha solo Gen6 istanze non supportate e non qualificate.
 
 link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/locations/?nc=sn&loc=3["Visualizza l'elenco completo delle zone locali"^].
 Le zone locali devono essere attivate prima di poter creare e gestire le risorse in tali zone.
 
 link:https://aws.amazon.com/tutorials/deploying-low-latency-applications-with-aws-local-zones/["Informazioni su come attivare una zona locale"^].
-
-
-NOTE: Phoenix non è una zona locale supportata.
 
 
 
@@ -102,7 +102,7 @@ Nota: Cloud Volumes ONTAP supporta la funzione Amazon EBS Elastic Volumes con di
 * I dischi _HDD ottimizzati per il throughput (st1)_ sono per i carichi di lavoro ad accesso frequente che richiedono un throughput rapido e coerente a un prezzo inferiore.
 +
 
-NOTE: Si sconsiglia di eseguire il tiering dei dati sullo storage a oggetti quando si utilizzano HDD ottimizzati per il throughput (st1).
+NOTE: Il tiering dei dati in AWS S3 non è disponibile nelle zone locali di AWS a causa della mancanza di connettività.
 
 
 

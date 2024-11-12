@@ -225,8 +225,9 @@ TIP: Cerchi informazioni sul connettore? https://docs.netapp.com/us-en/bluexp-se
 
 Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predefinito, è possibile scegliere di consentire il traffico all'interno di una delle seguenti opzioni:
 
-* *Selezionato solo VNET*: L'origine del traffico in entrata è l'intervallo di sottorete di VNET per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete di VNET in cui si trova il connettore. Questa è l'opzione consigliata.
-* *Tutti i VNets*: L'origine del traffico in entrata è l'intervallo IP 0.0.0.0/0.
+* *Solo VNET selezionato*: L'origine del traffico in entrata è l'intervallo di sottorete del VNET per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete del VNET in cui risiede il connettore. Questa è l'opzione consigliata.
+* *All VNets*: La fonte del traffico in entrata è l'intervallo IP 0,0.0.0/0.
+* *Disabilitato*: Questa opzione limita l'accesso alla rete pubblica all'account di storage e disattiva il tiering dei dati per i sistemi Cloud Volumes ONTAP. Questa è un'opzione consigliata se gli indirizzi IP privati non devono essere esposti anche all'interno dello stesso VNET a causa di norme e criteri di sicurezza.
 
 
 [cols="4*"]
@@ -311,12 +312,15 @@ Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predef
 
 Quando si crea un ambiente di lavoro e si sceglie un gruppo di protezione predefinito, è possibile scegliere di consentire il traffico all'interno di una delle seguenti opzioni:
 
-* *Selezionato solo VNET*: L'origine del traffico in entrata è l'intervallo di sottorete di VNET per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete di VNET in cui si trova il connettore. Questa è l'opzione consigliata.
-* *Tutti i VNets*: L'origine del traffico in entrata è l'intervallo IP 0.0.0.0/0.
+* *Solo VNET selezionato*: L'origine del traffico in entrata è l'intervallo di sottorete del VNET per il sistema Cloud Volumes ONTAP e l'intervallo di sottorete del VNET in cui risiede il connettore. Questa è l'opzione consigliata.
+* *All VNets*: La fonte del traffico in entrata è l'intervallo IP 0,0.0.0/0.
 
 
 
 NOTE: I sistemi HA hanno meno regole in entrata rispetto ai sistemi a nodo singolo perché il traffico dati in entrata passa attraverso il bilanciamento del carico standard di Azure. Per questo motivo, il traffico proveniente dal bilanciamento del carico deve essere aperto, come mostrato nella regola "AllowAzureLoadBalancerInBound".
+
+* *Disabilitato*: Questa opzione limita l'accesso alla rete pubblica all'account di storage e disattiva il tiering dei dati per i sistemi Cloud Volumes ONTAP. Questa è un'opzione consigliata se gli indirizzi IP privati non devono essere esposti anche all'interno dello stesso VNET a causa di norme e criteri di sicurezza.
+
 
 [cols="4*"]
 |===

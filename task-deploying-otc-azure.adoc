@@ -146,6 +146,7 @@ NOTE: Se è disponibile una release Release Candidate, General Availability o pa
 Tenere presente quanto segue:
 
 +
+** Se l'accesso pubblico all'account di storage è disabilitato in VNET, non è possibile abilitare il tiering dei dati nel sistema Cloud Volumes ONTAP. Per informazioni, fare riferimento alla link:reference-networking-azure.html#security-group-rules["Regole del gruppo di sicurezza"].
 ** Il tipo di disco è per il volume iniziale. È possibile scegliere un tipo di disco diverso per i volumi successivi.
 ** Le dimensioni del disco sono per tutti i dischi nell'aggregato iniziale e per qualsiasi aggregato aggiuntivo creato da BlueXP quando si utilizza l'opzione di provisioning semplice. È possibile creare aggregati che utilizzano una dimensione del disco diversa utilizzando l'opzione di allocazione avanzata.
 +
@@ -386,6 +387,7 @@ Tenere presente quanto segue:
 +
 Per informazioni sulla scelta delle dimensioni del disco, fare riferimento alla sezione link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionare il sistema in Azure"^].
 
+** Se l'accesso pubblico all'account di storage è disabilitato in VNET, non è possibile abilitare il tiering dei dati nel sistema Cloud Volumes ONTAP. Per informazioni, fare riferimento alla link:reference-networking-azure.html#security-group-rules["Regole del gruppo di sicurezza"].
 ** Quando si crea o si modifica un volume, è possibile scegliere un criterio di tiering del volume specifico.
 ** Se si disattiva il tiering dei dati, è possibile attivarlo sugli aggregati successivi.
 +

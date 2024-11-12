@@ -164,7 +164,11 @@ NOTE: Le zone locali AWS sono supportate quando si utilizza BlueXP  in modalit�
 
 ==== Esempio di configurazioni della zona locale di AWS
 
-Cloud Volumes ONTAP supporta solo le implementazioni ha in zone locali AWS. Di seguito sono riportate le configurazioni di esempio:
+Cloud Volumes ONTAP in AWS supporta solo la modalità ha (High Availability) in una singola zona di disponibilità. Le implementazioni a nodo singolo non sono supportate.
+
+Cloud Volumes ONTAP non supporta il tiering dei dati, il tiering cloud e istanze non qualificate nelle zone locali di AWS.
+
+Di seguito sono riportate le configurazioni di esempio:
 
 * Singola zona di disponibilità: Entrambi i nodi del cluster e il mediatore si trovano nella stessa zona locale.
 * Più zone di disponibilità
@@ -193,7 +197,10 @@ L'unico tipo di disco supportato è GP2. Sono attualmente supportate le seguenti
 * R5d
 
 
-Cloud Volumes ONTAP supporta solo queste configurazioni. La selezione di qualsiasi altro tipo di disco o istanza EC2 nella configurazione della zona locale di AWS per Cloud Volumes ONTAP potrebbe causare un errore di implementazione. Fare riferimento alla documentazione AWS per i dettagli più recenti e completi di link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
+
+NOTE: Cloud Volumes ONTAP supporta solo queste configurazioni. La selezione di tipi di dischi non supportati o istanze non qualificate nella configurazione della zona locale AWS potrebbe causare un errore di implementazione. Il tiering dei dati in AWS S3 non è disponibile nelle zone locali di AWS a causa della mancanza di connettività.
+
+Fare riferimento alla documentazione AWS per i dettagli più recenti e completi di link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
 
 
 

@@ -276,7 +276,7 @@ Cesserà di ricevere il supporto NetApp dopo la data di EOS, fino a quando l'ute
 .Esclusioni
 NetApp riconosce che determinate situazioni richiedono particolare attenzione e la fine a ed EOS delle licenze basate su nodi non si applicano ai seguenti casi:
 
-* Clienti USPS
+* Clienti USA del settore pubblico
 * Implementazioni in modalità privata
 * Implementazioni nella regione cinese di Cloud Volumes ONTAP in AWS
 

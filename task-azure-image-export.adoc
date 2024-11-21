@@ -82,7 +82,7 @@ Ad esempio, tutte le implementazioni a nodo singolo con Cloud Volumes ONTAP 9.15
 | *Versione Cloud Volumes ONTAP* | *Tipo di distribuzione VM* | *Nome SKU* 
 
 
-| 9.15.1 e 9.16.0 | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 
+| 9.15.1 | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 
 
 
 | 9.15.0 | Nodo singolo | cloud_ontap_byol 

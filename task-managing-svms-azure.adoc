@@ -66,7 +66,7 @@ Copiare gli indirizzi IP privati appena creati. Quando si creano i file LIF per 
 
 === Coppia HA
 
-La modalità di allocazione degli indirizzi IP per una coppia ha dipende dal protocollo di storage utilizzato.
+Per le coppie ha (high Availability), devi accedere a ciascuna Storage VM (SVM) nel cluster e creare gli IP corrispondenti sotto nic0 per ogni SVM. La modalità di allocazione degli indirizzi IP per una coppia ha dipende dal protocollo di storage utilizzato. In modalità ha, gli utenti devono assicurarsi che gli indirizzi IP siano configurati correttamente per supportare il failover e la ridondanza, aspetto essenziale per mantenere l'alta disponibilità e l'affidabilità del sistema di storage.
 
 [role="tabbed-block"]
 ====
@@ -78,7 +78,7 @@ Gli indirizzi IP iSCSI devono essere assegnati a nic0 in Azure prima di creare u
 
 * Un indirizzo IP per l'accesso LIF ai dati iSCSI dal nodo 1
 * Un indirizzo IP per l'accesso LIF ai dati iSCSI dal nodo 2
-* Un indirizzo IP opzionale per una LIF di gestione delle macchine virtuali di storage (SVM)
+* Un indirizzo IP opzionale per una LIF di gestione SVM
 +
 Questa LIF di gestione fornisce una connessione a strumenti di gestione come SnapCenter.
 
@@ -111,7 +111,7 @@ Gli indirizzi IP utilizzati per NFS vengono allocati nel bilanciamento del caric
 * Un indirizzo IP per l'accesso LIF dei dati NAS dal nodo 2
 * Un indirizzo IP opzionale per una LIF di gestione delle macchine virtuali di storage (SVM)
 +
-Le LIF iSCSI sono necessarie per la comunicazione DNS. A questo scopo viene utilizzato un LIF iSCSI perché non esegue la migrazione in caso di failover.
+Le LIF iSCSI sono necessarie per le comunicazioni DNS anche quando non viene utilizzato il protocollo iSCSI. A questo scopo viene utilizzato un LIF iSCSI perché non esegue la migrazione in caso di failover.
 
 +
 Questa LIF di gestione fornisce una connessione a strumenti di gestione come SnapCenter.
@@ -434,7 +434,7 @@ vserver create -vserver <svm-name> -subtype default -rootvolume <root-volume-nam
 ----
 network route create -vserver <svm-name> -destination 0.0.0.0/0 -gateway <ip-of-gateway-server>
 ----
-. Creazione di LIF dei dati:
+. Crea LIF dati. In questa fase, si utilizzano gli IP assegnati in link:task-managing-svms-azure.html#ha-pair["procedura precedente"]per fungere da LIF dati.
 +
 .. Utilizzare il seguente comando per creare una LIF iSCSI sul nodo 1.
 +
@@ -519,7 +519,7 @@ vserver create -vserver <svm-name> -subtype default -rootvolume <root-volume-nam
 ----
 network route create -vserver <svm-name> -destination 0.0.0.0/0 -gateway <ip-of-gateway-server>
 ----
-. Creazione di LIF dei dati:
+. Crea LIF dati. In questa fase, si utilizzano gli IP assegnati in link:task-managing-svms-azure.html#ha-pair["procedura precedente"]per fungere da LIF dati.
 +
 .. Utilizzare il seguente comando per creare un LIF NAS sul nodo 1.
 +
@@ -535,7 +535,7 @@ network interface create -vserver <svm-name> -lif <lif-name> -service-policy def
 ----
 
 
-. Creazione di LIF iSCSI per la comunicazione DNS:
+. Crea LIF iSCSI per fornire comunicazioni DNS. Le LIF iSCSI sono necessarie per le comunicazioni DNS anche quando non viene utilizzato il protocollo iSCSI.
 +
 .. Utilizzare il seguente comando per creare una LIF iSCSI sul nodo 1.
 +
@@ -629,7 +629,7 @@ vserver create -vserver <svm-name> -subtype default -rootvolume <root-volume-nam
 ----
 network route create -vserver <svm-name> -destination 0.0.0.0/0 -gateway <ip-of-gateway-server>
 ----
-. Creazione di LIF dati NAS:
+. Crea LIF dati NAS. In questa fase, si utilizzano gli IP assegnati in link:task-managing-svms-azure.html#ha-pair["procedura precedente"]per fungere da LIF dati.
 +
 .. Utilizzare il seguente comando per creare un LIF NAS sul nodo 1.
 +
@@ -645,7 +645,7 @@ network interface create -vserver <svm-name> -lif <lif-name> -service-policy def
 ----
 
 
-. Creazione di LIF iSCSI per la comunicazione DNS:
+. Crea LIF iSCSI per fornire comunicazioni DNS. Le LIF iSCSI sono necessarie per le comunicazioni DNS anche quando non viene utilizzato il protocollo iSCSI.
 +
 .. Utilizzare il seguente comando per creare una LIF iSCSI sul nodo 1.
 +

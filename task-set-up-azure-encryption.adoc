@@ -14,13 +14,13 @@ summary: I dati vengono crittografati automaticamente su Cloud Volumes ONTAP in 
 
 
 [role="lead"]
-I dati vengono crittografati automaticamente su Cloud Volumes ONTAP in Azure utilizzando https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Azure Storage Service Encryption"] Con una chiave gestita da Microsoft. Tuttavia, è possibile utilizzare la propria chiave di crittografia seguendo la procedura riportata in questa pagina.
+I dati vengono crittografati automaticamente su Cloud Volumes ONTAP in Azure utilizzando la crittografia del servizio di storage Azure con una chiave gestita da Microsoft. Tuttavia, è possibile utilizzare la propria chiave di crittografia seguendo la procedura riportata in questa pagina.
 
 
 
 == Panoramica sulla crittografia dei dati
 
-I dati Cloud Volumes ONTAP vengono crittografati automaticamente in Azure utilizzando https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Azure Storage Service Encryption"^]. L'implementazione predefinita utilizza una chiave gestita da Microsoft. Non è richiesta alcuna configurazione.
+I dati Cloud Volumes ONTAP vengono crittografati automaticamente in Azure utilizzando https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Azure Storage Service Encryption"^]. L'implementazione predefinita utilizza una chiave gestita da Microsoft. Non è richiesta alcuna configurazione.
 
 Se si desidera utilizzare una chiave gestita dal cliente con Cloud Volumes ONTAP, attenersi alla seguente procedura:
 

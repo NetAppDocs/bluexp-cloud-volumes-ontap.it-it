@@ -93,7 +93,7 @@ ifdef::azure[]
 
 === Azure Storage Service Encryption
 
-I dati vengono crittografati automaticamente su Cloud Volumes ONTAP in Azure utilizzando https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/["Azure Storage Service Encryption"^] Con una chiave gestita da Microsoft.
+I dati vengono automaticamente crittografati in Cloud Volumes ONTAP in Azure utilizzando una chiave gestita da https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Azure Storage Service Encryption"^] Microsoft.
 
 Se preferisci, puoi utilizzare le tue chiavi di crittografia. link:task-set-up-azure-encryption.html["Scopri come configurare Cloud Volumes ONTAP per utilizzare una chiave gestita dal cliente in Azure"].
 

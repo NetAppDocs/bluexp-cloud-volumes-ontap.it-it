@@ -18,26 +18,4 @@ Cloud Volumes ONTAP supporta la crittografia dei volumi NetApp (NVE) e la critto
 
 NVE e NAE sono supportati con un gestore di chiavi esterno.
 
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]
-
-ifdef::aws[]
-
-endif::aws[]
-
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]
+ifdef::aws[] endif::aws[] ifdef::azure[] endif::azure[] endif::azure[] ifdef::gcp[] endif::gcp[] endif::aws[] endif::aws[] endif::aws[] ifdef::azure[] endif::azure[]

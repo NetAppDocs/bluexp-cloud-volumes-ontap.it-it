@@ -60,13 +60,7 @@ Cloud Volumes ONTAP supporta https://www.netapp.com/pdf.html?item=/media/17070-d
 
 NVE e NAE sono supportati con un gestore di chiavi esterno.
 
-ifdef::azure[]
-
-endif::azure[]
-
-ifdef::gcp[]
-
-endif::gcp[]
+ifdef::azure[] endif::azure[] ifdef::gcp[] endif::gcp[]
 
 I nuovi aggregati hanno NetApp aggregate Encryption (NAE) abilitato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. I nuovi volumi che non fanno parte di un aggregato NAE avranno NetApp Volume Encryption (NVE) abilitato per impostazione predefinita (ad esempio, se si dispone di aggregati creati prima di impostare un gestore di chiavi esterno).
 

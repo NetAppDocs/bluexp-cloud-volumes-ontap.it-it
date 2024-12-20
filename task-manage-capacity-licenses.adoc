@@ -230,6 +230,8 @@ Potresti anche notare che il portafoglio digitale BlueXP aggiorna la capacità c
 
 Se una licenza basata sulla capacità è scaduta e non è più in uso, è possibile rimuoverla in qualsiasi momento.
 
+Per informazioni su cosa accade ai dati Cloud Volumes ONTAP alla scadenza o alla rimozione della licenza, fare riferimento a https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/FAQs_on_Cloud_Volumes_ONTAP_license_expiry["Questo articolo della Knowledge base (KB)"^].
+
 .Fasi
 . Dal menu di navigazione di BlueXP, selezionare *Governance > Digital wallet*.
 . Nella scheda *Cloud Volumes ONTAP*, fare clic sul menu delle azioni accanto alla licenza e selezionare *Rimuovi licenza*.

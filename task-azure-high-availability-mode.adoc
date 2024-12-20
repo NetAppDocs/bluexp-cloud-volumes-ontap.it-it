@@ -14,9 +14,9 @@ summary: La modalità ad alta disponibilità di Microsoft Azure deve essere abil
 
 
 [role="lead"]
-La modalità ad alta disponibilità di Microsoft Azure deve essere abilitata per ridurre i tempi di failover non pianificati e per abilitare il supporto NFSv4 ore su 24, 7 giorni su 7 per Cloud Volumes ONTAP.
+La modalità ad alta disponibilità (ha) di Microsoft Azure deve essere abilitata per ridurre i tempi di failover non pianificati e per consentire il supporto NFSv4 ore su 24, 7 giorni su 7 per Cloud Volumes ONTAP. In questa modalità, i nodi ha Cloud Volumes ONTAP possono raggiungere un recovery time objective (RTO) basso (60 secondi) durante i failover non pianificati sui client CIFS e NFSv4.
 
-A partire dalla release Cloud Volumes ONTAP 9.10.1, abbiamo ridotto il tempo di failover non pianificato per le coppie Cloud Volumes ONTAP ha in esecuzione in Microsoft Azure e aggiunto il supporto per NFSv4. Per rendere disponibili questi miglioramenti per Cloud Volumes ONTAP, devi abilitare la funzionalità di alta disponibilità nella tua iscrizione ad Azure.
+A partire da Cloud Volumes ONTAP 9.10.1, abbiamo ridotto il tempo di failover non pianificato per le coppie ha Cloud Volumes ONTAP in esecuzione in Microsoft Azure e abbiamo aggiunto il supporto per NFSv4. Per rendere disponibili questi miglioramenti per Cloud Volumes ONTAP, devi abilitare la funzionalità di alta disponibilità nella tua iscrizione ad Azure.
 
 BlueXP ti chiederà di inserire questi dettagli in un messaggio Action Required (azione richiesta) quando la funzione deve essere attivata con un abbonamento Azure.
 
@@ -24,7 +24,9 @@ Tenere presente quanto segue:
 
 * Non ci sono problemi con l'alta disponibilità della tua coppia Cloud Volumes ONTAP ha. Questa funzionalità di Azure funziona in collaborazione con ONTAP per ridurre il tempo di interruzione dell'applicazione osservato dal client per i protocolli NFS che derivano da eventi di failover non pianificati.
 * L'attivazione di questa funzione non comporta interruzioni per le coppie Cloud Volumes ONTAP ha.
-* L'attivazione di questa funzione sul tuo abbonamento Azure non causerà problemi ad altre macchine virtuali.
+* L'attivazione di questa funzione sull'abbonamento ad Azure non causa problemi ad altre macchine virtuali.
+* Cloud Volumes ONTAP utilizza un bilanciatore di carico Azure interno durante il failover di interfacce LIF di gestione cluster e SVM su client CIFS e NFS.
+* Quando la modalità ha è abilitata, BlueXP  esegue una scansione del sistema ogni 12 ore per aggiornare le regole interne del bilanciamento del carico di Azure.
 
 
 Un utente di Azure che dispone dei privilegi di "Owner" può attivare la funzionalità dalla CLI di Azure.

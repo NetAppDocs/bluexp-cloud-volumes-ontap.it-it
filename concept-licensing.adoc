@@ -290,7 +290,7 @@ NOTE: Anche in questi scenari, i rinnovi di licenze e le nuove licenze basate su
 
 == Conversione della licenza
 
-BlueXP  permette una conversione perfetta delle licenze basate su nodi in base alla capacità grazie al tool di conversione della licenza. Per informazioni sulla fine disponibilità delle licenze basate su nodi, fare riferimento alla link:/concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"].
+BlueXP  permette una conversione perfetta delle licenze basate su nodi in base alla capacità grazie al tool di conversione della licenza. Per informazioni sulla fine disponibilità delle licenze basate su nodi, fare riferimento alla link:concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"].
 
 Prima di procedere alla transizione, è opportuno familiarizzare con la differenza tra i due modelli di licenza. La licenza basata su nodi include capacità fissa per ogni istanza di ONTAP, che può limitare la flessibilità. Le licenze basate sulla capacità, invece, consentono di creare un pool di storage condiviso su più istanze, offrendo una maggiore flessibilità, ottimizzando l'utilizzo delle risorse e riducendo il potenziale di penalizzazione finanziaria durante la ridistribuzione dei carichi di lavoro. La ricarica basata sulla capacità si adatta perfettamente ai requisiti di storage in continua evoluzione.
 

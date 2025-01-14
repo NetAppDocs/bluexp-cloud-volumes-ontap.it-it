@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-tiering.html 
-keywords: tier, tiering, cold data, hot data, storage tiering, data tiering, fabricpool, fabric pool, s3 endpoint, endpoint, connection, performance tier, capacity tier, object store, blob tiering, container, inactive, tiering requirements 
+keywords: tier, tiering, cold data, hot data, storage tiering, data tiering, fabricpool, fabric pool, s3 endpoint, endpoint, connection, performance tier, capacity tier, object store, blob tiering, container, inactive, tiering requirements, remove S3 bucket, delete S3 CVO bucket 
 summary: È possibile ridurre i costi di storage per Cloud Volumes ONTAP combinando un Tier di performance SSD o HDD per i dati hot con un Tier di capacità dello storage a oggetti per i dati inattivi. Il tiering dei dati è basato sulla tecnologia FabricPool. 
 ---
-= Tiering dei dati inattivi su storage a oggetti a basso costo
+= Tiering dei dati inattivi in uno storage a oggetti a basso costo
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -47,7 +47,7 @@ endif::gcp[]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Assicurarsi di disporre di un aggregato con il tiering attivato
 [role="quick-margin-para"]
-Il tiering dei dati deve essere attivato su un aggregato per consentire il tiering dei dati su un volume. È necessario conoscere i requisiti per i nuovi volumi e per i volumi esistenti. <<Garantire che il tiering sia abilitato sugli aggregati,Scopri di più>>.
+Il tiering dei dati deve essere attivato su un aggregato per consentire il tiering dei dati su un volume. È necessario conoscere i requisiti per i nuovi volumi e per i volumi esistenti. <<Ensuring that tiering is enabled on aggregates,Scopri di più>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Scegliere un criterio di tiering quando si crea, modifica o replica un volume
 [role="quick-margin-para"]
@@ -65,7 +65,7 @@ BlueXP richiede di scegliere un criterio di tiering quando si crea, modifica o s
 * Non è necessario creare un archivio di oggetti per il Tier di capacità. BlueXP fa questo per te.
 * Non è necessario abilitare il tiering dei dati a livello di sistema.
 +
-BlueXP crea un archivio di oggetti per i dati cold quando il sistema viene creato, <<Abilitazione del tiering dei dati dopo l'implementazione dei requisiti,a condizione che non vi siano problemi di connettività o permessi>>. In seguito, è sufficiente attivare il tiering dei dati sui volumi (e in alcuni casi, <<Garantire che il tiering sia abilitato sugli aggregati,sugli aggregati>>).
+BlueXP crea un archivio di oggetti per i dati cold quando il sistema viene creato, <<Enabling data tiering after implementing the requirements,a condizione che non vi siano problemi di connettività o permessi>>. In seguito, è sufficiente attivare il tiering dei dati sui volumi (e in alcuni casi, <<Ensuring that tiering is enabled on aggregates,sugli aggregati>>).
 
 
 
@@ -202,7 +202,7 @@ NOTE: La possibilità di abilitare il tiering tramite l'interfaccia utente di Bl
 
 
 
-== Garantire che il tiering sia abilitato sugli aggregati
+== Verifica che il tiering sia abilitato sugli aggregati
 
 Il tiering dei dati deve essere attivato su un aggregato per consentire il tiering dei dati su un volume. È necessario conoscere i requisiti per i nuovi volumi e per i volumi esistenti.
 
@@ -236,7 +236,7 @@ image:screenshot_aggregate_tiering_enabled.png["Una schermata che mostra informa
 
 
 
-== Tiering dei dati dai volumi di lettura/scrittura
+== Eseguire il tiering dei dati dai volumi di lettura/scrittura
 
 Cloud Volumes ONTAP è in grado di tierare i dati inattivi su volumi di lettura/scrittura per uno storage a oggetti conveniente, liberando il Tier di performance per i dati hot.
 
@@ -270,7 +270,7 @@ BlueXP crea un nuovo aggregato per il volume se non esiste già un aggregato abi
 
 
 
-== Tiering dei dati dai volumi di protezione dei dati
+== Eseguire il tiering dei dati dai volumi di data Protection
 
 Cloud Volumes ONTAP può eseguire il tiering dei dati da un volume di protezione dei dati a un livello di capacità. Se si attiva il volume di destinazione, i dati si spostano gradualmente al livello di performance man mano che vengono letti.
 
@@ -291,7 +291,7 @@ Per informazioni sulla replica dei dati, fare riferimento a https://docs.netapp.
 
 
 
-== Modifica della classe di storage per i dati a più livelli
+== Modificare la classe di archiviazione per i dati a più livelli
 
 Dopo aver implementato Cloud Volumes ONTAP, è possibile ridurre i costi di storage modificando la classe di storage per i dati inattivi a cui non è stato effettuato l'accesso per 30 giorni. I costi di accesso sono più elevati se si accede ai dati, pertanto è necessario prendere in considerazione questo aspetto prima di modificare la classe di storage.
 
@@ -328,7 +328,7 @@ image:screenshot_settings_icon.png["Una schermata che mostra l'icona Settings (I
 
 
 
-== Modifica del periodo di raffreddamento per la policy di tiering automatico
+== Modificare il periodo di raffreddamento per la policy di tiering automatico
 
 Se è stato attivato il tiering dei dati su un volume Cloud Volumes ONTAP utilizzando la policy di tiering _auto_, è possibile regolare il periodo di raffreddamento predefinito in base alle esigenze aziendali. Questa azione è supportata solo utilizzando ONTAP CLI e API.
 
@@ -343,3 +343,17 @@ Il periodo di raffreddamento predefinito per il criterio di tiering automatico �
 .Fase
 . Utilizzare il parametro _minimumCoolingDays_ con la richiesta API durante la creazione di un volume o la modifica di un volume esistente.
 
+
+
+
+== Rimuovere una benna S3 durante la messa fuori servizio di un ambiente di lavoro
+
+Quando si decommissiona l'ambiente, è possibile eliminare un bucket S3 con il tiering dei dati da un ambiente di lavoro Cloud Volumes ONTAP.
+
+È possibile eliminare il bucket S3 solo se:
+
+* L'ambiente di lavoro Cloud Volume ONTAP viene eliminato da BlueXP .
+* Tutti gli oggetti vengono eliminati dal bucket e il bucket S3 è vuoto.
+
+
+Quando si decommissiona un ambiente di lavoro Cloud Volumes ONTAP, il bucket S3 creato per l'ambiente non viene eliminato automaticamente. Ma rimane in uno stato orfano per prevenire qualsiasi perdita accidentale di dati. È possibile eliminare gli oggetti nel bucket e successivamente rimuovere il bucket S3 stesso oppure conservarlo per un utilizzo successivo. Fare riferimento alla https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["ONTAP CLI: Eliminazione bucket object-store-server vserver"^].

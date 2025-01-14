@@ -221,9 +221,6 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 
 
 
-| \https://keyvault-production-aks.vault.azure.net | Vault delle chiavi | Utilizzato per recuperare la chiave segreta client da Azure Key Vault per comunicare con il bucket S3 per la gestione dei metadati. Il servizio Cloud Volumes ONTAP utilizza questo componente internamente. | Modalità standard, limitata e privata. | I servizi Cloud Volumes ONTAP non sono disponibili. 
-
-
 | \https://cloudmanager.cloud.netapp.com/tenancy | Locazione | Utilizzato per recuperare le risorse Cloud Volumes ONTAP dalla tenancy BlueXP  per autorizzare risorse e utenti. | Modalità standard e limitata. | Le risorse Cloud Volumes ONTAP e gli utenti non sono autorizzati. 
 
 

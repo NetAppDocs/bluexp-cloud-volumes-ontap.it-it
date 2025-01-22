@@ -47,7 +47,7 @@ Per ulteriori informazioni, fare riferimento alla link:reference-networking-aws.
 
 == Avvio di un sistema Cloud Volumes ONTAP a nodo singolo in AWS
 
-Se si desidera avviare Cloud Volumes ONTAP in AWS, è necessario creare un nuovo ambiente di lavoro in BlueXP
+Per lanciare Cloud Volumes ONTAP in AWS, devi creare un nuovo ambiente di lavoro in BlueXP .
 
 .A proposito di questa attività
 Subito dopo aver creato l'ambiente di lavoro, BlueXP avvia un'istanza di test nel VPC specificato per verificare la connettività. Se l'esito è positivo, BlueXP termina immediatamente l'istanza e avvia la distribuzione del sistema Cloud Volumes ONTAP. Se BlueXP non riesce a verificare la connettività, la creazione dell'ambiente di lavoro non riesce. L'istanza di test è t2.nano (per la tenancy VPC predefinita) o m3.medium (per la tenancy VPC dedicata).
@@ -330,7 +330,7 @@ Alcuni dei campi di questa pagina sono esplicativi. La seguente tabella descrive
 | Nome utente e password | Queste sono le credenziali per l'account amministratore del cluster Cloud Volumes ONTAP. È possibile utilizzare queste credenziali per connettersi a Cloud Volumes ONTAP tramite Gestione di sistema di ONTAP o l'interfaccia a riga di comando di ONTAP. Mantenere il nome utente predefinito _admin_ o modificarlo in un nome utente personalizzato. 
 
 
-| Modifica credenziali | Scegli le credenziali AWS e l'abbonamento al marketplace da utilizzare con questo sistema Cloud Volumes ONTAP. Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenziali selezionate a un nuovo abbonamento AWS Marketplace. L'abbonamento può essere per un contratto annuale o per pagare Cloud Volumes ONTAP a una tariffa oraria. Se hai acquistato una licenza direttamente da NetApp (Bring Your Own License (BYOL)), non è richiesto un abbonamento AWS. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Scopri come aggiungere ulteriori credenziali AWS a BlueXP"^]. 
+| Modifica credenziali | Scegli le credenziali AWS e l'abbonamento al marketplace da utilizzare con questo sistema Cloud Volumes ONTAP. Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenziali selezionate a un nuovo abbonamento AWS Marketplace. L'abbonamento può essere per un contratto annuale o per pagare Cloud Volumes ONTAP a una tariffa oraria. Se hai acquistato una licenza direttamente da NetApp (Bring Your Own License (BYOL)), non è richiesto un abbonamento ad AWS. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Scopri come aggiungere ulteriori credenziali AWS a BlueXP"^]. 
 |===
 +
 Il video seguente mostra come associare un abbonamento al Marketplace pay-as-you-go alle tue credenziali AWS:

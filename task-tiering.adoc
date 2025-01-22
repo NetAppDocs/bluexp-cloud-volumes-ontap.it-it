@@ -20,7 +20,7 @@ Per impostare il tiering dei dati, è necessario effettuare le seguenti operazio
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Scegliere una configurazione supportata
 [role="quick-margin-para"]
-Sono supportate la maggior parte delle configurazioni. Se si dispone di un sistema Cloud Volumes ONTAP con la versione più recente, si consiglia di procedere. link:task-tiering.html#configurations-that-support-data-tiering["Scopri di più"].
+Sono supportate la maggior parte delle configurazioni. Se si dispone di un sistema Cloud Volumes ONTAP che esegue la versione più recente, è possibile procedere. link:task-tiering.html#configurations-that-support-data-tiering["Scopri di più"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Garantire la connettività tra Cloud Volumes ONTAP e lo storage a oggetti
 [role="quick-margin-list"]
@@ -47,7 +47,7 @@ endif::gcp[]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Assicurarsi di disporre di un aggregato con il tiering attivato
 [role="quick-margin-para"]
-Il tiering dei dati deve essere attivato su un aggregato per consentire il tiering dei dati su un volume. È necessario conoscere i requisiti per i nuovi volumi e per i volumi esistenti. <<Ensuring that tiering is enabled on aggregates,Scopri di più>>.
+In un aggregato, il tiering dei dati deve essere abilitato per poter essere utilizzato su un volume. È necessario conoscere i requisiti per i nuovi volumi e per i volumi esistenti. <<Ensuring that tiering is enabled on aggregates,Scopri di più>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Scegliere un criterio di tiering quando si crea, modifica o replica un volume
 [role="quick-margin-para"]
@@ -65,7 +65,7 @@ BlueXP richiede di scegliere un criterio di tiering quando si crea, modifica o s
 * Non è necessario creare un archivio di oggetti per il Tier di capacità. BlueXP fa questo per te.
 * Non è necessario abilitare il tiering dei dati a livello di sistema.
 +
-BlueXP crea un archivio di oggetti per i dati cold quando il sistema viene creato, <<Enabling data tiering after implementing the requirements,a condizione che non vi siano problemi di connettività o permessi>>. In seguito, è sufficiente attivare il tiering dei dati sui volumi (e in alcuni casi, <<Ensuring that tiering is enabled on aggregates,sugli aggregati>>).
+BlueXP  crea un archivio di oggetti per i dati cold quando crea il sistema, <<Enabling data tiering after implementing the requirements,a condizione che non vi siano problemi di connettività o permessi>>. Dopodiché, sarà sufficiente abilitare il tiering dei dati sui volumi (e in alcuni casi <<Ensuring that tiering is enabled on aggregates,sugli aggregati>>).
 
 
 
@@ -162,7 +162,7 @@ Non è necessario impostare una connessione tra il Tier di performance e il Tier
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-Per impostazione predefinita, le autorizzazioni sono incluse nel ruolo personalizzato. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'autorizzazione Azure per il connettore"^]
+Il ruolo personalizzato include le autorizzazioni per impostazione predefinita. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'autorizzazione Azure per il connettore"^]
 
 endif::azure[]
 
@@ -212,7 +212,7 @@ Se abiliti il tiering dei dati su un nuovo volume, non dovrai preoccuparti di ab
 
 * *Volumi esistenti*
 +
-Se si desidera attivare il tiering dei dati su un volume esistente, è necessario assicurarsi che il tiering dei dati sia attivato sull'aggregato sottostante. Se il tiering dei dati non è abilitato nell'aggregato esistente, sarà necessario utilizzare Gestione di sistema di ONTAP per collegare un aggregato esistente all'archivio di oggetti.
+Per abilitare il tiering dei dati su un volume esistente, assicurati che sia abilitato nell'aggregato sottostante. Se il tiering dei dati non è abilitato nell'aggregato esistente, sarà necessario utilizzare Gestione di sistema di ONTAP per collegare un aggregato esistente all'archivio di oggetti.
 
 
 
@@ -356,4 +356,4 @@ Quando si decommissiona l'ambiente, è possibile eliminare un bucket S3 con il t
 * Tutti gli oggetti vengono eliminati dal bucket e il bucket S3 è vuoto.
 
 
-Quando si decommissiona un ambiente di lavoro Cloud Volumes ONTAP, il bucket S3 creato per l'ambiente non viene eliminato automaticamente. Ma rimane in uno stato orfano per prevenire qualsiasi perdita accidentale di dati. È possibile eliminare gli oggetti nel bucket e successivamente rimuovere il bucket S3 stesso oppure conservarlo per un utilizzo successivo. Fare riferimento alla https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["ONTAP CLI: Eliminazione bucket object-store-server vserver"^].
+Quando si decommissiona un ambiente di lavoro Cloud Volumes ONTAP, il bucket S3 creato per l'ambiente non viene eliminato automaticamente. Ma rimane in uno stato orfano per prevenire qualsiasi perdita accidentale di dati. È possibile eliminare gli oggetti nel bucket, quindi rimuovere il bucket S3 stesso o conservarlo per un utilizzo successivo. Fare riferimento alla https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["ONTAP CLI: Eliminazione bucket object-store-server vserver"^].

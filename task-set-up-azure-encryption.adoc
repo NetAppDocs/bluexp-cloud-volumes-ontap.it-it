@@ -30,12 +30,6 @@ Se si desidera utilizzare una chiave gestita dal cliente con Cloud Volumes ONTAP
 
 
 
-=== Rotazione delle chiavi
-
-Se si crea una nuova versione della chiave, Cloud Volumes ONTAP utilizza automaticamente la versione più recente.
-
-
-
 === Modalità di crittografia dei dati
 
 BlueXP utilizza un set di crittografia del disco, che consente la gestione delle chiavi di crittografia con dischi gestiti e non con blob di pagine. Anche i nuovi dischi dati utilizzano lo stesso set di crittografia del disco. Le versioni più basse utilizzeranno la chiave gestita da Microsoft, invece della chiave gestita dal cliente.
@@ -101,6 +95,20 @@ Ha di Azure diverse zone di disponibilità con dischi gestiti condivisi
 
 |===
 Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati utilizzando una chiave gestita dal cliente. Se si desidera crittografare gli account di archiviazione durante la loro creazione, è necessario creare e fornire l'ID della risorsa nella richiesta di creazione Cloud Volumes ONTAP. Questo vale per tutti i tipi di implementazioni. Se non viene fornito, gli account di storage verranno comunque crittografati, ma BlueXP creerà prima gli account di storage con crittografia a chiave gestita da Microsoft e quindi aggiornerà gli account di storage per utilizzare la chiave gestita dal cliente.
+
+
+
+== Rotazione della chiave in Cloud Volumes ONTAP
+
+Se si crea una nuova versione della chiave, Cloud Volumes ONTAP utilizza automaticamente la versione più recente della chiave, garantendo la protezione dei dati senza la necessità di aggiornamenti manuali.
+
+.Fasi
+. Accedere al vault delle chiavi nel portale Azure.
+. Selezionare il tasto che si desidera ruotare.
+. Fare clic su *Nuova versione* per generare una nuova versione della chiave.
+
+
+Una volta creata una nuova versione, Cloud Volumes ONTAP rileva e utilizza automaticamente l'ultima versione della chiave per la crittografia.
 
 
 

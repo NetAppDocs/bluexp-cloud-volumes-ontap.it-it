@@ -39,7 +39,7 @@ Digital Advisor visualizza l'inventario completo e le informazioni sulla configu
 
 
 
-.Informazioni correlate
+.Link correlati
 * https://docs.netapp.com/us-en/active-iq/["Documentazione NetApp: Consulente digitale"^]
 * https://aiq.netapp.com/custom-dashboard/search["Avviare Digital Advisor"^]
 * https://www.netapp.com/us/services/support-edge.aspx["Servizi SupportEdge"^]

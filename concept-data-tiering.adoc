@@ -55,7 +55,7 @@ Classi di storage:: La classe di storage predefinita per i dati Tiered in AWS è
 --
 Se non si prevede di accedere ai dati inattivi, è possibile ridurre i costi di storage cambiando la classe di storage in una delle seguenti opzioni: _Intelligent Tiering_, _One-zone infrequent Access_, _Standard-infrequent Access_ o _S3 Glacier Instant Retrieval_. Quando si modifica la classe di storage, i dati inattivi vengono avviati nella classe di storage Standard e vengono passati alla classe di storage selezionata, se non si accede ai dati dopo 30 giorni.
 
-I costi di accesso sono più elevati se si accede ai dati, quindi è necessario tenerne conto prima di modificare la classe di storage. https://aws.amazon.com/s3/storage-classes["Documentazione su Amazon S3: Scopri di più sulle classi storage di Amazon S3"^].
+I costi di accesso sono più elevati se si accede ai dati, è consigliabile tenerli in considerazione prima di modificare la classe di storage. https://aws.amazon.com/s3/storage-classes["Documentazione su Amazon S3: Scopri di più sulle classi storage di Amazon S3"^].
 
 È possibile selezionare una classe di archiviazione quando si crea l'ambiente di lavoro e modificarla in qualsiasi momento. Per istruzioni sulla modifica della classe di archiviazione, fare riferimento alla link:task-tiering.html["Tiering dei dati inattivi in uno storage a oggetti a basso costo"].
 

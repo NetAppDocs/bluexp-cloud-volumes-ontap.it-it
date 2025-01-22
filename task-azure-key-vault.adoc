@@ -198,3 +198,8 @@ Se configurato correttamente, Cloud Volumes ONTAP crea automaticamente il volume
 . Verificare che il volume sia stato creato e crittografato correttamente. In tal caso, il `-is-encrypted` il parametro viene visualizzato come `true`.
 `vol show -vserver _SVM_name_ -fields is-encrypted`
 
+
+.Link correlati
+* link:task-set-up-azure-encryption.html["Impostare Cloud Volumes ONTAP in modo che utilizzi una chiave gestita dal cliente in Azure"]
+* https://learn.microsoft.com/en-us/azure/key-vault/general/overview["Microsoft Azure docmentation: Informazioni su Azure Key Vault"^]
+

@@ -114,6 +114,6 @@ Quando si crea un nuovo sistema Cloud Volumes ONTAP 9.8 o versione successiva, √
 * Oltre al modello di amministratore dello storage fidato, lo storage WORM in Cloud Volumes ONTAP opera implicitamente anche sotto un modello di "amministratore del cloud fidato". Un amministratore del cloud pu√≤ eliminare i dati WORM prima della data di scadenza, rimuovendo o modificando il cloud storage direttamente dal cloud provider.
 
 
-.Informazioni correlate
+.Link correlato
 * link:reference-worm-snaplock.html["Crea copie Snapshot a prova di manomissione per lo storage WORM"]
 

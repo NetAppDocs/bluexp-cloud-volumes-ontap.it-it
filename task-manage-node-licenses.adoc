@@ -232,5 +232,5 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deleting-working-e
 
 
 
-.Argomento correlato
+.Link correlati
 collegamento: link:concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"] link:task-convert-node-capacity.html["Converti le licenze basate su nodi in base alla capacità"]

@@ -2614,7 +2614,6 @@
   <block id="5ca4d0f89ef6c18d7fa7fae7290d98cb" category="summary">Cloud Volumes ONTAP consente di ottimizzare i costi e le performance del cloud storage, migliorando al contempo protezione, sicurezza e conformità dei dati.</block>
   <block id="1a523ba4ece9125275b92ebb41e3cf23" category="doc">Documentazione Cloud Volumes ONTAP</block>
   <block id="221a174f8f629fb4aa230caa988c2112" category="summary">Scopri le novità della gestione Cloud Volumes ONTAP in BlueXP.</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">Novità</block>
   <block id="06c86f2b2f40c7b5ae916f820dace6f3" category="inline-link">Vai alle Note di rilascio di Cloud Volumes ONTAP</block>
   <block id="3a293828e70d21dff60d66d4ef2d6993" category="paragraph">I miglioramenti descritti in questa pagina sono specifici delle funzionalità di BlueXP che consentono la gestione di Cloud Volumes ONTAP. Per scoprire le novità del software Cloud Volumes ONTAP,<block ref="708e09e3f2783926556b9c6d77f63a27" category="inline-link-rx"></block></block>
   <block id="71bff2737bdd059023a4784358e71a64" category="section-title">7 maggio 2023</block>
@@ -5213,7 +5212,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="adecfde5f36fbd5be401c7db8b8d5979" category="paragraph">Per ulteriori informazioni, fare riferimento a<block ref="61c2f059d82ddc0e246df7b9944d49f4" category="inline-link-rx"></block>.</block>
   <block id="a1cef748bfeca5013ccdcfd54bd3e225" category="paragraph">Per ulteriori informazioni su come attivare ARP con Gestione di sistema di ONTAP e la CLI di ONTAP, consultare<block ref="4379b61ba712146f3962583303024b3d" category="inline-link-rx"></block> .</block>
   <block id="acdfc619ad459d4ab0532bb87b6d7fca" category="summary">Abilita questa funzionalità di Microsoft Azure per implementare ha in SAZ.</block>
-  <block id="12d6e3573a8a3e22461317ae16813b4a" category="paragraph">Per la distribuzione delle istanze VM nelle singole zone di disponibilità LRS (Local Redundant Storage), è necessario attivare la<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block> funzione Microsoft per gli abbonamenti. In una modalità ha, questa funzionalità facilita l'implementazione dei nodi in domini di errore separati nella stessa zona di disponibilità.</block>
   <block id="e290db697594a259148850f7bb013a47" category="paragraph">A meno che non si attivi questa funzione, la distribuzione zonale non si verifica e la precedente distribuzione non zonale LRS diventa effettiva.</block>
   <block id="492c71bc471f165a3195703edddf3149" category="paragraph">Per informazioni sull'implementazione della VM in una singola zona di disponibilità, fare riferimento alla <block ref="c9a9063659db2ec9460653bbe2cdb792" category="inline-link-macro-rx"></block>.</block>
   <block id="c3f8ce3d677b4ec2cfbd8d1b970709ef" category="paragraph">Eseguire questi passaggi come utente con Privileges "Proprietario":</block>
@@ -5685,4 +5683,7 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="70dfa56e7de1c3a338c88fe5bed4fe14" category="paragraph">I sistemi Cloud Volumes ONTAP richiedono l'accesso a Internet outbound per l'accesso a endpoint esterni per varie funzioni. Cloud Volumes ONTAP non può funzionare correttamente se questi endpoint sono bloccati in ambienti con severi requisiti di sicurezza.</block>
   <block id="6a4145e8bef527d8870a20695d55d74f" category="paragraph">BlueXP  Connector contatta anche diversi endpoint per le operazioni quotidiane e la console basata sul Web di BlueXP . Per informazioni sugli endpoint BlueXP , fare riferimento a<block ref="0a8949f1130beab385180d157118cad5" category="inline-link-rx"></block> e<block ref="979bd9d5982d3343248cd50bd0e0a8e2" category="inline-link-rx"></block>.</block>
   <block id="54df7aa57f75c8fe24e8c54795f38fa6" category="paragraph">Cloud Volumes ONTAP utilizza questi endpoint per comunicare con vari servizi.</block>
+  <block id="23507528d9eb5706668d0e76ef371e2a" category="paragraph">Per la distribuzione di istanze VM in zone di disponibilità singola (AZ) LRS (Local Redundant Storage), è necessario attivare la funzione Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block> per gli abbonamenti. In una modalità ad alta disponibilità (ha), questa funzionalità facilita l'implementazione dei nodi in domini di errore separati nella stessa zona di disponibilità.</block>
+  <block id="9d72c2bef829db2eecf218dce9aa0f18" category="doc">Novità di Cloud Volumes ONTAP</block>
+  <block id="8cd62eba7c68cffeab4caeac1efd39a3" category="sidebar">Configurare la creazione di gruppi di posizionamento di Cloud Volumes ONTAP per AWS</block>
 </blocks>

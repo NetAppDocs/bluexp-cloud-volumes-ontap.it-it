@@ -20,6 +20,39 @@ I miglioramenti descritti in questa pagina sono specifici delle funzionalità di
 
 
 
+== 10 febbraio 2025
+
+
+
+=== Autenticazione utente abilitata per l'accesso a Gestione sistema da BlueXP 
+
+In qualità di amministratore BlueXP , è ora possibile attivare l'autenticazione per gli utenti ONTAP che accedono a Gestione sistema ONTAP da BlueXP . È possibile attivare questa opzione modificando le impostazioni del connettore BlueXP . Questa opzione è disponibile per le modalità standard e privata.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Amministrare Cloud Volumes ONTAP utilizzando Gestione di sistema"^].
+
+
+
+=== Visualizzazione avanzata BlueXP  rinominata in Gestione sistema
+
+L'opzione per la gestione avanzata di Cloud Volumes ONTAP da BlueXP  tramite Gestione di sistema di ONTAP è stata rinominata da *visualizzazione avanzata* a *Gestione di sistema*.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Amministrare Cloud Volumes ONTAP utilizzando Gestione di sistema"^].
+
+
+
+=== Ecco un modo più semplice per gestire le licenze con il portafoglio digitale di BlueXP 
+
+Ora puoi usufruire di una gestione semplificata delle licenze Cloud Volumes ONTAP utilizzando punti di navigazione migliorati all'interno del Digital Wallet di BlueXP :
+
+* Accedi facilmente alle informazioni sulla tua licenza Cloud Volumes ONTAP tramite le schede *Governance > Digital Wallet > Panoramica/licenze servizio dati*.
+* Fare clic su *Visualizza* nel pannello ONTAP volume cloud nella scheda *Panoramica* per ottenere una conoscenza completa delle licenze basate sulla capacità. Questa visualizzazione avanzata offre informazioni dettagliate su licenze e abbonamenti.
+* Se si preferisce l'interfaccia precedente, è possibile fare clic sul pulsante *passa alla visualizzazione precedente* per visualizzare i dettagli della licenza in base al tipo e modificare i metodi di addebito per le licenze.
+
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Gestione delle licenze basate sulla capacità"^].
+
+
+
 == 9 dicembre 2024
 
 

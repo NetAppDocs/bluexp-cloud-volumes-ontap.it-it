@@ -514,34 +514,16 @@
   <block id="03021ab228ad1d1c921bbf536e2913a4" category="section-title">Visualizzare la capacità consumata nell'account</block>
   <block id="70998cc9a7ddc4592ecb1e8fc59e0b63" category="paragraph">Il portafoglio digitale BlueXP mostra la capacità totale consumata nell'account e la capacità consumata dal pacchetto di licenze. Questo può aiutarti a capire come ti stai addebitando e se hai bisogno di acquistare capacità aggiuntiva.</block>
   <block id="43bfd35e9b57eaace0eafa6750af5ff7" category="list-text">Dal menu di navigazione di BlueXP, selezionare *Governance &gt; Digital wallet*.</block>
-  <block id="e83a5b2754cd537ac6467dc025115726" category="list-text">Nella scheda *Cloud Volumes ONTAP*, mantenere selezionata l'opzione *licenze basate sulla capacità*.</block>
-  <block id="29f9c9781f75b695cb6c7c93910280cd" category="list-text">_Capacità totale consumata_ è la capacità totale di provisioning di tutti i sistemi Cloud Volumes ONTAP del tuo account NetApp. La ricarica si basa sulle dimensioni fornite da ciascun volume, indipendentemente dallo spazio locale, utilizzato, memorizzato o effettivo all'interno del volume.</block>
-  <block id="40e697bd547f9c2f3cb7042d204e6b9b" category="list-text">_Total PAYGO_ è la capacità totale fornita con gli abbonamenti al cloud marketplace. L'addebito tramite PAYGO viene utilizzato solo se la capacità consumata è superiore alla capacità concessa in licenza o se non è disponibile alcuna licenza BYOL nel portafoglio digitale BlueXP.</block>
-  <block id="34a724e7d15854ada8926f52e44a3cdb" category="paragraph">Ecco un esempio di riepilogo dei pacchetti Cloud Volumes ONTAP nel portafoglio digitale BlueXP:</block>
-  <block id="ef932e9542b570b1aebe25543e12d641" category="inline-image-macro">Una schermata che mostra un riepilogo dei pacchetti Cloud Volumes ONTAP che include la capacità totale consumata, la capacità totale preimpegnata (contratti BYOL e Marketplace) e la capacità totale DI PAYGO o di provisioning nel portafoglio digitale BlueXP.</block>
-  <block id="7d6ebd560dc2c66d5d0db57db21f3c2e" category="paragraph"><block ref="7d6ebd560dc2c66d5d0db57db21f3c2e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ea7c202c277e5ccf92e08be29b4a64e9" category="list-text">Sotto il riepilogo, visualizzare la capacità consumata per ciascun pacchetto di licenze.</block>
-  <block id="af61e314a8c2484dfcfef0afc2e5b8b9" category="list-text">_Capacità consumata_ mostra la capacità dei volumi per quel pacchetto. Per ulteriori informazioni su un pacchetto specifico, passare il mouse sulla descrizione del comando.</block>
   <block id="d30bc4bd5cee7ac23a1df54311d1f4b3" category="inline-link">Scopri come ricaricare il pacchetto Essentials</block>
-  <block id="cfc852810f89c13febd473e12117d828" category="list-text">_Capacità consigliata_ è la capacità concessa in licenza (BYOL o Marketplace Contract) acquistata da NetApp.</block>
-  <block id="b35741916171a2b4d1210c1ccf6e3920" category="list-text">_BYOL_ mostra la capacità concessa in licenza acquistata da NetApp per questo tipo di pacchetto.</block>
-  <block id="59bdc4172870791ff34a990174b34a66" category="list-text">_Contratti Marketplace_ Mostra la capacità concessa in licenza acquistata con un contratto Marketplace per questo tipo di pacchetto.</block>
-  <block id="e733f8e4574a8639831d6df796e6a0eb" category="list-text">_PAYGO_ mostra la capacità consumata in base al modello di consumo delle licenze.</block>
-  <block id="bbb170bfbf4105204b0dbe4292724d6e" category="paragraph">Ecco un esempio per un account che dispone di diversi pacchetti di licenza:</block>
-  <block id="b0980f4f35d961e95a685e0af8bda7e4" category="inline-image-macro">Uno screenshot che mostra la capacità consumata, la capacità preimpegnata e LA capacità DI PAYGO o di provisioning per i pacchetti essenziali e professionali.</block>
-  <block id="71b669d4d19df676d975ef4911ded7af" category="paragraph"><block ref="71b669d4d19df676d975ef4911ded7af" category="inline-image-macro-rx" type="image"></block></block>
   <block id="37532cd27e3c53471b1caed0ba1f90ed" category="section-title">Scarica i report sull'utilizzo</block>
   <block id="c2b73e18a5b530a547ba48a8177d13c3" category="inline-image-macro">La schermata mostra la pagina delle licenze digitali wallet Cloud Volumes ONTAP basate sulla capacità ed evidenzia il pulsante Usage report.</block>
   <block id="a1a4a48254cf8eb8962fbd995f5e7ea8" category="paragraph"><block ref="a1a4a48254cf8eb8962fbd995f5e7ea8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d11dcbec58d47bd13de1dcccfbd640ff" category="paragraph">I seguenti report sono disponibili per il download. I valori di capacità mostrati sono in TIB.</block>
-  <block id="ad73e4897304c80496a4f15e033cefa7" category="list-text">*Utilizzo di alto livello*: Questo report mostra esattamente ciò che è contenuto nella scheda "Riepilogo pacchetti Cloud Volumes ONTAP" nel portafoglio digitale. Include le seguenti informazioni:</block>
   <block id="c596c9291f76a11af1aefc235c262de6" category="list-text">Capacità totale consumata</block>
   <block id="8dd7541d6c4e83402d88448119068a02" category="list-text">Capacità totale preimpegnata</block>
   <block id="b01a146aed01aa8af61e034befc116ce" category="list-text">Capacità BYOL totale</block>
   <block id="109323142d354af9ccc7eb636b1dcbce" category="list-text">Capacità totale dei contratti Marketplace</block>
   <block id="baf09c6c43fd26effd8f15e252649384" category="list-text">Capacità PAYGO totale</block>
-  <block id="76101a2de96d735db21249323914bc6c" category="list-text">*Utilizzo del pacchetto Cloud Volumes ONTAP*: Questo report mostra esattamente ciò che è riportato sulle schede delle confezioni nel portafoglio digitale. Include le seguenti informazioni per ciascun pacchetto, ad eccezione del pacchetto i/o ottimizzato:</block>
-  <block id="c01bbdbe6721d80a74779e943243486b" category="list-text">*Utilizzo delle VM di storage*: Questo report mostra come viene suddivisa la capacità di carico tra i sistemi Cloud Volumes ONTAP e le macchine virtuali di storage (SVM). Queste informazioni non sono disponibili su nessuna schermata del portafoglio digitale. Include le seguenti informazioni:</block>
   <block id="c8e2277ecfb1427838c488c217f99466" category="list-text">Cloud</block>
   <block id="4736cd35bf5b3fe63e1b1785fb2aa664" category="list-text">ID account NetApp</block>
   <block id="bbfa34e8af02138b821f784c8962669b" category="list-text">Configurazione dell'ambiente di lavoro</block>
@@ -558,40 +540,18 @@
   <block id="fc18634852d4299cd5f8c7ad55ddefbe" category="list-text">Tipo di volume</block>
   <block id="3756f66a273f440893f16ee968ce3450" category="list-text">Capacità di provisioning del volume</block>
   <block id="8b3da2ed858ee5c956acde26c9ef7dd0" category="admonition">I volumi FlexClone non sono inclusi in questo report perché questi tipi di volumi non comportano costi.</block>
-  <block id="a4bad4f350632a2078a6d795984ee60f" category="list-text">Nella scheda *Cloud Volumes ONTAP*, mantenere selezionata l'opzione *licenze basate sulla capacità* e fare clic su *rapporto di utilizzo*.</block>
   <block id="23e918e9f1c9f1bb5769dcc236489de2" category="paragraph">Il report di utilizzo viene scaricato.</block>
   <block id="05655bb3cbd3604d6c71a1db823ad94f" category="list-text">Aprire il file scaricato per accedere ai report.</block>
-  <block id="b2dfe525c9a6bec7392826fba889fe07" category="section-title">Aggiungere le licenze acquistate all'account</block>
-  <block id="665d621a7dca67edde62a7208c097db9" category="paragraph">Se le licenze acquistate non vengono visualizzate nel portafoglio digitale BlueXP, è necessario aggiungerle a BlueXP in modo che la capacità sia disponibile per Cloud Volumes ONTAP.</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Di cosa hai bisogno</block>
-  <block id="160caa44a14b9421593597c51ec2a7e8" category="list-text">È necessario fornire a BlueXP il numero di serie della licenza o del file di licenza.</block>
-  <block id="04b14ae402c3ab4f87916eed6238424b" category="inline-link">Aggiungi il tuo account NetApp Support Site a BlueXP</block>
-  <block id="666ac747a8d5a1aa317496f8add413a6" category="list-text">Nella scheda *Cloud Volumes ONTAP*, mantenere selezionata l'opzione *licenze basate sulla capacità* e fare clic su *Aggiungi licenza*.</block>
-  <block id="5c55b043854250a04085395d6b5a3a9d" category="list-text">Inserire il numero di serie della licenza basata sulla capacità o caricare il file di licenza.</block>
-  <block id="204d2b4625a88f2700ea6c08a4f85014" category="paragraph">Se hai inserito un numero di serie, devi anche selezionare l'account NetApp Support Site autorizzato ad accedere al numero di serie.</block>
   <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">Fare clic su *Aggiungi licenza*.</block>
-  <block id="89046e28df67df094886562aac624243" category="section-title">Aggiornare una licenza basata sulla capacità</block>
-  <block id="2a54172f7bcef3f83da68a9aefc194ea" category="paragraph">Se hai acquistato capacità aggiuntiva o hai esteso il periodo di validità della licenza, BlueXP aggiorna automaticamente la licenza nel portafoglio digitale. Non c'è niente da fare.</block>
-  <block id="2144c137b123de98ab20d5bfa9677b33" category="paragraph">Tuttavia, se BlueXP è stato implementato in una posizione che non dispone di accesso a Internet, sarà necessario aggiornare manualmente la licenza in BlueXP.</block>
-  <block id="e02250fabfba9f2d7325403663479a43" category="paragraph">Il file di licenza (o _files_ se si dispone di una coppia ha).</block>
-  <block id="ecdf6ba3b837de5910abdabc360df552" category="list-text">Nella scheda *Cloud Volumes ONTAP*, fare clic sul menu delle azioni accanto alla licenza e selezionare *Aggiorna licenza*.</block>
-  <block id="f591dbc4232b149ea0792178559405f9" category="list-text">Caricare il file di licenza.</block>
-  <block id="034f6db5181ab87d962e69b9b7b5a995" category="list-text">Fare clic su *carica licenza*.</block>
   <block id="662442d32a5fd91298fcf8b6391fdf17" category="section-title">Modificare i metodi di ricarica</block>
   <block id="f3d9abb903127694db460aa9c7f4d7be" category="paragraph-title">Limitazione</block>
   <block id="cfdb32f80009b1e5c5c0468dda9f013d" category="paragraph">Se disponi di un'offerta o di un contratto privato sul mercato del tuo cloud provider, il passaggio a un metodo di addebito non incluso nel contratto comporterà l'addebito di BYOL (se hai acquistato una licenza da NetApp) o PAYGO.</block>
-  <block id="3397777d22d2d5f746157ca31f0d8460" category="list-text">Nella scheda *Cloud Volumes ONTAP*, fare clic su *Modifica metodo di ricarica*.</block>
   <block id="325ef46eb3d6b63c4d60ef08cdd6176f" category="inline-image-macro">Una schermata della pagina Cloud Volumes ONTAP del portafoglio digitale BlueXP in cui il pulsante Modifica metodo di addebito si trova appena sopra la tabella.</block>
   <block id="bdc5814154b1b181ca8722ef08ed8a28" category="paragraph"><block ref="bdc5814154b1b181ca8722ef08ed8a28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="de4b4e176958ea7181911ce715504321" category="list-text">Selezionare un ambiente di lavoro, scegliere il nuovo metodo di ricarica, quindi confermare che la modifica del tipo di pacchetto influirà sui costi di servizio.</block>
   <block id="b0d246ceb3cd290ace3abd509e982f73" category="inline-image-macro">Una schermata della finestra di dialogo Modifica metodo di ricarica in cui è possibile scegliere un nuovo metodo di ricarica per un ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="6e594f7cd72195c88515a50fcfc2397e" category="paragraph"><block ref="6e594f7cd72195c88515a50fcfc2397e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5331b4ea3bd1ef32d06c003e7e8f1c3d" category="list-text">Fare clic su *Modifica metodo di ricarica*.</block>
-  <block id="a3f83af733570f5c2a5b63c7087e6164" category="paragraph">BlueXP modifica il metodo di ricarica per il sistema Cloud Volumes ONTAP.</block>
-  <block id="d592a4e1d68c1047f1f5e39639bee6bf" category="paragraph">Potresti anche notare che il portafoglio digitale BlueXP aggiorna la capacità consumata per ciascun tipo di pacchetto per tenere conto della modifica appena apportata.</block>
-  <block id="8f79a5bc1b9725ce4036eb2d94c60de9" category="section-title">Rimuovere una licenza basata sulla capacità</block>
-  <block id="5ca97f84ee577fbacf355fc75d23921d" category="list-text">Nella scheda *Cloud Volumes ONTAP*, fare clic sul menu delle azioni accanto alla licenza e selezionare *Rimuovi licenza*.</block>
-  <block id="40b851aafab82c78484c46169f816fd2" category="list-text">Fare clic su *Remove* (Rimuovi) per confermare.</block>
   <block id="b10aaff78dfb34e8e7e4c718d4519219" category="summary">Se si desidera utilizzare la crittografia Amazon con Cloud Volumes ONTAP, è necessario configurare il servizio di gestione delle chiavi AWS.</block>
   <block id="e9993ec838a8efa5cfb29506f884deca" category="doc">Configurazione di AWS KMS</block>
   <block id="b7b5da9f4d5594bacc1509df196de5c3" category="paragraph">Se si desidera utilizzare la crittografia Amazon con Cloud Volumes ONTAP, è necessario configurare il servizio di gestione delle chiavi AWS.</block>
@@ -653,9 +613,7 @@
   <block id="54d3d71e00eff1d12a7498874b5be642" category="list-text"><block ref="23ecfdc2047f54fa8dc84813543b2b07" prefix="" category="inline-code"></block></block>
   <block id="c616900ae748d4dd41ba80df7406dd9b" category="list-text"><block ref="a7ad30418481a3cae35553d202bb9ab7" prefix="" category="inline-code"></block></block>
   <block id="e8d7251c93bb0bbd59e5b2aca177a1a6" category="summary">Se è necessario eseguire una gestione avanzata di Cloud Volumes ONTAP, è possibile farlo utilizzando Gestione di sistema di ONTAP, un'interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l'interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.</block>
-  <block id="eb548256fe08b2a0e5f541bc56282edf" category="doc">Amministrare Cloud Volumes ONTAP utilizzando la visualizzazione avanzata</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Caratteristiche</block>
-  <block id="38ff1351e45b1e4303e79145f4bc10b4" category="paragraph">La visualizzazione avanzata di BlueXP consente di accedere a funzionalità di gestione aggiuntive:</block>
   <block id="f3c3ee89c80d32726f5f937c07631d1c" category="list-text">Gestione avanzata dello storage</block>
   <block id="81988711ef6c9af40c8e8973f25c0bed" category="paragraph">Gestione di gruppi di coerenza, condivisioni, qtree, quote e Storage VM.</block>
   <block id="62735a856683757bf28f1f02f97c151c" category="list-text">Gestione del networking</block>
@@ -670,14 +628,11 @@
   <block id="0f1ca4e2133610fdc8b23e4db3f7cb0c" category="paragraph">L'integrazione di System Manager non è supportata nelle regioni di GovCloud o nelle regioni che non dispongono di accesso a Internet in uscita.</block>
   <block id="b03c3f1292327857639de1cd1434567b" category="paragraph">Alcune funzioni visualizzate nell'interfaccia di Gestione sistema non sono supportate da Cloud Volumes ONTAP:</block>
   <block id="078be6a9f1dfaaea5e7153ff9ec78760" category="list-text">Tiering BlueXP</block>
-  <block id="fdc0e66a431a39bf7d68fad74c362d1a" category="paragraph">Il servizio di tiering BlueXP non è supportato con Cloud Volumes ONTAP. Quando si creano volumi, è necessario impostare il tiering dei dati sullo storage a oggetti direttamente dalla vista standard di BlueXP.</block>
   <block id="fe925ee04a93d96abc7adb5118b5ccc3" category="list-text">Tier</block>
   <block id="af97eb7a8d1a683de73e48cc402e070d" category="paragraph">La gestione degli aggregati (inclusi Tier locali e Tier cloud) non è supportata da System Manager. È necessario gestire gli aggregati direttamente dalla vista standard di BlueXP.</block>
   <block id="405e2b58413610be532a001334e7a862" category="list-text">Aggiornamenti del firmware</block>
-  <block id="ec10c0d50369bfb68fa19c871a22d0f7" category="paragraph">Gli aggiornamenti automatici del firmware dalla pagina *Cluster &gt; Impostazioni* non sono supportati con Cloud Volumes ONTAP.</block>
   <block id="f4e1c06a7a7ddbaea4c2d3349dc0b815" category="paragraph">Inoltre, il controllo degli accessi basato sui ruoli da System Manager non è supportato.</block>
   <block id="07e1d66babe77070cc76a4e637c9f26d" category="section-title">Come iniziare</block>
-  <block id="7540b63d6f9cc399be4f74cff91bcaf7" category="paragraph">Aprire un ambiente di lavoro Cloud Volumes ONTAP e fare clic sull'opzione visualizzazione avanzata.</block>
   <block id="74d668d6c47cd0c55c4ff8f77ad621bd" category="list-text">Se viene visualizzato il messaggio di conferma, leggerlo e fare clic su *Chiudi*.</block>
   <block id="f0da217269d7f8fb37fd503f586df2ef" category="list-text">Utilizzare Gestione sistema per gestire Cloud Volumes ONTAP.</block>
   <block id="e7b3f56c45c6705f279b059a9274225d" category="list-text">Se necessario, fare clic su *passa alla visualizzazione standard* per tornare alla gestione standard tramite BlueXP.</block>
@@ -4143,7 +4098,6 @@ Per creare una sovvenzione, fare riferimento a. <block ref="2e58dbc76dde8987ce87
   <block id="687a1e66717978102d4e4948c08968d3" category="list-text"><block ref="687a1e66717978102d4e4948c08968d3" category="inline-link-rx"></block></block>
   <block id="25e7b507c919c21847b291c84a88ba36" category="paragraph"><block ref="73e1a6a2075a5d292111b694a644abf3" category="inline-link-rx"></block>.</block>
   <block id="b2678f2b003e23f7f5f3a7cd8451a26b" category="paragraph">Per comprendere meglio le capacità visualizzate per il pacchetto Essentials, è necessario conoscere il funzionamento della ricarica.<block ref="8d04d0643798fbb69d5260f477ea213c" category="inline-link-rx"></block>.</block>
-  <block id="fa4ae0264bd8c2dfafbe1d03e4bc2b9a" category="list-text">Se si desidera inserire il numero di serie, è necessario prima<block ref="c7616a3371ef10b7d4b9bba9548cea1f" category="inline-link-rx"></block>. Si tratta dell'account NetApp Support Site autorizzato ad accedere al numero di serie.</block>
   <block id="40f3baabc19d523f34effa4916ea3369" category="paragraph"><block ref="40f3baabc19d523f34effa4916ea3369" category="inline-link-rx"></block></block>
   <block id="3ef154303a849cb9a3ef576f227344aa" category="admonition">Cerchi informazioni sul connettore?<block ref="8765f98523a24e888d90a1e7217525a6" category="inline-link-rx"></block></block>
   <block id="ca874448d5833b40cafc264394d56087" category="list-text"><block ref="ca874448d5833b40cafc264394d56087" category="inline-link-rx"></block></block>
@@ -4702,7 +4656,6 @@ Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenzi
   <block id="6b5c2460f150173d3723de8a857a4d33" category="paragraph"><block ref="179c8a3ed717f2c4de3149f0e9edf685" category="inline-link-rx"></block>.</block>
   <block id="632ac3f99447a16bd75e4d1a0b8b691e" category="paragraph">Utilizzando la vista standard di BlueXP, puoi gestire i volumi in base alle tue esigenze di storage. È possibile visualizzare, modificare, clonare, ripristinare ed eliminare i volumi.</block>
   <block id="5f9f6fee108a1a2e24bfa11e0350dbed" category="paragraph">Per impostazione predefinita, un volume aumenta automaticamente fino a raggiungere le dimensioni massime quando lo spazio è esaurito. Il valore predefinito è 1.000, il che significa che il volume può aumentare di 11 volte le sue dimensioni. Questo valore è configurabile nelle impostazioni del connettore.</block>
-  <block id="d83032202b952a29eb304290049be8f3" category="paragraph">Se devi ridimensionare il volume, puoi farlo dalla vista avanzata di BlueXP.</block>
   <block id="a6bfbc7160bd5efb8fda7e791efd9e47" category="list-text">Dal menu di navigazione a sinistra, selezionare *Storage &gt; Volumes* (archiviazione &gt; volumi*).</block>
   <block id="d875eee3d594951433259f6da1cc1729" category="list-text">Dall'elenco dei volumi, identificare quello da ridimensionare.</block>
   <block id="52c148109936ec0cc34f1b38fb262428" category="inline-image-macro">icona kabob</block>
@@ -5135,7 +5088,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="06dc2fe279cba2e4225b7ea669e09ba6" category="cell">Accesso HTTP alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione cluster</block>
   <block id="bf56103f759b88ed509d0a67caf77918" category="cell">Connettività con il connettore e accesso HTTPS alla console web di ONTAP System Manager usando l'indirizzo IP della LIF di gestione del cluster</block>
   <block id="60c74fca932643a72ec9d1ed478cb2dd" category="paragraph">Le versioni di Cloud Volumes ONTAP diverse da quelle elencate non sono disponibili per le nuove implementazioni. Per informazioni sull'aggiornamento, fare riferimento alla <block ref="edc516954278e6b04bf6c1ef0d737956" category="inline-link-macro-rx"></block>.</block>
-  <block id="6970ecbb5a5b9e280981e366be3eeca9" category="paragraph">La gestione avanzata tramite ONTAP System Manager è supportata con Cloud Volumes ONTAP 9.10.0 e versioni successive nelle regioni cloud standard.</block>
   <block id="57330f26a1386f42b08aa33e8679785d" category="admonition">Per ulteriori informazioni su come installare la CLI di Azure, fare riferimento a<block ref="bb8fb2fba9b918c590d549f3c97582d7" category="inline-link-rx"></block>.</block>
   <block id="bd2041168f280dc42522d734d91fff47" category="admonition">BlueXP  cambia un nodo alla volta avviando il takeover e in attesa del giveback. Il team di controllo qualità di NetApp ha testato sia la scrittura che la lettura dei file durante questo processo e non ha riscontrato alcun problema sul lato client. Con il variare delle connessioni, alcuni tentativi sono stati osservati a livello di i/o, ma il livello applicativo ha superato il cablaggio delle connessioni NFS/CIFS.</block>
   <block id="5a6ab212605c11d29ddee412db34c72e" category="paragraph">Per un elenco dei tipi di istanza supportati in AWS, fare riferimento a <block ref="ab5d2be79e0f4831293646ade5590437" category="inline-link-macro-rx"></block>.</block>
@@ -5181,13 +5133,10 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="6242dbff130ee0bc438bfa60a5b4de51" category="paragraph">BlueXP offre pacchetti preconfigurati che soddisfano i requisiti del carico di lavoro, oppure è possibile creare una configurazione personalizzata. Se si sceglie una configurazione personalizzata, è necessario comprendere le opzioni disponibili. Per informazioni, fare riferimento alla <block ref="01a63aaf870d7f59ca64d1c54c969d0e" category="inline-link-macro-rx"></block>.</block>
   <block id="24ad8759d36867d6c10565f40a1bec76" category="paragraph">La gestione delle chiavi con Cloud KMS può essere abilitata con l'interfaccia a riga di comando di ONTAP o l'API REST di ONTAP.</block>
   <block id="a760d335f1fa2810727ed37789f5c213" category="paragraph">In caso di esaurimento dello spazio di un aggregato, puoi spostare i volumi in un altro aggregato utilizzando ONTAP System Manager.</block>
-  <block id="5dcdcf1a61f65bad54f6365fe59bf745" category="admonition">Per ulteriori informazioni su come ottenere un file di licenza, fare riferimento a<block ref="c65aa3342130b0295e06cd938a12ad5e" category="inline-link-rx"></block>.</block>
   <block id="e9f1aeeff9edad4c09954fc2bc41a549" category="paragraph">Fare riferimento a <block ref="23da02e053be6485f9a66477404bdb14" category="inline-link-macro-rx"></block> per ulteriori informazioni su come la capacità viene gestita automaticamente in Cloud Volumes ONTAP.</block>
   <block id="5b5068830882d3d6b54d331cdd743e62" category="paragraph">Fare riferimento ai seguenti documenti per le istruzioni dell'interfaccia CLI di ONTAP.</block>
-  <block id="50c08eb81cb5e62be669d25897280a98" category="paragraph">Puoi gestire i volumi in BlueXP Standard View o Advanced View. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. La vista avanzata offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e tracciamento delle attività e spostamento dei volumi tra Tier. Per informazioni, fare riferimento alla <block ref="76b22e8ed647224335daed95530df604" category="inline-link-macro-rx"></block>.</block>
   <block id="d599458df3e0f94b895f769f01832128" category="paragraph">Per ulteriori informazioni su FlexClone Volumes, fare riferimento alla<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block> .</block>
   <block id="fd64fde8786477c5abdec0eecf69b64a" category="admonition">Se sono necessari criteri Snapshot personalizzati, è possibile crearli utilizzando Gestione sistema di ONTAP.</block>
-  <block id="acf1ce233451b7dcbd7ac7425e4f68f9" category="list-text">Aprire la visualizzazione avanzata per ridimensionare un volume tramite Gestione di sistema di ONTAP. Fare riferimento alla <block ref="1bf7174b0a06a67edc83de5c18b2bf58" category="inline-link-macro-rx"></block>.</block>
   <block id="2d8749e6307be37df9448ccb0742d9ad" category="paragraph">Durante il ridimensionamento dei volumi, tenere in considerazione i limiti di capacità del sistema. <block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block>Per ulteriori informazioni, consultare la sezione.</block>
   <block id="2f2fc6b0ecb632d9af7bb8a89a86493d" category="paragraph">Puoi spostare un volume in ONTAP System Manager selezionando un volume e l'aggregato di destinazione, avviando l'operazione di spostamento del volume e facoltativamente monitorando il processo di spostamento del volume. Quando si utilizza System Manager, l'operazione di spostamento del volume termina automaticamente.</block>
   <block id="70a06b1108347ee5be7261c9860a3185" category="list-text">Utilizza ONTAP System Manager o la CLI di ONTAP per spostare i volumi nell'aggregato.</block>
@@ -5370,7 +5319,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="7304f4ac552bd3e3d0492d4e82a018f9" category="admonition">L'organizzazione o l'amministratore dell'account BlueXP  può modificare questo valore dalla pagina Impostazioni.</block>
   <block id="eb2678f353ff539b66368cd255510a82" category="paragraph">BlueXP  aggiunge le istanze Cloud Volumes ONTAP al progetto o all'area di lavoro.</block>
   <block id="1a5004d2fa68d798618b010b203f89db" category="list-text">Nella pagina Canvas, selezionare un sistema Cloud Volumes ONTAP.</block>
-  <block id="44b7ffdcf84f31c030ae673e3b4e8e6e" category="list-text">Nel pannello di destra, in *servizi*, individuare *System Manager* e selezionare *Apri*.</block>
   <block id="6b453c5a4f7ed569fc8308df07f9f55e" category="inline-link">Connettore associato al progetto o all'area di lavoro</block>
   <block id="92455adcaed0397e116713826842263e" category="list-text">Si dovrebbe avere un<block ref="9ac26cef53fc939f0eabea87d0a20d0b" category="inline-link-rx"></block>.</block>
   <block id="da4a01a210193b125dfc666408271f05" category="list-text">Si dovrebbe avere un<block ref="ed7feedfc897899b3fc46d7ce71fcc71" category="inline-link-rx"></block>.</block>
@@ -5566,8 +5514,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="a42381ccb4c9b07d94af68aac09b97db" category="list-text">Selezionare la casella di controllo per confermare di aver compreso le implicazioni della modifica, quindi fare clic su *Procedi*.</block>
   <block id="54173685d0a19dc27fc7d74a0b1348f0" category="paragraph">Visualizzare il nuovo numero di serie della licenza e verificare le modifiche apportate al portafoglio digitale di BlueXP .</block>
   <block id="4aecb2a001e9ed1c57930cdd68e5a8e2" category="list-text">Se l'accesso pubblico all'account di storage è disabilitato in VNET, non è possibile abilitare il tiering dei dati nel sistema Cloud Volumes ONTAP. Per informazioni, fare riferimento alla <block ref="cf7250ba2a63a15ad3b094d85cccecb2" category="inline-link-macro-rx"></block>.</block>
-  <block id="ffee78f944ad8168ad943b188f69ad15" category="list-text">Visualizza il riepilogo dei pacchetti che mostra capacità consumata, capacità totale con precommit e capacità pay-as-you-go (PAYGO) totale.</block>
-  <block id="84d1a8b78e647d328dc1794599f688b4" category="list-text">_Total precommit Capacity_ è la capacità totale concessa in licenza (Bring Your Own License (BYOL) o contratto di mercato) acquistata da NetApp.</block>
   <block id="0d4e36aae457a1001b3373de2fd510f1" category="list-text">BYOL (Bring Your Own License) acquistato da NetApp</block>
   <block id="cb90b48918ed9cd8ea355c04c171177b" category="paragraph">collegamento: <block ref="7f9a8649ca2d86db235ba56502d14f92" category="inline-link-macro-rx"></block> <block ref="431f655d5a9ac309b561fc62a4c619ea" category="inline-link-macro-rx"></block></block>
   <block id="829695792a0f96cf880394f0cc741cb2" category="paragraph">La selezione di una zona locale è facoltativa. Cloud Volumes ONTAP è supportato in alcune zone locali di AWS, inclusa Singapore. Cloud Volumes ONTAP in AWS supporta solo la modalità ha (High Availability) in una singola zona di disponibilità. Le implementazioni a nodo singolo non sono supportate.</block>
@@ -5629,9 +5575,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="61d250b56c4dbcf65efb9a23e69575b2" category="list-text">Cloud Volumes ONTAP utilizza un bilanciatore di carico Azure interno durante il failover di interfacce LIF di gestione cluster e SVM su client CIFS e NFS.</block>
   <block id="c452ee32d2dd6fb7daf5d56449ab25c3" category="list-text">Quando la modalità ha è abilitata, BlueXP  esegue una scansione del sistema ogni 12 ore per aggiornare le regole interne del bilanciamento del carico di Azure.</block>
   <block id="735e56a5b34e826e0792a73d3b708e4a" category="paragraph">Per gli impegni annuali o a lungo termine, NetApp consiglia di contattare il rappresentante NetApp prima della data di fine disponibilità (11 novembre, 2024) o della data di scadenza della licenza, per verificare che siano in vigore i prerequisiti per la transizione. Se non disponi di un contratto a lungo termine per un nodo Cloud Volumes ONTAP ed esegui il sistema su un abbonamento PAY-as-you-go (PAYGO) on-demand, è importante pianificare la conversione prima della fine del supporto (EOS) il 31 dicembre, 2024. In entrambi i casi, è necessario assicurarsi che il sistema soddisfi i requisiti prima di utilizzare lo strumento di conversione delle licenze BlueXP  per una transizione senza problemi.</block>
-  <block id="2ea847728c17221d3e25691cc360347c" category="paragraph">Se una licenza basata sulla capacità è scaduta e non è più in uso, è possibile rimuoverla in qualsiasi momento.</block>
-  <block id="2ee1fa7be03c13720193e0dad8935652" category="inline-link">Questo articolo della Knowledge base (KB)</block>
-  <block id="6e9d07c33afe89ea437bf8c34df37d42" category="paragraph">Per informazioni su cosa accade ai dati Cloud Volumes ONTAP alla scadenza o alla rimozione della licenza, fare riferimento a<block ref="388c9f5ba0fdf002c4eb313c08420e05" category="inline-link-rx"></block>.</block>
   <block id="89f1c05b91f27a0ccc4736c51deee49f" category="paragraph">La licenza convertita ha la stessa data di scadenza della licenza Cloud Volumes ONTAP.</block>
   <block id="11c433da09cca9cd7d57ed81e1cd6310" category="inline-link-macro">Scopri di più sulle configurazioni supportate in Azure</block>
   <block id="9601655a1a70b76faca1edfd7d7dff06" category="admonition">A partire da Cloud Volumes ONTAP 9.15.0P1, i blob delle pagine di Azure non sono più supportati per le nuove implementazioni di coppie ad alta disponibilità. Se al momento utilizzi Azure page blob in implementazioni esistenti di coppie ad alta disponibilità, puoi migrare a tipi di istanze di macchine virtuali più recenti nelle macchine virtuali della serie Edsv4 e nelle macchine virtuali della serie Edsv5. <block ref="ecdad61fcd8abefb7dbc2e5c682b6e1d" category="inline-link-macro-rx"></block>.</block>
@@ -5686,4 +5629,76 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="23507528d9eb5706668d0e76ef371e2a" category="paragraph">Per la distribuzione di istanze VM in zone di disponibilità singola (AZ) LRS (Local Redundant Storage), è necessario attivare la funzione Microsoft<block ref="fdfb47698b60e554acc8cff3a6065992" prefix=" " category="inline-code"></block> per gli abbonamenti. In una modalità ad alta disponibilità (ha), questa funzionalità facilita l'implementazione dei nodi in domini di errore separati nella stessa zona di disponibilità.</block>
   <block id="9d72c2bef829db2eecf218dce9aa0f18" category="doc">Novità di Cloud Volumes ONTAP</block>
   <block id="8cd62eba7c68cffeab4caeac1efd39a3" category="sidebar">Configurare la creazione di gruppi di posizionamento di Cloud Volumes ONTAP per AWS</block>
+  <block id="f196d25aadb7411a1f827c0ca0317cfb" category="doc">Autenticazione utente abilitata per l'accesso a Gestione sistema da BlueXP </block>
+  <block id="7a44ab81762cf5f3e018d99190cfe8ac" category="paragraph">In qualità di amministratore BlueXP , è ora possibile attivare l'autenticazione per gli utenti ONTAP che accedono a Gestione sistema ONTAP da BlueXP . È possibile attivare questa opzione modificando le impostazioni del connettore BlueXP . Questa opzione è disponibile per le modalità standard e privata.</block>
+  <block id="850fbc77665f926253af01767262460f" category="inline-link-macro">Amministrare Cloud Volumes ONTAP utilizzando Gestione di sistema</block>
+  <block id="58250d8c5d6f1e1a4d093e353f99e712" category="paragraph"><block ref="e2de8aa0d2ccd88dfc6febee51855766" category="inline-link-macro-rx"></block>.</block>
+  <block id="0f52c9a8aa841036bf7aaae893336a9b" category="section-title">Visualizzazione avanzata BlueXP  rinominata in Gestione sistema</block>
+  <block id="d34aa8cf529fee89c49e6c7c38dbf1e7" category="paragraph">L'opzione per la gestione avanzata di Cloud Volumes ONTAP da BlueXP  tramite Gestione di sistema di ONTAP è stata rinominata da *visualizzazione avanzata* a *Gestione di sistema*.</block>
+  <block id="75b76b021da36b8e8bf9678596449aa4" category="section-title">Ecco un modo più semplice per gestire le licenze con il portafoglio digitale di BlueXP </block>
+  <block id="5fbce01b2fa5bcad467f74186949bef5" category="paragraph">Ora puoi usufruire di una gestione semplificata delle licenze Cloud Volumes ONTAP utilizzando punti di navigazione migliorati all'interno del Digital Wallet di BlueXP :</block>
+  <block id="c89199b5a7b291ade2b859c6b2e0e726" category="list-text">Accedi facilmente alle informazioni sulla tua licenza Cloud Volumes ONTAP tramite le schede *Governance &gt; Digital Wallet &gt; Panoramica/licenze servizio dati*.</block>
+  <block id="e174e60d72b9816750ae5ea0588ea579" category="list-text">Fare clic su *Visualizza* nel pannello ONTAP volume cloud nella scheda *Panoramica* per ottenere una conoscenza completa delle licenze basate sulla capacità. Questa visualizzazione avanzata offre informazioni dettagliate su licenze e abbonamenti.</block>
+  <block id="210fb26ce941226a0e2a9726db671e8a" category="list-text">Se si preferisce l'interfaccia precedente, è possibile fare clic sul pulsante *passa alla visualizzazione precedente* per visualizzare i dettagli della licenza in base al tipo e modificare i metodi di addebito per le licenze.</block>
+  <block id="62c835233e6bcf50084b7f7f3bfe8ee0" category="paragraph"><block ref="5aa81dcb1871cc4d565005ce5abe331d" category="inline-link-macro-rx"></block>.</block>
+  <block id="bd1c6ca245a93f151a4e1d8f31ab58d7" category="paragraph">È possibile eseguire le seguenti funzioni di gestione:</block>
+  <block id="41c1e7f7c0e4a38357f38e56f0674a36" category="paragraph">Cloud Volumes ONTAP 9.10.0 e versioni successive supporta la gestione avanzata tramite ONTAP System Manager in regioni cloud standard.</block>
+  <block id="4b5929aaa3b4a7fa5e44b6d9c08c635b" category="paragraph">Cloud Volumes ONTAP non supporta il servizio di tiering BlueXP . È necessario configurare il tiering dei dati nello storage a oggetti direttamente dalla vista standard di BlueXP  durante la creazione di volumi.</block>
+  <block id="b804c0c7ade9eff376226d3e8a82b055" category="paragraph">Cloud Volumes ONTAP non supporta gli aggiornamenti automatici del firmware dalla pagina *Cluster &gt; Impostazioni*.</block>
+  <block id="da9942a1ffd7ca2e423a96e21bc4f59e" category="section-title">Configurare l'autenticazione per l'accesso a System Manager</block>
+  <block id="4aed1a655fc01f95c780a2dc68f91326" category="paragraph">In qualità di amministratore, è possibile attivare l'autenticazione per gli utenti che accedono a Gestione sistema ONTAP da BlueXP . È possibile determinare il giusto livello di autorizzazioni di accesso in base ai ruoli utente di ONTAP e abilitare o disabilitare l'autenticazione secondo necessità. Se si abilita l'autenticazione, gli utenti devono immettere le proprie credenziali utente ONTAP ogni volta che accedono a Gestione sistema da BlueXP  o quando la pagina viene ricaricata, poiché BlueXP  non memorizza internamente le credenziali. Se si disattiva l'autenticazione, gli utenti possono accedere a Gestione sistema utilizzando le credenziali di amministratore di BlueXP .</block>
+  <block id="bdebe06ba6da78f84b128a1809978137" category="admonition">Questa impostazione è applicabile per BlueXP  Connector per gli utenti ONTAP dell'organizzazione o dell'account, indipendentemente dagli ambienti di lavoro Cloud Volumes ONTAP o dai progetti BlueXP .</block>
+  <block id="a4b2fd11f4494dd95005c2aa74066109" category="paragraph">Per modificare le impostazioni di BlueXP  Connector per l'autenticazione utente BlueXP , è necessario assegnare l'organizzazione Cloud Volumes ONTAP o l'account admin Privileges.</block>
+  <block id="f98b44043815b68b5ba8272fb252dafd" category="list-text">Selezionare l'elenco a discesa *Connector* dall'intestazione BlueXP.</block>
+  <block id="9cf3804bed44acd4f31054cd5804edd6" category="list-text">Selezionare *Gestisci connettori*.</block>
+  <block id="0bcdc7f458d923fcfd2b7bba26f0f21d" category="inline-image-macro">icona ellissi</block>
+  <block id="791af2b019e9482f60e2b92af69586ec" category="list-text">Fare clic sul menu azione <block ref="cee44af72030fe2d6e8daa69f11c782b" category="inline-image-macro-rx" type="image"></block>per il connettore desiderato e selezionare *Modifica connettore*.</block>
+  <block id="ef46255365b3e47560b36ea8589d2d00" category="list-text">In *forza credenziali utente*, selezionare la casella di controllo *Abilita/Disabilita*. Per impostazione predefinita, l'autenticazione è disattivata.</block>
+  <block id="1c969f0ef9143d2554b1ddaa0d92382f" category="admonition">Se si imposta questo valore su *Abilita*, l'autenticazione viene reimpostata ed è necessario modificare qualsiasi flusso di lavoro esistente per accettare questa modifica.</block>
+  <block id="3d153083406593fbbf99c2111e803d7e" category="section-title">Inizia subito con System Manager</block>
+  <block id="dad2127c094fd9d82592cfc74bf6c89e" category="paragraph">È possibile accedere a Gestore di sistema di ONTAP da un ambiente di lavoro Cloud Volumes ONTAP.</block>
+  <block id="9ae8ac975de3cbe33ec84aafc89196f2" category="list-text">Nel pannello di destra, selezionare *servizi &gt; Gestione sistema &gt; Apri*.</block>
+  <block id="46ee428f4ca4fa256185f7d45eb07bb2" category="list-text">Se richiesto, immettere le credenziali utente ONTAP e fare clic su *accesso*.</block>
+  <block id="058b7a725db9f3c744b585cb35b91a06" category="inline-link">Ruoli, applicazioni e autenticazione ONTAP</block>
+  <block id="145515f913704aab7a4ced04df236c86" category="list-text"><block ref="145515f913704aab7a4ced04df236c86" category="inline-link-rx"></block></block>
+  <block id="4c4d0994ae2f25b384b864835b3039d5" category="inline-link">Utilizzare System Manager per accedere a un cluster</block>
+  <block id="2dbc878516331eda732cdb801ba7aaf2" category="list-text"><block ref="deb5c2c6d7a2dbd7d053366b960c1a94" category="inline-link-rx"></block>.</block>
+  <block id="a495aa39c60dc5d48d7bb146e6f7265a" category="list-text">Nella scheda *Panoramica*, il riquadro Cloud Volumes ONTAP visualizza la capacità corrente fornita per l'account.</block>
+  <block id="260fa7c60a4b141a99b00056d3d429d3" category="inline-image-macro">Uno screenshot che mostra il riepilogo della capacità delle licenze e degli abbonamenti Cloud Volumes ONTAP.</block>
+  <block id="e0e863a6ab1f77fce34b0885510033de" category="paragraph"><block ref="e0e863a6ab1f77fce34b0885510033de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bea623ba2f203df6f2cad1b5d6c826c6" category="list-text">_Licenza servizio dati_ è la capacità totale fornita da tutti i sistemi Cloud Volumes ONTAP nell'account NetApp. La ricarica si basa sulle dimensioni fornite da ciascun volume, indipendentemente dallo spazio locale, utilizzato, memorizzato o effettivo all'interno del volume.</block>
+  <block id="80495a5c91b6e7cae60c8c5c750734bc" category="list-text">_Contratto annuale_ è la capacità totale con licenza (Bring Your Own License (BYOL) o contratto di mercato) acquistata da NetApp.</block>
+  <block id="e55807174fe6f2d9f15f9e357ee0d63e" category="list-text">_PAYGO_ è la capacità totale sottoposta a provisioning mediante le iscrizioni al marketplace cloud. L'addebito tramite PAYGO viene utilizzato solo se la capacità consumata è superiore alla capacità concessa in licenza o se non è disponibile alcuna licenza BYOL nel portafoglio digitale BlueXP.</block>
+  <block id="d02d58b5b8770f720f9d912913a80f1a" category="list-text">Selezionare *Visualizza* per visualizzare la capacità consumata per ciascun pacchetto di licenze.</block>
+  <block id="a4f95858d82d890dcc9a5123e1f315e6" category="list-text">Selezionare la scheda *licenze* per visualizzare i dettagli relativi a ciascuna licenza pacchetto acquistata.</block>
+  <block id="452cf2122664eef3e8c620ec413c8d43" category="list-text">Selezionare la scheda *Sottoscrizioni* per visualizzare la capacità consumata in base al modello di consumo della licenza. Questa scheda include sia le licenze PAYGO che le licenze contrattuali annuali.</block>
+  <block id="a6fd7fff8d44ac917f29be623cc64da2" category="paragraph">Verranno visualizzati solo gli abbonamenti associati all'organizzazione attualmente visualizzata.</block>
+  <block id="572e470335e0a6d55da05c732a01aed3" category="list-text">Durante la visualizzazione delle informazioni relative alle sottoscrizioni, è possibile interagire con i dettagli della tabella come segue:</block>
+  <block id="6a1de13d318f22872902849cd26467b4" category="list-text">Espandere una riga per visualizzare ulteriori dettagli.</block>
+  <block id="69cda14c45037fc1c766e6b7626c706b" category="inline-image-macro">Una schermata della scheda Subscriptions (Abbonamenti) nel portafoglio digitale in cui è possibile selezionare la freccia alla fine di una riga per espanderla.</block>
+  <block id="d6e80e5ccdacdc912b76ab91b58f6023" category="paragraph"><block ref="d6e80e5ccdacdc912b76ab91b58f6023" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="56594b7222b35921f9fe676eadf6bbdf" category="inline-image-macro">l'icona più alla fine dell'intestazione della tabella</block>
+  <block id="2eab7ff26639a8d2e45cece515ff781f" category="list-text">Selezionare <block ref="98b11313fea6c4106e5a3c018f0ffbc9" category="inline-image-macro-rx" type="image"></block> per scegliere le colonne da visualizzare nella tabella. Si noti che le colonne Term (termine) e Auto Renew (Rinnova automaticamente) non vengono visualizzate per impostazione predefinita. La colonna Auto Renew (rinnovo automatico) visualizza le informazioni di rinnovo solo per i contratti Azure.</block>
+  <block id="8ac1ecc7ceb7a49d071b4f1b71f0e176" category="section-title">Visualizzazione dei dettagli del pacchetto</block>
+  <block id="f88e8fee4b6b78cbc9779b73098653b5" category="paragraph">È possibile visualizzare i dettagli sulla capacità utilizzata per pacchetto passando alla modalità legacy nella pagina Cloud Volumes ONTAP.</block>
+  <block id="4a95292c803539c8cf72591c54db0644" category="list-text">Selezionare *View* (Visualizza) per visualizzare la capacità fornita per ciascun pacchetto di licenze.</block>
+  <block id="28db6f5e86482ae58b9becef415d1abc" category="list-text">Selezionare *passa alla visualizzazione precedente*.</block>
+  <block id="13bb1907bdca20408e78b483332beab6" category="inline-image-macro">Schermata del pulsante passa alla visualizzazione precedente</block>
+  <block id="ad8dd0162f38eb308d880b20d20ab47e" category="paragraph"><block ref="ad8dd0162f38eb308d880b20d20ab47e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2daabc6822724771970f17e8ae6a4cee" category="list-text">Selezionare la scheda *Panoramica*.</block>
+  <block id="5b37c7034b369fcc6d9b931180eef46f" category="list-text">Nel riquadro Cloud Volumes ONTAP, selezionare *Visualizza*.</block>
+  <block id="1cd5a7f8284f11c93e9f7bd64be49b8a" category="list-text">Scorrere verso il basso fino alla tabella *licenza basata sulla capacità* e selezionare *Modifica metodo di addebito*.</block>
+  <block id="08755db7952950f790eaa52809aad08e" category="list-text">Selezionare *Modifica metodo di carica*.</block>
+  <block id="a9bcc09a5114887c29b3f365ee72e9e5" category="list-text">*Utilizzo di alto livello*: Questo rapporto include le seguenti informazioni:</block>
+  <block id="4600869c8040d8603fe9dbe6d56a2b2a" category="list-text">*Utilizzo dei pacchetti Cloud Volumes ONTAP*: Questo report include le seguenti informazioni per ciascun pacchetto, ad eccezione del pacchetto i/o ottimizzato:</block>
+  <block id="a65d4ec7ff2941ad2ea2bc688a6dbbb3" category="list-text">*Utilizzo delle VM di storage*: Questo report mostra come viene suddivisa la capacità di carico tra i sistemi Cloud Volumes ONTAP e le macchine virtuali di storage (SVM). Queste informazioni sono disponibili solo nel report. Contiene le seguenti informazioni:</block>
+  <block id="b2b74732b80350970fadfac4db3ba17e" category="list-text">Nella scheda *Panoramica*, selezionare *Visualizza* dal riquadro Cloud Volumes ONTAP.</block>
+  <block id="f4c2ce2a853a74c3742ccc54482c074e" category="list-text">Selezionare *rapporto sull'utilizzo*.</block>
+  <block id="343c7ed77049523f4d99e8d4c436a330" category="list-text">Selezionare *licenze basate su nodo* dal menu a discesa.</block>
+  <block id="e0225acc5a75bb0346dd94ed24206c81" category="inline-link-macro">Visualizzare la procedura dettagliata per lo scambio di licenze basate su nodi.</block>
+  <block id="d82de0388f091aa9d43371708eb95310" category="paragraph"><block ref="b4c22b5293d3ee433dee9c4b3632dbee" category="inline-link-macro-rx"></block></block>
+  <block id="0c6dabbf194286c405de8383cf968f97" category="paragraph">Puoi gestire i volumi nella vista standard di BlueXP  o tramite ONTAP System Manager incluso in BlueXP  per la gestione avanzata dei volumi. La visualizzazione standard fornisce un insieme limitato di opzioni per modificare i volumi. System Manager offre un livello di gestione avanzato, come cloning, ridimensionamento, modifica delle impostazioni per anti-ransomware, analytics, protezione e monitoraggio delle attività e spostamento dei volumi tra Tier. Per informazioni, fare riferimento alla <block ref="7265c080dfd2e37b92d3cdc790187cc0" category="inline-link-macro-rx"></block>.</block>
+  <block id="d117724162371ab94db86f4cbcd703ae" category="paragraph">Se è necessario ridimensionare il volume, è possibile farlo da Gestione di sistema di ONTAP in BlueXP .</block>
+  <block id="41e16b15d9c9cc44372d27b0cfe659ad" category="list-text">Fare clic sulla vista Gestione sistema per ridimensionare un volume tramite Gestione sistema di ONTAP. Fare riferimento alla <block ref="1bf7174b0a06a67edc83de5c18b2bf58" category="inline-link-macro-rx"></block>.</block>
+  <block id="c523b074da0b63e607578686184d5981" category="section-title">10 febbraio 2025</block>
 </blocks>

@@ -315,9 +315,6 @@
   <block id="b2908e7df27905e20924b93b3ff0b803" category="list-text"><block ref="b2908e7df27905e20924b93b3ff0b803" category="inline-link-macro-rx"></block></block>
   <block id="519fd69508502bac64035ccc9de1d25e" category="section-title">Scegliere una regione supportata</block>
   <block id="3b61cbbfa7452cc07df9dbea0756d650" category="inline-link">Visualizza l'elenco completo delle regioni supportate</block>
-  <block id="af510d6a7a30587243cc07000a8ff59a" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle regioni AWS.<block ref="b20bc1eb7525b24c91ae87786e46adca" category="inline-link-rx"></block>.</block>
-  <block id="37c70997814f20525df54f05b63b82ef" category="inline-link">Scopri come abilitare una regione</block>
-  <block id="20f4e542fc804667ca2377386269841c" category="paragraph">Prima di poter creare e gestire le risorse in tali regioni, è necessario abilitare le regioni AWS più recenti.<block ref="37189395d1b647ca4eabf700b1185d58" category="inline-link-rx"></block>.</block>
   <block id="8d2b55a9a4f02c74f0e8f911801cac54" category="section-title">Scegliere un'istanza supportata</block>
   <block id="63c78fe4096c032cda667cb626771016" category="paragraph">Cloud Volumes ONTAP supporta diversi tipi di istanze, a seconda del tipo di licenza scelto.</block>
   <block id="d4f1750ecbae7aeb8e4608c6adadf1b3" category="inline-link">Configurazioni supportate per Cloud Volumes ONTAP in AWS</block>
@@ -452,7 +449,6 @@
   <block id="96440bf30cd20c7ed50d0d7a8279917e" category="doc">Pianificare la configurazione di Cloud Volumes ONTAP in Google Cloud</block>
   <block id="70cc6814c68e3ce95f7b70c2f1ea3e9d" category="paragraph">Quando si implementa Cloud Volumes ONTAP in Google Cloud, è possibile scegliere un sistema preconfigurato che soddisfi i requisiti del carico di lavoro oppure creare una configurazione personalizzata. Se si sceglie una configurazione personalizzata, è necessario comprendere le opzioni disponibili.</block>
   <block id="f1e89d709c35aed2650bbf12a55f1ba1" category="list-text"><block ref="f1e89d709c35aed2650bbf12a55f1ba1" category="inline-link-macro-rx"></block></block>
-  <block id="cdbc190f457d5caf189142ea336d2259" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle regioni di Google Cloud.<block ref="b20bc1eb7525b24c91ae87786e46adca" category="inline-link-rx"></block>.</block>
   <block id="18ff4ec9e6259918d45028a5d6040d91" category="section-title">Scegliere un tipo di computer supportato</block>
   <block id="64efea6517490623e51052b533085d96" category="paragraph">Cloud Volumes ONTAP supporta diversi tipi di computer, a seconda del tipo di licenza scelto.</block>
   <block id="9ee8a2504ba9f03aae4b30973ea35ad4" category="inline-link">Configurazioni supportate per Cloud Volumes ONTAP in GCP</block>
@@ -2716,7 +2712,6 @@
   <block id="c86d179c90248acd6ebdba05bd94320c" category="section-title">Nuovo supporto per la regione di Azure Cloud</block>
   <block id="c55cc410beff8f86afc3ba8027b681f7" category="paragraph">A partire dalla versione 9.10.1, Cloud Volumes ONTAP è ora supportato nella regione Azure West US 3.</block>
   <block id="d1ce20099e22fd96c2217da218a20a9e" category="inline-link">Visualizza l'elenco completo delle regioni supportate per Cloud Volumes ONTAP</block>
-  <block id="efb1786cdf88244f9480e15cb039f942" category="paragraph"><block ref="efb1786cdf88244f9480e15cb039f942" category="inline-link-rx"></block></block>
   <block id="1a3362a1b5304a4e1e1112496974b9ae" category="section-title">Licenza ONTAP S3 in Azure</block>
   <block id="f225a4f57ea32da8b983d7bffd20b6eb" category="paragraph">Una licenza ONTAP S3 è ora inclusa nei sistemi Cloud Volumes ONTAP nuovi ed esistenti che eseguono la versione 9.9.1 o successiva in Azure.</block>
   <block id="f8b475a3fefebada77a30229238d0a1a" category="section-title">7 giugno 2022</block>
@@ -3030,7 +3025,6 @@
   <block id="492847bcbc9ec0bd3075b612aa43e4a7" category="list-text">Selezionare *Keystone*.</block>
   <block id="daf4ae396784c74ec2cbf002eaaa25f4" category="list-text">Se viene visualizzata la pagina *Benvenuti in NetApp Keystone*, inviare un'e-mail all'indirizzo indicato nella pagina.</block>
   <block id="16692c26ca4528e651bbb36d93c465c7" category="paragraph">Un rappresentante NetApp elaborerà la tua richiesta autorizzando il tuo account utente ad accedere alle sottoscrizioni.</block>
-  <block id="5da6315cfe65abaef2d0e00c90898ddc" category="list-text">Torna all'abbonamento *Keystone* per visualizzare i tuoi abbonamenti.</block>
   <block id="3d6aabe991edb10f282fd60995e725ca" category="inline-image-macro">Una schermata che mostra un elenco degli abbonamenti Keystone.</block>
   <block id="6fd94fda3665b39867817d4700d184e8" category="paragraph"><block ref="6fd94fda3665b39867817d4700d184e8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="06f358c39bc3b4633cefd78beb67e671" category="section-title">Collegare un abbonamento</block>
@@ -3845,7 +3839,6 @@
   <block id="268c52a1e1197b595712cb880346cba4" category="paragraph">L'ambiente di lavoro e le relative risorse (macchine virtuali, dischi, account di storage, interfacce di rete, snapshot) fanno parte del nuovo gruppo di risorse.</block>
   <block id="6d44008242ba7ea63431fdc2a35e3bfd" category="summary">Quando si implementa Cloud Volumes ONTAP in Azure, è possibile scegliere un sistema preconfigurato che soddisfi i requisiti del carico di lavoro oppure creare una configurazione personalizzata. Se si sceglie una configurazione personalizzata, è necessario comprendere le opzioni disponibili.</block>
   <block id="e7010d3e26fcd0c3b7c9d7059b1649f0" category="list-text"><block ref="e7010d3e26fcd0c3b7c9d7059b1649f0" category="inline-link-macro-rx"></block></block>
-  <block id="88a397c48e684bb909af786b6f5aea86" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle regioni Microsoft Azure.<block ref="b20bc1eb7525b24c91ae87786e46adca" category="inline-link-rx"></block>.</block>
   <block id="e3a47201ab0cc67c20d5aeacce3b8ced" category="section-title">Scegliere un tipo di macchina virtuale supportato</block>
   <block id="00d6f59010ef5b4445142547ef7725f2" category="paragraph">Cloud Volumes ONTAP supporta diversi tipi di macchine virtuali, a seconda del tipo di licenza scelto.</block>
   <block id="a09c3a7be8e7dc42776a7b03793d536c" category="inline-link">Configurazioni supportate per Cloud Volumes ONTAP in Azure</block>
@@ -4523,7 +4516,6 @@ Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenzi
   <block id="4bb37917188b518967d0e67a2b819327" category="paragraph">La dashboard del Digital Advisor di BlueXP ti permette di monitorare l'utilizzo dell'abbonamento Keystone e di generare report.</block>
   <block id="20ea4c62f4c9e4254314fe7fbbef0319" category="inline-link">Ulteriori informazioni sul monitoraggio dell'utilizzo degli abbonamenti</block>
   <block id="d7105dd212dc96a8b292b6b48f84916f" category="paragraph"><block ref="d7105dd212dc96a8b292b6b48f84916f" category="inline-link-rx"></block></block>
-  <block id="28ca5cda5cdef790c457097830d81ca5" category="paragraph">Se non vuoi più utilizzare un abbonamento Keystone con BlueXP, puoi scollegarlo. Nota: Puoi scollegare solo un abbonamento non allegato a un abbonamento Cloud Volumes ONTAP esistente.</block>
   <block id="499efcb2be11e80e5bdfc003278352e3" category="section-title">1 novembre 2023</block>
   <block id="992f57af99811ae146ed6df67eccc26f" category="section-title">Regione dell'Arabia Saudita ora supportata in Google Cloud</block>
   <block id="9e06c986efeeff600f0b04c67d5d6354" category="paragraph">La regione dell'Arabia Saudita è ora supportata in Google Cloud per Cloud Volumes ONTAP e nel connettore per Cloud Volumes ONTAP 9.12.1 GA e versioni successive.</block>
@@ -5701,4 +5693,13 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="d117724162371ab94db86f4cbcd703ae" category="paragraph">Se è necessario ridimensionare il volume, è possibile farlo da Gestione di sistema di ONTAP in BlueXP .</block>
   <block id="41e16b15d9c9cc44372d27b0cfe659ad" category="list-text">Fare clic sulla vista Gestione sistema per ridimensionare un volume tramite Gestione sistema di ONTAP. Fare riferimento alla <block ref="1bf7174b0a06a67edc83de5c18b2bf58" category="inline-link-macro-rx"></block>.</block>
   <block id="c523b074da0b63e607578686184d5981" category="section-title">10 febbraio 2025</block>
+  <block id="1ce97cc664bad2b8b354b3220e6331e7" category="list-text">Selezionare *Iscrizioni Keystone*.</block>
+  <block id="23698106a2d9dc1f2df20e97a71a625c" category="list-text">Torna alla scheda *Iscrizioni Keystone* per visualizzare le iscrizioni.</block>
+  <block id="436fa170392050162dd4653f969cf048" category="paragraph">Se non desideri più utilizzare un abbonamento Keystone con BlueXP , puoi scollegarlo. Nota: Puoi scollegare solo un abbonamento non allegato a un abbonamento Cloud Volumes ONTAP esistente.</block>
+  <block id="e242baa97428f1acdd0a43c0f27ecf0e" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle aree Microsoft Azure.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block>.</block>
+  <block id="c24e9fc1263121db1bb6501931efe09c" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle regioni di Google Cloud.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block>.</block>
+  <block id="77616d628efddeba1fd424b939777229" category="paragraph">Cloud Volumes ONTAP è supportato nella maggior parte delle regioni di AWS.<block ref="0de6b81e82e22001f2c59ffd34a8aeac" category="inline-link-rx"></block>.</block>
+  <block id="77ccb62da3cbac8ecfb3dcda7b4635b9" category="inline-link">Documentazione AWS: Scopri come abilitare una regione</block>
+  <block id="fef606ad68172c64f478d929b8842876" category="paragraph">Prima di poter creare e gestire le risorse in tali aree, è necessario abilitare le regioni AWS più recenti.<block ref="b7b79d9a35f355344e562154976e1f3d" category="inline-link-rx"></block>.</block>
+  <block id="c1a328cf0660e851f6654745d3aca99e" category="paragraph"><block ref="c1a328cf0660e851f6654745d3aca99e" category="inline-link-rx"></block></block>
 </blocks>

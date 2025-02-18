@@ -150,7 +150,9 @@ Ad esempio, se si utilizza la versione 9.8 e si desidera eseguire l'aggiornament
 
 === Rilascio delle patch
 
-A partire da gennaio 2024, gli aggiornamenti delle patch sono disponibili in BlueXP solo se rappresentano una release di patch per le tre ultime versioni di Cloud Volumes ONTAP. Utilizziamo l'ultima release di GA per determinare le tre versioni più recenti da visualizzare in BlueXP. Ad esempio, se la release corrente di GA è 9.13.1, le patch per 9.11.1-9.13.1 vengono visualizzate in BlueXP. Se si desidera eseguire l'aggiornamento a una versione di patch per le versioni 9.11.1 o precedenti, sarà necessario utilizzare la procedura di aggiornamento manuale <<Aggiornamento da un'immagine disponibile su un URL,Download dell'immagine ONTAP in corso>>.
+A partire da gennaio 2024, gli aggiornamenti delle patch sono disponibili in BlueXP  solo se è disponibile una versione di patch per le tre versioni più recenti di Cloud Volumes ONTAP. Le versioni delle patch sono occasionalmente disponibili per la distribuzione, quando la versione RC o GA non è disponibile per la distribuzione.
+
+Utilizziamo l'ultima release di GA per determinare le tre versioni più recenti da visualizzare in BlueXP. Ad esempio, se la release corrente di GA è 9.13.1, le patch per 9.11.1-9.13.1 vengono visualizzate in BlueXP. Se si desidera eseguire l'aggiornamento a una versione di patch per le versioni 9.11.1 o precedenti, sarà necessario utilizzare la procedura di aggiornamento manuale entro <<Aggiornamento da un'immagine disponibile su un URL,Download dell'immagine ONTAP in corso>>.
 
 Come regola generale per le release di patch (P), è possibile eseguire l'aggiornamento da una versione a qualsiasi versione P-release della versione corrente in esecuzione o della versione successiva.
 
@@ -227,7 +229,7 @@ Quando si aggiorna un sistema a nodo singolo, il processo di aggiornamento porta
 
 In molti casi, l'aggiornamento di una coppia ha è senza interruzioni e l'i/o è ininterrotto. Durante questo processo di aggiornamento senza interruzioni, ogni nodo viene aggiornato in tandem per continuare a fornire i/o ai client.
 
-I protocolli orientati alla sessione potrebbero causare effetti negativi su client e applicazioni in determinate aree durante gli aggiornamenti. Per ulteriori informazioni, https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html["Fare riferimento alla documentazione di ONTAP"^]
+I protocolli orientati alla sessione potrebbero causare effetti negativi su client e applicazioni in determinate aree durante gli aggiornamenti. Per ulteriori informazioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html["Documentazione ONTAP"^]
 
 
 
@@ -235,7 +237,7 @@ I protocolli orientati alla sessione potrebbero causare effetti negativi su clie
 
 Il giveback automatico deve essere attivato su una coppia Cloud Volumes ONTAP ha (impostazione predefinita). In caso contrario, l'operazione avrà esito negativo.
 
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D01-49A5-BEFD-D529713EC1FA.html["Documentazione di ONTAP 9: Comandi per la configurazione del giveback automatico"^]
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D01-49A5-BEFD-D529713EC1FA.html["Documentazione di ONTAP: Comandi per la configurazione dello sconto automatico"^]
 
 
 
@@ -289,9 +291,9 @@ image:screenshots_aggregate_details_state.png["Schermata: Mostra il campo Stato 
 
 === Verifica che tutte le LIF siano sulle porte home
 
-Prima di eseguire l'upgrade, tutte le LIF devono trovarsi sulle porte home. Fare riferimento alla documentazione di ONTAP a. link:https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html["Verifica che tutte le LIF siano sulle porte home"].
+Prima di eseguire l'upgrade, tutte le LIF devono trovarsi sulle porte home. Fare riferimento alla documentazione ONTAP a link:https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html["Verifica che tutte le LIF siano sulle porte home"^].
 
-Se si verifica un errore di aggiornamento, fare riferimento alla link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/CVO_upgrade_fails["Articolo della Knowledge base "aggiornamento Cloud Volumes ONTAP non riuscito""].
+Se si verifica un errore di aggiornamento, consultare l'articolo della Knowledge base (KB) link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/CVO_upgrade_fails["Aggiornamento Cloud Volumes ONTAP non riuscito"^].
 
 
 

@@ -92,7 +92,7 @@ Se non è disponibile una connessione Internet in uscita per l'invio di messaggi
 
 Se sono state definite rigide regole in uscita per Cloud Volumes ONTAP, è necessario anche assicurarsi che il gruppo di sicurezza Cloud Volumes ONTAP consenta connessioni _in uscita_ sulla porta 3128.
 
-Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documenti ONTAP: Configurazione di AutoSupport"^].
+Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documentazione ONTAP: Impostare AutoSupport"^] .
 
 Se BlueXP notifica che non è possibile inviare messaggi AutoSupport, link:task-verify-autosupport.html#troubleshoot-your-autosupport-configuration["Risolvere i problemi della configurazione AutoSupport"].
 
@@ -449,7 +449,7 @@ NOTE: L'origine è l'interfaccia (indirizzo IP) del sistema Cloud Volumes ONTAP.
 | TCP | 3128 | LIF di gestione dei nodi | Connettore | Invio di messaggi AutoSupport tramite un server proxy sul connettore, se non è disponibile una connessione Internet in uscita 
 
 
-| Backup della configurazione | HTTP | 80 | LIF di gestione dei nodi | Http://<connector-IP-address>/occm/offboxconfig | Inviare i backup della configurazione al connettore. link:https://docs.netapp.com/us-en/ontap/system-admin/node-cluster-config-backed-up-automatically-concept.html["Informazioni sui file di backup della configurazione"^]. 
+| Backup della configurazione | HTTP | 80 | LIF di gestione dei nodi | Http://<connector-IP-address>/occm/offboxconfig | Inviare i backup della configurazione al connettore. link:https://docs.netapp.com/us-en/ontap/system-admin/node-cluster-config-backed-up-automatically-concept.html["Documentazione ONTAP"^]. 
 
 
 | DHCP | 68 | UDP | LIF di gestione dei nodi | DHCP | Client DHCP per la prima installazione 

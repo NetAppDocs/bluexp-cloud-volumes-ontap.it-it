@@ -88,7 +88,7 @@ NOTE: Il failover LIF è disattivato per impostazione predefinita per Cloud Volu
 I backup sono accessibili da http://ipaddress/occm/offboxconfig/ dove _ipaddress_ è l'indirizzo IP dell'host del connettore.
 
 +
-È possibile utilizzare i backup per riconfigurare il sistema Cloud Volumes ONTAP. Per ulteriori informazioni sui backup di configurazione, fare riferimento a https://docs.netapp.com/us-en/ontap/system-admin/config-backup-file-concept.html["Documentazione ONTAP"].
+È possibile utilizzare i backup per riconfigurare il sistema Cloud Volumes ONTAP. Per ulteriori informazioni sui backup della configurazione, consultare https://docs.netapp.com/us-en/ontap/system-admin/config-backup-file-concept.html["Documentazione ONTAP"^] .
 
 ** BlueXP  imposta alcuni attributi di volume in modo diverso rispetto ad altri strumenti di gestione (ad esempio, ONTAP System Manager o la CLI di ONTAP).
 +

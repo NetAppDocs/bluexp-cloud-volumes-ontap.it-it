@@ -65,4 +65,4 @@ NOTE: Le licenze per le funzioni ONTAP sono incluse in Cloud Volumes ONTAP.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Visualizza le configurazioni Cloud Volumes ONTAP supportate"^]
 
-https://cloud.netapp.com/ontap-cloud["Scopri di più su Cloud Volumes ONTAP"^]
+https://bluexp.netapp.com/ontap-cloud["Scopri di più su Cloud Volumes ONTAP"^]

@@ -69,6 +69,6 @@ I volumi abilitati per ARP hanno lo stato designato "modalità di apprendimento"
 
 La configurazione di ARP per i volumi viene eseguita tramite Gestore di sistema di ONTAP e CLI di ONTAP.
 
-Per ulteriori informazioni su come attivare ARP con Gestione di sistema di ONTAP e la CLI di ONTAP, consultare https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Attiva la protezione ransomware autonoma"^] .
+Per ulteriori informazioni su come attivare ARP con Gestione di sistema di ONTAP e la CLI di ONTAP, consultare la https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Documentazione di ONTAP: Abilita la protezione autonoma da ransomware"^].
 
 image::screenshot_arp.png[La schermata mostra la licenza add-on per Autonomous ransomware Protection.]

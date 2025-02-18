@@ -96,6 +96,10 @@ TIP: Se si desidera utilizzare WORM e il tiering dei dati, è necessario disatti
 
 
 . *Location* (posizione): Selezionare una regione, una zona di disponibilità, VNET e una subnet, quindi selezionare la casella di controllo per confermare la connettività di rete tra il connettore e la posizione di destinazione.
++
+
+NOTE: Per le regioni in Cina, le implementazioni a nodo singolo sono supportate solo in Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA. È possibile aggiornare queste versioni a patch e release successive di Cloud Volumes ONTAP. Se si desidera distribuire versioni Cloud Volumes ONTAP successive nelle aree geografiche della Cina, contattare il supporto NetApp. In queste regioni sono supportate solo le licenze acquistate direttamente da NetApp.
+
 . *Connettività*: Scegliere un gruppo di risorse nuovo o esistente, quindi scegliere se utilizzare il gruppo di protezione predefinito o il proprio.
 +
 La seguente tabella descrive i campi per i quali potrebbero essere necessarie indicazioni:

@@ -118,7 +118,7 @@ NOTE: Se si imposta questo valore su *Abilita*, l'autenticazione viene reimposta
 
 == Guida all'utilizzo di System Manager
 
-Per assistenza sull'utilizzo di Gestione di sistema con Cloud Volumes ONTAP, consultare la sezione https://docs.netapp.com/us-en/ontap/index.html["Documentazione ONTAP"^] per istruzioni dettagliate. Di seguito sono riportati alcuni link utili:
+Per informazioni dettagliate sull'utilizzo di Gestore di sistema con Cloud Volumes ONTAP, consultare la https://docs.netapp.com/us-en/ontap/index.html["Documentazione ONTAP"^] per le istruzioni dettagliate. Di seguito sono riportati alcuni collegamenti alla documentazione di ONTAP che possono essere utili:
 
 * https://docs.netapp.com/us-en/ontap/ontap-security-hardening/roles-applications-authentication.html["Ruoli, applicazioni e autenticazione ONTAP"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/access-cluster-system-manager-browser-task.html["Utilizzare System Manager per accedere a un cluster"^].

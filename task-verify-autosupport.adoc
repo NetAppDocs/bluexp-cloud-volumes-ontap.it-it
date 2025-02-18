@@ -34,7 +34,7 @@ Se non è disponibile una connessione Internet in uscita per l'invio di messaggi
 
 Se sono state definite rigide regole in uscita per Cloud Volumes ONTAP, è necessario anche assicurarsi che il gruppo di sicurezza Cloud Volumes ONTAP consenta connessioni _in uscita_ sulla porta 3128.
 
-Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documenti ONTAP: Configurazione di AutoSupport"^].
+Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documentazione ONTAP: Impostare AutoSupport"^] .
 
 
 

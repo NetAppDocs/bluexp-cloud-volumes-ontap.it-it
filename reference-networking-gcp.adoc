@@ -245,7 +245,7 @@ Se non è disponibile una connessione Internet in uscita per l'invio di messaggi
 
 Se sono state definite rigide regole in uscita per Cloud Volumes ONTAP, è necessario anche assicurarsi che il firewall Cloud Volumes ONTAP consenta connessioni _in uscita_ sulla porta 3128.
 
-Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento a. https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documenti ONTAP: Configurazione di AutoSupport"^].
+Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documentazione ONTAP: Impostare AutoSupport"^] .
 
 
 TIP: Se si utilizza una coppia ha, il mediatore ha non richiede l'accesso a Internet in uscita.
@@ -473,7 +473,7 @@ NOTE: L'origine è l'interfaccia (indirizzo IP) del sistema Cloud Volumes ONTAP.
 | Cluster | Tutto il traffico | Tutto il traffico | Tutte le LIF su un nodo | Tutte le LIF sull'altro nodo | Comunicazioni tra cluster (solo Cloud Volumes ONTAP ha) 
 
 
-| Backup della configurazione | HTTP | 80 | LIF di gestione dei nodi | Http://<connector-IP-address>/occm/offboxconfig | Inviare i backup della configurazione al connettore. link:https://docs.netapp.com/us-en/ontap/system-admin/node-cluster-config-backed-up-automatically-concept.html["Informazioni sui file di backup della configurazione"^]. 
+| Backup della configurazione | HTTP | 80 | LIF di gestione dei nodi | Http://<connector-IP-address>/occm/offboxconfig | Inviare i backup di configurazione al connettore. link:https://docs.netapp.com/us-en/ontap/system-admin/node-cluster-config-backed-up-automatically-concept.html["Documentazione ONTAP"^] 
 
 
 | DHCP | UDP | 68 | LIF di gestione dei nodi | DHCP | Client DHCP per la prima installazione 

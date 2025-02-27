@@ -537,7 +537,6 @@
   <block id="8b3da2ed858ee5c956acde26c9ef7dd0" category="admonition">I volumi FlexClone non sono inclusi in questo report perché questi tipi di volumi non comportano costi.</block>
   <block id="23e918e9f1c9f1bb5769dcc236489de2" category="paragraph">Il report di utilizzo viene scaricato.</block>
   <block id="05655bb3cbd3604d6c71a1db823ad94f" category="list-text">Aprire il file scaricato per accedere ai report.</block>
-  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Di cosa hai bisogno</block>
   <block id="ea9a2b9ac34c9aab133f21aa5b67976e" category="list-text">Fare clic su *Aggiungi licenza*.</block>
   <block id="662442d32a5fd91298fcf8b6391fdf17" category="section-title">Modificare i metodi di ricarica</block>
   <block id="f3d9abb903127694db460aa9c7f4d7be" category="paragraph-title">Limitazione</block>
@@ -673,7 +672,6 @@
   <block id="3091fa13c48831b4d7d6e8b6cb4b5bb1" category="paragraph">I seguenti requisiti devono essere soddisfatti in AWS.</block>
   <block id="5908bdfb58aef23bebf7df36d49b9dfb" category="section-title">Accesso a Internet in uscita per nodi Cloud Volumes ONTAP</block>
   <block id="f8ee8582a6b700d886898642f29f7b30" category="paragraph">I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.</block>
-  <block id="a882b8d486f84abfbb2472c835d49dbf" category="paragraph">I criteri di routing e firewall devono consentire il traffico HTTP/HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:</block>
   <block id="ea42efb0eb933b55c2c4a89d521450df" category="list-text">https://support.netapp.com/aods/asupmessage</block>
   <block id="139bae98c3a8ead645c078cb26b93bd1" category="list-text">https://support.netapp.com/asupprod/post/1.0/postAsup</block>
   <block id="478c1991e02e68a88a4f2e550c670a76" category="paragraph">Se si dispone di un'istanza NAT, è necessario definire una regola del gruppo di sicurezza in entrata che consenta il traffico HTTPS dalla subnet privata a Internet.</block>
@@ -2513,7 +2511,6 @@
   <block id="4f6ffa2529265a9e4fcff29a28a16ebe" category="paragraph">È previsto un costo minimo di 4 TIB per ciascuna VM di storage che fornisce dati e che dispone di almeno un volume primario (lettura/scrittura). Se la somma dei volumi primari è inferiore a 4 TIB, BlueXP applica la carica minima di 4 TIB a quella VM di storage.</block>
   <block id="2f3cbf00c1fc3c4ac211dcbe5883292c" category="paragraph">Se non hai ancora effettuato il provisioning di volumi, il costo minimo non viene applicato.</block>
   <block id="bec8a1d5f2dd848ffc437304b7f6557d" category="section-title">Eccedendo</block>
-  <block id="c1092325501599c6dcc90500081a2184" category="paragraph">Se superi la capacità BYOL o se la licenza scade, ti verrà addebitato il costo per le eccedazioni alla tariffa oraria in base all'abbonamento al marketplace.</block>
   <block id="ecc429e82f6e54d1b5ef6c8bb4a49308" category="paragraph">Ecco un esempio. Supponiamo di disporre delle seguenti licenze per il pacchetto Essentials:</block>
   <block id="afac41d47fd5a7a0fff54c7d4dcc9ac8" category="list-text">Una licenza 500 TIB _Essentials Secondary ha_ con 500 TIB di capacità impegnata</block>
   <block id="1ce6ab2d6dbcea26717506a031dde30c" category="list-text">Una licenza 500 TIB _Essentials Single Node_ che ha solo 100 TIB di capacità impegnata</block>
@@ -5198,9 +5195,7 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="b5f4badb0c4d684d68e611a2bcca58e8" category="list-text">I servizi di Cloud Volumes ONTAP</block>
   <block id="437fe4cf0ba94eac0cc14bbc45cbe74f" category="list-text">Servizi ONTAP</block>
   <block id="43ede35f19d46142596efa16b1ee32c5" category="list-text">E servizi proxy</block>
-  <block id="f08159fec04f3c63047352bdded5b5ff" category="cell">\https://keyvault-production-aks.vault.azure.net</block>
   <block id="cce8a0225002a3fa8095ed8782f394a3" category="cell">Vault delle chiavi</block>
-  <block id="3d41451698b9c800b8f44837a532d5db" category="cell">Utilizzato per recuperare la chiave segreta client da Azure Key Vault per comunicare con i bucket S3 per la gestione dei metadati. Il servizio Cloud Volumes ONTAP utilizza questo componente internamente.</block>
   <block id="bcf88b7ababd6bfaff375da727117c30" category="cell">Modalità standard, limitata e privata.</block>
   <block id="f4308ae3bc914b647813d26d0551a6ba" category="cell">I servizi Cloud Volumes ONTAP non sono disponibili.</block>
   <block id="648b7f3d6699305c92d33129e6ea00fe" category="cell">\https://cloudmanager.cloud.netapp.com/tenancy</block>
@@ -5328,11 +5323,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="788e4b8f4de48df585a507f6facd4562" category="list-text">Essentials Secondary Single Node: Volumi di tipo Data Protection (DP), generalmente volumi di destinazione SnapMirror o SnapVault di sola lettura, creati in un sistema Cloud Volumes ONTAP usando solo un nodo ONTAP.</block>
   <block id="7d16eeb76acfceb848e2519cce58c471" category="admonition">Se un volume di sola lettura/DP diventa un volume primario, BlueXP  lo considera come dati primari e i costi di addebito vengono calcolati in base al tempo in cui il volume si trovava in modalità di lettura/scrittura. Quando il volume viene nuovamente reso di sola lettura/DP, BlueXP  lo considera nuovamente come dati secondari e addebita di conseguenza utilizzando la migliore licenza corrispondente nel portafoglio digitale.</block>
   <block id="7e634413e3c77c89dba2562f5b7c1937" category="list-text">Essentials ha secondaria: Volumi di tipo data Protection (DP) (di norma volumi di destinazione SnapMirror o SnapVault di sola lettura) creati in un sistema Cloud Volumes ONTAP utilizzando due nodi ONTAP in grado di eseguire il failover tra di loro per un accesso ai dati senza interruzioni.</block>
-  <block id="8bf4a89637b88a17fe1be4dad5d23488" category="paragraph">Prendere nota di questi punti:</block>
-  <block id="71f51fd779e6f30ac906929b2dcb02df" category="list-text">Costo minimo: È previsto un costo minimo di 4 TiB per ogni VM di storage di servizi dati che ha almeno un volume primario (lettura/scrittura). Per il pacchetto Essentials, questo costo minimo non si applica alle VM di storage con solo volumi secondari (data Protection).</block>
-  <block id="42a9ff8d7662759290ac08e2ee0929f4" category="list-text">Eccedenza: Se la capacità concessa in licenza viene superata, le eccedenze vengono addebitate alle tariffe del mercato, con la preferenza di utilizzare prima la capacità disponibile di altre licenze.</block>
-  <block id="f93da9b042a7ade0f4d86a091309ed87" category="list-text">Volumi FlexClone e FlexCache: I volumi FlexClone non vengono caricati. I volumi FlexCache di origine e destinazione sono considerati dati primari e vengono addebitati in base allo spazio di cui è stato eseguito il provisioning.</block>
-  <block id="371519ace7adec1f0d1a909854d1cbec" category="list-text">Addebito coppie HA: Per le coppie ha, viene addebitato solo la capacità sottoposta a provisioning su un nodo. I dati mirrorati in modo sincrono sul nodo partner non sono addebitati.</block>
   <block id="2bb8a9ed1433f0f845b92c7da5440dea" category="section-title">25 ottobre 2024</block>
   <block id="1bb0d11a534c8ee967cd62e4d75e3da3" category="paragraph">Le macchine della serie n1 non sono più disponibili per la selezione in BlueXP  quando implementano nuove istanze di Cloud Volumes ONTAP in Google Cloud. Le macchine della serie n1 verranno conservate e supportate solo nei sistemi esistenti meno recenti. Le nuove implementazioni di Cloud Volumes ONTAP sono supportate in Google Cloud solo a partire dalla release 9,8. Si consiglia di passare ai tipi di macchine della serie n2 compatibili con Cloud Volumes ONTAP 9,8 e versioni successive. Le macchine della serie n1, tuttavia, saranno disponibili per le nuove implementazioni eseguite tramite l'API.</block>
   <block id="e55067e1e9c0716bdbc0866b4393aa68" category="paragraph"><block ref="55218e2079fe45aad8bd65bcb61a1a9f" category="inline-link-rx"></block>.</block>
@@ -5661,16 +5651,12 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="29a97b99a51928e5b93f84b989f0c2a0" category="list-text"><block ref="29a97b99a51928e5b93f84b989f0c2a0" category="inline-link-rx"></block></block>
   <block id="e94250a733abb8fd0b0ca35ccdcc534f" category="inline-link">Implementa Cloud Volumes ONTAP dal marketplace di Azure</block>
   <block id="2f3a59a024a5fa5e6d9049c44506f8b0" category="list-text"><block ref="2f3a59a024a5fa5e6d9049c44506f8b0" category="inline-link-rx"></block></block>
-  <block id="a0edf395a381b81009a4d551086625d0" category="paragraph">NetApp offre due opzioni per implementare Cloud Volumes ONTAP in Azure: Tramite NetApp BlueXP  o attraverso il marketplace di Azure. Cloud Volumes ONTAP si affida tradizionalmente a BlueXP  per l'implementazione e l'orchestrazione. A partire da Cloud Volumes ONTAP 9.16.1, puoi sfruttare l'implementazione diretta di Azure Marketplace, un processo ottimizzato che fornisce l'accesso a un set limitato ma comunque potente di funzionalità e opzioni Cloud Volumes ONTAP.</block>
-  <block id="dbb1a2747246b2326a1cd9883fa179ae" category="paragraph">Quando implementi Cloud Volumes ONTAP direttamente dal marketplace di Azure, non ti viene richiesto di configurare BlueXP  Connector o di soddisfare altri criteri di sicurezza e onboarding richiesti per la distribuzione di Cloud Volumes ONTAP tramite BlueXP . Dal marketplace di Azure, puoi implementare rapidamente Cloud Volumes ONTAP in pochi clic ed esplorarne le caratteristiche e le funzionalità principali nel tuo ambiente.</block>
   <block id="7f307020214b0601581a2750d70801ff" category="paragraph">Di seguito è riportato il confronto delle funzioni tra le due opzioni:</block>
   <block id="e380306ab83464e152f5fd1b794098b0" category="cell">Marketplace Azure</block>
   <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="cell">BlueXP</block>
   <block id="d001c47858581c979ac478e49c9661c4" category="cell">*Onboarding*</block>
   <block id="c0245bda3ab2426b357c2f1dbac18fe4" category="cell">Più breve e semplice, preparazione minima necessaria per l'implementazione diretta</block>
   <block id="3629ee21db77809980881173196b6920" category="cell">Processo di inserimento più lungo, inclusa l'installazione del connettore BlueXP </block>
-  <block id="636c10440b3c39954000427bfee3a509" category="cell">*Istanze di Storage Virtual Machine (SVM) supportate*</block>
-  <block id="09a2f54a8d3829f6b3cdbfc1227246d2" category="cell">Edsv5 e LsV3</block>
   <block id="79bd8865b968021aedfe3ebf1eea0e3b" category="cell">Gamma completa di opzioni per macchine virtuali storage. <block ref="ef57b1c89cee8819c5de2b079e4b0640" category="inline-link-rx"></block></block>
   <block id="ee998db55a5373c890946748cb8dafeb" category="cell">*Licenza*</block>
   <block id="2c99fb634374338e105960f8a1b01571" category="cell">Licenza gratuita</block>
@@ -5694,14 +5680,9 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="d9ec06f53e7680c118a0ed4df5b96fb4" category="cell">*Capacità di orchestrazione*</block>
   <block id="2d25c72c1b18e562f6654fff8e11711e" category="cell">Non disponibile</block>
   <block id="84871953bd62b8893190ef7a6962abe7" category="cell">Disponibile tramite BlueXP , in base al tipo di licenza</block>
-  <block id="9f8a1e65db2a7b7add1c13eab2e7329d" category="cell">*Numero di SVM supportate*</block>
-  <block id="48a427743a75b4fdda65b3d4d32ffdb8" category="cell">Una SVM per implementazione</block>
-  <block id="0e0d07c97eb79ac52552a16c7231cce9" category="inline-link-macro">Numero supportato di SVM</block>
-  <block id="2eb6409010ba79c9ad22a8548be0934e" category="cell">SVM multiple in base alla tua configurazione. <block ref="b161301467d6eb73d25f41f1916e22c1" category="inline-link-macro-rx"></block></block>
   <block id="bf20643c9f32bd3279ba875a287ff155" category="cell">*Modifica del tipo di istanza*</block>
   <block id="eaa4dc5078017a5c5bebf383ab6f5124" category="cell">Supportato</block>
   <block id="c1ffbcc6fe6835d480213a54893f3a0a" category="cell">*Tiering FabricPool*</block>
-  <block id="3e829bef915f1e80385b2044bc0d9818" category="paragraph">In futuro, BlueXP  Connector sarà in grado di rilevare le implementazioni effettuate tramite l'implementazione diretta del marketplace Azure, quando puoi sperimentare le funzionalità complete di gestione e orchestrazione di Cloud Volumes ONTAP.</block>
   <block id="c86757d7a9f77beb628cb57feb3d6c11" category="list-text">Implementazione diretta del marketplace Azure: <block ref="1186fe96c0993d10ed337eff0bc3c77c" category="inline-link-macro-rx"></block></block>
   <block id="26e7a962794b94b9597de6c446a143e5" category="list-text">Distribuzione BlueXP : <block ref="be01ed4f242b2cf3f55d254dc6769252" category="inline-link-macro-rx"></block></block>
   <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">Documentazione BlueXP</block>
@@ -5734,20 +5715,14 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="4215bf476fb5508d2ab2817180f62fbb" category="paragraph">AKV può essere utilizzato per proteggere le chiavi NetApp Volume Encryption (NVE) solo per le SVM di dati. Per ulteriori informazioni, fare riferimento alla <block ref="bcad4305f4f69666b0e9823206c949af" category="inline-link-macro-rx"></block>.</block>
   <block id="abf596ebbf2c64b882e111278a49b1e5" category="inline-link">Documentazione ONTAP: Panoramica della configurazione EMS</block>
   <block id="f0bf9f15eadaf8491da2934af661a352" category="paragraph">È possibile configurare EMS utilizzando la CLI. Per istruzioni, fare riferimento alla<block ref="f10f254becd5d3115751852411e7271e" category="inline-link-rx"></block> .</block>
-  <block id="1507fff81105771ed80d838ecc7c825f" category="paragraph">A partire da Cloud Volumes ONTAP 9.16.1, puoi utilizzare l'implementazione diretta del marketplace Azure per implementare in modo rapido e semplice Cloud Volumes ONTAP dal marketplace Azure ed esplorare le sue caratteristiche e funzionalità principali all'interno del tuo ambiente.</block>
   <block id="530e18594ace7f1432d409c00afc2454" category="inline-link-macro">Scopri le offerte Cloud Volumes ONTAP su BlueXP  e sul marketplace</block>
   <block id="c6291eec01d7eef87347f05c5b6cc5e0" category="paragraph">Per ulteriori informazioni su questa offerta, fare riferimento a <block ref="1d59ccb0a322b44874ad6d716be992b6" category="inline-link-macro-rx"></block>.</block>
   <block id="b11556db62f78035a974fcf2af350b0c" category="paragraph">L'istanza di Cloud Volumes ONTAP implementata utilizzando la distribuzione diretta del marketplace di Azure possiede le seguenti proprietà:</block>
   <block id="307fba28eaa68023634ac12efe78443d" category="list-text">La versione più recente di Cloud Volumes ONTAP (9.16.1 o successiva).</block>
   <block id="87449344416c32f88eeb38f3bd00e092" category="list-text">Una licenza gratuita per Cloud Volumes ONTAP, limitata a 500 GiB di capacità con provisioning. Questa licenza non include il supporto NetApp e non ha data di scadenza.</block>
   <block id="152058aae87c0f08791efa9a9cbd8167" category="inline-link-macro">modalità di orchestrazione flessibile</block>
-  <block id="2d7152ef687c52f17a34fdc2c6507d86" category="list-text">Due nodi configurati in modalità high Availability (ha) in una singola zona di disponibilità (AZ), con numeri di serie predefiniti. Le Storage Virtual Machine (SVM) vengono implementate in una <block ref="76b8e7a3e49d5a96c336355428b9cbdd" category="inline-link-macro-rx"></block>.</block>
   <block id="860574f2fb3649a1d434d1ed47437a59" category="list-text">Un aggregato per l'istanza creata per impostazione predefinita.</block>
   <block id="c612116a8947c7a85f4c8fb5064a1e13" category="list-text">Un disco gestito SSD Premium v2 con capacità di provisioning di 500 GiB, un disco root e un disco dati.</block>
-  <block id="bd3fadb8d8a7028f57bf2694979cf325" category="list-text">Una SVM dati implementata con servizi dati NFS, CIFS, iSCSI e NVMe/TCP. Nessun provisioning per SVM aggiuntive.</block>
-  <block id="92a96188cb68658c1989215bfbbe6ca3" category="list-text">Licenze per NFS, CIFS (SMB), iSCSI, anti-ransomware (ARW), SnapLock e SnapMirror installate in base ai numeri di serie predefiniti.</block>
-  <block id="1859d20023fcb6341021ebf7fdf710be" category="inline-link">Efficienza dello storage sensibile alla temperatura (TSSE) ONTAP</block>
-  <block id="76211bb727300454e196855a3a4cc957" category="list-text"><block ref="71b0933f11acfc38fdafc96583ed09c6" category="inline-link-rx"></block>, crittografia del volume e gestione esterna delle chiavi attivate per impostazione predefinita.</block>
   <block id="e028eb7a88e0ab56d3961355b9bc2c4b" category="list-text">Queste funzioni non sono supportate:</block>
   <block id="47f64097ec44c9f18f4025941f2e4436" category="list-text">Tiering FabricPool</block>
   <block id="4bfa0affcddbe689db2e9788d1cf9ade" category="list-text">Modifica del tipo di istanza</block>
@@ -5770,9 +5745,7 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="3ad50573794660103eccc594ba3fb4f0" category="list-text">Selezionare un piano. L'elenco *piano* visualizza in genere le ultime versioni di Cloud Volumes ONTAP.</block>
   <block id="37d38a578c31bc624a3f4d4de8fb8daa" category="list-text">Nella scheda *informazioni di base*, fornire i seguenti dettagli:</block>
   <block id="3bc9feb66cc347505afe61a873233a22" category="list-text">*Abbonamento*: Selezionare un abbonamento. La distribuzione sarà collegata al numero di abbonamento.</block>
-  <block id="7c68030358e9e2caf23b3aab867e6b7d" category="list-text">*Gruppo di risorse*: Utilizzare un gruppo di risorse esistente o crearne uno nuovo. I gruppi di risorse consentono di allocare tutte le risorse, ad esempio dischi e SVM, all'interno di un singolo gruppo per un'istanza Cloud Volumes ONTAP.</block>
   <block id="a68271a0eca397a1733f43d9c2db3356" category="list-text">*Regione*: Seleziona un'area che supporta l'implementazione ha di Azure in una singola AZ. Vengono visualizzate solo le regioni disponibili nell'elenco.</block>
-  <block id="ba0d4387254dca94fa0fcfe4ade5fe3e" category="list-text">*Dimensione*: Selezionare una dimensione SVM per il disco gestito SSD Premium v2 supportato.</block>
   <block id="c2b7578dc59578ac85fb03cf8268371d" category="list-text">*Zona*: Selezionare una zona per la regione selezionata.</block>
   <block id="d238bcae22b45e47039da0f3a61c5465" category="list-text">*Admin Password*: Consente di impostare una password. Questa password amministratore viene utilizzata per accedere al sistema dopo la distribuzione.</block>
   <block id="3ee712a8a2fc736d7fea56d098428b49" category="list-text">*Conferma password*: Immettere nuovamente la stessa password per la conferma.</block>
@@ -5785,8 +5758,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="b445825d2f2ddce17b30d5dbc127bb53" category="list-text">Nella scheda *Avanzate* verificare se le due funzionalità di Azure necessarie per questa distribuzione sono state impostate. Fare riferimento a <block ref="47d2b322282e9494b913fdbd50384f10" category="inline-link-macro-rx"></block> e <block ref="a99c16252f5b965dd7864967fa4d6812" category="inline-link-macro-rx"></block>.</block>
   <block id="f7dce7f10f1f8cc2b434e0510f469742" category="list-text">È possibile definire coppie di nomi e valori per le risorse o i gruppi di risorse nella scheda *Tag*.</block>
   <block id="e5c4df6a4568a2a580b8a3e5b40577b6" category="list-text">Nella scheda *Rivedi + crea*, esaminare i dettagli e avviare la distribuzione.</block>
-  <block id="cc2ec1706a6cfca4d87ce071f6ae3f37" category="paragraph">Selezionare l'icona di notifica per visualizzare l'avanzamento della distribuzione. Una volta implementato Cloud Volumes ONTAP, è possibile visualizzare l'elenco delle SVM per individuare le relative operazioni.</block>
-  <block id="a981e8fb9c5e87d40185a70a414d57e2" category="paragraph">Una volta accessibile, usa ONTAP System Manager o la CLI di ONTAP per accedere alla SVM con le credenziali di amministratore impostate. Successivamente, è possibile creare volumi, LUN o condivisioni e iniziare a utilizzare le funzionalità di storage di Cloud Volumes ONTAP.</block>
   <block id="5a8751283cd95032ddf0ec56f5bb1224" category="paragraph">Le implementazioni Cloud Volumes ONTAP realizzate direttamente attraverso il marketplace Azure non includono il supporto di NetApp. In caso di problemi durante l'implementazione, puoi eseguire il troubleshooting e risolverli in maniera indipendente.</block>
   <block id="e9ad8cb2d3f7ad7951cb5e2ccdf98fcc" category="list-text">Sul sito di Azure Marketplace, andare a *Diagnostica di avvio &gt; Registro seriale*.</block>
   <block id="3473bcdf09ad8e881f1d60433d0651a8" category="list-text">Scaricare e analizzare i registri seriali.</block>
@@ -5804,7 +5775,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="f2e2a9d8fec39c5ee52d89218d616aa0" category="list-text"><block ref="f2e2a9d8fec39c5ee52d89218d616aa0" category="inline-link-rx"></block></block>
   <block id="5eb1845d8b80c05b8cd63e308b13e96b" category="inline-link">Crea condivisioni per CIFS</block>
   <block id="624a019a8e50c4a7143df34f2ca60327" category="list-text"><block ref="624a019a8e50c4a7143df34f2ca60327" category="inline-link-rx"></block></block>
-  <block id="77e31285eee4947e5d6f245a2743d957" category="admonition">Per le regioni in Cina, le implementazioni a nodo singolo sono supportate solo in Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA. È possibile aggiornare queste versioni a patch e release successive di Cloud Volumes ONTAP. Se si desidera distribuire versioni Cloud Volumes ONTAP successive nelle aree geografiche della Cina, contattare il supporto NetApp. In queste regioni sono supportate solo le licenze acquistate direttamente da NetApp.</block>
   <block id="c97ed7681a179d7bc87ce8f8eed5c351" category="inline-link">Documentazione di ONTAP: Abilita la protezione autonoma da ransomware</block>
   <block id="f508651fe98cc3415eb1f58ed2bed8a0" category="paragraph">Per ulteriori informazioni su come attivare ARP con Gestione di sistema di ONTAP e la CLI di ONTAP, consultare la<block ref="b15a4c9c991d002f8e900421f382aab3" category="inline-link-rx"></block>.</block>
   <block id="c444f079b1cbf4fc53cc057613986256" category="list-text"><block ref="c444f079b1cbf4fc53cc057613986256" category="inline-link-rx"></block></block>
@@ -5828,9 +5798,33 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="25d5ff4689a1026f322311bc3051ec8f" category="paragraph">Per informazioni sulla configurazione e l'utilizzo di NDMP, fare riferimento alla<block ref="b4c37f031604033056dedb105a470e07" category="inline-link-rx"></block> .</block>
   <block id="f5b6a4f9fa9546ad87a66d4b329c48ca" category="list-text">*Edge cache*: Licenza per<block ref="750127709cc754e243313cd0fefb37f3" category="inline-link-rx"></block></block>
   <block id="4365e30d77f5d09dc0920c7810111567" category="paragraph"><block ref="413fcdbad34c678371dd9dcd495f514c" category="inline-link-rx"></block>.</block>
-  <block id="ac3d6636314efc1e17f29c3e409b0f9c" category="sidebar">Informazioni sulle opzioni di implementazione</block>
   <block id="3a02e985ca8f29995c51ae66b1b831f2" category="sidebar">Inizia subito a BlueXP </block>
   <block id="124dec3164ac7246452cc1456ff82f96" category="sidebar">Inizia subito sul mercato</block>
-  <block id="669267b794602d81727aa564e9017e49" category="sidebar">Implementa Cloud Volumes ONTAP dal marketplace</block>
   <block id="3afa4906e9f87a509c6412a260310879" category="sidebar">Funziona con EC2 istanze in AWS</block>
+  <block id="62c9277e75aee50ddfb792de79bd94d3" category="doc">Nuova regione del Nord Zelanda ora supportata in Azure</block>
+  <block id="81ae8423a213b8c9bbcb79aee6ae0af8" category="paragraph">La regione del Nord della Nuova Zelanda è ora supportata in Azure per configurazioni a nodo singolo e ad alta disponibilità (ha) di Cloud Volumes ONTAP 9.12.1 GA e versioni successive. Si noti che il tipo di istanza Lsv3 non è supportato in questa regione.</block>
+  <block id="b717ddfb2f9a28b7e4673751144693cc" category="paragraph">Per un elenco di tutte le regioni supportate, fare riferimento alla<block ref="0f1c2d6a84741595f86a459e46c2a400" category="inline-link-rx"></block> .</block>
+  <block id="7c2f2acb2655a9e7f8ab7f69bbd0d731" category="paragraph">NetApp offre due opzioni per implementare Cloud Volumes ONTAP in Azure. Cloud Volumes ONTAP si affida tradizionalmente a BlueXP  per l'implementazione e l'orchestrazione. A partire da Cloud Volumes ONTAP 9.16.1, puoi sfruttare l'implementazione diretta di Azure Marketplace, un processo ottimizzato che fornisce l'accesso a un set limitato ma comunque potente di funzionalità e opzioni Cloud Volumes ONTAP.</block>
+  <block id="89191ae1b044d97b766a182a1727fae4" category="paragraph">Quando implementi Cloud Volumes ONTAP direttamente dal marketplace di Azure, non ti viene richiesto di configurare BlueXP  Connector o di soddisfare altri criteri di sicurezza e onboarding richiesti per la distribuzione di Cloud Volumes ONTAP tramite BlueXP . Dal marketplace di Azure, puoi implementare rapidamente Cloud Volumes ONTAP in pochi clic ed esplorarne le caratteristiche e le funzionalità principali nel tuo ambiente.</block>
+  <block id="73081e15ff5559e197b273ea471c9aeb" category="cell">*Istanze di Storage Virtual Machine (Storage VM) supportate*</block>
+  <block id="55f3f90910bdc78c8b57d6f9c6044843" category="cell">Edsv5 e Lsv3</block>
+  <block id="94302f254b4d602be77fb6e28556ecec" category="cell">*Numero di VM di storage supportate*</block>
+  <block id="212ecc3006afeac1a27b275b3e8556b8" category="cell">Uno per implementazione</block>
+  <block id="e3e6a1af04ec174dc41385d29bdd8865" category="cell">Macchine virtuali storage multiple in base alla tua configurazione. <block ref="85b54da0356d83997931fab8f38013e5" category="inline-link-macro-rx"></block></block>
+  <block id="ebd233c7db02fa141c56a433554bbe06" category="paragraph">In futuro, BlueXP  Connector sarà in grado di identificare le implementazioni effettuate tramite l'implementazione diretta del marketplace di Azure. In questo modo sarà possibile sfruttare le funzioni avanzate offerte da BlueXP .</block>
+  <block id="dcfe8b86806ea8eca7c3c29e1d2f915c" category="paragraph">Se superi la tua capacità BYOL o se la tua licenza scade, ti verranno addebitati gli eccessi a tariffe orarie in base al tuo abbonamento al marketplace. Le maggiorazioni vengono addebitate alle tariffe del mercato, con la preferenza di utilizzare prima la capacità disponibile di altre licenze.</block>
+  <block id="8683a88ed22af0c318a9eb6a4fb30537" category="paragraph">Le policy di routing e firewall devono consentire il traffico HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:</block>
+  <block id="d5788def9bc230ba887427df9594dd27" category="cell"><block ref="d5788def9bc230ba887427df9594dd27" category="inline-link-rx"></block></block>
+  <block id="b1905fad16d0cb92c82e293f1516f810" category="cell">Utilizzato per recuperare le chiavi segrete client da Azure Key Vault quando si utilizzano chiavi gestite dal cliente (CMK).</block>
+  <block id="c01c238e45c56b0625dc393a96942f4a" category="paragraph">A partire da Cloud Volumes ONTAP 9.16.1, puoi utilizzare l'implementazione diretta di Azure Marketplace per implementare Cloud Volumes ONTAP in modo rapido e semplice. Dal marketplace di Azure, puoi implementare rapidamente Cloud Volumes ONTAP in pochi clic ed esplorarne le caratteristiche e le funzionalità principali nel tuo ambiente.</block>
+  <block id="35acff494427083599ef0a6b5f200d8d" category="list-text">Due nodi configurati in modalità high Availability (ha) in una singola zona di disponibilità (AZ), con numeri di serie predefiniti. Le Storage Virtual Machine (VM di storage) vengono implementate in una <block ref="76b8e7a3e49d5a96c336355428b9cbdd" category="inline-link-macro-rx"></block>.</block>
+  <block id="b7c4cebe2d8448d4f2e4b92843f79d47" category="list-text">Una macchina virtuale per lo storage dei dati implementata con servizi dati NFS, CIFS, iSCSI e NVMe/TCP. Non è possibile aggiungere altre macchine virtuali per lo storage dei dati.</block>
+  <block id="5d98b60eeef8b1f07d860cd9f9341d93" category="list-text">Licenze installate per NFS, CIFS (SMB), iSCSI, anti-ransomware (ARW), SnapLock e SnapMirror.</block>
+  <block id="5679d39cc8e25e0711af5b5bd3de1661" category="inline-link">Efficienza dello storage sensibile alla temperatura (TSSE) ONTAP</block>
+  <block id="6567e2b7c35d280cea9f3ce8b354c3ae" category="list-text"><block ref="bf02a27a555eff9ad7fe3308b8b66545" category="inline-link-rx"></block>, crittografia del volume e gestione esterna delle chiavi attivate per impostazione predefinita.</block>
+  <block id="5858787d64dc0052d6813b6039e8ad5a" category="list-text">*Gruppo di risorse*: Utilizzare un gruppo di risorse esistente o crearne uno nuovo. I gruppi di risorse consentono di allocare tutte le risorse, come dischi e macchine virtuali di storage, all'interno di un singolo gruppo per un'istanza di Cloud Volumes ONTAP.</block>
+  <block id="00185d9967c9ce9bd7de3a2330aea4ed" category="list-text">*Dimensione*: Selezionare una dimensione VM di archiviazione per il disco gestito SSD Premium v2 supportato.</block>
+  <block id="0573433fb185b84611f18e3f6e506cd2" category="paragraph">Selezionare l'icona di notifica per visualizzare l'avanzamento della distribuzione. Dopo l'implementazione di Cloud Volumes ONTAP, è possibile visualizzare l'elenco delle macchine virtuali per lo storage in cui sono riportate le operazioni.</block>
+  <block id="20a0bd63dc9b064c0cedc40d649eb29a" category="paragraph">Una volta accessibile, usa il System Manager di ONTAP o l'interfaccia a riga di comando di ONTAP per accedere alla macchina virtuale storage con le credenziali di amministratore impostate. Successivamente, è possibile creare volumi, LUN o condivisioni e iniziare a utilizzare le funzionalità di storage di Cloud Volumes ONTAP.</block>
+  <block id="1c3093638c74eef35618192ff8049216" category="admonition">Per le regioni in Cina, le implementazioni a nodo singolo sono supportate solo in Cloud Volumes ONTAP 9.12.1 GA e 9.13.0 GA. È possibile aggiornare queste versioni a patch e release successive di Cloud Volumes ONTAP. Se si desidera distribuire versioni Cloud Volumes ONTAP successive nelle aree geografiche della Cina, contattare il supporto NetApp. Solo le licenze acquistate direttamente da NetApp sono supportate nelle regioni della Cina e gli abbonamenti ai mercati non sono disponibili.</block>
 </blocks>

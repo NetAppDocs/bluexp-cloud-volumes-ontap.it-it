@@ -146,7 +146,7 @@ Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applic
 
 === Eccedendo
 
-Se superi la capacità BYOL o se la licenza scade, ti verrà addebitato il costo per le eccedazioni alla tariffa oraria in base all'abbonamento al marketplace.
+Se superi la tua capacità BYOL o se la tua licenza scade, ti verranno addebitati gli eccessi a tariffe orarie in base al tuo abbonamento al marketplace. Le maggiorazioni vengono addebitate alle tariffe del mercato, con la preferenza di utilizzare prima la capacità disponibile di altre licenze.
 
 
 
@@ -164,14 +164,6 @@ Il licensing si basa interamente sul tipo di volume creato all'interno dei siste
 NOTE: Se un volume di sola lettura/DP diventa un volume primario, BlueXP  lo considera come dati primari e i costi di addebito vengono calcolati in base al tempo in cui il volume si trovava in modalità di lettura/scrittura. Quando il volume viene nuovamente reso di sola lettura/DP, BlueXP  lo considera nuovamente come dati secondari e addebita di conseguenza utilizzando la migliore licenza corrispondente nel portafoglio digitale.
 
 * Essentials ha secondaria: Volumi di tipo data Protection (DP) (di norma volumi di destinazione SnapMirror o SnapVault di sola lettura) creati in un sistema Cloud Volumes ONTAP utilizzando due nodi ONTAP in grado di eseguire il failover tra di loro per un accesso ai dati senza interruzioni.
-
-
-Prendere nota di questi punti:
-
-* Costo minimo: È previsto un costo minimo di 4 TiB per ogni VM di storage di servizi dati che ha almeno un volume primario (lettura/scrittura). Per il pacchetto Essentials, questo costo minimo non si applica alle VM di storage con solo volumi secondari (data Protection).
-* Eccedenza: Se la capacità concessa in licenza viene superata, le eccedenze vengono addebitate alle tariffe del mercato, con la preferenza di utilizzare prima la capacità disponibile di altre licenze.
-* Volumi FlexClone e FlexCache: I volumi FlexClone non vengono caricati. I volumi FlexCache di origine e destinazione sono considerati dati primari e vengono addebitati in base allo spazio di cui è stato eseguito il provisioning.
-* Addebito coppie HA: Per le coppie ha, viene addebitato solo la capacità sottoposta a provisioning su un nodo. I dati mirrorati in modo sincrono sul nodo partner non sono addebitati.
 
 
 .BYOL

@@ -88,7 +88,7 @@ I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per acceder
 
 I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.
 
-I criteri di routing e firewall devono consentire il traffico HTTP/HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:
+Le policy di routing e firewall devono consentire il traffico HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:
 
 * https://support.netapp.com/aods/asupmessage
 * https://support.netapp.com/asupprod/post/1.0/postAsup

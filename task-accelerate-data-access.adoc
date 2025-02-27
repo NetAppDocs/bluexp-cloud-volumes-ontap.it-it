@@ -33,7 +33,7 @@ video::PBNPVRUeT1o[youtube,width=848,height=480]
 
 Quando si configura FlexCache su un sistema Cloud Volumes ONTAP in cui il volume di origine è crittografato, sono necessari ulteriori passaggi per garantire che il volume FlexCache possa accedere correttamente e memorizzare nella cache i dati crittografati.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 . *Impostazione crittografia*: Verificare che il volume di origine sia completamente crittografato e operativo. Per i sistemi Cloud Volumes ONTAP, ciò implica l'integrazione con servizi di gestione delle chiavi specifici del cloud.
 
 

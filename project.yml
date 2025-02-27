@@ -74,7 +74,7 @@ sidebar:
     - title: Inizia a utilizzare Microsoft Azure
       flavor: azure
       entries:
-      - title: Informazioni sulle opzioni di implementazione
+      - title: Scopri le opzioni di implementazione di Cloud Volumes ONTAP in Azure
         url: "/concept-azure-mktplace-direct.html"
       - title: Inizia subito a BlueXP 
         entries:
@@ -113,9 +113,7 @@ sidebar:
           - title: Ulteriori informazioni
             url: "/reference-image-verification-links.html"
       - title: Inizia subito sul mercato
-        entries:
-        - title: Implementa Cloud Volumes ONTAP dal marketplace
-          url: "/task-deploy-cvo-azure-mktplc.html"
+        url: "/task-deploy-cvo-azure-mktplc.html"
     - title: Inizia a utilizzare Google Cloud
       flavor: gcp
       entries:

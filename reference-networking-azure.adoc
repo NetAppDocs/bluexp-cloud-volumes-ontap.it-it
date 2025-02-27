@@ -53,7 +53,7 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 
 
 
-| \https://keyvault-production-aks.vault.azure.net | Vault delle chiavi | Utilizzato per recuperare la chiave segreta client da Azure Key Vault per comunicare con i bucket S3 per la gestione dei metadati. Il servizio Cloud Volumes ONTAP utilizza questo componente internamente. | Modalità standard, limitata e privata. | I servizi Cloud Volumes ONTAP non sono disponibili. 
+| https://vault.azure.net[] | Vault delle chiavi | Utilizzato per recuperare le chiavi segrete client da Azure Key Vault quando si utilizzano chiavi gestite dal cliente (CMK). | Modalità standard, limitata e privata. | I servizi Cloud Volumes ONTAP non sono disponibili. 
 
 
 | \https://cloudmanager.cloud.netapp.com/tenancy | Locazione | Utilizzato per recuperare le risorse Cloud Volumes ONTAP dalla tenancy BlueXP  per autorizzare risorse e utenti. | Modalità standard e limitata. | Le risorse Cloud Volumes ONTAP e gli utenti non sono autorizzati. 
@@ -82,7 +82,7 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 
 I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.
 
-I criteri di routing e firewall devono consentire il traffico HTTP/HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:
+Le policy di routing e firewall devono consentire il traffico HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:
 
 * https://support.netapp.com/aods/asupmessage
 * https://support.netapp.com/asupprod/post/1.0/postAsup

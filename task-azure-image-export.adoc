@@ -16,7 +16,7 @@ summary: È possibile esportare immagini ONTAP da Azure Marketplace per verifica
 [role="lead"]
 Una volta che l'immagine VHD è pubblicata nel cloud Azure, l'immagine non è più gestita da NetApp. Al contrario, l'immagine pubblicata viene posizionata sul marketplace di Azure. La modifica di Azure al primo 1MB e alla fine del 512B del VHD si verifica quando l'immagine viene messa in scena e pubblicata sul marketplace di Azure. Per verificare la firma del file VHD, l'immagine VHD modificata da Azure deve essere esportata prima dal marketplace di Azure.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario installare i programmi richiesti sul sistema.
 
 * È installata la CLI di Azure o è prontamente disponibile Azure Cloud Shell attraverso il portale di Azure.

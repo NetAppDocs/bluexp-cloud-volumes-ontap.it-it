@@ -69,7 +69,7 @@ South Central US          southcentralus       (US) South Central US
 
 . Esaminare i nomi delle SKU per le versioni Cloud Volumes ONTAP corrispondenti e i tipi di distribuzione VM riportati nella tabella seguente.
 +
-Il nome SKU viene utilizzato come valore per la variabile "skuName" quando si imposta l'URN dell'immagine del mercato.
+Il nome SKU è il valore della variabile "skuName" quando si imposta l'URN dell'immagine del mercato.
 
 +
 Ad esempio, tutte le implementazioni a nodo singolo con Cloud Volumes ONTAP 9.15.0 devono utilizzare `ontap_cloud_byol` come nome SKU.
@@ -79,7 +79,13 @@ Ad esempio, tutte le implementazioni a nodo singolo con Cloud Volumes ONTAP 9.15
 |===
 
 
-| *Versione Cloud Volumes ONTAP* | *Tipo di distribuzione VM* | *Nome SKU* 
+| *Versione Cloud Volumes ONTAP* | *Metodo di distribuzione VM* | *Nome SKU* 
+
+
+| 9.16.1 e versioni successive | Tramite il metodo di distribuzione diretta del mercato | ONTAP_cloud_direct 
+
+
+| 9.16.1 e versioni successive | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 
 
 
 | 9.15.1 | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 

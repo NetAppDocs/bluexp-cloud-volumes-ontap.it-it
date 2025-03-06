@@ -1,10 +1,10 @@
-= Nuova regione del Nord Zelanda ora supportata in Azure
+= Supporto della regione del Nord della Nuova Zelanda in Azure
 :allow-uri-read: 
 
 
 
 
-=== Nuova regione del Nord Zelanda ora supportata in Azure
+=== Supporto della regione del Nord della Nuova Zelanda in Azure
 
 La regione del Nord della Nuova Zelanda è ora supportata in Azure per configurazioni a nodo singolo e ad alta disponibilità (ha) di Cloud Volumes ONTAP 9.12.1 GA e versioni successive. Si noti che il tipo di istanza Lsv3 non è supportato in questa regione.
 

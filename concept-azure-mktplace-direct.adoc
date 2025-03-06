@@ -28,7 +28,7 @@ Di seguito è riportato il confronto delle funzioni tra le due opzioni:
 | *Onboarding* | Più breve e semplice, preparazione minima necessaria per l'implementazione diretta | Processo di inserimento più lungo, inclusa l'installazione del connettore BlueXP  
 
 
-| *Istanze di Storage Virtual Machine (Storage VM) supportate* | Edsv5 e Lsv3 | Gamma completa di opzioni per macchine virtuali storage. https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurazioni supportate in Azure"^] 
+| *Tipi di macchine virtuali supportati* | Edsv5 e Lsv3 | Gamma completa di tipi di VM. https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurazioni supportate in Azure"^] 
 
 
 | *Licenza* | Licenza gratuita | Qualsiasi licenza basata sulla capacità. link:concept-licensing.html["Licenze Cloud Volumes ONTAP"] 

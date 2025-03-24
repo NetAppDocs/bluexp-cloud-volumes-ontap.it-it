@@ -4,7 +4,7 @@ permalink: concept-storage-management.html
 keywords: provisioning, capacity management, storage provisioning, manual, automatic, advanced allocation, aggregates, thin provisioning, free space, mode, BlueXP, cloud manager 
 summary: BlueXP offre una gestione semplificata e avanzata dello storage Cloud Volumes ONTAP. 
 ---
-= Gestione dello storage
+= Gestione dello storage Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

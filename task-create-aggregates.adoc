@@ -4,7 +4,7 @@ permalink: task-create-aggregates.html
 keywords: storage, provisioning, aggregates, provision, create, advanced allocation, creating aggregates, adding an aggregate, add an aggregate, create an aggregate 
 summary: 'È possibile creare aggregati o lasciare che BlueXP lo faccia per te quando crea volumi. Il vantaggio della creazione di aggregati consiste nella possibilità di scegliere la dimensione del disco sottostante, che consente di dimensionare l"aggregato in base alla capacità o alle performance necessarie.' 
 ---
-= Creare aggregati
+= Crea un aggregato per i sistemi Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

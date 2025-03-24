@@ -4,7 +4,7 @@ permalink: task-manage-svm-dr.html
 keywords: storage virtual machine, vserver, svm, storage vm, svm dr, disaster recovery, svm disaster recovery, storage vm dr 
 summary: BlueXP non fornisce alcun supporto di configurazione o orchestrazione per il disaster recovery delle macchine virtuali dello storage. È necessario utilizzare System Manager o la CLI. 
 ---
-= Configurare il disaster recovery delle SVM
+= Configurare il disaster recovery delle Storage VM per Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

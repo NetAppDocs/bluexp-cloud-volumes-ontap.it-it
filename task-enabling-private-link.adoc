@@ -4,7 +4,7 @@ permalink: task-enabling-private-link.html
 keywords: azure private link, private link connection, private link to storage, service endpoints, enable service endpoint, disable private link 
 summary: Cloud Volumes ONTAP utilizza un collegamento privato Azure per le connessioni agli account di storage associati. Se necessario, è possibile disattivare Azure Private Links e utilizzare gli endpoint del servizio. 
 ---
-= Utilizzare un collegamento privato Azure o endpoint del servizio
+= Utilizza un Azure Private link o gli endpoint di servizio per i sistemi Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

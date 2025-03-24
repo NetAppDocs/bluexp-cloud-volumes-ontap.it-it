@@ -4,7 +4,7 @@ permalink: task-registering.html
 keywords: Cloud Volumes ONTAP, register, registering, paygo, pay-as-you-go, registration, instance id, serial number, account id, support 
 summary: Il supporto di NetApp è incluso nei sistemi PAYGO di Cloud Volumes ONTAP, ma è necessario prima attivare il supporto registrando i sistemi con NetApp. 
 ---
-= Registrazione di sistemi pay-as-you-go
+= Registrare sistemi Cloud Volumes ONTAP pay-as-you-go
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

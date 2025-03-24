@@ -4,7 +4,7 @@ permalink: task-change-route-tables.html
 keywords: route tables, update route tables, modify route tables, change route table 
 summary: È possibile modificare le tabelle di routing AWS che includono i percorsi verso gli indirizzi IP mobili per una coppia ha implementata in più zone di disponibilità AWS. È possibile eseguire questa operazione se i nuovi client NFS o CIFS devono accedere a una coppia ha in AWS. 
 ---
-= Modificare le tabelle di percorso per le coppie ha in più AZS
+= Modificare le tabelle di routing per coppie ha Cloud Volumes ONTAP in più AWS AZS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

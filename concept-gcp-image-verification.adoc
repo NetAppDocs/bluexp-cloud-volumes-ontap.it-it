@@ -4,7 +4,7 @@ permalink: concept-gcp-image-verification.html
 keywords: Google Cloud, image, VHD, image signature file, 
 summary: Verificare i file delle firme dei file di immagine di Google Cloud. 
 ---
-= Panoramica sulla verifica delle immagini di Google Cloud
+= Scopri come l'immagine di Google Cloud è verificata in Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-managing-state.html
 keywords: schedule, schedules, scheduling, shutdowns, shut down, restart, stop, stopping, turn off, weekday, weekend 
 summary: Puoi arrestare e avviare Cloud Volumes ONTAP da BlueXP per gestire i costi di calcolo del cloud. 
 ---
-= Gestione dello stato di Cloud Volumes ONTAP
+= Avviare e arrestare un sistema Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

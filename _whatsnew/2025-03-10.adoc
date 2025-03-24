@@ -1,0 +1,11 @@
+= Creazione di macchine virtuali di storage automatizzata tramite le API in Azure
+:allow-uri-read: 
+
+
+
+
+=== Creazione di macchine virtuali di storage automatizzata tramite le API in Azure
+
+Ora puoi utilizzare le API di BlueXP  per creare, rinominare ed eliminare macchine virtuali storage di servizi dati aggiuntivi per Cloud Volumes ONTAP in Azure. L'utilizzo delle API automatizza il processo di creazione della VM di storage, includendo la configurazione delle interfacce di rete richieste, delle LIF e di una LIF di gestione, se devi utilizzare una VM di storage per scopi di gestione.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Gestisci le macchine virtuali dello storage di distribuzione dei dati per Cloud Volumes ONTAP in Azure"^]

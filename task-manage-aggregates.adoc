@@ -4,7 +4,7 @@ permalink: task-manage-aggregates.html
 keywords: aggregates, delete aggregates, add disks, view aggregates 
 summary: Gestisci gli aggregati aggiungendo dischi, visualizzando informazioni sugli aggregati ed eliminandoli. 
 ---
-= Gestire gli aggregati
+= Gestione degli aggregati per i cluster Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

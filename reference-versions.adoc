@@ -4,7 +4,7 @@ permalink: reference-versions.html
 keywords: versions, supported versions, new versions, cloud volumes ontap version 
 summary: BlueXP consente di scegliere tra diverse versioni di ONTAP quando si crea un nuovo ambiente di lavoro Cloud Volumes ONTAP. 
 ---
-= Versioni di ONTAP supportate per le nuove implementazioni
+= Versioni di ONTAP supportate per le implementazioni Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

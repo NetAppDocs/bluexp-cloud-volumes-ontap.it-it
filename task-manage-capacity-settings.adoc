@@ -4,7 +4,7 @@ permalink: task-manage-capacity-settings.html
 keywords: aggregates, delete aggregates, add disks, view aggregates 
 summary: Gestisci gli aggregati aggiungendo dischi, visualizzando informazioni sugli aggregati ed eliminandoli. 
 ---
-= Gestire le impostazioni di capacità su un connettore
+= Gestire la capacità aggregata Cloud Volumes ONTAP su un connettore
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

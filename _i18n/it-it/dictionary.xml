@@ -56,110 +56,24 @@
   <block id="9ef6a991e8b332819da490002a529dfe" category="inline-image-macro">Schermata dell'opzione di abbonamento Keystone durante la creazione di un ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="002247e118f1fafbd5464e9559e97958" category="paragraph"><block ref="002247e118f1fafbd5464e9559e97958" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0ca27a1b4f5a64b823a04f58a204d499" category="summary">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage.</block>
-  <block id="65cc3fef2113d2e1d1f636ab8cb02386" category="doc">Creare macchine virtuali storage per il data-service per Cloud Volumes ONTAP in Azure</block>
-  <block id="479c3296d54e6f4715be2e37ee57edf1" category="paragraph">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Potresti sapere che si tratta di un _SVM_ o di un _vserver_. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma sono supportate VM di storage aggiuntive quando si esegue Cloud Volumes ONTAP in Azure.</block>
-  <block id="a58a1a73a0fc2d46b2c8d3212a81b76b" category="paragraph">Per creare ulteriori VM di storage che servono i dati, è necessario allocare gli indirizzi IP in Azure ed eseguire i comandi ONTAP per creare le VM di storage e le LIF dei dati.</block>
   <block id="bbf8762fd7719517f7567e338ea9aa0b" category="section-title">Numero di VM storage supportate</block>
   <block id="bc2d1afe4b7b88784be36363245bd652" category="inline-link">Note di rilascio di Cloud Volumes ONTAP</block>
-  <block id="5e10fd94744d67ee9b4af8576d7d871b" category="paragraph">Sono supportate più macchine virtuali storage con configurazioni Cloud Volumes ONTAP specifiche a partire dalla release 9.9.0. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> Per verificare il numero di VM storage supportate per la versione di Cloud Volumes ONTAP in uso.</block>
   <block id="61a207d9bd50b686e92d93d0f36e5fd4" category="paragraph">Tutte le altre configurazioni Cloud Volumes ONTAP supportano una VM di storage per il servizio dati e una VM di storage di destinazione utilizzata per il disaster recovery. È possibile attivare la VM di storage di destinazione per l'accesso ai dati in caso di interruzione della VM di storage di origine.</block>
-  <block id="bc2d82be5ce2a751775a44460f5f36ae" category="section-title">Allocare gli indirizzi IP in Azure</block>
-  <block id="b06a344c267b8ee73a6d4d78ace617ea" category="paragraph">È necessario allocare gli indirizzi IP in Azure prima di creare una VM di storage e allocare le LIF.</block>
   <block id="0ecbfe2cb5b1df888639e1751cec905a" category="section-title">Sistema a nodo singolo</block>
-  <block id="ab446ebd1f851655193779b7c50f3533" category="paragraph">Gli indirizzi IP devono essere assegnati a nic0 in Azure prima di creare una VM di storage e allocare i LIF.</block>
-  <block id="19c2f8be3dc9f0749efedd54317e259b" category="paragraph">È necessario creare un indirizzo IP per l'accesso ai dati LIF e un altro indirizzo IP opzionale per una LIF di gestione delle macchine virtuali di storage (SVM). Questa LIF di gestione fornisce una connessione a strumenti di gestione come SnapCenter.</block>
-  <block id="2c1d1f56d207e6b42d7866029b8f4f38" category="list-text">Accedere al portale Azure e aprire il servizio *macchina virtuale*.</block>
-  <block id="dd5a058a2c46a43106332205c45a30ee" category="list-text">Fare clic sul nome della macchina virtuale Cloud Volumes ONTAP.</block>
-  <block id="e63661b2472f7f4dc8a5b7065ca6d208" category="list-text">Fare clic su *rete*.</block>
-  <block id="1610b48e6b730ea719aa58edd2bd7f8f" category="list-text">Fare clic sul nome dell'interfaccia di rete per nic0.</block>
-  <block id="b19099ea0de1f8c1bb7e71583234b1f4" category="list-text">In *Impostazioni*, fare clic su *configurazioni IP*.</block>
-  <block id="7dee7e783d13b6d5d415926ce0bfc306" category="list-text">Fare clic su *Aggiungi*.</block>
-  <block id="9c13fa64c3b08e53658431a53f9c6b28" category="list-text">Immettere un nome per la configurazione IP, selezionare *Dynamic*, quindi fare clic su *OK*.</block>
-  <block id="4835f23f6ce17d26f5e908f04392b0e7" category="list-text">Fare clic sul nome della configurazione IP appena creata, modificare l'opzione *Assignment* (assegnazione) in *Static* (statico) e fare clic su *Save* (Salva).</block>
-  <block id="42986462673b87a9a58e425c4a99bb91" category="paragraph">Si consiglia di utilizzare un indirizzo IP statico perché un indirizzo IP statico garantisce che l'indirizzo IP non venga modificato, il che può aiutare a prevenire inutili interruzioni dell'applicazione.</block>
-  <block id="3fc61f795c4036debc9bbee70495f5d3" category="paragraph">Se si desidera creare una LIF di gestione SVM, ripetere questa procedura per creare un indirizzo IP aggiuntivo.</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Al termine</block>
-  <block id="b961dd3512f483e2a3c032644c80c59b" category="paragraph">Copiare gli indirizzi IP privati appena creati. Quando si creano i file LIF per la nuova VM di storage, è necessario specificare tali indirizzi IP.</block>
   <block id="556696d309aaf81ce29c6a76f8f8a503" category="section-title">Coppia HA</block>
   <block id="e4e1c13bb0b14f6cb7608cbecea948ef" category="open-title">ISCSI</block>
-  <block id="de6c446eec02722de82f7d7eaffa3970" category="paragraph">Gli indirizzi IP iSCSI devono essere assegnati a nic0 in Azure prima di creare una VM di storage e allocare i LIF. Gli IPS per iSCSI sono assegnati a nic0 e non al bilanciamento del carico, perché iSCSI utilizza ALUA per il failover.</block>
-  <block id="bd88ed594712224b8e3f79251707158b" category="paragraph">È necessario creare i seguenti indirizzi IP:</block>
-  <block id="959519864abf23eb751637cd9762312f" category="list-text">Un indirizzo IP per l'accesso LIF ai dati iSCSI dal nodo 1</block>
-  <block id="72b179a0d02f32caa6ee9d21826a4a30" category="list-text">Un indirizzo IP per l'accesso LIF ai dati iSCSI dal nodo 2</block>
-  <block id="d9fa1bba25e264315bb45a5db857089c" category="list-text">Un indirizzo IP opzionale per una LIF di gestione delle macchine virtuali di storage (SVM)</block>
-  <block id="0212110e6e591f399e46a0a33621323b" category="paragraph">Questa LIF di gestione fornisce una connessione a strumenti di gestione come SnapCenter.</block>
-  <block id="27f352c696e29cd9fd0f401648ff9862" category="list-text">Fare clic sul nome della macchina virtuale Cloud Volumes ONTAP per il nodo 1.</block>
-  <block id="160ff1b01bd06e8151784b706f33a6a1" category="list-text">Ripetere questi passaggi sul nodo 2.</block>
-  <block id="69aaba68c1c7e074c02079ece294e4ca" category="list-text">Se si desidera creare una LIF di gestione SVM, ripetere questi passaggi sul nodo 1.</block>
   <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="open-title">NFS</block>
-  <block id="92e91b161b0371348686cd8b37ca5028" category="paragraph">Gli indirizzi IP utilizzati per NFS vengono allocati nel bilanciamento del carico in modo che gli indirizzi IP possano migrare verso l'altro nodo in caso di eventi di failover.</block>
-  <block id="8560b84a5b55caac8c8ef30051a197e5" category="list-text">Un indirizzo IP per l'accesso LIF dei dati NAS dal nodo 1</block>
-  <block id="aba6d4795536d5c4e61cf75ce0ddd22c" category="list-text">Un indirizzo IP per l'accesso LIF dei dati NAS dal nodo 2</block>
-  <block id="7be0ecb9e73595d673d5fbaed0cb6378" category="list-text">Nel portale Azure, aprire il servizio *Load Balancer*.</block>
-  <block id="8097feb21f6c4186704bf26f92131fe0" category="list-text">Fare clic sul nome del bilanciamento del carico per la coppia ha.</block>
-  <block id="7a5be31086b3ad69d1c6b2c5abafcc64" category="list-text">Creare una configurazione IP front-end per l'accesso LIF dei dati dal nodo 1, un'altra per l'accesso LIF dei dati dal nodo 2 e un altro IP front-end opzionale per una LIF di gestione delle macchine virtuali storage (SVM).</block>
-  <block id="91755019ec4f9b4503c2abd1e2018220" category="list-text">In *Settings* (Impostazioni), fare clic su *Frontend IP Configuration* (Configurazione IP front-end).</block>
-  <block id="b961ba228f0253598e8fe47f55865219" category="list-text">Inserire un nome per l'IP front-end, selezionare la subnet per la coppia Cloud Volumes ONTAP ha, lasciare selezionata l'opzione *dinamica* e, nelle regioni con zone di disponibilità, lasciare selezionata l'opzione *zona-ridondante* per garantire che l'indirizzo IP rimanga disponibile in caso di guasto di una zona.</block>
-  <block id="fde48a87720c7f4a7b3fe579cf70ce21" category="inline-image-macro">Una schermata che mostra l'aggiunta di un indirizzo IP front-end nel portale Azure in cui sono selezionati un nome e una subnet.</block>
-  <block id="c00e2d19af360558425fe43036ba7057" category="paragraph"><block ref="c00e2d19af360558425fe43036ba7057" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0da801a9d3d38ccf39fc77f357cbd875" category="list-text">Fare clic sul nome della configurazione IP front-end appena creata, impostare *Assignment* su *Static* e fare clic su *Save*.</block>
-  <block id="0f21ca89d8c8b745954f3d9e19a0dd80" category="list-text">Aggiungi una sonda di stato per ogni IP di frontend appena creato.</block>
-  <block id="1b45149e0b23a41687b2084ae6d33a48" category="list-text">Sotto *Settings* (Impostazioni) del bilanciamento del carico, fare clic su *Health probe*.</block>
-  <block id="dc5af89bd23317abec464d2c75aeaac1" category="list-text">Immettere un nome per la sonda sanitaria e un numero di porta compreso tra 63005 e 65000. Mantenere i valori predefiniti per gli altri campi.</block>
-  <block id="8d5ccc6064bf24d956199fe629c8a705" category="paragraph">È importante che il numero della porta sia compreso tra 63005 e 65000. Ad esempio, se si creano tre sonde di integrità, è possibile inserire le sonde che utilizzano i numeri di porta 63005, 63006 e 63007.</block>
-  <block id="3f158195d787a76b9930725abf90217b" category="inline-image-macro">Schermata dell'aggiunta di una sonda di integrità nel portale Azure in cui vengono immessi un nome e una porta.</block>
-  <block id="7221eeb99a62a5c16a91eaad3abc1af7" category="paragraph"><block ref="7221eeb99a62a5c16a91eaad3abc1af7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0f0494656b267aab37751c30e5a8a07e" category="list-text">Creare nuove regole di bilanciamento del carico per ciascun IP front-end.</block>
-  <block id="f11380e89562c6ffb0067deb927a00ee" category="list-text">Sotto le *Impostazioni* del bilanciamento del carico, fare clic su *regole di bilanciamento del carico*.</block>
-  <block id="b46de1ad1e07b7775bace9bf4917a405" category="list-text">Fare clic su *Add* (Aggiungi) e inserire le informazioni richieste:</block>
-  <block id="a914e28fc43d170da9c2b2b78518eb37" category="list-text">*Nome*: Immettere un nome per la regola.</block>
-  <block id="1e4efbe4a8dfa84e3f6f93e1573c601e" category="list-text">*IP Version* (versione IP): Selezionare *IPv4*.</block>
-  <block id="1ddd50f122f73d126a4cb3fee90d2b7b" category="list-text">*Indirizzo IP front-end*: Selezionare uno degli indirizzi IP front-end appena creati.</block>
-  <block id="8328ee96d378b2984c58f116fcccd3a6" category="list-text">*Ha Ports*: Attivare questa opzione.</block>
-  <block id="741c2eb7c095a3b40a6d1715966dbeb6" category="list-text">*Pool di backend*: Mantenere il pool di backend predefinito già selezionato.</block>
-  <block id="9e72535253d8088038289763956d0b16" category="list-text">*Health probe*: Selezionare la sonda sanitaria creata per l'IP front-end selezionato.</block>
-  <block id="36703ed8697639a53fe06da2f1d77acc" category="list-text">*Persistenza della sessione*: Selezionare *Nessuno*.</block>
-  <block id="f1830206581ce60d04d4025551d9e990" category="list-text">*Floating IP* (IP mobile): Selezionare *Enabled* (abilitato).</block>
-  <block id="0763674e9bf55481025f48bd27d7aa67" category="inline-image-macro">Schermata dell'aggiunta di una regola di bilanciamento del carico nel portale Azure con i campi mostrati sopra.</block>
-  <block id="4dfb9365c6db058f009ea80d9ad1d88a" category="paragraph"><block ref="4dfb9365c6db058f009ea80d9ad1d88a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5031fdddd713681aa180d7bfa60b1f72" category="list-text">Assicurarsi che le regole del gruppo di sicurezza di rete per Cloud Volumes ONTAP consentano al bilanciamento del carico di inviare le sonde TCP per le sonde di stato create al punto 4 precedente. Si noti che questa opzione è consentita per impostazione predefinita.</block>
   <block id="b4fdd997b1f33e0d4c6964444c2bf399" category="open-title">PMI</block>
-  <block id="c09d6988bf61135b41e7b195d446e2b9" category="paragraph">Gli indirizzi IP utilizzati per i dati SMB vengono allocati nel bilanciamento del carico in modo che gli indirizzi IP possano migrare verso l'altro nodo in caso di eventi di failover.</block>
-  <block id="c87f63c179c59eda8579e373c6a25976" category="paragraph">È necessario creare i seguenti indirizzi IP nel bilanciamento del carico:</block>
-  <block id="9b31eba9539b4b373752a1f9efafb8ac" category="list-text">Un indirizzo IP per una LIF iSCSI sul nodo 1 in ciascuna NIC0 della VM</block>
-  <block id="5aa1fc4c5c5e3c602f89524b94fcaf47" category="list-text">Un indirizzo IP per una LIF iSCSI sul nodo 2</block>
-  <block id="d31b2ca2df7d7ec89a597cf3ff166e6d" category="paragraph">Le LIF iSCSI sono necessarie per le comunicazioni DNS e SMB. A questo scopo viene utilizzato un LIF iSCSI perché non esegue la migrazione in caso di failover.</block>
-  <block id="6f2174023153761cdb987311021eaf2b" category="list-text">Creare il numero richiesto di configurazioni IP front-end solo per i LIF di dati e SVM:</block>
-  <block id="b31c05988fa937699345307f0d088b5e" category="list-text">Per le LIF iSCSI, aggiungere l'indirizzo IP per NIC0.</block>
-  <block id="d8268f30cad7ca754b650b30d5a9fb20" category="list-text">In Impostazioni, fare clic su *configurazioni IP*.</block>
-  <block id="f14404f1eb77db8c34dfa687da4e9969" category="inline-image-macro">Schermata della pagina delle configurazioni IP nel portale Azure</block>
-  <block id="d3f503b2101b1859a2272746e61a2bca" category="paragraph"><block ref="d3f503b2101b1859a2272746e61a2bca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d8292c375cfd1e8785887fa2307c216e" category="list-text">Immettere un nome per la configurazione IP, selezionare Dynamic (dinamica), quindi fare clic su *OK*.</block>
-  <block id="d139a8131606839195ad605bafe04b07" category="inline-image-macro">Una schermata della finestra Add IP Configuration (Aggiungi configurazione IP)</block>
-  <block id="d78a1a202c691ad37ba63488112cab29" category="paragraph"><block ref="d78a1a202c691ad37ba63488112cab29" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5007d33dbe3f9e50ed8c96fc08a7443a" category="list-text">Fare clic sul nome della configurazione IP appena creata, impostare l'assegnazione su Static (statico) e fare clic su *Save* (Salva).</block>
-  <block id="a094ded8d387643804f456ad69ef9c4e" category="section-title">Creazione di una VM di storage e di LIF</block>
-  <block id="3ad6e3f460248126da5c801e403088c1" category="paragraph">Dopo aver allocato gli indirizzi IP in Azure, è possibile creare una nuova VM di storage su un sistema a nodo singolo o su una coppia ha.</block>
-  <block id="5683cfda0c67cd1651e904160b0a5460" category="paragraph">Il modo in cui crei una VM di storage e dei LIF su un sistema a nodo singolo dipende dal protocollo di storage in uso.</block>
-  <block id="2d376cf045c4838856b9429d7fecf7a5" category="paragraph">Seguire questi passaggi per creare una nuova VM di storage, insieme ai LIF richiesti.</block>
   <block id="9b08db40ecf3304d34c7dadb34a6d2c2" category="list-text">Creare la VM di storage e un percorso verso la VM di storage.</block>
-  <block id="070ee68a98b928bc45bc4178848e21da" category="list-text">Creare una LIF dati:</block>
   <block id="cf9742a528f0c020828f8af26d4a20dc" category="list-text">Opzionale: Creare una LIF di gestione delle macchine virtuali dello storage.</block>
   <block id="15b547deddcdfd8bf2fb3a23397e7833" category="list-text">Assegnare uno o più aggregati alla VM di storage.</block>
   <block id="d6f0e34ef668049ec1996dc9805ae695" category="paragraph">Questo passaggio è necessario perché la nuova VM di storage deve accedere ad almeno un aggregato prima di poter creare volumi sulla VM di storage.</block>
-  <block id="b41808a70de11f6ad8400c22ebe933f1" category="paragraph">Il modo in cui si crea una VM di storage e una LIF su una coppia ha dipende dal protocollo di storage in uso.</block>
-  <block id="604199268b7709a557c60a09df0624bf" category="list-text">Utilizzare il seguente comando per creare una LIF iSCSI sul nodo 1.</block>
-  <block id="83871791a7611e5a981ec0b38a662078" category="list-text">Utilizzare il seguente comando per creare una LIF iSCSI sul nodo 2.</block>
   <block id="67694021a675f2be09781b9b9c744e99" category="list-text">Opzionale: Creare una LIF di gestione delle macchine virtuali dello storage sul nodo 1.</block>
   <block id="6705d4b1a3db9cb88b17655dcca33de5" category="list-text">Se si utilizza Cloud Volumes ONTAP 9.11.1 o versione successiva, modificare le policy dei servizi di rete per la VM di storage.</block>
-  <block id="aa700fba04d3b674bf01f1887210edfe" category="list-text">Immettere il seguente comando per accedere alla modalità avanzata.</block>
   <block id="7acb007d1fa18c791042f54b5a8aa8ee" category="paragraph">La modifica dei servizi è necessaria perché garantisce che Cloud Volumes ONTAP possa utilizzare la LIF iSCSI per le connessioni di gestione in uscita.</block>
-  <block id="622931dd0b6724a34dfe5a4f99b9a820" category="list-text">Utilizzare il seguente comando per creare un LIF NAS sul nodo 1.</block>
-  <block id="0cffe85429bb79552ce3607190d9dbad" category="list-text">Utilizzare il seguente comando per creare un LIF NAS sul nodo 2.</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Quali sono le prossime novità?</block>
-  <block id="9a34c8001fb2a94f36b91cd1711ee39f" category="paragraph">Dopo aver creato una VM di storage su una coppia ha, si consiglia di attendere 12 ore prima di eseguire il provisioning dello storage su tale SVM. A partire da Cloud Volumes ONTAP 9.10.1, BlueXP esegue la scansione delle impostazioni per il bilanciamento del carico di una coppia ha a un intervallo di 12 ore. Se sono presenti nuove SVM, BlueXP abilita un'impostazione che fornisce un failover non pianificato più breve.</block>
   <block id="eef256fe1f25b0dfdcc3971d7f0a9974" category="summary">È possibile avviare Cloud Volumes ONTAP in una configurazione a sistema singolo o come coppia ha in Google Cloud Platform.</block>
-  <block id="254d5c87d5ab437395f866390ea49cd0" category="doc">Lancio di Cloud Volumes ONTAP in Google Cloud</block>
   <block id="952f472ceaa325aaac5f1352ed448f4e" category="paragraph">È possibile avviare Cloud Volumes ONTAP in una configurazione a nodo singolo o come coppia ha in Google Cloud.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="section-title">Prima di iniziare</block>
   <block id="17871dd6725112548c5735d13d60d639" category="paragraph">Per creare un ambiente di lavoro, è necessario quanto segue.</block>
@@ -178,7 +92,6 @@
   <block id="9e636409b20980fb5089c87705851b4d" category="list-text">API Cloud Resource Manager</block>
   <block id="1101b09020ade12e90a562489e315c8d" category="list-text">API di Compute Engine</block>
   <block id="71660685d00034957db3f9a31c160978" category="list-text">API IAM (Identity and Access Management)</block>
-  <block id="733156037751f70e529112a458e8ade6" category="section-title">Avvio di un sistema a nodo singolo in Google Cloud</block>
   <block id="ee5b769fad1fe9446cc03d19d0a3d607" category="paragraph">Creare un ambiente di lavoro in BlueXP per avviare Cloud Volumes ONTAP in Google Cloud.</block>
   <block id="f153679ad4c5ae5aeae3a0ca4f337a37" category="list-text">[[subscribe]]nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e seguire le istruzioni.</block>
   <block id="02468344d7eb024c93087ede43938890" category="list-text">*Scegli una località*: Seleziona *Google Cloud* e *Cloud Volumes ONTAP*.</block>
@@ -291,7 +204,6 @@
   <block id="b76b908d4bfb0d3019c98ce87e366c54" category="paragraph">Per ulteriore assistenza, visitare il sito Web all'indirizzo<block ref="d1c7370c969cd368d88ed41a578eb051" category="inline-link-rx"></block>.</block>
   <block id="1e57268fd975664444ddbda428e56bf7" category="list-text">Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le autorizzazioni per i file e le cartelle e verificare che tali utenti possano accedere alla condivisione e creare un file.</block>
   <block id="d3a8708751ac3ed361daf8babcdabcc4" category="paragraph">Le quote consentono di limitare o tenere traccia dello spazio su disco e del numero di file utilizzati da un utente, un gruppo o un qtree.</block>
-  <block id="f23467ff8f84fc95ca2baa4b362c7865" category="section-title">Lancio di una coppia ha in Google Cloud</block>
   <block id="7289ff9561bd8f3124de5e821bd3e8e0" category="list-text">Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e seguire le istruzioni.</block>
   <block id="b5a7d19f6788ad4a9fa68128eabe2be1" category="list-text">*Scegli una località*: Seleziona *Google Cloud* e *Cloud Volumes ONTAP ha*.</block>
   <block id="47e8755e148fbe2f9d687cce086d2e82" category="list-text">*Dettagli e credenziali*: Selezionare un progetto, specificare un nome di cluster, selezionare un account di servizio, aggiungere etichette e specificare le credenziali.</block>
@@ -577,9 +489,7 @@
   <block id="0384244b4a5a8a089d8df0c3da87ddc5" category="paragraph">Questo passaggio è necessario se si abilita il tiering dei dati su Cloud Volumes ONTAP e si desidera crittografare i dati memorizzati nel bucket S3.</block>
   <block id="a5b811aae80c48f2c3219bcc0dc331ec" category="paragraph">Sarà necessario eseguire questo passaggio _dopo_ l'implementazione di Cloud Volumes ONTAP, in quanto il ruolo IAM viene creato quando si crea un ambiente di lavoro. (Naturalmente, hai la possibilità di utilizzare un ruolo IAM Cloud Volumes ONTAP esistente, quindi è possibile eseguire questo passaggio in precedenza).</block>
   <block id="7ed9c1f7193f7727cfac5a7b6f0c1266" category="summary">Utilizza Azure Key Vault per il tuo servizio di gestione delle chiavi di terze parti.</block>
-  <block id="0741b6c1237f126924ebdaa3fe6dbc4e" category="doc">Gestisci le chiavi con il Cloud Key Management Service di Google</block>
   <block id="0dbdff8ed1ef0e78c4dc84ace48205d6" category="inline-link-macro">Servizio di gestione delle chiavi di Google Cloud Platform (Cloud KMS)</block>
-  <block id="2f7905ac71167519792d73f964942175" category="paragraph">È possibile utilizzare <block ref="4ef7b266bd9680469191a283388836d8" category="inline-link-macro-rx"></block> Per proteggere le chiavi di crittografia ONTAP in un'applicazione implementata dalla piattaforma cloud Google.</block>
   <block id="0dbc3b305b67f45cc077782f1bde33be" category="list-text">Cloud Volumes ONTAP deve eseguire la versione 9.10.1 o successiva</block>
   <block id="3db7729c3f93b51e237e9f64f77736ce" category="list-text">Licenza VE (Volume Encryption) installata</block>
   <block id="436ea77bab9d72d8fe71dbccf1dd6613" category="list-text">Licenza di gestione delle chiavi di crittografia multi-tenant (MTEKM) installata, a partire da Cloud Volumes ONTAP 9.12.1 GA.</block>
@@ -669,7 +579,6 @@
   <block id="2f1e7d6affd61098f336e5b1777ec8e2" category="summary">BlueXP gestisce la configurazione dei componenti di rete per Cloud Volumes ONTAP, come indirizzi IP, netmask e route. È necessario assicurarsi che sia disponibile l'accesso a Internet in uscita, che siano disponibili indirizzi IP privati sufficienti, che siano disponibili le connessioni corrette e altro ancora.</block>
   <block id="fa6508c512d74f7de26a21390af6951b" category="doc">Requisiti di rete per Cloud Volumes ONTAP in AWS</block>
   <block id="a1a264e616e24563d4b8f8b5795ea403" category="section-title">Requisiti generali</block>
-  <block id="3091fa13c48831b4d7d6e8b6cb4b5bb1" category="paragraph">I seguenti requisiti devono essere soddisfatti in AWS.</block>
   <block id="5908bdfb58aef23bebf7df36d49b9dfb" category="section-title">Accesso a Internet in uscita per nodi Cloud Volumes ONTAP</block>
   <block id="f8ee8582a6b700d886898642f29f7b30" category="paragraph">I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.</block>
   <block id="ea42efb0eb933b55c2c4a89d521450df" category="list-text">https://support.netapp.com/aods/asupmessage</block>
@@ -783,7 +692,6 @@
   <block id="f63c987d15807845ae712461b133bad5" category="inline-link">Visualizzare i requisiti di rete per il connettore</block>
   <block id="60f0453bf0393ab630be6aa37dc20180" category="inline-link">Regole del gruppo di sicurezza in AWS</block>
   <block id="a02b7ad2b280aa9926f66385ec1478c2" category="summary">Cloud Volumes ONTAP include un account di amministrazione del cluster. Se necessario, puoi modificare la password per questo account da BlueXP.</block>
-  <block id="95d79008b0be56c31d097e76b7584763" category="doc">Modificare la password per Cloud Volumes ONTAP</block>
   <block id="38124763ec69515302fcd6a655b0cb92" category="list-text">Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro Cloud Volumes ONTAP.</block>
   <block id="a18ec44ef07922a650e590de9dd0a36e" category="inline-image-macro">Una schermata che mostra il menu disponibile dall'ambiente di lavoro che contiene l'azione Set password (Imposta password).</block>
   <block id="6daca7a21673390f9b4946d99b575dbc" category="paragraph"><block ref="6daca7a21673390f9b4946d99b575dbc" category="inline-image-macro-rx" type="image"></block></block>
@@ -1027,7 +935,6 @@
   <block id="e6929ac62766d022cca32bd1a5705a2a" category="cell">Comunicazione tra il mediatore ha e i nodi ha</block>
   <block id="c9ff61dbb68bf63fc7a40ac1d8f9a2cd" category="paragraph">Il gruppo di protezione predefinito include le seguenti regole in uscita.</block>
   <block id="6ac4e08b1d7c56a9609b4b262b83b42c" category="summary">I ruoli IAM con le autorizzazioni richieste devono essere collegati a ciascun nodo Cloud Volumes ONTAP. Lo stesso vale per il mediatore ha. È più semplice consentire a BlueXP di creare i ruoli IAM, ma è possibile utilizzare i propri ruoli.</block>
-  <block id="75c41138bbd7704a1e0b806bef4b58ac" category="doc">Impostare i ruoli IAM per Cloud Volumes ONTAP</block>
   <block id="f385f3aca90d403df78c03cbdf7eaa8c" category="paragraph">Questa attività è facoltativa. Quando si crea un ambiente di lavoro Cloud Volumes ONTAP, l'opzione predefinita è consentire a BlueXP di creare i ruoli IAM. Se le policy di sicurezza della tua azienda richiedono di creare autonomamente i ruoli IAM, segui la procedura riportata di seguito.</block>
   <block id="07561162983a030769cc8563b6143a06" category="inline-link-macro">Scopri come implementare Cloud Volumes ONTAP in C2S</block>
   <block id="1e71ce7defc90d8f5a2c46c08ba968df" category="list-text">Accedere alla console AWS IAM.</block>
@@ -1062,7 +969,6 @@
   <block id="0b52c0f8f311ea5465845d81cc4401f1" category="list-text">Selezionare un tipo di macchina virtuale, selezionare la casella di controllo per confermare di aver compreso le implicazioni della modifica, quindi fare clic su *Cambia*.</block>
   <block id="a8e111d8043785d9d556635c64194b73" category="paragraph">Cloud Volumes ONTAP si riavvia con la nuova configurazione.</block>
   <block id="2d136412703a915f2b3b47846e42252a" category="summary">Gestisci gli aggregati aggiungendo dischi, visualizzando informazioni sugli aggregati ed eliminandoli.</block>
-  <block id="ae271afdca3c7d6785a9aefa74e6c80e" category="doc">Gestire le impostazioni di capacità su un connettore</block>
   <block id="b62aaf3fb48f9f8f103dc68c41211be5" category="paragraph">Ogni connettore dispone di impostazioni che determinano il modo in cui gestisce la capacità aggregata per Cloud Volumes ONTAP.</block>
   <block id="4edc935aeaaf3923beb2e4249e6c56f3" category="paragraph">Queste impostazioni influiscono su tutti i sistemi Cloud Volumes ONTAP gestiti da un connettore. Se si dispone di un altro connettore, è possibile configurarlo in modo diverso.</block>
   <block id="5ad10cfb674234136c181d096cb59522" category="paragraph-title">Autorizzazioni richieste</block>
@@ -1076,7 +982,6 @@
   <block id="0bc3c683bdb3389ca9d8d2211fce0878" category="list-text">Definisce la quantità di spazio libero richiesta sul Tier di performance (dischi) quando si tierano i dati su un Tier di capacità (storage a oggetti).</block>
   <block id="3e230a58ba269a917d314abcc623818e" category="paragraph">Il rapporto è importante per gli scenari di disaster recovery. Man mano che i dati vengono letti dal Tier di capacità, Cloud Volumes ONTAP sposta i dati nel Tier di performance per offrire performance migliori. Se lo spazio non è sufficiente, Cloud Volumes ONTAP non può spostare i dati.</block>
   <block id="627dbb600651aad7173ae13133dfe740" category="summary">Il supporto di NetApp è incluso nei sistemi PAYGO di Cloud Volumes ONTAP, ma è necessario prima attivare il supporto registrando i sistemi con NetApp.</block>
-  <block id="a37ea04c3e1568f7c0e8e6abc9104d40" category="doc">Registrazione di sistemi pay-as-you-go</block>
   <block id="969ea14c5bc8e5c519f2569d0b7e4ead" category="inline-link-macro">descritto in questa pagina</block>
   <block id="145677a5a159dfbbd80d693eb835dd56" category="paragraph">La registrazione di un sistema PAYGO con NetApp è necessaria per aggiornare il software ONTAP utilizzando uno qualsiasi dei metodi <block ref="a298d5e88f2fe29dd7b686b16fbea686" category="inline-link-macro-rx"></block>.</block>
   <block id="331278b9811c6edc293cd27e4bb970a2" category="admonition">Un sistema che non è registrato per il supporto riceverà comunque le notifiche di aggiornamento software che vengono visualizzate in BlueXP quando è disponibile una nuova versione. Tuttavia, è necessario registrare il sistema prima di poter aggiornare il software.</block>
@@ -1336,12 +1241,10 @@
   <block id="440a43d295102d579da0f78b165052a6" category="list-text">Per cancellare lo stato NVFAIL</block>
   <block id="b0ed905668b5ca4fe39a1e3a130692a9" category="list-text"><block ref="cc8933b6148f453ef43eedb65db7560a" prefix="" category="inline-code"></block></block>
   <block id="d8fe61fe121132ae71b6616d52f15f56" category="summary">Cloud Volumes ONTAP supporta la crittografia dei volumi NetApp (NVE) e la crittografia aggregata NetApp (NAE) con un gestore di chiavi esterno. NVE e NAE sono attivati per impostazione predefinita se si imposta un gestore di chiavi esterno.</block>
-  <block id="7d0e2e1d7651a009804fe72f40cbe851" category="doc">Crittografia dei volumi con le soluzioni di crittografia NetApp</block>
   <block id="9472acffdb6a585b24d4317169bbc868" category="inline-link-macro">Scopri di più su queste soluzioni di crittografia</block>
   <block id="401a8aaa330fe64d45395192c047e1ed" category="paragraph">Cloud Volumes ONTAP supporta la crittografia dei volumi NetApp (NVE) e la crittografia aggregata NetApp (NAE). NVE e NAE sono soluzioni software che consentono la crittografia dei volumi a riposo dei dati conforme a FIPS 140-2. <block ref="d36456219fc3d98cd4133816e30fd33f" category="inline-link-macro-rx"></block>.</block>
   <block id="154811f59111df605f6aebc9999a1135" category="paragraph">NVE e NAE sono supportati con un gestore di chiavi esterno.</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">Tool di matrice di interoperabilità NetApp</block>
-  <block id="a22063e6d541a4b1d385c3d940e03996" category="doc">Creare macchine virtuali storage per il data-service per Cloud Volumes ONTAP in Google Cloud</block>
   <block id="129ebe82fb349647f39c555285fb6251" category="paragraph">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Potresti sapere che si tratta di un _SVM_ o di un _vserver_. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage.</block>
   <block id="77701b3d3cb3179bddf053dbed6e2e43" category="paragraph">A partire dalla versione 9.11.1, sono supportate più macchine virtuali storage con configurazioni Cloud Volumes ONTAP specifiche in Google Cloud. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> Per verificare il numero di VM storage supportate per la versione di Cloud Volumes ONTAP in uso.</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="section-title">Creare una VM di storage</block>
@@ -1359,18 +1262,15 @@
   <block id="d1432d772b2382ef2395e1eed551d5bb" category="paragraph-title">Autorizzazioni richieste per Google Cloud</block>
   <block id="9edd86f763fc6d21418429b5c63134af" category="inline-link">Le policy fornite da NetApp</block>
   <block id="8786838db6c83df6feac856057d2e141" category="list-text">Utilizzare la seguente chiamata API per creare una VM di storage:</block>
-  <block id="78beb47b48fe8b17a288b32a8942a187" category="paragraph"><block ref="969418114de5daee0030fd2eade35222" prefix="" category="inline-code"></block></block>
   <block id="995ddfd1247131c9653edbf829fa6e28" category="paragraph">L'ente di richiesta deve includere quanto segue:</block>
   <block id="b93afa1b577022f0769bc7e27b5bcd75" category="section-title">Gestire le VM di storage su coppie ha</block>
   <block id="4a5ed1e1f5c4ada56ab2471bc9700165" category="paragraph">L'API BlueXP supporta anche la ridenominazione e l'eliminazione delle macchine virtuali di storage sulle coppie ha.</block>
   <block id="c97c5ffc330239a3245482bb4881877a" category="section-title">Rinominare una VM di storage</block>
   <block id="e0867a20bdb8328df5da5826abffd2f7" category="paragraph">Se necessario, è possibile modificare il nome di una VM di storage in qualsiasi momento.</block>
   <block id="369a2d15e783c13b71dafb712d78bd30" category="list-text">Utilizzare la seguente chiamata API per rinominare una VM di storage:</block>
-  <block id="a8e13a4a2ae779d87c425f89f896c8d6" category="paragraph"><block ref="e167fe445b9575f30af233894a7d0ade" prefix="" category="inline-code"></block></block>
   <block id="ce9c0fa786ae9e9debeb029c1c0a4c92" category="section-title">Eliminare una VM di storage</block>
   <block id="60bf8baad4677ce21f08a45b132bf6a5" category="paragraph">Se non hai più bisogno di una VM di storage, puoi eliminarla da Cloud Volumes ONTAP.</block>
   <block id="730a4c8af06cfa818a6cf7829358b200" category="list-text">Utilizzare la seguente chiamata API per eliminare una VM di storage:</block>
-  <block id="cf85e355c90a5d24771cdce3003c6914" category="paragraph"><block ref="4ff7e1d96489ff4a1886b99f43cd0f39" prefix="" category="inline-code"></block></block>
   <block id="a194c96a36b587eade03d569bf173238" category="summary">È possibile attivare lo storage WORM (Write Once, Read Many) su un sistema Cloud Volumes ONTAP per conservare i file in forma non modificata per un periodo di conservazione specificato. Lo storage cloud WORM è basato sulla tecnologia SnapLock, il che significa che i file WORM sono protetti a livello di file.</block>
   <block id="8aca368ccd90320c96e8a69a43545003" category="doc">Storage WORM</block>
   <block id="1ee261e062b77615a21251aa4b6da907" category="section-title">Come funziona lo storage WORM</block>
@@ -1472,7 +1372,6 @@
   <block id="3a16d1001bab9c4cc22a6ccd110b53f8" category="paragraph">I nodi Cloud Volumes ONTAP risultano altamente utilizzati (oltre il 90%) dagli strumenti di monitoraggio del tuo cloud provider. Questo perché ONTAP riserva tutte le vCPU presentate alla macchina virtuale in modo che siano disponibili quando necessario.</block>
   <block id="771c7e9b34be7feb4bb80719b7f2825f" category="inline-link">Articolo della Knowledge base di NetApp su come monitorare l'utilizzo della CPU ONTAP utilizzando la CLI</block>
   <block id="f71bca1a74e3009d7cff4912558ab628" category="summary">Impostare un gateway di transito AWS per consentire l'accesso del client NAS agli indirizzi IP mobili dall'esterno del VPC in cui risiede Cloud Volumes ONTAP. Ciò è vantaggioso perché gli IP mobili migrano automaticamente tra i nodi quando si verificano errori.</block>
-  <block id="d2a72b7b5a38468116ebf74213d0a809" category="doc">Configurazione di un gateway di transito AWS per coppie ha in più AZS</block>
   <block id="74800c4b0c4f7420856e108da469e4d7" category="paragraph">Configurare un gateway di transito AWS per consentire l'accesso a una coppia ha <block ref="b4592641b260566283cc706f7ca397da" category="inline-link-macro-rx"></block> Dall'esterno del VPC in cui risiede la coppia ha.</block>
   <block id="3ff5b1c89b5d16ccd4334e837046b7f5" category="paragraph">Quando una configurazione Cloud Volumes ONTAP ha viene distribuita in più zone di disponibilità AWS, sono richiesti indirizzi IP mobili per l'accesso ai dati NAS dall'interno del VPC. Questi indirizzi IP mobili possono migrare tra i nodi in caso di guasti, ma non sono accessibili in modo nativo dall'esterno del VPC. Gli indirizzi IP privati separati forniscono l'accesso ai dati dall'esterno del VPC, ma non forniscono il failover automatico.</block>
   <block id="241d70a75eb5d661a8828f65cd4e9d26" category="paragraph">Gli indirizzi IP mobili sono richiesti anche per l'interfaccia di gestione del cluster e per la LIF di gestione SVM opzionale.</block>
@@ -1574,8 +1473,6 @@
   <block id="70fb554e00e352dd7da6941d99b53751" category="inline-link-macro">Scopri di più sul supporto per volumi elastici</block>
   <block id="1cbde96d4494f1d0a0cc701b14f4979e" category="list-text">In AWS, un aggregato può contenere fino a 6 dischi delle stesse dimensioni. Tuttavia, se si dispone di una configurazione che supporta la funzione Amazon EBS Elastic Volumes, un aggregato può contenere fino a 8 dischi. <block ref="e64e49a1cded5f4109adae46b4faa045" category="inline-link-macro-rx"></block>.</block>
   <block id="b8dd8c06193176beb2ad15367f7a1a0d" category="paragraph">La dimensione massima del disco è 16 TIB.</block>
-  <block id="3b4f2c0ef76da93b9a05416912b2ab5e" category="inline-link-macro">eseguire il tier dei dati inattivi per lo storage a oggetti a basso costo</block>
-  <block id="c2bd9a205e3f7a9d01f0534822cbff80" category="paragraph">Il tipo di disco EBS sottostante può essere SSD General Purpose (gp3 o gp2), SSD IOPS con provisioning (io1) o HDD con throughput ottimizzato (st1). È possibile associare un disco EBS con Amazon S3 a. <block ref="767b2bdd82880da72a9a5d87e1fd40da" category="inline-link-macro-rx"></block>.</block>
   <block id="97329aff812b28715c211efe44a78032" category="list-text">Storage NVMe locale</block>
   <block id="d972474de88f813a7a04eb9b78f672ee" category="list-text">Alcuni tipi di istanze EC2 includono lo storage NVMe locale, utilizzato da Cloud Volumes ONTAP <block ref="453179a92f33277aeed8bea1597d5257" category="inline-link-macro-rx"></block>.</block>
   <block id="43470be7fa05cd5cc13c78cbd86ad31b" category="inline-link">Documentazione AWS: Tipi di volume EBS</block>
@@ -1593,7 +1490,6 @@
   <block id="cc9198979434b483c842956cafd0f2b9" category="list-text">I _dischi gestiti SSD standard_ offrono performance costanti per i carichi di lavoro che richiedono IOPS ridotti.</block>
   <block id="3bd02bf5ff179461fb4f60bda2ac3a05" category="list-text">_Dischi gestiti HDD standard_ sono una buona scelta se non hai bisogno di IOPS elevati e vuoi ridurre i costi.</block>
   <block id="aba7d83fbcf4393f33b8acf1f6ff00a3" category="paragraph">Ogni tipo di disco gestito ha una dimensione massima di 32 TIB.</block>
-  <block id="bb648ece982c20c24a62b827d539a0d3" category="paragraph">È possibile associare un disco gestito con lo storage Azure Blob a. <block ref="767b2bdd82880da72a9a5d87e1fd40da" category="inline-link-macro-rx"></block>.</block>
   <block id="b049fcbe8198301adc6bf87634a02845" category="list-text">Coppie HA</block>
   <block id="d83f214fdb8074463fb047c3669d0f00" category="list-text">Le coppie HA utilizzano due tipi di dischi che offrono performance elevate per i carichi di lavoro i/o-intensive a un costo più elevato:</block>
   <block id="de017bcc9ee62a910294463646126cd7" category="list-text">_Premium page blob_ con una dimensione massima del disco di 8 TIB</block>
@@ -1608,7 +1504,6 @@
   <block id="b40a553e51c475509749f5fbf966ca80" category="list-text"><block ref="b40a553e51c475509749f5fbf966ca80" category="inline-link-rx"></block></block>
   <block id="409e6786522e4428d2517478280ecf40" category="section-title">Storage Google Cloud</block>
   <block id="e289128f5466f0eacab7fa58b05c8169" category="paragraph">In Google Cloud, un aggregato può contenere fino a 6 dischi delle stesse dimensioni. La dimensione massima del disco è 64 TIB.</block>
-  <block id="e261e4463ca8a8d53b2ed70156b40345" category="paragraph">Il tipo di disco può essere _dischi persistenti SSD Zonal_, _dischi persistenti bilanciati Zonal_ o _dischi persistenti standard Zonal_. È possibile associare dischi persistenti con un bucket di storage Google a. <block ref="767b2bdd82880da72a9a5d87e1fd40da" category="inline-link-macro-rx"></block>.</block>
   <block id="76cede1efa6255431fb1182712250d63" category="inline-link">Documentazione di Google Cloud: Opzioni di storage</block>
   <block id="b7ed79b872561b49bacf1c02f4cd93bb" category="list-text"><block ref="b7ed79b872561b49bacf1c02f4cd93bb" category="inline-link-rx"></block></block>
   <block id="f28d5328ff2f04ce708846be616a8a21" category="inline-link">Esamina i limiti di storage per Cloud Volumes ONTAP in Google Cloud</block>
@@ -1619,7 +1514,6 @@
   <block id="7546f1896fe746593fe39c57ea23bd23" category="paragraph">RAID0 non supporta l'utilizzo di hot spare per la ridondanza.</block>
   <block id="ee9bdabf55f98e793b6a92484c2f5bb5" category="paragraph">La creazione di dischi inutilizzati (hot spare) collegati a un'istanza di Cloud Volumes ONTAP è una spesa non necessaria e può impedire il provisioning di spazio aggiuntivo in base alle necessità. Pertanto, non è consigliato.</block>
   <block id="49597f561fcd84db348e2aab5dd8367a" category="summary">Gli attacchi ransomware possono costare tempo di business, risorse e reputazione. BlueXP consente di implementare la soluzione NetApp per ransomware, che fornisce strumenti efficaci per la visibilità, il rilevamento e la risoluzione dei problemi.</block>
-  <block id="0c0c93dcca58dc6ba5a46ef2bf56980b" category="doc">Miglioramento della protezione contro ransomware</block>
   <block id="6200e275553fcb2d81141061804129aa" category="list-text">Nella pagina Canvas, fare doppio clic sul nome del sistema configurato per la protezione ransomware.</block>
   <block id="68e277e7409c8587f5447ff6e1d07bac" category="list-text">Nella scheda Overview (Panoramica), fare clic sul pannello Features (funzionalità), quindi sull'icona a forma di matita accanto a *ransomware Protection*.</block>
   <block id="6fd2a34cb3ac050adc4e4ef8cbaf3727" category="list-text">Implementare la soluzione NetApp per ransomware:</block>
@@ -1632,7 +1526,6 @@
   <block id="bedeb7ed2f1de2e5aa6476ccef9aa199" category="admonition">BlueXP crea questo ambito quando si attiva FPolicy su Cloud Volumes ONTAP. L'elenco si basa su tipi di file ransomware comuni. È possibile personalizzare le estensioni dei file bloccati utilizzando i comandi _vserver fpolicy scope_ della CLI di Cloud Volumes ONTAP.</block>
   <block id="38d0c92f0fe5d71a686749aa8ae6bdeb" category="inline-image-macro">Una schermata che mostra la pagina di protezione ransomware disponibile all'interno di un ambiente di lavoro. La schermata mostra il numero di volumi senza Snapshot Policy e la possibilità di bloccare le estensioni dei file ransomware.</block>
   <block id="857b5e162224b7e49d7d0984b80e25ae" category="paragraph"><block ref="857b5e162224b7e49d7d0984b80e25ae" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f6ff5ec319049af5e46c8b306858252c" category="doc">Esclusione dei blocchi CIFS per le coppie ha Cloud Volumes ONTAP in Azure</block>
   <block id="f0186be0ddaae2816f6d38932fcc74bb" category="paragraph">Microsoft Azure pianifica gli eventi di manutenzione periodica sulle macchine virtuali. Quando si verifica un evento di manutenzione su una coppia Cloud Volumes ONTAP ha, la coppia ha avvia il Takeover dello storage. Se durante questo evento di manutenzione sono presenti sessioni CIFS attive, i blocchi sui file CIFS possono impedire il giveback dello storage.</block>
   <block id="b41beec6b021aed8f5f64bcce68ec5c9" category="paragraph">Se si attiva questa impostazione, Cloud Volumes ONTAP veto i blocchi e ripristina le sessioni CIFS attive. Di conseguenza, la coppia ha può completare il giveback dello storage durante questi eventi di manutenzione.</block>
   <block id="7dcc83de27613f9409a84f38ee5d345e" category="admonition">Questo processo potrebbe interrompere i client CIFS. I dati non impegnati dai client CIFS potrebbero andare persi.</block>
@@ -1738,7 +1631,6 @@
   <block id="b251b1d8bf96f666a018d6d8517138ae" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Avviare Cloud Volumes ONTAP utilizzando BlueXP</block>
   <block id="b3b157e5786bf5334a6407290f42337e" category="paragraph">Fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro), selezionare il tipo di sistema che si desidera implementare e completare la procedura guidata. <block ref="e7b659d6e9cf4401150cabbf78e23874" category="inline-link-macro-rx"></block>.</block>
   <block id="824be8b95270c8a8618f49cb7fb21ae8" category="inline-link">Cosa fa BlueXP con le autorizzazioni Google Cloud</block>
-  <block id="08648df35499562b62cbf1ab3e9bf7ec" category="doc">Gestire gli aggregati</block>
   <block id="05c1f921312a3701ff4fe737635bbfb0" category="paragraph">Se si desidera eliminare un aggregato, è necessario prima eliminare i volumi nell'aggregato.</block>
   <block id="47a29d3d79731f5f3ac2e35595cdd5a9" category="list-text">Nella pagina Canvas, fare doppio clic sull'ambiente di lavoro Cloud Volumes ONTAP su cui si desidera gestire gli aggregati.</block>
   <block id="021ed7718b4d1f8ff42ac2d9a653d143" category="list-text">Nell'ambiente di lavoro, fare clic sulla scheda *aggregati*.</block>
@@ -1808,7 +1700,6 @@
   <block id="91e09743e1f25ab741e5f94a5852dfc4" category="list-text">9.8 P10</block>
   <block id="19d6e3f3d60f0c83123cd6e040378404" category="list-text">9.7 P6</block>
   <block id="e23ee9601514984c6adb31b5a38af712" category="summary">Quando un nodo in una coppia ha non è disponibile, l'altro nodo serve i dati per il partner per fornire un servizio dati continuo. Si tratta di un processo chiamato "Takeover dello storage". Diverse azioni non sono disponibili fino al completamento del giveback in storage.</block>
-  <block id="a92aeaf26ae88668d7b9643f7ccf01dd" category="doc">Azioni non disponibili durante il takeover</block>
   <block id="94f8a286fcfa150fec1e77af71cae0fb" category="paragraph">Quando un nodo in una coppia ha non è disponibile, l'altro nodo serve i dati per il partner per fornire un servizio dati continuo. Si chiama _storage Takeover_. Diverse azioni non sono disponibili fino al completamento del giveback in storage.</block>
   <block id="68e3d383b46bd2d1a96c2a6b2ddbc3f5" category="admonition">Quando un nodo in una coppia ha non è disponibile, lo stato dell'ambiente di lavoro in BlueXP è _degradato_.</block>
   <block id="71279608104bfad0fd0c8e38e3fe117b" category="paragraph">Le seguenti azioni non sono disponibili dall'acquisizione dello storage BlueXP:</block>
@@ -1895,7 +1786,6 @@
   <block id="7d831c8a95d6f1d0ec777a6a3624c915" category="paragraph">Se il sistema Cloud Volumes ONTAP di destinazione supporta volumi elastici, un volume di destinazione viene posizionato su un aggregato con volumi elastici attivati (purché si scelga un disco gp3 o io1).</block>
   <block id="40f78d193b858589ad7df4dd4ce61ad6" category="inline-link">Scopri come configurare la replica dei dati</block>
   <block id="44579e142f1f753a153dbb19dac8125c" category="summary">Verificare che il file disk.raw scaricato da Google Cloud corrisponda al contenuto del file digest utilizzando OpenSSL.</block>
-  <block id="4768a2782def76fdf9b074232676aba9" category="doc">Verifica del file disk.raw e del contenuto del file digest con OpenSSL</block>
   <block id="248cdc66c441a6612309f6e2ce80a63c" category="inline-link">NSS</block>
   <block id="9790936d7b09c3cf187b770347ee60d1" category="paragraph">È possibile verificare il file disk.raw scaricato da Google Cloud rispetto al contenuto del file digest disponibile tramite<block ref="4af4717946461f54169780875a3b5a98" category="inline-link-rx"></block> Con OpenSSL.</block>
   <block id="64bba92e74e274ead8d4e951ad8c9d3a" category="admonition">I comandi OpenSSL per la convalida dell'immagine sono compatibili con macchine Linux, Mac OS e Windows.</block>
@@ -1984,7 +1874,6 @@
   <block id="2dd15870a87ceaf45f31f08d066afaeb" category="list-text">Terminare il sistema Cloud Volumes ONTAP non più necessario eliminando l'ambiente di lavoro originale.</block>
   <block id="2464ba8f7f97ce117f749b75a1c60906" category="inline-link">Scopri come eliminare un ambiente di lavoro Cloud Volumes ONTAP</block>
   <block id="ff6bb7f0e5c448daaba5bf73047a6a3c" category="summary">Se hai bisogno di più storage dopo il lancio del sistema Cloud Volumes ONTAP iniziale, puoi creare nuovi volumi FlexVol per NFS, CIFS o iSCSI da BlueXP.</block>
-  <block id="c65544a3678422a2d15f8bc1a12dec12" category="doc">Creare volumi FlexVol</block>
   <block id="7562f2634f470a74290453441e1766ad" category="paragraph">BlueXP offre diversi modi per creare un nuovo volume:</block>
   <block id="9a78a69978c460378acf553a1b850e91" category="paragraph">Alcune note sul provisioning dei volumi:</block>
   <block id="b4bf394344d874ef0478f5ed2de8136f" category="inline-link-macro">Requisiti di rete per Cloud Volumes ONTAP per AWS</block>
@@ -2141,7 +2030,6 @@
   <block id="89fe433ed203b193e97ffc51ade125be" category="paragraph">Se configurato correttamente, Cloud Volumes ONTAP crea automaticamente il volume e attiva la crittografia del volume.</block>
   <block id="776c67d51f3f1c503c9062c9d812c2b7" category="list-text">Verificare che il volume sia stato creato e crittografato correttamente. In tal caso, il<block ref="9ce4bbb945ea9ffbae0bb48d94582271" prefix=" " category="inline-code"></block> il parametro viene visualizzato come<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>.<block ref="bdc80968b38151c7cc60f03d391b7c79" prefix=" " category="inline-code"></block></block>
   <block id="3116f8acc3e396f2ab1859f3fbe8234e" category="summary">Puoi arrestare e avviare Cloud Volumes ONTAP da BlueXP per gestire i costi di calcolo del cloud.</block>
-  <block id="049a8722d9a2366145bef1fc4b429506" category="doc">Gestione dello stato di Cloud Volumes ONTAP</block>
   <block id="43a0c13e1a1befde3ea78446dc73bc97" category="section-title">Pianificazione degli arresti automatici di Cloud Volumes ONTAP</block>
   <block id="d4cf496f112c8443c55c77f819b95b4b" category="paragraph">Per ridurre i costi di calcolo, potrebbe essere necessario arrestare Cloud Volumes ONTAP durante intervalli di tempo specifici. Invece di eseguire questa operazione manualmente, è possibile configurare BlueXP in modo che si spenga e riavvii automaticamente i sistemi in determinati momenti.</block>
   <block id="719804aecba45f2a91fc03419f9f60ac" category="list-text">Quando si pianifica un arresto automatico del sistema Cloud Volumes ONTAP, BlueXP posticipa l'arresto se è in corso un trasferimento di dati attivo.</block>
@@ -2169,10 +2057,8 @@
   <block id="bb7e6cfdc4746a614a2674f0e2c56e43" category="list-text">Fare clic su *Spegni*.</block>
   <block id="5f2e3fd1b057bcc33ab14fddf0b6d211" category="paragraph">L'arresto del sistema può richiedere fino a qualche minuto. È possibile riavviare i sistemi in un secondo momento dalla pagina ambiente di lavoro.</block>
   <block id="b5fc4208e494804d1484996e111220af" category="summary">È possibile avviare le istanze di Cloud Volumes ONTAP in una configurazione a sistema singolo o come coppia ha in AWS.</block>
-  <block id="6602afb860a6cca23c3b75bf601365eb" category="doc">Avvio di Cloud Volumes ONTAP in AWS</block>
   <block id="45fa74d97bba23976f6236bb8a583eb3" category="paragraph">È possibile avviare Cloud Volumes ONTAP in una configurazione a sistema singolo o come coppia ha in AWS.</block>
   <block id="70bc0792aaac2d1fe5c19e375b615c8f" category="list-text">Configurazioni DNS e Active Directory per CIFS.</block>
-  <block id="9ae9e2a95a93a162ede8aa13ce31e809" category="section-title">Avvio di un sistema Cloud Volumes ONTAP a nodo singolo in AWS</block>
   <block id="da6a1a281804977deca79ae615d580d8" category="paragraph">Subito dopo aver creato l'ambiente di lavoro, BlueXP avvia un'istanza di test nel VPC specificato per verificare la connettività. Se l'esito è positivo, BlueXP termina immediatamente l'istanza e avvia la distribuzione del sistema Cloud Volumes ONTAP. Se BlueXP non riesce a verificare la connettività, la creazione dell'ambiente di lavoro non riesce. L'istanza di test è t2.nano (per la tenancy VPC predefinita) o m3.medium (per la tenancy VPC dedicata).</block>
   <block id="5f9fae15ed0e9699a97ede914a14bdc5" category="list-text">*Scegli una località*: Seleziona *Amazon Web Services* e *Cloud Volumes ONTAP nodo singolo*.</block>
   <block id="2548b207aecb436cf10911e9afefdeb4" category="list-text">*Dettagli e credenziali*: Se si desidera, modificare le credenziali e l'abbonamento AWS, inserire un nome di ambiente di lavoro, aggiungere tag, se necessario, quindi inserire una password.</block>
@@ -2218,7 +2104,6 @@
   <block id="92a1203fc5511fdb287e0ca1b80062ce" category="list-text">*Profilo di utilizzo, tipo di disco e policy di tiering*: Scegliere se attivare le funzionalità di efficienza dello storage e modificare la policy di tiering dei volumi, se necessario.</block>
   <block id="de39a020e8e0c1962c8c0dfa6467fd71" category="list-text">Fare clic su *ulteriori informazioni* per visualizzare i dettagli relativi al supporto e alle risorse AWS che BlueXP acquisterà.</block>
   <block id="d9bc9104669da346ed2fadb2cb686999" category="paragraph">BlueXP avvia l'istanza di Cloud Volumes ONTAP. Puoi tenere traccia dei progressi nella timeline.</block>
-  <block id="a32a5939a1bb08953d44c08ef33a7ad2" category="section-title">Avvio di una coppia Cloud Volumes ONTAP ha in AWS</block>
   <block id="e1bc841e2651c6522307e17c20df7a4d" category="paragraph">Se si desidera avviare una coppia Cloud Volumes ONTAP ha in AWS, è necessario creare un ambiente di lavoro ha in BlueXP.</block>
   <block id="54092d74685a14050a9f2b1e926a5091" category="paragraph">Al momento, le coppie ha non sono supportate con gli outpost AWS.</block>
   <block id="6b2eadbbc64d8760da4136e28da230c2" category="list-text">*Scegli una località*: Seleziona *Amazon Web Services* e *Cloud Volumes ONTAP ha*.</block>
@@ -2256,7 +2141,6 @@
   <block id="8d6456bdd46775a0bde58d79fa727b86" category="paragraph">Per ulteriori informazioni, fare riferimento a.<block ref="0d1fec14af342ac3f0970d5f69f9ea12" category="inline-link-rx"></block></block>
   <block id="4d5272b77be8e6cf2d9611b8c660d0aa" category="list-text">Utilizzare il parametro "GcpEncryption" con la richiesta API durante la creazione di un ambiente di lavoro.</block>
   <block id="fc0a70bcada485a87b25779f9232cd77" category="summary">Cloud Volumes ONTAP richiede un account di servizio cloud Google per due scopi. Il primo è quando abiliti il tiering dei dati per il tiering dei dati cold in storage a oggetti a basso costo in Google Cloud. Il secondo è quando si abilita il backup e ripristino BlueXP per eseguire il backup dei volumi in uno storage a oggetti a basso costo.</block>
-  <block id="d39a322c0902d3bf2bf75781b1e1c8ab" category="doc">Creare un account di servizio per il tiering e i backup dei dati</block>
   <block id="5632566b6a310163e5233af96d1f233d" category="paragraph">Cloud Volumes ONTAP utilizza l'account di servizio per accedere e gestire un bucket per i dati a più livelli e un altro bucket per i backup.</block>
   <block id="ab6fcc124e86604f6bab5da13aaea51a" category="inline-link">Accedere alla pagina Service accounts (account servizio)</block>
   <block id="7dc4b63dc4834aecd751b91ed3de3d39" category="list-text">Nella console di Google Cloud,<block ref="72863ecd427c906452e0c3d21111bdac" category="inline-link-rx"></block>.</block>
@@ -2274,7 +2158,6 @@
   <block id="280ee264bbde91d0e35a15c5c017570d" category="inline-image-macro">Schermata della pagina Dettagli e credenziali in cui è possibile attivare un account di servizio per Cloud Volumes ONTAP.</block>
   <block id="391642837451179291d9fd13ff003fec" category="paragraph"><block ref="391642837451179291d9fd13ff003fec" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4760896a3351a42c072a61eb664108e5" category="summary">È possibile modificare le tabelle di routing AWS che includono i percorsi verso gli indirizzi IP mobili per una coppia ha implementata in più zone di disponibilità AWS. È possibile eseguire questa operazione se i nuovi client NFS o CIFS devono accedere a una coppia ha in AWS.</block>
-  <block id="f431a02cb5c1646114365a3adfa4233b" category="doc">Modificare le tabelle di percorso per le coppie ha in più AZS</block>
   <block id="89cac051c93d21ebf3a23db9a240bbd1" category="paragraph">È possibile modificare le tabelle di routing AWS che includono i percorsi verso gli indirizzi IP mobili per una coppia ha implementata in più AWS Availability Zones (AZS). È possibile eseguire questa operazione se i nuovi client NFS o CIFS devono accedere a una coppia ha in AWS.</block>
   <block id="ca2685261e68781c7e281c106027c9d6" category="list-text">Nella scheda Panoramica, fare clic sul pannello funzioni, quindi fare clic sull'icona a forma di matita accanto a *tabelle di percorso*.</block>
   <block id="4b6844f3c505a6f4a3db39ea33fd3cf0" category="inline-image-macro">Una schermata che mostra l'impostazione delle tabelle di percorso nel pannello funzioni disponibile nella parte superiore destra della pagina Panoramica durante la visualizzazione di un ambiente di lavoro.</block>
@@ -2282,13 +2165,11 @@
   <block id="ce501a2e9d8b238043619a3db4abc141" category="list-text">Modificare l'elenco delle tabelle di percorso selezionate, quindi fare clic su *Save* (Salva).</block>
   <block id="ad4ac1c47a9ebdd6164879be3ae930d1" category="paragraph">BlueXP invia una richiesta AWS per modificare le tabelle di routing.</block>
   <block id="472a0e36dbfcabd612dc9f3235507590" category="summary">È possibile avviare un singolo sistema Cloud Volumes ONTAP in Azure creando un ambiente di lavoro Cloud Volumes ONTAP in BlueXP.</block>
-  <block id="7ca1af679f0ba86814f2ad58a578cb7c" category="doc">Lancio di Cloud Volumes ONTAP in Azure</block>
   <block id="080f809f6133bba04d70601f68e18988" category="paragraph">È possibile avviare un sistema a nodo singolo o una coppia ha in Azure creando un ambiente di lavoro Cloud Volumes ONTAP in BlueXP.</block>
   <block id="ac0a0c70fca72d317398432ef6fd2c46" category="paragraph">Quando BlueXP crea un sistema Cloud Volumes ONTAP in Azure, crea diversi oggetti Azure, ad esempio un gruppo di risorse, interfacce di rete e account di storage. Al termine della procedura guidata, è possibile visualizzare un riepilogo delle risorse.</block>
   <block id="088426a95c1a721001f3ed56ac2f4ed0" category="admonition-title">Potenziale perdita di dati</block>
   <block id="72cd91c0deb59fc4b814e6cafc8ff514" category="paragraph">La Best practice consiste nell'utilizzare un nuovo gruppo di risorse dedicato per ciascun sistema Cloud Volumes ONTAP.</block>
   <block id="d52b591d7e9cb6d4f9b9d82ed8a82f94" category="paragraph">L'implementazione di Cloud Volumes ONTAP in un gruppo di risorse condiviso esistente non è consigliata a causa del rischio di perdita di dati. Mentre BlueXP può rimuovere le risorse Cloud Volumes ONTAP da un gruppo di risorse condiviso in caso di errore di implementazione o di eliminazione, un utente Azure potrebbe accidentalmente eliminare le risorse Cloud Volumes ONTAP da un gruppo di risorse condiviso.</block>
-  <block id="5d23d48e0afadebb8bb8d4e3def99de4" category="section-title">Avvio di un sistema Cloud Volumes ONTAP a nodo singolo in Azure</block>
   <block id="56bdc4ea1c452fac2f0ec7899a4e3d21" category="paragraph">Se si desidera avviare un sistema Cloud Volumes ONTAP a nodo singolo in Azure, è necessario creare un ambiente di lavoro a nodo singolo in BlueXP.</block>
   <block id="5e65ccaa7b0cffc728e485801bdd8092" category="list-text">*Scegli una posizione*: Seleziona *Microsoft Azure* e *nodo singolo Cloud Volumes ONTAP*.</block>
   <block id="ceca015ffa0918205a91a8cc0268611c" category="list-text">*Dettagli e credenziali*: Se necessario, modificare le credenziali e la sottoscrizione di Azure, specificare un nome del cluster, aggiungere tag, quindi specificare le credenziali.</block>
@@ -2312,7 +2193,6 @@
   <block id="5a07b5de49d43760a69fb7c4fea757e9" category="inline-link-macro">Configurazioni supportate dalla licenza per coppie ha</block>
   <block id="61ae7494c717b2848d05a646a57d0df2" category="cell">L'unità organizzativa all'interno del dominio ad da associare al server CIFS. L'impostazione predefinita è CN=computer. Per configurare i servizi di dominio ad Azure come server ad per Cloud Volumes ONTAP, immettere *OU=computer AADDC* o *OU=utenti AADDC* in questo campo.<block ref="c77116dc5056757dacd34253f40507d7" category="inline-link-rx"></block></block>
   <block id="7cbbdc5d894349e719d703a194300887" category="list-text">Fare clic su *ulteriori informazioni* per visualizzare i dettagli relativi al supporto e alle risorse Azure che BlueXP acquisterà.</block>
-  <block id="68367d4408e943b9268a7a6d4314fb0a" category="section-title">Lancio di una coppia Cloud Volumes ONTAP ha in Azure</block>
   <block id="09848d903bbdcfa49dca87e8854aad0d" category="paragraph">Se si desidera lanciare una coppia Cloud Volumes ONTAP ha in Azure, è necessario creare un ambiente di lavoro ha in BlueXP.</block>
   <block id="dee0e0a28a4db505910f0cae119590db" category="list-text">*Modelli di implementazione ha*:</block>
   <block id="e1ab7b9a326aaddbde429e4c50909456" category="list-text">Selezionare *Single Availability zone* o *Multiple Availability zone*.</block>
@@ -2323,9 +2203,7 @@
   <block id="c5cd01a62bc8f55375ac755c2a6a5f47" category="paragraph">La connessione HTTPS proviene da una coppia ha di Cloud Volumes ONTAP 9.7 agli account di storage blob di pagina Azure. L'attivazione di questa opzione può influire sulle prestazioni di scrittura. Non è possibile modificare l'impostazione dopo aver creato l'ambiente di lavoro.</block>
   <block id="15cbb1f16ecbbcee7df3dcd252b9d2ef" category="paragraph">NON è possibile attivare WORM se è stato attivato il tiering dei dati.</block>
   <block id="01277cd6d5e8d9a803f07b849cedae4b" category="summary">Verificare i file delle firme dei file di immagine di Google Cloud.</block>
-  <block id="5567cef37155e1157348c6775226af57" category="doc">Panoramica sulla verifica delle immagini di Google Cloud</block>
   <block id="5745e537e1e3a11e00e50f67820a46a1" category="admonition">La verifica dell'immagine Google Cloud è supportata dal software Cloud Volumes ONTAP versione 9.13.0 o superiore.</block>
-  <block id="93f5e6c9fa12acc64acdb6b378a09bdd" category="doc">Gestire le VM di storage in BlueXP</block>
   <block id="b9e47318c64f441113d2cf3c3a5e232c" category="paragraph">Alcune configurazioni supportano più VM di storage. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> Per verificare il numero di VM storage supportate per la versione di Cloud Volumes ONTAP in uso.</block>
   <block id="d7a22fd9c17e5a9e3b614b52df2bcf96" category="section-title">Lavorare con più macchine virtuali storage</block>
   <block id="ff3b711176ea253389bb97ff46d7f05c" category="paragraph">Ad esempio, l'immagine seguente mostra come scegliere una VM di storage quando si crea un volume.</block>
@@ -2437,7 +2315,6 @@
   <block id="876f62e75a1f45f9bc7d03ac9a0db173" category="paragraph">Si noti che 32 è un valore di esempio. Il valore da utilizzare dipende dalla configurazione NAT e dal numero di sessioni che è possibile avere contemporaneamente.</block>
   <block id="4ae719205766e20198cc595136cbf10c" category="inline-link">Scopri di più sulla chiamata API /occm/config</block>
   <block id="29e5950813e59366056c85a091ad2206" category="summary">La specifica di un server NTP sincronizza l'ora tra i sistemi della rete, evitando così problemi dovuti a differenze di tempo.</block>
-  <block id="8b3aeec8c25c17c966b0b882195c6050" category="doc">Sincronizzare l'ora del sistema utilizzando NTP</block>
   <block id="ebf12fa39becba02eecf5cb8886fab60" category="inline-link-macro">Creare un server CIFS</block>
   <block id="e4de6f9df9cd48ef525131de3cb21481" category="inline-link">API BlueXP</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Per Cloud Volumes ONTAP sono disponibili diverse opzioni di licenza. Ciascuna opzione consente di scegliere una configurazione che soddisfi le proprie esigenze.</block>
@@ -2445,21 +2322,17 @@
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="section-title">Panoramica sulle licenze</block>
   <block id="f008ecd5469e24eee31eb4e2e4a1e23f" category="paragraph">Per i nuovi clienti sono disponibili le seguenti opzioni di licenza.</block>
   <block id="771f877f73ed39c1ce2849efb746d509" category="list-text">Licenze basate sulla capacità</block>
-  <block id="2a30ccbe01f425f3a2807267dff4fc33" category="list-text">Paga più sistemi Cloud Volumes ONTAP nel tuo account NetApp in base alla capacità fornita. Include la possibilità di acquistare servizi dati cloud aggiuntivi.</block>
   <block id="08598187312665a33ac3ebb5fc060c00" category="paragraph">Le sezioni seguenti forniscono ulteriori dettagli su ciascuna di queste opzioni.</block>
   <block id="b03772ed11df6476bff4de403713f8c3" category="paragraph">I pacchetti di licenza basati sulla capacità consentono di pagare Cloud Volumes ONTAP per TIB di capacità. La licenza è associata al tuo account NetApp e ti consente di addebitare la licenza a più sistemi, purché sia disponibile una capacità sufficiente attraverso la licenza.</block>
   <block id="68935a38790e91889cd56742a47079f3" category="paragraph">Ad esempio, è possibile acquistare una singola licenza 20 TIB, implementare quattro sistemi Cloud Volumes ONTAP e quindi allocare un volume 5 TIB per ciascun sistema, per un totale di 20 TIB. La capacità è disponibile per i volumi su ciascun sistema Cloud Volumes ONTAP implementato in quell'account.</block>
   <block id="37439fa615a442ec183c1c602f9755f1" category="paragraph">Le licenze basate sulla capacità sono disponibili sotto forma di _pacchetto_. Quando si implementa un sistema Cloud Volumes ONTAP, è possibile scegliere tra diversi pacchetti di licenza in base alle esigenze aziendali.</block>
   <block id="27fe4eb3edbaff8f250e2d51f7462681" category="section-title">Pacchetti</block>
-  <block id="5f50ddf0fbe0f1f7d019d566c86cfe73" category="paragraph">I seguenti pacchetti basati sulla capacità sono disponibili per Cloud Volumes ONTAP.</block>
   <block id="d7c357dcc3b8476a2eeba19c87ec383d" category="paragraph">Fornisce tutte le funzionalità Cloud Volumes ONTAP gratuitamente da NetApp (sono ancora applicati i costi per i cloud provider).</block>
   <block id="24996c045717f17c4e40ebb44791b2af" category="list-text">Non sono necessari contratti o licenze.</block>
   <block id="cc3b16b51bb72e66b8f103fef83035d9" category="list-text">Il supporto di NetApp non è incluso.</block>
   <block id="895dacd81cbc05951744c0bce981546c" category="list-text">La capacità di provisioning per sistema Cloud Volumes ONTAP è limitata a 500 GiB.</block>
   <block id="46cb473c7acee70e9be90113f3acce9d" category="list-text">Puoi utilizzare fino a 10 sistemi Cloud Volumes ONTAP con l'offerta Freemium per account NetApp, in qualsiasi cloud provider.</block>
   <block id="16c274138bfaf739b851a1b611d4cdb0" category="list-text">Se la capacità fornita per un sistema Cloud Volumes ONTAP supera i 500 GiB, BlueXP converte il sistema nel pacchetto Essentials.</block>
-  <block id="6784815d06685b36d779b24581ccfa66" category="inline-xref">costo minimo</block>
-  <block id="011b0e1cd1e0161097d616babc107976" category="paragraph">Non appena un sistema viene convertito nel pacchetto Essentials, il <block ref="22eeec54b04ebfde4307a78d36fd52ee" category="inline-xref-macro-rx"></block> valido.</block>
   <block id="2b5b1f6feb7719bc282a3518f33b1784" category="paragraph">Tutti gli altri sistemi con meno di 500 GiB di capacità fornita rimangono su Freemium (purché siano stati implementati utilizzando l'offerta Freemium).</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="section-title">Ottimizzato</block>
   <block id="a131e5df30c445534883b2b08d3f9e4e" category="paragraph">Pagare separatamente la capacità e le operazioni di i/o fornite.</block>
@@ -2964,7 +2837,6 @@
   <block id="8f7830ddfb4c3be4f076516f4856d257" category="inline-link">Scopri di più sui link privati di Azure</block>
   <block id="b159a32bd5237dec9c6c28e81628f28a" category="list-text"><block ref="b159a32bd5237dec9c6c28e81628f28a" category="inline-link-rx"></block></block>
   <block id="c4cadd7aa466cb22683a1bec9cef5f10" category="summary">Si consiglia di eliminare sempre i sistemi Cloud Volumes ONTAP da BlueXP, anziché dalla console del provider di servizi cloud. Ad esempio, se si termina un'istanza di Cloud Volumes ONTAP con licenza dal provider cloud, non è possibile utilizzare la chiave di licenza per un'altra istanza. Per rilasciare la licenza, è necessario eliminare l'ambiente di lavoro da BlueXP.</block>
-  <block id="243c363888d8a767b0c39057fd91bece" category="doc">Eliminazione di un sistema Cloud Volumes ONTAP</block>
   <block id="aa86310565aaec1cce4ab93cccff30f2" category="paragraph">Quando si elimina un ambiente di lavoro, BlueXP termina le istanze di Cloud Volumes ONTAP ed elimina dischi e snapshot.</block>
   <block id="e0277b8d41546d47637400507bf0f9f5" category="paragraph">Le risorse gestite da altri servizi, come i backup per il backup e ripristino BlueXP e le istanze per la classificazione BlueXP, non vengono eliminate quando si elimina un ambiente di lavoro. Dovrai eliminarli manualmente. In caso contrario, continuerai a ricevere i costi per queste risorse.</block>
   <block id="9768ca3f5c7e0dcb310ada02f7ba5156" category="admonition">Quando BlueXP implementa Cloud Volumes ONTAP nel tuo cloud provider, abilita la protezione delle terminazioni sulle istanze. Questa opzione aiuta a prevenire la terminazione accidentale.</block>
@@ -2978,14 +2850,7 @@
   <block id="ec8e04c7758ae04f1375383b387929a1" category="paragraph"><block ref="ec8e04c7758ae04f1375383b387929a1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e46b959133eadbb0d00ac0a308843f30" category="list-text">Nella finestra Delete Working Environment (Elimina ambiente di lavoro), digitare il nome dell'ambiente di lavoro, quindi fare clic su *Delete* (Elimina).</block>
   <block id="7d73be13421466d5cf5d832329f74c79" category="paragraph">L'eliminazione dell'ambiente di lavoro può richiedere fino a 5 minuti.</block>
-  <block id="4b80314a98cf05dbcb3b2c5f33f9e79f" category="paragraph">Per impostazione predefinita, le implementazioni non vengono eseguite e il rollback viene eseguito ogni volta che un gruppo di posizionamento non riesce a creare un ambiente di lavoro ha a singola zona di disponibilità. Anche la creazione del gruppo di posizionamento non riesce e viene eseguita la rollback se non sono presenti sia i nodi Cloud Volumes ONTAP che l'istanza del mediatore.</block>
-  <block id="65f98964e7d8889df16715139a88da9d" category="paragraph">È possibile ignorare il processo di rollback ogni volta che la creazione del gruppo di posizionamento non riesce e consentire alle implementazioni di continuare configurando il file app.conf. Quando si ignora il processo di rollback, le implementazioni vengono completate correttamente e il sistema genera una notifica che indica che la creazione del gruppo di posizionamento non è riuscita con uno stato di incompleto.</block>
-  <block id="8dbf64cf105a5f307a9741aab14c6d90" category="section-title">Disattiva il rollback in caso di errore del gruppo di posizionamento</block>
-  <block id="103d8850bfd2b5f919a2c306256386e7" category="paragraph">Per disattivare l'errore del gruppo di posizionamento, il flag "rollback-on-placement-group-failure" deve essere impostato su "false".</block>
   <block id="53db5515d90522545dd9493db83f9ad7" category="list-text">Utilizzare SSH per connettersi all'host del connettore e accedere.</block>
-  <block id="e5d0a443064f8c75bf5b7e1c953ec5f9" category="list-text">Modificare app.conf modificando il valore del parametro "rollback-on-placement-group-failure" in "false":</block>
-  <block id="6b90ec112441f6a2ffc873da4c8cb544" category="admonition">Per impostazione predefinita, il parametro "rollback-on-placement-group-failure" è impostato su "True".</block>
-  <block id="abb2030a97b8fa0f26925ca21ccacdce" category="paragraph">Non è necessario riavviare.</block>
   <block id="6e2f613815698bbf49809d31c29a0006" category="summary">Quando si crea un volume iSCSI, BlueXP crea automaticamente un LUN. Abbiamo semplificato la creazione di un solo LUN per volume, per cui non è necessario alcun intervento di gestione. Dopo aver creato il volume, utilizzare IQN per connettersi al LUN dagli host.</block>
   <block id="fefa1e327557428651b5ba0fd5bff0bb" category="doc">Collegare un LUN a un host</block>
   <block id="4ea3aab4d949982c440f4df5e309a486" category="list-text">La gestione automatica della capacità di BlueXP non si applica alle LUN. Quando BlueXP crea un LUN, disattiva la funzione di crescita automatica.</block>
@@ -3063,7 +2928,6 @@
   <block id="82defe4f45724f0ce17f1a11c6980420" category="paragraph"><block ref="82defe4f45724f0ce17f1a11c6980420" category="inline-link-rx"></block></block>
   <block id="cf0a6f286be266af220bb56bf7b6365c" category="inline-link">Scopri di più su Cloud Volumes ONTAP</block>
   <block id="806bf55e3fada643423a5e8b443a821f" category="summary">Configura il tuo network Google Cloud in modo che i sistemi Cloud Volumes ONTAP possano funzionare correttamente.</block>
-  <block id="b2a93ab6944b01da98f77474158de584" category="doc">Requisiti di rete per Cloud Volumes ONTAP in Google Cloud</block>
   <block id="589257f6242e3a6232a5f72f7867c4b6" category="inline-link-macro">Scopri come funzionano le coppie ha in Google Cloud</block>
   <block id="c8e39b92d04aae2c3a6d3e6f428d480e" category="paragraph">Se si desidera implementare una coppia ha, è necessario <block ref="135d51832239d75e9eff2c1e7574765f" category="inline-link-macro-rx"></block>.</block>
   <block id="72928bd9aacf64df0eb1285c03f5f5c0" category="section-title">Requisiti per Cloud Volumes ONTAP</block>
@@ -3244,14 +3108,12 @@
   <block id="ed9290c49502b9835c9bd2b363302a7c" category="paragraph"><block ref="ed9290c49502b9835c9bd2b363302a7c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0f2fe7f7d7d6e9e8b6985ebcba41a752" category="paragraph">Un abbonamento Keystone è un servizio basato su abbonamento pay-as-you-grow. <block ref="a4cf1d10eb125cd296862332c2edca47" category="inline-link-macro-rx"></block>.</block>
   <block id="5ac123f6eee32c0fe88eeab92338a1a4" category="summary">Un volume FlexCache è un volume di storage che memorizza nella cache i dati di lettura NFS da un volume di origine o di origine. Le successive letture dei dati memorizzati nella cache consentono un accesso più rapido a tali dati.</block>
-  <block id="d5ce201ca4cc42ba6b38e9166bcef415" category="doc">Accelera l'accesso ai dati con FlexCache Volumes</block>
   <block id="90c624683582774042156c98858d14dc" category="paragraph">È possibile utilizzare i volumi FlexCache per accelerare l'accesso ai dati o per trasferire il traffico dai volumi ad accesso elevato. I volumi FlexCache aiutano a migliorare le performance, soprattutto quando i client devono accedere ripetutamente agli stessi dati, perché i dati possono essere gestiti direttamente senza dover accedere al volume di origine. I volumi FlexCache funzionano bene per i carichi di lavoro di sistema che richiedono un uso intensivo della lettura.</block>
   <block id="29e15f4a6477b08e72892d33f28001ce" category="inline-link">Guida all'alimentazione di FlexCache Volumes per un accesso più rapido ai dati</block>
   <block id="f2a7a46cc845b377d163ce816c723b41" category="list-text"><block ref="f2a7a46cc845b377d163ce816c723b41" category="inline-link-rx"></block></block>
   <block id="bdfeff9b431b433fc22dbf6b9baa1dfc" category="inline-link">Creazione di volumi FlexCache in Gestore di sistema</block>
   <block id="7eeac5ac06af86bf7a05d8897d8f378c" category="list-text"><block ref="7eeac5ac06af86bf7a05d8897d8f378c" category="inline-link-rx"></block></block>
   <block id="0828553b7174743f116345861b5c6bc0" category="summary">È possibile individuare e aggiungere sistemi Cloud Volumes ONTAP esistenti a BlueXP. È possibile eseguire questa operazione se si implementa un nuovo sistema BlueXP.</block>
-  <block id="5838355f0487c8b48bcad7c6bcae87af" category="doc">Aggiunta di sistemi Cloud Volumes ONTAP esistenti a BlueXP</block>
   <block id="ddf67437a4757d7231aaedf4fdf85f02" category="paragraph">È necessario conoscere la password dell'account utente amministratore di Cloud Volumes ONTAP.</block>
   <block id="43cb57ab397bde4904e6f6c54a89b866" category="list-text">Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro).</block>
   <block id="7ddebea315b9d1858be75da96da551bf" category="list-text">Selezionare il provider cloud in cui risiede il sistema.</block>
@@ -3388,7 +3250,6 @@
   <block id="a6f44cada6b6ce69a44f85c0c202e270" category="list-text">9.7 o precedente: da 2 giorni a 63 giorni</block>
   <block id="2e1602577b506088aeed8165e506d1e4" category="list-text">Utilizzare il parametro _minimumCoolingDays_ con la richiesta API durante la creazione di un volume o la modifica di un volume esistente.</block>
   <block id="1ee6f28ca24808cbfb56feaccf1c3e53" category="summary">Convertire un'immagine esportata in formato disk.raw tramite la riga di comando di Google Cloud.</block>
-  <block id="4924fff9a6684704aac6ccb1ed5fd97d" category="doc">Converti l'immagine in formato raw su Google Cloud</block>
   <block id="e42cb7ec1fc839883e3e4e1864b30d87" category="inline-link">Il NetApp Support Site (NSS)</block>
   <block id="ac16be4e1060792bdf37f35e6cc518f9" category="paragraph">L'immagine utilizzata per implementare nuove istanze, aggiornamenti o utilizzata in immagini esistenti verrà condivisa con i client tramite<block ref="c1c4e3e8a814891940b982f96af89878" category="inline-link-rx"></block>. Il digest firmato e i certificati saranno disponibili per il download attraverso il portale NSS. Assicurarsi di scaricare il digest e i certificati per la release corretta corrispondente all'immagine condivisa dal supporto NetApp. Ad esempio, 9.13.0 immagini avranno un digest con 9.13.0 firme e certificati disponibili su NSS.</block>
   <block id="7a8f498eae5977019b0d0c0d3ef013c0" category="section-title">Perché è necessario questo passaggio?</block>
@@ -3418,7 +3279,6 @@
   <block id="0bf3330853877ab4b76b4f1e00d3ace2" category="list-text">NVE crittografa i dati inattivi un volume alla volta. Ogni volume di dati dispone di una chiave di crittografia univoca.</block>
   <block id="988d5e992ea371904581e6f8ad13bac7" category="list-text">NAE è un'estensione di NVE, che crittografa i dati per ogni volume e i volumi condividono una chiave nell'aggregato. NAE consente inoltre di deduplicare i blocchi comuni di tutti i volumi dell'aggregato.</block>
   <block id="e1bf87c98edd3bee07d170ae8b118aeb" category="paragraph">I nuovi aggregati hanno NetApp aggregate Encryption (NAE) abilitato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. I nuovi volumi che non fanno parte di un aggregato NAE avranno NetApp Volume Encryption (NVE) abilitato per impostazione predefinita (ad esempio, se si dispone di aggregati creati prima di impostare un gestore di chiavi esterno).</block>
-  <block id="c72ccd5a97e66dfed845a067416a28fe" category="paragraph">La configurazione di un gestore di chiavi supportato è l'unica operazione necessaria. Per istruzioni sulla configurazione, fare riferimento a. <block ref="c1c73aa6d8632695e64032f90002d60a" category="inline-link-macro-rx"></block>.</block>
   <block id="d200c22f00ca54467dc4ad3823710388" category="inline-link">AWS Key Management Service (KMS)</block>
   <block id="60fa85f272e116effea35da2e9f082ca" category="paragraph">Quando si avvia un sistema Cloud Volumes ONTAP in AWS, è possibile attivare la crittografia dei dati utilizzando<block ref="8fc3b96c90d2dea9ee9936bb213df75b" category="inline-link-rx"></block>. BlueXP richiede le chiavi dati utilizzando una chiave master del cliente (CMK).</block>
   <block id="6eb233d9be32984c99508cdbee911e24" category="inline-link-macro">Scopri come configurare Cloud Volumes ONTAP per utilizzare una chiave gestita dal cliente in Azure</block>
@@ -3490,7 +3350,6 @@
   <block id="7f4227f5e289d9b09c1c0e06243584ef" category="paragraph">Fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro), selezionare il tipo di sistema che si desidera implementare e completare la procedura guidata. <block ref="6f7d7b3de08ec5c6f3771511caa5244a" category="inline-link-macro-rx"></block>.</block>
   <block id="4fa0ddd312f5d44c35c17e8e39a2e30a" category="inline-link">Creazione di un connettore da Azure Marketplace</block>
   <block id="e377cef11f252d8c520d41695086c34d" category="inline-link">Cosa fa BlueXP con le autorizzazioni</block>
-  <block id="0daeee03840a908c7a9d415a97549f99" category="doc">Creazione di macchine virtuali storage per il data-service per Cloud Volumes ONTAP in AWS</block>
   <block id="cec354b08dcbe847db5c3affb7ef61d9" category="paragraph">Per creare ulteriori VM di storage che servono i dati, è necessario allocare gli indirizzi IP in AWS ed eseguire i comandi ONTAP in base alla configurazione Cloud Volumes ONTAP.</block>
   <block id="1d690a933c240dda520f6527f56da475" category="paragraph">Sono supportate più macchine virtuali storage con configurazioni Cloud Volumes ONTAP specifiche a partire dalla release 9.7. Accedere alla<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> Per verificare il numero di VM storage supportate per la versione di Cloud Volumes ONTAP in uso.</block>
   <block id="de46d59a02fe19ad1b544dca44f92e5f" category="section-title">Verificare i limiti della configurazione</block>
@@ -3545,7 +3404,6 @@
   <block id="5414bcb74ffdbf70d2afb028e1eb0d0b" category="list-text">Creare una LIF iSCSI sul nodo 2.</block>
   <block id="0a2292629d42074cb011142b9cd8f433" category="list-text">_Private_ip_ è un indirizzo IP privato secondario non utilizzato su eth0 (e0a) di cvo_node2.</block>
   <block id="0f5cc196efac5a9fadb7272e55c7d686" category="summary">Configura la tua rete Azure in modo che i sistemi Cloud Volumes ONTAP possano funzionare correttamente.</block>
-  <block id="412590af9448ac66459e9c3d686de880" category="doc">Requisiti di rete per Cloud Volumes ONTAP in Azure</block>
   <block id="098d8cb8c4a1291e10ee07b333610f24" category="paragraph">I seguenti requisiti di rete devono essere soddisfatti in Azure.</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="section-title">Indirizzi IP</block>
   <block id="96f4c574f3909d1105768df05940587b" category="paragraph">BlueXP assegna automaticamente il numero richiesto di indirizzi IP privati a Cloud Volumes ONTAP in Azure. È necessario assicurarsi che la rete disponga di un numero sufficiente di indirizzi IP privati.</block>
@@ -3662,7 +3520,6 @@
   <block id="9962024a88bf4c8d55fd2f86b1873618" category="cell">53 qualsiasi protocollo</block>
   <block id="4038a3ad82c98f912a97fe2f042964cd" category="cell">DNS e CIFS</block>
   <block id="569fe31933e5918613ae1efa70e82d16" category="inline-link">Regole del gruppo di sicurezza in Azure</block>
-  <block id="d17c4281542937487475a76b3afea508" category="doc">Coppie ad alta disponibilità in Google Cloud</block>
   <block id="f406c9d6eeead7db4c0d7c4436e4365f" category="paragraph">Le configurazioni Cloud Volumes ONTAP ha in Google Cloud includono i seguenti componenti:</block>
   <block id="481cd89d21864bf4d528a439dfb59421" category="list-text">Due nodi Cloud Volumes ONTAP i cui dati vengono sottoposti a mirroring sincrono l'uno con l'altro.</block>
   <block id="698f8a0a0a3a85268f0cd5c4cea8ba28" category="list-text">Istanza di mediatore che fornisce un canale di comunicazione tra i nodi per assistere nei processi di acquisizione e giveback dello storage.</block>
@@ -3875,7 +3732,6 @@
   <block id="cc5f50b3903dc30a3a3545bb58fcdd14" category="paragraph">Cloud Volumes ONTAP supporta S3 come opzione per lo storage scale-out. Il supporto del protocollo S3 consente di configurare l'accesso del client S3 agli oggetti contenuti in un bucket in una VM di storage (SVM).</block>
   <block id="ad18d9aa7c4c9bdbf86e39bd6dd5b727" category="section-title">NVMe-TCP</block>
   <block id="51f24173f2f6195b17c8e22458037f6c" category="summary">Verificare la firma di un file di immagine Google Cloud esportato tramite lo strumento file di digest immagine di Cloud Volumes ONTAP.</block>
-  <block id="f2381744b9c03db11d49cbcc38dd048d" category="doc">Verificare le immagini firmate di Google Cloud</block>
   <block id="019892a31385e7fb7670de88abfcf3cd" category="paragraph">Per verificare l'immagine firmata Google Cloud esportata, è necessario scaricare il file di digest dell'immagine da NSS per convalidare il file disk.raw e il contenuto del file di digest.</block>
   <block id="c81429443fac6104f46abd88cff6840a" category="section-title">Riepilogo del flusso di lavoro per la verifica dell'immagine firmata</block>
   <block id="89367ca4743c16d95c687430c6a0d9cc" category="paragraph">Di seguito viene riportata una panoramica del processo di verifica delle immagini firmato da Google Cloud.</block>
@@ -3925,7 +3781,6 @@
   <block id="685696bac287df7f060481b8cef44de8" category="sidebar">Inizia con Amazon Web Services</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Avvio rapido</block>
   <block id="bbf1a68fc5e370127fe0c3f1622dced3" category="sidebar">Pianificare la configurazione</block>
-  <block id="9251700e586dc1a410f2e755a8643751" category="sidebar">Requisiti di rete</block>
   <block id="f9d148736ba8ad65073e2ae083e6442a" category="sidebar">Configurare un gateway di transito AWS</block>
   <block id="e26c5d07fc30848902a99c95897441b4" category="sidebar">Impostare i ruoli IAM</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="sidebar">Impostare la licenza</block>
@@ -3954,9 +3809,6 @@
   <block id="278a1c52ea1d5d6936facc457046eea4" category="sidebar">Gestire le impostazioni di capacità</block>
   <block id="bf36a77b5166293d07ef75b2861c69ad" category="sidebar">Amministrazione delle macchine virtuali dello storage</block>
   <block id="edeea5f1bc7f7fc7a2966961ec39210e" category="sidebar">Lavorare con le VM di storage in BlueXP</block>
-  <block id="793d843cbee3c0bc480f847deda745af" category="sidebar">Creare VM di storage in AWS</block>
-  <block id="922bed213cdb4b4d7392798c192a158b" category="sidebar">Creazione di macchine virtuali storage in Azure</block>
-  <block id="748337dd27473691346f53855d193c97" category="sidebar">Creazione di macchine virtuali storage in Google Cloud</block>
   <block id="70e13d4c7cf86628120bf15bf7b67fc7" category="sidebar">Sicurezza e crittografia dei dati</block>
   <block id="900a7d1cbee7ee0ec36bcd1f657e3d33" category="sidebar">Crittografare i volumi con la crittografia NetApp</block>
   <block id="397841d9dc0e87fae94bd33b988bf92f" category="sidebar">Gestisci le chiavi con Google Cloud KMS</block>
@@ -4074,7 +3926,6 @@ Per creare una sovvenzione, fare riferimento a. <block ref="2e58dbc76dde8987ce87
   <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Si tratta di un ID generato dal sistema che viene mappato all'e-mail. Nella pagina *NSS Management*, è possibile visualizzare l'e-mail da <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Se è necessario aggiornare i token delle credenziali di accesso, è disponibile anche l'opzione *Update Credentials* (Aggiorna credenziali) in <block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
   <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="be9422df375517187d0426d4361fafa6" category="paragraph">Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per le coppie Cloud Volumes ONTAP ha. Le autorizzazioni richieste sono incluse in<block ref="24390b04eaeaec89ce5246eaa294abc3" category="inline-link-rx"></block>.</block>
   <block id="af13749595f5960a363d1c58fc759656" category="paragraph"><block ref="4610c02b1fca3398eed82ad29d834f6a" category="inline-link-macro-rx"></block>.</block>
   <block id="fef38ae672e04cfca804a3528b0c02b9" category="paragraph"><block ref="ae94ab44d9cabcaf642548c08d913cf9" category="inline-link-rx"></block>.</block>
   <block id="78b9037265070d084c1d8bcd663811e7" category="paragraph"><block ref="78b9037265070d084c1d8bcd663811e7" category="inline-link-rx"></block></block>
@@ -4441,7 +4292,6 @@ Fare clic su *Add Subscription* (Aggiungi abbonamento) per associare le credenzi
   <block id="44c305a704023f5d643a06ce08c03402" category="section-title">Abilita il networking avanzato</block>
   <block id="2aed0ca02213325feada0ee707489e81" category="inline-link-macro">Come abilitare funzionalità di rete avanzate come SR-IOV o ENA sulle istanze di AWS Cloud Volumes ONTAP</block>
   <block id="489d7e740d2dd946585a03c48af8f4cf" category="paragraph">Per eseguire l'aggiornamento alle versioni 9,8 e successive di Cloud Volumes ONTAP, è necessario attivare _Enhanced Networking_ nel cluster che esegue il tipo di istanza C4, M4 o R4. Per abilitare ENA, fare riferimento all'articolo della Knowledge base <block ref="a4ba9465250c8fbd5a9415056507370e" category="inline-link-macro-rx"></block>.</block>
-  <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Documentazione di Microsoft Azure</block>
   <block id="2cf711540cadf3cbb4cac96dba2d9464" category="list-text">Include backup di volumi illimitati utilizzando il backup e il ripristino BlueXP, ma solo per i sistemi Cloud Volumes ONTAP che utilizzano il pacchetto Professional.</block>
   <block id="f4b04af639ebf32754e26b928989f33f" category="inline-link">Impostare le licenze per il backup e ripristino BlueXP</block>
   <block id="fb2530f9293a4ba59cfd3ca6492bb972" category="section-title">23 ottobre 2023</block>
@@ -4645,7 +4495,6 @@ Si noti che lo spazio libero è ora disponibile sull'aggregato originale. I volu
   <block id="96b0b2a19dd9deb6b94e53f2e29f4387" category="paragraph">Non è più possibile creare un volume da un modello o modificare i tag di un volume. Queste azioni sono state associate al servizio di correzione di BlueXP, che non è più disponibile.</block>
   <block id="9691bf3a7c5f05b620ab3b20437b6123" category="list-text">*Dettagli, protezione e Tag*: Immettere i dettagli di base sul volume e selezionare un criterio Snapshot.</block>
   <block id="4acf56e531f894043e53d2da10087d5a" category="summary">Simile a una regione AWS standard, puoi utilizzare BlueXP negli ambienti cloud segreto e cloud top secret di AWS per implementare Cloud Volumes ONTAP, che offre funzionalità di livello Enterprise per il tuo cloud storage. Le regioni Cloud Secret e Cloud Top Secret sono regioni chiuse specifiche degli Stati Uniti Intelligence Community; le istruzioni in questa pagina si applicano solo agli utenti delle regioni Cloud segreto e Cloud segreto.</block>
-  <block id="ac2f9ab20179404cb2925b0bc93ed4f9" category="doc">Implementa Cloud Volumes ONTAP nelle aree principali del cloud segreto e del cloud computing AWS</block>
   <block id="ff2c9914d275ee17c3f22e89e7ca1ef7" category="inline-link-macro">Cloud segreto AWS</block>
   <block id="a864a931bf30f7ad758b78e4a2cb264c" category="inline-link-macro">Cloud AWS top secret</block>
   <block id="89975f41f547e90460689ab0da3b0ba1" category="paragraph">Simile a una regione AWS standard, puoi utilizzare BlueXP in <block ref="2be032dbfb43d4ebf124ecec1e312c2a" category="inline-link-macro-rx"></block> e in <block ref="9d779d36eb480c9dfb9170b409a86842" category="inline-link-macro-rx"></block> Per implementare Cloud Volumes ONTAP, che offre funzionalità Enterprise per il tuo cloud storage. AWS Secret Cloud e Top Secret Cloud sono regioni chiuse specifiche degli Stati Uniti Intelligence Community; le istruzioni in questa pagina si applicano solo agli utenti delle regioni Cloud segreto e Cloud segreto.</block>
@@ -4801,7 +4650,6 @@ In più configurazioni di zone di disponibilità, esistono tre istanze, due nodi
   <block id="d4cffcdfb4fe4fc69dc234950d0f4151" category="admonition">Le zone locali di AWS sono supportate quando si utilizza BlueXP in modalità standard. Al momento, i zone locali di AWS non sono supportati quando si utilizza BlueXP in modalità limitata o privata.</block>
   <block id="dd9c0a56896702fcd7616d8a05a5734b" category="example-title">Fare clic per visualizzare</block>
   <block id="66477356c169bae503b8e5b68efae8f9" category="summary">Verificare la firma di un file VHD esportato tramite lo strumento file di digitalizzazione immagine Cloud Volumes ONTAP su Mac OS</block>
-  <block id="f2dc1728581c6da0e20498b1ddc33375" category="doc">Verifica della firma del file su Mac OS</block>
   <block id="7dfe290ea310f3175330a9ea2e3f87f9" category="paragraph">Per verificare la firma di un file VHD esportato per Mac OS, procedere come segue.</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">Sito di supporto NetApp</block>
   <block id="182f014f4c613a2ea00430b0555c0cfe" category="list-text">Scaricare il file Azure Image Digest dal<block ref="3725c06f412bedb14ffd610de312875d" category="inline-link-rx"></block> ed estrarre il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).</block>
@@ -4830,7 +4678,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="43d4aabb0efd580944e1beb8c4db11b8" category="list-text">L'istruzione CLI generale viene visualizzata come segue:</block>
   <block id="c9fd91db7f23dc5a00305ec8fc9ab1fe" category="list-text">Lo strumento CLI OpenSSL visualizza un messaggio "verificato OK" se entrambi i file corrispondono e "errore di verifica" se non corrispondono.</block>
   <block id="ab1fa593a9d1b960b00310273793f399" category="summary">Verificare la firma di un file VHD esportato tramite lo strumento file di digitalizzazione immagine Cloud Volumes ONTAP su Linux</block>
-  <block id="b0c7ab0c2b10d16b69a121eb12047c21" category="doc">Verifica della firma dei file su Linux</block>
   <block id="81a109e7e4df0170a877c862452626e0" category="paragraph">È possibile verificare la firma di un file VHD esportato per Linux seguendo la procedura riportata di seguito.</block>
   <block id="99f6987f9f2f12754bef6acd4538d2b1" category="list-text">Rimuovere i 1MB iniziali (1048576 byte) e i 512 byte finali del file VHD.</block>
   <block id="3b31a12051ccfe742940ab733efa90d2" category="paragraph">Se si usa 'tail', l'opzione '-c +K' genera byte che iniziano con i kth byte del file specificato. Quindi, 1048577 viene passato alla coda -c'.</block>
@@ -4840,7 +4687,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="51bbda97c30ecb8962c4be9cf6e522a3" category="doc">Versioni di ONTAP supportate per le nuove implementazioni</block>
   <block id="e6e83b7fc493536990c5a90ed0363355" category="list-text">9.15.0 P1</block>
   <block id="bc7b48cc8cbeb831f1e1c92e4edd2a73" category="summary">Verificare i file delle firme dei file di immagine VHD di Azure.</block>
-  <block id="cbb113be9bdc758fab3f1f20b2d70fb1" category="doc">Panoramica di verifica delle immagini Azure</block>
   <block id="855546822713dfa86f90e0f04d628460" category="paragraph">La verifica dell'immagine di Azure è conforme ai requisiti di sicurezza NetApp avanzati. Anche se la verifica di un file immagine è un processo semplice, la verifica della firma dell'immagine Azure non richiede speciali handling al noto file di immagine Azure VHD a causa di un'alternanza effettuata dal marketplace di Azure.</block>
   <block id="dc9332f8d6da3cf29879331701e1392b" category="admonition">La verifica dell'immagine di Azure è supportata sul software Cloud Volumes ONTAP versione 9.15.0 o superiore.</block>
   <block id="87a09a86dbf9477334c237c696cbf41c" category="section-title">Modifica di Azure dei file VHD pubblicati</block>
@@ -4849,7 +4695,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="8d1e285a8c66f27a66a5b99050840700" category="paragraph"><block ref="8d1e285a8c66f27a66a5b99050840700" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8c0945efb6cfc754835754066079f778" category="paragraph">Come esempio, il diagramma precedente mostra un file VHD di dimensioni 10GB. Ma la parte con segno NetApp è contrassegnata in verde con dimensioni di 10GB - 1MB - 512B.</block>
   <block id="489b496cbe75299f2e7a58a43404a586" category="summary">È possibile esportare immagini ONTAP da Azure Marketplace per verificare la firma del file VHD.</block>
-  <block id="00d40efb33e0ee105c97fed4c5722515" category="doc">Esportazione di immagini da Azure Marketplace</block>
   <block id="7aa3d9edd6d375ddf241b7e3af36818a" category="paragraph">Una volta che l'immagine VHD è pubblicata nel cloud Azure, l'immagine non è più gestita da NetApp. Al contrario, l'immagine pubblicata viene posizionata sul marketplace di Azure. La modifica di Azure al primo 1MB e alla fine del 512B del VHD si verifica quando l'immagine viene messa in scena e pubblicata sul marketplace di Azure. Per verificare la firma del file VHD, l'immagine VHD modificata da Azure deve essere esportata prima dal marketplace di Azure.</block>
   <block id="05cd2a2bb059643c43d9e767a4032a24" category="paragraph">È necessario installare i programmi richiesti sul sistema.</block>
   <block id="0bcf8212654f6e73defd0e810da79d80" category="list-text">È installata la CLI di Azure o è prontamente disponibile Azure Cloud Shell attraverso il portale di Azure.</block>
@@ -4889,10 +4734,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="97a4e219dca6e7d10f98bae2e8bffec5" category="paragraph"><block ref="b51e72d129db508138e20f7a4f67c8ee" category="inline-link-rx"></block>.</block>
   <block id="f66bd8eaa3bcbb435906ae79cf48d6a6" category="paragraph"><block ref="8873bd645a0966abedb61ab5d87b1fb7" category="inline-link-rx"></block>.</block>
   <block id="ea949d9a7c8d0243148a6ff1179b5684" category="paragraph"><block ref="ea949d9a7c8d0243148a6ff1179b5684" category="inline-link-rx"></block></block>
-  <block id="a82d7316122aa2922142d92274736324" category="summary">Collegamenti di riferimento verifica dell'immagine Azure</block>
-  <block id="fd4d7ac54ce50ee523c51c89d6bbd1b8" category="doc">Dove trovare ulteriori informazioni sulla verifica dell'immagine Azure</block>
-  <block id="27e5cdda0e1aa3ec5a2dda81e23a8bb1" category="paragraph">Consulta i link seguenti per ulteriori informazioni su Azure Image Verification. I link seguenti consentono di accedere a siti non NetApp.</block>
-  <block id="d95867deadfe690e40f42068d6b59df8" category="section-title">Riferimenti</block>
   <block id="05c789229ae9c06f891314c500b8a66f" category="inline-link">Page Fault Blog: Come firmare e verificare usando OpenSSL</block>
   <block id="6c725cff14a48db0cca266746daa5dd6" category="list-text"><block ref="6c725cff14a48db0cca266746daa5dd6" category="inline-link-rx"></block></block>
   <block id="0e6945600d86c2e68fa37166775efd63" category="inline-link">USA l'immagine di Azure Marketplace per creare l'immagine VM per la tua GPU Azure Stack Edge Pro | Microsoft Learn</block>
@@ -4912,7 +4753,6 @@ In caso contrario, viene visualizzato "errore di verifica".</block>
   <block id="e15cc8414d8d61bbcd5fd0d0eccda0f7" category="sidebar">Esportazione delle immagini</block>
   <block id="ea676e4072617197b2e26d0a11c13554" category="sidebar">Verifica della firma dei file Linux</block>
   <block id="088e8318708fce80162f63284a86929f" category="sidebar">Verifica della firma del file Mac OS</block>
-  <block id="0f68b904e33d9ac04605aecc958bcf52" category="sidebar">Ulteriori informazioni</block>
   <block id="c803b37d9c2a34c73d0b86de8cae9ac8" category="paragraph"><block ref="c803b37d9c2a34c73d0b86de8cae9ac8" category="inline-link-rx"></block></block>
   <block id="bbe2b5062d2c900ca465f9eb12592a92" category="paragraph">Se richiesto dai criteri di protezione, è possibile configurare le istanze EC2 in modo che utilizzino IMDSv2. Per istruzioni, fare riferimento a.<block ref="a1765820625d1912b35ab79a3305fdea" category="inline-link-rx"></block>.</block>
   <block id="59232a2e0b92b4018a48415d0d13c3b4" category="list-text"><block ref="59232a2e0b92b4018a48415d0d13c3b4" category="inline-link-rx"></block></block>
@@ -5094,8 +4934,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="4855acbd91be04daa7cfbcfc6779e8fc" category="paragraph">Per informazioni, fare riferimento alla <block ref="7f365a8b545ccbb9e9433fd7ab85acf6" category="inline-link-macro-rx"></block>.</block>
   <block id="00ca87b823c9fbffa58cc1470a0fc184" category="paragraph">Puoi vedere i volumi FlexGroup creati tramite ONTAP System Manager o la CLI ONTAP direttamente attraverso la scheda Volumes all'interno di BlueXP . Identico alle informazioni fornite per i volumi FlexVol, BlueXP fornisce informazioni dettagliate per i volumi FleGroup creati attraverso una sezione dedicata ai volumi. Nella sezione Volumes (volumi), è possibile identificare ciascun gruppo di volumi FlexGroup tramite il testo dell'icona. Inoltre, è possibile identificare e ordinare i volumi FlexGroup nella vista elenco volumi attraverso la colonna stile volume.</block>
   <block id="704ce057086edc7f390e72f33febfb03" category="list-text">Facoltativo: Accedere alla CLI di ONTAP per Cloud Volumes ONTAP ed eseguire *network interface show* per confermare che ciascuno di questi indirizzi IP è in uso.</block>
-  <block id="210737c390cb0d28243061081a9b7c4a" category="admonition">Per eseguire ulteriori attività relative alle schede NIC, è possibile assegnare un ruolo di contributore della rete o un ruolo personalizzato con le autorizzazioni appropriate in Azure. Per ulteriori informazioni su queste autorizzazioni relative alla scheda NIC, fare riferimento alla<block ref="66f156d6b7e425dd982efc44f4fabac6" category="inline-link-rx"></block> .</block>
-  <block id="61576418077bcd8f8092882074c7da4e" category="admonition">Un IP front-end deve essere creato solo sotto NIC0 per ogni SVM corrispondente. Per ulteriori informazioni su come aggiungere l'indirizzo IP alla SVM NIC0, fare riferimento alla "fase 7 [hyperlink]"</block>
   <block id="448ebe9e1f128098ee0a86ff8eada021" category="paragraph">Se supportato dalla licenza, è possibile creare più VM di storage su un sistema a nodo singolo o su una coppia ha. È necessario utilizzare l'API BlueXP  per creare una macchina virtuale per lo storage su una coppia ha, mentre è possibile utilizzare ONTAP System Manager o l'interfaccia a riga di comando di ONTAP per creare una macchina virtuale per lo storage su un sistema a nodo singolo.</block>
   <block id="0bc83530bf1c3dfbdf7ae1a46191b416" category="paragraph">È necessario utilizzare l'API BlueXP per creare una VM di storage su un sistema Cloud Volumes ONTAP in Google Cloud. Poiché BlueXP  configura la macchina virtuale di storage con i servizi LIF richiesti, nonché una LIF iSCSI necessaria per le comunicazioni SMB/CIFS outbound ONTAP ONTAP.</block>
   <block id="3fddfb3310c868dbd37067b4e4c94bc2" category="paragraph">BlueXP  supporta eventuali macchine virtuali storage aggiuntive create da ONTAP System Manager o dalla CLI di ONTAP.</block>
@@ -5156,7 +4994,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="fd4ec163c1cf6efd42bc780358b7fb84" category="list-text">La regione e la zona selezionate supportano dischi gestiti SSD Premium da v2 GB. Per informazioni sulle regioni supportate, fare riferimento a <block ref="4cad7f2a2d9c49229b747bad0a9e56da" category="inline-link-rx"></block>.</block>
   <block id="a9b7d8164fa6256aced367d79aa2abab" category="inline-link-macro">Funzione Microsoft.Compute/VMOrchestratorZonalMultiFD</block>
   <block id="218949100f9bb1c7fe8ef525701547a0" category="list-text">L'abbonamento è registrato per Microsoft <block ref="b47370f17ae59423c751ec1694c9ca74" category="inline-link-macro-rx"></block>.</block>
-  <block id="d63d6372ae20eb19f707718f270a6b48" category="list-text"><block ref="d63d6372ae20eb19f707718f270a6b48" category="inline-link-macro-rx"></block></block>
   <block id="e378925ca7c13e386e5c5d854097dc26" category="inline-link">Avviso per Cloud Volumes ONTAP</block>
   <block id="72b3ada156bb3b51f9862f1754d974d2" category="list-text"><block ref="72b3ada156bb3b51f9862f1754d974d2" category="inline-link-rx"></block></block>
   <block id="fadac06c68e9ffce4bb17bd0d6ec5f2b" category="paragraph">Puoi implementare coppie ha in una singola zona di disponibilità e utilizzare dischi gestiti SSD Premium da v2 TB quando sono soddisfatte le seguenti condizioni:</block>
@@ -5286,7 +5123,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="d2a65c4b3d7d612fe9fcff1cd53a7468" category="summary">La modalità ad alta disponibilità di Microsoft Azure deve essere abilitata per ridurre i tempi di failover non pianificati e per abilitare il supporto NFSv4 ore su 24, 7 giorni su 7 per Cloud Volumes ONTAP.</block>
   <block id="5bc18ee7996a6b2f47f52d9c0d64c84c" category="doc">Abilita la modalità high Availability in Azure</block>
   <block id="3cad9b9a9f4d8a66f7f9dabc18c3c350" category="list-text">Registrare la funzione modalità alta disponibilità:</block>
-  <block id="55b69e64ede595e0a10eefb4d9199033" category="paragraph">Cloud Volumes ONTAP esegue un errore e ripristina le nuove implementazioni di configurazioni ad alta disponibilità (ha) AWS in una singola zona di disponibilità (AZ) ogni volta che la creazione del gruppo di posizionamento non riesce. Se necessario, è possibile forzare il completamento corretto delle implementazioni configurando i gruppi di posizionamento in modo da ignorare il processo di rollback ogni volta che la creazione non riesce.</block>
   <block id="43c795154e3b7bf74f7abd49f2e26e1a" category="paragraph">BlueXP  ti consente di scegliere un'impostazione della velocità di scrittura per Cloud Volumes ONTAP, ad eccezione delle coppie ha in Google Cloud. Prima di scegliere una velocità di scrittura, è necessario comprendere le differenze tra le impostazioni normali e alte e i rischi e le raccomandazioni quando si utilizza un'elevata velocità di scrittura. <block ref="12222f10612c9f092ca31c9e99478649" category="inline-link-macro-rx"></block>.</block>
   <block id="473579de7dd820e9afa2d1deba8066a3" category="paragraph">Ecco un paio di esempi:</block>
   <block id="f7cd19fdb1155c901cb27faf15e77439" category="list-text">Se si desidera aggiornare la versione installata di Cloud Volumes ONTAP, fare clic su *Aggiorna ora!* Per impostazione predefinita, viene visualizzata l'ultima versione compatibile per l'aggiornamento.</block>
@@ -5321,14 +5157,12 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="e8ae21b110baed89680dca18585c158c" category="section-title">Le zone locali supportano Amazon Web Services in modalità privata</block>
   <block id="b32702079d81c2fd1e39448319edfa06" category="paragraph">Ora BlueXP  supporta le zone locali di AWS per le implementazioni di alta disponibilità (ha) Cloud Volumes ONTAP in modalità privata. Il supporto che in precedenza era limitato solo alla modalità standard è stato ora esteso per includere la modalità privata.</block>
   <block id="648169096ce56c8569ce36a4abebe9c7" category="admonition">Le zone locali di AWS non sono supportate quando si utilizza BlueXP  in modalità limitata.</block>
-  <block id="7a73f560e215c4ff952d3384c5435ae9" category="list-text"><block ref="7a73f560e215c4ff952d3384c5435ae9" category="inline-link-rx"></block></block>
   <block id="c8eac8ecc3bb9bb52e4fa6b3d34c3c38" category="list-text"><block ref="c8eac8ecc3bb9bb52e4fa6b3d34c3c38" category="inline-link-rx"></block></block>
   <block id="448c087351c52cb72f971666e2159491" category="paragraph"><block ref="448c087351c52cb72f971666e2159491" category="inline-link-rx"></block></block>
   <block id="059b6fdd2ea839d9327c322a4c87e168" category="doc">Fine della disponibilità per le licenze basate su nodi</block>
   <block id="73dfeef5d38f87e4c1d9e4b6417db109" category="paragraph">NetApp ha pianificato la fine della disponibilità (EOA) e la fine del supporto (EOS) della licenza basata su nodi Cloud Volumes ONTAP. A partire dal 11 novembre 2024, la disponibilità limitata delle licenze basate su nodi è stata interrotta. Il supporto per le licenze basate su nodi termina il 31 dicembre 2024. Dopo la fine delle licenze basate su nodi, è necessario passare alla licenza basata sulla capacità utilizzando il tool di conversione delle licenze BlueXP .</block>
   <block id="90df487d076cd9295a7192268b4439ee" category="inline-link">Fine della disponibilità delle licenze basate su nodi</block>
   <block id="342dcce6bda294bb4b60fc9333bcafbe" category="inline-link">Converti le licenze basate su nodi in base alla capacità</block>
-  <block id="2293617fe352e42e5a1e5d757463cb39" category="paragraph"><block ref="677ce77d69762bd9f63d8a2760e6a0c4" category="inline-link-rx"></block> <block ref="5987d844b1ad687ea551a96a31c7c0df" category="inline-link-rx"></block></block>
   <block id="a4b4a128b8ea43df8551a18d37b0bfcd" category="section-title">Rimozione di implementazioni basate su nodi da BlueXP </block>
   <block id="04b144a0be31129b4ac9a0f2751271d9" category="paragraph">L'opzione di implementare i sistemi Cloud Volumes ONTAP utilizzando licenze basate su nodi è obsoleta in BlueXP . Ad eccezione di alcuni casi speciali, non puoi utilizzare le licenze basate su nodi per le implementazioni Cloud Volumes ONTAP per qualsiasi cloud provider.</block>
   <block id="11c97a8e296f1428a1d4c9a2253b1bfb" category="paragraph">NetApp riconosce i seguenti requisiti di licenza esclusivi in conformità con obblighi contrattuali e esigenze operative e continuerà a supportare le licenze basate su nodi in queste situazioni:</block>
@@ -5354,7 +5188,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="54a223dbcc3dca4a58e9e5bc292e0c6b" category="paragraph">Fare riferimento alla documentazione AWS per i dettagli più recenti e completi di <block ref="a4408f4d4cfd81ced6d2ec2b8da89160" category="inline-link-macro-rx"></block>.</block>
   <block id="8d4ac812d0760131bc0db9a92eb2b512" category="paragraph">Ogni sistema Cloud Volumes ONTAP con una BYOL (Bring Your Own License) basato su nodo deve disporre di una licenza di sistema installata con un abbonamento attivo. BlueXP semplifica il processo gestendo le licenze e visualizzando un avviso prima della scadenza.</block>
   <block id="2316a1561b1b51c9eb0f231cb338cf48" category="summary">Avere familiarità con il addebito, il modello di consumo, i prezzi e le configurazioni delle licenze basate sulla capacità.</block>
-  <block id="13dba612a4f942a80cbc82c5f678d57c" category="doc">Ulteriori informazioni sulle licenze basate sulla capacità</block>
   <block id="24382072604813ac4ccf773eac088de7" category="paragraph">Dovresti conoscere l'addebito e l'utilizzo della capacità delle licenze basate sulla capacità</block>
   <block id="14f508f0826944b504efb176670357e8" category="list-text">*BYOL*: Bring Your Own License (BYOL). Una licenza acquistata da NetApp, che può essere utilizzata per implementare Cloud Volumes ONTAP in qualsiasi cloud provider.</block>
   <block id="3c7a90227f7481790a6d7eb5b1a274ea" category="list-text">*PAYGO*: Un abbonamento pay-as-you-go (PAYGO) è un abbonamento orario dal mercato del tuo cloud provider.</block>
@@ -5380,7 +5213,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="913f6cd3e420105c804151f182c6938f" category="admonition">Anche in questi scenari, i rinnovi di licenze e le nuove licenze basate su nodi sono validi per un massimo di un anno dalla data di approvazione.</block>
   <block id="5be0251ff1848cd4d292e0a684e70539" category="section-title">Conversione della licenza</block>
   <block id="67b50b6cd5ac50e92192638dab47bddc" category="paragraph">Prima di procedere alla transizione, è opportuno familiarizzare con la differenza tra i due modelli di licenza. La licenza basata su nodi include capacità fissa per ogni istanza di ONTAP, che può limitare la flessibilità. Le licenze basate sulla capacità, invece, consentono di creare un pool di storage condiviso su più istanze, offrendo una maggiore flessibilità, ottimizzando l'utilizzo delle risorse e riducendo il potenziale di penalizzazione finanziaria durante la ridistribuzione dei carichi di lavoro. La ricarica basata sulla capacità si adatta perfettamente ai requisiti di storage in continua evoluzione.</block>
-  <block id="9deed5641b081a08e814b22533f5376e" category="paragraph">Per informazioni su come eseguire questa conversione, fare riferimento alla <block ref="431f655d5a9ac309b561fc62a4c619ea" category="inline-link-macro-rx"></block>.</block>
   <block id="2840378978873ef766f1cf65e35e8874" category="admonition">La conversione di un sistema da licenze basate sulla capacità a licenze basate su nodi non è supportata.</block>
   <block id="eb6b8681b70b8bdf10f97c0999d1a166" category="paragraph">La funzionalità WORM è disponibile per l'utilizzo con iscrizioni BYOL (Bring Your Own License) e al marketplace per le tue licenze senza costi aggiuntivi. Contattare il rappresentante commerciale NetApp per aggiungere WORM alla licenza corrente.</block>
   <block id="860927af902beb1428465c4ff2b73981" category="list-text">Se disattivi lo storage WORM al momento della creazione di un ambiente di lavoro, ogni volume creato da BlueXP , ONTAP System Manager o dalla CLI di ONTAP ha disattivato WORM.</block>
@@ -5465,15 +5297,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="23364a1412324aba4675105eacf57908" category="example-title">Visualizzare i passaggi</block>
   <block id="6ecba12db0576e8891316b6674fda716" category="paragraph">Ora puoi attivare lo storage WORM (Write Once, Read Many) su un sistema Cloud Volumes ONTAP esistente utilizzando BlueXP . Questa funzionalità offre la flessibilità di abilitare IL WORM in un ambiente di lavoro, anche se IL WORM non è stato attivato durante la sua creazione. Una volta attivato, non è possibile disattivare IL WORM.</block>
   <block id="31ccaa5879eee7a69ef3c48f1004c59c" category="list-text">La modifica del metodo di addebito non influisce sul costo di una licenza acquistata tramite NetApp (BYOL) o sull'abbonamento pay-as-you-go (Marketplace) del cloud provider.</block>
-  <block id="deeb890dedc65f3ba1539e8c0083a08b" category="paragraph">Per le coppie ha (high Availability), devi accedere a ciascuna Storage VM (SVM) nel cluster e creare gli IP corrispondenti sotto nic0 per ogni SVM. La modalità di allocazione degli indirizzi IP per una coppia ha dipende dal protocollo di storage utilizzato. In modalità ha, gli utenti devono assicurarsi che gli indirizzi IP siano configurati correttamente per supportare il failover e la ridondanza, aspetto essenziale per mantenere l'alta disponibilità e l'affidabilità del sistema di storage.</block>
-  <block id="d40f712a330c4835a0ab9b70db06051b" category="list-text">Un indirizzo IP opzionale per una LIF di gestione SVM</block>
-  <block id="534113954d7a54ea89ef88fa230b7146" category="paragraph">Le LIF iSCSI sono necessarie per le comunicazioni DNS anche quando non viene utilizzato il protocollo iSCSI. A questo scopo viene utilizzato un LIF iSCSI perché non esegue la migrazione in caso di failover.</block>
-  <block id="779dc7c57d3ba82d3f1438a241a8770a" category="inline-link-macro">procedura precedente</block>
-  <block id="7e5f8351d1e24c2cf0c0d5fbc956ea2b" category="list-text">Crea LIF dati. In questa fase, si utilizzano gli IP assegnati in <block ref="c0438a20d1b940963832742d765316e8" category="inline-link-macro-rx"></block>per fungere da LIF dati.</block>
-  <block id="e5da8bd8aa33e128edc30f4d0c6082f4" category="list-text">Crea LIF iSCSI per fornire comunicazioni DNS. Le LIF iSCSI sono necessarie per le comunicazioni DNS anche quando non viene utilizzato il protocollo iSCSI.</block>
-  <block id="1ea87a95c176e342e1e8fd101628481f" category="list-text">Crea LIF dati NAS. In questa fase, si utilizzano gli IP assegnati in <block ref="c0438a20d1b940963832742d765316e8" category="inline-link-macro-rx"></block>per fungere da LIF dati.</block>
-  <block id="c023c17ce97ef2fee30e2cb2aa0cd81a" category="paragraph">Per ulteriori informazioni, vedere <block ref="7e81f0f3d7f6d88b77289e1baaf5eecf" category="inline-link-macro-rx"></block>.</block>
-  <block id="c0131b1cf44af0fec95135e45a801bbe" category="doc">Pianificazione dei controlli di servizio VPC in Google Cloud</block>
   <block id="fa055d94084c7095d6c7ec354ec44857" category="doc">Elenco delle VM supportate aggiornate per Google Cloud per allinearle alle Best practice</block>
   <block id="497e698cad27d6346959de7394ab5df8" category="doc">Elenco delle VM supportate aggiornate per Azure per allinearle alle Best practice</block>
   <block id="a295598082ec4c1c06fb5a3e2ad3e1d1" category="paragraph">Le famiglie di macchine DS_v2 ed es_v3 non sono più disponibili per la selezione in BlueXP  quando si distribuiscono nuove istanze di Cloud Volumes ONTAP in Azure. Queste famiglie verranno conservate e supportate solo nei sistemi esistenti più vecchi. Le nuove implementazioni di Cloud Volumes ONTAP sono supportate in Azure solo a partire dalla release 9.12.1. Si consiglia di passare a es_v4 o a qualsiasi altra serie compatibile con Cloud Volumes ONTAP 9.12.1 e versioni successive. Le macchine delle serie DS_v2 ed es_v3, tuttavia, saranno disponibili per le nuove implementazioni effettuate tramite l'API.</block>
@@ -5830,8 +5653,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="3c0acb220a6d083f589c0e9d2c4bb5b9" category="paragraph">La password deve rispettare alcune regole. La nuova password:</block>
   <block id="c3b8a6ca2fd73fcdea07816d50da5780" category="list-text">Non deve contenere la parola<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block></block>
   <block id="381979ed7a4bb72f3b0208ee434d237f" category="list-text">La lunghezza deve essere compresa tra 8 e 50 caratteri</block>
-  <block id="035cd612f5f182c28849afc511825894" category="list-text">Deve contenere almeno una lettera inglese e un numero</block>
-  <block id="823f5f4ed700cc35a2027d5df0c8706e" category="list-text">Non deve contenere questi caratteri speciali:<block ref="172ce81fb34a8026a9711811fececc33" prefix=" " category="inline-code"></block></block>
   <block id="e574fef1a46f15b3c69233f51519d7cf" category="paragraph">Per ulteriori informazioni, fare riferimento a <block ref="449d1f3dba62fd34c10497ac720687ce" category="inline-link-macro-rx"></block>, , <block ref="1e62300500e1ad0802bb2b24113c7036" category="inline-link-macro-rx"></block>e.<block ref="9af56c326a803ff09c4af3da1cdbc4e2" category="inline-link-rx"></block></block>
   <block id="401117ae72e5a93172e8ce8c23c7676d" category="cell">9.16.1 (solo per Azure e Google Cloud)</block>
   <block id="c06b363f3dfd3ad2d628083406a0a1ac" category="paragraph">I miglioramenti descritti in questa pagina sono specifici delle funzionalità di BlueXP che consentono la gestione di Cloud Volumes ONTAP. Per scoprire le novità del software Cloud Volumes ONTAP,<block ref="708e09e3f2783926556b9c6d77f63a27" category="inline-link-rx"></block>.</block>
@@ -5841,4 +5662,144 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="2e168141b8f719cbd37e6beec663b599" category="list-text">Stati Uniti centrali</block>
   <block id="7a6df46ff8e25ac610f60f312512afa4" category="list-text">US Gov Virginia (Regione del Governo degli Stati Uniti - Virginia)</block>
   <block id="0de5f5ade75808b90faefd69873b4b3c" category="section-title">12 marzo 2025</block>
+  <block id="cded3209819889817786a4170eb0e49c" category="inline-link">Abilita le soluzioni di protezione dal ransomware NetApp per Cloud Volumes ONTAP</block>
+  <block id="d2675df83ff2fbafe199fb06a1fd5d56" category="list-text"><block ref="d2675df83ff2fbafe199fb06a1fd5d56" category="inline-link-rx"></block></block>
+  <block id="c2e10e9222f5db93eded2cefa02c0ef5" category="inline-link">Converti una licenza basata su nodi Cloud Volumes ONTAP in una licenza basata sulla capacità</block>
+  <block id="0fc6c6e7c7c886fe493ee21e8e7be67d" category="paragraph"><block ref="677ce77d69762bd9f63d8a2760e6a0c4" category="inline-link-rx"></block> <block ref="b3c563b157608d2aec77c4e8d2c32e61" category="inline-link-rx"></block></block>
+  <block id="322a339b221056f32120ffd18077d44d" category="doc">Creazione di macchine virtuali di storage automatizzata tramite le API in Azure</block>
+  <block id="aa1c2167957b1092da7e43e77867748c" category="paragraph">Ora puoi utilizzare le API di BlueXP  per creare, rinominare ed eliminare macchine virtuali storage di servizi dati aggiuntivi per Cloud Volumes ONTAP in Azure. L'utilizzo delle API automatizza il processo di creazione della VM di storage, includendo la configurazione delle interfacce di rete richieste, delle LIF e di una LIF di gestione, se devi utilizzare una VM di storage per scopi di gestione.</block>
+  <block id="4a688a36b1b8761ed6587867f87a2cc3" category="inline-link">Gestisci le macchine virtuali dello storage di distribuzione dei dati per Cloud Volumes ONTAP in Azure</block>
+  <block id="efef8f9f364ee7668a530080a3464383" category="paragraph"><block ref="efef8f9f364ee7668a530080a3464383" category="inline-link-rx"></block></block>
+  <block id="36b957c17f5c2834f27a8de7ecccad90" category="doc">Scopri in che modo AutoSupport e Digital Advisor vengono utilizzati per Cloud Volumes ONTAP</block>
+  <block id="a813237b7fa0fd426e65b5e81ab565df" category="doc">Scopri di più sul supporto per volumi elastici AWS con Cloud Volumes ONTAP</block>
+  <block id="367721c6da74417e71470676fd55bfec" category="doc">Verifica della firma dell'immagine del marketplace Azure per Cloud Volumes ONTAP</block>
+  <block id="7e2d94ca440b9c349d09b9e01c8c90ab" category="doc">Verifica dell'immagine di Azure Marketplace per Cloud Volumes ONTAP</block>
+  <block id="b3b8964875bb6d67dab64d2f1d39b3aa" category="doc">Protocolli client supportati per Cloud Volumes ONTAP</block>
+  <block id="84fbe7f88bb3a63bec3ffcbda024a860" category="doc">Scopri di più sul tiering dei dati con Cloud Volumes ONTAP in AWS, Azure o Google Cloud</block>
+  <block id="46d42323928c4276f41709f7eacfb86f" category="doc">Operazioni non disponibili quando un nodo nella coppia ha Cloud Volumes ONTAP è offline</block>
+  <block id="25706862d682c182f521566815ee29c5" category="doc">Scopri come l'immagine di Google Cloud è verificata in Cloud Volumes ONTAP</block>
+  <block id="2aeb1ad45e4734cce6c9fcee5eb6f0d0" category="doc">Verifica della firma dell'immagine Google Cloud per Cloud Volumes ONTAP</block>
+  <block id="94e9d73297e9233a06c7fdb791f653bc" category="doc">Scopri di più sulle coppie ha di Cloud Volumes ONTAP in Azure</block>
+  <block id="d0dd3fdc32191c28bcc7f6feca9ffe44" category="doc">Scopri di più sulle coppie ha di Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="b35c9dba2b9bdb409d9ac4b1e08d35b4" category="doc">Scopri di più sulle coppie ha di Cloud Volumes ONTAP in AWS</block>
+  <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Licensing per Cloud Volumes ONTAP</block>
+  <block id="95b5ae6b0af18840a3741634cd325668" category="list-text">Paga più sistemi Cloud Volumes ONTAP nel tuo account NetApp in base alla capacità fornita. Include la possibilità di acquistare servizi dati cloud aggiuntivi. Per ulteriori informazioni sui modelli di consumo delle licenze basate sulla capacità, fare riferimento a <block ref="800c64ac20219346d421e96b28656701" category="inline-link-macro-rx"></block>.</block>
+  <block id="c3f0a05442b6c8a72739ff963cfeed7f" category="paragraph">I seguenti pacchetti basati sulla capacità sono disponibili per Cloud Volumes ONTAP. Per ulteriori informazioni sui pacchetti di licenze basati sulla capacità, fare riferimento a <block ref="800c64ac20219346d421e96b28656701" category="inline-link-macro-rx"></block>.</block>
+  <block id="19a5330bf6f5eac370d1103981c5a834" category="inline-link-macro">carica minima</block>
+  <block id="b0890bcc109876c5e12a5adec396926f" category="paragraph">Non appena un sistema viene convertito nel pacchetto Essentials, <block ref="7af77c30f2eff63b0d18155ad569ed75" category="inline-link-macro-rx"></block>viene applicato.</block>
+  <block id="f6d538cae99e0f8fa45e7e8780358583" category="paragraph">Per informazioni su come eseguire questa conversione, fare riferimento alla <block ref="3fdaa70059ad7f9b695791d3dfebbc25" category="inline-link-macro-rx"></block>.</block>
+  <block id="1a7468dd02c2c074fc65d2ee7db41483" category="doc">Scopri il monitoraggio delle performance per i workload Cloud Volumes ONTAP</block>
+  <block id="554a0d7666ec33e45169ab1eed7eb037" category="doc">Scopri la crittografia dei dati e la protezione dal ransomware di Cloud Volumes ONTAP</block>
+  <block id="0a1772ef9617fc577288f8a885c2938c" category="inline-link-macro">Crittografa i volumi con le soluzioni per la crittografia NetApp</block>
+  <block id="f750b4d8a7bae05db59f399386bae8b4" category="paragraph">La configurazione di un gestore di chiavi supportato è l'unica operazione necessaria. Per istruzioni sulla configurazione, fare riferimento alla <block ref="3dccf04b19d6c7766062818a9209af46" category="inline-link-macro-rx"></block>.</block>
+  <block id="bf5dc703fb5ff1a19ddeb7cf2f15648c" category="doc">Gestione dello storage Cloud Volumes ONTAP</block>
+  <block id="d58231e89f55bf4653c26dafb2cd1a75" category="doc">Dischi e aggregati utilizzati per i cluster Cloud Volumes ONTAP</block>
+  <block id="137a4f9c2770404d0739c4ea093147a2" category="inline-link-macro">storage a oggetti a basso costo</block>
+  <block id="197b31f211e5bcf8a6c50c64a00209b0" category="paragraph">Il tipo di disco EBS sottostante può essere SSD General Purpose (gp3 o gp2), SSD IOPS con provisioning (io1) o HDD con throughput ottimizzato (st1). È possibile associare un disco EBS con Amazon S3 a <block ref="8ea89944316dc5317d2fdef703995c09" category="inline-link-macro-rx"></block>.</block>
+  <block id="98fa1980d4ceb972751f579468dd1eac" category="paragraph">È possibile associare un disco gestito con l'archiviazione BLOB di Azure a <block ref="8ea89944316dc5317d2fdef703995c09" category="inline-link-macro-rx"></block>.</block>
+  <block id="530728335b6eef1c9412262b7a737998" category="inline-link-macro">Lancia una coppia ha Cloud Volumes ONTAP in Azure</block>
+  <block id="648475bb12c1629374962b8e96fa671f" category="list-text"><block ref="648475bb12c1629374962b8e96fa671f" category="inline-link-macro-rx"></block></block>
+  <block id="45809dd0cadbd32c815238886deddf7a" category="paragraph">Il tipo di disco può essere _dischi persistenti SSD Zonal_, _dischi persistenti bilanciati Zonal_ o _dischi persistenti standard Zonal_. È possibile associare i dischi persistenti con un bucket Google Storage a <block ref="8ea89944316dc5317d2fdef703995c09" category="inline-link-macro-rx"></block>.</block>
+  <block id="398200b3f60c4e3e7a3b7cae683fbd49" category="doc">Scopri lo storage WORM su Cloud Volumes ONTAP</block>
+  <block id="0d7f1e80b69fb06179f8f4e82af3b4d2" category="doc">Configurazioni predefinite supportate per Cloud Volumes ONTAP</block>
+  <block id="bdb9f0bd802608490113cecb46963491" category="doc">Configura il networking AWS per Cloud Volumes ONTAP</block>
+  <block id="48a88a6a697e4dc4a6da4cec716d1400" category="paragraph">Verifica di aver soddisfatto i seguenti requisiti in AWS.</block>
+  <block id="8163eb1a73467820de782c3a3ebd563a" category="doc">Configura il networking di Google Cloud per Cloud Volumes ONTAP</block>
+  <block id="cb059927a7527646b4cd68cb3220f2ea" category="doc">Regole in entrata e in uscita del gruppo di sicurezza AWS per Cloud Volumes ONTAP</block>
+  <block id="c7c36710c319ba2646765acbeed52820" category="doc">Versioni di ONTAP supportate per le implementazioni Cloud Volumes ONTAP</block>
+  <block id="03b6a8927e57dee9e13ce3e743433f8c" category="doc">Configura i controlli del servizio VPC per implementare Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="d22f5ca5f04b85906e5c03f0a8f0354d" category="doc">Crea copie Snapshot a prova di manomissione dei file WORM su Cloud Volumes ONTAP</block>
+  <block id="816ad715f74514ea0e194c106b673bf0" category="doc">Accelera l'accesso ai dati con i volumi FlexCache su un sistema Cloud Volumes ONTAP</block>
+  <block id="e1d184508c5a07e34d4799a6df05b20e" category="doc">Aggiunta di un sistema Cloud Volumes ONTAP esistente a BlueXP </block>
+  <block id="bd38f10049f751a48716a3340ced5706" category="doc">Gestisci le chiavi di crittografia Cloud Volumes ONTAP con il servizio di gestione delle chiavi AWS</block>
+  <block id="ec50d6cbb7b13703598a5b1e88bc013b" category="doc">Scarica il digest delle immagini di Azure Marketplace per Cloud Volumes ONTAP</block>
+  <block id="cd77a4de9d5cef0b54e9b8a8803001ee" category="doc">Esporta immagini VHD per Cloud Volumes ONTAP dal marketplace di Azure</block>
+  <block id="890da2408e0505fbcfccbfee39ec96e9" category="doc">Gestisci le chiavi di crittografia Cloud Volumes ONTAP con il vault delle chiavi di Azure</block>
+  <block id="733ed8eca6d49536d616b96f190c0f55" category="doc">Modificare il tipo di istanza EC2 per un sistema Cloud Volumes ONTAP in AWS</block>
+  <block id="109fc4688092b7a195c632a007223a37" category="doc">Modificare la password di amministrazione del cluster Cloud Volumes ONTAP</block>
+  <block id="c33283e89e8cd329189a883e4e8f4053" category="list-text">Deve contenere almeno una lettera inglese e una cifra</block>
+  <block id="c2ffca846e9e6726f5fcc838afa7cba5" category="list-text">Non deve contenere questi caratteri speciali:<block ref="4981b6e6dc1b6d6cbf5e189886588934" prefix=" " category="inline-code"></block></block>
+  <block id="82bd762491ef3ae271a0ea595966e322" category="doc">Modificare le tabelle di routing per coppie ha Cloud Volumes ONTAP in più AWS AZS</block>
+  <block id="70484016d5d0bccccca7b3643c1e1cb3" category="doc">Configurare EMS per i sistemi Cloud Volumes ONTAP</block>
+  <block id="ce61224c44993a5d74a14a814d63a141" category="doc">Configurare la creazione di gruppi di posizionamento per le coppie ha Cloud Volumes ONTAP in AWS single AZS</block>
+  <block id="40e4e6d3852024f0e6a0da75b4eb51d7" category="paragraph">In caso di errore della creazione del gruppo di posizionamento, le implementazioni ad alta disponibilità (ha) di Cloud Volumes ONTAP in AWS Single Availability zone (AZ) possono eseguire il failback. Anche la creazione del gruppo di posizionamento non riesce e la distribuzione torna indietro se il nodo Cloud Volumes ONTAP e l'istanza del mediatore non sono disponibili. Per evitare questo problema, è possibile modificare la configurazione per consentire il completamento della distribuzione anche se la creazione del gruppo di posizionamento non riesce.</block>
+  <block id="d184531e79cb1894504e475c084ea277" category="paragraph">Quando si ignora il processo di rollback, il processo di distribuzione di Cloud Volumes ONTAP viene completato correttamente e viene notificato che la creazione del gruppo di posizionamento è incompleta.</block>
+  <block id="686735252f557ef703d19ff54b0dfe6f" category="list-text">Passare a<block ref="678ffe0122c1675f1a5ee93c014ea09c" prefix=" " category="inline-code"></block>.</block>
+  <block id="94f47533af71e506ca6e46f5d41e5281" category="list-text">Modificare<block ref="578c313f5cd6eb30b5ac7297c331bb28" prefix=" " category="inline-code"></block> cambiando il valore del<block ref="dcf0e663f730f50abe895b75152d74d3" prefix=" " category="inline-code"></block> parametro in<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>. Il valore predefinito di questo parametro è<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>.</block>
+  <block id="0b5251f1883e3ec824d9a78806b343fd" category="list-text">Salvare il file e disconnettersi dal connettore. Non è necessario riavviare il connettore.</block>
+  <block id="955118bb1928f31528e6d1c6032614da" category="doc">Connettersi a un LUN su Cloud Volumes ONTAP dal sistema host</block>
+  <block id="c90097da93864447e404b17f479c8d12" category="doc">Crea un aggregato per i sistemi Cloud Volumes ONTAP</block>
+  <block id="656c43863fb350bd8a6512b458eb5468" category="doc">Creare un FlexVol volume su un sistema Cloud Volumes ONTAP</block>
+  <block id="fd73c5858f758b5eb182a71086750cc2" category="doc">Creare un account di servizio Google Cloud per Cloud Volumes ONTAP</block>
+  <block id="0c533f9c8b7c3cfb052c90c911c8a5aa" category="doc">Eliminare un sistema Cloud Volumes ONTAP da BlueXP </block>
+  <block id="956ed8c59362d82aacc7c1ccc24ee128" category="doc">Implementa le coppie ha Cloud Volumes ONTAP in una subnet condivisa AWS</block>
+  <block id="e16981ff1ca4ae7d06bc78f8dba0cdf6" category="section-title">Lancia un sistema a nodo singolo in Google Cloud</block>
+  <block id="9e2bbff4e12af07e156a6163f9f58350" category="section-title">Lancia una coppia ha in Google Cloud</block>
+  <block id="212827cc745af4d5fcc5f8b6fbc59a86" category="section-title">Lancia un sistema Cloud Volumes ONTAP a nodo singolo in AWS</block>
+  <block id="52931339f9480af5b0fb9841710f9d8e" category="section-title">Lancia una coppia ha Cloud Volumes ONTAP in AWS</block>
+  <block id="253f14f70b008cf9e9d1e6143593db65" category="section-title">Lancia un sistema Cloud Volumes ONTAP a nodo singolo in Azure</block>
+  <block id="815c7816169ce0181021470fc851ad75" category="doc">Utilizza un Azure Private link o gli endpoint di servizio per i sistemi Cloud Volumes ONTAP</block>
+  <block id="3f8a964f1b4371b109b271e17740eb42" category="doc">Crittografa i volumi su Cloud Volumes ONTAP con le soluzioni per la crittografia NetApp</block>
+  <block id="7e2f4ea87cd4ef2400c67d3a6b35c0e4" category="doc">Verificare la firma dell'immagine di Azure Marketplace per Cloud Volumes ONTAP su Linux</block>
+  <block id="eb0bf51905bf265524b4344e372f0021" category="doc">Verificare la firma dell'immagine di Azure Marketplace per Cloud Volumes ONTAP su MAC OS</block>
+  <block id="a6c30282f56568ee9b5729642207a5b5" category="doc">Converti immagine Google Cloud in formato RAW per Cloud Volumes ONTAP</block>
+  <block id="240de91fb65f5d6acac3d891ccd57289" category="doc">Implementa Cloud Volumes ONTAP in AWS Secret Cloud o AWS Top Secret Cloud</block>
+  <block id="e35e4a3b0dde1d61e0fbd30f69e261c0" category="doc">Gestire le chiavi di crittografia Cloud Volumes ONTAP con il servizio KMS di Google Cloud</block>
+  <block id="b6be3318c0d7ae71f2c9a963e3341a7a" category="paragraph">Puoi utilizzare <block ref="4ef7b266bd9680469191a283388836d8" category="inline-link-macro-rx"></block> per proteggere le chiavi di crittografia Cloud Volumes ONTAP in un'applicazione implementata dalla piattaforma cloud Google.</block>
+  <block id="672b15aae3fb8b2bff49215a29073bfc" category="doc">Gestione degli aggregati per i cluster Cloud Volumes ONTAP</block>
+  <block id="05fef605ad17853dff22052e9ab0016f" category="doc">Gestisci le licenze basate sulla capacità per Cloud Volumes ONTAP</block>
+  <block id="3687f4296c72de96f1ced46ad440ddf0" category="doc">Gestire la capacità aggregata Cloud Volumes ONTAP su un connettore</block>
+  <block id="29808fc25dc24e47f398e7f013845bb1" category="doc">Gestione delle iscrizioni a Keystone tramite BlueXP </block>
+  <block id="160221c1e99e53b72af8a65c2440852b" category="doc">Gestisci la licenza basata su nodi per Cloud Volumes ONTAP</block>
+  <block id="76872305ddb703eedd7fbe3e66263d83" category="doc">Configurare il disaster recovery delle Storage VM per Cloud Volumes ONTAP</block>
+  <block id="ebf191006a9d83c300a0958f0a72be71" category="doc">Gestire i volumi su sistemi Cloud Volumes ONTAP</block>
+  <block id="20dbf2654bc1d1d73fb4b7331f8fa8cf" category="doc">Avviare e arrestare un sistema Cloud Volumes ONTAP</block>
+  <block id="edbb04641be355c373bb6dcba79285c5" category="doc">Gestisci le macchine virtuali dello storage di distribuzione dei dati per Cloud Volumes ONTAP in AWS</block>
+  <block id="6c06918c853ceff156bfa91e6f728521" category="paragraph">Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Potresti sapere che si tratta di un _SVM_ o di un _vserver_. Per impostazione predefinita, Cloud Volumes ONTAP è configurato con una macchina virtuale storage, ma è possibile creare macchine virtuali storage aggiuntive quando si esegue Cloud Volumes ONTAP in Azure.</block>
+  <block id="a085c0a61467db1db666585d6c91ebba" category="paragraph">Per creare e gestire macchine virtuali storage di altri data-serving su Azure, è necessario utilizzare le API BlueXP . Ciò è dovuto al fatto che le API automatizzano il processo di creazione delle macchine virtuali storage e di configurazione delle interfacce di rete richieste. Nel creare le macchine virtuali storage, BlueXP  configura i servizi LIF richiesti, così come una LIF iSCSI necessaria per le comunicazioni SMB/CIFS in uscita dalla macchina virtuale storage.</block>
+  <block id="7147a143d2af533e058f535a19e1223d" category="paragraph">A partire da Cloud Volumes ONTAP 9,9.0, in base alla licenza in uso, sono supportate più macchine virtuali storage con configurazioni specifiche. Fare riferimento a<block ref="17601f6b0c4702ab7b2568d76b48bf40" category="inline-link-rx"></block> per verificare il numero supportato di macchine virtuali storage per la propria versione di Cloud Volumes ONTAP.</block>
+  <block id="c0bc1a321126780ce6dd98fe7445b54b" category="paragraph">Tutte le versioni di Cloud Volumes ONTAP precedenti alla 9.9.0 supportano una VM di storage di distribuzione dati e una VM di storage di destinazione utilizzate per il disaster recovery. È possibile attivare la VM di storage di destinazione per l'accesso ai dati in caso di interruzione della VM di storage di origine.</block>
+  <block id="d614d92be13a98e84d160b41e3cc3192" category="paragraph">Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per Cloud Volumes ONTAP. Le autorizzazioni richieste sono incluse in<block ref="7dc648b1297c419be8c55b589146f4e1" category="inline-link-rx"></block>.</block>
+  <block id="d77aca129ef05e1d8e6c8f148746dce9" category="paragraph">In base alla tua configurazione e al tipo di licenza, puoi creare più macchine virtuali storage su un sistema a nodo singolo o in una configurazione ha (High Availability) utilizzando le API BlueXP .</block>
+  <block id="ee24c5eec6ef0b71321a4b5ab8c7c8eb" category="paragraph">Quando crei Storage VM utilizzando le API, insieme alla configurazione delle interfacce di rete richieste, BlueXP  modifica anche le<block ref="891e111023ee3cccd4407be6ddd24c21" prefix=" " category="inline-code"></block> policy sulle macchine virtuali per lo storage dei dati rimuovendo i seguenti servizi dalla LIF dati NAS e aggiungendoli alla LIF dati iSCSI utilizzata per le connessioni di gestione in uscita:</block>
+  <block id="8706f6ead181f6948eb97f37a1eb2445" category="paragraph">Utilizza la seguente chiamata API per creare una VM storage su un sistema a nodo singolo.</block>
+  <block id="3fdacbfd71cad923423d9367166e8e10" category="paragraph"><block ref="c9cca6b9ba2558d529f121eb1e013395" prefix="" category="inline-code"></block></block>
+  <block id="6b6d0dcd4030cb1778fc115dbc546a6d" category="paragraph">Utilizza la seguente chiamata API per creare una VM storage in una configurazione ha di Azure:</block>
+  <block id="ffed8e594be63a1704331cda026451ec" category="paragraph"><block ref="332a159c5eb24709f786ad048b2b2fc8" prefix="" category="inline-code"></block></block>
+  <block id="546e719c658c5e1549c21e8288af2461" category="section-title">Gestire le macchine virtuali di storage su sistemi a nodo singolo e coppie ha</block>
+  <block id="2d9a7bdb8e630290a3ab4f21dc7b190b" category="paragraph">Con le API di BlueXP , puoi rinominare ed eliminare le macchine virtuali storage sia in configurazioni a nodo singolo che in configurazioni ha.</block>
+  <block id="292926f0684b9510b55c12943203a47a" category="paragraph">Per rinominare una VM di storage, è necessario fornire i nomi della VM di storage esistente e della nuova VM di storage come parametri.</block>
+  <block id="e313c8cca3b79dbc79cbcfe63c3d6efb" category="list-text">Utilizza la seguente chiamata API per rinominare una VM storage su un sistema a nodo singolo:</block>
+  <block id="163713240b16088767c6e8dd70caefde" category="paragraph"><block ref="d3fe545ac501d33a61917e447e4f0069" prefix="" category="inline-code"></block></block>
+  <block id="5fb2806cc031c54b3af655dfffd8fd1e" category="list-text">Utilizza la seguente chiamata API per rinominare una VM storage in una configurazione ha:</block>
+  <block id="f80f88eb929c0d4cd5386633be23cf21" category="paragraph"><block ref="d138335618e0186622605f96b9b3b0d1" prefix="" category="inline-code"></block></block>
+  <block id="c92f0160e249d6660e4b4262409aea6c" category="paragraph">In una configurazione ha o nodo singolo, puoi rimuovere una VM di storage se non ha volumi attivi.</block>
+  <block id="a3590d03d962ac5b789854576b314e57" category="list-text">Utilizza la seguente chiamata API per eliminare una VM storage su un sistema a nodo singolo:</block>
+  <block id="eba2f559f6f185c3ecb4fd32a7acf4c8" category="paragraph"><block ref="f72e53a28ab0632263c72933e322d2a6" prefix="" category="inline-code"></block></block>
+  <block id="55aa553ec7b227afb3f22326cbc74d66" category="list-text">Utilizza la seguente chiamata API per eliminare una VM storage in una configurazione ha:</block>
+  <block id="ab5ee533b7c08abc987c74ffd54477b9" category="paragraph"><block ref="4bd28f76ace2927734ae3d3abcca1009" prefix="" category="inline-code"></block></block>
+  <block id="914fe95f5aa6c2bb4ed60cded696ac13" category="doc">Gestisci le macchine virtuali dello storage di data-service per Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="29840bff9430e52461cf42481774b929" category="paragraph">Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per le coppie Cloud Volumes ONTAP ha. Le autorizzazioni richieste sono incluse in<block ref="fef452a667b371049bf1cd426aa1994a" category="inline-link-rx"></block>.</block>
+  <block id="3fab6f26ccc1354a7fda62c947fe176d" category="paragraph"><block ref="4ae3965c67ec8b00b8c07c6aa50d0d55" prefix="" category="inline-code"></block></block>
+  <block id="491f4afb4d76ae587fca5e7ac986bec8" category="paragraph"><block ref="6c678c0fbac1c8687769d59bba8c2b43" prefix="" category="inline-code"></block></block>
+  <block id="f6c911e7dfb2a5f8d5a5d0776d47d0cf" category="paragraph"><block ref="ead0722cb022f93c950a941d0eae1560" prefix="" category="inline-code"></block></block>
+  <block id="991acdf01923b94a0bcf31d5d24b6095" category="doc">Gestione delle macchine virtuali di storage per Cloud Volumes ONTAP</block>
+  <block id="47b81d0548595de2006c8db7b6c6d963" category="doc">Sposta un gruppo di risorse di Azure per Cloud Volumes ONTAP nella console di Azure</block>
+  <block id="8de7967775f0cf82161d1d5411115f1c" category="doc">Override dei blocchi CIFS per coppie ha Cloud Volumes ONTAP in Azure</block>
+  <block id="a594296c21b04d237d645fb5ddbfd992" category="doc">Abilita le soluzioni di protezione dal ransomware NetApp per Cloud Volumes ONTAP</block>
+  <block id="b8d0933e4595c12a05c25d72334bd141" category="doc">Registrare sistemi Cloud Volumes ONTAP pay-as-you-go</block>
+  <block id="b64a4e5c2983a08c1181a6a3a8d64492" category="doc">Rimuovere un ambiente di lavoro Cloud Volumes ONTAP da BlueXP </block>
+  <block id="7b2ff2cd0d40ee5016ce479175c970a7" category="doc">Attiva VMOrchestratorZonalMultiFD per Cloud Volumes ONTAP in Azure</block>
+  <block id="84a333a53e4f22cbaaa6d41a10b81021" category="doc">Configurare ruoli AWS IAM per i nodi Cloud Volumes ONTAP</block>
+  <block id="24558fa2d9e2dec026acbaef1270de6f" category="doc">Configura Cloud Volumes ONTAP per l'utilizzo di una chiave gestita dal cliente in AWS</block>
+  <block id="88f49ea08cc48c12826d7601b30c9af6" category="doc">Configurare un gateway di transito AWS per le coppie ha Cloud Volumes ONTAP</block>
+  <block id="b50f1f0d50a2ec5cb27990e7dcd7bc5a" category="doc">Sincronizzare l'ora del sistema Cloud Volumes ONTAP utilizzando il server NTP</block>
+  <block id="dc856ecc0acf613e6f450c313f378cfd" category="doc">Esegui il tiering dei dati Cloud Volumes ONTAP inattivi in uno storage a oggetti a basso costo</block>
+  <block id="aac1d92c6e4f6da425fffda1a43bb38b" category="doc">Verificare la configurazione di AutoSupport per Cloud Volumes ONTAP</block>
+  <block id="bd915a4eab5328d0dbd80804cc09ee0a" category="doc">Verificare il file disk.raw dell'immagine di Google Cloud per Cloud Volumes ONTAP utilizzando OpenSSL</block>
+  <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10 marzo 2025</block>
+  <block id="eccf4730c0054498e1b7d5cab926e79f" category="sidebar">Configurare la rete AWS</block>
+  <block id="7533d0f4870d29edf1d705a15d4f71e3" category="sidebar">Gestione delle macchine virtuali di storage in AWS</block>
+  <block id="db5cf7834d39ce63219e28d402aeb9c2" category="sidebar">Gestire le macchine virtuali di storage in Azure</block>
+  <block id="137413da40700294b3660243904ade25" category="sidebar">Gestire le macchine virtuali di storage in Google Cloud</block>
 </blocks>

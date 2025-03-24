@@ -4,7 +4,7 @@ permalink: concept-ha.html
 keywords: high availability, HA, mediator, concepts, understanding, overview, availability zones, AZs, takeover, giveback, rpo, rto, floating ip, nondisruptive, ha pairs, node, nodes, synchronous, resync, recovery point objective, recovery time objective, nas, nfs, cifs, floating ip address, route tables, iscsi, mpio, alua, failover, mount, remount, failure, data access, access, ip address, performance 
 summary: 'Una configurazione ha (High Availability) di Cloud Volumes ONTAP offre operazioni senza interruzioni e tolleranza agli errori. In AWS, i dati vengono sottoposti a mirroring sincrono tra i due nodi.' 
 ---
-= Coppie ad alta disponibilità in AWS
+= Scopri di più sulle coppie ha di Cloud Volumes ONTAP in AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

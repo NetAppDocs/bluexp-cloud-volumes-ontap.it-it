@@ -4,7 +4,7 @@ permalink: task-manage-capacity-licenses.html
 keywords: license, licensing, capacity license, capacity based license, add license, install license, digital wallet 
 summary: Gestisci le tue licenze basate sulla capacità dal portafoglio digitale BlueXP per assicurarti che il tuo account NetApp disponga di capacità sufficiente per i tuoi sistemi Cloud Volumes ONTAP. 
 ---
-= Gestione delle licenze basate sulla capacità
+= Gestisci le licenze basate sulla capacità per Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

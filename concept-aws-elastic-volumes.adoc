@@ -4,7 +4,7 @@ permalink: concept-aws-elastic-volumes.html
 keywords: elastic volumes, ev, ebs elastic volumes, ebs, amazon ebs, disk growth 
 summary: Il supporto per la funzionalità dei volumi elastici di Amazon EBS con un aggregato Cloud Volumes ONTAP offre performance migliori e capacità aggiuntiva, consentendo a BlueXP di aumentare automaticamente la capacità del disco sottostante in base alle necessità. 
 ---
-= Volumi elastici in AWS
+= Scopri di più sul supporto per volumi elastici AWS con Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

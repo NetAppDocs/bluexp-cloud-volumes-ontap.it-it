@@ -4,7 +4,7 @@ permalink: concept-degraded-ha-pair.html
 keywords: storage takeover, storage giveback, degraded, degraded status, degraded state, ha pair, ha takeover, takeover, giveback 
 summary: 'Quando un nodo in una coppia ha non è disponibile, l"altro nodo serve i dati per il partner per fornire un servizio dati continuo. Si tratta di un processo chiamato "Takeover dello storage". Diverse azioni non sono disponibili fino al completamento del giveback in storage.' 
 ---
-= Azioni non disponibili durante il takeover
+= Operazioni non disponibili quando un nodo nella coppia ha Cloud Volumes ONTAP è offline
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -36,6 +36,18 @@ Per un elenco di tutte le regioni, fare riferimento alla https://bluexp.netapp.c
 
 
 
+== 10 marzo 2025
+
+
+
+=== Creazione di macchine virtuali di storage automatizzata tramite le API in Azure
+
+Ora puoi utilizzare le API di BlueXP  per creare, rinominare ed eliminare macchine virtuali storage di servizi dati aggiuntivi per Cloud Volumes ONTAP in Azure. L'utilizzo delle API automatizza il processo di creazione della VM di storage, includendo la configurazione delle interfacce di rete richieste, delle LIF e di una LIF di gestione, se devi utilizzare una VM di storage per scopi di gestione.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Gestisci le macchine virtuali dello storage di distribuzione dei dati per Cloud Volumes ONTAP in Azure"^]
+
+
+
 == 6 marzo 2025
 
 
@@ -129,7 +141,7 @@ NetApp ha pianificato la fine della disponibilità (EOA) e la fine del supporto 
 
 Per gli impegni annuali o a lungo termine, NetApp consiglia di contattare il rappresentante NetApp prima della data di fine disponibilità o della data di scadenza della licenza, per verificare che siano in essere i prerequisiti per la transizione. Se non disponi di un contratto a lungo termine per un nodo Cloud Volumes ONTAP ed esegui il sistema su un abbonamento PAY-as-you-go (PAYGO) on-demand, è importante pianificare la conversione prima della data dell'EOS. Sia per i contratti a lungo termine che per gli abbonamenti a PAYGO, è possibile utilizzare lo strumento di conversione delle licenze BlueXP  per una conversione perfetta.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"^] https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-convert-node-capacity.html["Converti le licenze basate su nodi in base alla capacità"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fine della disponibilità delle licenze basate su nodi"^] https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-convert-node-capacity.html["Converti una licenza basata su nodi Cloud Volumes ONTAP in una licenza basata sulla capacità"^]
 
 
 
@@ -225,7 +237,7 @@ Il prezzo semplificato offre i seguenti vantaggi:
 
 Ulteriori informazioni sulle seguenti funzioni:
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html["Miglioramento della protezione contro ransomware"]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-protecting-ransomware.html["Abilita le soluzioni di protezione dal ransomware NetApp per Cloud Volumes ONTAP"]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-worm.html["Storage WORM"]
 
 

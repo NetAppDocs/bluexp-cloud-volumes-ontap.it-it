@@ -4,7 +4,7 @@ permalink: task-managing-svms-gcp.html
 keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported, create svm, create storage vm, create vserver 
 summary: Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage. 
 ---
-= Creare macchine virtuali storage per il data-service per Cloud Volumes ONTAP in Google Cloud
+= Gestisci le macchine virtuali dello storage di data-service per Cloud Volumes ONTAP in Google Cloud
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -114,12 +114,12 @@ BlueXP  modifica anche `default-data-files` le policy delle macchine virtuali p
 La modifica dei servizi è necessaria perché garantisce che Cloud Volumes ONTAP possa utilizzare la LIF iSCSI per le connessioni di gestione in uscita.
 
 .Autorizzazioni richieste per Google Cloud
-Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per le coppie Cloud Volumes ONTAP ha. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Le policy fornite da NetApp"].
+Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per le coppie Cloud Volumes ONTAP ha. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Le policy fornite da NetApp"^].
 
 .Fasi
 . Utilizzare la seguente chiamata API per creare una VM di storage:
 +
-`POST /occm/api/gcp/ha/working-environments/{WE_ID}/svm/`
+`POST /gcp/ha/working-environments/{workingEnvironmentId}/svm/`
 
 +
 L'ente di richiesta deve includere quanto segue:
@@ -146,7 +146,7 @@ Se necessario, è possibile modificare il nome di una VM di storage in qualsiasi
 .Fasi
 . Utilizzare la seguente chiamata API per rinominare una VM di storage:
 +
-`PUT /occm/api/gcp/ha/working-environments/{WE_ID}/svm`
+`PUT /gcp/ha/working-environments/{workingEnvironmentId}/svm`
 
 +
 L'ente di richiesta deve includere quanto segue:
@@ -170,6 +170,6 @@ Se non hai più bisogno di una VM di storage, puoi eliminarla da Cloud Volumes O
 .Fasi
 . Utilizzare la seguente chiamata API per eliminare una VM di storage:
 +
-`DELETE /occm/api/gcp/ha/working-environments/{WE_ID}/svm/{SVM_NAME}`
+`DELETE /gcp/ha/working-environments/{workingEnvironmentId}/svm/{svmName}`
 
 

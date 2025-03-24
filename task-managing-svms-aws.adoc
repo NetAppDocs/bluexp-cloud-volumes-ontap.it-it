@@ -4,7 +4,7 @@ permalink: task-managing-svms-aws.html
 keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
 summary: Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Questo potrebbe essere conosciuto come SVM o vserver. Cloud Volumes ONTAP è configurato con una VM di storage per impostazione predefinita, ma alcune configurazioni supportano altre VM di storage. 
 ---
-= Creazione di macchine virtuali storage per il data-service per Cloud Volumes ONTAP in AWS
+= Gestisci le macchine virtuali dello storage di distribuzione dei dati per Cloud Volumes ONTAP in AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

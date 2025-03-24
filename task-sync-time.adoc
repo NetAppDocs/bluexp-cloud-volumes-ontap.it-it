@@ -4,7 +4,7 @@ permalink: task-sync-time.html
 keywords: set up, setting up, ntp, time, synch 
 summary: 'La specifica di un server NTP sincronizza l"ora tra i sistemi della rete, evitando così problemi dovuti a differenze di tempo.' 
 ---
-= Sincronizzare l'ora del sistema utilizzando NTP
+= Sincronizzare l'ora del sistema Cloud Volumes ONTAP utilizzando il server NTP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

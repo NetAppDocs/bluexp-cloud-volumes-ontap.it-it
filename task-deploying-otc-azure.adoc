@@ -4,7 +4,7 @@ permalink: task-deploying-otc-azure.html
 keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create, azure, BYOL, license key, serial number, tags, azure tags, location, license, preconfigured packages, programmatic deployments, disk size, write speed, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, HA pair, associate subscription, azure marketplace, marketplace subscription, cloud data sense, cloud backup 
 summary: È possibile avviare un singolo sistema Cloud Volumes ONTAP in Azure creando un ambiente di lavoro Cloud Volumes ONTAP in BlueXP. 
 ---
-= Lancio di Cloud Volumes ONTAP in Azure
+= Avviare Cloud Volumes ONTAP in Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -49,7 +49,7 @@ L'implementazione di Cloud Volumes ONTAP in un gruppo di risorse condiviso esist
 ====
 
 
-== Avvio di un sistema Cloud Volumes ONTAP a nodo singolo in Azure
+== Lancia un sistema Cloud Volumes ONTAP a nodo singolo in Azure
 
 Se si desidera avviare un sistema Cloud Volumes ONTAP a nodo singolo in Azure, è necessario creare un ambiente di lavoro a nodo singolo in BlueXP.
 
@@ -276,7 +276,7 @@ Le quote consentono di limitare o tenere traccia dello spazio su disco e del num
 
 
 
-== Lancio di una coppia Cloud Volumes ONTAP ha in Azure
+== Lancia una coppia ha Cloud Volumes ONTAP in Azure
 
 Se si desidera lanciare una coppia Cloud Volumes ONTAP ha in Azure, è necessario creare un ambiente di lavoro ha in BlueXP.
 

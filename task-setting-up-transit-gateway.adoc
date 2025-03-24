@@ -4,7 +4,7 @@ permalink: task-setting-up-transit-gateway.html
 keywords: transit gateway, aws, amazon web services, transit gateway, floating ip, client access, nas, outside, vpc, virtual private cloud, route table 
 summary: 'Impostare un gateway di transito AWS per consentire l"accesso del client NAS agli indirizzi IP mobili dall"esterno del VPC in cui risiede Cloud Volumes ONTAP. Ciò è vantaggioso perché gli IP mobili migrano automaticamente tra i nodi quando si verificano errori.' 
 ---
-= Configurazione di un gateway di transito AWS per coppie ha in più AZS
+= Configurare un gateway di transito AWS per le coppie ha Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

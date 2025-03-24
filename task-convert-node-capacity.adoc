@@ -4,7 +4,7 @@ permalink: task-convert-node-capacity.html
 keywords: license conversion, convert node-based to capacity based, by-node to by-capacity, bluexp license conversion for node based 
 summary: 'Dopo la fine della disponibilità (EOA) delle licenze basate su nodi, è necessario passare alla licenza basata sulla capacità utilizzando il tool di conversione delle licenze BlueXP .' 
 ---
-= Converti le licenze basate su nodi in base alla capacità
+= Converti una licenza basata su nodi Cloud Volumes ONTAP in una licenza basata sulla capacità
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

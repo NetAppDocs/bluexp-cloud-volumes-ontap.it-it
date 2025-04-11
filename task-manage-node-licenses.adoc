@@ -83,8 +83,8 @@ Se si dispone di una licenza basata su nodo non assegnata per Cloud Volumes ONTA
 
 Lo scambio della licenza revoca la licenza Cloud Volumes ONTAP e crea una licenza equivalente al dollaro per il servizio:
 
-* La licenza per una coppia Cloud Volumes ONTAP ha viene convertita in una licenza per servizio dati 51 TIB
-* Le licenze per un singolo nodo Cloud Volumes ONTAP vengono convertite in una licenza per servizio dati 32 TIB
+* La licenza per una coppia ha Cloud Volumes ONTAP viene convertita in una licenza diretta da 51 TiB
+* La licenza per un singolo nodo Cloud Volumes ONTAP viene convertita in una licenza diretta 32 TiB
 
 
 La licenza convertita ha la stessa data di scadenza della licenza Cloud Volumes ONTAP.

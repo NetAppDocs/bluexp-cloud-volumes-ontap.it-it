@@ -40,7 +40,14 @@ Un Virtual Private Cloud (VPC) è richiesto per un sistema a nodo singolo.
 
 ==== Indirizzi IP privati
 
-BlueXP assegna 3 o 4 indirizzi IP privati a un sistema a nodo singolo in Google Cloud.
+Per un sistema a nodo singolo in Google Cloud, BlueXP  alloca gli indirizzi IP privati per quanto segue:
+
+* Nodo
+* Cluster
+* VM di storage
+* LIF data NAS
+* LIF iSCSI dei dati
+
 
 È possibile saltare la creazione della LIF di gestione delle VM di storage se si implementa Cloud Volumes ONTAP utilizzando l'API e si specifica il seguente flag:
 

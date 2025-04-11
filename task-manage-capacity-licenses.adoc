@@ -33,7 +33,7 @@ Dopo aver acquistato una licenza dal rappresentante commerciale NetApp, NetApp i
 
 Nel frattempo, BlueXP interroga automaticamente il servizio di licenza di NetApp per ottenere informazioni sulle licenze associate al tuo account NetApp Support Site. In assenza di errori, BlueXP aggiunge automaticamente le licenze al portafoglio digitale.
 
-Se BlueXP non riesce ad aggiungere la licenza, sarà necessario aggiungerla manualmente al portafoglio digitale. Ad esempio, se il connettore è installato in una posizione che non dispone di accesso a Internet, sarà necessario aggiungere le licenze autonomamente. <<Add purchased licenses to your account,Scopri come aggiungere le licenze acquistate al tuo account>>.
+Se BlueXP non riesce ad aggiungere la licenza, sarà necessario aggiungerla manualmente al portafoglio digitale. Ad esempio, se il connettore è installato in una posizione che non dispone di accesso a Internet, sarà necessario aggiungere le licenze. https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html#add-a-license["Scopri come aggiungere le licenze acquistate al tuo account"^].
 
 
 
@@ -48,7 +48,7 @@ Il portafoglio digitale BlueXP mostra la capacità totale consumata nell'account
 image:screenshot_cvo_overview_digital_wallet.png["Uno screenshot che mostra il riepilogo della capacità delle licenze e degli abbonamenti Cloud Volumes ONTAP."]
 
 +
-** _Licenza servizio dati_ è la capacità totale fornita da tutti i sistemi Cloud Volumes ONTAP nell'account NetApp. La ricarica si basa sulle dimensioni fornite da ciascun volume, indipendentemente dallo spazio locale, utilizzato, memorizzato o effettivo all'interno del volume.
+** _Direct License_ è la capacità totale fornita di tutti i sistemi Cloud Volumes ONTAP nell'account NetApp. La ricarica si basa sulle dimensioni fornite da ciascun volume, indipendentemente dallo spazio locale, utilizzato, memorizzato o effettivo all'interno del volume.
 ** _Contratto annuale_ è la capacità totale con licenza (Bring Your Own License (BYOL) o contratto di mercato) acquistata da NetApp.
 ** _PAYGO_ è la capacità totale sottoposta a provisioning mediante le iscrizioni al marketplace cloud. L'addebito tramite PAYGO viene utilizzato solo se la capacità consumata è superiore alla capacità concessa in licenza o se non è disponibile alcuna licenza BYOL nel portafoglio digitale BlueXP.
 
@@ -114,13 +114,10 @@ image:screenshot_digital_wallet_legacy_view.png["Schermata del pulsante passa al
 
 . Scorrere verso il basso fino alla tabella *licenza basata sulla capacità* e selezionare *Modifica metodo di addebito*.
 +
-image:screenshot-digital-wallet-charging-method-button.png["Una schermata della pagina Cloud Volumes ONTAP del portafoglio digitale BlueXP in cui il pulsante Modifica metodo di addebito si trova appena sopra la tabella."]
+image:screenshot-digital-wallet-charging-method-button.png["Una schermata della pagina Cloud Volumes ONTAP nel portafoglio digitale BlueXP  in cui il pulsante Modifica metodo di addebito si trova appena sopra la tabella."]
 
-. Selezionare un ambiente di lavoro, scegliere il nuovo metodo di ricarica, quindi confermare che la modifica del tipo di pacchetto influirà sui costi di servizio.
-+
-image:screenshot-digital-wallet-charging-method.png["Una schermata della finestra di dialogo Modifica metodo di ricarica in cui è possibile scegliere un nuovo metodo di ricarica per un ambiente di lavoro Cloud Volumes ONTAP."]
-
-. Selezionare *Modifica metodo di carica*.
+. Nella finestra a comparsa *Modifica metodo di ricarica*, selezionare un ambiente di lavoro, scegliere il nuovo metodo di ricarica, quindi confermare che la modifica del tipo di pacchetto influirà sulle spese di assistenza.
+. Selezionare *Modifica metodo di ricarica*.
 
 
 

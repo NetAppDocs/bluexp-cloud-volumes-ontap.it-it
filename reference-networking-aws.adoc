@@ -67,7 +67,7 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 * Servizio token di sicurezza (STS)
 * S3 (Simple Storage Service)
 
-| Comunicazione con i servizi AWS. | Modalità standard e privata. | Cloud Volumes ONTAP non può comunicare con il servizio AWS per eseguire operazioni BlueXP  specifiche su AWS. 
+| Comunicazione con i servizi AWS. | Modalità standard e privata. | Cloud Volumes ONTAP non può comunicare con il servizio AWS per eseguire operazioni BlueXP  specifiche in AWS. 
 
 
 | L'endpoint governativo esatto per il servizio AWS dipende dalla regione AWS che stai utilizzando. I punti finali sono contrassegnati con `amazonaws.com` e `c2s.ic.gov`. Per 	https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/Region.html["SDK AWS"] https://docs.aws.amazon.com/general/latest/gr/rande.html["Documentazione Amazon"]ulteriori informazioni, consultare e .  a| 
@@ -78,7 +78,7 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 * Servizio token di sicurezza (STS)
 * S3 (Simple Storage Service)
 
-| Comunicazione con i servizi AWS. | Modalità limitata. | Cloud Volumes ONTAP non può comunicare con il servizio AWS per eseguire operazioni BlueXP  specifiche su AWS. 
+| Comunicazione con i servizi AWS. | Modalità limitata. | Cloud Volumes ONTAP non può comunicare con il servizio AWS per eseguire operazioni BlueXP  specifiche in AWS. 
 |===
 
 

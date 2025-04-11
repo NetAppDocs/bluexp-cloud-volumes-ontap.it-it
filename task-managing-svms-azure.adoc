@@ -16,7 +16,7 @@ summary: Una VM di storage è una macchina virtuale in esecuzione in ONTAP che f
 [role="lead"]
 Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce servizi di storage e dati ai client. Potresti sapere che si tratta di un _SVM_ o di un _vserver_. Per impostazione predefinita, Cloud Volumes ONTAP è configurato con una macchina virtuale storage, ma è possibile creare macchine virtuali storage aggiuntive quando si esegue Cloud Volumes ONTAP in Azure.
 
-Per creare e gestire macchine virtuali storage di altri data-serving su Azure, è necessario utilizzare le API BlueXP . Ciò è dovuto al fatto che le API automatizzano il processo di creazione delle macchine virtuali storage e di configurazione delle interfacce di rete richieste. Nel creare le macchine virtuali storage, BlueXP  configura i servizi LIF richiesti, così come una LIF iSCSI necessaria per le comunicazioni SMB/CIFS in uscita dalla macchina virtuale storage.
+Per creare e gestire macchine virtuali storage di altri data-serving in Azure è necessario utilizzare le API BlueXP . Ciò è dovuto al fatto che le API automatizzano il processo di creazione delle macchine virtuali storage e di configurazione delle interfacce di rete richieste. Nel creare le macchine virtuali storage, BlueXP  configura i servizi LIF richiesti, così come una LIF iSCSI necessaria per le comunicazioni SMB/CIFS in uscita dalla macchina virtuale storage.
 
 
 
@@ -25,9 +25,6 @@ Per creare e gestire macchine virtuali storage di altri data-serving su Azure, �
 A partire da Cloud Volumes ONTAP 9,9.0, in base alla licenza in uso, sono supportate più macchine virtuali storage con configurazioni specifiche. Fare riferimento a https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Note di rilascio di Cloud Volumes ONTAP"^] per verificare il numero supportato di macchine virtuali storage per la propria versione di Cloud Volumes ONTAP.
 
 Tutte le versioni di Cloud Volumes ONTAP precedenti alla 9.9.0 supportano una VM di storage di distribuzione dati e una VM di storage di destinazione utilizzate per il disaster recovery. È possibile attivare la VM di storage di destinazione per l'accesso ai dati in caso di interruzione della VM di storage di origine.
-
-.Prima di iniziare
-Il connettore richiede autorizzazioni specifiche per la creazione e la gestione di macchine virtuali storage per Cloud Volumes ONTAP. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Le policy fornite da NetApp"^].
 
 
 
@@ -45,6 +42,9 @@ Quando crei Storage VM utilizzando le API, insieme alla configurazione delle int
 * `management-nis-client`
 
 
+.Prima di iniziare
+Il connettore richiede autorizzazioni specifiche per creare macchine virtuali storage per Cloud Volumes ONTAP. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Le policy fornite da NetApp"^].
+
 
 
 === Sistema a nodo singolo
@@ -53,7 +53,7 @@ Utilizza la seguente chiamata API per creare una VM storage su un sistema a nodo
 
 `POST /azure/vsa/working-environments/{workingEnvironmentId}/svm`
 
-L'ente di richiesta deve includere quanto segue:
+Includere i seguenti parametri nel corpo della richiesta:
 
 [source, json]
 ----
@@ -65,11 +65,11 @@ L'ente di richiesta deve includere quanto segue:
 
 === Coppia HA
 
-Utilizza la seguente chiamata API per creare una VM storage in una configurazione ha di Azure:
+Utilizza la seguente chiamata API per creare una VM storage su una coppia ha:
 
 `POST /azure/ha/working-environments/{workingEnvironmentId}/svm`
 
-L'ente di richiesta deve includere quanto segue:
+Includere i seguenti parametri nel corpo della richiesta:
 
 [source, json]
 ----
@@ -83,6 +83,9 @@ L'ente di richiesta deve includere quanto segue:
 
 Con le API di BlueXP , puoi rinominare ed eliminare le macchine virtuali storage sia in configurazioni a nodo singolo che in configurazioni ha.
 
+.Prima di iniziare
+Il connettore richiede autorizzazioni specifiche per la gestione delle macchine virtuali storage per Cloud Volumes ONTAP. Le autorizzazioni richieste sono incluse in https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Le policy fornite da NetApp"^].
+
 
 
 === Rinominare una VM di storage
@@ -95,7 +98,7 @@ Per rinominare una VM di storage, è necessario fornire i nomi della VM di stora
 `PUT /azure/vsa/working-environments/{workingEnvironmentId}/svm`
 
 +
-L'ente di richiesta deve includere quanto segue:
+Includere i seguenti parametri nel corpo della richiesta:
 
 +
 [source, json]
@@ -105,12 +108,12 @@ L'ente di richiesta deve includere quanto segue:
   "svmName": "OldSvmName"
 }
 ----
-* Utilizza la seguente chiamata API per rinominare una VM storage in una configurazione ha:
+* Utilizza la seguente chiamata API per rinominare una VM storage su una coppia ha:
 +
 `PUT /azure/ha/working-environments/{workingEnvironmentId}/svm`
 
 +
-L'ente di richiesta deve includere quanto segue:
+Includere i seguenti parametri nel corpo della richiesta:
 
 +
 [source, json]
@@ -133,7 +136,7 @@ In una configurazione ha o nodo singolo, puoi rimuovere una VM di storage se non
 +
 `DELETE /azure/vsa/working-environments/{workingEnvironmentId}/svm/{svmName}`
 
-* Utilizza la seguente chiamata API per eliminare una VM storage in una configurazione ha:
+* Utilizza la seguente chiamata API per eliminare una VM storage su una coppia ha:
 +
 `DELETE /azure/ha/working-environments/{workingEnvironmentId}/svm/{svmName}`
 

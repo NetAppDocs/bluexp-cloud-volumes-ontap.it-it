@@ -20,7 +20,7 @@ L'immagine utilizzata per implementare nuove istanze, aggiornamenti o utilizzata
 
 == Perché è necessario questo passaggio?
 
-Le immagini di Google Cloud non possono essere scaricate direttamente. Per verificare l'immagine rispetto al digest firmato e ai certificati, è necessario disporre di un meccanismo per confrontare i due file e scaricare l'immagine. Per farlo, devi esportare/convertire l'immagine in un formato disk.raw e salvare i risultati in un bucket di storage su Google Cloud. Il file disk.raw viene archiviato e compresso nel processo.
+Le immagini di Google Cloud non possono essere scaricate direttamente. Per verificare l'immagine rispetto al digest firmato e ai certificati, è necessario disporre di un meccanismo per confrontare i due file e scaricare l'immagine. Per farlo, devi esportare/convertire l'immagine in un formato disk.raw e salvare i risultati in un bucket di storage in Google Cloud. Il file disk.raw viene archiviato e compresso nel processo.
 
 L'account utente/servizio avrà bisogno di privilegi per eseguire le seguenti operazioni:
 

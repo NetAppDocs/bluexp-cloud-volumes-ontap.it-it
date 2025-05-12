@@ -23,7 +23,7 @@ summary: È possibile individuare e aggiungere sistemi Cloud Volumes ONTAP esist
 . Dal menu di navigazione a sinistra, selezionare *Storage > Canvas*.
 . Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro).
 . Selezionare il provider cloud in cui risiede il sistema.
-. Scegliere il tipo di sistema Cloud Volumes ONTAP.
+. Scegliere il tipo di sistema Cloud Volumes ONTAP da aggiungere.
 . Fare clic sul collegamento per individuare un sistema esistente.
 
 
@@ -33,8 +33,12 @@ ifdef::aws[]
 
 endif::aws[]
 
-. Nella pagina Area, scegliere l'area in cui sono in esecuzione le istanze, quindi selezionare le istanze.
-. Nella pagina credenziali, immettere la password per l'utente amministratore di Cloud Volumes ONTAP, quindi fare clic su *Go*.
+. Nella pagina Regione, selezionare una regione. È possibile visualizzare i sistemi in esecuzione nella regione selezionata.
++
+
+NOTE: I sistemi Cloud Volumes ONTAP sono rappresentati come istanze in questa pagina. Dall'elenco, è possibile selezionare solo le istanze registrate con l'account corrente.
+
+. Nella pagina credenziali, immettere la password per l'utente amministratore Cloud Volumes ONTAP, quindi selezionare *Vai*.
 
 
 .Risultato

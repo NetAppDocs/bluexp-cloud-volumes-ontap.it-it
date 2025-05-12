@@ -1,0 +1,19 @@
+= Rilevamento delle implementazioni effettuate attraverso il marketplace Azure in BlueXP 
+:allow-uri-read: 
+
+
+
+
+=== Rilevamento delle implementazioni effettuate attraverso il marketplace Azure in BlueXP 
+
+BlueXP  ora dispone della capacità di rilevare i sistemi Cloud Volumes ONTAP implementati direttamente attraverso il marketplace di Azure. Questo significa che ora puoi aggiungere e gestire questi sistemi come ambienti di lavoro in BlueXP , proprio come qualsiasi altro sistema Cloud Volumes ONTAP.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploy-cvo-azure-mktplc.html["Implementa Cloud Volumes ONTAP dal marketplace di Azure"^]
+
+
+
+=== Possibilità di eseguire il tiering dei dati per i tenant Azure
+
+Ora puoi abilitare il tiering per un tenant Azure in uno scenario in cui l'ambiente di lavoro Cloud Volumes ONTAP è creato da un tenant e BlueXP  Connector è creato da un altro. Utilizzando questa funzionalità, puoi usare lo stesso connettore per dividere in Tier i dati per più tenant di Azure.
+
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#requirements-to-tier-data-for-an-azure-tenant["Requisiti di tiering dei dati per un tenant Azure"^]

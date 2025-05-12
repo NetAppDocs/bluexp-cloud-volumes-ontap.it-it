@@ -82,9 +82,13 @@ image:screenshot-subscriptions-expand.png["Una schermata della scheda Subscripti
 . Dal menu di navigazione di BlueXP, selezionare *Governance > Digital wallet*.
 . Nella scheda *Panoramica*, il riquadro Cloud Volumes ONTAP visualizza la capacità corrente fornita per l'account.
 . Selezionare *View* (Visualizza) per visualizzare la capacità fornita per ciascun pacchetto di licenze.
-. Selezionare *passa alla visualizzazione precedente*.
+. Selezionare *passa alla vista avanzata*.
 +
-image:screenshot_digital_wallet_legacy_view.png["Schermata del pulsante passa alla visualizzazione precedente"]
+image:screenshot_digital_wallet_legacy_view.png["Schermata del pulsante passa alla visualizzazione avanzata"]
+
+. Consente di visualizzare i dettagli del pacchetto che si desidera visualizzare.
++
+image:screenshot_digital_wallet_standard_view.png["Schermata di passaggio al pulsante di visualizzazione standard"]
 
 
 
@@ -108,7 +112,7 @@ BlueXP tenta sempre di addebitare prima i costi di una licenza. Se una licenza n
 . Dal menu di navigazione di BlueXP, selezionare *Governance > Digital wallet*.
 . Selezionare la scheda *Panoramica*.
 . Nel riquadro Cloud Volumes ONTAP, selezionare *Visualizza*.
-. Selezionare *passa alla visualizzazione precedente*.
+. Selezionare *passa alla vista avanzata*.
 +
 image:screenshot_digital_wallet_legacy_view.png["Schermata del pulsante passa alla visualizzazione precedente"]
 

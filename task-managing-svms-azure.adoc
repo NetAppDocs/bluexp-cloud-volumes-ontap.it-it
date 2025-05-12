@@ -18,6 +18,8 @@ Una VM di storage è una macchina virtuale in esecuzione in ONTAP che fornisce s
 
 Per creare e gestire macchine virtuali storage di altri data-serving in Azure è necessario utilizzare le API BlueXP . Ciò è dovuto al fatto che le API automatizzano il processo di creazione delle macchine virtuali storage e di configurazione delle interfacce di rete richieste. Nel creare le macchine virtuali storage, BlueXP  configura i servizi LIF richiesti, così come una LIF iSCSI necessaria per le comunicazioni SMB/CIFS in uscita dalla macchina virtuale storage.
 
+Per informazioni sull'esecuzione di chiamate API Cloud Volumes ONTAP, fare riferimento a https://docs.netapp.com/us-en/bluexp-automation/cm/your_api_call.html#step-1-select-the-identifie["La prima chiamata API"^].
+
 
 
 == Numero di VM storage supportate
@@ -140,4 +142,9 @@ In una configurazione ha o nodo singolo, puoi rimuovere una VM di storage se non
 +
 `DELETE /azure/ha/working-environments/{workingEnvironmentId}/svm/{svmName}`
 
+
+
+.Informazioni correlate
+* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepararsi a utilizzare l'API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Flussi di lavoro Cloud Volumes ONTAP"^]
 

@@ -82,12 +82,13 @@ ifdef::aws[]
 
 === Supporto in AWS
 
-* Il tiering dei dati è supportato in AWS a partire da Cloud Volumes ONTAP 9.2.
+* La suddivisione in livelli dei dati è supportata in AWS a partire da Cloud Volumes ONTAP 9.2.
 * Il livello di performance può essere SSD General Purpose (gp3 o gp2) o SSD IOPS con provisioning (io1).
 +
 
-NOTE: Si sconsiglia di eseguire il tiering dei dati sullo storage a oggetti quando si utilizzano HDD ottimizzati per il throughput (st1).
+NOTE: Si sconsiglia di suddividere i dati in livelli per l'archiviazione di oggetti quando si utilizzano HDD Throughput Optimized (st1).
 
+* I dati inattivi vengono suddivisi in bucket Amazon S3. Il suddivisione in bucket di altri provider non è supportata.
 
 
 endif::aws[]
@@ -105,6 +106,7 @@ ifdef::azure[]
 
 
 * Il Tier di performance può essere costituito da dischi gestiti da SSD Premium, dischi gestiti da SSD Standard o dischi gestiti da HDD Standard.
+* I dati inattivi sono suddivisi in livelli in Microsoft Azure Blob. Il suddivisione in livelli in altri provider non è supportata.
 
 
 endif::azure[]
@@ -115,8 +117,9 @@ ifdef::gcp[]
 
 === Supporto in Google Cloud
 
-* Il tiering dei dati è supportato in Google Cloud a partire da Cloud Volumes ONTAP 9.6.
+* La suddivisione in livelli dei dati è supportata in Google Cloud a partire da Cloud Volumes ONTAP 9.6.
 * Il Tier di performance può essere costituito da dischi persistenti SSD, dischi persistenti bilanciati o dischi persistenti standard.
+* I dati inattivi sono gestiti tramite livelli di Google Cloud Storage. Il livello di altri provider non è supportato.
 
 
 endif::gcp[]

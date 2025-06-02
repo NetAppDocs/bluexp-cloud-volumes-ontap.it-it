@@ -1,0 +1,11 @@
+= Implementazioni in modalità privata abilitate per Cloud Volumes ONTAP 9.15.1
+:allow-uri-read: 
+
+
+
+
+=== Implementazioni in modalità privata abilitate per Cloud Volumes ONTAP 9.15.1
+
+Ora puoi implementare Cloud Volumes ONTAP 9.15.1 in modalità privata in AWS, Azure e Google Cloud. La modalità privata è abilitata per implementazioni a nodo singolo e high Availability (ha) di Cloud Volumes ONTAP 9.15.1.
+
+Per ulteriori informazioni sulle implementazioni in modalità privata, fare riferimento a https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#restricted-mode["Scopri le modalità di implementazione di BlueXP"^].

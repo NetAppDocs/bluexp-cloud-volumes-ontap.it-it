@@ -407,7 +407,7 @@ Il gruppo di protezione predefinito per Cloud Volumes ONTAP include le seguenti 
 Se sono necessarie regole rigide per il traffico in uscita, è possibile utilizzare le seguenti informazioni per aprire solo le porte richieste per le comunicazioni in uscita da Cloud Volumes ONTAP.
 
 
-NOTE: L'origine è l'interfaccia (indirizzo IP) del sistema Cloud Volumes ONTAP.
+NOTE: La sorgente è l'interfaccia (indirizzo IP) del sistema Cloud Volumes ONTAP.
 
 [cols="10,10,6,20,20,34"]
 |===

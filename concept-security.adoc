@@ -52,17 +52,40 @@ Puoi utilizzare le soluzioni di crittografia NetApp con crittografia nativa del 
 
 === Soluzioni di crittografia NetApp (NVE e NAE)
 
-Cloud Volumes ONTAP supporta https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NetApp Volume Encryption (NVE) e NetApp aggregate Encryption (NAE)"^]. NVE e NAE sono soluzioni basate su software che consentono la crittografia dei volumi (data-at-rest) conforme a FIPS 140-2. Sia NVE che NAE utilizzano la crittografia AES a 256 bit.
+Cloud Volumes ONTAP supporta https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NetApp Volume Encryption (NVE) e NetApp aggregate Encryption (NAE)"^]. NVE e NAE sono soluzioni basate su software che consentono la crittografia dei dati a riposo dei volumi conforme allo standard FIPS 140-2. Sia NVE che NAE utilizzano la crittografia AES a 256 bit.
 
 * NVE crittografa i dati inattivi un volume alla volta. Ogni volume di dati dispone di una chiave di crittografia univoca.
 * NAE è un'estensione di NVE, che crittografa i dati per ogni volume e i volumi condividono una chiave nell'aggregato. NAE consente inoltre di deduplicare i blocchi comuni di tutti i volumi dell'aggregato.
 
 
-NVE e NAE sono supportati con un gestore di chiavi esterno.
+Cloud Volumes ONTAP supporta sia NVE che NAE con servizi di gestione delle chiavi esterni (EKM) forniti da AWS, Azure e Google Cloud, incluse soluzioni di terze parti come Fortanix. A differenza di ONTAP, per Cloud Volumes ONTAP le chiavi di crittografia vengono generate dal provider cloud, non in ONTAP.
 
-ifdef::azure[] endif::azure[] ifdef::gcp[] endif::gcp[]
+Cloud Volumes ONTAP utilizza i servizi standard KMIP (Key Management Interoperability Protocol) utilizzati da ONTAP. Per ulteriori informazioni sui servizi supportati, fare riferimento a  https://imt.netapp.com/imt/#welcome["Tool di matrice di interoperabilità"^] .
 
-I nuovi aggregati hanno NetApp aggregate Encryption (NAE) abilitato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. I nuovi volumi che non fanno parte di un aggregato NAE avranno NetApp Volume Encryption (NVE) abilitato per impostazione predefinita (ad esempio, se si dispone di aggregati creati prima di impostare un gestore di chiavi esterno).
+Se utilizzi NVE, hai la possibilità di utilizzare il key vault del tuo provider cloud per proteggere le chiavi di crittografia ONTAP:
+
+ifdef::aws[]
+
+* AWS Key Management Service (KMS)
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Azure Key Vault (AKV)
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Servizio di gestione delle chiavi Google Cloud
+
+
+endif::gcp[]
+
+I nuovi aggregati hanno NetApp aggregate Encryption (NAE) abilitato per impostazione predefinita dopo aver configurato un gestore di chiavi esterno. Nei nuovi volumi che non fanno parte di un aggregato NAE, NVE è abilitato per impostazione predefinita (ad esempio, se sono presenti aggregati esistenti creati prima di configurare un gestore chiavi esterno).
 
 La configurazione di un gestore di chiavi supportato è l'unica operazione necessaria. Per istruzioni sulla configurazione, fare riferimento alla link:task-encrypting-volumes.html["Crittografa i volumi con le soluzioni per la crittografia NetApp"].
 

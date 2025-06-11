@@ -84,7 +84,12 @@ BlueXP crea l'account storage con le seguenti impostazioni:
 
 * Tier di accesso: Hot
 * Performance: Standard
-* Ridondanza: Storage ridondante in locale (LRS)
+* Ridondanza: in base alla distribuzione di Cloud Volume ONTAP
++
+** Zona di disponibilità singola: archiviazione ridondante locale (LRS)
+** Zona di disponibilità multipla: archiviazione con ridondanza di zona (ZRS)
+
+
 * Account: StorageV2 (General Purpose v2)
 * Richiedi trasferimento sicuro per le operazioni API REST: Abilitato
 * Access key account storage: Enabled (accesso chiave account storage)

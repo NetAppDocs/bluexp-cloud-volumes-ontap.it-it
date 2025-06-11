@@ -19,15 +19,12 @@ La gestione delle chiavi con Cloud KMS può essere abilitata con l'interfaccia a
 Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita viene utilizzata la LIF di un SVM di dati per comunicare con l'endpoint di gestione delle chiavi del cloud. Una rete di gestione dei nodi viene utilizzata per comunicare con i servizi di autenticazione del provider cloud (oauth2.googleapis.com). Se la rete del cluster non è configurata correttamente, il cluster non utilizzerà correttamente il servizio di gestione delle chiavi.
 
 .Prima di iniziare
-* Cloud Volumes ONTAP deve eseguire la versione 9.10.1 o successiva
-* Licenza VE (Volume Encryption) installata
-* Licenza di gestione delle chiavi di crittografia multi-tenant (MTEKM) installata, a partire da Cloud Volumes ONTAP 9.12.1 GA.
+* Il tuo sistema dovrebbe eseguire Cloud Volumes ONTAP 9.10.1 o versione successiva
+* È necessario utilizzare una SVM dati. Cloud KMS può essere configurato solo su una SVM dati.
 * Devi essere un amministratore del cluster o di SVM
-* Un abbonamento attivo a Google Cloud Platform
-
-
-.Limitazioni
-* Cloud KMS può essere configurato solo su una SVM dati
+* La licenza Volume Encryption (VE) deve essere installata sull'SVM
+* A partire da Cloud Volumes ONTAP 9.12.1 GA, è necessario installare anche la licenza MTEKM (Multi-tenant Encryption Key Management)
+* È richiesto un abbonamento attivo a Google Cloud Platform
 
 
 
@@ -36,7 +33,9 @@ Quando si utilizza Cloud KMS, tenere presente che per impostazione predefinita v
 
 .Google Cloud
 . Nel tuo ambiente Google Cloud, link:https://cloud.google.com/kms/docs/creating-keys["Creare un anello e una chiave GCP simmetrici"^].
-. Creare un ruolo personalizzato per l'account del servizio Cloud Volumes ONTAP.
+. Assegna un ruolo personalizzato alla chiave Cloud KMS e all'account del servizio Cloud Volumes ONTAP.
++
+.. Crea il ruolo personalizzato:
 +
 [listing]
 ----
@@ -47,8 +46,14 @@ gcloud iam roles create kmsCustomRole
     --permissions=cloudkms.cryptoKeyVersions.get,cloudkms.cryptoKeyVersions.list,cloudkms.cryptoKeyVersions.useToDecrypt,cloudkms.cryptoKeyVersions.useToEncrypt,cloudkms.cryptoKeys.get,cloudkms.keyRings.get,cloudkms.locations.get,cloudkms.locations.list,resourcemanager.projects.get
     --stage=GA
 ----
-. Assegnare il ruolo personalizzato alla chiave KMS cloud e all'account del servizio Cloud Volumes ONTAP:
+.. Assegna il ruolo personalizzato che hai creato: 
 `gcloud kms keys add-iam-policy-binding _key_name_ --keyring _key_ring_name_ --location _key_location_ --member serviceAccount:_service_account_Name_ --role projects/_customer_project_id_/roles/kmsCustomRole`
++
+
+NOTE: Se utilizzi Cloud Volumes ONTAP 9.13.0 o versioni successive, non è necessario creare un ruolo personalizzato. Puoi assegnare il ruolo predefinito [`cloudkms.cryptoKeyEncrypterDecrypter` ^] ruolo.
+
+
+
 . Scarica la chiave JSON dell'account di servizio:
 `gcloud iam service-accounts keys create key-file --iam-account=_sa-name_@_project-id_.iam.gserviceaccount.com`
 

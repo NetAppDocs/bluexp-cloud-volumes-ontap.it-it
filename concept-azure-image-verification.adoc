@@ -4,7 +4,7 @@ permalink: concept-azure-image-verification.html
 keywords: Azure, image, VHD, image signature file, 
 summary: Verificare i file delle firme dei file di immagine VHD di Azure. 
 ---
-= Verifica dell'immagine di Azure Marketplace per Cloud Volumes ONTAP
+= Verifica delle immagini di Azure Marketplace per Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,20 @@ summary: Verificare i file delle firme dei file di immagine VHD di Azure.
 
 
 [role="lead"]
-La verifica dell'immagine di Azure è conforme ai requisiti di sicurezza NetApp avanzati. Anche se la verifica di un file immagine è un processo semplice, la verifica della firma dell'immagine Azure non richiede speciali handling al noto file di immagine Azure VHD a causa di un'alternanza effettuata dal marketplace di Azure.
+La verifica dell'immagine di Azure è conforme ai requisiti di sicurezza NetApp avanzati. La verifica di un file immagine è un processo semplice. Tuttavia, la verifica della firma dell'immagine di Azure richiede considerazioni specifiche per il file immagine VHD di Azure, poiché viene modificato in Azure Marketplace.
 
 
-NOTE: La verifica dell'immagine di Azure è supportata sul software Cloud Volumes ONTAP versione 9.15.0 o superiore.
+NOTE: La verifica delle immagini di Azure è supportata su Cloud Volumes ONTAP 9.15.0 e versioni successive.
 
 
 
 == Modifica di Azure dei file VHD pubblicati
 
-I 1MB (1048576 byte) iniziali e i 512 byte finali del file VHD vengono modificati da Azure. La firma dell'immagine NetApp salta i 1MB byte iniziali e i 512 byte finali e firma la parte rimanente dell'immagine VHD.
+Azure modifica 1 MB (1048576 byte) all'inizio e 512 byte alla fine del file VHD. NetApp firma il file VHD rimanente.
 
 image:screenshot_azure_vhd_10gb.png["Un'immagine che mostra l'alternanza di Azure del file 10GB VHD"]
 
-Come esempio, il diagramma precedente mostra un file VHD di dimensioni 10GB. Ma la parte con segno NetApp è contrassegnata in verde con dimensioni di 10GB - 1MB - 512B.
+Nell'esempio, il file VHD è di 10 GB. La parte firmata da NetApp è contrassegnata in verde (10 GB - 1 MB - 512 byte).
 
 .Link correlati
 * https://pagefault.blog/2019/04/22/how-to-sign-and-verify-using-openssl/["Page Fault Blog: Come firmare e verificare usando OpenSSL"^]

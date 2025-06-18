@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-file-verification-mac.html 
-keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, Mac OS 
-summary: Verificare la firma di un file VHD esportato tramite lo strumento file di digitalizzazione immagine Cloud Volumes ONTAP su Mac OS 
+keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, macOS 
+summary: 'Verificare la firma di un file VHD esportato tramite lo strumento File digest dell"immagine di Cloud Volumes ONTAP su macOS' 
 ---
-= Verificare la firma dell'immagine di Azure Marketplace per Cloud Volumes ONTAP su MAC OS
+= Verifica la firma dell'immagine di Azure Marketplace per Cloud Volumes ONTAP su macOS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,41 +14,31 @@ summary: Verificare la firma di un file VHD esportato tramite lo strumento file 
 
 
 [role="lead"]
-Per verificare la firma di un file VHD esportato per Mac OS, procedere come segue.
+La verifica della firma di un file VHD esportato su Linux include la convalida della catena di attendibilità, la modifica del file e la verifica della firma.
 
 .Fasi
-. Scaricare il file Azure Image Digest dal https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estrarre il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).
+. Scarica il file immagine di Azure da  https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estrarre il file digest (.sig), il file del certificato della chiave pubblica (.pem) e il file del certificato della catena (.pem).
 +
-Fare riferimento a. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Scaricare il file di Azure Image Digest"^] per ulteriori informazioni.
+Per ulteriori informazioni, fare riferimento https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-azure-download-digest-file.html["Scarica il file digest dell'immagine di Azure"^] a.
 
 . Verificare la catena di trust.
 +
-[listing]
+[source, cli]
 ----
 % openssl verify -CAfile Certificate-Chain-9.15.0P1_azure.pem Certificate-9.15.0P1_azure.pem
 Certificate-9.15.0P1_azure.pem: OK
 ----
-. Rimuovere i 1MB (1048576 byte) iniziali e i 512 byte finali del file VHD.
+. Rimuovere 1 MB (1.048.576 byte) all'inizio e 512 byte alla fine del file VHD. Quando si utilizza  `tail` , IL  `-c +K` L'opzione genera byte dal K-esimo byte del file. . Tieni presente che su macOS il comando tail potrebbe richiedere circa dieci minuti per essere completato
 +
-Se si usa 'tail', l'opzione '-c +K' emette byte a partire dai kth byte
-del file specificato. Quindi, 1048577 viene passato alla coda -c'. Ci vogliono circa 13m minuti
-Per completare il comando tail su Mac OS.
-
-+
-[listing]
+[source, cli]
 ----
 % tail -c +1048577 ./9150.01000024.05090105.vhd > ./sign.tmp.tail
 % head -c -512 ./sign.tmp.tail > sign.tmp
 % rm ./sign.tmp.tail
 ----
-. Utilizzare openssl per estrarre la chiave pubblica dal certificato e verificare lo striping
-file(sign.tmp) con il file della firma e la chiave pubblica.
+. Utilizza OpenSSL per estrarre la chiave pubblica dal certificato e verificare il file estratto (sign.tmp) con il file di firma e la chiave pubblica. Il prompt dei comandi visualizza messaggi che indicano l'esito positivo o negativo della verifica.
 +
-Se il file di input supera la verifica, il comando visualizza "verifica OK".
-In caso contrario, viene visualizzato "errore di verifica".
-
-+
-[listing]
+[source, cli]
 ----
 % openssl x509 -pubkey -noout -in ./Certificate-9.15.0P1_azure.pem > ./Code-Sign-Cert-Public-key.pub
 
@@ -60,7 +50,7 @@ Verification Failure
 ----
 . Pulire lo spazio di lavoro.
 +
-[listing]
+[source, cli]
 ----
 % rm ./9150.01000024.05090105.vhd ./sign.tmp
 % rm *.sig *.pub *.pem

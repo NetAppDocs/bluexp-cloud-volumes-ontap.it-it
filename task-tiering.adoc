@@ -167,17 +167,6 @@ Non è necessario impostare una connessione tra il Tier di performance e il Tier
 ----
 Il ruolo personalizzato include le autorizzazioni per impostazione predefinita. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Visualizzare l'autorizzazione Azure per il connettore"^]
 
-
-
-=== Requisiti di tiering dei dati per un tenant Azure
-
-Puoi utilizzare lo stesso connettore per tiering dei dati per più tenant di Azure. Per abilitare il tiering per un tenant Azure in uno scenario in cui l'ambiente di lavoro Cloud Volumes ONTAP è creato da un tenant e il connettore è creato da un altro, verificare quanto segue:
-
-* Sono state immesse le credenziali per entrambi i tenant in BlueXP  per la convalida incrociata. Fare riferimento alla https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Gestisci le credenziali di Azure e le iscrizioni al marketplace per BlueXP"^].
-* È stato abilitato il peering della rete virtuale (VNET) tra i due tenant https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview["Sul portale Azure"^]. Questa operazione è necessaria affinché il connettore possa accedere all'account di archiviazione dell'altro tenant.
-* È necessario link:task-enabling-private-link.html#disable-azure-private-links-and-use-service-endpoints-instead["Collegamenti privati di Azure disattivati"]utilizzare l'endpoint del servizio di sottorete.
-
-
 endif::azure[]
 
 ifdef::gcp[]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-azure-download-digest-file.html 
-keywords: Azure, image, image signature, download, digest file, decompress, Linux, Mac OS, md5, sha256 
-summary: È possibile scaricare il file di inserimento immagini Azure dal sito di supporto NetApp. 
+keywords: Azure, image, image signature, download, digest file, decompress, Linux, macOS, md5, sha256 
+summary: 'È possibile scaricare il file digest dell"immagine di Azure dal sito di supporto NetApp.' 
 ---
-= Scarica il digest delle immagini di Azure Marketplace per Cloud Volumes ONTAP
+= Scarica il file immagine di Azure per Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,30 +14,30 @@ summary: È possibile scaricare il file di inserimento immagini Azure dal sito d
 
 
 [role="lead"]
-Il file di inserimento immagini di Azure può essere scaricato da https://mysupport.netapp.com/site/["Sito di supporto NetApp"^]. Il download è in formato tar.gz e contiene file per la verifica della firma dell'immagine.
+È possibile scaricare il file immagine di Azure da  https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] .
+
+Il file _tar.gz_ contiene i file necessari per la verifica della firma dell'immagine. Insieme al file _tar.gz_, è necessario scaricare anche il file _checksum_ per l'immagine. Il file di checksum contiene  `md5` E  `sha256` checksum del file _tar.gz_.
 
 .Fasi
-. Andare a https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Pagina del prodotto Cloud Volumes ONTAP sul sito del supporto NetApp"^] e scaricare la versione software richiesta nella sezione Download.
-. Nella pagina di download di Cloud Volumes ONTAP, fare clic sul pulsante *download* per il file di inserimento immagini Azure per scaricare il file TAR. File GZ.
+. Vai al  https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Pagina del prodotto Cloud Volumes ONTAP sul sito del supporto NetApp"^] e scaricare la versione software richiesta dalla sezione *Download*.
+. Nella pagina di download di Cloud Volumes ONTAP, fare clic sul file scaricabile per l'immagine di Azure e scaricare il file _tar.gz_.
 +
 image::screenshot_cloud_volumes_ontap_tar.gz.png[schermata Cloud Volumes ONTAP tar.gz]
 
-. Per Linux e MacOS, è necessario effettuare le seguenti operazioni per ottenere i file md5sum e sha256sum per il file Azure Image Digest scaricato.
+. Su Linux, esegui  `md5sum  AZURE-<version>_PKG.TAR.GZ` .
 +
-.. Per md5sum, immettere il `md5sum` comando.
-.. Per sha256sum, immettere il `sha256sum` comando.
+Su macOS, esegui  `sha256sum AZURE-<version>_PKG.TAR.GZ` .
 
-
-. Verificare `md5sum` e. `sha256sum` I valori corrispondono al download del file di Azure Image Digest.
-. Su Linux e Mac OS, eseguire `tar -xzf` comando per estrarre il file tar.gz.
+. Verificare che il  `md5sum` E  `sha256sum` i valori corrispondono a quelli nell'immagine di Azure scaricata.
+. Su Linux e macOS, estrarre il file _tar.gz_ utilizzando il comando  `tar -xzf` comando.
 +
-Il CATRAME estratto. Il file GZ contiene il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).
+Il file _tar.gz_ estratto contiene il file digest (_.sig_), il file del certificato della chiave pubblica (_.pem_) e il file del certificato della catena (_.pem_).
 
 +
-*Elenco dei risultati del file untar tar.gz*
+*Esempio di output dopo l'estrazione del file tar.gz:*
 
 +
-[listing]
+[source, cli]
 ----
 $ ls cert/ -l
 -rw-r----- 1 netapp netapp  384 May  13 13:00 9.15.0P1_azure_digest.sig

@@ -17,7 +17,7 @@ summary: Verificare che il file disk.raw scaricato da Google Cloud corrisponda a
 È possibile verificare il file disk.raw scaricato da Google Cloud rispetto al contenuto del file digest disponibile tramite https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab["NSS"^] Con OpenSSL.
 
 
-NOTE: I comandi OpenSSL per la convalida dell'immagine sono compatibili con macchine Linux, Mac OS e Windows.
+NOTE: I comandi OpenSSL per convalidare l'immagine sono compatibili con i computer Linux, macOS e Windows.
 
 .Fasi
 . Verificare il certificato utilizzando OpenSSL.

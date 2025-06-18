@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-azure-file-sig-verify.html 
 keywords: Azure, image, VHD, file signature verification, encryption, sha256, ONTAP, Cloud Volumes, CLI, 
-summary: Informazioni su come verificare la firma di un file VHD esportato tramite lo strumento file di digitalizzazione immagini Cloud Volumes ONTAP. 
+summary: 'Informazioni su come verificare la firma di un file VHD esportato tramite lo strumento File digest dell"immagine di Cloud Volumes ONTAP.' 
 ---
 = Verifica della firma dell'immagine del marketplace Azure per Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Informazioni su come verificare la firma di un file VHD esportato trami
 
 
 [role="lead"]
-Il processo di verifica dell'immagine di Azure genera un digest dal file VHD con il primo 1MB e il termine del 512B striping mediante la funzione hash. Per far corrispondere la procedura di firma, SHA256 viene utilizzato per eseguire l'hash. È necessario rimuovere i file 1MB iniziali e 512B finali dal file VHD e verificare la parte rimanente del file VHD.
+Il processo di verifica dell'immagine di Azure genera un file digest dal file VHD estraendo 1 MB all'inizio e 512 byte alla fine, quindi applicando una funzione hash. Per far corrispondere la procedura di firma, viene utilizzato _sha256_ per l'hashing.
 
 
 
@@ -24,25 +24,15 @@ Di seguito viene fornita una panoramica del processo del flusso di lavoro di ver
 
 image::graphic_azure_check_signature.png[firma del controllo visivo grafico]
 
-* Scaricare il file Azure Image Digest dal https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estrarre il file digest(.sig), il file di certificato a chiave pubblica(.pem) e il file di certificato a catena(.pem).
+* Scaricamento dell'immagine di Azure da  https://mysupport.netapp.com/site/["Sito di supporto NetApp"^] ed estraendo il file digest (.sig), il file del certificato della chiave pubblica (.pem) e il file del certificato della catena (.pem). Per ulteriori informazioni, fare riferimento link:task-azure-download-digest-file.html["Scarica il file digest dell'immagine di Azure"] a.
+* Verifica della catena di fiducia.
+* Estrazione della chiave pubblica (.pub) dal certificato della chiave pubblica (.pem).
+* Decifrare il file digest utilizzando la chiave pubblica estratta.
+* Confrontando il risultato con un digest appena generato di un file temporaneo creato dal file immagine dopo aver rimosso 1 MB all'inizio e 512 byte alla fine. Questo passaggio viene eseguito utilizzando lo strumento da riga di comando di OpenSSL. Lo strumento da riga di comando di OpenSSL visualizza un messaggio appropriato in caso di esito positivo o negativo della ricerca dei file.
 +
-Per ulteriori informazioni, fare riferimento link:task-azure-download-digest-file.html["Scaricare il file di Azure Image Digest"] a.
-
-* Verificare la catena di trust.
-* Estrarre la chiave pubblica(.pub) dal certificato a chiave pubblica(.pem).
-* La chiave pubblica estratta viene utilizzata per decrittografare il file digest. Il risultato viene quindi confrontato con un nuovo digest non crittografato del file temporaneo creato dal file di immagine con 1MB iniziale e 512 byte finale rimossi.
-+
-Questo passo viene ottenuto mediante il seguente comando openssl.
-
-+
-** L'istruzione CLI generale viene visualizzata come segue:
-+
-[listing]
+[source, cli]
 ----
 openssl dgst -verify <public_key> -keyform <form> <hash_function>
 -signature <digest_file> -binary <temporary_file>
 ----
-** Lo strumento CLI OpenSSL visualizza un messaggio "verificato OK" se entrambi i file corrispondono e "errore di verifica" se non corrispondono.
-
-
 

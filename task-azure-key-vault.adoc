@@ -183,7 +183,7 @@ Category: kms_wrapped_key_status
 3 entries were displayed.
 ----
 +
-Se il `service_reachability` lo stato non è `OK`, SVM non può raggiungere il servizio Azure Key Vault con tutte le autorizzazioni e la connettività richieste. Assicurati che le policy di rete e il routing di Azure non blocchino il tuo VNET privato dal raggiungere l'endpoint pubblico di Azure KeyVault. In caso affermativo, prendere in considerazione l'utilizzo di un endpoint Azure Private per accedere al vault delle chiavi dall'interno di VNET. Per risolvere l'indirizzo IP privato dell'endpoint, potrebbe essere necessario aggiungere una voce di host statici sulla SVM.
+Se il  `service_reachability` lo stato non è  `OK` , la SVM non riesce a raggiungere il servizio Azure Key Vault con tutta la connettività e le autorizzazioni necessarie. Assicurarsi che i criteri di rete e il routing di Azure non impediscano alla rete virtuale privata di raggiungere l'endpoint pubblico di Azure Key Vault. In caso affermativo, prendere in considerazione l'utilizzo di un endpoint Azure Private per accedere al vault delle chiavi dall'interno di VNET. Per risolvere l'indirizzo IP privato dell'endpoint, potrebbe essere necessario aggiungere una voce di host statici sulla SVM.
 
 +
 Il `kms_wrapped_key_status` verrà segnalato `UNKNOWN` alla configurazione iniziale. Il suo stato cambierà in `OK` dopo la crittografia del primo volume.
@@ -197,9 +197,12 @@ Se configurato correttamente, Cloud Volumes ONTAP crea automaticamente il volume
 
 . Verificare che il volume sia stato creato e crittografato correttamente. In tal caso, il `-is-encrypted` il parametro viene visualizzato come `true`.
 `vol show -vserver _SVM_name_ -fields is-encrypted`
+. Facoltativo: se si desidera aggiornare le credenziali sul certificato di autenticazione di Azure Key Vault, utilizzare il comando seguente: 
+`security key-manager external azure update-credentials -vserver v1 -authentication-method certificate`
 
 
 .Link correlati
 * link:task-set-up-azure-encryption.html["Impostare Cloud Volumes ONTAP in modo che utilizzi una chiave gestita dal cliente in Azure"]
 * https://learn.microsoft.com/en-us/azure/key-vault/general/overview["Microsoft Azure docmentation: Informazioni su Azure Key Vault"^]
+* https://docs.netapp.com/us-en/ontap-cli/index.html["Guida di riferimento ai comandi ONTAP"^]
 

@@ -100,16 +100,16 @@ Tutti gli account di storage Azure per Cloud Volumes ONTAP vengono crittografati
 
 == Rotazione della chiave in Cloud Volumes ONTAP
 
-Devi configurare le chiavi di crittografia nel portale di Azure. Per informazioni sulla configurazione dei tasti e sull'impostazione della rotazione dei tasti, fare riferimento ai seguenti argomenti della documentazione di Microsoft Azure:
+Quando si configurano le chiavi di crittografia, è necessario utilizzare il portale di Azure per impostare e abilitare la rotazione automatica delle chiavi. La creazione e l'abilitazione di una nuova versione delle chiavi di crittografia garantisce che Cloud Volumes ONTAP possa rilevare e utilizzare automaticamente la versione più recente della chiave per la crittografia, garantendo la sicurezza dei dati senza la necessità di interventi manuali.
+
+Per informazioni sulla configurazione dei tasti e sull'impostazione della rotazione dei tasti, fare riferimento ai seguenti argomenti della documentazione di Microsoft Azure:
 
 * https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation["Configurare la rotazione automatica della chiave crittografica in Azure Key Vault"^]
 * https://learn.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-customer-managed-keys-powershell#set-up-an-azure-key-vault-and-diskencryptionset-with-automatic-key-rotation-preview["Azure PowerShell: Abilitare le chiavi gestite dal cliente"^]
 
 
 
-NOTE: Dopo aver configurato le chiavi, accertarsi di disporre di https://learn.microsoft.com/en-us/azure/virtual-machines/disk-encryption#customer-managed-keys["Rotazione della chiave abilitata sul portale Azure"^], in modo che Cloud Volumes ONTAP possa utilizzare le nuove chiavi.
-
-Al momento della creazione e dell'abilitazione di una nuova versione delle chiavi, Cloud Volumes ONTAP rileva e utilizza automaticamente la versione più recente per la crittografia, garantendo la protezione dei dati senza la necessità di aggiornamenti manuali.
+NOTE: Dopo aver configurato le chiavi, assicurati di aver selezionato  https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation#key-rotation-policy["_Abilita rotazione automatica_"^] , in modo che Cloud Volumes ONTAP possa utilizzare le nuove chiavi alla scadenza di quelle precedenti. Se non si abilita questa opzione nel portale di Azure, Cloud Volumes ONTAP non sarà in grado di rilevare automaticamente le nuove chiavi, il che potrebbe causare problemi con il provisioning dello storage.
 
 
 

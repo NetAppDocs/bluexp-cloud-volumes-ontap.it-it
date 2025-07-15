@@ -32,9 +32,6 @@ Di seguito viene riportato il confronto delle funzioni tra le due opzioni. Si no
 
 | *Tipi di macchine virtuali supportati*  a| 
 Tipi di istanza EDS_v5 e LS_v3
-
-
-NOTE: Il tipo di istanza L8s_v3 è supportato nel marketplace Azure per le configurazioni ha, ma non in BlueXP . BlueXP  non sarà in grado di rilevarlo correttamente durante il rilevamento.
 | Gamma completa di tipi di VM. https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configurazioni supportate in Azure"^] 
 
 

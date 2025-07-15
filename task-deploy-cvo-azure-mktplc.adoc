@@ -135,9 +135,6 @@ Scoprendo i sistemi Cloud Volumes ONTAP implementati utilizzando la distribuzion
 .Prima di iniziare
 Assicurati che l'implementazione sia completa sul marketplace di Azure. BlueXP  Connector è in grado di rilevare i sistemi solo quando l'implementazione è completa e disponibile per il rilevamento.
 
-
-NOTE: L'implementazione diretta del marketplace Azure supporta i tipi di istanze L8s_v3. Tuttavia, BlueXP  non supporta questo tipo di istanza per le configurazioni ha e non sarà in grado di rilevarlo correttamente durante il rilevamento.
-
 .Fasi
 In BlueXP , seguire la procedura standard per il rilevamento dei sistemi esistenti. Fare riferimento alla link:task-adding-systems.html["Aggiunta di un sistema Cloud Volumes ONTAP esistente a BlueXP "].
 

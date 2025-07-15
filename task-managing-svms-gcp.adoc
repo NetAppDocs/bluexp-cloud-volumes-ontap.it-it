@@ -147,4 +147,6 @@ In una configurazione ha o nodo singolo, puoi rimuovere una VM di storage se non
 .Informazioni correlate
 * https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepararsi a utilizzare l'API"^]
 * https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Flussi di lavoro Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Ottieni gli identificatori richiesti"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Utilizzare le API REST BlueXP"^]
 

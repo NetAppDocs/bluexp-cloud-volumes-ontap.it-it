@@ -78,23 +78,15 @@ L'autenticazione dell'utente non riesce e i seguenti servizi rimangono non dispo
 |===
 
 
-==== Accesso a Internet in uscita per NetApp AutoSupport
+=== Configurazioni di rete per supportare il proxy del connettore
 
-I nodi Cloud Volumes ONTAP richiedono l'accesso a Internet in uscita per NetApp AutoSupport, che monitora in modo proattivo lo stato di salute del sistema e invia messaggi al supporto tecnico NetApp.
+È possibile utilizzare i server proxy configurati per BlueXP Connector per abilitare l'accesso a Internet in uscita da Cloud Volumes ONTAP. BlueXP supporta due tipi di proxy:
 
-Le policy di routing e firewall devono consentire il traffico HTTPS ai seguenti endpoint in modo che Cloud Volumes ONTAP possa inviare messaggi AutoSupport:
-
-* https://support.netapp.com/aods/asupmessage
-* https://support.netapp.com/asupprod/post/1.0/postAsup
+* *Proxy esplicito*: il traffico in uscita da Cloud Volumes ONTAP utilizza l'indirizzo HTTP del server proxy specificato durante la configurazione del proxy del connettore. L'amministratore del connettore potrebbe anche aver configurato le credenziali utente e i certificati CA radice per un'autenticazione aggiuntiva. Se è disponibile un certificato CA radice per il proxy esplicito, assicurarsi di ottenere e caricare lo stesso certificato nell'ambiente di lavoro Cloud Volumes ONTAP utilizzando  https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP CLI: installazione del certificato di sicurezza"^] comando.
+* *Proxy trasparente*: la rete è configurata per instradare automaticamente il traffico in uscita da Cloud Volumes ONTAP attraverso il proxy del connettore. Quando si configura un proxy trasparente, l'amministratore del connettore deve fornire solo un certificato CA radice per la connettività da Cloud Volumes ONTAP, non l'indirizzo HTTP del server proxy. Assicurarsi di ottenere e caricare lo stesso certificato CA radice nell'ambiente di lavoro Cloud Volumes ONTAP utilizzando  https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["ONTAP CLI: installazione del certificato di sicurezza"^] comando.
 
 
-Se non è disponibile una connessione Internet in uscita per l'invio di messaggi AutoSupport, BlueXP configura automaticamente i sistemi Cloud Volumes ONTAP in modo che utilizzino il connettore come server proxy. L'unico requisito è garantire che il gruppo di sicurezza del connettore consenta connessioni _inbound_ sulla porta 3128. Dopo aver implementato il connettore, aprire questa porta.
-
-Se sono state definite rigide regole in uscita per Cloud Volumes ONTAP, è necessario anche assicurarsi che il gruppo di sicurezza Cloud Volumes ONTAP consenta connessioni _in uscita_ sulla porta 3128.
-
-Dopo aver verificato che l'accesso a Internet in uscita è disponibile, è possibile testare AutoSupport per assicurarsi che sia in grado di inviare messaggi. Per istruzioni, fare riferimento alla https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["Documentazione ONTAP: Impostare AutoSupport"^] .
-
-Se BlueXP notifica che non è possibile inviare messaggi AutoSupport, link:task-verify-autosupport.html#troubleshoot-your-autosupport-configuration["Risolvere i problemi della configurazione AutoSupport"].
+Per informazioni sulla configurazione dei server proxy per BlueXP Connector, fare riferimento a  https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["Configurare un connettore per l'utilizzo di un server proxy"^] .
 
 
 
@@ -494,4 +486,9 @@ Se non hai ancora creato un connettore, dovresti rivedere anche i requisiti di r
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Visualizzare i requisiti di rete per il connettore"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Regole del gruppo di sicurezza in Azure"^]
+
+
+.Argomenti correlati
+* link:task-verify-autosupport.html["Verificare la configurazione di AutoSupport per Cloud Volumes ONTAP"]
+* https://docs.netapp.com/us-en/ontap/networking/ontap_internal_ports.html["Informazioni sulle porte interne di ONTAP"^].
 

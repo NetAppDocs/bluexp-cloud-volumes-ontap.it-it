@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-set-up-licensing-google.html 
-keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, optimized, paygo, pay as you go, keystone flex, keystone, digital wallet 
+keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, bring your own license, optimized, paygo, pay as you go, keystone flex, keystone, digital wallet 
 summary: 'Dopo aver deciso quale opzione di licenza si desidera utilizzare per Cloud Volumes ONTAP, sono necessari alcuni passaggi prima di poter scegliere l"opzione di licenza quando si implementa un nuovo sistema.' 
 ---
 = Impostare la licenza per Cloud Volumes ONTAP in Google Cloud
@@ -62,6 +62,9 @@ Le sezioni seguenti descrivono come iniziare a utilizzare ciascuno di questi mod
 === BYOL
 
 Paga in anticipo acquistando una licenza (BYOL) da NetApp per implementare i sistemi Cloud Volumes ONTAP in qualsiasi cloud provider.
+
+
+NOTE: NetApp ha limitato l'acquisto, l'estensione e il rinnovo delle licenze BYOL. Per ulteriori informazioni, fare riferimento a  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilità limitata delle licenze BYOL per Cloud Volumes ONTAP"^] .
 
 .Fasi
 . https://bluexp.netapp.com/contact-cds["Contattare il reparto vendite NetApp per ottenere una licenza"^]

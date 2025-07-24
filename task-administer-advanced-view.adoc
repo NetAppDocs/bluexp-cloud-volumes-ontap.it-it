@@ -14,43 +14,31 @@ summary: 'Se è necessario eseguire una gestione avanzata di Cloud Volumes ONTAP
 
 
 [role="lead"]
-Se è necessario eseguire una gestione avanzata di Cloud Volumes ONTAP, è possibile farlo utilizzando Gestione di sistema di ONTAP, un'interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l'interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.
+Le funzionalità avanzate di gestione dello storage in Cloud Volumes ONTAP sono disponibili tramite ONTAP System Manager, un'interfaccia di gestione fornita con i sistemi ONTAP . È possibile accedere a System Manager direttamente da BlueXP.
 
 
 
 == Caratteristiche
 
-È possibile eseguire le seguenti funzioni di gestione:
+È possibile eseguire diverse funzioni di gestione dello storage utilizzando ONTAP System Manager in BlueXP. L'elenco seguente include alcune di queste funzionalità, sebbene non sia esaustivo:
 
-* Gestione avanzata dello storage
-+
-Gestione di gruppi di coerenza, condivisioni, qtree, quote e Storage VM.
-
-* Gestione del networking
-+
-Gestione di IPspaces, interfacce di rete, portset e porte ethernet.
-
-* Eventi e lavori
-+
-Visualizza registri eventi, avvisi di sistema, processi e registri di audit.
-
-* Protezione avanzata dei dati
-+
-Protezione di VM di storage, LUN e gruppi di coerenza.
-
-* Gestione degli host
-+
-Configurare I gruppi iniziatori SAN e i client NFS.
-
+* Gestione avanzata dell'archiviazione: gestione di gruppi di coerenza, condivisioni, qtree, quote e VM di archiviazione.
+* Spostamento del volume: link:task-manage-volumes.html#move-a-volume["Spostare un volume su un aggregato diverso."]
+* Gestione della rete: gestione di spazi IP, interfacce di rete, set di porte e porte Ethernet.
+* Gestisci volumi FlexGroup : puoi creare e gestire volumi FlexGroup solo tramite System Manager. BlueXP non supporta la creazione di volumi FlexGroup .
+* Eventi e processi: visualizza registri eventi, avvisi di sistema, processi e registri di controllo.
+* Protezione avanzata dei dati: proteggi le VM di storage, le LUN e i gruppi di coerenza.
+* Gestione host: configurazione di gruppi di iniziatori SAN e client NFS.
+* Gestione dell'archiviazione degli oggetti S3: le funzionalità di gestione dell'archiviazione S3 in Cloud Volumes ONTAP sono disponibili solo in System Manager e non in BlueXP.
 
 
 
 
 == Configurazioni supportate
 
-Cloud Volumes ONTAP 9.10.0 e versioni successive supporta la gestione avanzata tramite ONTAP System Manager in regioni cloud standard.
+* La gestione avanzata dell'archiviazione tramite ONTAP System Manager è disponibile in Cloud Volumes ONTAP 9.10.0 e versioni successive nelle regioni cloud standard.
+* L'integrazione di System Manager non è supportata nelle regioni di GovCloud o nelle regioni che non dispongono di accesso a Internet in uscita.
 
-L'integrazione di System Manager non è supportata nelle regioni di GovCloud o nelle regioni che non dispongono di accesso a Internet in uscita.
 
 
 
@@ -58,21 +46,11 @@ L'integrazione di System Manager non è supportata nelle regioni di GovCloud o n
 
 Alcune funzioni visualizzate nell'interfaccia di Gestione sistema non sono supportate da Cloud Volumes ONTAP:
 
-* Tiering BlueXP
-+
-Cloud Volumes ONTAP non supporta il servizio di tiering BlueXP . È necessario configurare il tiering dei dati nello storage a oggetti direttamente dalla vista standard di BlueXP  durante la creazione di volumi.
+* BlueXP tiering: Cloud Volumes ONTAP non supporta il servizio BlueXP tiering . È necessario impostare il tiering dei dati nell'archiviazione degli oggetti direttamente dalla Vista Standard di BlueXP durante la creazione dei volumi.
+* Livelli: la gestione degli aggregati (inclusi i livelli locali e cloud) non è supportata da System Manager. È necessario gestire gli aggregati direttamente dalla Vista Standard di BlueXP.
+* Aggiornamenti del firmware: Cloud Volumes ONTAP non supporta gli aggiornamenti automatici del firmware dalla pagina *Cluster > Impostazioni*.
+* Controllo degli accessi basato sui ruoli: il controllo degli accessi basato sui ruoli da System Manager non è supportato.
 
-* Tier
-+
-La gestione degli aggregati (inclusi Tier locali e Tier cloud) non è supportata da System Manager. È necessario gestire gli aggregati direttamente dalla vista standard di BlueXP.
-
-* Aggiornamenti del firmware
-+
-Cloud Volumes ONTAP non supporta gli aggiornamenti automatici del firmware dalla pagina *Cluster > Impostazioni*.
-
-
-
-Inoltre, il controllo degli accessi basato sui ruoli da System Manager non è supportato.
 
 
 

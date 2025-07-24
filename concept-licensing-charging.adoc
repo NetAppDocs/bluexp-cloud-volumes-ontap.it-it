@@ -23,6 +23,10 @@ Dovresti conoscere l'addebito e l'utilizzo della capacità delle licenze basate 
 I pacchetti di licenza basati sulla capacità sono disponibili con i seguenti modelli di consumo:
 
 * *BYOL*: Bring Your Own License (BYOL). Una licenza acquistata da NetApp, che può essere utilizzata per implementare Cloud Volumes ONTAP in qualsiasi cloud provider.
++
+
+NOTE: NetApp ha limitato l'acquisto, l'estensione e il rinnovo delle licenze BYOL. Per ulteriori informazioni, fare riferimento a  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilità limitata delle licenze BYOL per Cloud Volumes ONTAP"^] .
+
 
 
 ifdef::azure[]
@@ -37,7 +41,7 @@ endif::azure[]
 
 Tenere presente quanto segue:
 
-* Se acquisti una licenza da NetApp (BYOL), devi anche iscriverti all'offerta PAYGO dal mercato del tuo cloud provider.
+* Se acquisti una licenza da NetApp (BYOL), devi anche abbonarti all'offerta PAYGO dal marketplace del tuo provider cloud. NetApp ha limitato le licenze BYOL. Alla scadenza delle licenze BYOL, dovrai sostituirle con abbonamenti al marketplace cloud.
 +
 La tua licenza viene sempre addebitata per prima, ma ti verrà addebitato il costo della tariffa oraria sul mercato nei seguenti casi:
 
@@ -47,7 +51,7 @@ La tua licenza viene sempre addebitata per prima, ma ti verrà addebitato il cos
 
 
 * Se disponi di un contratto annuale da un marketplace, _tutti_ i sistemi Cloud Volumes ONTAP implementati vengono addebitati in base a tale contratto. Non puoi combinare un contratto di mercato annuale con BYOL.
-* Solo i sistemi a nodo singolo con BYOL sono supportati nelle regioni della Cina.
+* Nelle regioni cinesi sono supportati solo sistemi a singolo nodo con BYOL. Le distribuzioni nella regione cinese sono esenti dalle restrizioni di licenza BYOL.
 
 
 
@@ -148,7 +152,7 @@ Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applic
 
 === Eccedendo
 
-Se superi la tua capacità BYOL o se la tua licenza scade, ti verranno addebitati gli eccessi a tariffe orarie in base al tuo abbonamento al marketplace. Le maggiorazioni vengono addebitate alle tariffe del mercato, con la preferenza di utilizzare prima la capacità disponibile di altre licenze.
+Se superi la capacità BYOL, ti verranno addebitati i costi aggiuntivi a tariffe orarie basate sul tuo abbonamento al marketplace. I costi aggiuntivi vengono addebitati alle tariffe del marketplace, con preferenza per l'utilizzo prioritario della capacità disponibile da altre licenze. Se la tua licenza BYOL scade, dovrai passare a un modello di licenza basato sulla capacità tramite i marketplace cloud.
 
 
 

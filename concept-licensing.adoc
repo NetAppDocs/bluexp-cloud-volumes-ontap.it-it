@@ -155,6 +155,9 @@ NOTE: Per il backup e il ripristino di BlueXP  è richiesto un abbonamento PAY-
 La disponibilità delle licenze PAYGO e BYOL per i sistemi Cloud Volumes ONTAP richiede che BlueXP  Connector sia attivo e funzionante. Per ulteriori informazioni, fare riferimento a https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#impact-on-cloud-volumes-ontap["Scopri di più sui connettori"^].
 
 
+NOTE: NetApp ha limitato l'acquisto, l'estensione e il rinnovo delle licenze BYOL. Per ulteriori informazioni, fare riferimento a  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilità limitata delle licenze BYOL per Cloud Volumes ONTAPP"^] .
+
+
 
 === Come iniziare
 

@@ -66,6 +66,9 @@ Le sezioni seguenti descrivono come iniziare a utilizzare ciascuno di questi mod
 
 Paga in anticipo acquistando una licenza (BYOL) da NetApp per implementare i sistemi Cloud Volumes ONTAP in qualsiasi cloud provider.
 
+
+NOTE: NetApp ha limitato l'acquisto, l'estensione e il rinnovo delle licenze BYOL. Per ulteriori informazioni, fare riferimento a  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilità limitata delle licenze BYOL per Cloud Volumes ONTAP"^] .
+
 .Fasi
 . https://bluexp.netapp.com/contact-cds["Contattare il reparto vendite NetApp per ottenere una licenza"^]
 . https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html#add-an-nss-account["Aggiungi il tuo account NetApp Support Site a BlueXP"^]

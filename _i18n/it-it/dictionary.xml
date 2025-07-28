@@ -3463,7 +3463,6 @@
   <block id="80d50e51e1ababfa4d2d5826b8482855" category="list-text"><block ref="80d50e51e1ababfa4d2d5826b8482855" category="inline-link-macro-rx"></block></block>
   <block id="c9df4195a305212ffd7b56d24f67129d" category="summary">NetApp fornisce supporto per BlueXP in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Richiedi assistenza</block>
-  <block id="7c5661ab6b39ee901cea00a6e7020a49" category="paragraph">NetApp fornisce supporto per BlueXP e i suoi servizi cloud in diversi modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include il supporto tecnico remoto via web ticketing.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilizzare le opzioni di supporto automatico</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Queste opzioni sono disponibili gratuitamente, 24 ore su 24, 7 giorni su 7:</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Knowledge base</block>
@@ -3900,8 +3899,6 @@ Per creare una sovvenzione, fare riferimento a. <block ref="2e58dbc76dde8987ce87
   <block id="25c3dcdd6e2c69b30eba973a10e656d8" category="paragraph">Dalla pagina Upgrade Cloud Volumes ONTAP (aggiornamento versione), è possibile scegliere di eseguire l'aggiornamento alla versione più recente disponibile di Cloud Volumes ONTAP o a una versione precedente.</block>
   <block id="28164bf9e881ddc9e7ff74744bfce180" category="paragraph">La registrazione di entrambi i tipi di numeri di serie offre funzionalità come l'apertura di ticket di supporto e la generazione automatica dei casi. La registrazione viene completata aggiungendo account del sito di supporto NetApp a BlueXP come descritto di seguito.</block>
   <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Selezionare *Aggiungi credenziali NSS* e seguire la richiesta di autenticazione del sito di supporto NetApp.</block>
-  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Una schermata che mostra il numero di serie di un account, una casella di controllo verde e il testo registrato per il supporto.</block>
-  <block id="3d183819a15163ef2e2e7d9d764254a9" category="paragraph"><block ref="3d183819a15163ef2e2e7d9d764254a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Se sei un cliente NetApp con licenze e numeri di serie esistenti ma _no_ account NSS, devi creare un account NSS e associarlo al tuo login BlueXP.</block>
   <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Associare il nuovo account NSS al login BlueXP completando la procedura riportata sotto <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Una volta ottenuto l'account del sito di supporto NetApp, associare l'account al login BlueXP completando la procedura indicata in <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
@@ -5895,4 +5892,11 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="cb4bf32603c89d08cad17e7e7dd302f2" category="list-text"><block ref="cb4bf32603c89d08cad17e7e7dd302f2" category="inline-link-macro-rx"></block></block>
   <block id="1001b88d8ff7d289c57c8816aa6ffa49" category="paragraph">Quando rinnovi un abbonamento BYOL contattando un rappresentante NetApp , BlueXP ottiene automaticamente la nuova licenza da NetApp e la installa sul sistema Cloud Volumes ONTAP . Se BlueXP non riesce ad accedere al file di licenza tramite la connessione Internet sicura, puoi ottenere il file autonomamente e caricarlo manualmente su BlueXP.</block>
   <block id="98d06a8873f74ad318a67a8dee1dcd5f" category="section-title">25 giugno 2025</block>
+  <block id="b28e17a832bc8e68788cc78dfac834c6" category="inline-link">azioni SMB continuamente disponibili</block>
+  <block id="2d16ba999fad830caa372d4b033671ac" category="list-text">Disponibilità continua SMB (CA): Cloud Volumes ONTAP non supporta <block ref="4426c61d85afebe3004ecaea7b6795d6" category="inline-link-rx"></block> per operazioni non distruttive.</block>
+  <block id="9d3b47003b8e5970426abfe5a07a9c53" category="inline-link">Crea condivisioni SMB costantemente disponibili</block>
+  <block id="4c47e334b7cc175e1cb9081ba027f23e" category="list-text"><block ref="4c47e334b7cc175e1cb9081ba027f23e" category="inline-link-rx"></block></block>
+  <block id="bbbc9b55f08bfe80f146b5207bdb7728" category="paragraph">NetApp fornisce supporto per BlueXP e i suoi servizi cloud in diversi modi. Sono disponibili ampie opzioni di supporto autonomo gratuite 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) e un forum della community. La registrazione al supporto include supporto tecnico remoto tramite ticket web.</block>
+  <block id="759d32287efdf88cd8ac71dccc0ecf8d" category="inline-image-macro">Uno screenshot che mostra il numero di serie dell'account, una casella di controllo verde e il testo Registrato per supporto.</block>
+  <block id="4c441b388bebcddf8c08fb782095b864" category="paragraph"><block ref="4c441b388bebcddf8c08fb782095b864" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

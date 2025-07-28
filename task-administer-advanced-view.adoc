@@ -50,6 +50,7 @@ Alcune funzioni visualizzate nell'interfaccia di Gestione sistema non sono suppo
 * Livelli: la gestione degli aggregati (inclusi i livelli locali e cloud) non è supportata da System Manager. È necessario gestire gli aggregati direttamente dalla Vista Standard di BlueXP.
 * Aggiornamenti del firmware: Cloud Volumes ONTAP non supporta gli aggiornamenti automatici del firmware dalla pagina *Cluster > Impostazioni*.
 * Controllo degli accessi basato sui ruoli: il controllo degli accessi basato sui ruoli da System Manager non è supportato.
+* Disponibilità continua SMB (CA): Cloud Volumes ONTAP non supporta  https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["azioni SMB continuamente disponibili"^] per operazioni non distruttive.
 
 
 
@@ -103,4 +104,5 @@ Per informazioni dettagliate sull'utilizzo di Gestore di sistema con Cloud Volum
 * https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html["Gestione di volumi e LUN"^]
 * https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html["Gestione della rete"^]
 * https://docs.netapp.com/us-en/ontap/concept_dp_overview.html["Protezione dei dati"^]
+* https://docs.netapp.com/us-en/ontap/smb-hyper-v-sql/create-continuously-available-shares-task.html["Crea condivisioni SMB costantemente disponibili"^]
 

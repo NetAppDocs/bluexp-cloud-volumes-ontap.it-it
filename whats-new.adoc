@@ -83,14 +83,6 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploy-cvo-azure-m
 
 
 
-=== Possibilità di eseguire il tiering dei dati per i tenant Azure
-
-Ora puoi abilitare il tiering per un tenant Azure in uno scenario in cui l'ambiente di lavoro Cloud Volumes ONTAP è creato da un tenant e BlueXP  Connector è creato da un altro. Utilizzando questa funzionalità, puoi usare lo stesso connettore per dividere in Tier i dati per più tenant di Azure.
-
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#requirements-to-tier-data-for-an-azure-tenant["Requisiti di tiering dei dati per un tenant Azure"^]
-
-
-
 == 16 aprile 2025
 
 

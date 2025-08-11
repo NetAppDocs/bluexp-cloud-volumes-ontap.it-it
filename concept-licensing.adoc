@@ -102,36 +102,6 @@ Puoi pagare in base alla capacità in diverse configurazioni:
 
 
 
-==== Ottimizzato
-
-Pagare separatamente la capacità e le operazioni di i/o fornite.
-
-* Nodo singolo Cloud Volumes ONTAP o ha
-* La ricarica si basa su due componenti di costo: Storage e utilizzo (i/o).
-+
-Non verranno addebitati costi per i/o relativi alla replica dei dati (SnapMirror), ai backup (SnapVault) o ad NDMP.
-
-
-
-ifdef::azure[]
-
-* Disponibile nel marketplace di Azure come offerta a pagamento o come contratto annuale
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Disponibile nel marketplace di Google Cloud come offerta a pagamento o come contratto annuale
-
-
-endif::gcp[]
-
-* Aggiungi qualsiasi servizio dati cloud di NetApp a un costo aggiuntivo
-
-
-
-
 ==== Professionale
 
 Paga in base alla capacità per qualsiasi tipo di configurazione Cloud Volumes ONTAP con backup illimitati.
@@ -249,7 +219,7 @@ Per informazioni, fare riferimento alla https://mysupport.netapp.com/info/commun
 
 === Fine della disponibilità delle licenze basate su nodi
 
-A partire dal 11 novembre 2024, la disponibilità limitata delle licenze basate su nodi è stata interrotta. Il supporto per le licenze basate su nodi termina il 31 dicembre 2024.
+A partire dall'11 novembre 2024, la disponibilità limitata delle licenze basate sui nodi è terminata.  Il supporto per le licenze basate sui nodi termina il 31 dicembre 2024.
 
 Se si dispone di un contratto valido basato su nodi che si estende oltre la data di fine disponibilità, è possibile continuare a utilizzare la licenza fino alla scadenza del contratto. Una volta scaduto il contratto, sarà necessario passare al modello di licenza basato sulla capacità. Se non si dispone di un contratto a lungo termine per un nodo Cloud Volumes ONTAP, è importante pianificare la conversione prima della data EOS.
 

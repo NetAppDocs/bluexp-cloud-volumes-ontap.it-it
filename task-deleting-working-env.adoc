@@ -18,10 +18,10 @@ Si consiglia di eliminare sempre i sistemi Cloud Volumes ONTAP da BlueXP, anzich
 
 Quando si elimina un ambiente di lavoro, BlueXP termina le istanze di Cloud Volumes ONTAP ed elimina dischi e snapshot.
 
-Le risorse gestite da altri servizi, come i backup per il backup e ripristino BlueXP e le istanze per la classificazione BlueXP, non vengono eliminate quando si elimina un ambiente di lavoro. Dovrai eliminarli manualmente. In caso contrario, continuerai a ricevere i costi per queste risorse.
 
+NOTE: Altre risorse, come i backup gestiti da BlueXP backup and recovery e le istanze per la BlueXP classification, non vengono eliminate quando si elimina un ambiente di lavoro.  Sarà necessario eliminarli manualmente.  In caso contrario, continuerai a dover sostenere costi per queste risorse.
 
-NOTE: Quando BlueXP implementa Cloud Volumes ONTAP nel tuo cloud provider, abilita la protezione delle terminazioni sulle istanze. Questa opzione aiuta a prevenire la terminazione accidentale.
+Quando BlueXP implementa Cloud Volumes ONTAP nel tuo cloud provider, abilita la protezione delle terminazioni sulle istanze. Questa opzione aiuta a prevenire la terminazione accidentale.
 
 .Fasi
 . Se nell'ambiente di lavoro è stato attivato il backup e il ripristino di BlueXP, determinare se i dati di cui è stato eseguito il backup sono ancora necessari https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups["eliminare i backup, se necessario"^].
@@ -46,3 +46,6 @@ L'eliminazione dell'ambiente di lavoro può richiedere fino a 5 minuti.
 
 
 
+
+
+NOTE: Il BlueXP backup and recovery sono gratuiti solo per le licenze Cloud Volumes ONTAP Professional.  Questo vantaggio gratuito non si applica agli ambienti eliminati.  Se le copie di backup dell'ambiente Cloud Volumes ONTAP vengono conservate in un'istanza BlueXP backup and recovery , ti verranno addebitati i costi delle copie di backup finché non verranno eliminate.

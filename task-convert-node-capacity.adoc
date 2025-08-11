@@ -44,7 +44,6 @@ Per informazioni sulla fine disponibilità e l'EOS, fare riferimento alla link:c
 +
 *** Quando `Professional` viene selezionato come pacchetto di destinazione, l'account deve disporre di una licenza BYOL con un pacchetto Professional:
 *** Quando `Essentials` viene selezionato come pacchetto di destinazione, l'account deve disporre di una licenza BYOL con il pacchetto Essentials.
-*** Quando `Optimized` viene selezionato come pacchetto di destinazione, l'account deve disporre di una licenza BYOL con il pacchetto ottimizzato.
 
 
 ** Se il pacchetto di destinazione non si allinea con la disponibilità della licenza BYOL dell'account, significa che la licenza basata sulla capacità potrebbe non includere il pacchetto selezionato. In questo caso, ti verrà addebitato il costo tramite l'abbonamento al mercato.
@@ -74,25 +73,22 @@ TIP: L'icona è disattivata se il sistema Cloud Volumes ONTAP è già caricato i
 ** Professionale
 
 
-
-
-ifdef::azure[]
-
-* Ottimizzato (per Azure)
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* Ottimizzato (per Google Cloud)
-
-
-endif::gcp[]
-
 . Se disponi di una licenza BYOL, puoi selezionare la casella di controllo per eliminare la licenza basata su nodo dalla post conversione del Digital Wallet di BlueXP . Se la conversione non è completa, anche selezionando questa casella di controllo, la licenza non verrà eliminata dal portafoglio digitale. Se hai un abbonamento al mercato, questa opzione non è disponibile.
 . Selezionare la casella di controllo per confermare di aver compreso le implicazioni della modifica, quindi fare clic su *Procedi*.
 
 
 .Al termine
 Visualizzare il nuovo numero di serie della licenza e verificare le modifiche apportate al portafoglio digitale di BlueXP .
+
+
+
+== Prezzi in diversi iperscalari
+
+Per i dettagli sui prezzi, vai a https://bluexp.netapp.com/pricing/["Sito Web di NetApp BlueXP"^] .
+
+Per informazioni sulle offerte private in specifici iperscalari, scrivere a:
+
+* AWS - awspo@netapp.com
+* Azzurro - azurepo@netapp.com
+* Google Cloud - gcppo@netapp.com
+

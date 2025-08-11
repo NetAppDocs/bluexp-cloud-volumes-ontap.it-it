@@ -143,7 +143,7 @@ I seguenti report sono disponibili per il download. I valori di capacità mostra
 ** Capacità PAYGO totale
 
 
-* *Utilizzo dei pacchetti Cloud Volumes ONTAP*: Questo report include le seguenti informazioni per ciascun pacchetto, ad eccezione del pacchetto i/o ottimizzato:
+* * Utilizzo del pacchetto Cloud Volumes ONTAP *: questo report include le seguenti informazioni per ciascun pacchetto:
 +
 ** Capacità totale consumata
 ** Capacità totale preimpegnata

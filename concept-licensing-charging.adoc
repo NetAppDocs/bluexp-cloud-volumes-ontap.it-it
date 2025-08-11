@@ -31,8 +31,6 @@ NOTE: NetApp ha limitato l'acquisto, l'estensione e il rinnovo delle licenze BYO
 
 ifdef::azure[]
 
-+ si noti che il pacchetto ottimizzato non è disponibile con BYOL.
-
 endif::azure[]
 
 * *PAYGO*: Un abbonamento pay-as-you-go (PAYGO) è un abbonamento orario dal mercato del tuo cloud provider.
@@ -68,7 +66,7 @@ Per informazioni sulla conversione delle licenze basate su nodi in licenze basat
 
 == Prezzi e configurazioni supportate
 
-Per ulteriori informazioni sui prezzi, visitare il sito Web all'indirizzo https://bluexp.netapp.com/pricing/["Sito Web di NetApp BlueXP"^].
+Per i dettagli sui prezzi, vai a https://bluexp.netapp.com/pricing/["Sito Web di NetApp BlueXP"^] .
 
 I pacchetti di licenza basati sulla capacità sono disponibili con Cloud Volumes ONTAP 9.7 e versioni successive.
 
@@ -146,7 +144,7 @@ I seguenti dettagli consentono di comprendere il funzionamento della ricarica co
 
 Se non hai ancora effettuato il provisioning di volumi, il costo minimo non viene applicato.
 
-Per il pacchetto Essentials, il costo minimo di capacità di 4 TIB non si applica alle VM di storage che contengono solo volumi secondari (data Protection). Ad esempio, se si dispone di una VM di storage con 1 TIB di dati secondari, viene addebitato solo il costo di 1 TIB di dati. Con tutti gli altri tipi di pacchetti non Essentials (Optimized e Professional), la capacità di ricarica minima di 4 TiB si applica indipendentemente dal tipo di volume.
+Per il pacchetto Essentials, la tariffa per la capacità minima di 4 TiB non si applica alle VM di archiviazione che contengono solo volumi secondari (di protezione dei dati).  Ad esempio, se si dispone di una VM di archiviazione con 1 TiB di dati secondari, verrà addebitato solo quel 1 TiB di dati.  Con il tipo di pacchetto Professional, la capacità minima di ricarica di 4 TiB si applica indipendentemente dal tipo di volume.
 
 
 

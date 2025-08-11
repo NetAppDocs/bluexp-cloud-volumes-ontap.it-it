@@ -45,7 +45,7 @@ Passa tra pool di storage on-demand a performance elevate e basse senza portare 
 Garantire la coerenza delle copie Snapshot di NetApp con NetApp SnapCenter.
 
 +
-https://docs.netapp.com/us-en/snapcenter/concept/concept_snapcenter_overview.html["Scopri di più su SnapCenter"^]
+https://docs.netapp.com/us-en/snapcenter/get-started/concept_snapcenter_overview.html["Scopri di più su SnapCenter"^]
 
 * Sicurezza dei dati
 +

@@ -8,7 +8,7 @@ summary: Utilizza il servizio di gestione delle chiavi di AWS per il tuo servizi
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

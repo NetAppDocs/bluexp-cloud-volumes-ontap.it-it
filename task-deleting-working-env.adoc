@@ -39,10 +39,7 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 +
 image:screenshot_settings_delete.png["Una schermata che mostra il menu disponibile dall'ambiente di lavoro che contiene l'azione Delete (Elimina)."]
 
-.. Nella finestra Delete Working Environment (Elimina ambiente di lavoro), digitare il nome dell'ambiente di lavoro, quindi fare clic su *Delete* (Elimina).
-+
-L'eliminazione dell'ambiente di lavoro può richiedere fino a 5 minuti.
-
+.. Nella finestra Elimina ambiente di lavoro, digitare il nome dell'ambiente di lavoro e quindi fare clic su *Elimina*.  L'eliminazione dell'ambiente di lavoro potrebbe richiedere fino a cinque minuti.
 
 
 

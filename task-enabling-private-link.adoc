@@ -69,7 +69,7 @@ Quando BlueXP implementa Cloud Volumes ONTAP in Azure, crea un endpoint privato 
 
 L'accesso client passa attraverso il collegamento privato quando i client si trovano all'interno della stessa rete virtuale di Cloud Volumes ONTAP, all'interno di reti VPN peered o nella rete on-premise quando si utilizza una connessione privata VPN o ExpressRoute a VNET.
 
-Ecco un esempio che mostra l'accesso del client su un collegamento privato dall'interno dello stesso VNET e da una rete on-premise che dispone di una connessione privata VPN o ExpressRoute.
+Ecco un esempio che mostra l'accesso client tramite un collegamento privato dall'interno della stessa VNet e da una rete locale dotata di una connessione VPN privata o ExpressRoute.
 
 image:diagram_azure_private_link.png["Immagine concettuale che mostra l'accesso ai dati in Cloud Volumes ONTAP e tramite un endpoint privato e un collegamento privato all'account di storage."]
 

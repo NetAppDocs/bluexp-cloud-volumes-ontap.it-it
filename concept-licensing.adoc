@@ -176,7 +176,14 @@ Gli abbonamenti Keystone sono supportati con le coppie ha. Al momento, questa op
 
 === Limite di capacità
 
-Ogni singolo sistema Cloud Volumes ONTAP supporta fino a 2 PIB di capacità attraverso dischi e tiering per lo storage a oggetti.
+Nel modello di licenza basato sulla capacità, ogni sistema Cloud Volumes ONTAP supporta la suddivisione in livelli per l'archiviazione di oggetti e la capacità totale suddivisa in livelli può essere scalata fino al limite del bucket del provider cloud.  Sebbene la licenza non imponga restrizioni di capacità, seguire le https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Migliori pratiche FabricPool"^] per garantire prestazioni ottimali, affidabilità ed efficienza dei costi durante la configurazione e la gestione del tiering.
+
+Per informazioni sui limiti di capacità di ciascun provider cloud, fare riferimento alla relativa documentazione:
+
+* https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["Documentazione AWS"^]
+* https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Documentazione di Azure per i dischi gestiti"^]E https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Documentazione di Azure per l'archiviazione BLOB"^]
+* https://cloud.google.com/storage/docs/buckets["Documentazione di Google Cloud"^]
+
 
 
 

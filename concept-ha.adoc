@@ -126,7 +126,7 @@ Una volta che il nodo guasto torna in linea, rimontare i client sui volumi utili
 L'implementazione di una configurazione ha in una singola zona di disponibilità (AZ) può garantire l'elevata disponibilità dei dati in caso di guasto di un'istanza che esegue un nodo Cloud Volumes ONTAP. Tutti i dati sono accessibili in modo nativo dall'esterno del VPC.
 
 
-NOTE: BlueXP crea un https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["Gruppo di posizionamento AWS Spread"^] E lancia i due nodi ha in quel gruppo di posizionamento. Il gruppo di posizionamento riduce il rischio di guasti simultanei distribuendo le istanze su hardware sottostante distinto. Questa funzionalità migliora la ridondanza dal punto di vista del calcolo e non dal punto di vista del guasto del disco.
+NOTE: BlueXP crea un https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html["Documentazione AWS: gruppo di posizionamento diffuso AWS"^] e avvia i due nodi HA in quel gruppo di posizionamento.  Il gruppo di posizionamento riduce il rischio di guasti simultanei distribuendo le istanze su hardware sottostanti distinti.  Questa funzionalità migliora la ridondanza dal punto di vista del calcolo e non da quello dei guasti del disco.
 
 
 
@@ -200,7 +200,7 @@ L'unico tipo di disco supportato è GP2. Sono attualmente supportate le seguenti
 
 NOTE: Cloud Volumes ONTAP supporta solo queste configurazioni. La selezione di tipi di dischi non supportati o istanze non qualificate nella configurazione della zona locale AWS potrebbe causare un errore di implementazione. Il tiering dei dati in AWS S3 non è disponibile nelle zone locali di AWS a causa della mancanza di connettività.
 
-Fare riferimento alla documentazione AWS per i dettagli più recenti e completi di link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["EC2 tipi di istanza nelle zone locali"^].
+Fare riferimento alla documentazione AWS per i dettagli più recenti e completi dilink:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Documentazione AWS: Tipi di istanza EC2 nelle zone locali"^] .
 
 
 

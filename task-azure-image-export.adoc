@@ -63,22 +63,28 @@ Ad esempio, tutte le implementazioni a nodo singolo con Cloud Volumes ONTAP 9.15
 |===
 
 
-| *Versione Cloud Volumes ONTAP* | *Metodo di distribuzione VM* | *Nome SKU* 
+| *Versione Cloud Volumes ONTAP* | *Distribuzione VM tramite* | *Nome SKU* 
 
 
-| 9.16.1 e versioni successive | Tramite il metodo di distribuzione diretta del mercato | ONTAP_cloud_direct 
+| 9.17.1 e versioni successive | Il marketplace di Azure | ontap_cloud_direct_gen2 
 
 
-| 9.16.1 e versioni successive | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 
+| 9.17.1 e versioni successive | BlueXP | ontap_cloud_gen2 
 
 
-| 9.15.1 | Tutte le implementazioni tramite BlueXP  | ONTAP_cloud 
+| 9.16.1 | Il marketplace di Azure | ONTAP_cloud_direct 
 
 
-| 9.15.0 | Nodo singolo | cloud_ontap_byol 
+| 9.16.1 | BlueXP | ONTAP_cloud 
 
 
-| 9.15.0 | Alta disponibilità | ontap_cloud_byol_ha 
+| 9.15.1 | BlueXP | ONTAP_cloud 
+
+
+| 9.15.0 | BlueXP, distribuzioni a nodo singolo | cloud_ontap_byol 
+
+
+| 9.15.0 | BlueXP, distribuzioni ad alta disponibilità (HA) | ontap_cloud_byol_ha 
 |===
 . Dopo aver mappato la versione di ONTAP e l'immagine di Azure Marketplace, esportare il file VHD da Azure Marketplace tramite Azure Cloud Shell o Azure CLI.
 

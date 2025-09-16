@@ -145,7 +145,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 
 === Supporto per le regioni della Cina per Cloud Volumes ONTAP 9.13.1 in AWS
 
-Ora puoi implementare Cloud Volumes ONTAP 9.13.1 in AWS nelle aree geografiche Cina. Supporto per implementazioni a nodo singolo e high Availability (ha). Dopo aver distribuito Cloud Volumes ONTAP 9.13.1, è possibile aggiornarlo alle versioni successive. Sono supportate solo le licenze acquistate direttamente da NetApp.
+Ora puoi distribuire Cloud Volumes ONTAP 9.13.1 in AWS nelle regioni della Cina.  Ciò include il supporto sia per distribuzioni a nodo singolo che ad alta disponibilità (HA).  Sono supportate solo le licenze acquistate direttamente da NetApp .
 
 Per la disponibilità regionale, fare riferimento alla https://bluexp.netapp.com/cloud-volumes-global-regions["Mappe delle regioni globali per Cloud Volumes ONTAP"^] .
 

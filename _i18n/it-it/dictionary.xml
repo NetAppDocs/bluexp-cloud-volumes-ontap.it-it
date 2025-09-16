@@ -5563,7 +5563,6 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="fdcb4cfaa6fda318a31e37ce29a14e92" category="section-title">Supporto minimo delle versioni per Flash cache in Azure</block>
   <block id="d05c6d51d7a4b0bd019498131ff00f16" category="paragraph">La versione minima di Cloud Volumes ONTAP richiesta per la configurazione di Flash cache in Azure è 9.13.1 GA. Puoi utilizzare ONTAP 9.13.1 GA e versioni successive solo per la distribuzione di Flash cache su sistemi Cloud Volumes ONTAP in Azure.</block>
   <block id="b77891a5294c25aca8a6fda943805ecf" category="doc">Supporto per le regioni della Cina per Cloud Volumes ONTAP 9.13.1 in AWS</block>
-  <block id="3899c7c0df13a38296f1334779a1dfe7" category="paragraph">Ora puoi implementare Cloud Volumes ONTAP 9.13.1 in AWS nelle aree geografiche Cina. Supporto per implementazioni a nodo singolo e high Availability (ha). Dopo aver distribuito Cloud Volumes ONTAP 9.13.1, è possibile aggiornarlo alle versioni successive. Sono supportate solo le licenze acquistate direttamente da NetApp.</block>
   <block id="abe88f95b23156cb29c433c9ebe92a00" category="inline-link">Mappe delle regioni globali per Cloud Volumes ONTAP</block>
   <block id="10df570a0447a18b299f516b2e8498c2" category="paragraph">Per la disponibilità regionale, fare riferimento alla<block ref="f76c632bc8b9c4e032a9d48fcbfa8dc1" category="inline-link-rx"></block> .</block>
   <block id="aa3bf76b3589430467bef386eaec9486" category="doc">Nuove regioni supportate in Azure</block>
@@ -5913,4 +5912,5 @@ Massimizza l'efficienza. Visualizza le metriche di efficienza dello storage e id
   <block id="eeea8782a887558399361aec836b75d0" category="cell">BlueXP, distribuzioni ad alta disponibilità (HA)</block>
   <block id="36991a14fecff3acb300e7240e20124a" category="cell">9.17.1 (solo per Azure e Google Cloud)</block>
   <block id="ba3c0cba3a3d15ce8426fc737476a59c" category="section-title">4 settembre 2025</block>
+  <block id="a3f77d8413628b40c09a649cd79a6e02" category="paragraph">Ora puoi distribuire Cloud Volumes ONTAP 9.13.1 in AWS nelle regioni della Cina.  Ciò include il supporto sia per distribuzioni a nodo singolo che ad alta disponibilità (HA).  Sono supportate solo le licenze acquistate direttamente da NetApp .</block>
 </blocks>
